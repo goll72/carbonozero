@@ -1,0 +1,10 @@
+.python-version
+build/
+dist/
+**/__pycache__/
+
+.helix/
+.vscode/
+
+db/datadir/
+db/logs/

@@ -1,0 +1,9 @@
+[project]
+name = "carbonozero"
+version = "0.1.0"
+description = "Monitoramento de emissões de carbono corporativas"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "rich>=15.0.0",
+]
