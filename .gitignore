@@ -4,7 +4,8 @@ dist/
 **/__pycache__/
 
 .helix/
-.vscode/
+.vscode/**
+!.vscode/extensions.json
 
 db/datadir/
 db/logs/
