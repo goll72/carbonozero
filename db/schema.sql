@@ -23,10 +23,10 @@ CREATE TABLE org_adm_mun (
 
 CREATE TABLE empresa (
     cnpj_raiz CHAR(8) PRIMARY KEY,
-    cnae INT,
+    cnae CHAR(9),
     dt_fund DATE NOT NULL,
     raz_soc VARCHAR(255),
-    nat_jur CHAR(4) NOT NULL,
+    nat_jur CHAR(5) NOT NULL,
     dt_adesao DATE NOT NULL
 );
 
