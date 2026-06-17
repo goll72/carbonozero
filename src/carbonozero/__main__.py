@@ -37,6 +37,27 @@ def main():
         return
 
     role_choice = int(role_choice)
+    if role_choice != 0:
+        console.print("Erro!! Cargo não foi implementado")
+        exit(2)
+
+    question = Text("Digite o CNPJ ou Município do usuário:", style="deep_sky_blue1", end="")
+    org_admin_key = Prompt.ask(question, default=0, console=console)
+
+    if str(role_choice) in EXIT_KEYS:
+        return
+
+    # TO-DO: CHECK THAT THE USER HAS SELECT A ORG_MUNI THAT'S IN THE DATABASE
+    
+    roles_table = Table(title="Operações")
+    roles_table.add_column("Número", justify="center", style="cyan")
+    roles_table.add_column("Desrição", justify="left", style="orange1")
+
+    roles_table.add_row("Selecionar os próprios dados", "0")
+    roles_table.add_row("Selecionar filiais e seus dados sob minha responsabilidade", "1")    
+    roles_table.add_row("Selecionar leis que se aplicam em minha burocracia", "2")    
+    roles_table.add_row("Selecionar instituições de pesquisa em uma região", "3")
+    roles_table.add_row("Selecionar organizações socioambientais em uma região", "4")
 
 if __name__ == "__main__":
     main()
