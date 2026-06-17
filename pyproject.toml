@@ -5,5 +5,6 @@ description = "Monitoramento de emissões de carbono corporativas"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "asyncpg>=0.31.0",
     "rich>=15.0.0",
 ]

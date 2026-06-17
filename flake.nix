@@ -37,6 +37,8 @@
             pkgs.ty
             pkgs.ruff
 
+            pkgs.pgcli
+            pkgs.sqlfluff
             pkgs.postgresql_18
           ];
 
