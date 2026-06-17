@@ -1,17 +1,17 @@
 CREATE TYPE ENT_FED_TIPO AS ENUM ('mun', 'uf');
 
 CREATE TABLE ent_fed (
-    cod_ibge INT PRIMARY KEY,
+    cod_ibge CHAR(7) PRIMARY KEY,
     tipo ENT_FED_TIPO
 );
 
 CREATE TABLE uf (
     sigla CHAR(2) PRIMARY KEY,
-    cod_ibge INT NOT NULL UNIQUE REFERENCES ent_fed(cod_ibge)
+    cod_ibge CHAR(7) NOT NULL UNIQUE REFERENCES ent_fed(cod_ibge)
 );
 
 CREATE TABLE org_adm_mun (
-    cod_ibge INT PRIMARY KEY REFERENCES ent_fed(cod_ibge),
+    cod_ibge CHAR(7) PRIMARY KEY REFERENCES ent_fed(cod_ibge),
     cnpj CHAR(14) NOT NULL UNIQUE,
     raz_soc VARCHAR(255),
     end_rua VARCHAR(127),
@@ -37,7 +37,7 @@ CREATE TABLE filial (
     end_rua VARCHAR(127),
     end_nro INT,
     end_cep CHAR(9),
-    mun_cod INT NOT NULL REFERENCES org_adm_mun(cod_ibge),
+    mun_cod CHAR(7) NOT NULL REFERENCES org_adm_mun(cod_ibge),
 
     PRIMARY KEY (cnpj_raiz, cnpj_ordem)
 );
@@ -48,7 +48,7 @@ CREATE TABLE organiz_socioamb (
     end_rua VARCHAR(127),
     end_nro INT,
     end_cep CHAR(9),
-    mun_cod INT REFERENCES org_adm_mun(cod_ibge)
+    mun_cod CHAR(7) REFERENCES org_adm_mun(cod_ibge)
 );
 
 CREATE TABLE acao_co2 (
@@ -122,7 +122,7 @@ CREATE TABLE prod_ncm (
 CREATE TYPE REG_LEG_TIPO AS ENUM ('if', 'multa');
 
 CREATE TABLE reg_leg (
-    ent INT REFERENCES org_adm_mun(cod_ibge),
+    ent CHAR(7) REFERENCES org_adm_mun(cod_ibge),
     tipo REG_LEG_TIPO,
     nro INT,
     ano INT,
@@ -148,7 +148,7 @@ CREATE TABLE inst_cient (
     end_rua VARCHAR(127),
     end_nro INT,
     end_cep CHAR(9),
-    mun_cod INT REFERENCES org_adm_mun(cod_ibge)
+    mun_cod CHAR(7) REFERENCES org_adm_mun(cod_ibge)
 );
 
 CREATE TABLE equipe_inst_cient (
@@ -177,7 +177,7 @@ CREATE TABLE relatorio (
     cnpj_inst_cient CHAR(14) NOT NULL,
     nome_equipe VARCHAR(63) NOT NULL,
     
-    mun_cod INT REFERENCES org_adm_mun(cod_ibge),
+    mun_cod CHAR(7) REFERENCES org_adm_mun(cod_ibge),
     
     aliq_if DECIMAL,
     multa_aplic DECIMAL,

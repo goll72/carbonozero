@@ -23,3 +23,8 @@
 
 -- Todas as regras legislativas que se aplicam a um certo município.
 
+-- Todas as empresas que financiaram alguma ação de compensação de uma determinada
+-- organização socioambiental, incluindo o valor total contribuído por cada empresa.
+
+-- As top K filiais que mais investiram em ações de compensação, agrupadas por
+-- área da ação.
