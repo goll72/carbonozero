@@ -34,7 +34,7 @@ CÓDIGO;DESCRIÇÃO
 0105.94.00;-- Aves da espécie <i>Gallus domesticus</i>
 0105.99.00;-- Outros
 0106.11.00;-- Primatas
-0106.12.00;-- Baleias, golfinhos e botos (mamíferos da ordem Cetacea); peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia); otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
+0106.12.00;-- Baleias, golfinhos e botos (mamíferos da ordem Cetacea), peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia), otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
 0106.13.00;-- Camelos e outros camelídeos (<i>Camelidae</i>)
 0106.14.00;-- Coelhos e lebres
 0106.19.00;-- Outros
@@ -121,7 +121,7 @@ CÓDIGO;DESCRIÇÃO
 0207.60.00;- De galinhas-d'angola (pintadas)
 0208.10.00;- De coelhos ou lebres
 0208.30.00;- De primatas
-0208.40.00;- De baleias, golfinhos e botos (mamíferos da ordem Cetacea); de peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia); de otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
+0208.40.00;- De baleias, golfinhos e botos (mamíferos da ordem Cetacea), de peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia), de otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
 0208.50.00;- De répteis (incluindo as serpentes e as tartarugas marinhas)
 0208.60.00;- De camelos e outros camelídeos (<i>Camelidae</i>)
 0208.90.00;- Outras
@@ -137,7 +137,7 @@ CÓDIGO;DESCRIÇÃO
 0210.19.00;-- Outras
 0210.20.00;- Carnes da espécie bovina
 0210.91.00;-- De primatas
-0210.92.00;-- De baleias, golfinhos e botos (mamíferos da ordem Cetacea); de peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia); de otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
+0210.92.00;-- De baleias, golfinhos e botos (mamíferos da ordem Cetacea), de peixes-boi (manatins) e dugongos (mamíferos da ordem Sirenia), de otárias e focas, leões-marinhos e morsas (mamíferos da subordem Pinnipedia)
 0210.93.00;-- De répteis (incluindo as serpentes e as tartarugas marinhas)
 0210.99.1;Carnes de aves da posição 01.05
 0210.99.11;De galos e de galinhas
@@ -160,11 +160,11 @@ CÓDIGO;DESCRIÇÃO
 0301.95.10;Para reprodução
 0301.95.90;Outros
 0301.99.1;Para reprodução
-0301.99.11;Tilápias (<i>Tilapia</i> spp.<i>, Oreochromis</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos)
+0301.99.11;Tilápias (<i>Tilapia</i> spp.<i>, Oreochromis</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos)
 0301.99.12;Esturjões (<i>Acipenser baerii, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus</i>)
 0301.99.19;Outros
 0301.99.9;Outros
-0301.99.91;Tilápias (<i>Tilapia</i> spp.<i>, Oreochromis</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos)
+0301.99.91;Tilápias (<i>Tilapia</i> spp.<i>, Oreochromis</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos)
 0301.99.92;Esturjões (<i>Acipenser baerii, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus</i>)
 0301.99.99;Outros
 0302.11.00;-- Trutas (<i>Salmo trutta, Oncorhynchus mykiss, Oncorhynchus clarki, Oncorhynchus aguabonita, Oncorhynchus gilae, Oncorhynchus apache</i> e <i>Oncorhynchus chrysogaster</i>)
@@ -218,9 +218,9 @@ CÓDIGO;DESCRIÇÃO
 0302.89.22;Garoupas (<i>Acanthistius</i> spp.)
 0302.89.23;Esturjão (<i>Acipenser baerii</i>)
 0302.89.24;Peixes-rei (<i>Atherina</i> spp.)
-0302.89.3;Curimatãs (<i>Prochilodus</i> spp.), tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos), surubins (<i>Pseudoplatystoma</i> spp.), traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>), piaus (<i>Leporinus</i> spp.), tainhas (<i>Mugil</i> spp.), pirarucu (<i>Arapaima gigas</i>) e pescadas (<i>Cynoscion</i> spp.)
+0302.89.3;Curimatãs (<i>Prochilodus</i> spp.), tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos), surubins (<i>Pseudoplatystoma</i> spp.), traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>), piaus (<i>Leporinus</i> spp.), tainhas (<i>Mugil</i> spp.), pirarucu (<i>Arapaima gigas</i>) e pescadas (<i>Cynoscion</i> spp.)
 0302.89.31;Curimatãs (<i>Prochilodus</i> spp.)
-0302.89.32;Tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos)
+0302.89.32;Tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos)
 0302.89.33;Surubins (<i>Pseudoplatystoma</i> spp.)
 0302.89.34;Traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>)
 0302.89.35;Piaus (<i>Leporinus</i> spp.)
@@ -305,9 +305,9 @@ CÓDIGO;DESCRIÇÃO
 0303.89.44;Esturjões (<i>Acipenser baerii, Acipenser gueldenstaedtii, Acipenser persicus, Acipenser stellatus</i>)
 0303.89.45;Peixes-rei (<i>Atherina</i> spp.)
 0303.89.46;Nototenias (<i>Patagonotothen</i> spp.)
-0303.89.5;Curimatãs (<i>Prochilodus</i> spp.), tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos), surubins (<i>Pseudoplatystoma</i> spp.), traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>), piaus (<i>Leporinus</i> spp.) e pirarucu (<i>Arapaima gigas</i>)
+0303.89.5;Curimatãs (<i>Prochilodus</i> spp.), tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos), surubins (<i>Pseudoplatystoma</i> spp.), traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>), piaus (<i>Leporinus</i> spp.) e pirarucu (<i>Arapaima gigas</i>)
 0303.89.51;Curimatãs (<i>Prochilodus</i> spp.)
-0303.89.52;Tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp.; seus híbridos)
+0303.89.52;Tilápias (<i>Tilapia</i> spp.<i>, Sarotherodon</i> spp.<i>, Danakilia</i> spp., seus híbridos)
 0303.89.53;Surubins (<i>Pseudoplatystoma</i> spp.)
 0303.89.54;Traíra (<i>Hoplias malabaricus & H. cf. lacerdae</i>)
 0303.89.55;Piaus (<i>Leporinus</i> spp.)
@@ -535,7 +535,7 @@ CÓDIGO;DESCRIÇÃO
 0409.00.00;Mel natural.
 0410.10.00;- Insetos
 0410.90.00;- Outros
-0501.00.00;Cabelo em bruto, mesmo lavado ou desengordurado; desperdícios de cabelo.
+0501.00.00;Cabelo em bruto, mesmo lavado ou desengordurado, desperdícios de cabelo.
 0502.10.1;Cerdas de porco
 0502.10.11;Lavadas, alvejadas ou desengorduradas, mesmo tintas
 0502.10.19;Outras
@@ -548,13 +548,13 @@ CÓDIGO;DESCRIÇÃO
 0504.00.13;De suínos
 0504.00.19;Outras
 0504.00.90;Outros
-0505.10.00;- Penas do tipo utilizado para enchimento ou estofamento; penugem
+0505.10.00;- Penas do tipo utilizado para enchimento ou estofamento, penugem
 0505.90.00;- Outros
 0506.10.00;- Osseína e ossos acidulados
 0506.90.00;- Outros
-0507.10.00;- Marfim; pó e desperdícios de marfim
+0507.10.00;- Marfim, pó e desperdícios de marfim
 0507.90.00;- Outros
-0508.00.00;Coral e matérias semelhantes, em bruto ou simplesmente preparados, mas não trabalhados de outro modo; conchas e carapaças de moluscos, crustáceos ou de equinodermes e ossos de sépias (chocos*) (chocos e chopos*), em bruto ou simplesmente preparados, mas não cortados em forma determinada, seus pós e desperdícios.
+0508.00.00;Coral e matérias semelhantes, em bruto ou simplesmente preparados, mas não trabalhados de outro modo, conchas e carapaças de moluscos, crustáceos ou de equinodermes e ossos de sépias (chocos*) (chocos e chopos*), em bruto ou simplesmente preparados, mas não cortados em forma determinada, seus pós e desperdícios.
 0510.00.10;Pâncreas de bovino
 0510.00.90;Outros
 0511.10.00;- Sêmen de bovino
@@ -567,7 +567,7 @@ CÓDIGO;DESCRIÇÃO
 0511.99.91;Crinas e seus desperdícios, mesmo em mantas, mesmo com suporte
 0511.99.99;Outros
 0601.10.00;- Bulbos, tubérculos, raízes tuberosas, cormos, coroas e rizomas, em repouso vegetativo
-0601.20.00;- Bulbos, tubérculos, raízes tuberosas, cormos, coroas e rizomas, em vegetação ou em flor; mudas, plantas e raízes de chicória
+0601.20.00;- Bulbos, tubérculos, raízes tuberosas, cormos, coroas e rizomas, em vegetação ou em flor, mudas, plantas e raízes de chicória
 0602.10.00;- Estacas não enraizadas e enxertos
 0602.20.00;- Árvores, arbustos e silvados, de fruta, enxertados ou não
 0602.30.00;- Rododendros e azaleias, enxertados ou não
@@ -650,7 +650,7 @@ CÓDIGO;DESCRIÇÃO
 0711.40.00;- Pepinos e pepininhos (<i>cornichons</i>)
 0711.51.00;-- Cogumelos do gênero <i>Agaricus</i>
 0711.59.00;-- Outros
-0711.90.00;- Outros produtos hortícolas; misturas de produtos hortícolas
+0711.90.00;- Outros produtos hortícolas, misturas de produtos hortícolas
 0712.20.00;- Cebolas
 0712.31.00;-- Cogumelos do gênero <i>Agaricus</i>
 0712.32.00;-- Orelhas-de-judas (<i>Auricularia</i> spp.)
@@ -976,7 +976,7 @@ CÓDIGO;DESCRIÇÃO
 1302.13.00;-- De lúpulo
 1302.14.00;-- De éfedra
 1302.19.10;De mamão (<i>Carica papaya</i>), seco
-1302.19.20;De semente de toranja; de semente de pomelo
+1302.19.20;De semente de toranja, de semente de pomelo
 1302.19.30;De <i>Ginkgo biloba</i>, seco
 1302.19.40;Valepotriatos
 1302.19.50;De ginseng
@@ -1088,8 +1088,8 @@ CÓDIGO;DESCRIÇÃO
 1521.90.11;Em bruto
 1521.90.19;Outras
 1521.90.90;Outros
-1522.00.00;<i>Dégras</i>; resíduos provenientes do tratamento das substâncias gordas ou das ceras animais ou vegetais.
-1601.00.00;Enchidos e produtos semelhantes, de carne, miudezas, sangue ou de insetos; preparações alimentícias à base desses produtos.
+1522.00.00;<i>Dégras</i>, resíduos provenientes do tratamento das substâncias gordas ou das ceras animais ou vegetais.
+1601.00.00;Enchidos e produtos semelhantes, de carne, miudezas, sangue ou de insetos, preparações alimentícias à base desses produtos.
 1602.10.00;- Preparações homogeneizadas
 1602.20.00;- De fígados de quaisquer animais
 1602.31.00;-- De peruas e de perus
@@ -1253,7 +1253,7 @@ CÓDIGO;DESCRIÇÃO
 2008.70.90;Outros
 2008.80.00;- Morangos
 2008.91.00;-- Palmitos
-2008.93.00;-- Arandos vermelhos (<i>cranberries</i>) (<i>Vaccinium macrocarpon</i>, <i>Vaccinium oxycoccos</i>); airela vermelha (<i>Vaccinium vitis-idaea</i>)
+2008.93.00;-- Arandos vermelhos (<i>cranberries</i>) (<i>Vaccinium macrocarpon</i>, <i>Vaccinium oxycoccos</i>), airela vermelha (<i>Vaccinium vitis-idaea</i>)
 2008.97.10;Em água edulcorada, incluindo os xaropes
 2008.97.90;Outras
 2008.99.00;-- Outras
@@ -1271,7 +1271,7 @@ CÓDIGO;DESCRIÇÃO
 2009.69.00;-- Outros
 2009.71.00;-- Com valor Brix não superior a 20
 2009.79.00;-- Outros
-2009.81.00;-- Suco (sumo) de arando vermelho (<i>cranberry</i>) (<i>Vaccinium macrocarpon</i>, <i>Vaccinium oxycoccos</i>); suco (sumo) de airela vermelha (<i>Vaccinium vitis-idaea</i>)
+2009.81.00;-- Suco (sumo) de arando vermelho (<i>cranberry</i>) (<i>Vaccinium macrocarpon</i>, <i>Vaccinium oxycoccos</i>), suco (sumo) de airela vermelha (<i>Vaccinium vitis-idaea</i>)
 2009.89.1;Suco (sumo) de pêssego, de acerola (<i>Malpighia</i> spp.) e de maracujá (<i>Passiflora edulis</i>)
 2009.89.11;De pêssego, com valor Brix igual ou superior a 60
 2009.89.12;De acerola (<i>Malpighia</i> spp.)
@@ -1290,7 +1290,7 @@ CÓDIGO;DESCRIÇÃO
 2101.30.00;- Chicória torrada e outros sucedâneos torrados do café e respectivos extratos, essências e concentrados
 2102.10.10;<i>Saccharomyces boulardii</i>
 2102.10.90;Outras
-2102.20.00;- Leveduras mortas; outros microrganismos monocelulares mortos
+2102.20.00;- Leveduras mortas, outros microrganismos monocelulares mortos
 2102.30.00;- Pós para levedar, preparados
 2103.10.10;Em embalagens imediatas de conteúdo inferior ou igual a 1 kg
 2103.10.90;Outros
@@ -1389,7 +1389,7 @@ CÓDIGO;DESCRIÇÃO
 2306.60.00;- De nozes ou de amêndoas de palma (palmiste) (coconote)
 2306.90.10;De germe de milho
 2306.90.90;Outros
-2307.00.00;Borras de vinho; tártaro em bruto.
+2307.00.00;Borras de vinho, tártaro em bruto.
 2308.00.00;Matérias vegetais e desperdícios vegetais, resíduos e subprodutos vegetais, mesmo em <i>pellets</i>, do tipo utilizado na alimentação de animais, não especificados nem compreendidos noutras posições.
 2309.10.00;- Alimentos para cães ou gatos, acondicionados para venda a retalho
 2309.90.10;Preparações destinadas a fornecer ao animal a totalidade dos elementos nutritivos necessários para uma alimentação diária racional e equilibrada (alimentos compostos completos)
@@ -1416,7 +1416,7 @@ CÓDIGO;DESCRIÇÃO
 2402.90.00;- Outros
 2403.11.00;-- Tabaco para narguilé (cachimbo de água) mencionado na Nota de subposição 1 do presente Capítulo
 2403.19.00;-- Outros
-2403.91.00;-- Tabaco "homogeneizado" ou "reconstituído"
+2403.91.00;-- Tabaco ""homogeneizado"" ou ""reconstituído""
 2403.99.10;Extratos e molhos
 2403.99.90;Outros
 2404.11.00;-- Que contenham tabaco ou tabaco reconstituído
@@ -1462,7 +1462,7 @@ CÓDIGO;DESCRIÇÃO
 2515.11.00;-- Em bruto ou desbastados
 2515.12.10;Mármores
 2515.12.20;Travertinos
-2515.20.00;- Granitos belgas e outras pedras calcárias de cantaria ou de construção; alabastro
+2515.20.00;- Granitos belgas e outras pedras calcárias de cantaria ou de construção, alabastro
 2516.11.00;-- Em bruto ou desbastado
 2516.12.00;-- Simplesmente cortado à serra ou por outro meio, em blocos ou placas de forma quadrada ou retangular
 2516.20.00;- Arenito (grés)
@@ -1472,7 +1472,7 @@ CÓDIGO;DESCRIÇÃO
 2517.30.00;- Tarmacadame
 2517.41.00;-- De mármore
 2517.49.00;-- Outros
-2518.10.00;- Dolomita não calcinada nem sinterizada, denominada "crua"
+2518.10.00;- Dolomita não calcinada nem sinterizada, denominada ""crua""
 2518.20.00;- Dolomita calcinada ou sinterizada
 2519.10.00;- Carbonato de magnésio natural (magnesita)
 2519.90.10;Magnésia eletrofundida
@@ -1483,7 +1483,7 @@ CÓDIGO;DESCRIÇÃO
 2520.10.20;Anidrita
 2520.20.10;Moído, apto para uso odontológico
 2520.20.90;Outros
-2521.00.00;Castinas; pedras calcárias utilizadas na fabricação de cal ou de cimento.
+2521.00.00;Castinas, pedras calcárias utilizadas na fabricação de cal ou de cimento.
 2522.10.00;- Cal viva
 2522.20.00;- Cal apagada
 2522.30.00;- Cal hidráulica
@@ -1500,11 +1500,11 @@ CÓDIGO;DESCRIÇÃO
 2525.30.00;- Desperdícios de mica
 2526.10.00;- Não triturados nem em pó
 2526.20.00;- Triturados ou em pó
-2528.00.00;Boratos naturais e seus concentrados (calcinados ou não), exceto boratos extraídos de salmouras naturais; ácido bórico natural com um teor máximo de 85 % de H<sub>3</sub>BO<sub>3</sub>, em produto seco.
+2528.00.00;Boratos naturais e seus concentrados (calcinados ou não), exceto boratos extraídos de salmouras naturais, ácido bórico natural com um teor máximo de 85 % de H<sub>3</sub>BO<sub>3</sub>, em produto seco.
 2529.10.00;- Feldspato
 2529.21.00;-- Que contenha, em peso, 97 % ou menos de fluoreto de cálcio
 2529.22.00;-- Que contenha, em peso, mais de 97 % de fluoreto de cálcio
-2529.30.00;- Leucita; nefelina e nefelina-sienito
+2529.30.00;- Leucita, nefelina e nefelina-sienito
 2530.10.10;Perlita
 2530.10.90;Outras
 2530.20.00;- Kieserita, epsomita (sulfatos de magnésio naturais)
@@ -1609,7 +1609,7 @@ CÓDIGO;DESCRIÇÃO
 2710.19.11;De aviação
 2710.19.19;Outros
 2710.19.2;Outros óleos combustíveis
-2710.19.21;"Gasóleo" (óleo diesel)
+2710.19.21;""Gasóleo"" (óleo diesel)
 2710.19.22;<i>Fuel-oil</i>
 2710.19.29;Outros
 2710.19.3;Óleos lubrificantes
@@ -1650,8 +1650,8 @@ CÓDIGO;DESCRIÇÃO
 2801.10.00;- Cloro
 2801.20.10;Sublimado
 2801.20.90;Outros
-2801.30.00;- Flúor; bromo
-2802.00.00;Enxofre sublimado ou precipitado; enxofre coloidal.
+2801.30.00;- Flúor, bromo
+2802.00.00;Enxofre sublimado ou precipitado, enxofre coloidal.
 2803.00.1;Negros de fumo
 2803.00.11;Negro de acetileno
 2803.00.19;Outros
@@ -1662,7 +1662,7 @@ CÓDIGO;DESCRIÇÃO
 2804.29.90;Outros
 2804.30.00;- Nitrogênio (azoto)
 2804.40.00;- Oxigênio
-2804.50.00;- Boro; telúrio
+2804.50.00;- Boro, telúrio
 2804.61.00;-- Que contenha, em peso, pelo menos 99,99 % de silício
 2804.69.00;-- Outro
 2804.70.10;Branco
@@ -1984,7 +1984,7 @@ CÓDIGO;DESCRIÇÃO
 2840.30.00;- Peroxoboratos (perboratos)
 2841.30.00;- Dicromato de sódio
 2841.50.1;Cromatos e dicromatos
-2841.50.11;Cromato de amônio; dicromato de amônio
+2841.50.11;Cromato de amônio, dicromato de amônio
 2841.50.12;Cromato de potássio
 2841.50.13;Cromato de sódio
 2841.50.14;Dicromato de potássio
@@ -2037,18 +2037,18 @@ CÓDIGO;DESCRIÇÃO
 2843.29.90;Outros
 2843.30.10;Sulfeto de ouro em dispersão de gelatina
 2843.30.90;Outros
-2843.90.1;Dexormaplatina; enloplatina; iproplatina; lobaplatina; miboplatina; ormaplatina; sebriplatina e zeniplatina
+2843.90.1;Dexormaplatina, enloplatina, iproplatina, lobaplatina, miboplatina, ormaplatina, sebriplatina e zeniplatina
 2843.90.11;Apresentados como medicamentos
 2843.90.19;Outros
 2843.90.20;Tricloreto de rutênio em solução aquosa com uma concentração igual ou superior a 17 %, mas inferior ou igual a 27 %, em peso
 2843.90.30;Ácido hexacloroirídico em solução aquosa com uma concentração igual ou superior a 17 %, mas inferior ou igual a 27 %, em peso
 2843.90.40;Tricloreto de rutênio, em pó
 2843.90.90;Outros
-2844.10.00;- Urânio natural e seus compostos; ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio natural ou compostos de urânio natural
-2844.20.00;- Urânio enriquecido em U 235 e seus compostos; plutônio e seus compostos; ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio enriquecido em U 235, plutônio ou compostos destes produtos
-2844.30.00;- Urânio empobrecido em U 235 e seus compostos; tório e seus compostos; ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio empobrecido em U 235, tório ou compostos destes produtos
-2844.41.00;-- Trítio e seus compostos; ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham trítio ou seus compostos
-2844.42.00;-- Actínio-225, actínio-227, califórnio-253, cúrio-240, cúrio-241, cúrio-242, cúrio-243, cúrio-244, einstêinio-253, einstêinio-254, gadolínio-148, polônio-208, polônio-209, polônio-210, rádio-223, urânio-230 ou urânio-232, e seus compostos; ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham estes elementos ou compostos
+2844.10.00;- Urânio natural e seus compostos, ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio natural ou compostos de urânio natural
+2844.20.00;- Urânio enriquecido em U 235 e seus compostos, plutônio e seus compostos, ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio enriquecido em U 235, plutônio ou compostos destes produtos
+2844.30.00;- Urânio empobrecido em U 235 e seus compostos, tório e seus compostos, ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham urânio empobrecido em U 235, tório ou compostos destes produtos
+2844.41.00;-- Trítio e seus compostos, ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham trítio ou seus compostos
+2844.42.00;-- Actínio-225, actínio-227, califórnio-253, cúrio-240, cúrio-241, cúrio-242, cúrio-243, cúrio-244, einstêinio-253, einstêinio-254, gadolínio-148, polônio-208, polônio-209, polônio-210, rádio-223, urânio-230 ou urânio-232, e seus compostos, ligas, dispersões (incluindo os <i>cermets</i>), produtos cerâmicos e misturas que contenham estes elementos ou compostos
 2844.43.10;Molibdênio-99 absorvido em alumina, apto para a obtenção de tecnécio-99 (reativo de diagnóstico para medicina nuclear)
 2844.43.20;Cobalto-60
 2844.43.30;Iodo-131
@@ -2214,7 +2214,7 @@ CÓDIGO;DESCRIÇÃO
 2903.99.15;Cloronaftalenos
 2903.99.16;Cloreto de benzilideno
 2903.99.17;Cloretos de xilila
-2903.99.18;Bifenilas policloradas (PCB); terfenilas policloradas (PCT)
+2903.99.18;Bifenilas policloradas (PCB), terfenilas policloradas (PCT)
 2903.99.19;Outros
 2903.99.2;Derivados halogenados, unicamente com bromo
 2903.99.21;Bromobenzeno
@@ -2232,12 +2232,12 @@ CÓDIGO;DESCRIÇÃO
 2904.10.13;Metanossulfonato de estanho
 2904.10.19;Outros
 2904.10.20;Ácido dodecilbenzenossulfônico e seus sais
-2904.10.30;Ácidos toluenossulfônicos; ácidos xilenossulfônicos; sais destes ácidos
-2904.10.40;Ácido etanossulfônico; ácido etilenossulfônico
+2904.10.30;Ácidos toluenossulfônicos, ácidos xilenossulfônicos, sais destes ácidos
+2904.10.40;Ácido etanossulfônico, ácido etilenossulfônico
 2904.10.5;Ácidos naftalenossulfônicos, seus sais e seus ésteres
 2904.10.51;Naftalenossulfonatos de sódio
 2904.10.52;Ácido beta-naftalenossulfônico
-2904.10.53;Ácidos alquil- e dialquilnaftalenossulfônicos; sais destes ácidos
+2904.10.53;Ácidos alquil- e dialquilnaftalenossulfônicos, sais destes ácidos
 2904.10.59;Outros
 2904.10.60;Ácido benzenossulfônico e seus sais
 2904.10.90;Outros
@@ -2252,7 +2252,7 @@ CÓDIGO;DESCRIÇÃO
 2904.20.52;1,3,5-Trinitrobenzeno
 2904.20.59;Outros
 2904.20.60;Derivados nitrados do xileno
-2904.20.70;Mononitroetano; nitrometanos
+2904.20.70;Mononitroetano, nitrometanos
 2904.20.90;Outros
 2904.31.00;-- Ácido perfluoroctano sulfônico
 2904.32.00;-- Perfluoroctanossulfonato de amônio
@@ -2266,7 +2266,7 @@ CÓDIGO;DESCRIÇÃO
 2904.99.12;1-Cloro-2,4-dinitrobenzeno
 2904.99.13;2-Cloro-1,3-dinitrobenzeno
 2904.99.14;4-Cloro-alfa,alfa,alfa-trifluor-3,5-dinitrotolueno
-2904.99.15;<i>o</i>-Nitroclorobenzeno; <i>m</i>-nitroclorobenzeno
+2904.99.15;<i>o</i>-Nitroclorobenzeno, <i>m</i>-nitroclorobenzeno
 2904.99.16;1,2-Dicloro-4-nitrobenzeno
 2904.99.19;Outros
 2904.99.2;Derivados nitrossulfonados
@@ -2328,7 +2328,7 @@ CÓDIGO;DESCRIÇÃO
 2906.12.00;-- Cicloexanol, metilcicloexanóis e dimetilcicloexanóis
 2906.13.00;-- Esteróis e inositóis
 2906.19.10;Derivados do mentol
-2906.19.20;Borneol; isoborneol
+2906.19.20;Borneol, isoborneol
 2906.19.30;Terpina e seu hidrato
 2906.19.40;Álcool fenchílico (1,3,3-trimetil-2-norbornanol)
 2906.19.50;Terpineóis
@@ -2339,7 +2339,7 @@ CÓDIGO;DESCRIÇÃO
 2906.29.90;Outros
 2907.11.00;-- Fenol (hidroxibenzeno) e seus sais
 2907.12.00;-- Cresóis e seus sais
-2907.13.00;-- Octilfenol, nonilfenol, e seus isômeros; sais destes produtos
+2907.13.00;-- Octilfenol, nonilfenol, e seus isômeros, sais destes produtos
 2907.15.10;beta-Naftol e seus sais
 2907.15.90;Outros
 2907.19.10;2,6-Di-<i>ter</i>-butil-<i>p</i>-cresol e seus sais
@@ -2585,7 +2585,7 @@ CÓDIGO;DESCRIÇÃO
 2915.90.23;Di(2-etilexanoato) de trietilenoglicol
 2915.90.24;Cloreto de 2-etilexanoíla
 2915.90.29;Outros
-2915.90.3;Ácido mirístico; ácido caprílico; seus sais e seus ésteres
+2915.90.3;Ácido mirístico, ácido caprílico, seus sais e seus ésteres
 2915.90.31;Ácido mirístico
 2915.90.32;Ácido caprílico
 2915.90.33;Miristato de isopropila
@@ -2614,7 +2614,7 @@ CÓDIGO;DESCRIÇÃO
 2916.15.1;Ácido oleico, seus sais e seus ésteres
 2916.15.11;Oleato de manitol
 2916.15.19;Outros
-2916.15.20;Ácido linoleico; ácido linolênico; seus sais e seus ésteres
+2916.15.20;Ácido linoleico, ácido linolênico, seus sais e seus ésteres
 2916.16.00;-- Binapacril (ISO)
 2916.19.1;Ácido sórbico, seus sais e seus ésteres
 2916.19.11;Sorbato de potássio
@@ -2695,7 +2695,7 @@ CÓDIGO;DESCRIÇÃO
 2918.17.00;-- Ácido 2,2-difenil-2-hidroxiacético (ácido benzílico)
 2918.18.00;-- Clorobenzilato (ISO)
 2918.19.10;Bromopropilato
-2918.19.2;Ácidos biliares, seus sais e seus ésteres; derivados destes produtos
+2918.19.2;Ácidos biliares, seus sais e seus ésteres, derivados destes produtos
 2918.19.21;Ursodiol (ácido ursodeoxicólico)
 2918.19.22;Ácido quenodeoxicólico
 2918.19.29;Outros
@@ -2732,11 +2732,11 @@ CÓDIGO;DESCRIÇÃO
 2918.30.40;Acetilacetato de 2-nitrometilbenzilideno
 2918.30.90;Outros
 2918.91.00;-- 2,4,5-T (ISO) (ácido 2,4,5-triclorofenoxiacético), seus sais e seus ésteres
-2918.99.1;Ácido fenoxiacético, seus sais e seus ésteres; derivados destes produtos
+2918.99.1;Ácido fenoxiacético, seus sais e seus ésteres, derivados destes produtos
 2918.99.11;Ácido fenoxiacético, seus sais e seus ésteres
 2918.99.12;Ácido 2,4-diclorofenoxiacético (2,4-D), seus sais e seus ésteres
 2918.99.19;Outros
-2918.99.2;Ácidos fenoxibutanoicos, seus sais e seus ésteres; derivados destes produtos
+2918.99.2;Ácidos fenoxibutanoicos, seus sais e seus ésteres, derivados destes produtos
 2918.99.21;Ácidos diclorofenoxibutanoicos, seus sais e seus ésteres
 2918.99.29;Outros
 2918.99.30;Acifluorfen sódico
@@ -2804,14 +2804,14 @@ CÓDIGO;DESCRIÇÃO
 2921.12.00;-- Cloridrato de 2-cloroetil(N,N-dimetilamina)
 2921.13.00;-- Cloridrato de 2-cloroetil(N,N-dietilamina)
 2921.14.00;-- Cloridrato de 2-cloroetil(N,N-di-isopropilamina)
-2921.19.1;Etilaminas e seus derivados; sais destes produtos
+2921.19.1;Etilaminas e seus derivados, sais destes produtos
 2921.19.11;Monoetilamina e seus sais
 2921.19.12;Trietilamina
 2921.19.13;Bis(2-cloroetil)etilamina
 2921.19.14;Triclormetina (DCI) (tris(2-cloroetil)amina)
 2921.19.15;Dietilamina e seus sais, exceto etansilato (<i>ethamsylate</i>)
 2921.19.19;Outros
-2921.19.2;<i>n</i>-Propilaminas e isopropilaminas; sais destes produtos
+2921.19.2;<i>n</i>-Propilaminas e isopropilaminas, sais destes produtos
 2921.19.21;Mono-<i>n</i>-propilamina e seus sais
 2921.19.22;Di-<i>n</i>-propilamina e seus sais
 2921.19.23;Monoisopropilamina e seus sais
@@ -2857,17 +2857,17 @@ CÓDIGO;DESCRIÇÃO
 2921.43.1;Toluidinas e seus sais
 2921.43.11;<i>o</i>-Toluidina
 2921.43.19;Outros
-2921.43.2;Derivados das toluidinas; sais destes produtos
+2921.43.2;Derivados das toluidinas, sais destes produtos
 2921.43.21;3-Nitro-4-toluidina e seus sais
 2921.43.22;Trifluralina
 2921.43.23;4-Cloro-2-toluidina
 2921.43.29;Outros
 2921.44.10;Difenilamina e seus sais
-2921.44.2;Derivados da difenilamina; sais destes produtos
+2921.44.2;Derivados da difenilamina, sais destes produtos
 2921.44.21;<i>n</i>-Octildifenilamina
 2921.44.22;<i>n</i>-Nonildifenilamina
 2921.44.29;Outros
-2921.45.00;-- 1-Naftilamina (alfa-naftilamina), 2-naftilamina (beta-naftilamina), e seus derivados; sais destes produtos
+2921.45.00;-- 1-Naftilamina (alfa-naftilamina), 2-naftilamina (beta-naftilamina), e seus derivados, sais destes produtos
 2921.46.10;Anfetamina e seus sais
 2921.46.20;Benzofetamina e seus sais
 2921.46.30;Dexanfetamina e seus sais
@@ -2878,7 +2878,7 @@ CÓDIGO;DESCRIÇÃO
 2921.46.80;Levanfetamina e seus sais
 2921.46.90;Mefenorex e seus sais
 2921.49.10;Cloridrato de fenfluramina
-2921.49.2;Xilidinas e seus derivados; sais destes produtos
+2921.49.2;Xilidinas e seus derivados, sais destes produtos
 2921.49.21;2,4-Xilidina e seus sais
 2921.49.22;Pendimetalina
 2921.49.29;Outros
@@ -2886,12 +2886,12 @@ CÓDIGO;DESCRIÇÃO
 2921.49.31;Sulfato de tranilcipromina
 2921.49.39;Outros
 2921.49.90;Outros
-2921.51.1;<i>o</i>-, <i>m</i>-, <i>p</i>-Fenilenodiamina; diaminotoluenos; sais destes produtos
+2921.51.1;<i>o</i>-, <i>m</i>-, <i>p</i>-Fenilenodiamina, diaminotoluenos, sais destes produtos
 2921.51.11;<i>m</i>-Fenilenodiamina e seus sais
 2921.51.12;Diaminotoluenos (toluilenodiaminas)
 2921.51.19;Outros
-2921.51.20;Derivados sulfonados das fenilenodiaminas e de seus derivados; sais destes produtos
-2921.51.3;Outros derivados das fenilenodiaminas; sais destes produtos
+2921.51.20;Derivados sulfonados das fenilenodiaminas e de seus derivados, sais destes produtos
+2921.51.3;Outros derivados das fenilenodiaminas, sais destes produtos
 2921.51.31;N,N'-Di-<i>sec</i>-butil-<i>p</i>-fenilenodiamina
 2921.51.32;N-Isopropil-N'-fenil-<i>p</i>-fenilenodiamina
 2921.51.33;N-(1,3-Dimetilbutil)-N'-fenil-<i>p</i>-fenilenodiamina
@@ -2899,13 +2899,13 @@ CÓDIGO;DESCRIÇÃO
 2921.51.35;N-Fenil-<i>p</i>-fenilenodiamina (4-aminodifenilamina) e seus sais
 2921.51.39;Outros
 2921.51.90;Outros
-2921.59.1;Benzidina e seus derivados; sais destes produtos
+2921.59.1;Benzidina e seus derivados, sais destes produtos
 2921.59.11;3,3'-Diclorobenzidina
 2921.59.19;Outros
 2921.59.2;Diaminodifenilmetanos
 2921.59.21;4,4'-Diaminodifenilmetano
 2921.59.29;Outros
-2921.59.3;Diaminodifenilaminas e seus derivados; sais destes produtos
+2921.59.3;Diaminodifenilaminas e seus derivados, sais destes produtos
 2921.59.31;4,4'-Diaminodifenilamina e seus sais
 2921.59.32;Ácido 4,4'-diaminodifenilamino-2-sulfônico e seus sais
 2921.59.39;Outros
@@ -2917,7 +2917,7 @@ CÓDIGO;DESCRIÇÃO
 2922.16.00;-- Perfluoroctanossulfonato de dietanolamônio
 2922.17.00;-- Metildietanolamina e etildietanolamina
 2922.18.00;-- 2-(N,N-di-isopropilamino)etanol
-2922.19.1;Propanolaminas e seus sais; derivados destes produtos
+2922.19.1;Propanolaminas e seus sais, derivados destes produtos
 2922.19.11;Monoisopropanolamina
 2922.19.12;2,4-Diclorofenoxiacetato de triisopropanolamina
 2922.19.13;2,4-Diclorofenoxiacetato de dimetilpropanolamina
@@ -2978,11 +2978,11 @@ CÓDIGO;DESCRIÇÃO
 2922.49.31;Ácido iminodiacético
 2922.49.32;Sais
 2922.49.40;Ácido dietilenotriaminopentacético e seus sais
-2922.49.5;alfa-Fenilglicina e seus sais; derivados destes produtos
+2922.49.5;alfa-Fenilglicina e seus sais, derivados destes produtos
 2922.49.51;alfa-Fenilglicina
 2922.49.52;Cloridrato de cloreto de D(-)alfa-aminobenzenoacetila
 2922.49.59;Outros
-2922.49.6;Diclofenaco e seus sais; derivados destes produtos
+2922.49.6;Diclofenaco e seus sais, derivados destes produtos
 2922.49.61;Diclofenaco de sódio
 2922.49.62;Diclofenaco de potássio
 2922.49.63;Diclofenaco de dietilamônio
@@ -2992,7 +2992,7 @@ CÓDIGO;DESCRIÇÃO
 2922.50.1;Fenilefrina e seus sais
 2922.50.11;Cloridrato
 2922.50.19;Outros
-2922.50.3;Tirosina e seus derivados; sais destes produtos
+2922.50.3;Tirosina e seus derivados, sais destes produtos
 2922.50.31;Levodopa
 2922.50.32;Metildopa
 2922.50.39;Outros
@@ -3014,10 +3014,10 @@ CÓDIGO;DESCRIÇÃO
 2924.12.10;Fluoracetamida
 2924.12.20;Fosfamidona
 2924.12.30;Monocrotofós
-2924.19.1;Acetoacetamida e seus derivados; sais destes produtos
+2924.19.1;Acetoacetamida e seus derivados, sais destes produtos
 2924.19.11;2-Cloro-N-metilacetoacetamida
 2924.19.19;Outros
-2924.19.2;Formamidas; acetamidas
+2924.19.2;Formamidas, acetamidas
 2924.19.21;N-Metilformamida
 2924.19.22;N,N-Dimetilformamida
 2924.19.29;Outras
@@ -3034,7 +3034,7 @@ CÓDIGO;DESCRIÇÃO
 2924.19.93;N,N'-(Diestearoil)etilenodiamina (N,N'-etilen-bis-estearamida)
 2924.19.94;Dietanolamidas de ácidos graxos (gordos) de C<sub>12</sub> a C<sub>18</sub>
 2924.19.99;Outros
-2924.21.1;Carbanilida e seus derivados; sais destes produtos
+2924.21.1;Carbanilida e seus derivados, sais destes produtos
 2924.21.11;Hexanitrocarbanilidas
 2924.21.19;Outros
 2924.21.20;Diuron
@@ -3042,31 +3042,31 @@ CÓDIGO;DESCRIÇÃO
 2924.23.00;-- Ácido 2-acetamidobenzoico (ácido N-acetilantranílico) e seus sais
 2924.24.00;-- Etinamato (DCI)
 2924.25.00;-- Alaclor (ISO)
-2924.29.1;Acetanilida e seus derivados; sais destes produtos
+2924.29.1;Acetanilida e seus derivados, sais destes produtos
 2924.29.11;Acetanilida
 2924.29.12;4-Aminoacetanilida
 2924.29.13;Acetaminofen (paracetamol)
 2924.29.14;Lidocaína e seu cloridrato
 2924.29.15;2,5-Dimetoxiacetanilida
 2924.29.19;Outros
-2924.29.20;Anilidas dos ácidos hidroxinaftoicos e seus derivados; sais destes produtos
+2924.29.20;Anilidas dos ácidos hidroxinaftoicos e seus derivados, sais destes produtos
 2924.29.3;Carbamatos
 2924.29.31;Carbaril
 2924.29.32;Propoxur
 2924.29.39;Outros
 2924.29.4;Acetamidas e seus derivados
 2924.29.41;Teclozam
-2924.29.43;Atenolol; metolaclor
+2924.29.43;Atenolol, metolaclor
 2924.29.44;Ácido ioxáglico
 2924.29.45;Iodamida
 2924.29.46;Cloreto do ácido <i>p</i>-acetamidobenzenossulfônico
 2924.29.47;Ácido ioxitalâmico
 2924.29.49;Outros
-2924.29.5;Metoxibenzamidas e seus derivados; sais destes produtos
+2924.29.5;Metoxibenzamidas e seus derivados, sais destes produtos
 2924.29.51;Bromoprida
 2924.29.52;Metoclopramida e seu cloridrato
 2924.29.59;Outros
-2924.29.6;Propanamidas e seus derivados; sais destes produtos
+2924.29.6;Propanamidas e seus derivados, sais destes produtos
 2924.29.61;Propanil
 2924.29.62;Flutamida
 2924.29.63;Prilocaína e seu cloridrato
@@ -3088,7 +3088,7 @@ CÓDIGO;DESCRIÇÃO
 2925.29.1;Arginina e seus sais
 2925.29.11;Aspartato de L-arginina
 2925.29.19;Outros
-2925.29.2;Guanidina e seus derivados; sais destes produtos
+2925.29.2;Guanidina e seus derivados, sais destes produtos
 2925.29.21;Guanidina
 2925.29.22;N,N'-Difenilguanidina
 2925.29.23;Clorexidina e seus sais
@@ -3108,7 +3108,7 @@ CÓDIGO;DESCRIÇÃO
 2926.90.11;Verapamil
 2926.90.12;Cloridrato
 2926.90.19;Outros
-2926.90.2;Álcool alfa-ciano-3-fenoxibenzílico e seus derivados; ésteres destes produtos
+2926.90.2;Álcool alfa-ciano-3-fenoxibenzílico e seus derivados, ésteres destes produtos
 2926.90.21;Álcool alfa-ciano-3-fenoxibenzílico
 2926.90.22;Ciflutrina
 2926.90.23;Cipermetrina
@@ -3129,7 +3129,7 @@ CÓDIGO;DESCRIÇÃO
 2927.00.21;Azodicarbonamida
 2927.00.29;Outros
 2927.00.30;Compostos azóxicos
-2928.00.1;Acetoxima e seus derivados; sais destes produtos
+2928.00.1;Acetoxima e seus derivados, sais destes produtos
 2928.00.11;Metiletilacetoxima
 2928.00.19;Outros
 2928.00.20;Carbidopa
@@ -3162,7 +3162,7 @@ CÓDIGO;DESCRIÇÃO
 2930.20.13;Tiobencarb (dietiltiocarbamato de S-4-clorobenzila)
 2930.20.19;Outros
 2930.20.2;Ditiocarbamatos
-2930.20.21;Ziram; dimetilditiocarbamato de sódio
+2930.20.21;Ziram, dimetilditiocarbamato de sódio
 2930.20.22;Dietilditiocarbamato de zinco
 2930.20.23;Dibutilditiocarbamato de zinco
 2930.20.24;Metam sódio
@@ -3183,45 +3183,45 @@ CÓDIGO;DESCRIÇÃO
 2930.80.10;Aldicarb
 2930.80.20;Captafol
 2930.80.30;Metamidofós
-2930.90.1;Tióis e seus derivados; sais destes produtos
+2930.90.1;Tióis e seus derivados, sais destes produtos
 2930.90.11;Ácido tioglicólico e seus sais
 2930.90.12;Cisteína
 2930.90.13;N,N-Dialquil-2-aminoetanotiol, com grupos alquila de C<sub>1</sub> a C<sub>3</sub>, e seus sais protonados
 2930.90.19;Outros
-2930.90.2;Tioamidas e seus derivados; sais destes produtos
+2930.90.2;Tioamidas e seus derivados, sais destes produtos
 2930.90.21;Tioureia
 2930.90.22;Tiofanato-Metila
 2930.90.23;4-Metil-3-tiosemicarbazida
 2930.90.29;Outros
-2930.90.3;Tioéteres, tioésteres e seus derivados, exceto os produtos do item 2930.90.8; sais destes produtos
+2930.90.3;Tioéteres, tioésteres e seus derivados, exceto os produtos do item 2930.90.8, sais destes produtos
 2930.90.31;2-(Etiltio)etanol, com uma concentração igual ou superior a 98 %, em peso
 2930.90.32;3-(Metiltio)propanal
 2930.90.33;Clorotioformiato de S-etila
 2930.90.34;Ácido 2-hidroxi-4-(metiltio)butanoico e seu sal cálcico
 2930.90.35;Metomil
 2930.90.36;Carbocisteína
-2930.90.37;4-Sulfatoetilsulfonil-2,5-dimetoxianilina; 4-sulfatoetilsulfonil-2-metoxi-5-metilanilina; 4-sulfatoetilsulfonil-2-metoxianilina
+2930.90.37;4-Sulfatoetilsulfonil-2,5-dimetoxianilina, 4-sulfatoetilsulfonil-2-metoxi-5-metilanilina, 4-sulfatoetilsulfonil-2-metoxianilina
 2930.90.39;Outros
-2930.90.4;Fosforotioatos e seus derivados; sais destes produtos
+2930.90.4;Fosforotioatos e seus derivados, sais destes produtos
 2930.90.41;Fosforotioato de O,O-dietila e de S-[2-(dietilamino)etila] e seus sais alquilados ou protonados
 2930.90.42;Fosforotioato de O,O-dimetila e de S-[2-(1-metilcarbamoiletiltio)-etila)] (vamidotion)
 2930.90.43;Fosforotioato de O-(4-bromo-2-clorofenila) O-etila e de S-propila (profenofós)
 2930.90.49;Outros
-2930.90.5;Fosforoditioatos e seus derivados; sais destes produtos
-2930.90.51;Forato (ISO); terbufós (ISO)
+2930.90.5;Fosforoditioatos e seus derivados, sais destes produtos
+2930.90.51;Forato (ISO), terbufós (ISO)
 2930.90.52;Dissulfoton
 2930.90.53;Etion
 2930.90.54;Dimetoato
 2930.90.57;Fosforoditioato de O,O-dimetila e de S-[2-(etiltio)etila] (tiometon)
 2930.90.59;Outros
-2930.90.6;Fosforoamidotioatos e seus derivados; sais destes produtos
+2930.90.6;Fosforoamidotioatos e seus derivados, sais destes produtos
 2930.90.61;Acefato
 2930.90.69;Outros
 2930.90.7;Sulfonas
 2930.90.71;Tiaprida
 2930.90.72;Bicalutamida
 2930.90.79;Outras
-2930.90.8;Sulfeto de 2-cloroetila e de clorometila; sulfeto de bis(2-cloroetila); bis(2-cloroetiltio)metano; 1,2-bis(2-cloroetiltio)etano; 1,3-bis(2-cloroetiltio)-<i>n</i>-propano; 1,4-bis(2-cloroetiltio)-<i>n</i>-butano; 1,5-bis(2-cloroetiltio)-<i>n</i>-pentano; óxido de bis(2-cloroetiltiometila); óxido de bis(2-cloroetiltioetila)
+2930.90.8;Sulfeto de 2-cloroetila e de clorometila, sulfeto de bis(2-cloroetila), bis(2-cloroetiltio)metano, 1,2-bis(2-cloroetiltio)etano, 1,3-bis(2-cloroetiltio)-<i>n</i>-propano, 1,4-bis(2-cloroetiltio)-<i>n</i>-butano, 1,5-bis(2-cloroetiltio)-<i>n</i>-pentano, óxido de bis(2-cloroetiltiometila), óxido de bis(2-cloroetiltioetila)
 2930.90.81;Sulfeto de 2-cloroetila e de clorometila
 2930.90.82;Sulfeto de bis(2-cloroetila)
 2930.90.83;Bis(2-cloroetiltio)metano
@@ -3236,7 +3236,7 @@ CÓDIGO;DESCRIÇÃO
 2930.90.93;Metileno-bis-tiocianato
 2930.90.94;Dimetiltiofosforamida
 2930.90.95;Etilditiofosfonato de O-etila e de S-fenila (fonofós)
-2930.90.96;Hidrogênio alquil(de C<sub>1</sub> a C<sub>3</sub>)fosfonotioatos de [S-2-(dialquil(de C<sub>1</sub> a C<sub>3</sub>)amino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo os cicloalquila); sais alquilados ou protonados destes produtos
+2930.90.96;Hidrogênio alquil(de C<sub>1</sub> a C<sub>3</sub>)fosfonotioatos de [S-2-(dialquil(de C<sub>1</sub> a C<sub>3</sub>)amino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo os cicloalquila), sais alquilados ou protonados destes produtos
 2930.90.97;Outros compostos que contenham um átomo de fósforo ligado a um grupo alquila (de C<sub>1</sub> a C<sub>3</sub>) mas sem outros átomos de carbono
 2930.90.98;Ditiocarbonatos (xantatos e xantogenatos)
 2930.90.99;Outros
@@ -3250,14 +3250,14 @@ CÓDIGO;DESCRIÇÃO
 2931.46.00;-- 2,4,6-Trióxido de 2,4,6-tripropil-1,3,5,2,4,6-trioxatrifosfinano
 2931.47.00;-- Metilfosfonato de (5-etil-2-metil-2-óxido-1,3,2-dioxafosfinan-5-il)metil metila
 2931.48.00;-- 3,9-Dióxido de 3,9-dimetil-2,4,8,10-tetraoxa-3,9-difosfaspiro[5.5]undecano
-2931.49.1;Ácido fosfonometiliminodiacético; ácido aminotrimetilenofosfônico; difenilfosfonato(4,4'-bis((dimetoxifosfinil)metil)difenila); etidronato dissódico; glifosato e seu sal de monoisopropilamina; glufosinato de amônio; hidrogenofosfonato de bis(2-etilexilo)
-2931.49.11;Ácido fosfonometiliminodiacético; ácido aminotrimetilenofosfônico
+2931.49.1;Ácido fosfonometiliminodiacético, ácido aminotrimetilenofosfônico, difenilfosfonato(4,4'-bis((dimetoxifosfinil)metil)difenila), etidronato dissódico, glifosato e seu sal de monoisopropilamina, glufosinato de amônio, hidrogenofosfonato de bis(2-etilexilo)
+2931.49.11;Ácido fosfonometiliminodiacético, ácido aminotrimetilenofosfônico
 2931.49.12;Difenilfosfonato(4,4'-bis((dimetoxifosfinil)metil)difenila)
 2931.49.13;Etidronato dissódico
 2931.49.14;Glifosato e seu sal de monoisopropilamina
 2931.49.15;Glufosinato de amônio
 2931.49.16;Hidrogenofosfonato de bis(2-etilexilo)
-2931.49.20;Hidrogênio alquil(de C<sub>1</sub> a C<sub>3</sub>)fosfonitos de [O-2-(dialquil(de C<sub>1</sub> a C<sub>3</sub>)amino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo os cicloalquila); sais alquilados ou protonados destes produtos
+2931.49.20;Hidrogênio alquil(de C<sub>1</sub> a C<sub>3</sub>)fosfonitos de [O-2-(dialquil(de C<sub>1</sub> a C<sub>3</sub>)amino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo os cicloalquila), sais alquilados ou protonados destes produtos
 2931.49.3;Outros compostos que contenham um átomo de fósforo ligado a um grupo alquila (de C<sub>1</sub> a C<sub>3</sub>) mas sem outros átomos de carbono
 2931.49.31;Metilfosfinato de butila
 2931.49.32;Metilfosfonato de bis(1-metilpentila)
@@ -3268,7 +3268,7 @@ CÓDIGO;DESCRIÇÃO
 2931.52.00;-- Dicloreto propilfosfônico
 2931.53.00;-- Metilfosfonotionato de O-(3-cloropropil) O-[4-nitro-3-(trifluorometil)fenila]
 2931.54.00;-- Triclorfom (ISO)
-2931.59.1;Ácido clodrônico e seu sal dissódico; etefon; fotemustina
+2931.59.1;Ácido clodrônico e seu sal dissódico, etefon, fotemustina
 2931.59.11;Ácido clodrônico e seu sal dissódico
 2931.59.12;Etefon
 2931.59.13;Fotemustina
@@ -3321,7 +3321,7 @@ CÓDIGO;DESCRIÇÃO
 2932.94.00;-- Safrol
 2932.95.00;-- Tetra-hidrocanabinóis (todos os isômeros)
 2932.96.00;-- Carbofurano (ISO)
-2932.99.1;Eucaliptol; quercetina; dinitrato de isossorbida
+2932.99.1;Eucaliptol, quercetina, dinitrato de isossorbida
 2932.99.11;Eucaliptol
 2932.99.12;Quercetina
 2932.99.13;Dinitrato de isossorbida
@@ -3370,15 +3370,15 @@ CÓDIGO;DESCRIÇÃO
 2933.31.10;Piridina
 2933.31.20;Sais
 2933.32.00;-- Piperidina e seus sais
-2933.33.1;Alfentanila e anileridina; sais destes produtos
+2933.33.1;Alfentanila e anileridina, sais destes produtos
 2933.33.11;Alfentanila
 2933.33.12;Anileridina
 2933.33.19;Outros
-2933.33.2;Bezitramida e bromazepam; sais destes produtos
+2933.33.2;Bezitramida e bromazepam, sais destes produtos
 2933.33.21;Bezitramida
 2933.33.22;Bromazepam
 2933.33.29;Outros
-2933.33.3;Carfentanila e cetobemidona; sais destes produtos
+2933.33.3;Carfentanila e cetobemidona, sais destes produtos
 2933.33.31;Carfentanila
 2933.33.32;Cetobemidona
 2933.33.39;Outros
@@ -3386,26 +3386,26 @@ CÓDIGO;DESCRIÇÃO
 2933.33.41;Difenoxilato
 2933.33.42;Cloridrato de difenoxilato
 2933.33.49;Outros
-2933.33.5;Difenoxina e dipipanona; sais destes produtos
+2933.33.5;Difenoxina e dipipanona, sais destes produtos
 2933.33.51;Difenoxina
 2933.33.52;Dipipanona
 2933.33.59;Outros
-2933.33.6;Fenciclidina, fenoperidina e fentanila; sais destes produtos
+2933.33.6;Fenciclidina, fenoperidina e fentanila, sais destes produtos
 2933.33.61;Fenciclidina
 2933.33.62;Fenoperidina
 2933.33.63;Fentanila
 2933.33.69;Outros
-2933.33.7;Metilfenidato e pentazocina; sais destes produtos
+2933.33.7;Metilfenidato e pentazocina, sais destes produtos
 2933.33.71;Metilfenidato
 2933.33.72;Pentazocina
 2933.33.79;Outros
-2933.33.8;Petidina, intermediário A da petidina e pipradrol; sais destes produtos
+2933.33.8;Petidina, intermediário A da petidina e pipradrol, sais destes produtos
 2933.33.81;Petidina
 2933.33.82;Intermediário A da petidina
 2933.33.83;Pipradrol
 2933.33.84;Cloridrato de petidina
 2933.33.89;Outros
-2933.33.9;Piritramida, propiram, remifentanila e trimeperidina; sais destes produtos
+2933.33.9;Piritramida, propiram, remifentanila e trimeperidina, sais destes produtos
 2933.33.91;Piritramida
 2933.33.92;Propiram
 2933.33.93;Trimeperidina
@@ -3470,10 +3470,10 @@ CÓDIGO;DESCRIÇÃO
 2933.49.40;Ésteres do levorfanol
 2933.49.90;Outros
 2933.52.00;-- Malonilureia (ácido barbitúrico) e seus sais
-2933.53.1;Alobarbital e amobarbital; sais destes produtos
+2933.53.1;Alobarbital e amobarbital, sais destes produtos
 2933.53.11;Alobarbital e seus sais
 2933.53.12;Amobarbital e seus sais
-2933.53.2;Barbital, butalbital e butobarbital; sais destes produtos
+2933.53.2;Barbital, butalbital e butobarbital, sais destes produtos
 2933.53.21;Barbital e seus sais
 2933.53.22;Butalbital e seus sais
 2933.53.23;Butobarbital e seus sais
@@ -3481,11 +3481,11 @@ CÓDIGO;DESCRIÇÃO
 2933.53.40;Fenobarbital e seus sais
 2933.53.50;Metilfenobarbital e seus sais
 2933.53.60;Pentobarbital e seus sais
-2933.53.7;Secbutabarbital e secobarbital; sais destes produtos
+2933.53.7;Secbutabarbital e secobarbital, sais destes produtos
 2933.53.71;Secbutabarbital e seus sais
 2933.53.72;Secobarbital e seus sais
 2933.53.80;Venilbital e seus sais
-2933.54.00;-- Outros derivados de malonilureia (ácido barbitúrico); sais destes produtos
+2933.54.00;-- Outros derivados de malonilureia (ácido barbitúrico), sais destes produtos
 2933.55.10;Loprazolam e seus sais
 2933.55.20;Mecloqualona e seus sais
 2933.55.30;Metaqualona e seus sais
@@ -3495,7 +3495,7 @@ CÓDIGO;DESCRIÇÃO
 2933.59.12;Praziquantel
 2933.59.13;Norfloxacina e seu nicotinato
 2933.59.14;Flunarizina e seu dicloridrato
-2933.59.15;Enrofloxacina; sais de piperazina
+2933.59.15;Enrofloxacina, sais de piperazina
 2933.59.16;Cloridrato de buspirona
 2933.59.19;Outros
 2933.59.2;Cuja estrutura contém um ciclo pirimidina (hidrogenado ou não) e halogênios em ligação covalente
@@ -3544,46 +3544,46 @@ CÓDIGO;DESCRIÇÃO
 2933.72.20;Metiprilona
 2933.79.10;Piracetam
 2933.79.90;Outras
-2933.91.1;Alprazolam, camazepam, clonazepam, clorazepato e clorodiazepóxido; sais destes produtos
+2933.91.1;Alprazolam, camazepam, clonazepam, clorazepato e clorodiazepóxido, sais destes produtos
 2933.91.11;Alprazolam
 2933.91.12;Camazepam
 2933.91.13;Clonazepam
 2933.91.14;Clorazepato
 2933.91.15;Clordiazepóxido
 2933.91.19;Outros
-2933.91.2;Delorazepam, diazepam e estazolam; sais destes produtos
+2933.91.2;Delorazepam, diazepam e estazolam, sais destes produtos
 2933.91.21;Delorazepam
 2933.91.22;Diazepam
 2933.91.23;Estazolam
 2933.91.29;Outros
-2933.91.3;Fludiazepam, flunitrazepam, flurazepam e halazepam; sais destes produtos
+2933.91.3;Fludiazepam, flunitrazepam, flurazepam e halazepam, sais destes produtos
 2933.91.31;Fludiazepam
 2933.91.32;Flunitrazepam
 2933.91.33;Flurazepam
 2933.91.34;Halazepam
 2933.91.39;Outros
-2933.91.4;Loflazepato de etila, lorazepam e lormetazepam; sais destes produtos
+2933.91.4;Loflazepato de etila, lorazepam e lormetazepam, sais destes produtos
 2933.91.41;Loflazepato de etila
 2933.91.42;Lorazepam
 2933.91.43;Lormetazepam
 2933.91.49;Outros
-2933.91.5;Mazindol, medazepam e midazolam; sais destes produtos
+2933.91.5;Mazindol, medazepam e midazolam, sais destes produtos
 2933.91.51;Mazindol
 2933.91.52;Medazepam
 2933.91.53;Midazolam e seus sais
 2933.91.59;Outros
-2933.91.6;Nimetazepam, nitrazepam, nordazepam e oxazepam; sais destes produtos
+2933.91.6;Nimetazepam, nitrazepam, nordazepam e oxazepam, sais destes produtos
 2933.91.61;Nimetazepam
 2933.91.62;Nitrazepam
 2933.91.63;Nordazepam
 2933.91.64;Oxazepam
 2933.91.69;Outros
-2933.91.7;Pinazepam, pirovalerona e prazepam; sais destes produtos
+2933.91.7;Pinazepam, pirovalerona e prazepam, sais destes produtos
 2933.91.71;Pinazepam
 2933.91.72;Pirovalerona
 2933.91.73;Prazepam
 2933.91.79;Outros
-2933.91.8;Temazepam, tetrazepam e triazolam; sais destes produtos
+2933.91.8;Temazepam, tetrazepam e triazolam, sais destes produtos
 2933.91.81;Temazepam
 2933.91.82;Tetrazepam
 2933.91.83;Triazolam
@@ -3603,11 +3603,11 @@ CÓDIGO;DESCRIÇÃO
 2933.99.35;Hexametilenoimina
 2933.99.39;Outros
 2933.99.4;Cuja estrutura contém um ciclo pirrol (hidrogenado ou não)
-2933.99.41;Clemastina e seus derivados; sais destes produtos
+2933.99.41;Clemastina e seus derivados, sais destes produtos
 2933.99.42;Amisulprida
 2933.99.43;Sultoprida
 2933.99.44;Alizaprida
-2933.99.45;Buflomedil e seus derivados; sais destes produtos
+2933.99.45;Buflomedil e seus derivados, sais destes produtos
 2933.99.46;Maleato de enalapril
 2933.99.47;Ketorolac trometamina
 2933.99.49;Outros
@@ -3649,19 +3649,19 @@ CÓDIGO;DESCRIÇÃO
 2934.30.20;Enantato de flufenazina
 2934.30.30;Prometazina
 2934.30.90;Outros
-2934.91.1;Aminorex e brotizolan; sais destes produtos
+2934.91.1;Aminorex e brotizolan, sais destes produtos
 2934.91.11;Aminorex e seus sais
 2934.91.12;Brotizolam e seus sais
-2934.91.2;Clotiazepam, cloxazolam e dextromoramida; sais destes produtos
+2934.91.2;Clotiazepam, cloxazolam e dextromoramida, sais destes produtos
 2934.91.21;Clotiazepam
 2934.91.22;Cloxazolam
 2934.91.23;Dextromoramida
 2934.91.29;Outros
-2934.91.3;Fendimetrazina, fenmetrazina e haloxazolam; sais destes produtos
+2934.91.3;Fendimetrazina, fenmetrazina e haloxazolam, sais destes produtos
 2934.91.31;Fendimetrazina e seus sais
 2934.91.32;Fenmetrazina e seus sais
 2934.91.33;Haloxazolam e seus sais
-2934.91.4;Ketazolam e mesocarbo; sais destes produtos
+2934.91.4;Ketazolam e mesocarbo, sais destes produtos
 2934.91.41;Ketazolam
 2934.91.42;Mesocarbo
 2934.91.49;Outros
@@ -3814,7 +3814,7 @@ CÓDIGO;DESCRIÇÃO
 2937.23.3;Estriol, seus ésteres e seus sais
 2937.23.31;Estriol e seu succinato
 2937.23.39;Outros
-2937.23.4;Estradiol, seus ésteres e seus sais; derivados destes produtos
+2937.23.4;Estradiol, seus ésteres e seus sais, derivados destes produtos
 2937.23.41;Hemissuccinato de estradiol
 2937.23.42;Fempropionato de estradiol (17-(3-fenilpropionato) de estradiol)
 2937.23.49;Outros
@@ -3846,15 +3846,15 @@ CÓDIGO;DESCRIÇÃO
 2938.90.20;Esteviosídio
 2938.90.90;Outros
 2939.11.10;Concentrados de palha de dormideira ou papoula
-2939.11.2;Buprenorfina, codeína e di-hidrocodeína; sais destes produtos
+2939.11.2;Buprenorfina, codeína e di-hidrocodeína, sais destes produtos
 2939.11.21;Buprenorfina e seus sais
 2939.11.22;Codeína e seus sais
 2939.11.23;Di-hidrocodeína e seus sais
-2939.11.3;Etilmorfina e etorfina; sais destes produtos
+2939.11.3;Etilmorfina e etorfina, sais destes produtos
 2939.11.31;Etilmorfina e seus sais
 2939.11.32;Etorfina e seus sais
 2939.11.40;Folcodina e seus sais
-2939.11.5;Heroína, hidrocodona e hidromorfona; sais destes produtos
+2939.11.5;Heroína, hidrocodona e hidromorfona, sais destes produtos
 2939.11.51;Heroína e seus sais
 2939.11.52;Hidrocodona e seus sais
 2939.11.53;Hidromorfona e seus sais
@@ -3863,14 +3863,14 @@ CÓDIGO;DESCRIÇÃO
 2939.11.62;Cloridrato e sulfato de morfina
 2939.11.69;Outros
 2939.11.70;Nicomorfina e seus sais
-2939.11.8;Oxicodona e oximorfona; sais destes produtos
+2939.11.8;Oxicodona e oximorfona, sais destes produtos
 2939.11.81;Oxicodona e seus sais
 2939.11.82;Oximorfona e seus sais
-2939.11.9;Tebacona e tebaína; sais destes produtos
+2939.11.9;Tebacona e tebaína, sais destes produtos
 2939.11.91;Tebacona e seus sais
 2939.11.92;Tebaína e seus sais
 2939.19.00;-- Outros
-2939.20.00;- Alcaloides da quina e seus derivados; sais destes produtos
+2939.20.00;- Alcaloides da quina e seus derivados, sais destes produtos
 2939.30.10;Cafeína
 2939.30.20;Sais
 2939.41.00;-- Efedrina e seus sais
@@ -3894,14 +3894,14 @@ CÓDIGO;DESCRIÇÃO
 2939.69.2;Derivados da ergotamina e seus sais
 2939.69.21;Mesilato de di-hidroergotamina
 2939.69.29;Outros
-2939.69.3;Ergocornina e seus derivados; sais destes produtos
+2939.69.3;Ergocornina e seus derivados, sais destes produtos
 2939.69.31;Mesilato de di-hidroergocornina
 2939.69.39;Outros
-2939.69.4;Ergocriptina e seus derivados; sais destes produtos
+2939.69.4;Ergocriptina e seus derivados, sais destes produtos
 2939.69.41;Mesilato de alfa-di-hidroergocriptina
 2939.69.42;Mesilato de beta-di-hidroergocriptina
 2939.69.49;Outros
-2939.69.5;Ergocristina e seus derivados; sais destes produtos
+2939.69.5;Ergocristina e seus derivados, sais destes produtos
 2939.69.51;Ergocristina
 2939.69.52;Metanossulfonato de di-hidroergocristina
 2939.69.59;Outros
@@ -3909,10 +3909,10 @@ CÓDIGO;DESCRIÇÃO
 2939.72.10;Cocaína e seus sais
 2939.72.20;Ecgonina e seus sais
 2939.72.90;Outros
-2939.79.1;Escopolamina e seus derivados; sais destes produtos
+2939.79.1;Escopolamina e seus derivados, sais destes produtos
 2939.79.11;Brometo de N-butilescopolamônio
 2939.79.19;Outros
-2939.79.20;Teobromina e seus derivados; sais destes produtos
+2939.79.20;Teobromina e seus derivados, sais destes produtos
 2939.79.3;Pilocarpina e seus sais
 2939.79.31;Pilocarpina, seu nitrato e seu cloridrato
 2939.79.39;Outros
@@ -3925,7 +3925,7 @@ CÓDIGO;DESCRIÇÃO
 2940.00.12;Arabinose
 2940.00.13;Ramnose
 2940.00.19;Outros
-2940.00.2;Ácido lactobiônico, seus sais e seus ésteres; derivados halogenados, sulfonados, nitrados ou nitrosados destes produtos
+2940.00.2;Ácido lactobiônico, seus sais e seus ésteres, derivados halogenados, sulfonados, nitrados ou nitrosados destes produtos
 2940.00.21;Ácido lactobiônico
 2940.00.22;Lactobionato de cálcio
 2940.00.23;Bromolactobionato de cálcio
@@ -3937,10 +3937,10 @@ CÓDIGO;DESCRIÇÃO
 2940.00.99;Outros
 2941.10.10;Ampicilina e seus sais
 2941.10.20;Amoxicilina e seus sais
-2941.10.3;Penicilina V e seus derivados; sais destes produtos
+2941.10.3;Penicilina V e seus derivados, sais destes produtos
 2941.10.31;Penicilina V potássica
 2941.10.39;Outros
-2941.10.4;Penicilina G e seus derivados; sais destes produtos
+2941.10.4;Penicilina G e seus derivados, sais destes produtos
 2941.10.41;Penicilina G potássica
 2941.10.42;Penicilina G benzatínica
 2941.10.43;Penicilina G procaínica
@@ -3962,16 +3962,16 @@ CÓDIGO;DESCRIÇÃO
 2941.50.10;Claritromicina
 2941.50.20;Eritromicina e seus sais
 2941.50.90;Outros
-2941.90.1;Rifamicinas e seus derivados; sais destes produtos
+2941.90.1;Rifamicinas e seus derivados, sais destes produtos
 2941.90.11;Rifamicina S
 2941.90.12;Rifampicina (rifamicina AMP)
 2941.90.13;Rifamicina SV sódica
 2941.90.19;Outros
-2941.90.2;Lincomicina e seus derivados; sais destes produtos
+2941.90.2;Lincomicina e seus derivados, sais destes produtos
 2941.90.21;Cloridrato de lincomicina
 2941.90.22;Fosfato de clindamicina
 2941.90.29;Outros
-2941.90.3;Cefalosporinas e cefamicinas, e seus derivados; sais destes produtos
+2941.90.3;Cefalosporinas e cefamicinas, e seus derivados, sais destes produtos
 2941.90.31;Ceftriaxona e seus sais
 2941.90.32;Cefoperazona e seus sais, cefazolina sódica
 2941.90.33;Cefaclor e cefalexina monoidratados, cefalotina sódica
@@ -4039,8 +4039,8 @@ CÓDIGO;DESCRIÇÃO
 3002.12.39;Outros
 3002.13.00;-- Produtos imunológicos, não misturados, não apresentados em doses nem acondicionados para venda a retalho
 3002.14.00;-- Produtos imunológicos, misturados, não apresentados em doses nem acondicionados para venda a retalho
-3002.15.10;betainterferona; alfapeginterferona 2a
-3002.15.20;Basiliximab (DCI); bevacizumab (DCI); daclizumab (DCI); etanercept (DCI); gemtuzumab ozogamicin (DCI); oprelvekin (DCI); rituximab (DCI); trastuzumab (DCI)
+3002.15.10;betainterferona, alfapeginterferona 2a
+3002.15.20;Basiliximab (DCI), bevacizumab (DCI), daclizumab (DCI), etanercept (DCI), gemtuzumab ozogamicin (DCI), oprelvekin (DCI), rituximab (DCI), trastuzumab (DCI)
 3002.15.90;Outros
 3002.41.1;Não apresentadas em doses, nem acondicionadas para venda a retalho
 3002.41.11;Contra a gripe
@@ -4068,7 +4068,7 @@ CÓDIGO;DESCRIÇÃO
 3002.42.40;Contra a cinomose
 3002.42.50;Contra a leptospirose
 3002.42.60;Contra a febre aftosa
-3002.42.70;Contra as seguintes enfermidades: de <i>Newcastle</i>, a vírus vivo ou vírus inativo; de Gumboro, a vírus vivo ou vírus inativo; bronquite, a vírus vivo ou vírus inativo; difteroviruela, a vírus vivo; síndrome de queda de postura (EDS); salmonelose aviária, elaborada com cepa 9R; cólera de aves, inativadas
+3002.42.70;Contra as seguintes enfermidades: de <i>Newcastle</i>, a vírus vivo ou vírus inativo, de Gumboro, a vírus vivo ou vírus inativo, bronquite, a vírus vivo ou vírus inativo, difteroviruela, a vírus vivo, síndrome de queda de postura (EDS), salmonelose aviária, elaborada com cepa 9R, cólera de aves, inativadas
 3002.42.80;Vacinas combinadas contra as enfermidades citadas no item 3002.42.70
 3002.42.90;Outras
 3002.49.10;Antitoxinas de origem microbiana
@@ -4109,7 +4109,7 @@ CÓDIGO;DESCRIÇÃO
 3003.20.6;Que contenham aminoglucosídios ou seus derivados
 3003.20.61;Sulfato de gentamicina
 3003.20.62;Daunorubicina
-3003.20.63;Idarubicina; pirarubicina
+3003.20.63;Idarubicina, pirarubicina
 3003.20.69;Outros
 3003.20.7;Que contenham polipeptídios ou seus derivados
 3003.20.71;Vancomicina
@@ -4124,7 +4124,7 @@ CÓDIGO;DESCRIÇÃO
 3003.20.95;Anfotericina B em lipossomas
 3003.20.99;Outros
 3003.31.00;-- Que contenham insulina
-3003.39.1;Que contenham os seguintes hormônios polipeptídicos ou proteicos: buserelina ou seu acetato; corticotropina (ACTH); gonadotropina coriônica (hCG); gonadotropina sérica (PMSG); leuprolida ou seu acetato; menotropinas; somatostatina ou seus sais; somatotropina; triptorelina ou seus sais
+3003.39.1;Que contenham os seguintes hormônios polipeptídicos ou proteicos: buserelina ou seu acetato, corticotropina (ACTH), gonadotropina coriônica (hCG), gonadotropina sérica (PMSG), leuprolida ou seu acetato, menotropinas, somatostatina ou seus sais, somatotropina, triptorelina ou seus sais
 3003.39.11;Somatotropina
 3003.39.12;Gonadotropina coriônica (hCG)
 3003.39.13;Menotropinas
@@ -4149,10 +4149,10 @@ CÓDIGO;DESCRIÇÃO
 3003.39.33;Estriol ou seu succinato
 3003.39.34;Alilestrenol
 3003.39.35;Linestrenol
-3003.39.36;Acetato de megestrol; formestano; fulvestranto
+3003.39.36;Acetato de megestrol, formestano, fulvestranto
 3003.39.37;Desogestrel
 3003.39.39;Outros
-3003.39.8;Levotiroxina sódica; liotironina sódica
+3003.39.8;Levotiroxina sódica, liotironina sódica
 3003.39.81;Levotiroxina sódica
 3003.39.82;Liotironina sódica
 3003.39.9;Outros
@@ -4164,19 +4164,19 @@ CÓDIGO;DESCRIÇÃO
 3003.41.00;-- Que contenham efedrina ou seus sais
 3003.42.00;-- Que contenham pseudoefedrina (DCI) ou seus sais
 3003.43.00;-- Que contenham norefedrina ou seus sais
-3003.49.10;Vimblastina; vincristina; derivados destes produtos; topotecan ou seu cloridrato
+3003.49.10;Vimblastina, vincristina, derivados destes produtos, topotecan ou seu cloridrato
 3003.49.20;Pilocarpina, seu nitrato ou seu cloridrato
 3003.49.30;Metanossulfonato de di-hidroergocristina
 3003.49.40;Codeína ou seus sais
-3003.49.50;Granisetron; tropisetrona ou seu cloridrato
+3003.49.50;Granisetron, tropisetrona ou seu cloridrato
 3003.49.90;Outros
 3003.60.00;- Outros, que contenham princípios ativos antimaláricos (antipalúdicos) descritos na Nota de subposições 2 do presente Capítulo
 3003.90.1;Que contenham vitaminas ou outros produtos da posição 29.36
 3003.90.11;Folinato de cálcio (leucovorina)
 3003.90.12;Nicotinamida
-3003.90.13;Hidroxocobalamina ou seus sais; cianocobalamina
+3003.90.13;Hidroxocobalamina ou seus sais, cianocobalamina
 3003.90.14;Vitamina A<sub>1</sub> (retinol) ou seus derivados, exceto o ácido retinoico (tretinoína)
-3003.90.15;D-Pantotenato de cálcio; vitamina D<sub>3</sub> (colecalciferol)
+3003.90.15;D-Pantotenato de cálcio, vitamina D<sub>3</sub> (colecalciferol)
 3003.90.16;Ésteres das vitaminas A e D<sub>3</sub>, em concentração igual ou superior a 1.500.000 UI/g de vitamina A e igual ou superior a 50.000 UI/g de vitamina D<sub>3</sub>
 3003.90.17;Ácido retinoico (tretinoína)
 3003.90.19;Outros
@@ -4185,73 +4185,73 @@ CÓDIGO;DESCRIÇÃO
 3003.90.22;L-Asparaginase
 3003.90.23;Deoxirribonuclease
 3003.90.24;Idursulfase
-3003.90.25;alfa-Agalsidase; alfavelaglicerase
+3003.90.25;alfa-Agalsidase, alfavelaglicerase
 3003.90.29;Outros
 3003.90.3;Que contenham produtos das posições 29.16 a 29.20, mas que não contenham produtos dos itens 3003.90.1 e 3003.90.2
-3003.90.31;Permetrina; nitrato de propatila; benzoato de benzila; dioctilsulfossuccinato de sódio
-3003.90.32;Ácido cólico; ácido deoxicólico; sal magnésico do ácido deidrocólico
+3003.90.31;Permetrina, nitrato de propatila, benzoato de benzila, dioctilsulfossuccinato de sódio
+3003.90.32;Ácido cólico, ácido deoxicólico, sal magnésico do ácido deidrocólico
 3003.90.33;Ácido glucônico, seus sais ou seus ésteres
-3003.90.34;Ácido <i>o</i>-acetilsalicílico; <i>o</i>-acetilsalicilato de alumínio; salicilato de metila; diclorvós
+3003.90.34;Ácido <i>o</i>-acetilsalicílico, <i>o</i>-acetilsalicilato de alumínio, salicilato de metila, diclorvós
 3003.90.35;Lactofosfato de cálcio
-3003.90.36;Ácido láctico, seus sais ou seus ésteres; ácido 4-(4-hidroxifenoxi)-3,5-di-iodofenilacético
+3003.90.36;Ácido láctico, seus sais ou seus ésteres, ácido 4-(4-hidroxifenoxi)-3,5-di-iodofenilacético
 3003.90.37;Ácido fumárico, seus sais ou seus ésteres
-3003.90.38;Etretinato; fosfestrol ou seus sais de di ou tetrassódio
+3003.90.38;Etretinato, fosfestrol ou seus sais de di ou tetrassódio
 3003.90.39;Outros
 3003.90.4;Que contenham produtos das posições 29.21 e 29.22, mas que não contenham produtos dos itens 3003.90.1 a 3003.90.3
-3003.90.41;Sulfato de tranilcipromina; dietilpropiona
+3003.90.41;Sulfato de tranilcipromina, dietilpropiona
 3003.90.42;Cloridrato de ketamina
 3003.90.43;Clembuterol ou seu cloridrato
 3003.90.44;Tamoxifen ou seu citrato
-3003.90.45;Levodopa; alfa-metildopa
-3003.90.46;Cloridrato de fenilefrina; mirtecaína; propranolol ou seus sais
-3003.90.47;Diclofenaco de sódio; diclofenaco de potássio; diclofenaco de dietilamônio
-3003.90.48;Clorambucil; clormetina (DCI) ou seu cloridrato; melfalano; toremifene ou seu citrato
+3003.90.45;Levodopa, alfa-metildopa
+3003.90.46;Cloridrato de fenilefrina, mirtecaína, propranolol ou seus sais
+3003.90.47;Diclofenaco de sódio, diclofenaco de potássio, diclofenaco de dietilamônio
+3003.90.48;Clorambucil, clormetina (DCI) ou seu cloridrato, melfalano, toremifene ou seu citrato
 3003.90.49;Outros
 3003.90.5;Que contenham produtos das posições 29.24 a 29.26, mas que não contenham produtos dos itens 3003.90.1 a 3003.90.4
-3003.90.51;Metoclopramida ou seu cloridrato; closantel
-3003.90.52;Atenolol; prilocaína ou seu cloridrato; talidomida
-3003.90.53;Lidocaína ou seu cloridrato; flutamida
+3003.90.51;Metoclopramida ou seu cloridrato, closantel
+3003.90.52;Atenolol, prilocaína ou seu cloridrato, talidomida
+3003.90.53;Lidocaína ou seu cloridrato, flutamida
 3003.90.54;Femproporex
-3003.90.55;Paracetamol; bromoprida
-3003.90.56;Amitraz; cipermetrina
-3003.90.57;Clorexidina ou seus sais; isetionato de pentamidina
-3003.90.58;Aminoglutetimida; carmustina; deferoxamina (desferrioxamina B) ou seus sais, derivados destes produtos; lomustina
+3003.90.55;Paracetamol, bromoprida
+3003.90.56;Amitraz, cipermetrina
+3003.90.57;Clorexidina ou seus sais, isetionato de pentamidina
+3003.90.58;Aminoglutetimida, carmustina, deferoxamina (desferrioxamina B) ou seus sais, derivados destes produtos, lomustina
 3003.90.59;Outros
 3003.90.6;Que contenham produtos das posições 29.30 a 29.32, mas que não contenham produtos dos itens 3003.90.1 a 3003.90.5
 3003.90.61;Quercetina
 3003.90.62;Tiaprida
 3003.90.63;Etidronato dissódico
 3003.90.64;Cloridrato de amiodarona
-3003.90.65;Nitrovin; moxidectina
-3003.90.66;Ácido clodrônico ou seu sal dissódico; estreptozocina; fotemustina
-3003.90.67;Carbocisteína; sulfiram
+3003.90.65;Nitrovin, moxidectina
+3003.90.66;Ácido clodrônico ou seu sal dissódico, estreptozocina, fotemustina
+3003.90.67;Carbocisteína, sulfiram
 3003.90.69;Outros
 3003.90.7;Que contenham produtos da posição 29.33, mas que não contenham produtos dos itens 3003.90.1 a 3003.90.6
-3003.90.71;Terfenadina; talniflumato; malato ácido de cleboprida; econazol ou seu nitrato; nitrato de isoconazol; flubendazol; cloridrato de mepivacaína; trimetoprima; cloridrato de bupivacaína
-3003.90.72;Cloridrato de loperamida; fembendazol; ketorolac trometamina; nifedipina; nimodipina; nitrendipina
-3003.90.73;Albendazol ou seu sulfóxido; mebendazol; 6-mercaptopurina; metilsulfato de amezínio; oxifendazol; praziquantel
-3003.90.74;Alprazolam; bromazepam; clordiazepóxido; cloridrato de petidina; diazepam; droperidol; mazindol; triazolam
-3003.90.75;Benzetimida ou seu cloridrato; fenitoína ou seu sal sódico; isoniazida; pirazinamida
-3003.90.76;Ácido 2-(2-metil-3-cloroanilina)nicotínico ou seu sal de lisina; metronidazol ou seus sais; azatioprina; nitrato de miconazol
-3003.90.77;Enrofloxacina; maleato de enalapril; maleato de pirilamina; nicarbazina; norfloxacina; sais de piperazina
-3003.90.78;Altretamina; bortezomib; cloridrato de erlotinibe; dacarbazina; disoproxilfumarato de tenofovir; enfuvirtida; fluspirileno; letrozol; lopinavir; mesilato de imatinib; nelfinavir ou seu mesilato; nevirapine; pemetrexed; saquinavir; sulfato de abacavir; sulfato de atazanavir; sulfato de indinavir; temozolomida; tioguanina; tiopental sódico; tosilato de niraparibe; trietilenotiofosforamida; trimetrexato; uracil e tegafur; verteporfin
+3003.90.71;Terfenadina, talniflumato, malato ácido de cleboprida, econazol ou seu nitrato, nitrato de isoconazol, flubendazol, cloridrato de mepivacaína, trimetoprima, cloridrato de bupivacaína
+3003.90.72;Cloridrato de loperamida, fembendazol, ketorolac trometamina, nifedipina, nimodipina, nitrendipina
+3003.90.73;Albendazol ou seu sulfóxido, mebendazol, 6-mercaptopurina, metilsulfato de amezínio, oxifendazol, praziquantel
+3003.90.74;Alprazolam, bromazepam, clordiazepóxido, cloridrato de petidina, diazepam, droperidol, mazindol, triazolam
+3003.90.75;Benzetimida ou seu cloridrato, fenitoína ou seu sal sódico, isoniazida, pirazinamida
+3003.90.76;Ácido 2-(2-metil-3-cloroanilina)nicotínico ou seu sal de lisina, metronidazol ou seus sais, azatioprina, nitrato de miconazol
+3003.90.77;Enrofloxacina, maleato de enalapril, maleato de pirilamina, nicarbazina, norfloxacina, sais de piperazina
+3003.90.78;Altretamina, bortezomib, cloridrato de erlotinibe, dacarbazina, disoproxilfumarato de tenofovir, enfuvirtida, fluspirileno, letrozol, lopinavir, mesilato de imatinib, nelfinavir ou seu mesilato, nevirapine, pemetrexed, saquinavir, sulfato de abacavir, sulfato de atazanavir, sulfato de indinavir, temozolomida, tioguanina, tiopental sódico, tosilato de niraparibe, trietilenotiofosforamida, trimetrexato, uracil e tegafur, verteporfin
 3003.90.79;Outros
 3003.90.8;Que contenham produtos das posições 29.34, 29.35 e 29.38, mas que não contenham produtos dos itens 3003.90.1 a 3003.90.7
-3003.90.81;Levamisol ou seus sais; tetramisol
-3003.90.82;Sulfadiazina ou seu sal sódico; sulfametoxazol
-3003.90.83;Cloxazolam; ketazolam; piroxicam; tenoxicam
-3003.90.84;Ftalilsulfatiazol; inosina
-3003.90.85;Enantato de flufenazina; prometazina; gliburida; rutosídio; deslanosídio
-3003.90.86;Clortalidona; furosemida
-3003.90.87;Cloridrato de tizanidina; cetoconazol; furazolidona
-3003.90.88;Amprenavir; aprepitanto; delavirdina ou seu mesilato; efavirenz; emtricitabina; etopósido; everolimus; fosamprenavir cálcico; fosfato de fludarabina; gencitabina ou seu cloridrato; mesilato de dabrafenibe; raltitrexida; ritonavir; sirolimus; tacrolimus; temsirolimus; tenipósido; tipranavir
+3003.90.81;Levamisol ou seus sais, tetramisol
+3003.90.82;Sulfadiazina ou seu sal sódico, sulfametoxazol
+3003.90.83;Cloxazolam, ketazolam, piroxicam, tenoxicam
+3003.90.84;Ftalilsulfatiazol, inosina
+3003.90.85;Enantato de flufenazina, prometazina, gliburida, rutosídio, deslanosídio
+3003.90.86;Clortalidona, furosemida
+3003.90.87;Cloridrato de tizanidina, cetoconazol, furazolidona
+3003.90.88;Amprenavir, aprepitanto, delavirdina ou seu mesilato, efavirenz, emtricitabina, etopósido, everolimus, fosamprenavir cálcico, fosfato de fludarabina, gencitabina ou seu cloridrato, mesilato de dabrafenibe, raltitrexida, ritonavir, sirolimus, tacrolimus, temsirolimus, tenipósido, tipranavir
 3003.90.89;Outros
 3003.90.9;Outros
 3003.90.91;Extrato de pólen
-3003.90.92;Crisarobina; disofenol
+3003.90.92;Crisarobina, disofenol
 3003.90.93;Diclofenaco resinato
 3003.90.94;Silimarina
-3003.90.95;Bussulfano; dexormaplatina; dietilestilbestrol ou seu dipropionato; enloplatina; iproplatina; lobaplatina; miboplatina; miltefosina; mitotano; ormaplatina; procarbazina ou seu cloridrato; propofol; sebriplatina; zeniplatina
+3003.90.95;Bussulfano, dexormaplatina, dietilestilbestrol ou seu dipropionato, enloplatina, iproplatina, lobaplatina, miboplatina, miltefosina, mitotano, ormaplatina, procarbazina ou seu cloridrato, propofol, sebriplatina, zeniplatina
 3003.90.96;Complexo de ferro dextrana
 3003.90.97;Sevoflurano
 3003.90.99;Outros
@@ -4283,7 +4283,7 @@ CÓDIGO;DESCRIÇÃO
 3004.20.6;Que contenham aminoglucosídios ou seus derivados
 3004.20.61;Sulfato de gentamicina
 3004.20.62;Daunorubicina
-3004.20.63;Idarubicina; pirarubicina
+3004.20.63;Idarubicina, pirarubicina
 3004.20.69;Outros
 3004.20.7;Que contenham polipeptídios ou seus derivados
 3004.20.71;Vancomicina
@@ -4301,7 +4301,7 @@ CÓDIGO;DESCRIÇÃO
 3004.32.10;Hormônios corticosteroides
 3004.32.20;Espironolactona
 3004.32.90;Outros
-3004.39.1;Que contenham os seguintes hormônios polipeptídicos ou proteicos: buserelina ou seu acetato; corticotropina (ACTH); gonadotropina coriônica (hCG); gonadotropina sérica (PMSG); leuprolida ou seu acetato; menotropinas; somatostatina ou seus sais; somatotropina; triptorelina ou seus sais
+3004.39.1;Que contenham os seguintes hormônios polipeptídicos ou proteicos: buserelina ou seu acetato, corticotropina (ACTH), gonadotropina coriônica (hCG), gonadotropina sérica (PMSG), leuprolida ou seu acetato, menotropinas, somatostatina ou seus sais, somatotropina, triptorelina ou seus sais
 3004.39.11;Somatotropina
 3004.39.12;Gonadotropina coriônica (hCG)
 3004.39.13;Menotropinas
@@ -4327,10 +4327,10 @@ CÓDIGO;DESCRIÇÃO
 3004.39.33;Estriol ou seu succinato
 3004.39.34;Alilestrenol
 3004.39.35;Linestrenol
-3004.39.36;Acetato de megestrol; formestano; fulvestranto
+3004.39.36;Acetato de megestrol, formestano, fulvestranto
 3004.39.37;Desogestrel
 3004.39.39;Outros
-3004.39.8;Levotiroxina sódica; liotironina sódica
+3004.39.8;Levotiroxina sódica, liotironina sódica
 3004.39.81;Levotiroxina sódica
 3004.39.82;Liotironina sódica
 3004.39.9;Outros
@@ -4341,17 +4341,17 @@ CÓDIGO;DESCRIÇÃO
 3004.41.00;-- Que contenham efedrina ou seus sais
 3004.42.00;-- Que contenham pseudoefedrina (DCI) ou seus sais
 3004.43.00;-- Que contenham norefedrina ou seus sais
-3004.49.10;Vimblastina; vincristina; derivados destes produtos; topotecan ou seu cloridrato
+3004.49.10;Vimblastina, vincristina, derivados destes produtos, topotecan ou seu cloridrato
 3004.49.20;Pilocarpina, seu nitrato ou seu cloridrato
 3004.49.30;Metanossulfonato de di-hidroergocristina
 3004.49.40;Codeína ou seus sais
-3004.49.50;Granisetron; tropisetrona ou seu cloridrato
+3004.49.50;Granisetron, tropisetrona ou seu cloridrato
 3004.49.90;Outros
 3004.50.10;Folinato de cálcio (leucovorina)
 3004.50.20;Nicotinamida
-3004.50.30;Hidroxocobalamina ou seus sais; cianocobalamina
+3004.50.30;Hidroxocobalamina ou seus sais, cianocobalamina
 3004.50.40;Vitamina A<sub>1</sub> (retinol) ou seus derivados, exceto o ácido retinoico (tretinoína)
-3004.50.50;D-Pantotenato de cálcio; vitamina D<sub>3</sub> (colecalciferol)
+3004.50.50;D-Pantotenato de cálcio, vitamina D<sub>3</sub> (colecalciferol)
 3004.50.60;Ácido retinoico (tretinoína)
 3004.50.90;Outros
 3004.60.00;- Outros, que contenham princípios ativos antimaláricos (antipalúdicos) descritos na Nota de subposições 2 do presente Capítulo
@@ -4360,73 +4360,73 @@ CÓDIGO;DESCRIÇÃO
 3004.90.12;L-Asparaginase
 3004.90.13;Deoxirribonuclease
 3004.90.14;Idursulfase
-3004.90.15;alfa-Agalsidase; alfavelaglicerase
+3004.90.15;alfa-Agalsidase, alfavelaglicerase
 3004.90.19;Outros
 3004.90.2;Que contenham produtos das posições 29.16 a 29.20, mas que não contenham produtos do item 3004.90.1
-3004.90.21;Permetrina; nitrato de propatila; benzoato de benzila; dioctilsulfossuccinato de sódio
-3004.90.22;Ácido cólico; ácido deoxicólico; sal magnésico do ácido deidrocólico
+3004.90.21;Permetrina, nitrato de propatila, benzoato de benzila, dioctilsulfossuccinato de sódio
+3004.90.22;Ácido cólico, ácido deoxicólico, sal magnésico do ácido deidrocólico
 3004.90.23;Ácido glucônico, seus sais ou seus ésteres
-3004.90.24;Ácido <i>o</i>-acetilsalicílico; <i>o</i>-acetilsalicilato de alumínio; salicilato de metila; diclorvós
+3004.90.24;Ácido <i>o</i>-acetilsalicílico, <i>o</i>-acetilsalicilato de alumínio, salicilato de metila, diclorvós
 3004.90.25;Lactofosfato de cálcio
-3004.90.26;Ácido láctico, seus sais ou seus ésteres; ácido 4-(4-hidroxifenoxi)-3,5-di-iodofenilacético; ácido fumárico, seus sais ou seus ésteres
+3004.90.26;Ácido láctico, seus sais ou seus ésteres, ácido 4-(4-hidroxifenoxi)-3,5-di-iodofenilacético, ácido fumárico, seus sais ou seus ésteres
 3004.90.27;Nitroglicerina, destinada a ser administrada por via percutânea
-3004.90.28;Etretinato; fosfestrol ou seus sais de di ou tetrassódio
+3004.90.28;Etretinato, fosfestrol ou seus sais de di ou tetrassódio
 3004.90.29;Outros
 3004.90.3;Que contenham produtos das posições 29.21 e 29.22, mas que não contenham produtos dos itens 3004.90.1 e 3004.90.2
-3004.90.31;Sulfato de tranilcipromina; dietilpropiona
+3004.90.31;Sulfato de tranilcipromina, dietilpropiona
 3004.90.32;Cloridrato de ketamina
 3004.90.33;Clembuterol ou seu cloridrato
 3004.90.34;Tamoxifen ou seu citrato
-3004.90.35;Levodopa; alfa-metildopa
-3004.90.36;Cloridrato de fenilefrina; mirtecaína; propranolol ou seus sais
-3004.90.37;Diclofenaco de sódio; diclofenaco de potássio; diclofenaco de dietilamônio
-3004.90.38;Clorambucil; clormetina (DCI) ou seu cloridrato; melfalano; toremifene ou seu citrato
+3004.90.35;Levodopa, alfa-metildopa
+3004.90.36;Cloridrato de fenilefrina, mirtecaína, propranolol ou seus sais
+3004.90.37;Diclofenaco de sódio, diclofenaco de potássio, diclofenaco de dietilamônio
+3004.90.38;Clorambucil, clormetina (DCI) ou seu cloridrato, melfalano, toremifene ou seu citrato
 3004.90.39;Outros
 3004.90.4;Que contenham produtos das posições 29.24 a 29.26, mas que não contenham produtos dos itens 3004.90.1 a 3004.90.3
-3004.90.41;Metoclopramida ou seu cloridrato; closantel
-3004.90.42;Atenolol; prilocaína ou seu cloridrato; talidomida
-3004.90.43;Lidocaína ou seu cloridrato; flutamida
+3004.90.41;Metoclopramida ou seu cloridrato, closantel
+3004.90.42;Atenolol, prilocaína ou seu cloridrato, talidomida
+3004.90.43;Lidocaína ou seu cloridrato, flutamida
 3004.90.44;Femproporex
-3004.90.45;Paracetamol; bromoprida
-3004.90.46;Amitraz; cipermetrina
-3004.90.47;Clorexidina ou seus sais; isetionato de pentamidina
-3004.90.48;Aminoglutetimida; carmustina; deferoxamina (desferrioxamina B) ou seus sais, derivados destes produtos; lomustina
+3004.90.45;Paracetamol, bromoprida
+3004.90.46;Amitraz, cipermetrina
+3004.90.47;Clorexidina ou seus sais, isetionato de pentamidina
+3004.90.48;Aminoglutetimida, carmustina, deferoxamina (desferrioxamina B) ou seus sais, derivados destes produtos, lomustina
 3004.90.49;Outros
 3004.90.5;Que contenham produtos das posições 29.30 a 29.32, mas que não contenham produtos dos itens 3004.90.1 a 3004.90.4
 3004.90.51;Quercetina
 3004.90.52;Tiaprida
 3004.90.53;Etidronato dissódico
 3004.90.54;Cloridrato de amiodarona
-3004.90.55;Nitrovin; moxidectina
-3004.90.57;Carbocisteína; sulfiram
-3004.90.58;Ácido clodrônico ou seu sal dissódico; estreptozocina; fotemustina
+3004.90.55;Nitrovin, moxidectina
+3004.90.57;Carbocisteína, sulfiram
+3004.90.58;Ácido clodrônico ou seu sal dissódico, estreptozocina, fotemustina
 3004.90.59;Outros
 3004.90.6;Que contenham produtos da posição 29.33, mas que não contenham produtos dos itens 3004.90.1 a 3004.90.5
-3004.90.61;Terfenadina; talniflumato; malato ácido de cleboprida; econazol ou seu nitrato; nitrato de isoconazol; flubendazol; cloridrato de mepivacaína; trimetoprima; cloridrato de bupivacaína
-3004.90.62;Cloridrato de loperamida; fembendazol; ketorolac trometamina; nifedipina nimodipina; nitrendipina
-3004.90.63;Albendazol ou seu sulfóxido; mebendazol; 6-mercaptopurina; metilsulfato de amezínio; oxifendazol; praziquantel
-3004.90.64;Alprazolam; bromazepam; clordiazepóxido; cloridrato de petidina; diazepam; droperidol; mazindol; triazolam
-3004.90.65;Benzetimida ou seu cloridrato; fenitoína ou seu sal sódico; isoniazida; pirazinamida
-3004.90.66;Ácido 2-(2-metil-3-cloroanilina)nicotínico ou seu sal de lisina; metronidazol ou seus sais; azatioprina; nitrato de miconazol
-3004.90.67;Enrofloxacina; maleato de enalapril; maleato de pirilamina; nicarbazina; norfloxacina; sais de piperazina
-3004.90.68;Altretamina; bortezomib; cloridrato de erlotinibe; dacarbazina; disoproxilfumarato de tenofovir; enfuvirtida; fluspirileno; letrozol; lopinavir; mesilato de imatinib; nelfinavir ou seu mesilato; nevirapine; pemetrexed; saquinavir; sulfato de abacavir; sulfato de atazanavir; sulfato de indinavir; temozolomida; tioguanina; tiopental sódico; tosilato de niraparibe; trietilenotiofosforamida; trimetrexato; uracil e tegafur; verteporfin
+3004.90.61;Terfenadina, talniflumato, malato ácido de cleboprida, econazol ou seu nitrato, nitrato de isoconazol, flubendazol, cloridrato de mepivacaína, trimetoprima, cloridrato de bupivacaína
+3004.90.62;Cloridrato de loperamida, fembendazol, ketorolac trometamina, nifedipina nimodipina, nitrendipina
+3004.90.63;Albendazol ou seu sulfóxido, mebendazol, 6-mercaptopurina, metilsulfato de amezínio, oxifendazol, praziquantel
+3004.90.64;Alprazolam, bromazepam, clordiazepóxido, cloridrato de petidina, diazepam, droperidol, mazindol, triazolam
+3004.90.65;Benzetimida ou seu cloridrato, fenitoína ou seu sal sódico, isoniazida, pirazinamida
+3004.90.66;Ácido 2-(2-metil-3-cloroanilina)nicotínico ou seu sal de lisina, metronidazol ou seus sais, azatioprina, nitrato de miconazol
+3004.90.67;Enrofloxacina, maleato de enalapril, maleato de pirilamina, nicarbazina, norfloxacina, sais de piperazina
+3004.90.68;Altretamina, bortezomib, cloridrato de erlotinibe, dacarbazina, disoproxilfumarato de tenofovir, enfuvirtida, fluspirileno, letrozol, lopinavir, mesilato de imatinib, nelfinavir ou seu mesilato, nevirapine, pemetrexed, saquinavir, sulfato de abacavir, sulfato de atazanavir, sulfato de indinavir, temozolomida, tioguanina, tiopental sódico, tosilato de niraparibe, trietilenotiofosforamida, trimetrexato, uracil e tegafur, verteporfin
 3004.90.69;Outros
 3004.90.7;Que contenham produtos das posições 29.34, 29.35 e 29.38, mas que não contenham produtos dos itens 3004.90.1 a 3004.90.6
-3004.90.71;Levamisol ou seus sais; tetramisol
-3004.90.72;Sulfadiazina ou seu sal sódico; sulfametoxazol
-3004.90.73;Cloxazolam; ketazolam; piroxicam; tenoxicam
-3004.90.74;Ftalilsulfatiazol; inosina
-3004.90.75;Enantato de flufenazina; prometazina; gliburida; rutosídio; deslanosídio
-3004.90.76;Clortalidona; furosemida
-3004.90.77;Cloridrato de tizanidina; cetoconazol; furazolidona
-3004.90.78;Amprenavir; aprepitanto; delavirdina ou seu mesilato; efavirenz; emtricitabina; etopósido; everolimus; fosamprenavir cálcico; fosfato de fludarabina; gencitabina ou seu cloridrato; mesilato de dabrafenibe; raltitrexida; ritonavir; sirolimus; tacrolimus; temsirolimus; tenipósido; tipranavir
+3004.90.71;Levamisol ou seus sais, tetramisol
+3004.90.72;Sulfadiazina ou seu sal sódico, sulfametoxazol
+3004.90.73;Cloxazolam, ketazolam, piroxicam, tenoxicam
+3004.90.74;Ftalilsulfatiazol, inosina
+3004.90.75;Enantato de flufenazina, prometazina, gliburida, rutosídio, deslanosídio
+3004.90.76;Clortalidona, furosemida
+3004.90.77;Cloridrato de tizanidina, cetoconazol, furazolidona
+3004.90.78;Amprenavir, aprepitanto, delavirdina ou seu mesilato, efavirenz, emtricitabina, etopósido, everolimus, fosamprenavir cálcico, fosfato de fludarabina, gencitabina ou seu cloridrato, mesilato de dabrafenibe, raltitrexida, ritonavir, sirolimus, tacrolimus, temsirolimus, tenipósido, tipranavir
 3004.90.79;Outros
 3004.90.9;Outros
 3004.90.91;Extrato de pólen
-3004.90.92;Crisarobina; disofenol
+3004.90.92;Crisarobina, disofenol
 3004.90.93;Diclofenaco resinato
 3004.90.94;Silimarina
-3004.90.95;Bussulfano; dexormaplatina; dietilestilbestrol ou seu dipropionato; enloplatina; iproplatina; lobaplatina; miboplatina; miltefosina; mitotano; ormaplatina; procarbazina ou seu cloridrato; propofol; sebriplatina; zeniplatina
+3004.90.95;Bussulfano, dexormaplatina, dietilestilbestrol ou seu dipropionato, enloplatina, iproplatina, lobaplatina, miboplatina, miltefosina, mitotano, ormaplatina, procarbazina ou seu cloridrato, propofol, sebriplatina, zeniplatina
 3004.90.96;Complexo de ferro dextrana
 3004.90.97;Sevoflurano
 3004.90.98;Regenerador de cartilagem, constituído por colágeno moldado, absorvível
@@ -4469,7 +4469,7 @@ CÓDIGO;DESCRIÇÃO
 3006.91.90;Outros
 3006.92.00;-- Resíduos farmacêuticos
 3006.93.00;-- Placebos e estojos para ensaios clínicos cegos (ou duplo-cegos) destinados a um ensaio clínico reconhecido, apresentados em doses
-3101.00.00;Adubos (fertilizantes) de origem animal ou vegetal, mesmo misturados entre si ou tratados quimicamente; adubos (fertilizantes) resultantes da mistura ou do tratamento químico de produtos de origem animal ou vegetal.
+3101.00.00;Adubos (fertilizantes) de origem animal ou vegetal, mesmo misturados entre si ou tratados quimicamente, adubos (fertilizantes) resultantes da mistura ou do tratamento químico de produtos de origem animal ou vegetal.
 3102.10.10;Que contenha, em peso, mais de 45 % de nitrogênio (azoto), calculado sobre o produto anidro no estado seco
 3102.10.90;Outra
 3102.21.00;-- Sulfato de amônio
@@ -4557,7 +4557,7 @@ CÓDIGO;DESCRIÇÃO
 3204.20.19;Outros
 3204.20.90;Outros
 3204.90.00;- Outros
-3205.00.00;Lacas corantes; preparações indicadas na Nota 3 do presente Capítulo, à base de lacas corantes.
+3205.00.00;Lacas corantes, preparações indicadas na Nota 3 do presente Capítulo, à base de lacas corantes.
 3206.11.10;Pigmentos tipo rutilo
 3206.11.20;Outros pigmentos
 3206.11.30;Preparações
@@ -4631,7 +4631,7 @@ CÓDIGO;DESCRIÇÃO
 3301.25.10;De menta japonesa (<i>Mentha arvensis</i>)
 3301.25.20;De <i>mentha spearmint</i> (<i>Mentha viridis</i><i> L.</i>)
 3301.25.90;Outros
-3301.29.1;De citronela; de cedro; de pau-santo (<i>Bulnesia sarmientoi</i>); de <i>lemongrass</i>; de pau-rosa; de palma rosa; de coriandro; de cabreúva; de eucalipto
+3301.29.1;De citronela, de cedro, de pau-santo (<i>Bulnesia sarmientoi</i>), de <i>lemongrass</i>, de pau-rosa, de palma rosa, de coriandro, de cabreúva, de eucalipto
 3301.29.11;De citronela
 3301.29.12;De cedro
 3301.29.13;De pau-santo (<i>Bulnesia sarmientoi</i>)
@@ -4641,7 +4641,7 @@ CÓDIGO;DESCRIÇÃO
 3301.29.17;De coriandro
 3301.29.18;De cabreúva
 3301.29.19;De eucalipto
-3301.29.2;De alfazema ou lavanda; de vetiver
+3301.29.2;De alfazema ou lavanda, de vetiver
 3301.29.21;De alfazema ou lavanda
 3301.29.22;De vetiver
 3301.29.90;Outros
@@ -4664,7 +4664,7 @@ CÓDIGO;DESCRIÇÃO
 3304.20.90;Outros
 3304.30.00;- Preparações para manicuros e pedicuros
 3304.91.00;-- Pós, incluindo os compactos
-3304.99.10;Cremes de beleza e cremes nutritivos; loções tônicas
+3304.99.10;Cremes de beleza e cremes nutritivos, loções tônicas
 3304.99.90;Outros
 3305.10.00;- Xampus
 3305.20.00;- Preparações para ondulação ou alisamento, permanentes
@@ -4735,7 +4735,7 @@ CÓDIGO;DESCRIÇÃO
 3405.90.00;- Outros
 3406.00.00;Velas, pavios, círios e artigos semelhantes.
 3407.00.10;Massas ou pastas para modelar
-3407.00.20;"Ceras para odontologia"
+3407.00.20;""Ceras para odontologia""
 3407.00.90;Outras
 3501.10.00;- Caseínas
 3501.90.1;Caseinatos e outros derivados das caseínas
@@ -4896,10 +4896,10 @@ CÓDIGO;DESCRIÇÃO
 3806.30.00;- Gomas ésteres
 3806.90.1;Outros derivados de colofônias ou de ácidos resínicos
 3806.90.11;Colofônias oxidadas, hidrogenadas, desidrogenadas, polimerizadas ou modificadas com ácidos fumárico ou maleico ou com anidrido maleico
-3806.90.12;Abietatos de metila ou de benzila; hidroabietato de metila
+3806.90.12;Abietatos de metila ou de benzila, hidroabietato de metila
 3806.90.19;Outros
 3806.90.90;Outros
-3807.00.00;Alcatrões de madeira; óleos de alcatrão de madeira; creosoto de madeira; metileno; breu (pez) vegetal; breu (pez) para a indústria da cerveja e preparações semelhantes à base de colofônias, de ácidos resínicos ou de breu (pez) vegetal.
+3807.00.00;Alcatrões de madeira, óleos de alcatrão de madeira, creosoto de madeira, metileno, breu (pez) vegetal, breu (pez) para a indústria da cerveja e preparações semelhantes à base de colofônias, de ácidos resínicos ou de breu (pez) vegetal.
 3808.52.00;-- DDT (ISO) (clofenotano (DCI)), acondicionado em embalagens com um conteúdo de peso líquido não superior a 300 g
 3808.59.10;Apresentadas em formas ou embalagens exclusivamente para uso direto em aplicações domissanitárias
 3808.59.2;Apresentadas de outro modo
@@ -5017,7 +5017,7 @@ CÓDIGO;DESCRIÇÃO
 3811.29.90;Outros
 3811.90.10;Dispersantes sem cinzas, para óleos de petróleo combustíveis
 3811.90.90;Outros
-3812.10.00;- Preparações denominadas "aceleradores de vulcanização"
+3812.10.00;- Preparações denominadas ""aceleradores de vulcanização""
 3812.20.00;- Plastificantes compostos para borracha ou plástico
 3812.31.00;-- Misturas de oligômeros de 2,2,4-trimetil-1,2-di-hidroquinolina (TMQ)
 3812.39.1;Para borracha
@@ -5106,12 +5106,12 @@ CÓDIGO;DESCRIÇÃO
 3824.99.14;Senduramicina sódica, da fabricação da senduramicina
 3824.99.15;Maduramicina amônica, em solução alcoólica, da fabricação da maduramicina
 3824.99.19;Outros
-3824.99.2;Derivados de ácidos graxos (gordos) industriais; misturas e preparações que contenham álcoois graxos (gordos) ou ácidos carboxílicos ou derivados destes produtos
-3824.99.21;Ácidos graxos (gordos) dimerizados; preparações que contenham ácidos graxos (gordos) dimerizados
-3824.99.22;Preparações que contenham estearoilbenzoilmetano e palmitoilbenzoilmetano; preparações que contenham caprilato e caprato de propilenoglicol
+3824.99.2;Derivados de ácidos graxos (gordos) industriais, misturas e preparações que contenham álcoois graxos (gordos) ou ácidos carboxílicos ou derivados destes produtos
+3824.99.21;Ácidos graxos (gordos) dimerizados, preparações que contenham ácidos graxos (gordos) dimerizados
+3824.99.22;Preparações que contenham estearoilbenzoilmetano e palmitoilbenzoilmetano, preparações que contenham caprilato e caprato de propilenoglicol
 3824.99.23;Preparações que contenham triglicerídios dos ácidos caprílico e cáprico
-3824.99.24;Ésteres de álcoois graxos (gordos) de C<sub>12</sub> a C<sub>20 </sub>do ácido metacrílico e suas misturas; ésteres de ácidos monocarboxílicos de C<sub>10</sub> ramificados com glicerol
-3824.99.25;Misturas de ésteres dimetílicos dos ácidos adípico, glutárico e succínico; misturas de ácidos dibásicos de C<sub>11</sub> e C<sub>12</sub>; ácidos naftênicos, seus sais insolúveis em água e seus ésteres
+3824.99.24;Ésteres de álcoois graxos (gordos) de C<sub>12</sub> a C<sub>20 </sub>do ácido metacrílico e suas misturas, ésteres de ácidos monocarboxílicos de C<sub>10</sub> ramificados com glicerol
+3824.99.25;Misturas de ésteres dimetílicos dos ácidos adípico, glutárico e succínico, misturas de ácidos dibásicos de C<sub>11</sub> e C<sub>12</sub>, ácidos naftênicos, seus sais insolúveis em água e seus ésteres
 3824.99.29;Outros
 3824.99.3;Misturas e preparações para borracha ou plástico e outras misturas e preparações para endurecer resinas sintéticas, colas, pinturas ou usos semelhantes
 3824.99.31;Que contenham isocianatos de hexametileno ou outros isocianatos
@@ -5121,12 +5121,12 @@ CÓDIGO;DESCRIÇÃO
 3824.99.35;Misturas de mono-, di- e triisopropanolaminas
 3824.99.36;Reticulantes para silicones
 3824.99.39;Outras
-3824.99.4;Misturas e preparações desincrustantes, anticorrosivas ou antioxidantes; fluidos para a transferência de calor
+3824.99.4;Misturas e preparações desincrustantes, anticorrosivas ou antioxidantes, fluidos para a transferência de calor
 3824.99.41;Preparações desincrustantes, anticorrosivas ou antioxidantes
 3824.99.42;Mistura eutética de difenila e óxido de difenila
 3824.99.43;À base de trimetil-3,9-dietildecano
 3824.99.49;Outros
-3824.99.5;Polietilenoglicóis e suas misturas; polipropilenoglicóis e suas misturas; misturas e preparações que contenham ésteres de ácidos inorgânicos e seus derivados
+3824.99.5;Polietilenoglicóis e suas misturas, polipropilenoglicóis e suas misturas, misturas e preparações que contenham ésteres de ácidos inorgânicos e seus derivados
 3824.99.51;Antiespumantes que contenham fosfato de tributila em solução de álcool isopropílico
 3824.99.52;Misturas de polietilenoglicóis
 3824.99.53;Polipropilenoglicol líquido
@@ -5137,24 +5137,24 @@ CÓDIGO;DESCRIÇÃO
 3824.99.62;À base de hexafluoreto de enxofre
 3824.99.69;Outros
 3824.99.7;Produtos e preparações à base de elementos químicos ou de seus compostos inorgânicos, não especificados nem compreendidos noutras posições
-3824.99.71;Cal sodada; carbonato de cálcio hidrófugo
-3824.99.72;Preparações à base de sílica em suspensão coloidal; nitreto de boro de estrutura cristalina cúbica, compactado com substrato de carboneto de tungstênio (volfrâmio)
-3824.99.73;Preparações à base de carboneto de tungstênio (volfrâmio) com níquel como aglomerante; brometo de hidrogênio em solução
+3824.99.71;Cal sodada, carbonato de cálcio hidrófugo
+3824.99.72;Preparações à base de sílica em suspensão coloidal, nitreto de boro de estrutura cristalina cúbica, compactado com substrato de carboneto de tungstênio (volfrâmio)
+3824.99.73;Preparações à base de carboneto de tungstênio (volfrâmio) com níquel como aglomerante, brometo de hidrogênio em solução
 3824.99.74;Preparações à base de hidróxido de níquel ou de cádmio, de óxido de cádmio ou de óxido ferroso férrico, próprios para a fabricação de acumuladores alcalinos
-3824.99.75;Preparações utilizadas na elaboração de meios de cultura; trocadores de íons para o tratamento de águas; preparações à base de zeólitas artificiais
+3824.99.75;Preparações utilizadas na elaboração de meios de cultura, trocadores de íons para o tratamento de águas, preparações à base de zeólitas artificiais
 3824.99.76;Compostos absorventes à base de metais para aperfeiçoar o vácuo nos tubos ou válvulas elétricas
 3824.99.77;Adubos (fertilizantes) foliares que contenham zinco ou manganês
-3824.99.78;Preparações à base de óxido de alumínio e óxido de zircônio, com um conteúdo de óxido de zircônio igual ou superior a 20 %, em peso; preparações de óxido de alumínio com óxido de lantânio
+3824.99.78;Preparações à base de óxido de alumínio e óxido de zircônio, com um conteúdo de óxido de zircônio igual ou superior a 20 %, em peso, preparações de óxido de alumínio com óxido de lantânio
 3824.99.79;Outros
 3824.99.8;Produtos e preparações à base de compostos orgânicos, não especificados nem compreendidos noutras posições
 3824.99.81;Preparações à base de anidrido poliisobutenilsuccínico, em óleo mineral
-3824.99.82;Halquinol; tetraclorohidroxiglicina de alumínio e zircônio
-3824.99.83;Triisocianato de tiofosfato de fenila ou de trifenilmetano, em solução de cloreto de metileno ou de acetato de etila; preparações à base de tetraacetiletilenodiamina (TAED), em grânulos
+3824.99.82;Halquinol, tetraclorohidroxiglicina de alumínio e zircônio
+3824.99.83;Triisocianato de tiofosfato de fenila ou de trifenilmetano, em solução de cloreto de metileno ou de acetato de etila, preparações à base de tetraacetiletilenodiamina (TAED), em grânulos
 3824.99.84;Que contenham éteres decabromodifenílicos
 3824.99.85;Metilato de sódio em metanol
-3824.99.86;Maneb; mancozeb; cloreto de benzalcônio
+3824.99.86;Maneb, mancozeb, cloreto de benzalcônio
 3824.99.87;Dispersão aquosa de microcápsulas de poliuretano ou de melamina-formaldeído que contenha um precursor de corante em solventes orgânicos
-3824.99.88;Misturas constituídas principalmente pelos compostos seguintes (grupos alquila de C<sub>1</sub> a C<sub>3</sub>, exceto nos casos expressamente indicados): alquilfosfonofluoridatos de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila); N,N-dialquilfosforoamidocianidatos de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila); hidrogênio alquilfosfonotioatos de [S-2-(dialquilamino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila) ou seus sais alquilados ou protonados; difluoretos de alquilfosfonila; hidrogênio alquilfosfonitos de [O-2-(dialquilamino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila) ou seus sais alquilados ou protonados; dialogenetos de N,N-dialquilfosforoamídicos; N,N-dialquilfosforoamidatos de dialquila; N,N-dialquil-2-cloroetilaminas ou seus sais protonados; N,N-dialquil-2-aminoetanóis ou seus sais protonados; N,N-dialquilaminoetano-2-tióis ou seus sais protonados; outras misturas constituídas principalmente por compostos que contenham um átomo de fósforo ligado a um grupo alquila (de C<sub>1</sub> a C<sub>3</sub>) mas sem outros átomos de carbono
+3824.99.88;Misturas constituídas principalmente pelos compostos seguintes (grupos alquila de C<sub>1</sub> a C<sub>3</sub>, exceto nos casos expressamente indicados): alquilfosfonofluoridatos de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila), N,N-dialquilfosforoamidocianidatos de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila), hidrogênio alquilfosfonotioatos de [S-2-(dialquilamino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila) ou seus sais alquilados ou protonados, difluoretos de alquilfosfonila, hidrogênio alquilfosfonitos de [O-2-(dialquilamino)etila], seus ésteres de O-alquila (de até C<sub>10</sub>, incluindo cicloalquila) ou seus sais alquilados ou protonados, dialogenetos de N,N-dialquilfosforoamídicos, N,N-dialquilfosforoamidatos de dialquila, N,N-dialquil-2-cloroetilaminas ou seus sais protonados, N,N-dialquil-2-aminoetanóis ou seus sais protonados, N,N-dialquilaminoetano-2-tióis ou seus sais protonados, outras misturas constituídas principalmente por compostos que contenham um átomo de fósforo ligado a um grupo alquila (de C<sub>1</sub> a C<sub>3</sub>) mas sem outros átomos de carbono
 3824.99.89;Outros
 3825.10.00;- Resíduos municipais
 3825.20.00;- Lamas de tratamento de esgotos (Lamas de depuração*)
@@ -5344,7 +5344,7 @@ CÓDIGO;DESCRIÇÃO
 3908.90.10;Copolímero de lauril-lactama
 3908.90.20;Obtidas por condensação de ácidos graxos (gordos) dimerizados ou trimerizados com etilenaminas
 3908.90.90;Outras
-3909.10.00;- Resinas ureicas; resinas de tioureia
+3909.10.00;- Resinas ureicas, resinas de tioureia
 3909.20.1;Com carga
 3909.20.11;Melamina-formaldeído, em pó
 3909.20.19;Outras
@@ -5540,7 +5540,7 @@ CÓDIGO;DESCRIÇÃO
 3923.30.90;Outros
 3923.40.00;- Bobinas, carretéis, canelas e suportes semelhantes
 3923.50.00;- Rolhas, tampas, cápsulas e outros dispositivos para fechar recipientes
-3923.90.10;Paletes simples, paletes-caixas e outros estrados para carga; taipais de paletes
+3923.90.10;Paletes simples, paletes-caixas e outros estrados para carga, taipais de paletes
 3923.90.90;Outros
 3924.10.00;- Serviços de mesa e outros utensílios de mesa ou de cozinha
 3924.90.00;- Outros
@@ -5600,7 +5600,7 @@ CÓDIGO;DESCRIÇÃO
 4004.00.00;Desperdícios, resíduos e aparas, de borracha não endurecida, mesmo reduzidos a pó ou a grânulos.
 4005.10.10;Borracha etileno-propileno-dieno não conjugado-propileno (EPDM-propileno), com sílica e plastificante, em grânulos
 4005.10.90;Outras
-4005.20.00;- Soluções; dispersões, exceto as da subposição 4005.10
+4005.20.00;- Soluções, dispersões, exceto as da subposição 4005.10
 4005.91.10;Preparações base para a fabricação de gomas de mascar
 4005.91.90;Outras
 4005.99.10;Preparações base para a fabricação de gomas de mascar
@@ -5644,12 +5644,12 @@ CÓDIGO;DESCRIÇÃO
 4011.30.00;- Do tipo utilizado em veículos aéreos
 4011.40.00;- Do tipo utilizado em motocicletas
 4011.50.00;- Do tipo utilizado em bicicletas
-4011.70.10;Nas seguintes medidas: 4,00-15; 4,00-18; 4,00-19; 5,00-15; 5,00-16; 5,50-16; 6,00-16; 6,00-19; 6,00-20; 6,50-16; 6,50-20; 7,50-16; 7,50-18; 7,50-20
+4011.70.10;Nas seguintes medidas: 4,00-15, 4,00-18, 4,00-19, 5,00-15, 5,00-16, 5,50-16, 6,00-16, 6,00-19, 6,00-20, 6,50-16, 6,50-20, 7,50-16, 7,50-18, 7,50-20
 4011.70.90;Outros
-4011.80.10;Radiais, para <i>dumpers</i> concebidos para serem utilizados fora de rodovias, com seção de largura igual ou superior a 940 mm (37"), para aros de diâmetro igual ou superior a 1.448 mm (57")
-4011.80.20;Outros, com seção de largura igual ou superior a 1.143 mm (45"), para aros de diâmetro igual ou superior a 1.143 mm (45")
+4011.80.10;Radiais, para <i>dumpers</i> concebidos para serem utilizados fora de rodovias, com seção de largura igual ou superior a 940 mm (37""), para aros de diâmetro igual ou superior a 1.448 mm (57"")
+4011.80.20;Outros, com seção de largura igual ou superior a 1.143 mm (45""), para aros de diâmetro igual ou superior a 1.143 mm (45"")
 4011.80.90;Outros
-4011.90.10;Com seção de largura igual ou superior a 1.143 mm (45"), para aros de diâmetro igual ou superior a 1.143 mm (45")
+4011.90.10;Com seção de largura igual ou superior a 1.143 mm (45""), para aros de diâmetro igual ou superior a 1.143 mm (45"")
 4011.90.90;Outros
 4012.11.00;-- Do tipo utilizado em automóveis de passageiros (incluindo os veículos de uso misto (<i>station wagons</i>) e os automóveis de corrida)
 4012.12.00;-- Do tipo utilizado em ônibus (autocarros) ou caminhões
@@ -5678,7 +5678,7 @@ CÓDIGO;DESCRIÇÃO
 4016.95.90;Outros
 4016.99.10;Tampões vedadores para condensadores, de EPDM, com perfurações para terminais
 4016.99.90;Outras
-4017.00.00;Borracha endurecida (ebonite, por exemplo) sob qualquer forma, incluindo os desperdícios e resíduos; obras de borracha endurecida.
+4017.00.00;Borracha endurecida (ebonite, por exemplo) sob qualquer forma, incluindo os desperdícios e resíduos, obras de borracha endurecida.
 4101.20.00;- Couros e peles em bruto, inteiros, não divididos, de peso unitário não superior a 8 kg quando secos, a 10 kg quando salgados a seco e a 16 kg quando frescos, salgados a úmido ou conservados de outro modo
 4101.50.10;Sem dividir
 4101.50.20;Divididos, com o lado flor
@@ -5759,7 +5759,7 @@ CÓDIGO;DESCRIÇÃO
 4114.20.10;Envernizados ou revestidos
 4114.20.20;Metalizados
 4115.10.00;- Couro reconstituído à base de couro ou de fibras de couro, em chapas, folhas ou tiras, mesmo enroladas
-4115.20.00;- Aparas e outros desperdícios de couros ou de peles preparados ou de couro reconstituído, não utilizáveis para fabricação de obras de couro; serragem, pó e farinha, de couro
+4115.20.00;- Aparas e outros desperdícios de couros ou de peles preparados ou de couro reconstituído, não utilizáveis para fabricação de obras de couro, serragem, pó e farinha, de couro
 4201.00.10;De couro natural ou reconstituído
 4201.00.90;Outros
 4202.11.00;-- Com a superfície exterior de couro natural ou reconstituído
@@ -5829,7 +5829,7 @@ CÓDIGO;DESCRIÇÃO
 4403.99.00;-- Outras
 4404.10.00;- De coníferas
 4404.20.00;- De não coníferas
-4405.00.00;Lã de madeira; farinha de madeira.
+4405.00.00;Lã de madeira, farinha de madeira.
 4406.11.00;-- De coníferas
 4406.12.00;-- De não coníferas
 4406.91.00;-- De coníferas
@@ -5929,8 +5929,8 @@ CÓDIGO;DESCRIÇÃO
 4413.00.00;Madeira densificada, em blocos, pranchas, lâminas ou perfis.
 4414.10.00;- De madeira tropical
 4414.90.00;- Outras
-4415.10.00;- Caixotes, caixas, engradados, barricas e embalagens semelhantes; carretéis para cabos
-4415.20.00;- Paletes simples, paletes-caixas e outros estrados para carga; taipais de paletes
+4415.10.00;- Caixotes, caixas, engradados, barricas e embalagens semelhantes, carretéis para cabos
+4415.20.00;- Paletes simples, paletes-caixas e outros estrados para carga, taipais de paletes
 4416.00.10;De carvalho (<i>Quercus</i> spp.)
 4416.00.90;Outros
 4417.00.10;Ferramentas
@@ -5971,7 +5971,7 @@ CÓDIGO;DESCRIÇÃO
 4502.00.00;Cortiça natural, sem a crosta ou simplesmente esquadriada, ou em cubos, chapas, folhas ou tiras, de forma quadrada ou retangular (incluindo os esboços com arestas vivas, para rolhas).
 4503.10.00;- Rolhas
 4503.90.00;- Outras
-4504.10.00;- Cubos, blocos, chapas, folhas e tiras; ladrilhos de qualquer formato; cilindros maciços, incluindo os discos
+4504.10.00;- Cubos, blocos, chapas, folhas e tiras, ladrilhos de qualquer formato, cilindros maciços, incluindo os discos
 4504.90.00;- Outras
 4601.21.00;-- De bambu
 4601.22.00;-- De rotim
@@ -6180,7 +6180,7 @@ CÓDIGO;DESCRIÇÃO
 4819.10.00;- Caixas de papel ou cartão, ondulados (canelados*)
 4819.20.00;- Caixas e cartonagens, dobráveis, de papel ou cartão, não ondulados (canelados*)
 4819.30.00;- Sacos cuja base tenha largura igual ou superior a 40 cm
-4819.40.00;- Outros sacos; bolsas e cartuchos
+4819.40.00;- Outros sacos, bolsas e cartuchos
 4819.50.00;- Outras embalagens, incluindo as capas para discos
 4819.60.00;- Cartonagens para escritórios, lojas e estabelecimentos semelhantes
 4820.10.00;- Livros de registro e de contabilidade, blocos de notas, de encomendas, de recibos, de apontamentos, de papel para cartas, agendas e artigos semelhantes
@@ -6215,14 +6215,14 @@ CÓDIGO;DESCRIÇÃO
 4904.00.00;Música manuscrita ou impressa, ilustrada ou não, mesmo encadernada.
 4905.20.00;- Sob a forma de livros ou brochuras
 4905.90.00;- Outras
-4906.00.00;Planos, plantas e desenhos, de arquitetura, de engenharia e outros planos e desenhos industriais, comerciais, topográficos ou semelhantes, originais, feitos à mão; textos manuscritos; reproduções fotográficas em papel sensibilizado e cópias a papel-carbono (papel químico) dos planos, plantas, desenhos ou textos acima referidos.
+4906.00.00;Planos, plantas e desenhos, de arquitetura, de engenharia e outros planos e desenhos industriais, comerciais, topográficos ou semelhantes, originais, feitos à mão, textos manuscritos, reproduções fotográficas em papel sensibilizado e cópias a papel-carbono (papel químico) dos planos, plantas, desenhos ou textos acima referidos.
 4907.00.10;Notas (papéis-moeda)
 4907.00.20;Cheques de viagem
 4907.00.30;Títulos de ações ou de obrigações e títulos semelhantes, convalidados e firmados
 4907.00.90;Outros
 4908.10.00;- Decalcomanias vitrificáveis
 4908.90.00;- Outras
-4909.00.00;Cartões-postais impressos ou ilustrados; cartões impressos com votos ou mensagens pessoais, mesmo ilustrados, mesmo com envelopes, guarnições ou aplicações.
+4909.00.00;Cartões-postais impressos ou ilustrados, cartões impressos com votos ou mensagens pessoais, mesmo ilustrados, mesmo com envelopes, guarnições ou aplicações.
 4910.00.00;Calendários de qualquer espécie, impressos, incluindo os blocos-calendários para desfolhar.
 4911.10.10;Que contenham informações relativas ao funcionamento, manutenção, reparo ou utilização de máquinas, aparelhos, veículos e outras mercadorias de origem extrazona
 4911.10.90;Outros
@@ -6234,7 +6234,7 @@ CÓDIGO;DESCRIÇÃO
 5003.00.90;Outros
 5004.00.00;Fios de seda (exceto fios de desperdícios de seda) não acondicionados para venda a retalho.
 5005.00.00;Fios de desperdícios de seda, não acondicionados para venda a retalho.
-5006.00.00;Fios de seda ou de desperdícios de seda, acondicionados para venda a retalho; pelo de Messina (crina de Florença).
+5006.00.00;Fios de seda ou de desperdícios de seda, acondicionados para venda a retalho, pelo de Messina (crina de Florença).
 5007.10.10;Estampados, tintos ou de fios de diversas cores
 5007.10.90;Outros
 5007.20.10;Estampados, tintos ou de fios de diversas cores
@@ -6254,7 +6254,7 @@ CÓDIGO;DESCRIÇÃO
 5103.30.00;- Desperdícios de pelos grosseiros
 5104.00.00;Fiapos de lã ou de pelos finos ou grosseiros.
 5105.10.00;- Lã cardada
-5105.21.00;-- "Lã penteada a granel"
+5105.21.00;-- ""Lã penteada a granel""
 5105.29.10;<i>Tops</i>
 5105.29.9;Outras
 5105.29.91;De finura inferior a 22,5 micrômetros (mícrons)
@@ -6475,7 +6475,7 @@ CÓDIGO;DESCRIÇÃO
 5310.10.10;Aniagem de juta
 5310.10.90;Outros
 5310.90.00;- Outros
-5311.00.00;Tecidos de outras fibras têxteis vegetais; tecidos de fios de papel.
+5311.00.00;Tecidos de outras fibras têxteis vegetais, tecidos de fios de papel.
 5401.10.1;De poliéster
 5401.10.11;Não acondicionadas para venda a retalho
 5401.10.12;Acondicionadas para venda a retalho
@@ -6539,7 +6539,7 @@ CÓDIGO;DESCRIÇÃO
 5404.19.19;Outros
 5404.19.90;Outros
 5404.90.00;- Outras
-5405.00.00;Monofilamentos artificiais, de título igual ou superior a 67 decitex e cuja maior dimensão da seção transversal não seja superior a 1 mm; lâminas e formas semelhantes (palha artificial, por exemplo) de matérias têxteis artificiais, cuja largura aparente não seja superior a 5 mm.
+5405.00.00;Monofilamentos artificiais, de título igual ou superior a 67 decitex e cuja maior dimensão da seção transversal não seja superior a 1 mm, lâminas e formas semelhantes (palha artificial, por exemplo) de matérias têxteis artificiais, cuja largura aparente não seja superior a 5 mm.
 5406.00.10;Fios de filamentos sintéticos
 5406.00.20;Fios de filamentos artificiais
 5407.10.1;Sem fios de borracha
@@ -6549,7 +6549,7 @@ CÓDIGO;DESCRIÇÃO
 5407.10.21;De aramidas
 5407.10.29;Outros
 5407.20.00;- Tecidos obtidos a partir de lâminas ou de formas semelhantes
-5407.30.00;- "Tecidos" mencionados na Nota 9 da Seção XI
+5407.30.00;- ""Tecidos"" mencionados na Nota 9 da Seção XI
 5407.41.00;-- Crus ou branqueados
 5407.42.00;-- Tintos
 5407.43.00;-- De fios de diversas cores
@@ -6803,7 +6803,7 @@ CÓDIGO;DESCRIÇÃO
 5605.00.10;Com metais preciosos
 5605.00.20;Revestidos por enrolamento, exceto com metais preciosos
 5605.00.90;Outros
-5606.00.00;Fios revestidos por enrolamento, lâminas e formas semelhantes das posições 54.04 ou 54.05, revestidas por enrolamento, exceto os da posição 56.05 e os fios de crina revestidos por enrolamento; fios de froco (<i>chenille</i>); fios denominados "de cadeia" (<i>chaînette</i>).
+5606.00.00;Fios revestidos por enrolamento, lâminas e formas semelhantes das posições 54.04 ou 54.05, revestidas por enrolamento, exceto os da posição 56.05 e os fios de crina revestidos por enrolamento, fios de froco (<i>chenille</i>), fios denominados ""de cadeia"" (<i>chaînette</i>).
 5607.21.00;-- Cordéis para atadeiras ou enfardadeiras
 5607.29.00;-- Outros
 5607.41.00;-- Cordéis para atadeiras ou enfardadeiras
@@ -6845,8 +6845,8 @@ CÓDIGO;DESCRIÇÃO
 5703.31.00;-- Grama (relva)
 5703.39.00;-- Outros
 5703.90.00;- De outras matérias têxteis
-5704.10.00;- "Ladrilhos" de área da superfície não superior a 0,3 m<sup>2</sup>
-5704.20.00;- "Ladrilhos" de área da superfície superior a 0,3 m<sup>2</sup>, mas não superior a 1 m<sup>2</sup>
+5704.10.00;- ""Ladrilhos"" de área da superfície não superior a 0,3 m<sup>2</sup>
+5704.20.00;- ""Ladrilhos"" de área da superfície superior a 0,3 m<sup>2</sup>, mas não superior a 1 m<sup>2</sup>
 5704.90.00;- Outros
 5705.00.00;Outros tapetes e revestimentos para pisos (pavimentos), de matérias têxteis, mesmo confeccionados.
 5801.10.00;- De lã ou de pelos finos
@@ -6908,8 +6908,8 @@ CÓDIGO;DESCRIÇÃO
 5906.10.00;- Fitas adesivas de largura não superior a 20 cm
 5906.91.00;-- De malha
 5906.99.00;-- Outros
-5907.00.00;Outros tecidos impregnados, revestidos ou recobertos; telas pintadas para cenários teatrais, para fundos de estúdio ou para usos semelhantes.
-5908.00.00;Mechas de matérias têxteis, tecidas, entrançadas ou tricotadas, para candeeiros, fogareiros, isqueiros, velas e semelhantes; camisas de incandescência e tecidos tubulares tricotados para a sua fabricação, mesmo impregnados.
+5907.00.00;Outros tecidos impregnados, revestidos ou recobertos, telas pintadas para cenários teatrais, para fundos de estúdio ou para usos semelhantes.
+5908.00.00;Mechas de matérias têxteis, tecidas, entrançadas ou tricotadas, para candeeiros, fogareiros, isqueiros, velas e semelhantes, camisas de incandescência e tecidos tubulares tricotados para a sua fabricação, mesmo impregnados.
 5909.00.00;Mangueiras e tubos semelhantes, de matérias têxteis, mesmo com reforço ou acessórios de outras matérias.
 5910.00.00;Correias transportadoras ou de transmissão, de matérias têxteis, mesmo impregnadas, revestidas ou recobertas, de plástico, ou estratificadas com plástico ou reforçadas com metal ou com outras matérias.
 5911.10.00;- Tecidos, feltros e tecidos forrados de feltro, combinados com uma ou mais camadas de borracha, couro ou de outras matérias, do tipo utilizado na fabricação de guarnições de cardas, e produtos análogos para outros usos técnicos, incluindo as fitas de veludo, impregnadas de borracha, para recobrimento de cilindros de teares
@@ -7337,7 +7337,7 @@ CÓDIGO;DESCRIÇÃO
 6403.91.90;Outro
 6403.99.10;Com sola de madeira e desprovido de palmilha
 6403.99.90;Outro
-6404.11.00;-- Calçado para esporte; calçado para tênis, basquetebol, ginástica, treino e semelhantes
+6404.11.00;-- Calçado para esporte, calçado para tênis, basquetebol, ginástica, treino e semelhantes
 6404.19.00;-- Outro
 6404.20.00;- Calçado com sola exterior de couro natural ou reconstituído
 6405.10.10;Com sola exterior de borracha ou plástico e parte superior de couro reconstituído
@@ -7383,13 +7383,13 @@ CÓDIGO;DESCRIÇÃO
 6701.00.00;Peles e outras partes de aves, com as suas penas ou penugem, penas, partes de penas, penugem e artigos destas matérias, exceto os produtos da posição 05.05, bem como os cálamos e outros canos de penas, trabalhados.
 6702.10.00;- De plástico
 6702.90.00;- De outras matérias
-6703.00.00;Cabelo disposto no mesmo sentido, adelgaçado, branqueado ou preparado de outro modo; lã, pelos e outras matérias têxteis, preparados para fabricação de perucas ou de artigos semelhantes.
+6703.00.00;Cabelo disposto no mesmo sentido, adelgaçado, branqueado ou preparado de outro modo, lã, pelos e outras matérias têxteis, preparados para fabricação de perucas ou de artigos semelhantes.
 6704.11.00;-- Perucas completas
 6704.19.00;-- Outros
 6704.20.00;- De cabelo
 6704.90.00;- De outras matérias
 6801.00.00;Pedras para calcetar, meios-fios (lancis) e placas (lajes) para pavimentação, de pedra natural (exceto a ardósia).
-6802.10.00;- Ladrilhos, cubos, pastilhas e artigos semelhantes, mesmo de forma diferente da quadrada ou retangular, cuja maior superfície possa ser inscrita num quadrado de lado inferior a 7 cm; grânulos, fragmentos e pós, corados artificialmente
+6802.10.00;- Ladrilhos, cubos, pastilhas e artigos semelhantes, mesmo de forma diferente da quadrada ou retangular, cuja maior superfície possa ser inscrita num quadrado de lado inferior a 7 cm, grânulos, fragmentos e pós, corados artificialmente
 6802.21.00;-- Mármore, travertino e alabastro
 6802.23.00;-- Granito
 6802.29.00;-- Outras pedras
@@ -7528,7 +7528,7 @@ CÓDIGO;DESCRIÇÃO
 6913.90.00;- Outros
 6914.10.00;- De porcelana
 6914.90.00;- Outras
-7001.00.00;Cacos, fragmentos e outros desperdícios e resíduos de vidro, exceto o vidro de tubos catódicos e outros vidros ativados da posição 85.49; vidro em blocos ou massas.
+7001.00.00;Cacos, fragmentos e outros desperdícios e resíduos de vidro, exceto o vidro de tubos catódicos e outros vidros ativados da posição 85.49, vidro em blocos ou massas.
 7002.10.00;- Esferas
 7002.20.00;- Barras ou varetas
 7002.31.00;-- De quartzo ou de outras sílicas fundidos
@@ -7557,10 +7557,10 @@ CÓDIGO;DESCRIÇÃO
 7010.20.00;- Rolhas, tampas e outros dispositivos para fechar recipientes
 7010.90.1;De capacidade superior a 1 l
 7010.90.11;Garrafões e garrafas
-7010.90.12;Frascos, boiões, vasos, embalagens tubulares e outros recipientes próprios para transporte ou embalagem; boiões para conservas
+7010.90.12;Frascos, boiões, vasos, embalagens tubulares e outros recipientes próprios para transporte ou embalagem, boiões para conservas
 7010.90.2;De capacidade superior a 0,33 l, mas não superior a 1 l
 7010.90.21;Garrafões e garrafas
-7010.90.22;Frascos, boiões, vasos, embalagens tubulares e outros recipientes próprios para transporte ou embalagem; boiões para conservas
+7010.90.22;Frascos, boiões, vasos, embalagens tubulares e outros recipientes próprios para transporte ou embalagem, boiões para conservas
 7010.90.90;Outros
 7011.10.10;Para lâmpadas ou tubos de descarga, incluindo os de luz relâmpago (<i>flash</i>)
 7011.10.2;Para lâmpadas de incandescência
@@ -7689,7 +7689,7 @@ CÓDIGO;DESCRIÇÃO
 7118.90.00;- Outras
 7201.10.00;- Ferro fundido bruto não ligado, que contenha, em peso, 0,5 % ou menos de fósforo
 7201.20.00;- Ferro fundido bruto não ligado, que contenha, em peso, mais de 0,5 % de fósforo
-7201.50.00;- Ligas de ferro fundido bruto; ferro <i>spiegel</i> (especular)
+7201.50.00;- Ligas de ferro fundido bruto, ferro <i>spiegel</i> (especular)
 7202.11.00;-- Que contenha, em peso, mais de 2 % de carbono
 7202.19.00;-- Outra
 7202.21.00;-- Que contenha, em peso, mais de 55 % de silício
@@ -7991,7 +7991,7 @@ CÓDIGO;DESCRIÇÃO
 7312.10.10;De fios de aço revestidos de bronze ou latão
 7312.10.90;Outros
 7312.90.00;- Outros
-7313.00.00;Arame farpado, de ferro ou aço; arames ou tiras, retorcidos, mesmo farpados, de ferro ou aço, do tipo utilizado em cercas.
+7313.00.00;Arame farpado, de ferro ou aço, arames ou tiras, retorcidos, mesmo farpados, de ferro ou aço, do tipo utilizado em cercas.
 7314.12.00;-- Telas metálicas, contínuas ou sem fim, para máquinas, de aço inoxidável
 7314.14.00;-- Outras telas metálicas tecidas, de aço inoxidável
 7314.19.00;-- Outras
@@ -8002,7 +8002,7 @@ CÓDIGO;DESCRIÇÃO
 7314.42.00;-- Revestidas de plástico
 7314.49.00;-- Outras
 7314.50.00;- Chapas e tiras, distendidas
-7315.11.10;Do tipo utilizado em bicicletas, com passo de 12,7 mm (1/2") e largura interna igual ou superior a 1,98 mm (5/64"), mas inferior ou igual a 3,17 mm (1/8")
+7315.11.10;Do tipo utilizado em bicicletas, com passo de 12,7 mm (1/2"") e largura interna igual ou superior a 1,98 mm (5/64""), mas inferior ou igual a 3,17 mm (1/8"")
 7315.11.90;Outras
 7315.12.10;De transmissão
 7315.12.90;Outras
@@ -8046,7 +8046,7 @@ CÓDIGO;DESCRIÇÃO
 7322.19.00;-- Outros
 7322.90.10;Geradores de ar quente a combustível líquido, com capacidade igual ou superior a 1.500 kcal/h, mas não superior a 10.400 kcal/h, do tipo utilizado em veículos automóveis
 7322.90.90;Outros
-7323.10.00;- Palha de ferro ou aço; esponjas, esfregões, luvas e artigos semelhantes para limpeza, polimento ou usos semelhantes
+7323.10.00;- Palha de ferro ou aço, esponjas, esfregões, luvas e artigos semelhantes para limpeza, polimento ou usos semelhantes
 7323.91.00;-- De ferro fundido, não esmaltados
 7323.92.00;-- De ferro fundido, esmaltados
 7323.93.00;-- De aço inoxidável
@@ -8066,8 +8066,8 @@ CÓDIGO;DESCRIÇÃO
 7326.90.10;Calotas elípticas de aço ao níquel, segundo Norma ASME SA 353, do tipo utilizado na fabricação de recipientes para gases comprimidos ou liquefeitos
 7326.90.20;Discos próprios para cunhagem de moedas
 7326.90.90;Outras
-7401.00.00;Mates de cobre; cobre de cementação (precipitado de cobre).
-7402.00.00;Cobre não refinado (afinado); ânodos de cobre para refinação (afinação) eletrolítica.
+7401.00.00;Mates de cobre, cobre de cementação (precipitado de cobre).
+7402.00.00;Cobre não refinado (afinado), ânodos de cobre para refinação (afinação) eletrolítica.
 7403.11.00;-- Cátodos e seus elementos
 7403.12.00;-- Barras para obtenção de fios (<i>wire-bars</i>)
 7403.13.00;-- Palanquilhas (Lingotes*) (<i>billets</i>)
@@ -8080,7 +8080,7 @@ CÓDIGO;DESCRIÇÃO
 7406.10.10;Com um teor, em peso, de chumbo igual ou superior a 9,5 %, mas inferior ou igual a 25,0 % e de estanho igual ou superior a 1,75 %, mas inferior ou igual a 11,0 %, sem outros elementos
 7406.10.20;Com um teor, em peso, de estanho igual ou superior a 7,0 %, mas inferior ou igual a 9,0 % e de níquel igual ou superior a 0,7 %, mas inferior ou igual a 1,3 %, sem outros elementos
 7406.10.90;Outros
-7406.20.00;- Pós de estrutura lamelar; escamas
+7406.20.00;- Pós de estrutura lamelar, escamas
 7407.10.10;Barras
 7407.10.2;Perfis
 7407.10.21;Ocos
@@ -8139,13 +8139,13 @@ CÓDIGO;DESCRIÇÃO
 7415.10.00;- Tachas, pregos, percevejos, escápulas (pregos para tacos) e artigos semelhantes
 7415.21.00;-- Arruelas (anilhas) (incluindo as de pressão)
 7415.29.00;-- Outros
-7415.33.00;-- Parafusos; pinos ou pernos e porcas
+7415.33.00;-- Parafusos, pinos ou pernos e porcas
 7415.39.00;-- Outros
-7418.10.00;- Serviços de mesa, artigos de cozinha e outros artigos de uso doméstico, e suas partes; esponjas, esfregões, luvas e artigos semelhantes, para limpeza, polimento ou usos semelhantes
+7418.10.00;- Serviços de mesa, artigos de cozinha e outros artigos de uso doméstico, e suas partes, esponjas, esfregões, luvas e artigos semelhantes, para limpeza, polimento ou usos semelhantes
 7418.20.00;- Artigos de higiene ou de toucador, e suas partes
 7419.20.00;- Vazadas, moldadas, estampadas ou forjadas, mas não trabalhadas de outro modo
 7419.80.10;Telas metálicas de fio de cobre
-7419.80.20;Grades e redes, de fio de cobre; chapas e tiras, distendidas
+7419.80.20;Grades e redes, de fio de cobre, chapas e tiras, distendidas
 7419.80.30;Molas
 7419.80.40;Discos próprios para cunhagem de moedas
 7419.80.90;Outras
@@ -8180,7 +8180,7 @@ CÓDIGO;DESCRIÇÃO
 7601.20.00;- Ligas de alumínio
 7602.00.00;Desperdícios e resíduos, e sucata, de alumínio.
 7603.10.00;- Pós de estrutura não lamelar
-7603.20.00;- Pós de estrutura lamelar; escamas
+7603.20.00;- Pós de estrutura lamelar, escamas
 7604.10.10;Barras
 7604.10.2;Perfis
 7604.10.21;Ocos
@@ -8231,7 +8231,7 @@ CÓDIGO;DESCRIÇÃO
 7614.10.90;Outros
 7614.90.10;Cabos
 7614.90.90;Outros
-7615.10.00;- Serviços de mesa, artigos de cozinha e outros artigos de uso doméstico, e suas partes; esponjas, esfregões, luvas e artigos semelhantes, para limpeza, polimento ou usos semelhantes
+7615.10.00;- Serviços de mesa, artigos de cozinha e outros artigos de uso doméstico, e suas partes, esponjas, esfregões, luvas e artigos semelhantes, para limpeza, polimento ou usos semelhantes
 7615.20.00;- Artigos de higiene ou de toucador, e suas partes
 7616.10.00;- Tachas, pregos, escápulas (pregos para tacos), parafusos, pinos ou pernos roscados, porcas, ganchos roscados, rebites, chavetas, cavilhas, contrapinos ou troços, arruelas (anilhas) e artigos semelhantes
 7616.91.00;-- Telas metálicas, grades e redes, de fios de alumínio
@@ -8286,14 +8286,14 @@ CÓDIGO;DESCRIÇÃO
 8102.96.00;-- Fios
 8102.97.00;-- Desperdícios e resíduos, e sucata
 8102.99.00;-- Outros
-8103.20.00;- Tântalo em formas brutas, incluindo as barras simplesmente obtidas por sinterização; pós
+8103.20.00;- Tântalo em formas brutas, incluindo as barras simplesmente obtidas por sinterização, pós
 8103.30.00;- Desperdícios e resíduos, e sucata
 8103.91.00;-- Cadinhos
 8103.99.00;-- Outros
 8104.11.00;-- Que contenha pelo menos 99,8 %, em peso, de magnésio
 8104.19.00;-- Outro
 8104.20.00;- Desperdícios e resíduos, e sucata
-8104.30.00;- Aparas, resíduos de torno e grânulos, calibrados; pós
+8104.30.00;- Aparas, resíduos de torno e grânulos, calibrados, pós
 8104.90.00;- Outros
 8105.20.10;Em formas brutas
 8105.20.2;Pós
@@ -8305,7 +8305,7 @@ CÓDIGO;DESCRIÇÃO
 8105.90.90;Outros
 8106.10.00;- Que contenham mais de 99,99 %, em peso, de bismuto
 8106.90.00;- Outros
-8108.20.00;- Titânio em formas brutas; pós
+8108.20.00;- Titânio em formas brutas, pós
 8108.30.00;- Desperdícios e resíduos, e sucata
 8108.90.00;- Outros
 8109.21.00;-- Que contenham menos de uma parte de háfnio para 500 partes, em peso, de zircônio
@@ -8321,23 +8321,23 @@ CÓDIGO;DESCRIÇÃO
 8111.00.10;Em formas brutas
 8111.00.20;Chapas, folhas, tiras, fios, hastes, pastilhas e plaquetas
 8111.00.90;Outros
-8112.12.00;-- Em formas brutas; pós
+8112.12.00;-- Em formas brutas, pós
 8112.13.00;-- Desperdícios e resíduos, e sucata
 8112.19.00;-- Outros
 8112.21.10;Em formas brutas
 8112.21.20;Pós
 8112.22.00;-- Desperdícios e resíduos, e sucata
 8112.29.00;-- Outros
-8112.31.00;-- Em formas brutas; desperdícios e resíduos, e sucata; pós
+8112.31.00;-- Em formas brutas, desperdícios e resíduos, e sucata, pós
 8112.39.00;-- Outros
-8112.41.00;-- Em formas brutas; desperdícios e resíduos, e sucata; pós
+8112.41.00;-- Em formas brutas, desperdícios e resíduos, e sucata, pós
 8112.49.00;-- Outros
-8112.51.00;-- Em formas brutas; pós
+8112.51.00;-- Em formas brutas, pós
 8112.52.00;-- Desperdícios e resíduos, e sucata
 8112.59.00;-- Outros
 8112.61.00;-- Desperdícios e resíduos, e sucata
 8112.69.00;-- Outros
-8112.92.00;-- Em formas brutas; desperdícios e resíduos, e sucata; pós
+8112.92.00;-- Em formas brutas, desperdícios e resíduos, e sucata, pós
 8112.99.00;-- Outros
 8113.00.10;Chapas, folhas, tiras, fios, hastes, pastilhas e plaquetas
 8113.00.90;Outros
@@ -8430,7 +8430,7 @@ CÓDIGO;DESCRIÇÃO
 8301.10.00;- Cadeados
 8301.20.00;- Fechaduras do tipo utilizado em veículos automóveis
 8301.30.00;- Fechaduras do tipo utilizado em móveis
-8301.40.00;- Outras fechaduras; ferrolhos
+8301.40.00;- Outras fechaduras, ferrolhos
 8301.50.00;- Fechos e armações com fecho, com fechadura
 8301.60.00;- Partes
 8301.70.00;- Chaves apresentadas isoladamente
@@ -8450,7 +8450,7 @@ CÓDIGO;DESCRIÇÃO
 8306.10.00;- Sinos, campainhas, gongos e artigos semelhantes
 8306.21.00;-- Prateados, dourados ou platinados
 8306.29.00;-- Outros
-8306.30.00;- Molduras para fotografias, gravuras ou semelhantes; espelhos
+8306.30.00;- Molduras para fotografias, gravuras ou semelhantes, espelhos
 8307.10.10;Do tipo utilizado na exploração submarina de petróleo ou gás, constituídos por camadas flexíveis de aço e camadas de plástico, de diâmetro interior superior a 254 mm
 8307.10.90;Outros
 8307.90.00;- De outros metais comuns
@@ -8473,7 +8473,7 @@ CÓDIGO;DESCRIÇÃO
 8402.11.00;-- Caldeiras aquatubulares com produção de vapor superior a 45 t por hora
 8402.12.00;-- Caldeiras aquatubulares com produção de vapor não superior a 45 t por hora
 8402.19.00;-- Outras caldeiras para produção de vapor, incluindo as caldeiras mistas
-8402.20.00;- Caldeiras denominadas "de água superaquecida"
+8402.20.00;- Caldeiras denominadas ""de água superaquecida""
 8402.90.00;- Partes
 8403.10.10;Com capacidade inferior ou igual a 200.000 kcal/hora
 8403.10.90;Outras
@@ -8483,7 +8483,7 @@ CÓDIGO;DESCRIÇÃO
 8404.20.00;- Condensadores para máquinas a vapor
 8404.90.10;De aparelhos auxiliares para caldeiras da posição 84.02
 8404.90.90;Outras
-8405.10.00;- Geradores de gás de ar (gás pobre) ou de gás de água, mesmo com depuradores; geradores de acetileno e geradores semelhantes de gás, operados a água, mesmo com depuradores
+8405.10.00;- Geradores de gás de ar (gás pobre) ou de gás de água, mesmo com depuradores, geradores de acetileno e geradores semelhantes de gás, operados a água, mesmo com depuradores
 8405.90.00;- Partes
 8406.10.00;- Turbinas para propulsão de embarcações
 8406.81.00;-- De potência superior a 40 MW
@@ -8761,7 +8761,7 @@ CÓDIGO;DESCRIÇÃO
 8422.19.00;-- Outras
 8422.20.00;- Máquinas e aparelhos para limpar ou secar garrafas ou outros recipientes
 8422.30.10;Máquinas e aparelhos para encher, fechar, arrolhar, capsular ou rotular garrafas
-8422.30.2;Máquinas e aparelhos para encher, fechar, arrolhar ou rotular caixas, latas, sacos ou outros recipientes; Máquinas e aparelhos para capsular vasos, tubos e recipientes semelhantes
+8422.30.2;Máquinas e aparelhos para encher, fechar, arrolhar ou rotular caixas, latas, sacos ou outros recipientes, Máquinas e aparelhos para capsular vasos, tubos e recipientes semelhantes
 8422.30.21;Para encher caixas ou sacos com pó ou grãos
 8422.30.22;Para encher e fechar embalagens confeccionadas com papel ou cartão dos subitens 4811.51.22 ou 4811.59.23, mesmo com dispositivo de rotulagem
 8422.30.23;Para encher e fechar recipientes tubulares flexíveis (bisnagas), com capacidade igual ou superior a 100 unidades por minuto
@@ -8773,7 +8773,7 @@ CÓDIGO;DESCRIÇÃO
 8422.40.90;Outros
 8422.90.10;De máquinas de lavar louça, de uso doméstico
 8422.90.90;Outras
-8423.10.00;- Balanças para pessoas, incluindo as balanças para bebês; balanças de uso doméstico
+8423.10.00;- Balanças para pessoas, incluindo as balanças para bebês, balanças de uso doméstico
 8423.20.00;- Básculas de pesagem contínua em transportadores
 8423.30.1;Dosadoras
 8423.30.11;Com aparelhos periféricos, que constituam unidade funcional
@@ -8844,7 +8844,7 @@ CÓDIGO;DESCRIÇÃO
 8428.39.30;De pinças laterais, do tipo utilizado para o transporte de jornais
 8428.39.90;Outros
 8428.40.00;- Escadas e tapetes, rolantes
-8428.60.00;- Teleféricos (incluindo as telecadeiras e os telesquis); mecanismos de tração para funiculares
+8428.60.00;- Teleféricos (incluindo as telecadeiras e os telesquis), mecanismos de tração para funiculares
 8428.70.00;- Robôs industriais
 8428.90.10;Do tipo utilizado para desembarque de botes salva-vidas, motorizados ou providos de dispositivo de compensação de inclinação
 8428.90.20;Transportadores-elevadores (transelevadores) automáticos, de deslocamento horizontal sobre guias
@@ -9005,7 +9005,7 @@ CÓDIGO;DESCRIÇÃO
 8442.40.10;De máquinas do item 8442.30.10
 8442.40.20;De máquinas do item 8442.30.20
 8442.40.90;Outras
-8442.50.00;- Clichês, placas, cilindros e outros elementos de impressão; pedras litográficas, placas e cilindros, preparados para impressão (por exemplo, aplainados, granulados ou polidos)
+8442.50.00;- Clichês, placas, cilindros e outros elementos de impressão, pedras litográficas, placas e cilindros, preparados para impressão (por exemplo, aplainados, granulados ou polidos)
 8443.11.10;Para impressão multicolor de jornais, de largura igual ou superior a 900 mm, com unidades de impressão em configuração torre e dispositivos automáticos de emendar bobinas
 8443.11.90;Outros
 8443.12.00;-- Máquinas e aparelhos de impressão, por ofsete, do tipo utilizado em escritórios, alimentados por folhas em que um lado não seja superior a 22 cm e que o outro não seja superior a 36 cm, quando não dobradas
@@ -9219,7 +9219,7 @@ CÓDIGO;DESCRIÇÃO
 8451.30.99;Outras
 8451.40.10;Para lavar
 8451.40.2;Para tingir ou branquear fios ou tecidos
-8451.40.21;Para tingir tecidos em rolos; para tingir por pressão estática, com molinete (rotor de pás), jato de água (<i>jet</i>) ou combinada
+8451.40.21;Para tingir tecidos em rolos, para tingir por pressão estática, com molinete (rotor de pás), jato de água (<i>jet</i>) ou combinada
 8451.40.29;Outras
 8451.40.90;Outras
 8451.50.10;Para inspeção visual de tecidos
@@ -9593,10 +9593,10 @@ CÓDIGO;DESCRIÇÃO
 8479.82.10;Misturadores
 8479.82.90;Outros
 8479.83.00;-- Prensas isostáticas a frio
-8479.89.1;Prensas; distribuidores e doseadores de sólidos ou de líquidos
+8479.89.1;Prensas, distribuidores e doseadores de sólidos ou de líquidos
 8479.89.11;Prensas
 8479.89.12;Distribuidores e doseadores de sólidos ou de líquidos
-8479.89.2;Máquinas e aparelhos para cestaria ou espartaria; máquinas e aparelhos para fabricação de pincéis, brochas e escovas
+8479.89.2;Máquinas e aparelhos para cestaria ou espartaria, máquinas e aparelhos para fabricação de pincéis, brochas e escovas
 8479.89.21;Máquinas e aparelhos para cestaria ou espartaria
 8479.89.22;Máquinas e aparelhos para fabricação de pincéis, brochas ou escovas
 8479.89.3;Limpadores de para-brisas elétricos e acumuladores hidráulicos, para aeronaves
@@ -9673,8 +9673,8 @@ CÓDIGO;DESCRIÇÃO
 8483.10.50;Árvores de transmissão providas de acoplamentos dentados com entalhes de proteção contra sobrecarga, de comprimento igual ou superior a 1500 mm e diâmetro do eixo igual ou superior a 400 mm
 8483.10.90;Outras
 8483.20.00;- Mancais (chumaceiras) com rolamentos incorporados
-8483.30.10;Montados com "bronzes" de metal antifricção
-8483.30.2;"Bronzes"
+8483.30.10;Montados com ""bronzes"" de metal antifricção
+8483.30.2;""Bronzes""
 8483.30.21;De diâmetro interno igual ou superior a 200 mm
 8483.30.29;Outros
 8483.30.90;Outros
@@ -9686,7 +9686,7 @@ CÓDIGO;DESCRIÇÃO
 8483.60.11;De fricção
 8483.60.19;Outras
 8483.60.90;Outros
-8483.90.00;- Rodas dentadas e outros elementos de transmissão apresentados separadamente; partes
+8483.90.00;- Rodas dentadas e outros elementos de transmissão apresentados separadamente, partes
 8484.10.00;- Juntas metaloplásticas
 8484.20.00;- Juntas de vedação mecânicas
 8484.90.00;- Outros
@@ -9924,7 +9924,7 @@ CÓDIGO;DESCRIÇÃO
 8516.33.00;-- Aparelhos para secar as mãos
 8516.40.00;- Ferros elétricos de passar
 8516.50.00;- Fornos de micro-ondas
-8516.60.00;- Outros fornos; fogões de cozinha, fogareiros (incluindo as chapas de cocção), grelhas e assadeiras
+8516.60.00;- Outros fornos, fogões de cozinha, fogareiros (incluindo as chapas de cocção), grelhas e assadeiras
 8516.71.00;-- Aparelhos para preparação de café ou de chá
 8516.72.00;-- Torradeiras de pão
 8516.79.10;Panelas
@@ -10258,7 +10258,7 @@ CÓDIGO;DESCRIÇÃO
 8540.20.19;Outros
 8540.20.20;Tubos conversores ou intensificadores de imagens, de raios X
 8540.20.90;Outros
-8540.40.00;- Tubos de visualização de dados gráficos, em monocromos; tubos de visualização de dados gráficos, a cores, com uma tela (ecrã*) fosfórica de espaçamento entre os pontos inferior a 0,4 mm
+8540.40.00;- Tubos de visualização de dados gráficos, em monocromos, tubos de visualização de dados gráficos, a cores, com uma tela (ecrã*) fosfórica de espaçamento entre os pontos inferior a 0,4 mm
 8540.60.10;Tubos de visualização de dados gráficos, em cores, com uma tela de espaçamento entre os pontos igual ou superior a 0,4 mm
 8540.60.90;Outros
 8540.71.00;-- Magnétrons
@@ -10408,7 +10408,7 @@ CÓDIGO;DESCRIÇÃO
 8547.90.00;- Outros
 8548.00.10;Termopares do tipo utilizado em dispositivos termoelétricos de segurança de aparelhos alimentados a gás
 8548.00.90;Outras
-8549.11.00;-- Desperdícios e resíduos, e sucata, de acumuladores de chumbo-ácido; acumuladores de chumbo-ácido inservíveis
+8549.11.00;-- Desperdícios e resíduos, e sucata, de acumuladores de chumbo-ácido, acumuladores de chumbo-ácido inservíveis
 8549.12.00;-- Outros, que contenham chumbo, cádmio ou mercúrio
 8549.13.00;-- Selecionados por tipo de componente químico e que não contenham chumbo, cádmio ou mercúrio
 8549.14.00;-- Não selecionados e que não contenham chumbo, cádmio ou mercúrio
@@ -10471,7 +10471,7 @@ CÓDIGO;DESCRIÇÃO
 8702.40.10;Trólebus
 8702.40.90;Outros
 8702.90.00;- Outros
-8703.10.00;- Veículos especialmente concebidos para se deslocar sobre a neve; veículos especiais para transporte de pessoas nos campos de golfe e veículos semelhantes
+8703.10.00;- Veículos especialmente concebidos para se deslocar sobre a neve, veículos especiais para transporte de pessoas nos campos de golfe e veículos semelhantes
 8703.21.00;-- De cilindrada não superior a 1.000 cm<sup>3</sup>
 8703.22.10;Com capacidade de transporte de pessoas sentadas inferior ou igual a seis, incluindo o motorista
 8703.22.90;Outros
@@ -10572,7 +10572,7 @@ CÓDIGO;DESCRIÇÃO
 8708.70.90;Outros
 8708.80.00;- Sistemas de suspensão e suas partes (incluindo os amortecedores de suspensão)
 8708.91.00;-- Radiadores e suas partes
-8708.92.00;-- Silenciosos e tubos de escape; suas partes
+8708.92.00;-- Silenciosos e tubos de escape, suas partes
 8708.93.00;-- Embreagens e suas partes
 8708.94.1;Volantes, colunas e caixas, de direção dos veículos das subposições 8701.10, 8701.30, 8701.91 a 8701.95 ou 8704.10
 8708.94.11;Volantes
@@ -10635,7 +10635,7 @@ CÓDIGO;DESCRIÇÃO
 8716.80.00;- Outros veículos
 8716.90.10;Chassis de reboques e semirreboques
 8716.90.90;Outras
-8801.00.00;Balões e dirigíveis; planadores, asas voadoras e outros veículos aéreos, não concebidos para propulsão a motor.
+8801.00.00;Balões e dirigíveis, planadores, asas voadoras e outros veículos aéreos, não concebidos para propulsão a motor.
 8802.11.00;-- De peso não superior a 2.000 kg, vazios (sem carga)
 8802.12.10;De peso não superior a 3.500 kg
 8802.12.90;Outros
@@ -10655,8 +10655,8 @@ CÓDIGO;DESCRIÇÃO
 8802.40.10;A turboélice
 8802.40.90;Outros
 8802.60.00;- Veículos espaciais (incluindo os satélites) e seus veículos de lançamento, e veículos suborbitais
-8804.00.00;Paraquedas (incluindo os paraquedas dirigíveis e os parapentes) e os paraquedas giratórios; suas partes e acessórios.
-8805.10.00;- Aparelhos e dispositivos para lançamento de veículos aéreos, e suas partes; aparelhos e dispositivos para aterrissagem (aterragem) de veículos aéreos em porta-aviões e aparelhos e dispositivos semelhantes, e suas partes
+8804.00.00;Paraquedas (incluindo os paraquedas dirigíveis e os parapentes) e os paraquedas giratórios, suas partes e acessórios.
+8805.10.00;- Aparelhos e dispositivos para lançamento de veículos aéreos, e suas partes, aparelhos e dispositivos para aterrissagem (aterragem) de veículos aéreos em porta-aviões e aparelhos e dispositivos semelhantes, e suas partes
 8805.21.00;-- Simuladores de combate aéreo e suas partes
 8805.29.00;-- Outros
 8806.10.00;- Concebidos para o transporte de passageiros
@@ -10674,7 +10674,7 @@ CÓDIGO;DESCRIÇÃO
 8807.20.00;- Trens de aterrissagem (aterragem) e suas partes
 8807.30.00;- Outras partes de aviões, de helicópteros ou de veículos aéreos (aeronaves) não tripulados
 8807.90.00;- Outras
-8901.10.00;- Transatlânticos, barcos de excursão e embarcações semelhantes principalmente concebidas para o transporte de pessoas; <i>ferryboats</i>
+8901.10.00;- Transatlânticos, barcos de excursão e embarcações semelhantes principalmente concebidas para o transporte de pessoas, <i>ferryboats</i>
 8901.20.00;- Navios-tanque
 8901.30.00;- Barcos frigoríficos, exceto os da subposição 8901.20
 8901.90.00;- Outras embarcações para o transporte de mercadorias ou para o transporte de pessoas e de mercadorias
@@ -10742,7 +10742,7 @@ CÓDIGO;DESCRIÇÃO
 9006.59.5;Outras, de foco ajustável
 9006.59.51;Para obtenção de negativos de 45 mm x 60 mm ou de dimensões superiores
 9006.59.59;Outras
-9006.61.00;-- Aparelhos de tubo de descarga para produção de luz relâmpago (<i>flash</i>) (denominados "<i>flashes</i> eletrônicos")
+9006.61.00;-- Aparelhos de tubo de descarga para produção de luz relâmpago (<i>flash</i>) (denominados ""<i>flashes</i> eletrônicos"")
 9006.69.00;-- Outros
 9006.91.10;Corpos
 9006.91.90;Outros
@@ -10877,7 +10877,7 @@ CÓDIGO;DESCRIÇÃO
 9018.90.96;Desfibriladores externos que operem unicamente em modo automático (AED - <i>Automatic External Defibrillator</i>)
 9018.90.97;Aparelhos destinados a procedimentos cirúrgicos assistidos por robótica
 9018.90.99;Outros
-9019.10.00;- Aparelhos de mecanoterapia; aparelhos de massagem; aparelhos de psicotécnica
+9019.10.00;- Aparelhos de mecanoterapia, aparelhos de massagem, aparelhos de psicotécnica
 9019.20.10;De oxigenoterapia
 9019.20.20;De aerossolterapia
 9019.20.30;Respiratórios de reanimação
@@ -11144,7 +11144,7 @@ CÓDIGO;DESCRIÇÃO
 9105.29.00;-- Outros
 9105.91.00;-- Funcionando eletricamente
 9105.99.00;-- Outros
-9106.10.00;- Relógios de ponto; relógios datadores e contadores de horas
+9106.10.00;- Relógios de ponto, relógios datadores e contadores de horas
 9106.90.00;- Outros
 9107.00.10;Interruptores horários
 9107.00.90;Outros
@@ -11180,7 +11180,7 @@ CÓDIGO;DESCRIÇÃO
 9201.90.00;- Outros
 9202.10.00;- De cordas, tocados com o auxílio de um arco
 9202.90.00;- Outros
-9205.10.00;- Instrumentos denominados "metais"
+9205.10.00;- Instrumentos denominados ""metais""
 9205.90.00;- Outros
 9206.00.00;Instrumentos musicais de percussão (por exemplo, tambores, caixas, xilofones, pratos, castanholas, maracás).
 9207.10.10;Sintetizadores
@@ -11195,7 +11195,7 @@ CÓDIGO;DESCRIÇÃO
 9209.94.00;-- Partes e acessórios de instrumentos musicais da posição 92.07
 9209.99.00;-- Outros
 9301.10.00;- Peças de artilharia (por exemplo, canhões, obuses e morteiros)
-9301.20.00;- Lança-mísseis; lança-chamas; lança-granadas; lança-torpedos e lançadores semelhantes
+9301.20.00;- Lança-mísseis, lança-chamas, lança-granadas, lança-torpedos e lançadores semelhantes
 9301.90.00;- Outras
 9302.00.00;Revólveres e pistolas, exceto os das posições 93.03 ou 93.04.
 9303.10.00;- Armas de fogo carregáveis exclusivamente pela boca
@@ -11282,7 +11282,7 @@ CÓDIGO;DESCRIÇÃO
 9406.90.10;Estufas
 9406.90.20;Com estrutura de ferro ou aço e paredes exteriores constituídas principalmente dessas matérias
 9406.90.90;Outras
-9503.00.10;Triciclos, patinetes, carros de pedais e outros brinquedos semelhantes com rodas; carrinhos para bonecos
+9503.00.10;Triciclos, patinetes, carros de pedais e outros brinquedos semelhantes com rodas, carrinhos para bonecos
 9503.00.2;Bonecos que representem somente seres humanos
 9503.00.21;Bonecos, mesmo vestidos, com mecanismo a corda ou elétrico
 9503.00.22;Outros bonecos, mesmo vestidos
@@ -11361,7 +11361,7 @@ CÓDIGO;DESCRIÇÃO
 9606.21.00;-- De plástico, não recobertos de matérias têxteis
 9606.22.00;-- De metais comuns, não recobertos de matérias têxteis
 9606.29.00;-- Outros
-9606.30.00;- Formas e outras partes, de botões; esboços de botões
+9606.30.00;- Formas e outras partes, de botões, esboços de botões
 9607.11.00;-- Com grampos de metal comum
 9607.19.00;-- Outros
 9607.20.00;- Partes
@@ -11380,7 +11380,7 @@ CÓDIGO;DESCRIÇÃO
 9609.20.00;- Minas para lápis ou para lapiseiras
 9609.90.00;- Outros
 9610.00.00;Lousas e quadros para escrever ou desenhar, mesmo emoldurados.
-9611.00.00;Carimbos, incluindo os datadores e numeradores, sinetes e artigos semelhantes (incluindo os aparelhos para impressão de etiquetas), manuais; dispositivos manuais de composição tipográfica e jogos de impressão manuais que contenham tais dispositivos.
+9611.00.00;Carimbos, incluindo os datadores e numeradores, sinetes e artigos semelhantes (incluindo os aparelhos para impressão de etiquetas), manuais, dispositivos manuais de composição tipográfica e jogos de impressão manuais que contenham tais dispositivos.
 9612.10.00;- Fitas impressoras
 9612.20.00;- Almofadas de carimbo
 9613.10.00;- Isqueiros de bolso, a gás, não recarregáveis
@@ -11395,7 +11395,7 @@ CÓDIGO;DESCRIÇÃO
 9616.20.00;- Borlas ou esponjas para pós ou para aplicação de outros cosméticos ou de produtos de toucador
 9617.00.10;Garrafas térmicas e outros recipientes isotérmicos
 9617.00.20;Partes
-9618.00.00;Manequins e artigos semelhantes; autômatos e cenas animadas, para vitrines e mostruários.
+9618.00.00;Manequins e artigos semelhantes, autômatos e cenas animadas, para vitrines e mostruários.
 9619.00.00;Absorventes (Pensos*) e tampões higiênicos, cueiros, fraldas e artigos higiênicos semelhantes, de qualquer matéria.
 9620.00.00;Monopés, bipés, tripés e artigos semelhantes.
 9701.21.00;-- Quadros, pinturas e desenhos
