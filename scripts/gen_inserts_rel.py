@@ -387,7 +387,8 @@ def emit_relatorio_sql(data):
 
         print("\nON CONFLICT DO NOTHING;" if index == len(serv) - 1 else ",")
 
-    print()
+    if len(serv) > 0:
+        print()
 
 
 def generate_relatorio(
