@@ -11,7 +11,8 @@ from math import floor
 ALLOWED_UF_VALUES = ["SP", "MG", "RJ", "PR", "DF", "AM", "SC", "RS", "BA", "ES", "PE"]
 ALLOWED_UF_CDF = [0.3, 0.55, 0.65, 0.75, 0.8, 0.85, 0.9, 0.93, 0.95, 0.97, 1.0]
 
-# AI-generated!
+# Disclaimer: major parts of this script are AI-generated.
+
 UF_CEP_RANGES = {
     "SP": [(1_000_000, 19_999_999)],
     "RJ": [(20_000_000, 28_999_999)],
