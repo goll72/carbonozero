@@ -46,7 +46,8 @@ INSERT INTO org_adm_mun VALUES
     ('4205407', '40.932.671/0001-05', 'Prefeitura de Florianópolis', 'Vila de Costela', 3978, '88327-252', 'Florianópolis', 'SC'),
     ('4308250', '89.512.704/0001-57', 'Administração Ambiental', 'Ladeira Vieira', 7142, '98354-201',  'Floriano Peixoto', 'RS'),
     ('5300108', '58.247.031/0001-21', 'Gestão e Planejamento Ambiental de Brasília', 'Chácara Vinicius Casa Grande', 7905, '70001-021', 'Brasília', 'DF'),
-    ('1302603', '25.683.971/0001-04', 'Defesa Civil de Manaus', 'Fazenda Carlos Eduardo Nunes', 8647, '69340-748', 'Manaus', 'AM')
+    ('1302603', '25.683.971/0001-04', 'Defesa Civil de Manaus', 'Rua Carlos Eduardo Nunes', 8647, '69340-748', 'Manaus', 'AM'),
+    ('4106902', '13.756.812/0001-34', 'Prefeitura de Curitiba', 'Avenida Marechal Rubens', 346, '86351-332', 'Curitiba', 'PR')
 ON CONFLICT DO NOTHING;
 
 INSERT INTO ent_fed (SELECT cod_ibge, 'mun' FROM org_adm_mun) ON CONFLICT DO NOTHING;
@@ -72,12 +73,71 @@ INSERT INTO empresa VALUES
     ('20.978.635', '1091-1/01', '1996-05-09', 'Oliveira Melo S.A.', '204-6', '2024-01-29'),
     ('56.738.014', '8520-1/00', '2000-10-05', 'Nogueira - ME', '230-5', '2022-11-24'),
     ('75.893.062', '4711-3/02', '2011-02-10', 'Pacheco - ME', '230-5', '2022-12-15'),
-    ('28.659.130', '6202-3/00', '2014-07-04', 'Porto S/A', '204-6', '2021-05-26')
+    ('28.659.130', '6202-3/00', '2014-07-04', 'Porto S/A', '204-6', '2021-05-26'),
+    ('33.738.001', '4711-3/02', '2011-01-12', 'Cachê Ltda', '306-9', '2023-01-02'),
+    ('88.635.333', '4731-8/00', '2009-07-07', 'Machado S/A', '204-6', '2024-03-27')
 ON CONFLICT DO NOTHING;
 
+INSERT INTO filial VALUES
+    ('01.274.895', '0001-23', 61, 'Sítio de Novais', 4534, '71158-954', '5300108'),
+    ('01.274.895', '0001-40', 192, 'Campo Lavínia Azevedo', 9275, '15714-317', '3550308'),
+    ('01.274.895', '0001-13', 141, 'Setor Pires', 1466, '35881-862', '3106200'),
+    ('65.172.380', '0001-61', 5, 'Condomínio Azevedo', 31, '39630-513', '3106200'),
+    ('65.172.380', '0001-53', 55, 'Viela Abreu', 3029, '31133-836', '3146107'),
+    ('79.821.563', '0001-65', 115, 'Estrada de Cardoso', 5620, '02724-407', '3505906'),
+    ('79.821.563', '0001-00', 58, 'Avenida João Abreu', 2070, '89771-584', '4205407'),
+    ('79.821.563', '0001-99', 109, 'Esplanada Maria Júlia Dias', 3484, '89733-344', '4208302'),
+    ('79.821.563', '0001-43', 44, 'Travessa Ravy Abreu', 6551, '28275-844', '3304557'),
+    ('45.690.123', '0001-36', 129, 'Chácara Gustavo Henrique Porto', 8862, '69810-111', '1302603'),
+    ('27.401.593', '0001-66', 6, 'Praia de Pacheco', 1215, '15777-927', '3548906'),
+    ('53.921.807', '0001-18', 199, 'Residencial Cardoso', 2502, '97841-473', '4308250'),
+    ('13.690.872', '0001-54', 92, 'Vereda Lima', 7701, '39743-888', '3146206'),
+    ('13.690.872', '0001-09', 148, 'Estação Duarte', 2028, '34101-068', '3106200'),
+    ('09.723.145', '0001-78', 112, 'Colônia Pacheco', 4071, '23514-347', '3306305'),
+    ('09.723.145', '0001-93', 64, 'Estação Ana Luiza Monteiro', 3318, '86440-540', '4106902'),
+    ('09.723.145', '0001-56', 58, 'Feira de Borges', 4228, '30505-616', '3146107'),
+    ('51.360.297', '0001-43', 9, 'Distrito Eloah Barros', 6288, '15539-877', '3550308'),
+    ('18.024.935', '0001-76', 23, 'Loteamento Freitas', 8290, '06991-211', '3550308'),
+    ('64.087.915', '0001-27', 49, 'Vereda de Pastor', 6786, '11172-356', '3550308'),
+    ('48.912.037', '0001-48', 186, 'Campo Ana Luiza Cirino', 9189, '14718-703', '3501905'),
+    ('48.912.037', '0001-38', 162, 'Estrada de Alves', 5154, '10518-502', '3501905'),
+    ('12.905.674', '0001-18', 198, 'Área Oliveira', 4851, '32174-516', '3106200'),
+    ('71.498.635', '0001-06', 6, 'Trecho Amanda Rezende', 696, '10170-165', '3548906'),
+    ('39.605.871', '0001-83', 60, 'Ladeira Pietro Sá', 7688, '80702-892', '4106902'),
+    ('48.603.715', '0001-45', 106, 'Praia Davi Lucca da Luz', 3049, '36352-060', '3106200'),
+    ('48.603.715', '0001-78', 75, 'Vila Gustavo Henrique Costela', 6509, '30119-515', '3146107'),
+    ('20.978.635', '0001-10', 194, 'Via Correia', 5203, '37457-389', '3146206'),
+    ('56.738.014', '0001-69', 175, 'Residencial Maya Rocha', 2645, '08204-147', '3505906'),
+    ('75.893.062', '0001-33', 16, 'Jardim Liam Vargas', 4019, '96077-131', '4314902'),
+    ('75.893.062', '0001-31', 176, 'Vale Teixeira', 4200, '88869-262', '4205407'),
+    ('28.659.130', '0001-07', 199, 'Morro da Luz', 3080, '88180-390', '4205407'),
+    ('33.738.001', '0001-77', 33, 'Alamedo dos Peixes', 867, '43240-010', '2927408'),
+    ('88.635.333', '0001-98', 21, 'Praça da Refração', 1341, '29345-188', '3205309')
+ON CONFLICT DO NOTHING;
+
+-- INSERT INTO organiz_socioamb VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO acao_co2 VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO vinc_contrib_co2 VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO contrib_co2 VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO hist_co2 VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
 -- Obs. usamos o comando \copy do `psql` (roda no cliente) em vez do
--- comando `COPY FROM` (que roda no servidor), pois este requer privilégios
--- de administrador e não permite caminhos relativos.
+-- comando `COPY FROM` (que roda no servidor), pois este requer
+-- privilégios de administrador e não permite caminhos relativos.
 --
 -- Obs. rode esse script de inserção na raiz do repositório, usando o `psql`.
 --
@@ -87,5 +147,33 @@ DELETE FROM prod_ncm;
 
 \copy serv_nbs FROM 'db/nbs.csv' WITH DELIMITER AS ';' CSV HEADER;
 \copy prod_ncm FROM 'db/ncm.csv' WITH DELIMITER AS ';' CSV HEADER;
+
+-- INSERT INTO reg_leg VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO inst_cient VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO equipe_inst_cient VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO equipe_inst_cient_membro VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO relatorio VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO relatorio_prod VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
+
+-- INSERT INTO relatorio_serv VALUES
+--     ()
+-- ON CONFLICT DO NOTHING;
 
 COMMIT;
