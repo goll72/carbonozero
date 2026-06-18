@@ -162,9 +162,9 @@ CREATE TABLE equipe_inst_cient (
 CREATE TABLE equipe_inst_cient_membro (
     cnpj_inst_cient CHAR(18),
     nome_equipe TEXT,
-    nome_membro TEXT NOT NULL,
+    nome_membro TEXT,
 
-    PRIMARY KEY (cnpj_inst_cient, nome_equipe),
+    PRIMARY KEY (cnpj_inst_cient, nome_equipe, nome_membro),
     FOREIGN KEY (cnpj_inst_cient, nome_equipe) REFERENCES equipe_inst_cient(cnpj_inst_cient, nome)
 );
 
