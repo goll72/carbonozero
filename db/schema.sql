@@ -89,10 +89,16 @@ CREATE TABLE vinc_contrib_co2 (
     FOREIGN KEY (cnpj_organiz_socioamb, dt_inicio_acao_co2, nome_acao_co2) REFERENCES acao_co2(cnpj, dt_inicio, nome)
 );
 
+-- Obs. devido à separação entre as tabelas conforme
+-- projetado no modelo relacional, visando reduzir o
+-- uso de espaço na base de dados, não será possível
+-- verificar diretamente (com `CHECK`) se a data da
+-- contribuição é válida, sendo necessário fazer a
+-- verificação em triggers SQL ou na aplicação.
 CREATE TABLE contrib_co2 (
     id_contrib SERIAL REFERENCES vinc_contrib_co2(id),
     dt DATE,
-    valor DECIMAL,
+    valor DECIMAL NOT NULL,
 
     PRIMARY KEY (id_contrib, dt)
 );
@@ -103,8 +109,8 @@ CREATE TABLE hist_co2 (
     ano INT,
     mes INT,
 
-    emissao_tot DECIMAL,
-    compens_tot DECIMAL,
+    emissao_tot DECIMAL NOT NULL,
+    compens_tot DECIMAL NOT NULL,
 
     PRIMARY KEY (cnpj_raiz, cnpj_ordem, ano, mes),
     FOREIGN KEY (cnpj_raiz, cnpj_ordem) REFERENCES filial(cnpj_raiz, cnpj_ordem)
@@ -192,7 +198,7 @@ CREATE TABLE relatorio (
 CREATE TABLE relatorio_prod (
     id_relatorio SERIAL REFERENCES relatorio(id),
     ncm CHAR(10) REFERENCES prod_ncm(ncm),
-    tco2_p_un DECIMAL,
+    tco2_p_un DECIMAL NOT NULL,
 
     PRIMARY KEY (id_relatorio, ncm)
 );

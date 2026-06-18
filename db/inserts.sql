@@ -1,7 +1,10 @@
 -- Obs. todos os inserts foram colocados em uma única transação para
 -- facilitar a depuração: cada vez que o script é rodado todas as
 -- inserções são feitas com sucesso ou nenhuma inserção é feita,
--- permitindo corrigir bugs e rodar o script novamente.
+-- permitindo corrigir bugs e rodar o script novamente. Além disso,
+-- podemos ignorar temporariamente algumas restrições, fazendo as
+-- inserções em uma ordem mais conveniente, porém ainda garantindo
+-- a consistência dos dados, como mencionado a seguir.
 
 BEGIN TRANSACTION;
 
