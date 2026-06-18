@@ -129,7 +129,7 @@ CREATE TABLE prod_ncm (
 CREATE TYPE REG_LEG_TIPO AS ENUM ('if', 'multa');
 
 CREATE TABLE reg_leg (
-    ent CHAR(7) REFERENCES org_adm_mun(cod_ibge),
+    ent CHAR(7) REFERENCES ent_fed(cod_ibge),
     tipo REG_LEG_TIPO,
     nro INT,
     ano INT,
