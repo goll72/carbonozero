@@ -5,6 +5,7 @@ from argparse import ArgumentParser
 from datetime import date
 
 import random
+from math import floor, ceil
 
 
 ALLOWED_UF_VALUES = ["SP", "MG", "RJ", "PR", "DF", "AM", "SC", "RS", "BA", "ES", "PE"]
@@ -60,13 +61,39 @@ def random_cep_for_uf(uf: str) -> str:
     return f"{cep:08d}"
 
 
+ALLOWED_NGO_VALUES = [
+    ('35.179.804/0001-84', 'Pandas Sorridentes'),
+    ('74.029.536/0001-76', 'WWF Brasil'),
+    ('52.061.387/0001-90', 'EnxofreZero'),
+    ('37.186.429/0001-25', 'Recicla+'),
+    ('68.532.497/0001-22', 'Inova'),
+    ('20.594.183/0001-28', 'Anti-Shell'),
+    ('63.754.089/0001-00', 'Nature Collective'),
+    ('07.219.354/0001-70', 'Associação Cultura Sustentável'),
+    ('64.253.970/0001-81', 'Metrosus'),
+    ('14.679.502/0001-03', 'Acolhe Agora'),
+]
+
+ALLOWED_NGO_CDF = [
+    0.05,
+    0.35,
+    0.47,
+    0.57,
+    0.63,
+    0.73,
+    0.78,
+    0.81,
+    0.90,
+    1.0
+]
+
 def main():
     fake = Faker(["pt_BR"])
 
     parser = ArgumentParser()
     parser.add_argument("-n", type=int, help="How many values to generate", default=1)
     parser.add_argument("-t", "--type", choices=[
-        "address", "comp_name", "cnpj", "split_cnpj", "random_date_pair_b_after_a", "address+uf+cep"
+        "address", "comp_name", "cnpj", "split_cnpj", "random_date_pair_b_after_a", "address+uf+cep", "acao_co2"
     ])
 
     args = parser.parse_args()
@@ -97,6 +124,46 @@ def main():
                 c = random_cep_for_uf(u)
 
                 print(f"'{s}', {n}, '{c[:5]}-{c[5:]}', '{u}'")
+            case "acao_co2":
+                c = random.choices(ALLOWED_NGO_VALUES, cum_weights=ALLOWED_NGO_CDF, k=1)[0][0]
+                d = fake.date_between_dates(date(2020, 1, 1), date(2026, 6, 1))
+
+                n = ""
+
+                r = max(0.0005, random.gauss(0.001, 0.005))
+                v = 10_000 * (max(50_000, random.gauss(100_000, 200_000)) // 10_000)
+
+                # p1 + p2 + p3 = 100
+                def gen_rnd_triple(seed=None):
+                    while True:
+                        k1 = random.random()
+                        u = random.random()
+                        k2 = abs(k1 - u)
+
+                        p1 = floor(100 * k1)
+                        p2 = floor(100 * k2)
+                        p3 = 100 - p1 - p2
+
+                        if seed is not None and abs(seed[0] - p1) + abs(seed[1] - p2) + abs(seed[2] - p3) > 50:
+                            continue
+
+                        if p3 > 0:
+                            break
+
+                        p2 = 100 - p1
+                        p3 = 0
+
+                        if seed is None or seed[2] == 0:
+                            break
+
+                    l = [p1, p2, p3]
+                    random.shuffle([p1, p2, p3])
+                    return l
+
+                p = gen_rnd_triple()
+                q = gen_rnd_triple(p)
+
+                print(f"'{c}', '{d.isoformat()}', '{n}', {r:.3}, {v}, {p[0]}, {q[0]}, {p[1]}, {q[1]}, {p[2]}, {q[2]}")
 
 if __name__ == "__main__":
     main()

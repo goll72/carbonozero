@@ -128,9 +128,58 @@ INSERT INTO organiz_socioamb VALUES
     ('14.679.502/0001-03', 'Acolhe Agora', 'Vila de Jesus', 8482, '69227-245', '1302603')
 ON CONFLICT DO NOTHING;
 
--- INSERT INTO acao_co2 VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO acao_co2 VALUES
+    ('74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local', 0.0005, 130000.0, 24, 15, 6, 7, 70, 78),
+    ('64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas', 0.00702, 310000.0, 89, 91, 11, 9, 0, 0),
+    ('74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável', 0.0045, 50000, 27, 28, 22, 21, 51, 51),
+    ('52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos', 0.0005, 390000.0, 24, 34, 20, 25, 56, 41),
+    ('68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano', 0.00144, 50000, 77, 91, 18, 3, 5, 6),
+    ('37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico', 0.0005, 60000.0, 4, 17, 32, 25, 64, 58),
+    ('63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão', 0.0005, 50000, 66, 82, 32, 17, 2, 1),
+    ('14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro', 0.00313, 150000.0, 66, 47, 10, 11, 24, 42),
+    ('64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões', 0.00196, 60000.0, 69, 47, 6, 3, 25, 50),
+    ('37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas', 0.0005, 150000.0, 87, 84, 13, 16, 0, 0),
+    ('20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas', 0.000513, 440000.0, 92, 72, 6, 17, 2, 11),
+    ('68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade', 0.000612, 300000.0, 92, 77, 8, 23, 0, 0),
+    ('52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades', 0.0005, 290000.0, 54, 61, 4, 21, 42, 18),
+    ('52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário', 0.0005, 310000.0, 30, 28, 26, 27, 44, 45),
+    ('64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar', 0.0005, 220000.0, 43, 32, 18, 41, 39, 27),
+    ('74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos', 0.0005, 100000.0, 97, 74, 3, 1, 0, 25),
+    ('52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável', 0.0005, 550000.0, 69, 73, 17, 5, 14, 22),
+    ('14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações', 0.0005, 110000.0, 24, 37, 2, 11, 74, 52),
+    ('63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais', 0.00125, 50000, 58, 82, 13, 4, 29, 14),
+    ('35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável', 0.0005, 180000.0, 25, 30, 41, 17, 34, 53),
+    ('14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono', 0.00121, 150000.0, 61, 63, 35, 15, 4, 22),
+    ('20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária', 0.0005, 340000.0, 4, 18, 87, 70, 9, 12),
+    ('14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono', 0.00153, 300000.0, 95, 71, 5, 19, 0, 10),
+    ('74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis', 0.00662, 180000.0, 25, 49, 37, 31, 38, 20),
+    ('63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental', 0.00857, 240000.0, 25, 9, 71, 80, 4, 11),
+    ('35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos', 0.0005, 490000.0, 30, 18, 0, 6, 70, 76),
+    ('52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono', 0.0005, 50000, 22, 3, 48, 61, 30, 36),
+    ('74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável', 0.00121, 280000.0, 90, 96, 10, 4, 0, 0),
+    ('52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática', 0.00398, 50000, 74, 52, 26, 44, 0, 4),
+    ('74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais', 0.0005, 50000, 0, 10, 97, 75, 3, 15),
+    ('74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo', 0.0005, 50000, 48, 46, 27, 19, 25, 35),
+    ('37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão', 0.0005, 50000.0, 76, 61, 18, 13, 6, 26),
+    ('74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem', 0.0005, 80000.0, 98, 88, 2, 3, 0, 9),
+    ('37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo', 0.0005, 210000.0, 93, 85, 7, 15, 0, 0),
+    ('64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono', 0.0005, 50000, 96, 98, 4, 2, 0, 0),
+    ('52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima', 0.00201, 180000.0, 88, 79, 12, 2, 0, 19),
+    ('63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono', 0.0005, 200000.0, 43, 32, 7, 13, 50, 55),
+    ('68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental', 0.00363, 50000, 16, 20, 5, 26, 79, 54),
+    ('68.532.497/0001-22', '2021-06-25', 'Conservação florestal e créditos de carbono', 0.0069, 230000.0, 37, 50, 22, 21, 41, 29),
+    ('52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono', 0.0005, 330000.0, 57, 41, 0, 1, 43, 58),
+    ('74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima', 0.00151, 110000.0, 30, 52, 60, 46, 10, 2),
+    ('68.532.497/0001-22', '2023-04-22', 'Recuperação da vegetação nativa', 0.0005, 80000.0, 91, 77, 9, 21, 0, 2),
+    ('52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática', 0.0005, 330000.0, 90, 70, 10, 16, 0, 14),
+    ('52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos', 0.0207, 50000, 39, 40, 17, 39, 44, 21),
+    ('07.219.354/0001-70', '2020-03-04', 'Programa institucional carbono neutro', 0.00128, 110000.0, 96, 71, 4, 24, 0, 5),
+    ('52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais', 0.0005, 200000.0, 65, 46, 12, 35, 23, 19),
+    ('14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais', 0.00647, 50000, 9, 16, 44, 39, 47, 45),
+    ('74.029.536/0001-76', '2023-07-15', 'Inventário e compensação de emissões', 0.0005, 190000.0, 17, 8, 31, 33, 52, 59),
+    ('07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono', 0.0005, 50000, 62, 37, 5, 29, 33, 34),
+    ('63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática', 0.00121, 150000.0, 65, 81, 28, 16, 7, 3)
+ON CONFLICT DO NOTHING;
 
 -- INSERT INTO vinc_contrib_co2 VALUES
 --     ()
