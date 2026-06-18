@@ -8,113 +8,18 @@ from dateutil.relativedelta import relativedelta
 
 from faker import Faker
 
+from common import EQUIPES_VALIDAS, ENTES_FEDERATIVOS_V, FILIAIS_VALIDAS
+
 fake = Faker("pt_BR")
 
 # Disclaimer: major parts of this script are AI-generated.
-
-# ============================================================
-# Dados válidos carregados da base/aplicação
-# ============================================================
-
-ENTES_FEDERATIVOS = [
-    # UF
-    ('SP', '35'),
-    ('PR', '41'),
-    ('SC', '42'),
-    ('RS', '43'),
-    ('AM', '13'),
-    ('MA', '21'),
-    ('RN', '24'),
-    ('PE', '26'),
-    ('SE', '28'),
-    ('BA', '29'),
-    ('MG', '31'),
-    ('RJ', '33'),
-    ('MT', '51'),
-    ('DF', '53'),
-    ('ES', '32'),
-    # Mun.
-    ('Batatais', 'SP', '3505906'),
-    ('São Carlos', 'SP', '3548906'),
-    ('Amparo', 'SP', '3501905'),
-    ('São Paulo', 'SP', '3550308'),
-    ('Belo Horizonte', 'MG', '3106200'),
-    ('Ouro Verde de Minas', 'MG', '3146206'),
-    ('Ouro Preto', 'MG', '3146107'),
-    ('Rio de Janeiro', 'RJ', '3304557'),
-    ('Volta Redonda', 'RJ', '3306305'),
-    ('Vitória', 'ES', '3205309'),
-    ('Salvador', 'BA', '2927408'),
-    ('Lençóis', 'BA', '2919306'),
-    ('Itapema', 'SC', '4208302'),
-    ('Porto Alegre', 'RS', '4314902'),
-    ('Florianópolis', 'SC', '4205407'),
-    ( 'Floriano Peixoto', 'RS', '4308250'),
-    ('Brasília', 'DF', '5300108'),
-    ('Manaus', 'AM', '1302603'),
-    ('Curitiba', 'PR', '4106902')
-]
-
-ENTES_FEDERATIVOS_V = [ x[-1] for x in ENTES_FEDERATIVOS ]
-
-FILIAIS_VALIDAS = [
-    ("01.274.895", "0001-23", "DF"),
-    ("01.274.895", "0001-40", "SP"),
-    ("01.274.895", "0001-13", "MG"),
-    ("65.172.380", "0001-61", "MG"),
-    ("65.172.380", "0001-53", "MG"),
-    ("79.821.563", "0001-65", "SP"),
-    ("79.821.563", "0001-00", "SC"),
-    ("79.821.563", "0001-99", "SC"),
-    ("79.821.563", "0001-43", "RJ"),
-    ("45.690.123", "0001-36", "AM"),
-    ("27.401.593", "0001-66", "SP"),
-    ("53.921.807", "0001-18", "RS"),
-    ("13.690.872", "0001-54", "MG"),
-    ("13.690.872", "0001-09", "MG"),
-    ("09.723.145", "0001-78", "RJ"),
-    ("09.723.145", "0001-93", "PR"),
-    ("09.723.145", "0001-56", "MG"),
-    ("51.360.297", "0001-43", "SP"),
-    ("18.024.935", "0001-76", "SP"),
-    ("64.087.915", "0001-27", "SP"),
-    ("48.912.037", "0001-48", "SP"),
-    ("48.912.037", "0001-38", "SP"),
-    ("12.905.674", "0001-18", "MG"),
-    ("71.498.635", "0001-06", "SP"),
-    ("39.605.871", "0001-83", "PR"),
-    ("48.603.715", "0001-45", "MG"),
-    ("48.603.715", "0001-78", "MG"),
-    ("20.978.635", "0001-10", "MG"),
-    ("56.738.014", "0001-69", "SP"),
-    ("75.893.062", "0001-33", "RS"),
-    ("75.893.062", "0001-31", "SC"),
-    ("28.659.130", "0001-07", "SC"),
-    ("33.738.001", "0001-77", "BA"),
-    ("88.635.333", "0001-98", "ES"),
-]
-
-EQUIPES_VALIDAS = [
-    ("58.826.745/0001-34","Emissões a alto nível","SP"),
-    ("58.826.745/0001-34","Emissões e as metas da ONU","SP"),
-    ("58.826.745/0001-34","Impacto das técnicas de produção em emissões","SP"),
-    ("37.669.280/0001-29","Pesquisa de campo em emissões","SP"),
-    ("37.669.280/0001-29","Emissões em microempresas","SP"),
-    ("11.679.309/0001-01","Impacto de programas de incentivo fiscal na redução de emissões","SP"),
-    ("11.679.309/0001-01","Análise de emissões em São Paulo na última década","SP"),
-    ("53.396.825/0001-34","Formas de reduzir o impacto de emissões","MG"),
-    ("09.850.333/0001-77","Emissões: e eu com isso?","RJ"),
-    ("87.888.161/0001-65","Impacto de atividades agropecuárias na Amazônia","AM"),
-    ("00.001.333/0001-99","Tipos de emissão em empresas de refinaria","BA"),
-    ("54.777.163/0001-46","O capitalismo como motor da exploração dos recursos naturais","MG"),
-    ("54.777.163/0001-46","Andamento das metas da ONU","MG"),
-]
 
 FILIAL_PROFILES = {}
 
 # ============================================================
 # Utilidades
 # ============================================================
+
 
 def sql_literal(value):
     if value is None:
