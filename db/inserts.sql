@@ -173,10 +173,8 @@ INSERT INTO acao_co2 VALUES
     ('68.532.497/0001-22', '2023-04-22', 'Recuperação da vegetação nativa', 0.0005, 80000.0, 91, 77, 9, 21, 0, 2),
     ('52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática', 0.0005, 330000.0, 90, 70, 10, 16, 0, 14),
     ('52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos', 0.0207, 50000, 39, 40, 17, 39, 44, 21),
-    ('07.219.354/0001-70', '2020-03-04', 'Programa institucional carbono neutro', 0.00128, 110000.0, 96, 71, 4, 24, 0, 5),
     ('52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais', 0.0005, 200000.0, 65, 46, 12, 35, 23, 19),
     ('14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais', 0.00647, 50000, 9, 16, 44, 39, 47, 45),
-    ('74.029.536/0001-76', '2023-07-15', 'Inventário e compensação de emissões', 0.0005, 190000.0, 17, 8, 31, 33, 52, 59),
     ('07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono', 0.0005, 50000, 62, 37, 5, 29, 33, 34),
     ('63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática', 0.00121, 150000.0, 65, 81, 28, 16, 7, 3)
 ON CONFLICT DO NOTHING;
@@ -210,17 +208,87 @@ DELETE FROM prod_ncm;
 --     ()
 -- ON CONFLICT DO NOTHING;
 
--- INSERT INTO inst_cient VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO inst_cient VALUES
+    ('58.826.745/0001-34', 'Universidade de São Paulo', 'Praça da Sé', 33, '00000001', '3550308'),
+    ('37.669.280/0001-29', 'Universidade Federal de São Carlos', 'Rodovia Carlos Vignon', 767, '13769020', '3548906'),
+    ('11.679.309/0001-01', 'Instituto de Pesquisa FioCruz', 'Avenida Pinheiro', 88, '01473394', '3550308'),
+    ('53.396.825/0001-34', 'Laboratório de Pesquisa A.K.L.', 'Rua Sésamo', 35, '39445014', '3106200'),
+    ('09.850.333/0001-77', 'Universidade Federal do Rio de Janeiro', 'Avenida Laerte', 56, '38997345', '3304557'),
+    ('87.888.161/0001-65', 'Unidade Científica do Norte', 'Rua Corrêa', 1048, '69994-295', '1302603'),
+    ('00.001.333/0001-99', 'Universidade Federal da Bahia', 'Rua Roberto Peixoto', 444, '43144-383', '2927408'),
+    ('54.777.163/0001-46', 'Universidade Federal de Minas Gerais', 'Rodovia Afonso Pena', 998, '39802-120', '3106200')
+ON CONFLICT DO NOTHING;
 
--- INSERT INTO equipe_inst_cient VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO equipe_inst_cient VALUES
+    ('58.826.745/0001-34', 'Emissões a alto nível'),
+    ('58.826.745/0001-34', 'Emissões e as metas da ONU'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões'),
+    ('37.669.280/0001-29', 'Pesquisa de campo em emissões'),
+    ('37.669.280/0001-29', 'Emissões em microempresas'),
+    ('11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década'),
+    ('53.396.825/0001-34', 'Formas de reduzir o impacto de emissões'),
+    ('09.850.333/0001-77', 'Emissões: e eu com isso?'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia'),
+    ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria'),
+    ('54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais'),
+    ('54.777.163/0001-46', 'Andamento das metas da ONU')
+ON CONFLICT DO NOTHING;
 
--- INSERT INTO equipe_inst_cient_membro VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO equipe_inst_cient_membro VALUES
+    ('58.826.745/0001-34', 'Emissões a alto nível', 'Caio Melo'),
+    ('58.826.745/0001-34', 'Emissões a alto nível', 'Apollo Fernandes'),
+    ('58.826.745/0001-34', 'Emissões a alto nível', 'Gabriel Pacheco'),
+    ('58.826.745/0001-34', 'Emissões a alto nível', 'Luigi Moura'),
+    ('58.826.745/0001-34', 'Emissões a alto nível', 'Ian Sá'),
+    ('58.826.745/0001-34', 'Emissões e as metas da ONU', 'Paulo da Paz'),
+    ('58.826.745/0001-34', 'Emissões e as metas da ONU', 'Vitor Gabriel Rios'),
+    ('58.826.745/0001-34', 'Emissões e as metas da ONU', 'Olivia Nunes'),
+    ('58.826.745/0001-34', 'Emissões e as metas da ONU', 'Rafaela da Mata'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', 'Henry Gabriel Costa'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', 'Rodrigo Rios'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', 'Heloisa Nascimento'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', 'Sarah Rios'),
+    ('58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', 'Augusto Leão'),
+    ('37.669.280/0001-29', 'Pesquisa de campo em emissões', 'Benicio Santos'),
+    ('37.669.280/0001-29', 'Pesquisa de campo em emissões', 'Yago da Cunha'),
+    ('37.669.280/0001-29', 'Pesquisa de campo em emissões', 'Daniela Pimenta'),
+    ('37.669.280/0001-29', 'Pesquisa de campo em emissões', 'Danilo da Cruz'),
+    ('37.669.280/0001-29', 'Emissões em microempresas', 'Lara Guerra'),
+    ('37.669.280/0001-29', 'Emissões em microempresas', 'Maria Clara Monteiro'),
+    ('37.669.280/0001-29', 'Emissões em microempresas', 'Letícia Farias'),
+    ('11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', 'Catarina Cunha'),
+    ('11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', 'Guilherme Martins'),
+    ('11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', 'Ravi Lucca Mendes'),
+    ('11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', 'Erick Rocha'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Pedro Miguel Machado'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Ágatha Almeida'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Marcela Pimenta'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Vinicius Caldeira'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Vinicius Oliveira'),
+    ('11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', 'Caleb Duarte'),
+    ('53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', 'Lunna Leão'),
+    ('53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', 'Sabrina Porto'),
+    ('53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', 'Caleb Vasconcelos'),
+    ('53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', 'Srta. Mariane Pastor'),
+    ('09.850.333/0001-77', 'Emissões: e eu com isso?', 'Renan Pimenta'),
+    ('09.850.333/0001-77', 'Emissões: e eu com isso?', 'Isaac Gomes'),
+    ('09.850.333/0001-77', 'Emissões: e eu com isso?', 'Juan Abreu'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', 'Vitor Hugo Carvalho'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', 'Pietro da Luz'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', 'Brenda Macedo'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', 'Eloá Porto'),
+    ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', 'Renan Farias'),
+    ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', 'Gael Henrique Duarte'),
+    ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', 'Maya Moura'),
+    ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', 'Diego Silva'),
+    ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', 'Maria Isis Caldeira'),
+    ('54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', 'Luan Moraes'),
+    ('54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', 'Liam Cunha'),
+    ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Matteo Macedo'),
+    ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Thomas Barbosa'),
+    ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Léo Moura')
+ON CONFLICT DO NOTHING;
 
 -- INSERT INTO relatorio VALUES
 --     ()

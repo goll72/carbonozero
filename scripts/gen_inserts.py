@@ -5,7 +5,7 @@ from argparse import ArgumentParser
 from datetime import date
 
 import random
-from math import floor, ceil
+from math import floor
 
 
 ALLOWED_UF_VALUES = ["SP", "MG", "RJ", "PR", "DF", "AM", "SC", "RS", "BA", "ES", "PE"]
@@ -93,7 +93,7 @@ def main():
     parser = ArgumentParser()
     parser.add_argument("-n", type=int, help="How many values to generate", default=1)
     parser.add_argument("-t", "--type", choices=[
-        "address", "comp_name", "cnpj", "split_cnpj", "random_date_pair_b_after_a", "address+uf+cep", "acao_co2"
+        "address", "comp_name", "cnpj", "split_cnpj", "random_date_pair_b_after_a", "address+uf+cep", "acao_co2", "name"
     ])
 
     args = parser.parse_args()
@@ -164,6 +164,8 @@ def main():
                 q = gen_rnd_triple(p)
 
                 print(f"'{c}', '{d.isoformat()}', '{n}', {r:.3}, {v}, {p[0]}, {q[0]}, {p[1]}, {q[1]}, {p[2]}, {q[2]}")
+            case "name":
+                print(f"'{fake.name()}'")
 
 if __name__ == "__main__":
     main()
