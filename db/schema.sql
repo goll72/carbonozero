@@ -149,9 +149,15 @@ CREATE TABLE reg_leg (
     PRIMARY KEY (ent, tipo, nro, ano)
 );
 
+-- Visto que buscas por regras legislativas que estão em vigor em um determinado
+-- período de tempo são recorrentes no sistema, criar um índice para a data de
+-- vigência poderia trazer um aumento de desempenho considerável em uma base de
+-- dados real (com um volume de dados maior).
+CREATE INDEX ON reg_leg(ent, dt_vigencia);
+
 CREATE TABLE inst_cient (
     cnpj CHAR(18) PRIMARY KEY,
-    nome TEXT,
+    nome TEXT NOT NULL,
     end_rua TEXT,
     end_nro INT,
     end_cep CHAR(9),
