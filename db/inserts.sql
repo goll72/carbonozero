@@ -111,13 +111,22 @@ INSERT INTO filial VALUES
     ('75.893.062', '0001-33', 16, 'Jardim Liam Vargas', 4019, '96077-131', '4314902'),
     ('75.893.062', '0001-31', 176, 'Vale Teixeira', 4200, '88869-262', '4205407'),
     ('28.659.130', '0001-07', 199, 'Morro da Luz', 3080, '88180-390', '4205407'),
-    ('33.738.001', '0001-77', 33, 'Alamedo dos Peixes', 867, '43240-010', '2927408'),
+    ('33.738.001', '0001-77', 33, 'Alameda dos Peixes', 867, '43240-010', '2927408'),
     ('88.635.333', '0001-98', 21, 'Praça da Refração', 1341, '29345-188', '3205309')
 ON CONFLICT DO NOTHING;
 
--- INSERT INTO organiz_socioamb VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO organiz_socioamb VALUES
+    ('35.179.804/0001-84', 'Pandas Sorridentes', 'Vale Borges', 2447, '03499-122', '3548906'),
+    ('74.029.536/0001-76', 'WWF Brasil', 'Área Benjamim Nogueira', 9059, '07691-025', '3550308'),
+    ('52.061.387/0001-90', 'EnxofreZero', 'Colônia Ana Beatriz Borges', 1461, '14275-290', '3548906'),
+    ('37.186.429/0001-25', 'Recicla+', 'Pátio Albuquerque', 4823, '24318-646', '3304557'),
+    ('68.532.497/0001-22', 'Inova', 'Rodovia Machado', 1867, '33849-208', '3146107'),
+    ('20.594.183/0001-28', 'Anti-Shell', 'Jardim José Miguel Duarte', 8789, '31142-732', '3106200'),
+    ('63.754.089/0001-00', 'Nature Collective', 'Alameda de Sá', 2223, '89476-628', '4205407'),
+    ('07.219.354/0001-70', 'Associação Cultura Sustentável', 'Estação Silveira', 6514, '16936-879', '3505906'),
+    ('64.253.970/0001-81', 'Metrosus', 'Feira de Rezende', 5499, '35274-763', '3106200'),
+    ('14.679.502/0001-03', 'Acolhe Agora', 'Vila de Jesus', 8482, '69227-245', '1302603')
+ON CONFLICT DO NOTHING;
 
 -- INSERT INTO acao_co2 VALUES
 --     ()
