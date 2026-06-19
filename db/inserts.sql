@@ -11145,8 +11145,8 @@ WITH
         SELECT
                 r.cnpj_filial_raiz,
                 r.cnpj_filial_ordem,
-                date_part('year', r.dt_pedido + interval '1 month') AS ano,
-                date_part('month', r.dt_pedido + interval '1 month') AS mes,
+                date_part('year', r.dt_pedido + interval '1 month')::int AS ano,
+                date_part('month', r.dt_pedido + interval '1 month')::int AS mes,
                 SUM(p.tco2_p_un * p.qtde)
             FROM relatorio AS r
             JOIN relatorio_prod AS p ON r.id = p.id_relatorio
@@ -11160,8 +11160,8 @@ WITH
         SELECT
                 r.cnpj_filial_raiz,
                 r.cnpj_filial_ordem,
-                date_part('year', s.ocorrencia) AS ano,
-                date_part('month', s.ocorrencia) AS mes,
+                date_part('year', s.ocorrencia)::int AS ano,
+                date_part('month', s.ocorrencia)::int AS mes,
                 SUM(s.tco2)
             FROM relatorio AS r
             JOIN relatorio_serv AS s ON r.id = s.id_relatorio
