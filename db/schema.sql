@@ -205,7 +205,7 @@ CREATE TABLE relatorio_prod (
     id_relatorio SERIAL REFERENCES relatorio(id),
     ncm CHAR(10) REFERENCES prod_ncm(ncm),
     tco2_p_un DECIMAL NOT NULL,
-    qtde INT NOT NULL,
+    qtde DECIMAL NOT NULL,
 
     PRIMARY KEY (id_relatorio, ncm)
 );
