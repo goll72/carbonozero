@@ -13,7 +13,7 @@ CREATE TABLE ent_fed (
     tipo ENT_FED_TIPO,
 
     CONSTRAINT enf_fed_pk
-        PRIMARY KEY (cod_ibge),
+        PRIMARY KEY (cod_ibge)
 );
 
 CREATE TABLE uf (
@@ -28,9 +28,9 @@ CREATE TABLE uf (
         CHECK (sigla ~ '^[A-Z]{2}$'),
     CONSTRAINT uf_fk 
         FOREIGN KEY (cod_ibge) REFERENCES ent_fed(cod_ibge) 
-        DEFERRABLE
         ON DELETE RESTRICT
         ON UPDATE CASCADE
+        DEFERRABLE
 );
 
 CREATE TABLE org_adm_mun (
@@ -49,9 +49,9 @@ CREATE TABLE org_adm_mun (
         UNIQUE (cnpj),
     CONSTRAINT org_adm_mun_fk_cod
         FOREIGN KEY (cod_ibge) REFERENCES ent_fed(cod_ibge) 
-        DEFERRABLE
         ON DELETE RESTRICT
-        ON UPDATE CASCADE,
+        ON UPDATE CASCADE
+        DEFERRABLE,
     CONSTRAINT org_adm_mun_fk_uf
         FOREIGN KEY (sigla_uf) REFERENCES uf(sigla)
         ON DELETE RESTRICT
