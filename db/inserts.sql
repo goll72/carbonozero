@@ -11161,7 +11161,8 @@ WITH contrib_mensal(cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, contrib) AS (
             r.cnpj_filial_raiz,
             r.cnpj_filial_ordem,
             ano, mes
-) INSERT INTO hist_co2 (
+)
+INSERT INTO hist_co2 (
     SELECT cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, SUM(contrib)
         FROM contrib_mensal
         GROUP BY cnpj_filial_raiz, cnpj_filial_ordem, ano, mes
