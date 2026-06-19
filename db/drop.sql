@@ -1,30 +1,30 @@
-DROP TABLE relatorio_serv;
-DROP TABLE relatorio_prod;
-DROP TABLE relatorio;
+DROP TABLE relatorio_serv CASCADE;
+DROP TABLE relatorio_prod CASCADE;
+DROP TABLE relatorio CASCADE;
 
-DROP TABLE equipe_inst_cient_membro;
-DROP TABLE equipe_inst_cient;
-DROP TABLE inst_cient;
+DROP TABLE equipe_inst_cient_membro CASCADE;
+DROP TABLE equipe_inst_cient CASCADE;
+DROP TABLE inst_cient CASCADE;
 
-DROP TABLE reg_leg;
+DROP TABLE reg_leg CASCADE;
 
-DROP TYPE REG_LEG_TIPO;
+DROP TYPE REG_LEG_TIPO CASCADE;
 
-DROP TABLE prod_ncm;
-DROP TABLE serv_nbs;
+DROP TABLE prod_ncm CASCADE;
+DROP TABLE serv_nbs CASCADE;
 
-DROP TABLE hist_co2;
-DROP TABLE contrib_co2;
-DROP TABLE vinc_contrib_co2;
+DROP TABLE hist_co2 CASCADE;
+DROP TABLE contrib_co2 CASCADE;
+DROP TABLE vinc_contrib_co2 CASCADE;
 
-DROP TABLE acao_co2;
-DROP TABLE organiz_socioamb;
+DROP TABLE acao_co2 CASCADE;
+DROP TABLE organiz_socioamb CASCADE;
 
-DROP TABLE filial;
-DROP TABLE empresa;
+DROP TABLE filial CASCADE;
+DROP TABLE empresa CASCADE;
 
-DROP TABLE org_adm_mun;
-DROP TABLE uf;
-DROP TABLE ent_fed;
+DROP TABLE org_adm_mun CASCADE;
+DROP TABLE uf CASCADE;
+DROP TABLE ent_fed CASCADE;
 
-DROP TYPE ENT_FED_TIPO;
+DROP TYPE ENT_FED_TIPO CASCADE;

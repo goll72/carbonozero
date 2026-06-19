@@ -153,7 +153,7 @@ CREATE TABLE reg_leg (
 -- período de tempo são recorrentes no sistema, criar um índice para a data de
 -- vigência poderia trazer um aumento de desempenho considerável em uma base de
 -- dados real (com um volume de dados maior).
-CREATE INDEX ON reg_leg(ent, dt_vigencia);
+CREATE INDEX IF NOT EXISTS reg_leg_ent_dt_vigencia_idx ON reg_leg(ent, dt_vigencia);
 
 CREATE TABLE inst_cient (
     cnpj CHAR(18) PRIMARY KEY,
@@ -217,3 +217,5 @@ CREATE TABLE relatorio_serv (
 
     PRIMARY KEY (id_relatorio, nbs, ocorrencia)
 );
+
+\i db/filters/reg_leg.sql;

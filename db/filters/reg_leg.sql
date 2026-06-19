@@ -3,7 +3,7 @@
 CREATE OR REPLACE PROCEDURE remove_contradictory_rules() AS $$
     DELETE FROM reg_leg
         WHERE (ent, tipo, nro, ano) IN (
-            SELECT b.ent, b.tipo, b.nro, b.ano
+            SELECT a.ent, a.tipo, a.nro, a.ano
                 FROM reg_leg AS a
                 JOIN reg_leg AS b ON b.tipo = 'multa' AND a.ent = b.ent OR b.ent = substring(a.ent, 1, 2)
                 WHERE a.tipo = 'if'
