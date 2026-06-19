@@ -394,7 +394,8 @@ def generate_relatorio(
             (
                 report_id,
                 code,
-                round(prod_total * w, 4)
+                round(prod_total * w, 4),
+                max(400, random.gauss(4000, 5000))
             )
             for code, w in zip(
                 prod_codes,

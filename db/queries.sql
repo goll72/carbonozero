@@ -14,8 +14,8 @@
 -- investido em cada área das ações de compensação.
 
 -- (complexa)
--- Todas as filiais cujas emissões nos últimos X meses foram oriundas majoritariamente (> 50%)
--- de um único tipo de produto ou serviço.
+-- Todas as filiais cujas emissões nos últimos X meses foram oriundas
+-- predominantemente (> 50%) de um único tipo de produto ou serviço.
 
 -- Para todas as Instituições Cientificas do Rio de Janeiro, listar a média do histórico
 -- de CO2 de cada empresa avaliadas por suas equipes, ordenadas pela média do histórico.
