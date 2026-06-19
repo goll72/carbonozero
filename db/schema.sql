@@ -96,7 +96,7 @@ CREATE TABLE vinc_contrib_co2 (
 -- contribuição é válida, sendo necessário fazer a
 -- verificação em triggers SQL ou na aplicação.
 CREATE TABLE contrib_co2 (
-    id_contrib SERIAL REFERENCES vinc_contrib_co2(id),
+    id_contrib SERIAL REFERENCES vinc_contrib_co2(id) ON DELETE CASCADE,
     dt DATE,
     valor DECIMAL NOT NULL,
 
@@ -220,3 +220,4 @@ CREATE TABLE relatorio_serv (
 );
 
 \i db/filters/reg_leg.sql;
+\i db/filters/contrib_co2.sql;
