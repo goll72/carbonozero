@@ -28,8 +28,7 @@ INSERT INTO uf VALUES
     ('RJ', '33'),
     ('MT', '51'),
     ('DF', '53'),
-    ('ES', '32')
-ON CONFLICT DO NOTHING;
+    ('ES', '32');
 
 INSERT INTO org_adm_mun VALUES
     ('3505906', '92.574.068/0001-00', 'Prefeitura da Estância Turística de Batatais', 'Trevo de das Neves', 9509, '14301-144', 'Batatais', 'SP'),
@@ -50,11 +49,10 @@ INSERT INTO org_adm_mun VALUES
     ('4308250', '89.512.704/0001-57', 'Administração Ambiental', 'Ladeira Vieira', 7142, '98354-201',  'Floriano Peixoto', 'RS'),
     ('5300108', '58.247.031/0001-21', 'Gestão e Planejamento Ambiental de Brasília', 'Chácara Vinicius Casa Grande', 7905, '70001-021', 'Brasília', 'DF'),
     ('1302603', '25.683.971/0001-04', 'Defesa Civil de Manaus', 'Rua Carlos Eduardo Nunes', 8647, '69340-748', 'Manaus', 'AM'),
-    ('4106902', '13.756.812/0001-34', 'Prefeitura de Curitiba', 'Avenida Marechal Rubens', 346, '86351-332', 'Curitiba', 'PR')
-ON CONFLICT DO NOTHING;
+    ('4106902', '13.756.812/0001-34', 'Prefeitura de Curitiba', 'Avenida Marechal Rubens', 346, '86351-332', 'Curitiba', 'PR');
 
-INSERT INTO ent_fed (SELECT cod_ibge, 'mun' FROM org_adm_mun) ON CONFLICT DO NOTHING;
-INSERT INTO ent_fed (SELECT cod_ibge, 'uf' FROM uf) ON CONFLICT DO NOTHING;
+INSERT INTO ent_fed (SELECT cod_ibge, 'mun' FROM org_adm_mun);
+INSERT INTO ent_fed (SELECT cod_ibge, 'uf' FROM uf);
 
 INSERT INTO empresa VALUES
     ('01.274.895', '2910-7/01', '1994-12-17', 'Melo', '207-0', '2024-06-23'),
@@ -78,8 +76,7 @@ INSERT INTO empresa VALUES
     ('75.893.062', '4711-3/02', '2011-02-10', 'Pacheco - ME', '230-5', '2022-12-15'),
     ('28.659.130', '6202-3/00', '2014-07-04', 'Porto S/A', '204-6', '2021-05-26'),
     ('33.738.001', '4711-3/02', '2011-01-12', 'Cachê Ltda', '306-9', '2023-01-02'),
-    ('88.635.333', '4731-8/00', '2009-07-07', 'Machado S/A', '204-6', '2024-03-27')
-ON CONFLICT DO NOTHING;
+    ('88.635.333', '4731-8/00', '2009-07-07', 'Machado S/A', '204-6', '2024-03-27');
 
 INSERT INTO filial VALUES
     ('01.274.895', '0001-23', 61, 'Sítio de Novais', 4534, '71158-954', '5300108'),
@@ -115,8 +112,7 @@ INSERT INTO filial VALUES
     ('75.893.062', '0001-31', 176, 'Vale Teixeira', 4200, '88869-262', '4205407'),
     ('28.659.130', '0001-07', 199, 'Morro da Luz', 3080, '88180-390', '4205407'),
     ('33.738.001', '0001-77', 33, 'Alameda dos Peixes', 867, '43240-010', '2927408'),
-    ('88.635.333', '0001-98', 21, 'Praça da Refração', 1341, '29345-188', '3205309')
-ON CONFLICT DO NOTHING;
+    ('88.635.333', '0001-98', 21, 'Praça da Refração', 1341, '29345-188', '3205309');
 
 INSERT INTO organiz_socioamb VALUES
     ('35.179.804/0001-84', 'Pandas Sorridentes', 'Vale Borges', 2447, '03499-122', '3548906'),
@@ -128,8 +124,7 @@ INSERT INTO organiz_socioamb VALUES
     ('63.754.089/0001-00', 'Nature Collective', 'Alameda de Sá', 2223, '89476-628', '4205407'),
     ('07.219.354/0001-70', 'Associação Cultura Sustentável', 'Estação Silveira', 6514, '16936-879', '3505906'),
     ('64.253.970/0001-81', 'Metrosus', 'Feira de Rezende', 5499, '35274-763', '3106200'),
-    ('14.679.502/0001-03', 'Acolhe Agora', 'Vila de Jesus', 8482, '69227-245', '1302603')
-ON CONFLICT DO NOTHING;
+    ('14.679.502/0001-03', 'Acolhe Agora', 'Vila de Jesus', 8482, '69227-245', '1302603');
 
 INSERT INTO acao_co2 VALUES
     ('74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local', 0.0005, 130000.0, 24, 15, 6, 7, 70, 78),
@@ -179,16 +174,1830 @@ INSERT INTO acao_co2 VALUES
     ('52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais', 0.0005, 200000.0, 65, 46, 12, 35, 23, 19),
     ('14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais', 0.00647, 50000, 9, 16, 44, 39, 47, 45),
     ('07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono', 0.0005, 50000, 62, 37, 5, 29, 33, 34),
-    ('63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática', 0.00121, 150000.0, 65, 81, 28, 16, 7, 3)
-ON CONFLICT DO NOTHING;
+    ('63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática', 0.00121, 150000.0, 65, 81, 28, 16, 7, 3);
 
--- INSERT INTO vinc_contrib_co2 VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO vinc_contrib_co2 VALUES
+    (1, '45.690.123', '0001-36', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
 
--- INSERT INTO contrib_co2 VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+INSERT INTO contrib_co2 VALUES
+    (1, '2020-08-08', 5500),
+    (1, '2020-08-30', 3500),
+    (1, '2020-07-30', 3500),
+    (1, '2020-09-12', 7800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (2, '33.738.001', '0001-77', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (2, '2023-08-11', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (3, '01.274.895', '0001-40', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (3, '2022-06-23', 7400),
+    (3, '2022-08-03', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (4, '13.690.872', '0001-54', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (4, '2022-05-11', 6200),
+    (4, '2022-04-29', 9000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (5, '09.723.145', '0001-56', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (5, '2020-04-27', 9100),
+    (5, '2020-05-07', 5000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (6, '48.912.037', '0001-38', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
+
+INSERT INTO contrib_co2 VALUES
+    (6, '2025-05-22', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (7, '75.893.062', '0001-33', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (7, '2021-09-18', 3500),
+    (7, '2021-07-13', 3500),
+    (7, '2021-09-11', 6200),
+    (7, '2021-09-15', 8200),
+    (7, '2021-07-22', 14000),
+    (7, '2021-07-08', 14600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (8, '56.738.014', '0001-69', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (8, '2021-06-30', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (9, '53.921.807', '0001-18', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (9, '2022-07-31', 5100),
+    (9, '2022-07-21', 9500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (10, '01.274.895', '0001-13', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (10, '2023-12-23', 8200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (11, '09.723.145', '0001-56', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (11, '2025-06-21', 8500),
+    (11, '2025-05-09', 3500),
+    (11, '2025-05-29', 13900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (12, '01.274.895', '0001-40', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
+
+INSERT INTO contrib_co2 VALUES
+    (12, '2024-02-05', 11900),
+    (12, '2023-11-22', 3500),
+    (12, '2023-12-03', 7700),
+    (12, '2023-12-26', 21100),
+    (12, '2024-01-09', 3500),
+    (12, '2024-01-17', 3500),
+    (12, '2023-12-27', 6600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (13, '48.912.037', '0001-38', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (13, '2022-01-07', 6900),
+    (13, '2021-11-29', 3500),
+    (13, '2022-01-14', 7600),
+    (13, '2021-11-27', 8100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (14, '13.690.872', '0001-09', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (14, '2026-02-28', 3500),
+    (14, '2026-05-11', 6200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (15, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
+
+INSERT INTO contrib_co2 VALUES
+    (15, '2022-03-13', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (16, '48.603.715', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (16, '2022-06-04', 3500),
+    (16, '2022-08-11', 3500),
+    (16, '2022-06-21', 6000),
+    (16, '2022-08-28', 3500),
+    (16, '2022-07-13', 7100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (17, '13.690.872', '0001-09', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (17, '2022-06-08', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (18, '79.821.563', '0001-99', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (18, '2022-07-25', 5800),
+    (18, '2022-06-23', 4900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (19, '53.921.807', '0001-18', '68.532.497/0001-22', '2023-04-22', 'Recuperação da vegetação nativa');
+
+INSERT INTO contrib_co2 VALUES
+    (19, '2023-06-04', 8200),
+    (19, '2023-06-13', 12200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (20, '71.498.635', '0001-06', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (20, '2021-12-30', 3800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (21, '01.274.895', '0001-13', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
+
+INSERT INTO contrib_co2 VALUES
+    (21, '2024-02-08', 3500),
+    (21, '2024-01-11', 3500),
+    (21, '2024-01-13', 8300),
+    (21, '2024-01-16', 21300),
+    (21, '2023-12-02', 8100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (22, '13.690.872', '0001-09', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
+
+INSERT INTO contrib_co2 VALUES
+    (22, '2021-12-28', 12800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (23, '48.912.037', '0001-48', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (23, '2024-10-24', 3500),
+    (23, '2024-10-05', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (24, '45.690.123', '0001-36', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
+
+INSERT INTO contrib_co2 VALUES
+    (24, '2025-01-31', 6900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (25, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (25, '2021-05-24', 8200),
+    (25, '2021-06-29', 3500),
+    (25, '2021-07-14', 10300),
+    (25, '2021-05-17', 4500),
+    (25, '2021-05-21', 10600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (26, '71.498.635', '0001-06', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (26, '2024-09-23', 3500),
+    (26, '2024-09-17', 6700),
+    (26, '2024-09-14', 3500),
+    (26, '2024-11-06', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (27, '20.978.635', '0001-10', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (27, '2022-08-02', 9800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (28, '48.603.715', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (28, '2020-08-21', 4500),
+    (28, '2020-07-29', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (29, '20.978.635', '0001-10', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
+
+INSERT INTO contrib_co2 VALUES
+    (29, '2021-04-13', 9400),
+    (29, '2021-05-15', 5000),
+    (29, '2021-03-24', 6300),
+    (29, '2021-05-07', 10400),
+    (29, '2021-06-10', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (30, '88.635.333', '0001-98', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
+
+INSERT INTO contrib_co2 VALUES
+    (30, '2023-01-29', 15700),
+    (30, '2023-03-11', 8200),
+    (30, '2023-02-08', 14700),
+    (30, '2023-02-13', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (31, '79.821.563', '0001-00', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (31, '2021-08-17', 5400),
+    (31, '2021-07-09', 4300),
+    (31, '2021-07-31', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (32, '65.172.380', '0001-53', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (32, '2026-04-22', 3500),
+    (32, '2026-04-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (33, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (33, '2025-06-05', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (34, '09.723.145', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (34, '2022-07-16', 3500),
+    (34, '2022-06-10', 10500),
+    (34, '2022-07-23', 8800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (35, '64.087.915', '0001-27', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (35, '2022-07-10', 5300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (36, '71.498.635', '0001-06', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
+
+INSERT INTO contrib_co2 VALUES
+    (36, '2020-09-16', 5200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (37, '88.635.333', '0001-98', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (37, '2021-07-09', 5200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (38, '28.659.130', '0001-07', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
+
+INSERT INTO contrib_co2 VALUES
+    (38, '2020-09-10', 3500),
+    (38, '2020-07-22', 4000),
+    (38, '2020-07-14', 12000),
+    (38, '2020-09-21', 8200),
+    (38, '2020-07-15', 6500),
+    (38, '2020-08-08', 10600),
+    (38, '2020-07-26', 10600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (39, '65.172.380', '0001-61', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (39, '2025-02-18', 8800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (40, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
+
+INSERT INTO contrib_co2 VALUES
+    (40, '2022-03-04', 3500),
+    (40, '2022-02-13', 6300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (41, '71.498.635', '0001-06', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (41, '2022-12-25', 4200),
+    (41, '2022-11-22', 3500),
+    (41, '2022-11-24', 10200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (42, '13.690.872', '0001-54', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
+
+INSERT INTO contrib_co2 VALUES
+    (42, '2025-09-12', 3500),
+    (42, '2025-08-26', 3500),
+    (42, '2025-09-23', 5500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (43, '01.274.895', '0001-23', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
+
+INSERT INTO contrib_co2 VALUES
+    (43, '2023-11-24', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (44, '88.635.333', '0001-98', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (44, '2026-05-30', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (45, '39.605.871', '0001-83', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (45, '2023-12-11', 8500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (46, '48.603.715', '0001-45', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
+
+INSERT INTO contrib_co2 VALUES
+    (46, '2020-06-19', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (47, '20.978.635', '0001-10', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (47, '2021-11-11', 4300),
+    (47, '2021-10-24', 3500),
+    (47, '2021-11-23', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (48, '65.172.380', '0001-53', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (48, '2024-04-08', 5000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (49, '01.274.895', '0001-13', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (49, '2021-12-10', 3700),
+    (49, '2022-01-20', 9500),
+    (49, '2022-01-15', 9200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (50, '28.659.130', '0001-07', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (50, '2025-05-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (51, '09.723.145', '0001-78', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (51, '2021-09-01', 3500),
+    (51, '2021-08-17', 14100),
+    (51, '2021-07-25', 10500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (52, '75.893.062', '0001-33', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
+
+INSERT INTO contrib_co2 VALUES
+    (52, '2023-11-15', 13900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (53, '20.978.635', '0001-10', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (53, '2023-10-30', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (54, '79.821.563', '0001-65', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (54, '2026-06-04', 11800),
+    (54, '2026-05-24', 8000),
+    (54, '2026-06-11', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (55, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
+
+INSERT INTO contrib_co2 VALUES
+    (55, '2020-07-16', 8700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (56, '75.893.062', '0001-31', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
+
+INSERT INTO contrib_co2 VALUES
+    (56, '2022-06-25', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (57, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (57, '2022-02-05', 10200),
+    (57, '2022-03-01', 3500),
+    (57, '2022-02-23', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (58, '79.821.563', '0001-00', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
+
+INSERT INTO contrib_co2 VALUES
+    (58, '2023-11-20', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (59, '79.821.563', '0001-00', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (59, '2024-11-01', 6000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (60, '33.738.001', '0001-77', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (60, '2021-09-19', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (61, '48.603.715', '0001-45', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (61, '2025-02-09', 3500),
+    (61, '2025-03-18', 5300),
+    (61, '2025-03-13', 8300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (62, '18.024.935', '0001-76', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
+
+INSERT INTO contrib_co2 VALUES
+    (62, '2024-04-13', 16500),
+    (62, '2024-04-01', 7900),
+    (62, '2024-03-10', 11400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (63, '53.921.807', '0001-18', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (63, '2021-03-29', 18700),
+    (63, '2021-04-09', 8400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (64, '51.360.297', '0001-43', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
+
+INSERT INTO contrib_co2 VALUES
+    (64, '2025-03-27', 3500),
+    (64, '2025-06-12', 3500),
+    (64, '2025-03-29', 7600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (65, '01.274.895', '0001-40', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
+
+INSERT INTO contrib_co2 VALUES
+    (65, '2020-04-06', 3500),
+    (65, '2020-05-13', 3500),
+    (65, '2020-03-31', 3500),
+    (65, '2020-05-17', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (66, '13.690.872', '0001-09', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (66, '2020-08-03', 5200),
+    (66, '2020-09-20', 8600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (67, '79.821.563', '0001-43', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
+
+INSERT INTO contrib_co2 VALUES
+    (67, '2023-02-28', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (68, '18.024.935', '0001-76', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (68, '2026-07-26', 4700),
+    (68, '2026-06-19', 9400),
+    (68, '2026-07-30', 12000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (69, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
+
+INSERT INTO contrib_co2 VALUES
+    (69, '2025-04-08', 3600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (70, '01.274.895', '0001-13', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
+
+INSERT INTO contrib_co2 VALUES
+    (70, '2023-04-09', 8000),
+    (70, '2023-04-13', 7400),
+    (70, '2023-02-10', 3500),
+    (70, '2023-03-14', 6200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (71, '56.738.014', '0001-69', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
+
+INSERT INTO contrib_co2 VALUES
+    (71, '2025-06-12', 4900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (72, '28.659.130', '0001-07', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (72, '2026-04-25', 3500),
+    (72, '2026-04-08', 4900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (73, '01.274.895', '0001-13', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (73, '2023-11-15', 8100),
+    (73, '2023-12-16', 8200),
+    (73, '2023-12-17', 4800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (74, '20.978.635', '0001-10', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (74, '2024-02-01', 5800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (75, '56.738.014', '0001-69', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
+
+INSERT INTO contrib_co2 VALUES
+    (75, '2025-09-06', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (76, '64.087.915', '0001-27', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (76, '2026-07-17', 6600),
+    (76, '2026-06-30', 11900),
+    (76, '2026-07-19', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (77, '09.723.145', '0001-56', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
+
+INSERT INTO contrib_co2 VALUES
+    (77, '2022-01-07', 14100),
+    (77, '2022-03-16', 11300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (78, '27.401.593', '0001-66', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (78, '2020-04-20', 7800),
+    (78, '2020-04-27', 3700),
+    (78, '2020-04-15', 7200),
+    (78, '2020-04-06', 7200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (79, '13.690.872', '0001-54', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
+
+INSERT INTO contrib_co2 VALUES
+    (79, '2023-12-28', 5600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (80, '88.635.333', '0001-98', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (80, '2025-04-02', 3600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (81, '09.723.145', '0001-56', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (81, '2022-09-10', 7800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (82, '12.905.674', '0001-18', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (82, '2026-05-10', 6400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (83, '65.172.380', '0001-53', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
+
+INSERT INTO contrib_co2 VALUES
+    (83, '2020-04-06', 8500),
+    (83, '2020-05-31', 3900),
+    (83, '2020-05-20', 3500),
+    (83, '2020-05-01', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (84, '01.274.895', '0001-23', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (84, '2022-12-18', 9000),
+    (84, '2022-10-25', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (85, '56.738.014', '0001-69', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
+
+INSERT INTO contrib_co2 VALUES
+    (85, '2024-01-01', 6800),
+    (85, '2024-01-19', 3500),
+    (85, '2024-01-18', 6900),
+    (85, '2024-01-30', 3500),
+    (85, '2023-12-15', 3500),
+    (85, '2024-01-27', 13100),
+    (85, '2024-01-20', 6900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (86, '13.690.872', '0001-09', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (86, '2022-05-24', 3500),
+    (86, '2022-06-06', 9000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (87, '79.821.563', '0001-43', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (87, '2023-02-07', 3500),
+    (87, '2022-11-16', 3500),
+    (87, '2023-01-22', 6900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (88, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (88, '2020-06-24', 7700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (89, '79.821.563', '0001-00', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (89, '2025-01-09', 6300),
+    (89, '2025-03-16', 3500),
+    (89, '2025-03-02', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (90, '13.690.872', '0001-09', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (90, '2024-06-07', 3500),
+    (90, '2024-05-05', 6600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (91, '75.893.062', '0001-31', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (91, '2022-06-04', 3800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (92, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (92, '2025-10-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (93, '01.274.895', '0001-40', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
+
+INSERT INTO contrib_co2 VALUES
+    (93, '2024-03-13', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (94, '65.172.380', '0001-53', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (94, '2025-06-02', 4100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (95, '28.659.130', '0001-07', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (95, '2026-06-16', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (96, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
+
+INSERT INTO contrib_co2 VALUES
+    (96, '2020-08-22', 6900),
+    (96, '2020-08-15', 3500),
+    (96, '2020-08-01', 10200),
+    (96, '2020-09-12', 7500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (97, '79.821.563', '0001-00', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (97, '2023-12-31', 4400),
+    (97, '2024-01-30', 3500),
+    (97, '2024-01-15', 10000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (98, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (98, '2021-12-03', 3500),
+    (98, '2021-11-14', 4100),
+    (98, '2021-12-14', 6700),
+    (98, '2021-10-08', 9100),
+    (98, '2021-11-03', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (99, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (99, '2023-11-10', 10200),
+    (99, '2023-11-25', 3500),
+    (99, '2023-12-08', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (100, '75.893.062', '0001-31', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (100, '2022-07-21', 6700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (101, '09.723.145', '0001-93', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
+
+INSERT INTO contrib_co2 VALUES
+    (101, '2020-03-02', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (102, '88.635.333', '0001-98', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (102, '2022-07-06', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (103, '75.893.062', '0001-31', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (103, '2022-11-15', 13900),
+    (103, '2022-12-19', 9900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (104, '13.690.872', '0001-09', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (104, '2022-11-17', 12600),
+    (104, '2023-01-16', 7000),
+    (104, '2022-11-27', 6200),
+    (104, '2023-02-07', 3900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (105, '09.723.145', '0001-56', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (105, '2024-04-24', 3500),
+    (105, '2024-04-26', 8300),
+    (105, '2024-06-29', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (106, '48.912.037', '0001-48', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (106, '2021-11-24', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (107, '56.738.014', '0001-69', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (107, '2026-07-12', 14800),
+    (107, '2026-05-21', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (108, '45.690.123', '0001-36', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
+
+INSERT INTO contrib_co2 VALUES
+    (108, '2023-12-16', 5900),
+    (108, '2023-11-17', 8000),
+    (108, '2023-11-13', 7100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (109, '13.690.872', '0001-54', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (109, '2022-01-18', 7500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (110, '09.723.145', '0001-78', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (110, '2023-11-29', 6400),
+    (110, '2024-01-19', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (111, '75.893.062', '0001-33', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (111, '2022-11-14', 12900),
+    (111, '2023-01-27', 3500),
+    (111, '2023-01-15', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (112, '45.690.123', '0001-36', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (112, '2025-06-06', 5800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (113, '51.360.297', '0001-43', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (113, '2025-06-10', 4200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (114, '65.172.380', '0001-53', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
+
+INSERT INTO contrib_co2 VALUES
+    (114, '2025-02-18', 3500),
+    (114, '2025-03-14', 10500),
+    (114, '2025-03-15', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (115, '79.821.563', '0001-00', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (115, '2026-07-24', 6200),
+    (115, '2026-05-17', 3500),
+    (115, '2026-06-08', 9600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (116, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
+
+INSERT INTO contrib_co2 VALUES
+    (116, '2026-01-15', 3500),
+    (116, '2025-12-17', 3500),
+    (116, '2025-12-25', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (117, '65.172.380', '0001-61', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (117, '2025-06-21', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (118, '79.821.563', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (118, '2023-08-30', 3900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (119, '51.360.297', '0001-43', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (119, '2025-06-10', 8800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (120, '48.603.715', '0001-45', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (120, '2022-05-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (121, '53.921.807', '0001-18', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (121, '2022-05-04', 3500),
+    (121, '2022-04-28', 16600),
+    (121, '2022-06-22', 7900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (122, '45.690.123', '0001-36', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (122, '2026-03-27', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (123, '65.172.380', '0001-61', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (123, '2021-09-21', 3500),
+    (123, '2021-08-16', 3500),
+    (123, '2021-09-18', 9600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (124, '27.401.593', '0001-66', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (124, '2024-05-17', 4100),
+    (124, '2024-05-30', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (125, '09.723.145', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (125, '2020-07-07', 3600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (126, '01.274.895', '0001-13', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (126, '2022-12-21', 9000),
+    (126, '2022-12-07', 5600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (127, '71.498.635', '0001-06', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (127, '2022-08-22', 6600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (128, '20.978.635', '0001-10', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (128, '2021-05-06', 9600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (129, '56.738.014', '0001-69', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (129, '2021-05-05', 5500),
+    (129, '2021-03-09', 7600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (130, '27.401.593', '0001-66', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (130, '2026-03-29', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (131, '28.659.130', '0001-07', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (131, '2022-11-24', 9200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (132, '09.723.145', '0001-56', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (132, '2021-12-20', 3500),
+    (132, '2021-12-27', 5400),
+    (132, '2022-02-08', 3500),
+    (132, '2022-02-22', 11100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (133, '51.360.297', '0001-43', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (133, '2022-01-01', 7400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (134, '18.024.935', '0001-76', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
+
+INSERT INTO contrib_co2 VALUES
+    (134, '2022-04-21', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (135, '01.274.895', '0001-40', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (135, '2026-06-19', 10000),
+    (135, '2026-07-26', 11300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (136, '33.738.001', '0001-77', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (136, '2022-12-17', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (137, '13.690.872', '0001-09', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
+
+INSERT INTO contrib_co2 VALUES
+    (137, '2025-11-27', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (138, '18.024.935', '0001-76', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (138, '2022-04-28', 7300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (139, '18.024.935', '0001-76', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (139, '2021-03-28', 6800),
+    (139, '2021-05-01', 3500),
+    (139, '2021-03-22', 10200),
+    (139, '2021-04-19', 4600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (140, '33.738.001', '0001-77', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (140, '2024-01-28', 9800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (141, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
+
+INSERT INTO contrib_co2 VALUES
+    (141, '2020-06-29', 5400),
+    (141, '2020-08-29', 4700),
+    (141, '2020-07-30', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (142, '01.274.895', '0001-23', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (142, '2026-03-28', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (143, '48.912.037', '0001-38', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (143, '2025-06-24', 10700),
+    (143, '2025-06-04', 3500),
+    (143, '2025-04-08', 5700),
+    (143, '2025-05-13', 3500),
+    (143, '2025-04-27', 3500),
+    (143, '2025-05-08', 6800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (144, '20.978.635', '0001-10', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
+
+INSERT INTO contrib_co2 VALUES
+    (144, '2022-04-10', 5200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (145, '39.605.871', '0001-83', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (145, '2021-09-19', 3500),
+    (145, '2021-07-17', 3500),
+    (145, '2021-07-18', 9800),
+    (145, '2021-08-06', 16800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (146, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (146, '2020-08-21', 10300),
+    (146, '2020-09-04', 6300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (147, '65.172.380', '0001-61', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (147, '2022-05-10', 6700),
+    (147, '2022-06-24', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (148, '48.603.715', '0001-45', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
+
+INSERT INTO contrib_co2 VALUES
+    (148, '2023-12-29', 3500),
+    (148, '2024-01-10', 3500),
+    (148, '2023-11-12', 3500),
+    (148, '2023-11-25', 8900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (149, '53.921.807', '0001-18', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
+
+INSERT INTO contrib_co2 VALUES
+    (149, '2025-10-18', 9900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (150, '64.087.915', '0001-27', '68.532.497/0001-22', '2021-06-25', 'Conservação florestal e créditos de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (150, '2021-09-02', 4300),
+    (150, '2021-07-02', 3500),
+    (150, '2021-09-11', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (151, '56.738.014', '0001-69', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
+
+INSERT INTO contrib_co2 VALUES
+    (151, '2022-04-13', 3500),
+    (151, '2022-04-17', 6200),
+    (151, '2022-04-14', 3500),
+    (151, '2022-03-28', 3500),
+    (151, '2022-04-20', 12200),
+    (151, '2022-04-29', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (152, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (152, '2021-12-07', 3500),
+    (152, '2021-12-05', 3500),
+    (152, '2021-11-19', 3500),
+    (152, '2021-09-24', 3500),
+    (152, '2021-10-23', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (153, '53.921.807', '0001-18', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (153, '2026-08-08', 9800),
+    (153, '2026-05-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (154, '39.605.871', '0001-83', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (154, '2024-02-18', 14100),
+    (154, '2024-02-01', 3500),
+    (154, '2023-12-28', 8200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (155, '79.821.563', '0001-43', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
+
+INSERT INTO contrib_co2 VALUES
+    (155, '2025-01-16', 6000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (156, '33.738.001', '0001-77', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (156, '2022-06-08', 11300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (157, '18.024.935', '0001-76', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (157, '2026-02-09', 5800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (158, '01.274.895', '0001-13', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
+
+INSERT INTO contrib_co2 VALUES
+    (158, '2020-06-15', 9300),
+    (158, '2020-04-11', 3500),
+    (158, '2020-05-12', 10600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (159, '88.635.333', '0001-98', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
+
+INSERT INTO contrib_co2 VALUES
+    (159, '2024-01-23', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (160, '88.635.333', '0001-98', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (160, '2020-07-02', 8700),
+    (160, '2020-09-12', 10400),
+    (160, '2020-07-06', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (161, '64.087.915', '0001-27', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (161, '2025-02-17', 4400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (162, '18.024.935', '0001-76', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (162, '2026-05-20', 9300),
+    (162, '2026-04-16', 3500),
+    (162, '2026-05-08', 8000),
+    (162, '2026-05-05', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (163, '48.912.037', '0001-38', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (163, '2023-10-16', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (164, '12.905.674', '0001-18', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (164, '2023-08-10', 3500),
+    (164, '2023-08-26', 16500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (165, '45.690.123', '0001-36', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (165, '2021-05-09', 8200),
+    (165, '2021-04-15', 3500),
+    (165, '2021-03-04', 4500),
+    (165, '2021-03-06', 11300),
+    (165, '2021-03-17', 6900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (166, '27.401.593', '0001-66', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
+
+INSERT INTO contrib_co2 VALUES
+    (166, '2025-03-29', 3500),
+    (166, '2025-01-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (167, '79.821.563', '0001-65', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (167, '2021-03-22', 4300),
+    (167, '2021-04-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (168, '13.690.872', '0001-09', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (168, '2021-09-24', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (169, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
+
+INSERT INTO contrib_co2 VALUES
+    (169, '2022-02-21', 8500),
+    (169, '2022-02-06', 7300),
+    (169, '2022-02-28', 10100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (170, '18.024.935', '0001-76', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (170, '2022-12-11', 10300),
+    (170, '2022-12-25', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (171, '28.659.130', '0001-07', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (171, '2022-05-14', 5800),
+    (171, '2022-06-03', 3500),
+    (171, '2022-04-26', 3500),
+    (171, '2022-06-10', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (172, '71.498.635', '0001-06', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
+
+INSERT INTO contrib_co2 VALUES
+    (172, '2024-02-04', 3500),
+    (172, '2024-01-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (173, '28.659.130', '0001-07', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (173, '2025-04-18', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (174, '48.912.037', '0001-38', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (174, '2025-04-25', 3500),
+    (174, '2025-06-11', 13500),
+    (174, '2025-06-16', 6800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (175, '28.659.130', '0001-07', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
+
+INSERT INTO contrib_co2 VALUES
+    (175, '2020-04-28', 5000),
+    (175, '2020-04-10', 6300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (176, '13.690.872', '0001-54', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (176, '2021-12-21', 3500),
+    (176, '2021-11-10', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (177, '48.603.715', '0001-45', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
+
+INSERT INTO contrib_co2 VALUES
+    (177, '2022-08-05', 12100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (178, '79.821.563', '0001-65', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (178, '2024-05-21', 6200),
+    (178, '2024-04-22', 4400),
+    (178, '2024-05-06', 3500),
+    (178, '2024-05-12', 3500),
+    (178, '2024-05-07', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (179, '64.087.915', '0001-27', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
+
+INSERT INTO contrib_co2 VALUES
+    (179, '2024-02-04', 7200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (180, '13.690.872', '0001-09', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
+
+INSERT INTO contrib_co2 VALUES
+    (180, '2026-08-07', 9100),
+    (180, '2026-07-26', 3500),
+    (180, '2026-05-27', 14400),
+    (180, '2026-06-09', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (181, '28.659.130', '0001-07', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (181, '2023-12-15', 13400),
+    (181, '2023-11-15', 3500),
+    (181, '2024-01-03', 4400),
+    (181, '2023-12-18', 6000),
+    (181, '2024-01-22', 6400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (182, '64.087.915', '0001-27', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
+
+INSERT INTO contrib_co2 VALUES
+    (182, '2021-04-19', 3500),
+    (182, '2021-05-29', 5100),
+    (182, '2021-04-29', 9500),
+    (182, '2021-06-03', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (183, '33.738.001', '0001-77', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
+
+INSERT INTO contrib_co2 VALUES
+    (183, '2020-02-07', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (184, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (184, '2022-01-28', 13800),
+    (184, '2022-02-21', 6700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (185, '51.360.297', '0001-43', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (185, '2022-06-05', 3500),
+    (185, '2022-07-04', 5000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (186, '79.821.563', '0001-99', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (186, '2025-06-11', 3500),
+    (186, '2025-06-10', 3500),
+    (186, '2025-06-12', 3500),
+    (186, '2025-04-18', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (187, '64.087.915', '0001-27', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (187, '2025-05-06', 4800),
+    (187, '2025-04-15', 9500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (188, '79.821.563', '0001-43', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (188, '2022-10-10', 10800),
+    (188, '2022-12-29', 10400),
+    (188, '2022-12-11', 5100),
+    (188, '2022-12-14', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (189, '12.905.674', '0001-18', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (189, '2026-05-11', 3500),
+    (189, '2026-06-06', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (190, '01.274.895', '0001-40', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (190, '2021-07-31', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (191, '12.905.674', '0001-18', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (191, '2023-10-30', 3500),
+    (191, '2023-11-06', 3900),
+    (191, '2023-10-04', 8200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (192, '79.821.563', '0001-99', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (192, '2025-05-18', 10400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (193, '13.690.872', '0001-54', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
+
+INSERT INTO contrib_co2 VALUES
+    (193, '2020-06-03', 12200),
+    (193, '2020-06-19', 3500),
+    (193, '2020-03-30', 3500),
+    (193, '2020-05-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (194, '51.360.297', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (194, '2023-10-01', 10800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (195, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (195, '2021-06-14', 4600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (196, '09.723.145', '0001-78', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (196, '2020-03-27', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (197, '18.024.935', '0001-76', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
+
+INSERT INTO contrib_co2 VALUES
+    (197, '2025-02-05', 8600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (198, '13.690.872', '0001-54', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (198, '2025-05-01', 5500),
+    (198, '2025-04-13', 6900),
+    (198, '2025-05-24', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (199, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
+
+INSERT INTO contrib_co2 VALUES
+    (199, '2020-06-26', 9900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (200, '75.893.062', '0001-33', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
+
+INSERT INTO contrib_co2 VALUES
+    (200, '2022-04-30', 6200),
+    (200, '2022-06-03', 10000),
+    (200, '2022-04-28', 5900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (201, '18.024.935', '0001-76', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (201, '2024-11-14', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (202, '33.738.001', '0001-77', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
+
+INSERT INTO contrib_co2 VALUES
+    (202, '2021-04-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (203, '75.893.062', '0001-33', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (203, '2023-12-12', 5200),
+    (203, '2024-01-01', 3500),
+    (203, '2024-02-03', 10500),
+    (203, '2023-12-17', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (204, '75.893.062', '0001-33', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (204, '2023-11-20', 8200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (205, '65.172.380', '0001-53', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
+
+INSERT INTO contrib_co2 VALUES
+    (205, '2023-12-14', 4600),
+    (205, '2023-12-23', 3500),
+    (205, '2023-12-06', 11100),
+    (205, '2024-01-20', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (206, '75.893.062', '0001-31', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (206, '2023-10-22', 3500),
+    (206, '2023-10-29', 3500),
+    (206, '2023-11-28', 8200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (207, '53.921.807', '0001-18', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
+
+INSERT INTO contrib_co2 VALUES
+    (207, '2025-01-30', 3500),
+    (207, '2025-02-13', 7300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (208, '28.659.130', '0001-07', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (208, '2024-10-21', 3500),
+    (208, '2024-11-02', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (209, '28.659.130', '0001-07', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (209, '2023-10-12', 8800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (210, '75.893.062', '0001-31', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (210, '2026-04-02', 6300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (211, '01.274.895', '0001-40', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
+
+INSERT INTO contrib_co2 VALUES
+    (211, '2023-10-23', 3500),
+    (211, '2023-12-05', 5900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (212, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
+
+INSERT INTO contrib_co2 VALUES
+    (212, '2020-09-09', 5200),
+    (212, '2020-07-28', 16000),
+    (212, '2020-06-28', 3500),
+    (212, '2020-09-15', 3500),
+    (212, '2020-07-09', 11200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (213, '45.690.123', '0001-36', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
+
+INSERT INTO contrib_co2 VALUES
+    (213, '2025-07-07', 3500),
+    (213, '2025-06-29', 12400),
+    (213, '2025-06-20', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (214, '01.274.895', '0001-23', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (214, '2022-04-27', 3500),
+    (214, '2022-07-04', 3500),
+    (214, '2022-06-24', 5200),
+    (214, '2022-05-17', 6400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (215, '64.087.915', '0001-27', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
+
+INSERT INTO contrib_co2 VALUES
+    (215, '2024-10-08', 3500),
+    (215, '2024-09-20', 8800),
+    (215, '2024-10-17', 3500),
+    (215, '2024-09-11', 7500),
+    (215, '2024-09-29', 9400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (216, '75.893.062', '0001-31', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (216, '2025-10-19', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (217, '45.690.123', '0001-36', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (217, '2021-06-26', 8900),
+    (217, '2021-09-19', 10000),
+    (217, '2021-07-21', 3500),
+    (217, '2021-08-03', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (218, '09.723.145', '0001-93', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (218, '2022-05-20', 11000),
+    (218, '2022-05-01', 4800),
+    (218, '2022-05-11', 3500),
+    (218, '2022-07-07', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (219, '09.723.145', '0001-93', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (219, '2021-06-01', 3500),
+    (219, '2021-06-15', 3500),
+    (219, '2021-05-10', 3500),
+    (219, '2021-07-02', 8900),
+    (219, '2021-07-03', 10300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (220, '79.821.563', '0001-00', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (220, '2024-06-20', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (221, '27.401.593', '0001-66', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
+
+INSERT INTO contrib_co2 VALUES
+    (221, '2023-09-23', 6400),
+    (221, '2023-09-12', 8600),
+    (221, '2023-08-23', 8400),
+    (221, '2023-10-01', 4400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (222, '65.172.380', '0001-53', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (222, '2025-12-21', 7900),
+    (222, '2026-02-24', 11700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (223, '33.738.001', '0001-77', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
+
+INSERT INTO contrib_co2 VALUES
+    (223, '2025-12-18', 7900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (224, '20.978.635', '0001-10', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (224, '2024-02-18', 4400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (225, '53.921.807', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (225, '2021-12-24', 11800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (226, '71.498.635', '0001-06', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (226, '2025-10-12', 4500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (227, '75.893.062', '0001-31', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
+
+INSERT INTO contrib_co2 VALUES
+    (227, '2025-11-18', 4500),
+    (227, '2026-01-22', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (228, '65.172.380', '0001-61', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
+
+INSERT INTO contrib_co2 VALUES
+    (228, '2026-03-10', 3500),
+    (228, '2026-03-06', 3500),
+    (228, '2026-02-26', 3500),
+    (228, '2026-04-20', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (229, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (229, '2025-10-29', 5500),
+    (229, '2025-11-12', 9600);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (230, '09.723.145', '0001-93', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
+
+INSERT INTO contrib_co2 VALUES
+    (230, '2023-04-03', 10200),
+    (230, '2023-03-02', 13000);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (231, '79.821.563', '0001-65', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
+
+INSERT INTO contrib_co2 VALUES
+    (231, '2023-02-27', 3500),
+    (231, '2023-03-19', 3500),
+    (231, '2023-04-03', 3800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (232, '33.738.001', '0001-77', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
+
+INSERT INTO contrib_co2 VALUES
+    (232, '2024-02-21', 3500),
+    (232, '2024-02-05', 12800),
+    (232, '2024-02-08', 6100),
+    (232, '2024-03-12', 3500),
+    (232, '2024-03-22', 13900);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (233, '48.603.715', '0001-45', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
+
+INSERT INTO contrib_co2 VALUES
+    (233, '2022-11-14', 3800),
+    (233, '2022-12-28', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (234, '65.172.380', '0001-53', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (234, '2026-04-30', 7200);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (235, '64.087.915', '0001-27', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (235, '2024-01-13', 9200),
+    (235, '2023-12-21', 3500),
+    (235, '2024-01-11', 7600),
+    (235, '2023-12-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (236, '28.659.130', '0001-07', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (236, '2021-08-15', 3500),
+    (236, '2021-08-12', 3700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (237, '09.723.145', '0001-93', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (237, '2024-01-31', 14600),
+    (237, '2024-01-01', 3500),
+    (237, '2023-12-11', 11800),
+    (237, '2024-01-19', 5700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (238, '18.024.935', '0001-76', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (238, '2021-12-12', 6300);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (239, '01.274.895', '0001-23', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (239, '2021-12-17', 3500),
+    (239, '2022-01-23', 9600),
+    (239, '2022-02-11', 7300),
+    (239, '2022-02-26', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (240, '09.723.145', '0001-93', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
+
+INSERT INTO contrib_co2 VALUES
+    (240, '2022-06-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (241, '09.723.145', '0001-93', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
+
+INSERT INTO contrib_co2 VALUES
+    (241, '2021-11-26', 11900),
+    (241, '2021-12-23', 3500),
+    (241, '2021-11-15', 3500),
+    (241, '2021-12-25', 3700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (242, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
+
+INSERT INTO contrib_co2 VALUES
+    (242, '2020-07-26', 4500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (243, '65.172.380', '0001-61', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
+
+INSERT INTO contrib_co2 VALUES
+    (243, '2024-02-11', 7700);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (244, '79.821.563', '0001-65', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
+
+INSERT INTO contrib_co2 VALUES
+    (244, '2022-03-12', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (245, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
+
+INSERT INTO contrib_co2 VALUES
+    (245, '2024-02-16', 3500),
+    (245, '2024-01-04', 3500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (246, '65.172.380', '0001-53', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
+
+INSERT INTO contrib_co2 VALUES
+    (246, '2021-12-20', 3500),
+    (246, '2022-01-14', 4100),
+    (246, '2021-12-31', 5300),
+    (246, '2022-01-16', 8200),
+    (246, '2022-01-06', 3800),
+    (246, '2022-01-24', 12800);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (247, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
+
+INSERT INTO contrib_co2 VALUES
+    (247, '2025-06-16', 3500),
+    (247, '2025-04-24', 8200),
+    (247, '2025-05-06', 9400),
+    (247, '2025-06-28', 3500),
+    (247, '2025-04-04', 4100);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (248, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
+
+INSERT INTO contrib_co2 VALUES
+    (248, '2021-04-29', 10500);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (249, '51.360.297', '0001-43', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
+
+INSERT INTO contrib_co2 VALUES
+    (249, '2024-02-01', 9400);
+
+INSERT INTO vinc_contrib_co2 VALUES
+    (250, '64.087.915', '0001-27', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
+
+INSERT INTO contrib_co2 VALUES
+    (250, '2021-07-24', 3500),
+    (250, '2021-07-07', 4100),
+    (250, '2021-09-06', 5500);
 
 -- Obs. usamos o comando \copy do `psql` (roda no cliente) em vez do
 -- comando `COPY` (que roda no servidor), pois este requer privilégios
@@ -2203,8 +4012,7 @@ INSERT INTO reg_leg VALUES
     ('3306305', 'multa', 3726, 2020, '2023-02-04', NULL, NULL, NULL, 56.29, 0.2099, NULL, NULL),
     ('3304557', 'multa', 1524, 2022, '2021-05-21', '2023-12-02', '1.0404.20.00', '6212.30.00', 33.18, 0.2216, NULL, NULL),
     ('3146206', 'multa', 1243, 2023, '2020-08-08', NULL, NULL, '3004.90.19', 521.09, 0.2019, NULL, NULL),
-    ('4314902', 'multa', 1346, 2021, '2026-12-05', NULL, '1.1806.8', '3911.90.2', 425.38, 0.0374, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    ('4314902', 'multa', 1346, 2021, '2026-12-05', NULL, '1.1806.8', '3911.90.2', 425.38, 0.0374, NULL, NULL);
 
 INSERT INTO inst_cient VALUES
     ('58.826.745/0001-34', 'Universidade de São Paulo', 'Praça da Sé', 33, '00000001', '3550308'),
@@ -2214,8 +4022,7 @@ INSERT INTO inst_cient VALUES
     ('09.850.333/0001-77', 'Universidade Federal do Rio de Janeiro', 'Avenida Laerte', 56, '38997345', '3304557'),
     ('87.888.161/0001-65', 'Unidade Científica do Norte', 'Rua Corrêa', 1048, '69994-295', '1302603'),
     ('00.001.333/0001-99', 'Universidade Federal da Bahia', 'Rua Roberto Peixoto', 444, '43144-383', '2927408'),
-    ('54.777.163/0001-46', 'Universidade Federal de Minas Gerais', 'Rodovia Afonso Pena', 998, '39802-120', '3106200')
-ON CONFLICT DO NOTHING;
+    ('54.777.163/0001-46', 'Universidade Federal de Minas Gerais', 'Rodovia Afonso Pena', 998, '39802-120', '3106200');
 
 INSERT INTO equipe_inst_cient VALUES
     ('58.826.745/0001-34', 'Emissões a alto nível'),
@@ -2230,8 +4037,7 @@ INSERT INTO equipe_inst_cient VALUES
     ('87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia'),
     ('00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria'),
     ('54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais'),
-    ('54.777.163/0001-46', 'Andamento das metas da ONU')
-ON CONFLICT DO NOTHING;
+    ('54.777.163/0001-46', 'Andamento das metas da ONU');
 
 INSERT INTO equipe_inst_cient_membro VALUES
     ('58.826.745/0001-34', 'Emissões a alto nível', 'Caio Melo'),
@@ -2285,12 +4091,10 @@ INSERT INTO equipe_inst_cient_membro VALUES
     ('54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', 'Liam Cunha'),
     ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Matteo Macedo'),
     ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Thomas Barbosa'),
-    ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Léo Moura')
-ON CONFLICT DO NOTHING;
+    ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Léo Moura');
 
 INSERT INTO relatorio VALUES
-    (1, '2023-05-31', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (1, '2023-05-31', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (1, '3908.10.14', 0.0385),
@@ -2307,8 +4111,7 @@ INSERT INTO relatorio_prod VALUES
     (1, '4811.49.90', 0.1302),
     (1, '3004.20.29', 0.1037),
     (1, '7302.10.90', 0.2017),
-    (1, '7208.53.00', 0.0123)
-ON CONFLICT DO NOTHING;
+    (1, '7208.53.00', 0.0123);
 
 INSERT INTO relatorio_serv VALUES
     (1, '1.0105.21.00', '2023-06-03T13:32:01', 0.4037),
@@ -2318,12 +4121,10 @@ INSERT INTO relatorio_serv VALUES
     (1, '1.1406.20.00', '2023-06-27T14:30:23', 0.5417),
     (1, '1.1403.22.21', '2023-06-06T15:15:41', 0.5213),
     (1, '1.0502.23.10', '2023-06-10T23:00:20', 0.4608),
-    (1, '1.1403.22.90', '2023-06-01T21:14:20', 0.3523)
-ON CONFLICT DO NOTHING;
+    (1, '1.1403.22.90', '2023-06-01T21:14:20', 0.3523);
 
 INSERT INTO relatorio VALUES
-    (2, '2021-08-28', '2024-05-22', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (2, '2021-08-28', '2024-05-22', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (2, '3806.90.12', 0.0286),
@@ -2337,8 +4138,7 @@ INSERT INTO relatorio_prod VALUES
     (2, '4411.13.10', 0.0023),
     (2, '2934.99.24', 0.0151),
     (2, '2921.51.33', 0.0421),
-    (2, '8411.91.00', 0.0099)
-ON CONFLICT DO NOTHING;
+    (2, '8411.91.00', 0.0099);
 
 INSERT INTO relatorio_serv VALUES
     (2, '1.0903.21.00', '2021-09-22T14:11:37', 0.0107),
@@ -2355,12 +4155,10 @@ INSERT INTO relatorio_serv VALUES
     (2, '1.1805.14.00', '2021-09-11T16:28:51', 0.0088),
     (2, '1.2001.31.10', '2021-09-29T05:13:20', 0.0198),
     (2, '1.2403.22.00', '2021-09-27T05:32:24', 0.026),
-    (2, '1.0904.22.00', '2021-09-11T09:08:28', 0.0413)
-ON CONFLICT DO NOTHING;
+    (2, '1.0904.22.00', '2021-09-11T09:08:28', 0.0413);
 
 INSERT INTO relatorio VALUES
-    (3, '2022-07-06', '2026-02-20', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (3, '2022-07-06', '2026-02-20', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (3, '6903.90.91', 0.0735),
@@ -2376,18 +4174,15 @@ INSERT INTO relatorio_prod VALUES
     (3, '2939.61.00', 0.1117),
     (3, '2910.20.00', 0.0925),
     (3, '6812.99.90', 0.0699),
-    (3, '2921.19.49', 0.0205)
-ON CONFLICT DO NOTHING;
+    (3, '2921.19.49', 0.0205);
 
 INSERT INTO relatorio_serv VALUES
     (3, '1.0901.51.22', '2022-08-07T12:02:26', 0.0245),
     (3, '1.0502.34.51', '2022-08-10T08:02:54', 0.3454),
-    (3, '1.1101.15.00', '2022-08-27T14:50:28', 0.4017)
-ON CONFLICT DO NOTHING;
+    (3, '1.1101.15.00', '2022-08-27T14:50:28', 0.4017);
 
 INSERT INTO relatorio VALUES
-    (4, '2024-01-13', '2026-05-19', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (4, '2024-01-13', '2026-05-19', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (4, '3803.00.90', 0.0391),
@@ -2401,8 +4196,7 @@ INSERT INTO relatorio_prod VALUES
     (4, '2909.60.1', 0.0625),
     (4, '2909.49.24', 0.0551),
     (4, '4810.19.81', 0.0199),
-    (4, '8473.30.90', 0.0697)
-ON CONFLICT DO NOTHING;
+    (4, '8473.30.90', 0.0697);
 
 INSERT INTO relatorio_serv VALUES
     (4, '1.0605.90.00', '2024-02-12T08:18:47', 0.2002),
@@ -2412,20 +4206,17 @@ INSERT INTO relatorio_serv VALUES
     (4, '1.0504.45.10', '2024-02-02T01:24:02', 0.0654),
     (4, '1.1806.53.00', '2024-02-26T00:23:50', 0.2168),
     (4, '1.2404.1', '2024-02-07T12:44:04', 0.1015),
-    (4, '1.1506.2', '2024-02-02T12:26:50', 0.1707)
-ON CONFLICT DO NOTHING;
+    (4, '1.1506.2', '2024-02-02T12:26:50', 0.1707);
 
 INSERT INTO relatorio VALUES
-    (5, '2025-04-11', '2025-09-11', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (5, '2025-04-11', '2025-09-11', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (5, '5603.12.40', 0.0068),
     (5, '8537.10.1', 1.0832),
     (5, '5204.11.1', 0.0652),
     (5, '9701.91.00', 1.2202),
-    (5, '8536.90.40', 0.1471)
-ON CONFLICT DO NOTHING;
+    (5, '8536.90.40', 0.1471);
 
 INSERT INTO relatorio_serv VALUES
     (5, '1.0501.23.10', '2025-05-14T02:04:22', 0.1855),
@@ -2438,12 +4229,10 @@ INSERT INTO relatorio_serv VALUES
     (5, '1.0403.11.90', '2025-05-25T00:10:40', 0.0615),
     (5, '1.0402', '2025-05-24T03:41:14', 0.3506),
     (5, '1.0907.00.00', '2025-05-19T05:46:01', 0.0408),
-    (5, '1.0502.14.5', '2025-05-01T08:09:16', 0.2837)
-ON CONFLICT DO NOTHING;
+    (5, '1.0502.14.5', '2025-05-01T08:09:16', 0.2837);
 
 INSERT INTO relatorio VALUES
-    (6, '2026-02-05', '2026-06-01', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (6, '2026-02-05', '2026-06-01', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (6, '0302.44.00', 0.1235),
@@ -2459,8 +4248,7 @@ INSERT INTO relatorio_prod VALUES
     (6, '2933.59.12', 0.0203),
     (6, '8448.32.40', 0.1508),
     (6, '5515.22.00', 0.0306),
-    (6, '2530.90.10', 0.0284)
-ON CONFLICT DO NOTHING;
+    (6, '2530.90.10', 0.0284);
 
 INSERT INTO relatorio_serv VALUES
     (6, '1.1410.10.00', '2026-03-17T06:50:16', 0.0223),
@@ -2474,12 +4262,10 @@ INSERT INTO relatorio_serv VALUES
     (6, '1.1901.50.00', '2026-03-03T21:55:29', 0.1031),
     (6, '1.0403.21.10', '2026-03-10T11:43:23', 0.0714),
     (6, '1.1105.30.00', '2026-03-02T17:54:43', 0.1446),
-    (6, '1.0901.52.40', '2026-03-04T07:38:09', 0.0707)
-ON CONFLICT DO NOTHING;
+    (6, '1.0901.52.40', '2026-03-04T07:38:09', 0.0707);
 
 INSERT INTO relatorio VALUES
-    (7, '2025-08-12', '2025-11-22', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (7, '2025-08-12', '2025-11-22', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (7, '8428.20.90', 0.2457),
@@ -2491,12 +4277,10 @@ INSERT INTO relatorio_prod VALUES
     (7, '5402.61.90', 0.0826),
     (7, '8538.10.00', 0.3715),
     (7, '4011.80.20', 0.0377),
-    (7, '2933.91.81', 0.2683)
-ON CONFLICT DO NOTHING;
+    (7, '2933.91.81', 0.2683);
 
 INSERT INTO relatorio VALUES
-    (8, '2021-11-17', NULL, '20.978.635', '0001-10', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (8, '2021-11-17', NULL, '20.978.635', '0001-10', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (8, '2930.90.72', 0.9487),
@@ -2521,12 +4305,10 @@ INSERT INTO relatorio_prod VALUES
     (8, '2930.90.84', 0.0079),
     (8, '7410.11.19', 0.0248),
     (8, '8478.90.00', 0.0236),
-    (8, '8465.92.19', 0.0249)
-ON CONFLICT DO NOTHING;
+    (8, '8465.92.19', 0.0249);
 
 INSERT INTO relatorio VALUES
-    (9, '2024-03-27', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (9, '2024-03-27', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (9, '2922.49.61', 1.8173),
@@ -2536,8 +4318,7 @@ INSERT INTO relatorio_prod VALUES
     (9, '5510.12.90', 0.0196),
     (9, '3808.93.27', 0.2436),
     (9, '0210.99.19', 0.1678),
-    (9, '4418.21.00', 0.0272)
-ON CONFLICT DO NOTHING;
+    (9, '4418.21.00', 0.0272);
 
 INSERT INTO relatorio_serv VALUES
     (9, '1.2404.31.00', '2024-04-26T14:27:42', 2.0763),
@@ -2553,12 +4334,10 @@ INSERT INTO relatorio_serv VALUES
     (9, '1.1801.21.00', '2024-04-06T13:06:02', 0.1183),
     (9, '1.1102.40.00', '2024-04-18T09:06:40', 0.0032),
     (9, '1.2501.1', '2024-04-08T03:57:14', 0.0968),
-    (9, '1.0904.32.00', '2024-04-22T08:02:52', 0.023)
-ON CONFLICT DO NOTHING;
+    (9, '1.0904.32.00', '2024-04-22T08:02:52', 0.023);
 
 INSERT INTO relatorio VALUES
-    (10, '2022-02-20', '2022-04-20', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (10, '2022-02-20', '2022-04-20', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (10, '8454.30.90', 1.8691),
@@ -2576,12 +4355,10 @@ INSERT INTO relatorio_prod VALUES
     (10, '8410.13.00', 0.1249),
     (10, '2008.97.10', 0.011),
     (10, '5404.12.00', 0.0412),
-    (10, '4104.11.12', 0.0056)
-ON CONFLICT DO NOTHING;
+    (10, '4104.11.12', 0.0056);
 
 INSERT INTO relatorio VALUES
-    (11, '2023-07-13', '2025-11-14', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (11, '2023-07-13', '2025-11-14', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (11, '8211.92.10', 8.3991),
@@ -2598,8 +4375,7 @@ INSERT INTO relatorio_prod VALUES
     (11, '5101.30.00', 0.2559),
     (11, '1003.90.10', 0.4754),
     (11, '1515.90.2', 0.1593),
-    (11, '7202.11.00', 0.1653)
-ON CONFLICT DO NOTHING;
+    (11, '7202.11.00', 0.1653);
 
 INSERT INTO relatorio_serv VALUES
     (11, '1.0901', '2023-08-02T19:14:12', 6.3561),
@@ -2609,12 +4385,10 @@ INSERT INTO relatorio_serv VALUES
     (11, '1.0901.40.00', '2023-08-07T16:56:11', 0.0289),
     (11, '1.0903.11.00', '2023-08-13T10:34:30', 0.415),
     (11, '1.2001.40.00', '2023-08-24T19:50:57', 0.6965),
-    (11, '1.1001.12', '2023-08-28T06:45:21', 0.0862)
-ON CONFLICT DO NOTHING;
+    (11, '1.1001.12', '2023-08-28T06:45:21', 0.0862);
 
 INSERT INTO relatorio VALUES
-    (12, '2022-09-19', '2024-09-17', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (12, '2022-09-19', '2024-09-17', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (12, '4802.58.99', 0.1002),
@@ -2626,8 +4400,7 @@ INSERT INTO relatorio_prod VALUES
     (12, '0707.00.00', 0.0405),
     (12, '8505.19.90', 0.0264),
     (12, '6305.10.00', 0.0183),
-    (12, '5402.31.90', 0.1089)
-ON CONFLICT DO NOTHING;
+    (12, '5402.31.90', 0.1089);
 
 INSERT INTO relatorio_serv VALUES
     (12, '1.0501.13', '2022-10-01T03:26:13', 0.0692),
@@ -2636,16 +4409,13 @@ INSERT INTO relatorio_serv VALUES
     (12, '1.06', '2022-10-28T00:42:48', 0.0147),
     (12, '1.2001.81.00', '2022-10-23T13:41:56', 0.0601),
     (12, '1.0604.40.00', '2022-10-28T00:21:27', 0.0382),
-    (12, '1.1705', '2022-10-13T20:54:09', 0.0913)
-ON CONFLICT DO NOTHING;
+    (12, '1.1705', '2022-10-13T20:54:09', 0.0913);
 
 INSERT INTO relatorio VALUES
-    (13, '2024-10-09', '2025-08-13', '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (13, '2024-10-09', '2025-08-13', '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (13, '2008.19.00', 0.0867)
-ON CONFLICT DO NOTHING;
+    (13, '2008.19.00', 0.0867);
 
 INSERT INTO relatorio_serv VALUES
     (13, '1.2301.92.00', '2024-11-19T10:09:51', 0.0035),
@@ -2666,18 +4436,15 @@ INSERT INTO relatorio_serv VALUES
     (13, '1.0602.31.00', '2024-11-19T17:34:08', 0.155),
     (13, '1.0502.14.59', '2024-11-10T21:04:30', 0.0107),
     (13, '1.2301.21.00', '2024-11-05T20:47:02', 0.1446),
-    (13, '1.2205.19.00', '2024-11-02T06:45:52', 0.0204)
-ON CONFLICT DO NOTHING;
+    (13, '1.2205.19.00', '2024-11-02T06:45:52', 0.0204);
 
 INSERT INTO relatorio VALUES
-    (14, '2025-03-08', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (14, '2025-03-08', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (14, '0705.21.00', 0.2494),
     (14, '3004.20.63', 0.1928),
-    (14, '8472.90.9', 0.0667)
-ON CONFLICT DO NOTHING;
+    (14, '8472.90.9', 0.0667);
 
 INSERT INTO relatorio_serv VALUES
     (14, '1.0501.14.20', '2025-04-22T21:19:32', 0.0427),
@@ -2703,18 +4470,15 @@ INSERT INTO relatorio_serv VALUES
     (14, '1.1109.20.00', '2025-04-01T06:56:49', 0.0771),
     (14, '1.1805.24.00', '2025-04-20T00:08:26', 0.1951),
     (14, '1.1803.10.00', '2025-04-25T07:32:52', 0.1944),
-    (14, '1.0501.23.10', '2025-04-25T05:51:21', 0.1878)
-ON CONFLICT DO NOTHING;
+    (14, '1.0501.23.10', '2025-04-25T05:51:21', 0.1878);
 
 INSERT INTO relatorio VALUES
-    (15, '2022-10-29', '2025-06-04', '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (15, '2022-10-29', '2025-06-04', '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (15, '0308.22.00', 0.0167),
     (15, '0801.32.00', 0.0023),
-    (15, '8431.42.00', 0.0)
-ON CONFLICT DO NOTHING;
+    (15, '8431.42.00', 0.0);
 
 INSERT INTO relatorio_serv VALUES
     (15, '1.2301.12.00', '2022-11-05T13:57:04', 1.3381),
@@ -2738,12 +4502,10 @@ INSERT INTO relatorio_serv VALUES
     (15, '1.2001.3', '2022-11-12T03:37:45', 0.0014),
     (15, '1.1806.6', '2022-11-21T20:59:00', 0.0011),
     (15, '1.0905.12.00', '2022-11-15T06:35:30', 0.0121),
-    (15, '1.1103.36.10', '2022-11-14T08:56:10', 0.0315)
-ON CONFLICT DO NOTHING;
+    (15, '1.1103.36.10', '2022-11-14T08:56:10', 0.0315);
 
 INSERT INTO relatorio VALUES
-    (16, '2025-01-02', '2025-03-19', '12.905.674', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (16, '2025-01-02', '2025-03-19', '12.905.674', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (16, '8467.22.00', 0.9803),
@@ -2755,19 +4517,16 @@ INSERT INTO relatorio_prod VALUES
     (16, '2839.90.20', 1.1437),
     (16, '7114.11.00', 0.5209),
     (16, '8430.69.1', 0.2758),
-    (16, '3004.90.94', 2.4478)
-ON CONFLICT DO NOTHING;
+    (16, '3004.90.94', 2.4478);
 
 INSERT INTO relatorio_serv VALUES
     (16, '1.1409.22.00', '2025-02-17T00:44:33', 0.0966),
     (16, '1.1409', '2025-02-07T09:20:45', 0.0972),
     (16, '1.0506.00.00', '2025-02-07T23:17:59', 0.3544),
-    (16, '1.0401.17.90', '2025-02-24T07:24:54', 0.3581)
-ON CONFLICT DO NOTHING;
+    (16, '1.0401.17.90', '2025-02-24T07:24:54', 0.3581);
 
 INSERT INTO relatorio VALUES
-    (17, '2026-01-04', NULL, '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (17, '2026-01-04', NULL, '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (17, '8445.19.23', 0.2667),
@@ -2785,19 +4544,16 @@ INSERT INTO relatorio_prod VALUES
     (17, '3004.39.82', 0.0355),
     (17, '8521.10.8', 0.1703),
     (17, '8207.19.90', 0.15),
-    (17, '8431.49.21', 0.0326)
-ON CONFLICT DO NOTHING;
+    (17, '8431.49.21', 0.0326);
 
 INSERT INTO relatorio_serv VALUES
     (17, '1.1402.11.00', '2026-02-20T09:12:15', 0.0332),
     (17, '1.0504.11.00', '2026-02-08T07:43:23', 0.077),
     (17, '1.1703.2', '2026-02-15T08:31:50', 0.0339),
-    (17, '1.2101.10.00', '2026-02-06T02:19:42', 0.0074)
-ON CONFLICT DO NOTHING;
+    (17, '1.2101.10.00', '2026-02-06T02:19:42', 0.0074);
 
 INSERT INTO relatorio VALUES
-    (18, '2025-10-23', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (18, '2025-10-23', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (18, '0802.11.00', 5.7474),
@@ -2810,17 +4566,14 @@ INSERT INTO relatorio_prod VALUES
     (18, '8430.41.20', 0.1722),
     (18, '5603.11.40', 0.0179),
     (18, '2909.19.90', 0.5482),
-    (18, '8412.10.00', 0.0839)
-ON CONFLICT DO NOTHING;
+    (18, '8412.10.00', 0.0839);
 
 INSERT INTO relatorio VALUES
-    (19, '2026-01-09', '2026-04-04', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (19, '2026-01-09', '2026-04-04', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (19, '2926.90.24', 0.2713),
-    (19, '6902.10.19', 0.6846)
-ON CONFLICT DO NOTHING;
+    (19, '6902.10.19', 0.6846);
 
 INSERT INTO relatorio_serv VALUES
     (19, '1.1109.30.00', '2026-02-04T23:13:33', 0.0869),
@@ -2849,12 +4602,10 @@ INSERT INTO relatorio_serv VALUES
     (19, '1.1002.20.00', '2026-02-15T03:38:27', 0.222),
     (19, '1.2405.12.00', '2026-02-26T00:32:24', 0.0667),
     (19, '1.2001.50.00', '2026-02-02T14:04:20', 0.1494),
-    (19, '1.0501.24.21', '2026-02-14T07:56:52', 0.1208)
-ON CONFLICT DO NOTHING;
+    (19, '1.0501.24.21', '2026-02-14T07:56:52', 0.1208);
 
 INSERT INTO relatorio VALUES
-    (20, '2024-07-25', '2026-04-30', '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (20, '2024-07-25', '2026-04-30', '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (20, '3006.92.00', 0.5412),
@@ -2866,8 +4617,7 @@ INSERT INTO relatorio_prod VALUES
     (20, '2602.00.90', 1.9085),
     (20, '2905.19.21', 0.3755),
     (20, '2904.10.19', 0.0163),
-    (20, '0511.99.99', 1.4158)
-ON CONFLICT DO NOTHING;
+    (20, '0511.99.99', 1.4158);
 
 INSERT INTO relatorio_serv VALUES
     (20, '1.2003.29.00', '2024-08-06T16:18:41', 5.8093),
@@ -2881,12 +4631,10 @@ INSERT INTO relatorio_serv VALUES
     (20, '1.1502.20.00', '2024-08-02T12:41:58', 0.2556),
     (20, '1.0501.21.20', '2024-08-16T22:59:11', 0.1308),
     (20, '1.0901.31.00', '2024-08-16T22:14:52', 1.7542),
-    (20, '1.0504.44.00', '2024-08-24T09:44:34', 1.9279)
-ON CONFLICT DO NOTHING;
+    (20, '1.0504.44.00', '2024-08-24T09:44:34', 1.9279);
 
 INSERT INTO relatorio VALUES
-    (21, '2024-06-11', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (21, '2024-06-11', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (21, '3824.84.00', 2.0128),
@@ -2900,24 +4648,20 @@ INSERT INTO relatorio_prod VALUES
     (21, '2930.40.90', 0.2217),
     (21, '8542.39.31', 0.4343),
     (21, '3004.39.15', 1.7934),
-    (21, '2930.90.11', 0.9108)
-ON CONFLICT DO NOTHING;
+    (21, '2930.90.11', 0.9108);
 
 INSERT INTO relatorio_serv VALUES
     (21, '1.1805.31.00', '2024-07-07T07:32:03', 1.6674),
     (21, '1.0601.90.00', '2024-07-27T19:04:58', 3.5927),
-    (21, '1.1106.4', '2024-07-17T09:53:02', 0.9323)
-ON CONFLICT DO NOTHING;
+    (21, '1.1106.4', '2024-07-17T09:53:02', 0.9323);
 
 INSERT INTO relatorio VALUES
-    (22, '2021-11-30', NULL, '75.893.062', '0001-33', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (22, '2021-11-30', NULL, '75.893.062', '0001-33', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (22, '2915.39.51', 0.1497),
     (22, '9012.90.10', 0.0754),
-    (22, '8425.31.10', 0.1489)
-ON CONFLICT DO NOTHING;
+    (22, '8425.31.10', 0.1489);
 
 INSERT INTO relatorio_serv VALUES
     (22, '1.2001.3', '2021-12-08T02:18:07', 0.1601),
@@ -2933,18 +4677,15 @@ INSERT INTO relatorio_serv VALUES
     (22, '1.2402.20.00', '2021-12-14T09:28:11', 0.2055),
     (22, '1.1101.20.00', '2021-12-02T20:14:31', 0.1723),
     (22, '1.0105.22.00', '2021-12-28T01:28:57', 0.118),
-    (22, '1.0608.20.00', '2021-12-12T15:05:04', 0.2261)
-ON CONFLICT DO NOTHING;
+    (22, '1.0608.20.00', '2021-12-12T15:05:04', 0.2261);
 
 INSERT INTO relatorio VALUES
-    (23, '2026-01-09', '2026-03-03', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (23, '2026-01-09', '2026-03-03', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (23, '8806.29.00', 0.5219),
     (23, '9025.19.10', 0.2209),
-    (23, '2907.19.90', 0.3571)
-ON CONFLICT DO NOTHING;
+    (23, '2907.19.90', 0.3571);
 
 INSERT INTO relatorio_serv VALUES
     (23, '1.1805.2', '2026-02-11T12:47:28', 0.5295),
@@ -2959,12 +4700,10 @@ INSERT INTO relatorio_serv VALUES
     (23, '1.1405.60.00', '2026-02-22T18:03:34', 0.7711),
     (23, '1.0504.32.00', '2026-02-27T15:12:21', 0.2644),
     (23, '1.1103.36.20', '2026-02-17T21:16:29', 0.0156),
-    (23, '1.0102.20.00', '2026-02-06T22:13:41', 0.3618)
-ON CONFLICT DO NOTHING;
+    (23, '1.0102.20.00', '2026-02-06T22:13:41', 0.3618);
 
 INSERT INTO relatorio VALUES
-    (24, '2025-12-23', '2026-04-16', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (24, '2025-12-23', '2026-04-16', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (24, '2931.41.00', 0.3165),
@@ -2977,12 +4716,10 @@ INSERT INTO relatorio_prod VALUES
     (24, '2909.49.29', 0.0162),
     (24, '8716.40.00', 0.8641),
     (24, '3808.93.33', 0.0654),
-    (24, '8511.50.10', 0.1125)
-ON CONFLICT DO NOTHING;
+    (24, '8511.50.10', 0.1125);
 
 INSERT INTO relatorio VALUES
-    (25, '2024-12-08', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (25, '2024-12-08', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (25, '2937.29.39', 0.689),
@@ -2998,19 +4735,16 @@ INSERT INTO relatorio_prod VALUES
     (25, '8527.12.00', 0.0019),
     (25, '8517.62.29', 0.0001),
     (25, '2931.49.16', 0.045),
-    (25, '7004.20.00', 0.0522)
-ON CONFLICT DO NOTHING;
+    (25, '7004.20.00', 0.0522);
 
 INSERT INTO relatorio_serv VALUES
     (25, '1.1805.39.00', '2025-01-23T02:56:05', 0.0629),
     (25, '1.0901.51.29', '2025-01-05T13:54:48', 0.0),
     (25, '1.1103.39.00', '2025-01-18T08:42:30', 0.0021),
-    (25, '1.1107.39.00', '2025-01-14T19:44:32', 0.0139)
-ON CONFLICT DO NOTHING;
+    (25, '1.1107.39.00', '2025-01-14T19:44:32', 0.0139);
 
 INSERT INTO relatorio VALUES
-    (26, '2024-08-05', '2026-02-22', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (26, '2024-08-05', '2026-02-22', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (26, '5205.43.00', 1.2962),
@@ -3025,8 +4759,7 @@ INSERT INTO relatorio_prod VALUES
     (26, '2918.99.94', 0.0116),
     (26, '9018.39.21', 0.0067),
     (26, '4820.30.00', 0.084),
-    (26, '8445.19.23', 0.0278)
-ON CONFLICT DO NOTHING;
+    (26, '8445.19.23', 0.0278);
 
 INSERT INTO relatorio_serv VALUES
     (26, '1.1802.40.00', '2024-09-29T04:36:28', 2.3909),
@@ -3042,12 +4775,10 @@ INSERT INTO relatorio_serv VALUES
     (26, '1.2205.1', '2024-09-18T14:53:12', 0.0202),
     (26, '1.0801', '2024-09-02T11:26:59', 0.051),
     (26, '1.1403.23.00', '2024-09-21T07:01:52', 0.0951),
-    (26, '1.0502.34.59', '2024-09-27T10:32:17', 0.1418)
-ON CONFLICT DO NOTHING;
+    (26, '1.0502.34.59', '2024-09-27T10:32:17', 0.1418);
 
 INSERT INTO relatorio VALUES
-    (27, '2024-04-08', '2026-02-12', '01.274.895', '0001-23', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (27, '2024-04-08', '2026-02-12', '01.274.895', '0001-23', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (27, '7403.11.00', 0.2208),
@@ -3066,18 +4797,15 @@ INSERT INTO relatorio_prod VALUES
     (27, '7213.10.00', 0.9184),
     (27, '7601.20.00', 0.2075),
     (27, '6208.19.00', 0.308),
-    (27, '6802.93.10', 0.2883)
-ON CONFLICT DO NOTHING;
+    (27, '6802.93.10', 0.2883);
 
 INSERT INTO relatorio_serv VALUES
     (27, '1.2501.2', '2024-05-07T20:12:41', 0.2123),
     (27, '1.1001.1', '2024-05-26T13:38:30', 0.7033),
-    (27, '1.0502.34.5', '2024-05-27T01:14:50', 0.7852)
-ON CONFLICT DO NOTHING;
+    (27, '1.0502.34.5', '2024-05-27T01:14:50', 0.7852);
 
 INSERT INTO relatorio VALUES
-    (28, '2023-11-06', NULL, '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (28, '2023-11-06', NULL, '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (28, '3701.30.29', 1.6157),
@@ -3085,8 +4813,7 @@ INSERT INTO relatorio_prod VALUES
     (28, '1517.10.00', 4.1105),
     (28, '6901.00.00', 2.7688),
     (28, '8308.10.00', 2.0092),
-    (28, '2940.00.29', 3.7825)
-ON CONFLICT DO NOTHING;
+    (28, '2940.00.29', 3.7825);
 
 INSERT INTO relatorio_serv VALUES
     (28, '1.1703.3', '2023-12-03T06:22:28', 2.0936),
@@ -3101,12 +4828,10 @@ INSERT INTO relatorio_serv VALUES
     (28, '1.0106.31.00', '2023-12-30T03:10:58', 3.2704),
     (28, '1.1401.31.00', '2023-12-02T20:20:18', 3.5316),
     (28, '1.1501.20.00', '2023-12-05T05:37:03', 1.4297),
-    (28, '1.0102.51.00', '2023-12-07T09:11:16', 1.2852)
-ON CONFLICT DO NOTHING;
+    (28, '1.0102.51.00', '2023-12-07T09:11:16', 1.2852);
 
 INSERT INTO relatorio VALUES
-    (29, '2024-11-01', '2026-04-12', '39.605.871', '0001-83', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (29, '2024-11-01', '2026-04-12', '39.605.871', '0001-83', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (29, '2930.90.72', 0.0352),
@@ -3125,23 +4850,19 @@ INSERT INTO relatorio_prod VALUES
     (29, '3920.61.00', 0.0352),
     (29, '6115.99.00', 0.142),
     (29, '2931.46.00', 0.2786),
-    (29, '2932.19.20', 0.1542)
-ON CONFLICT DO NOTHING;
+    (29, '2932.19.20', 0.1542);
 
 INSERT INTO relatorio_serv VALUES
     (29, '1.1806.8', '2024-12-07T18:35:08', 0.0045),
-    (29, '1.2301.12.00', '2024-12-05T22:09:08', 0.0285)
-ON CONFLICT DO NOTHING;
+    (29, '1.2301.12.00', '2024-12-05T22:09:08', 0.0285);
 
 INSERT INTO relatorio VALUES
-    (30, '2023-09-20', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (30, '2023-09-20', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (30, '2934.99.29', 0.0697),
     (30, '2822.00.90', 0.0014),
-    (30, '7210.69.1', 0.002)
-ON CONFLICT DO NOTHING;
+    (30, '7210.69.1', 0.002);
 
 INSERT INTO relatorio_serv VALUES
     (30, '1.1401.12.00', '2023-10-22T18:18:24', 4.4372),
@@ -3153,12 +4874,10 @@ INSERT INTO relatorio_serv VALUES
     (30, '1.0401.1', '2023-10-06T08:49:40', 0.3226),
     (30, '1.0402.11', '2023-10-14T00:45:21', 0.0896),
     (30, '1.0602.2', '2023-10-23T19:33:07', 0.1998),
-    (30, '1.08', '2023-10-24T13:04:58', 0.003)
-ON CONFLICT DO NOTHING;
+    (30, '1.08', '2023-10-24T13:04:58', 0.003);
 
 INSERT INTO relatorio VALUES
-    (31, '2023-11-18', NULL, '48.912.037', '0001-48', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (31, '2023-11-18', NULL, '48.912.037', '0001-48', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (31, '2917.39.1', 1.7077),
@@ -3175,23 +4894,19 @@ INSERT INTO relatorio_prod VALUES
     (31, '5509.52.00', 0.0307),
     (31, '9403.20.90', 0.1085),
     (31, '2922.50.32', 0.0102),
-    (31, '1213.00.00', 0.0056)
-ON CONFLICT DO NOTHING;
+    (31, '1213.00.00', 0.0056);
 
 INSERT INTO relatorio_serv VALUES
     (31, '1.1701.21.00', '2023-12-02T00:20:45', 0.7933),
     (31, '1.0906.30.00', '2023-12-30T18:25:29', 0.0017),
-    (31, '1.0904.35.00', '2023-12-16T18:30:56', 0.0242)
-ON CONFLICT DO NOTHING;
+    (31, '1.0904.35.00', '2023-12-16T18:30:56', 0.0242);
 
 INSERT INTO relatorio VALUES
-    (32, '2022-06-18', '2024-09-27', '28.659.130', '0001-07', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (32, '2022-06-18', '2024-09-27', '28.659.130', '0001-07', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (32, '8443.99.21', 0.1798),
-    (32, '8409.91.11', 0.3407)
-ON CONFLICT DO NOTHING;
+    (32, '8409.91.11', 0.3407);
 
 INSERT INTO relatorio_serv VALUES
     (32, '1.1405.50.00', '2022-07-12T05:40:55', 0.1071),
@@ -3227,16 +4942,13 @@ INSERT INTO relatorio_serv VALUES
     (32, '1.0403.39.00', '2022-07-15T04:18:47', 0.3907),
     (32, '1.0106.22.00', '2022-07-15T07:08:34', 0.1176),
     (32, '1.0106.13.00', '2022-07-14T02:19:18', 0.3496),
-    (32, '1.0502.23.20', '2022-07-25T23:16:28', 0.0694)
-ON CONFLICT DO NOTHING;
+    (32, '1.0502.23.20', '2022-07-25T23:16:28', 0.0694);
 
 INSERT INTO relatorio VALUES
-    (33, '2023-05-14', '2026-04-15', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (33, '2023-05-14', '2026-04-15', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (33, '2933.79.10', 0.5215)
-ON CONFLICT DO NOTHING;
+    (33, '2933.79.10', 0.5215);
 
 INSERT INTO relatorio_serv VALUES
     (33, '1.1405.11.00', '2023-06-11T23:13:50', 3.4327),
@@ -3259,12 +4971,10 @@ INSERT INTO relatorio_serv VALUES
     (33, '1.0903.22.00', '2023-06-04T01:59:03', 0.0143),
     (33, '1.2101.21.00', '2023-06-29T16:19:06', 0.3212),
     (33, '1.0502.32', '2023-06-08T15:31:14', 0.0054),
-    (33, '1.0501.23.20', '2023-06-02T15:30:22', 0.1443)
-ON CONFLICT DO NOTHING;
+    (33, '1.0501.23.20', '2023-06-02T15:30:22', 0.1443);
 
 INSERT INTO relatorio VALUES
-    (34, '2021-10-06', NULL, '71.498.635', '0001-06', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (34, '2021-10-06', NULL, '71.498.635', '0001-06', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (34, '8413.60.19', 0.5472),
@@ -3278,17 +4988,14 @@ INSERT INTO relatorio_prod VALUES
     (34, '5007.10.90', 0.1203),
     (34, '2941.90.9', 0.6744),
     (34, '9101.99.00', 0.0009),
-    (34, '3201.90.11', 1.3378)
-ON CONFLICT DO NOTHING;
+    (34, '3201.90.11', 1.3378);
 
 INSERT INTO relatorio_serv VALUES
     (34, '1.0903.34.00', '2021-11-10T23:19:57', 0.2621),
-    (34, '1.0402.3', '2021-11-04T23:53:42', 1.558)
-ON CONFLICT DO NOTHING;
+    (34, '1.0402.3', '2021-11-04T23:53:42', 1.558);
 
 INSERT INTO relatorio VALUES
-    (35, '2025-11-01', '2026-02-27', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (35, '2025-11-01', '2026-02-27', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (35, '3209.90.1', 0.0561),
@@ -3307,12 +5014,10 @@ INSERT INTO relatorio_prod VALUES
     (35, '7318.15.00', 0.2791),
     (35, '3907.10.9', 0.8528),
     (35, '7208.27.90', 1.5113),
-    (35, '6403.20.00', 0.4735)
-ON CONFLICT DO NOTHING;
+    (35, '6403.20.00', 0.4735);
 
 INSERT INTO relatorio VALUES
-    (36, '2023-06-09', '2025-01-21', '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (36, '2023-06-09', '2025-01-21', '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (36, '9305.20.00', 0.5385),
@@ -3335,18 +5040,15 @@ INSERT INTO relatorio_prod VALUES
     (36, '4003.00.00', 2.1534),
     (36, '5208.21.00', 0.4433),
     (36, '2933.72.20', 0.5329),
-    (36, '4822.10.00', 1.3591)
-ON CONFLICT DO NOTHING;
+    (36, '4822.10.00', 1.3591);
 
 INSERT INTO relatorio_serv VALUES
     (36, '1.2403.2', '2023-07-14T18:30:34', 0.8277),
     (36, '1.0501.22.20', '2023-07-03T14:08:02', 0.5483),
-    (36, '1.0401.15.20', '2023-07-14T22:09:28', 0.5795)
-ON CONFLICT DO NOTHING;
+    (36, '1.0401.15.20', '2023-07-14T22:09:28', 0.5795);
 
 INSERT INTO relatorio VALUES
-    (37, '2021-06-26', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (37, '2021-06-26', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (37, '2916.32.10', 1.5255),
@@ -3355,28 +5057,24 @@ INSERT INTO relatorio_prod VALUES
     (37, '6903.20.10', 0.0005),
     (37, '8428.90.30', 0.0681),
     (37, '3701.10.29', 0.0649),
-    (37, '8535.30.23', 0.0023)
-ON CONFLICT DO NOTHING;
+    (37, '8535.30.23', 0.0023);
 
 INSERT INTO relatorio_serv VALUES
     (37, '1.2505.20.00', '2021-07-04T15:23:42', 2.5),
     (37, '1.1703.22.00', '2021-07-08T14:40:17', 0.5925),
     (37, '1.0503.2', '2021-07-05T02:52:52', 0.0667),
     (37, '1.0401.4', '2021-07-14T04:20:39', 0.036),
-    (37, '1.0903.34.00', '2021-07-12T18:06:56', 0.0403)
-ON CONFLICT DO NOTHING;
+    (37, '1.0903.34.00', '2021-07-12T18:06:56', 0.0403);
 
 INSERT INTO relatorio VALUES
-    (38, '2022-10-07', '2024-05-13', '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (38, '2022-10-07', '2024-05-13', '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (38, '0511.99.9', 1.0384),
     (38, '8409.99.30', 0.0014),
     (38, '2916.19.23', 0.2039),
     (38, '9025.19.10', 0.0566),
-    (38, '8541.10.11', 0.0107)
-ON CONFLICT DO NOTHING;
+    (38, '8541.10.11', 0.0107);
 
 INSERT INTO relatorio_serv VALUES
     (38, '1.1404.1', '2022-11-29T14:09:22', 1.145),
@@ -3393,12 +5091,10 @@ INSERT INTO relatorio_serv VALUES
     (38, '1.0401.19.00', '2022-11-15T12:02:04', 0.0039),
     (38, '1.0901.21.00', '2022-11-20T21:33:35', 0.0001),
     (38, '1.1806.31.00', '2022-11-29T11:41:43', 0.0176),
-    (38, '1.0801.10.00', '2022-11-21T08:04:10', 0.0516)
-ON CONFLICT DO NOTHING;
+    (38, '1.0801.10.00', '2022-11-21T08:04:10', 0.0516);
 
 INSERT INTO relatorio VALUES
-    (39, '2024-09-09', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (39, '2024-09-09', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (39, '9018.49.19', 0.2762),
@@ -3407,8 +5103,7 @@ INSERT INTO relatorio_prod VALUES
     (39, '2931.41.00', 0.7985),
     (39, '3906.90.62', 0.0815),
     (39, '3824.99.82', 0.3039),
-    (39, '6101.90.90', 0.7549)
-ON CONFLICT DO NOTHING;
+    (39, '6101.90.90', 0.7549);
 
 INSERT INTO relatorio_serv VALUES
     (39, '1.1403.22.22', '2024-10-07T05:35:09', 0.1074),
@@ -3418,20 +5113,17 @@ INSERT INTO relatorio_serv VALUES
     (39, '1.1502.10.00', '2024-10-06T06:50:48', 0.1256),
     (39, '1.0909', '2024-10-10T06:57:24', 0.048),
     (39, '1.0602.33.00', '2024-10-24T03:33:51', 0.1923),
-    (39, '1.2205.13.00', '2024-10-03T18:28:07', 0.1773)
-ON CONFLICT DO NOTHING;
+    (39, '1.2205.13.00', '2024-10-03T18:28:07', 0.1773);
 
 INSERT INTO relatorio VALUES
-    (40, '2024-06-25', '2025-08-06', '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (40, '2024-06-25', '2025-08-06', '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (40, '9025.11.91', 0.4549),
     (40, '8418.29.00', 1.1889),
     (40, '3004.39.99', 2.5835),
     (40, '8467.21.00', 1.3575),
-    (40, '4810.31.10', 1.4665)
-ON CONFLICT DO NOTHING;
+    (40, '4810.31.10', 1.4665);
 
 INSERT INTO relatorio_serv VALUES
     (40, '1.0101.2', '2024-07-24T09:58:34', 0.6601),
@@ -3444,17 +5136,14 @@ INSERT INTO relatorio_serv VALUES
     (40, '1.1403.30.00', '2024-07-30T14:59:54', 0.4423),
     (40, '1.2205.12.00', '2024-07-05T04:44:24', 1.2003),
     (40, '1.0901.5', '2024-07-03T22:23:18', 0.447),
-    (40, '1.0102.12.00', '2024-07-04T19:10:34', 0.5516)
-ON CONFLICT DO NOTHING;
+    (40, '1.0102.12.00', '2024-07-04T19:10:34', 0.5516);
 
 INSERT INTO relatorio VALUES
-    (41, '2022-09-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (41, '2022-09-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (41, '0303.55.00', 0.5084),
-    (41, '3003.90.79', 0.515)
-ON CONFLICT DO NOTHING;
+    (41, '3003.90.79', 0.515);
 
 INSERT INTO relatorio_serv VALUES
     (41, '1.2101.22.00', '2022-10-11T03:27:41', 0.3246),
@@ -3494,12 +5183,10 @@ INSERT INTO relatorio_serv VALUES
     (41, '1.0106.31.00', '2022-10-17T11:42:57', 0.1174),
     (41, '1.0504.43.00', '2022-10-03T17:19:27', 0.0185),
     (41, '1.2301.96.00', '2022-10-04T20:53:53', 0.0126),
-    (41, '1.0904.39.00', '2022-10-16T19:44:12', 0.1297)
-ON CONFLICT DO NOTHING;
+    (41, '1.0904.39.00', '2022-10-16T19:44:12', 0.1297);
 
 INSERT INTO relatorio VALUES
-    (42, '2024-02-03', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (42, '2024-02-03', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (42, '8542.32.21', 0.7491),
@@ -3510,12 +5197,10 @@ INSERT INTO relatorio_prod VALUES
     (42, '4810.19.10', 0.0164),
     (42, '8517.62.94', 0.0471),
     (42, '2932.99.99', 0.0127),
-    (42, '3503.00.1', 0.0056)
-ON CONFLICT DO NOTHING;
+    (42, '3503.00.1', 0.0056);
 
 INSERT INTO relatorio VALUES
-    (43, '2026-02-01', NULL, '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (43, '2026-02-01', NULL, '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (43, '3909.20.19', 3.9313),
@@ -3536,18 +5221,15 @@ INSERT INTO relatorio_prod VALUES
     (43, '9303.10.00', 3.3495),
     (43, '3909.20.1', 0.8979),
     (43, '5502.10.00', 1.0981),
-    (43, '6805.30.10', 0.5169)
-ON CONFLICT DO NOTHING;
+    (43, '6805.30.10', 0.5169);
 
 INSERT INTO relatorio_serv VALUES
     (43, '1.0901.51.21', '2026-03-30T16:47:58', 0.1711),
     (43, '1.1107.90.00', '2026-03-15T00:07:31', 1.0304),
-    (43, '1.0502.24.5', '2026-03-28T05:48:43', 0.491)
-ON CONFLICT DO NOTHING;
+    (43, '1.0502.24.5', '2026-03-28T05:48:43', 0.491);
 
 INSERT INTO relatorio VALUES
-    (44, '2024-12-18', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (44, '2024-12-18', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (44, '4010.12.00', 1.69),
@@ -3576,19 +5258,16 @@ INSERT INTO relatorio_prod VALUES
     (44, '2934.91.11', 0.1256),
     (44, '5301.10.00', 0.0916),
     (44, '6815.99.1', 0.0711),
-    (44, '8701.30.00', 0.0713)
-ON CONFLICT DO NOTHING;
+    (44, '8701.30.00', 0.0713);
 
 INSERT INTO relatorio_serv VALUES
     (44, '1.2001.34.10', '2025-01-30T18:09:55', 0.8734),
     (44, '1.0901.52.10', '2025-01-17T00:41:42', 0.002),
     (44, '1.23', '2025-01-26T00:19:35', 0.0337),
-    (44, '1.1301.10.00', '2025-01-21T15:01:47', 0.0463)
-ON CONFLICT DO NOTHING;
+    (44, '1.1301.10.00', '2025-01-21T15:01:47', 0.0463);
 
 INSERT INTO relatorio VALUES
-    (45, '2024-12-27', '2025-04-04', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (45, '2024-12-27', '2025-04-04', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (45, '8483.40.90', 0.0559),
@@ -3609,12 +5288,10 @@ INSERT INTO relatorio_prod VALUES
     (45, '8413.70.10', 0.1371),
     (45, '0402.29.30', 0.5523),
     (45, '8525.81.00', 1.0648),
-    (45, '8471.50.10', 0.1596)
-ON CONFLICT DO NOTHING;
+    (45, '8471.50.10', 0.1596);
 
 INSERT INTO relatorio VALUES
-    (46, '2024-10-15', '2026-02-07', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (46, '2024-10-15', '2026-02-07', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (46, '9018.19.80', 0.1662),
@@ -3637,22 +5314,18 @@ INSERT INTO relatorio_prod VALUES
     (46, '6804.22.11', 0.029),
     (46, '3920.10.9', 0.0213),
     (46, '7406.10.10', 0.1557),
-    (46, '2829.90.1', 0.0183)
-ON CONFLICT DO NOTHING;
+    (46, '2829.90.1', 0.0183);
 
 INSERT INTO relatorio_serv VALUES
     (46, '1.1103.3', '2024-11-05T18:44:49', 0.1005),
-    (46, '1.1103.32.00', '2024-11-11T11:02:07', 0.1794)
-ON CONFLICT DO NOTHING;
+    (46, '1.1103.32.00', '2024-11-11T11:02:07', 0.1794);
 
 INSERT INTO relatorio VALUES
-    (47, '2023-10-24', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (47, '2023-10-24', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (47, '6115.30.10', 0.0923),
-    (47, '6805.30.20', 0.0005)
-ON CONFLICT DO NOTHING;
+    (47, '6805.30.20', 0.0005);
 
 INSERT INTO relatorio_serv VALUES
     (47, '1.2403.32.00', '2023-11-28T05:12:02', 0.33),
@@ -3677,18 +5350,15 @@ INSERT INTO relatorio_serv VALUES
     (47, '1.2301.2', '2023-11-15T11:58:46', 0.0196),
     (47, '1.1403.21.20', '2023-11-07T00:28:38', 0.0089),
     (47, '1.2205.11.00', '2023-11-04T20:37:14', 0.004),
-    (47, '1.0901.51.12', '2023-11-07T22:38:07', 0.0118)
-ON CONFLICT DO NOTHING;
+    (47, '1.0901.51.12', '2023-11-07T22:38:07', 0.0118);
 
 INSERT INTO relatorio VALUES
-    (48, '2023-10-13', '2025-01-01', '75.893.062', '0001-33', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (48, '2023-10-13', '2025-01-01', '75.893.062', '0001-33', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (48, '2915.39.63', 0.2653),
     (48, '4010.32.00', 0.1272),
-    (48, '7901.12.90', 0.6671)
-ON CONFLICT DO NOTHING;
+    (48, '7901.12.90', 0.6671);
 
 INSERT INTO relatorio_serv VALUES
     (48, '1.0504.13.00', '2023-11-25T14:24:36', 0.3583),
@@ -3704,12 +5374,10 @@ INSERT INTO relatorio_serv VALUES
     (48, '1.0503', '2023-11-28T23:06:42', 0.4714),
     (48, '1.0906.11.00', '2023-11-28T09:35:57', 0.6121),
     (48, '1.1404.41.00', '2023-11-29T15:32:25', 0.3733),
-    (48, '1.2203.20.00', '2023-11-04T02:38:12', 0.1988)
-ON CONFLICT DO NOTHING;
+    (48, '1.2203.20.00', '2023-11-04T02:38:12', 0.1988);
 
 INSERT INTO relatorio VALUES
-    (49, '2024-03-01', '2025-12-27', '79.821.563', '0001-00', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (49, '2024-03-01', '2025-12-27', '79.821.563', '0001-00', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (49, '8531.10.10', 2.9489),
@@ -3722,8 +5390,7 @@ INSERT INTO relatorio_prod VALUES
     (49, '3002.12.33', 0.0049),
     (49, '3501.10.00', 0.1172),
     (49, '8443.99.11', 0.2744),
-    (49, '8516.33.00', 0.0088)
-ON CONFLICT DO NOTHING;
+    (49, '8516.33.00', 0.0088);
 
 INSERT INTO relatorio_serv VALUES
     (49, '1.1105.59.00', '2024-04-13T11:29:54', 5.4953),
@@ -3731,17 +5398,14 @@ INSERT INTO relatorio_serv VALUES
     (49, '1.1405', '2024-04-18T07:36:57', 0.2476),
     (49, '1.1402.31.00', '2024-04-17T22:44:43', 0.043),
     (49, '1.1304.00.00', '2024-04-11T14:50:27', 0.2984),
-    (49, '1.1107.40.00', '2024-04-08T14:07:12', 0.0512)
-ON CONFLICT DO NOTHING;
+    (49, '1.1107.40.00', '2024-04-08T14:07:12', 0.0512);
 
 INSERT INTO relatorio VALUES
-    (50, '2023-02-23', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (50, '2023-02-23', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (50, '8462.69.00', 0.3402),
-    (50, '3811.29.90', 0.1516)
-ON CONFLICT DO NOTHING;
+    (50, '3811.29.90', 0.1516);
 
 INSERT INTO relatorio_serv VALUES
     (50, '1.1303.20.00', '2023-03-16T21:18:03', 0.0643),
@@ -3769,12 +5433,10 @@ INSERT INTO relatorio_serv VALUES
     (50, '1.0801.10.00', '2023-03-15T08:52:51', 0.1295),
     (50, '1.1105.90.00', '2023-03-27T07:31:40', 0.0396),
     (50, '1.1805.12.00', '2023-03-28T13:36:28', 0.0301),
-    (50, '1.1301.30.00', '2023-03-15T14:23:53', 0.0397)
-ON CONFLICT DO NOTHING;
+    (50, '1.1301.30.00', '2023-03-15T14:23:53', 0.0397);
 
 INSERT INTO relatorio VALUES
-    (51, '2021-07-23', NULL, '79.821.563', '0001-99', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (51, '2021-07-23', NULL, '79.821.563', '0001-99', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (51, '6103.32.00', 0.0795),
@@ -3790,8 +5452,7 @@ INSERT INTO relatorio_prod VALUES
     (51, '7208.37.00', 0.0159),
     (51, '4202.22.20', 0.0125),
     (51, '2903.99.29', 0.4629),
-    (51, '7614.10.10', 0.0966)
-ON CONFLICT DO NOTHING;
+    (51, '7614.10.10', 0.0966);
 
 INSERT INTO relatorio_serv VALUES
     (51, '1.0908.00.00', '2021-08-28T14:07:08', 0.0433),
@@ -3800,12 +5461,10 @@ INSERT INTO relatorio_serv VALUES
     (51, '1.1403.23.00', '2021-08-08T11:59:30', 0.3302),
     (51, '1.0404', '2021-08-11T02:19:07', 0.1538),
     (51, '1.0502.1', '2021-08-04T21:34:28', 0.371),
-    (51, '1.0502.11', '2021-08-27T15:29:34', 0.0797)
-ON CONFLICT DO NOTHING;
+    (51, '1.0502.11', '2021-08-27T15:29:34', 0.0797);
 
 INSERT INTO relatorio VALUES
-    (52, '2025-01-16', '2026-01-29', '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (52, '2025-01-16', '2026-01-29', '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (52, '8542.32.2', 0.7535),
@@ -3831,17 +5490,14 @@ INSERT INTO relatorio_prod VALUES
     (52, '5107.10.1', 0.0041),
     (52, '2924.29.20', 0.0188),
     (52, '8415.90.90', 0.0289),
-    (52, '5801.10.00', 0.014)
-ON CONFLICT DO NOTHING;
+    (52, '5801.10.00', 0.014);
 
 INSERT INTO relatorio_serv VALUES
     (52, '1.1403.23.00', '2025-02-18T10:38:22', 0.2847),
-    (52, '1.1403.21', '2025-02-01T19:54:11', 0.0133)
-ON CONFLICT DO NOTHING;
+    (52, '1.1403.21', '2025-02-01T19:54:11', 0.0133);
 
 INSERT INTO relatorio VALUES
-    (53, '2024-10-23', NULL, '79.821.563', '0001-99', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (53, '2024-10-23', NULL, '79.821.563', '0001-99', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (53, '8711.20.20', 0.0255),
@@ -3856,8 +5512,7 @@ INSERT INTO relatorio_prod VALUES
     (53, '1008.90.90', 0.0254),
     (53, '4419.11.00', 0.0879),
     (53, '7804.11.00', 0.0158),
-    (53, '0203.11.00', 0.0005)
-ON CONFLICT DO NOTHING;
+    (53, '0203.11.00', 0.0005);
 
 INSERT INTO relatorio_serv VALUES
     (53, '1.1801.1', '2024-11-26T00:04:48', 0.0228),
@@ -3866,12 +5521,10 @@ INSERT INTO relatorio_serv VALUES
     (53, '1.1001.30.00', '2024-11-17T14:57:19', 0.0609),
     (53, '1.0102.41.90', '2024-11-11T23:46:23', 0.2037),
     (53, '1.1801.21.00', '2024-11-18T16:40:27', 0.302),
-    (53, '1.0902.90.00', '2024-11-25T11:52:04', 0.0636)
-ON CONFLICT DO NOTHING;
+    (53, '1.0902.90.00', '2024-11-25T11:52:04', 0.0636);
 
 INSERT INTO relatorio VALUES
-    (54, '2024-02-08', '2025-10-16', '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (54, '2024-02-08', '2025-10-16', '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (54, '3006.93.00', 0.3502),
@@ -3880,8 +5533,7 @@ INSERT INTO relatorio_prod VALUES
     (54, '3907.10.41', 0.0903),
     (54, '6203.43.00', 0.234),
     (54, '8448.11.10', 0.4355),
-    (54, '4002.19.1', 0.1974)
-ON CONFLICT DO NOTHING;
+    (54, '4002.19.1', 0.1974);
 
 INSERT INTO relatorio_serv VALUES
     (54, '1.0102.41.10', '2024-03-25T06:25:41', 0.084),
@@ -3892,12 +5544,10 @@ INSERT INTO relatorio_serv VALUES
     (54, '1.2301.19.00', '2024-03-26T08:35:44', 0.1703),
     (54, '1.0605.90.00', '2024-03-02T16:01:49', 0.1393),
     (54, '1.1701.33.00', '2024-03-19T10:15:14', 0.3035),
-    (54, '1.2101.2', '2024-03-11T20:52:20', 0.3589)
-ON CONFLICT DO NOTHING;
+    (54, '1.2101.2', '2024-03-11T20:52:20', 0.3589);
 
 INSERT INTO relatorio VALUES
-    (55, '2025-03-30', '2026-03-02', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (55, '2025-03-30', '2026-03-02', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (55, '8418.61.00', 0.0159),
@@ -3927,17 +5577,14 @@ INSERT INTO relatorio_prod VALUES
     (55, '3004.20.95', 0.094),
     (55, '8442.40.20', 0.0502),
     (55, '2524.10.00', 0.0165),
-    (55, '6212.90.00', 0.1071)
-ON CONFLICT DO NOTHING;
+    (55, '6212.90.00', 0.1071);
 
 INSERT INTO relatorio_serv VALUES
     (55, '1.0503', '2025-04-11T01:03:15', 0.1753),
-    (55, '1.0501.25.00', '2025-04-15T12:42:57', 0.3167)
-ON CONFLICT DO NOTHING;
+    (55, '1.0501.25.00', '2025-04-15T12:42:57', 0.3167);
 
 INSERT INTO relatorio VALUES
-    (56, '2023-02-21', '2024-01-11', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (56, '2023-02-21', '2024-01-11', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (56, '4820.40.00', 0.0718),
@@ -3957,12 +5604,10 @@ INSERT INTO relatorio_prod VALUES
     (56, '6905.90.00', 0.1128),
     (56, '2934.20.10', 0.0824),
     (56, '8414.80.12', 0.035),
-    (56, '2933.91.81', 0.0438)
-ON CONFLICT DO NOTHING;
+    (56, '2933.91.81', 0.0438);
 
 INSERT INTO relatorio VALUES
-    (57, '2025-10-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (57, '2025-10-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (57, '2933.69.23', 7.5306),
@@ -3980,25 +5625,21 @@ INSERT INTO relatorio_prod VALUES
     (57, '2933.39.23', 9.1471),
     (57, '0207.14.33', 1.4346),
     (57, '8302.42.00', 2.6787),
-    (57, '3003.90.65', 1.8361)
-ON CONFLICT DO NOTHING;
+    (57, '3003.90.65', 1.8361);
 
 INSERT INTO relatorio_serv VALUES
     (57, '1.0502.14.90', '2025-11-17T21:42:30', 5.0123),
     (57, '1.2405.11.00', '2025-11-12T05:51:59', 1.0545),
     (57, '1.1001.2', '2025-11-06T13:52:28', 0.0785),
-    (57, '1.1406.33.00', '2025-11-05T17:00:38', 3.8242)
-ON CONFLICT DO NOTHING;
+    (57, '1.1406.33.00', '2025-11-05T17:00:38', 3.8242);
 
 INSERT INTO relatorio VALUES
-    (58, '2024-05-17', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (58, '2024-05-17', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (58, '9018.49.20', 0.0499),
     (58, '5604.90.2', 0.0163),
-    (58, '2306.49.00', 0.1745)
-ON CONFLICT DO NOTHING;
+    (58, '2306.49.00', 0.1745);
 
 INSERT INTO relatorio_serv VALUES
     (58, '1.0504.49.00', '2024-06-09T14:53:46', 0.0071),
@@ -4036,17 +5677,14 @@ INSERT INTO relatorio_serv VALUES
     (58, '1.2501.90.00', '2024-06-27T16:33:11', 0.1233),
     (58, '1.1802.30.00', '2024-06-28T11:32:59', 0.0453),
     (58, '1.2405.90.00', '2024-06-14T10:20:32', 0.0414),
-    (58, '1.0901.51.24', '2024-06-21T03:03:45', 0.1051)
-ON CONFLICT DO NOTHING;
+    (58, '1.0901.51.24', '2024-06-21T03:03:45', 0.1051);
 
 INSERT INTO relatorio VALUES
-    (59, '2024-11-17', '2025-04-24', '75.893.062', '0001-33', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (59, '2024-11-17', '2025-04-24', '75.893.062', '0001-33', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (59, '3204.12.20', 0.0092),
-    (59, '2939.80.90', 0.1863)
-ON CONFLICT DO NOTHING;
+    (59, '2939.80.90', 0.1863);
 
 INSERT INTO relatorio_serv VALUES
     (59, '1.0503.27.00', '2024-12-04T21:47:45', 0.2005),
@@ -4061,12 +5699,10 @@ INSERT INTO relatorio_serv VALUES
     (59, '1.1406.12.00', '2024-12-27T07:28:02', 0.1515),
     (59, '1.1403.21.20', '2024-12-03T08:55:16', 0.1143),
     (59, '1.1805.21.00', '2024-12-11T08:06:44', 0.1811),
-    (59, '1.1102.10.00', '2024-12-09T19:41:55', 0.2899)
-ON CONFLICT DO NOTHING;
+    (59, '1.1102.10.00', '2024-12-09T19:41:55', 0.2899);
 
 INSERT INTO relatorio VALUES
-    (60, '2023-10-28', '2025-06-22', '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (60, '2023-10-28', '2025-06-22', '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (60, '2009.19.00', 15.7027),
@@ -4096,23 +5732,19 @@ INSERT INTO relatorio_prod VALUES
     (60, '7606.12.30', 1.3348),
     (60, '5515.29.00', 0.1856),
     (60, '5311.00.00', 0.2057),
-    (60, '6006.34.10', 0.7878)
-ON CONFLICT DO NOTHING;
+    (60, '6006.34.10', 0.7878);
 
 INSERT INTO relatorio_serv VALUES
     (60, '1.2302.21.00', '2023-11-06T15:18:11', 6.8297),
     (60, '1.1506.10.00', '2023-11-22T04:54:43', 0.4335),
     (60, '1.0503.29.00', '2023-11-02T21:12:49', 0.0772),
-    (60, '1.2505.20.00', '2023-11-13T21:02:42', 0.1406)
-ON CONFLICT DO NOTHING;
+    (60, '1.2505.20.00', '2023-11-13T21:02:42', 0.1406);
 
 INSERT INTO relatorio VALUES
-    (61, '2025-10-08', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (61, '2025-10-08', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (61, '8471.60.54', 0.0108)
-ON CONFLICT DO NOTHING;
+    (61, '8471.60.54', 0.0108);
 
 INSERT INTO relatorio_serv VALUES
     (61, '1.1402', '2025-11-06T02:41:41', 0.1127),
@@ -4128,12 +5760,10 @@ INSERT INTO relatorio_serv VALUES
     (61, '1.0502.11', '2025-11-19T01:17:59', 0.016),
     (61, '1.1903.1', '2025-11-16T04:58:17', 0.0792),
     (61, '1.0104.00.00', '2025-11-02T18:02:53', 0.1753),
-    (61, '1.0602.2', '2025-11-02T02:32:28', 0.1283)
-ON CONFLICT DO NOTHING;
+    (61, '1.0602.2', '2025-11-02T02:32:28', 0.1283);
 
 INSERT INTO relatorio VALUES
-    (62, '2024-08-03', NULL, '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (62, '2024-08-03', NULL, '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (62, '8305.10.00', 0.2265),
@@ -4150,20 +5780,17 @@ INSERT INTO relatorio_prod VALUES
     (62, '2933.29.1', 0.2085),
     (62, '8402.11.00', 0.1274),
     (62, '0102.29.11', 0.0955),
-    (62, '2924.29.61', 0.2426)
-ON CONFLICT DO NOTHING;
+    (62, '2924.29.61', 0.2426);
 
 INSERT INTO relatorio_serv VALUES
     (62, '1.1806.81.00', '2024-09-28T07:11:25', 1.1653),
     (62, '1.1410', '2024-09-25T19:44:34', 0.6223),
     (62, '1.1108.90.00', '2024-09-24T11:39:23', 0.3143),
     (62, '1.04', '2024-09-13T09:47:57', 2.1846),
-    (62, '1.0503.21.00', '2024-09-19T01:34:44', 0.539)
-ON CONFLICT DO NOTHING;
+    (62, '1.0503.21.00', '2024-09-19T01:34:44', 0.539);
 
 INSERT INTO relatorio VALUES
-    (63, '2021-08-12', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (63, '2021-08-12', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (63, '8453.80.00', 0.0215),
@@ -4175,20 +5802,17 @@ INSERT INTO relatorio_prod VALUES
     (63, '8533.39.90', 0.0085),
     (63, '3002.49.94', 0.0187),
     (63, '1508.10.00', 0.0636),
-    (63, '2931.44.00', 0.1064)
-ON CONFLICT DO NOTHING;
+    (63, '2931.44.00', 0.1064);
 
 INSERT INTO relatorio_serv VALUES
     (63, '1.0502.11.30', '2021-09-16T02:14:51', 0.2523),
     (63, '1.0401.14.00', '2021-09-19T05:15:45', 0.0748),
     (63, '1.0401.16.10', '2021-09-13T16:13:20', 0.3408),
     (63, '1.0102.42.10', '2021-09-17T02:49:48', 0.1622),
-    (63, '1.1401.1', '2021-09-28T03:44:55', 0.1487)
-ON CONFLICT DO NOTHING;
+    (63, '1.1401.1', '2021-09-28T03:44:55', 0.1487);
 
 INSERT INTO relatorio VALUES
-    (64, '2024-07-26', '2025-12-29', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (64, '2024-07-26', '2025-12-29', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (64, '2603.00.90', 0.0214),
@@ -4217,17 +5841,14 @@ INSERT INTO relatorio_prod VALUES
     (64, '8540.60.10', 0.0526),
     (64, '3808.91.9', 0.0126),
     (64, '8440.10.90', 0.0412),
-    (64, '6901.00.00', 0.0791)
-ON CONFLICT DO NOTHING;
+    (64, '6901.00.00', 0.0791);
 
 INSERT INTO relatorio_serv VALUES
     (64, '1.0403.19.00', '2024-08-08T22:13:32', 0.0986),
-    (64, '1.0502.34.40', '2024-08-07T06:38:02', 0.108)
-ON CONFLICT DO NOTHING;
+    (64, '1.0502.34.40', '2024-08-07T06:38:02', 0.108);
 
 INSERT INTO relatorio VALUES
-    (65, '2021-11-21', NULL, '79.821.563', '0001-00', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (65, '2021-11-21', NULL, '79.821.563', '0001-00', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (65, '3907.99.93', 1.5036),
@@ -4235,8 +5856,7 @@ INSERT INTO relatorio_prod VALUES
     (65, '3808.91.99', 0.0381),
     (65, '3701.99.00', 0.0144),
     (65, '6903.10.40', 0.026),
-    (65, '0705.19.00', 0.0539)
-ON CONFLICT DO NOTHING;
+    (65, '0705.19.00', 0.0539);
 
 INSERT INTO relatorio_serv VALUES
     (65, '1.0502.31', '2021-12-01T01:40:40', 1.1035),
@@ -4247,12 +5867,10 @@ INSERT INTO relatorio_serv VALUES
     (65, '1.0102.11.00', '2021-12-27T19:05:22', 0.0041),
     (65, '1.1903.1', '2021-12-03T22:07:52', 0.0162),
     (65, '1.1902.10.00', '2021-12-17T15:56:26', 0.0065),
-    (65, '1.2405.90.00', '2021-12-11T16:21:47', 0.0065)
-ON CONFLICT DO NOTHING;
+    (65, '1.2405.90.00', '2021-12-11T16:21:47', 0.0065);
 
 INSERT INTO relatorio VALUES
-    (66, '2022-01-14', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (66, '2022-01-14', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (66, '7315.11.90', 0.0233),
@@ -4274,24 +5892,20 @@ INSERT INTO relatorio_prod VALUES
     (66, '6305.20.00', 0.0067),
     (66, '2921.19.4', 0.019),
     (66, '8422.40.90', 0.0963),
-    (66, '3102.50.11', 0.0591)
-ON CONFLICT DO NOTHING;
+    (66, '3102.50.11', 0.0591);
 
 INSERT INTO relatorio_serv VALUES
     (66, '1.0404.20.00', '2022-02-22T06:43:09', 0.0579),
     (66, '1.0402.22.00', '2022-02-01T13:57:02', 0.0246),
-    (66, '1.0901.51.22', '2022-02-02T07:14:48', 0.0192)
-ON CONFLICT DO NOTHING;
+    (66, '1.0901.51.22', '2022-02-02T07:14:48', 0.0192);
 
 INSERT INTO relatorio VALUES
-    (67, '2025-04-23', '2025-07-15', '28.659.130', '0001-07', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (67, '2025-04-23', '2025-07-15', '28.659.130', '0001-07', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (67, '4104.49.90', 0.3654),
     (67, '3920.62.91', 0.2296),
-    (67, '8704.22.30', 0.0322)
-ON CONFLICT DO NOTHING;
+    (67, '8704.22.30', 0.0322);
 
 INSERT INTO relatorio_serv VALUES
     (67, '1.0402.29.00', '2025-05-12T18:29:04', 0.1135),
@@ -4324,16 +5938,13 @@ INSERT INTO relatorio_serv VALUES
     (67, '1.2204', '2025-05-09T03:11:32', 0.0647),
     (67, '1.2403.3', '2025-05-09T17:12:53', 0.0611),
     (67, '1.0901.51.13', '2025-05-28T03:17:38', 0.0653),
-    (67, '1.0802.10.00', '2025-05-01T17:16:00', 0.065)
-ON CONFLICT DO NOTHING;
+    (67, '1.0802.10.00', '2025-05-01T17:16:00', 0.065);
 
 INSERT INTO relatorio VALUES
-    (68, '2025-10-15', '2026-03-02', '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (68, '2025-10-15', '2026-03-02', '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (68, '3003.10.12', 0.3083)
-ON CONFLICT DO NOTHING;
+    (68, '3003.10.12', 0.3083);
 
 INSERT INTO relatorio_serv VALUES
     (68, '1.2604.00.00', '2025-11-16T04:13:59', 0.0435),
@@ -4351,12 +5962,10 @@ INSERT INTO relatorio_serv VALUES
     (68, '1.0906', '2025-11-05T14:18:21', 0.0197),
     (68, '1.0501.3', '2025-11-15T14:27:58', 0.0448),
     (68, '1.1103.36.20', '2025-11-18T07:19:46', 0.0765),
-    (68, '1.1403', '2025-11-02T21:31:28', 0.293)
-ON CONFLICT DO NOTHING;
+    (68, '1.1403', '2025-11-02T21:31:28', 0.293);
 
 INSERT INTO relatorio VALUES
-    (69, '2024-12-28', NULL, '79.821.563', '0001-00', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (69, '2024-12-28', NULL, '79.821.563', '0001-00', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (69, '3815.90.10', 1.5646),
@@ -4364,8 +5973,7 @@ INSERT INTO relatorio_prod VALUES
     (69, '5111.11.10', 0.0081),
     (69, '2832.20.00', 0.0765),
     (69, '0306.39.90', 0.1264),
-    (69, '9401.59.00', 0.2503)
-ON CONFLICT DO NOTHING;
+    (69, '9401.59.00', 0.2503);
 
 INSERT INTO relatorio_serv VALUES
     (69, '1.0608', '2025-01-22T07:05:39', 2.4512),
@@ -4374,12 +5982,10 @@ INSERT INTO relatorio_serv VALUES
     (69, '1.0903.1', '2025-01-04T18:46:19', 0.0231),
     (69, '1.01', '2025-01-02T08:42:19', 0.1042),
     (69, '1.1408.12.00', '2025-01-22T08:23:00', 0.4632),
-    (69, '1.0903.13.00', '2025-01-09T21:42:44', 0.1411)
-ON CONFLICT DO NOTHING;
+    (69, '1.0903.13.00', '2025-01-09T21:42:44', 0.1411);
 
 INSERT INTO relatorio VALUES
-    (70, '2025-05-19', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (70, '2025-05-19', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (70, '5206.15.00', 0.1085),
@@ -4408,16 +6014,13 @@ INSERT INTO relatorio_prod VALUES
     (70, '1207.91.10', 0.041),
     (70, '8428.60.00', 0.0252),
     (70, '2924.29.94', 0.0287),
-    (70, '1008.50.10', 0.0392)
-ON CONFLICT DO NOTHING;
+    (70, '1008.50.10', 0.0392);
 
 INSERT INTO relatorio_serv VALUES
-    (70, '1.2501.39.00', '2025-06-15T07:27:35', 0.2853)
-ON CONFLICT DO NOTHING;
+    (70, '1.2501.39.00', '2025-06-15T07:27:35', 0.2853);
 
 INSERT INTO relatorio VALUES
-    (71, '2022-11-05', '2023-02-19', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (71, '2022-11-05', '2023-02-19', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (71, '9027.20.12', 0.078),
@@ -4429,8 +6032,7 @@ INSERT INTO relatorio_prod VALUES
     (71, '0407.90.00', 0.0798),
     (71, '2103.90.19', 0.1023),
     (71, '8539.51.00', 0.0761),
-    (71, '3206.50.1', 0.124)
-ON CONFLICT DO NOTHING;
+    (71, '3206.50.1', 0.124);
 
 INSERT INTO relatorio_serv VALUES
     (71, '1.0102.52.10', '2022-12-15T04:05:09', 0.4496),
@@ -4439,12 +6041,10 @@ INSERT INTO relatorio_serv VALUES
     (71, '1.0503.90.00', '2022-12-29T00:55:21', 0.8087),
     (71, '1.2003.21.90', '2022-12-09T00:00:35', 0.3909),
     (71, '1.0106.2', '2022-12-06T05:55:43', 0.2352),
-    (71, '1.0107.60.00', '2022-12-01T01:00:13', 0.1969)
-ON CONFLICT DO NOTHING;
+    (71, '1.0107.60.00', '2022-12-01T01:00:13', 0.1969);
 
 INSERT INTO relatorio VALUES
-    (72, '2025-10-04', '2026-02-08', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (72, '2025-10-04', '2026-02-08', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (72, '7210.41.10', 0.13),
@@ -4467,17 +6067,14 @@ INSERT INTO relatorio_prod VALUES
     (72, '2903.77.90', 0.0466),
     (72, '2922.50.9', 0.0133),
     (72, '3002.12.15', 0.0678),
-    (72, '1105.10.00', 0.0802)
-ON CONFLICT DO NOTHING;
+    (72, '1105.10.00', 0.0802);
 
 INSERT INTO relatorio_serv VALUES
     (72, '1.0501.25.00', '2025-11-02T21:56:11', 0.2708),
-    (72, '1.0602.2', '2025-11-29T09:55:12', 0.449)
-ON CONFLICT DO NOTHING;
+    (72, '1.0602.2', '2025-11-29T09:55:12', 0.449);
 
 INSERT INTO relatorio VALUES
-    (73, '2022-01-15', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (73, '2022-01-15', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (73, '3919.90.20', 0.3424),
@@ -4503,18 +6100,15 @@ INSERT INTO relatorio_prod VALUES
     (73, '8455.22.90', 0.0004),
     (73, '8443.99.80', 0.0015),
     (73, '6306.30.90', 0.0181),
-    (73, '2926.30.11', 0.0141)
-ON CONFLICT DO NOTHING;
+    (73, '2926.30.11', 0.0141);
 
 INSERT INTO relatorio_serv VALUES
     (73, '1.0403.90.00', '2022-02-08T13:33:00', 0.1458),
     (73, '1.2203.10.00', '2022-02-16T00:26:56', 0.0046),
-    (73, '1.1509.00.00', '2022-02-23T21:02:01', 0.0027)
-ON CONFLICT DO NOTHING;
+    (73, '1.1509.00.00', '2022-02-23T21:02:01', 0.0027);
 
 INSERT INTO relatorio VALUES
-    (74, '2021-06-27', '2022-12-11', '39.605.871', '0001-83', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (74, '2021-06-27', '2022-12-11', '39.605.871', '0001-83', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (74, '5210.39.00', 0.028),
@@ -4543,24 +6137,20 @@ INSERT INTO relatorio_prod VALUES
     (74, '0401.10.10', 0.1175),
     (74, '8440.90.00', 0.039),
     (74, '8414.80.21', 0.0104),
-    (74, '8716.80.00', 0.0236)
-ON CONFLICT DO NOTHING;
+    (74, '8716.80.00', 0.0236);
 
 INSERT INTO relatorio_serv VALUES
     (74, '1.0301.2', '2021-07-06T16:40:16', 0.0386),
     (74, '1.0504.23.00', '2021-07-21T23:43:28', 0.1329),
-    (74, '1.0701.00.00', '2021-07-18T05:17:31', 0.2751)
-ON CONFLICT DO NOTHING;
+    (74, '1.0701.00.00', '2021-07-18T05:17:31', 0.2751);
 
 INSERT INTO relatorio VALUES
-    (75, '2024-12-25', '2026-03-07', '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (75, '2024-12-25', '2026-03-07', '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (75, '5207.10.00', 0.0408),
     (75, '9028.90.10', 0.0239),
-    (75, '3915.20.00', 0.1058)
-ON CONFLICT DO NOTHING;
+    (75, '3915.20.00', 0.1058);
 
 INSERT INTO relatorio_serv VALUES
     (75, '1.0910.90.00', '2025-01-06T00:51:29', 0.095),
@@ -4575,12 +6165,10 @@ INSERT INTO relatorio_serv VALUES
     (75, '1.0502.14.40', '2025-01-17T15:31:22', 0.3236),
     (75, '1.1106.20.00', '2025-01-03T12:27:01', 0.5234),
     (75, '1.0505', '2025-01-22T11:45:50', 0.3632),
-    (75, '1.2003', '2025-01-27T16:05:21', 0.1839)
-ON CONFLICT DO NOTHING;
+    (75, '1.2003', '2025-01-27T16:05:21', 0.1839);
 
 INSERT INTO relatorio VALUES
-    (76, '2025-10-12', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (76, '2025-10-12', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (76, '5211.20.90', 1.9139),
@@ -4604,18 +6192,15 @@ INSERT INTO relatorio_prod VALUES
     (76, '2913.00.10', 0.0884),
     (76, '9508.23.00', 0.0554),
     (76, '6903.90.91', 0.0107),
-    (76, '6115.10.92', 0.0104)
-ON CONFLICT DO NOTHING;
+    (76, '6115.10.92', 0.0104);
 
 INSERT INTO relatorio_serv VALUES
     (76, '1.2201', '2025-11-27T01:52:15', 0.5602),
     (76, '1.1706.2', '2025-11-29T16:06:20', 0.0002),
-    (76, '1.1102.90.00', '2025-11-20T14:17:42', 0.0038)
-ON CONFLICT DO NOTHING;
+    (76, '1.1102.90.00', '2025-11-20T14:17:42', 0.0038);
 
 INSERT INTO relatorio VALUES
-    (77, '2026-03-27', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (77, '2026-03-27', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (77, '7405.00.00', 0.0315),
@@ -4631,8 +6216,7 @@ INSERT INTO relatorio_prod VALUES
     (77, '7010.10.00', 0.104),
     (77, '8517.62.65', 0.1262),
     (77, '8708.50.9', 0.0246),
-    (77, '8704.32.90', 0.0649)
-ON CONFLICT DO NOTHING;
+    (77, '8704.32.90', 0.0649);
 
 INSERT INTO relatorio_serv VALUES
     (77, '1.2302.21.00', '2026-04-14T20:00:26', 0.0434),
@@ -4640,18 +6224,15 @@ INSERT INTO relatorio_serv VALUES
     (77, '1.0502.11.10', '2026-04-14T08:53:06', 0.8772),
     (77, '1.1403.21.20', '2026-04-18T12:28:08', 0.0636),
     (77, '1.2301.13.00', '2026-04-21T16:08:33', 0.1729),
-    (77, '1.1001.11.00', '2026-04-24T13:16:53', 0.1367)
-ON CONFLICT DO NOTHING;
+    (77, '1.1001.11.00', '2026-04-24T13:16:53', 0.1367);
 
 INSERT INTO relatorio VALUES
-    (78, '2022-02-06', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (78, '2022-02-06', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (78, '0304.63.00', 0.0166),
     (78, '7407.10.10', 0.0114),
-    (78, '8413.91.90', 0.0135)
-ON CONFLICT DO NOTHING;
+    (78, '8413.91.90', 0.0135);
 
 INSERT INTO relatorio_serv VALUES
     (78, '1.0105.50.00', '2022-03-22T05:10:40', 0.1551),
@@ -4680,16 +6261,13 @@ INSERT INTO relatorio_serv VALUES
     (78, '1.0608.30.00', '2022-03-23T02:49:43', 0.0266),
     (78, '1.0604.30.00', '2022-03-23T11:09:38', 0.179),
     (78, '1.1409.11.00', '2022-03-12T00:35:26', 0.149),
-    (78, '1.0502.21.10', '2022-03-25T22:49:16', 0.0293)
-ON CONFLICT DO NOTHING;
+    (78, '1.0502.21.10', '2022-03-25T22:49:16', 0.0293);
 
 INSERT INTO relatorio VALUES
-    (79, '2021-10-22', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (79, '2021-10-22', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (79, '8446.30.20', 0.1687)
-ON CONFLICT DO NOTHING;
+    (79, '8446.30.20', 0.1687);
 
 INSERT INTO relatorio_serv VALUES
     (79, '1.2303.00.00', '2021-11-05T01:51:23', 0.6432),
@@ -4723,12 +6301,10 @@ INSERT INTO relatorio_serv VALUES
     (79, '1.1501', '2021-11-18T13:47:47', 0.0522),
     (79, '1.2002.40.00', '2021-11-04T22:41:47', 0.0036),
     (79, '1.0502.23.10', '2021-11-22T10:31:40', 0.1366),
-    (79, '1.1803.21.00', '2021-11-21T09:48:44', 0.0009)
-ON CONFLICT DO NOTHING;
+    (79, '1.1803.21.00', '2021-11-21T09:48:44', 0.0009);
 
 INSERT INTO relatorio VALUES
-    (80, '2025-04-11', '2025-06-19', '48.603.715', '0001-45', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (80, '2025-04-11', '2025-06-19', '48.603.715', '0001-45', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (80, '8419.90.31', 0.1166),
@@ -4743,8 +6319,7 @@ INSERT INTO relatorio_prod VALUES
     (80, '2924.29.11', 0.0361),
     (80, '8438.50.00', 0.0352),
     (80, '3811.90.10', 0.1072),
-    (80, '4704.11.00', 0.0416)
-ON CONFLICT DO NOTHING;
+    (80, '4704.11.00', 0.0416);
 
 INSERT INTO relatorio_serv VALUES
     (80, '1.0404', '2025-05-15T07:59:20', 0.0093),
@@ -4758,12 +6333,10 @@ INSERT INTO relatorio_serv VALUES
     (80, '1.0303.90.00', '2025-05-08T00:08:44', 0.0306),
     (80, '1.1409.24.00', '2025-05-15T09:07:55', 0.0545),
     (80, '1.2205', '2025-05-24T05:02:40', 0.041),
-    (80, '1.0905.12.00', '2025-05-26T19:29:56', 0.0238)
-ON CONFLICT DO NOTHING;
+    (80, '1.0905.12.00', '2025-05-26T19:29:56', 0.0238);
 
 INSERT INTO relatorio VALUES
-    (81, '2026-01-08', '2026-06-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (81, '2026-01-08', '2026-06-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (81, '6104.19.10', 0.0177),
@@ -4790,18 +6363,15 @@ INSERT INTO relatorio_prod VALUES
     (81, '6005.21.00', 0.0449),
     (81, '0301.99.11', 0.1293),
     (81, '0710.29.00', 0.0578),
-    (81, '3906.90.22', 0.0461)
-ON CONFLICT DO NOTHING;
+    (81, '3906.90.22', 0.0461);
 
 INSERT INTO relatorio_serv VALUES
     (81, '1.0106.13.00', '2026-02-24T22:43:31', 0.0711),
     (81, '1.2201.1', '2026-02-09T03:47:27', 0.0203),
-    (81, '1.0102.42.20', '2026-02-25T02:16:01', 0.2191)
-ON CONFLICT DO NOTHING;
+    (81, '1.0102.42.20', '2026-02-25T02:16:01', 0.2191);
 
 INSERT INTO relatorio VALUES
-    (82, '2025-12-08', '2026-03-10', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (82, '2025-12-08', '2026-03-10', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (82, '8481.80.2', 0.1379),
@@ -4830,16 +6400,13 @@ INSERT INTO relatorio_prod VALUES
     (82, '1602.32.20', 0.1554),
     (82, '8504.40.10', 0.124),
     (82, '8433.60.90', 0.0781),
-    (82, '8544.42.00', 0.0777)
-ON CONFLICT DO NOTHING;
+    (82, '8544.42.00', 0.0777);
 
 INSERT INTO relatorio_serv VALUES
-    (82, '1.0901.90.00', '2026-01-07T16:41:01', 0.1531)
-ON CONFLICT DO NOTHING;
+    (82, '1.0901.90.00', '2026-01-07T16:41:01', 0.1531);
 
 INSERT INTO relatorio VALUES
-    (83, '2025-02-18', '2025-09-09', '51.360.297', '0001-43', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (83, '2025-02-18', '2025-09-09', '51.360.297', '0001-43', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (83, '5402.32.19', 0.1976),
@@ -4848,8 +6415,7 @@ INSERT INTO relatorio_prod VALUES
     (83, '2933.39.2', 0.136),
     (83, '5206.23.00', 0.1334),
     (83, '0305.69.90', 0.0571),
-    (83, '0103.10.00', 0.418)
-ON CONFLICT DO NOTHING;
+    (83, '0103.10.00', 0.418);
 
 INSERT INTO relatorio_serv VALUES
     (83, '1.1304.00.00', '2025-03-12T08:08:57', 0.3609),
@@ -4859,12 +6425,10 @@ INSERT INTO relatorio_serv VALUES
     (83, '1.2003.10.00', '2025-03-29T09:22:26', 0.0365),
     (83, '1.0901.51.16', '2025-03-10T21:06:39', 0.2252),
     (83, '1.0903.21.00', '2025-03-06T11:42:06', 0.0386),
-    (83, '1.1108.90.00', '2025-03-17T23:49:13', 0.212)
-ON CONFLICT DO NOTHING;
+    (83, '1.1108.90.00', '2025-03-17T23:49:13', 0.212);
 
 INSERT INTO relatorio VALUES
-    (84, '2023-06-22', '2026-04-07', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (84, '2023-06-22', '2026-04-07', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (84, '6813.20.00', 0.2147),
@@ -4880,20 +6444,17 @@ INSERT INTO relatorio_prod VALUES
     (84, '8504.40.40', 0.1083),
     (84, '9201.20.00', 0.1105),
     (84, '3006.30.18', 0.2721),
-    (84, '0305.32.30', 0.0394)
-ON CONFLICT DO NOTHING;
+    (84, '0305.32.30', 0.0394);
 
 INSERT INTO relatorio_serv VALUES
     (84, '1.2405', '2023-07-15T05:30:44', 0.0317),
     (84, '1.0501.39.00', '2023-07-14T03:25:13', 0.6177),
     (84, '1.2404.32.00', '2023-07-23T17:46:37', 0.5757),
     (84, '1.1405.30.00', '2023-07-07T10:19:02', 0.3185),
-    (84, '1.0904.2', '2023-07-16T05:53:56', 0.5672)
-ON CONFLICT DO NOTHING;
+    (84, '1.0904.2', '2023-07-16T05:53:56', 0.5672);
 
 INSERT INTO relatorio VALUES
-    (85, '2022-04-27', '2023-10-05', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (85, '2022-04-27', '2023-10-05', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (85, '3911.90.24', 0.3104),
@@ -4903,12 +6464,10 @@ INSERT INTO relatorio_prod VALUES
     (85, '8112.69.00', 0.5613),
     (85, '9031.20.90', 0.8394),
     (85, '9608.91.00', 0.471),
-    (85, '1214.90.00', 0.8061)
-ON CONFLICT DO NOTHING;
+    (85, '1214.90.00', 0.8061);
 
 INSERT INTO relatorio VALUES
-    (86, '2024-03-13', '2026-01-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (86, '2024-03-13', '2026-01-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (86, '8801.00.00', 1.2342),
@@ -4932,12 +6491,10 @@ INSERT INTO relatorio_prod VALUES
     (86, '3910.00.29', 0.0065),
     (86, '3003.90.4', 0.0015),
     (86, '2934.91.3', 0.0086),
-    (86, '8443.99.29', 0.0285)
-ON CONFLICT DO NOTHING;
+    (86, '8443.99.29', 0.0285);
 
 INSERT INTO relatorio VALUES
-    (87, '2022-10-06', '2023-04-05', '27.401.593', '0001-66', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (87, '2022-10-06', '2023-04-05', '27.401.593', '0001-66', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (87, '1.1404.43.00', '2022-11-04T21:32:14', 2.9455),
@@ -4953,12 +6510,10 @@ INSERT INTO relatorio_serv VALUES
     (87, '1.1402.21.00', '2022-11-16T18:02:52', 0.1743),
     (87, '1.1107.3', '2022-11-06T00:43:55', 0.0297),
     (87, '1.2205.13.00', '2022-11-15T20:38:52', 0.0791),
-    (87, '1.0401.16.20', '2022-11-15T10:43:43', 0.059)
-ON CONFLICT DO NOTHING;
+    (87, '1.0401.16.20', '2022-11-15T10:43:43', 0.059);
 
 INSERT INTO relatorio VALUES
-    (88, '2024-08-04', NULL, '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (88, '2024-08-04', NULL, '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (88, '2901.22.00', 0.0846),
@@ -4974,8 +6529,7 @@ INSERT INTO relatorio_prod VALUES
     (88, '8473.50.10', 0.0861),
     (88, '9027.89.12', 0.0086),
     (88, '3402.90.29', 0.1216),
-    (88, '5510.90.1', 0.0814)
-ON CONFLICT DO NOTHING;
+    (88, '5510.90.1', 0.0814);
 
 INSERT INTO relatorio_serv VALUES
     (88, '1.0606.20.00', '2024-09-08T20:36:33', 0.0381),
@@ -4983,18 +6537,15 @@ INSERT INTO relatorio_serv VALUES
     (88, '1.2001.81.00', '2024-09-04T07:59:44', 0.2089),
     (88, '1.1402.31.00', '2024-09-21T12:50:40', 0.0836),
     (88, '1.1103.4', '2024-09-26T14:39:11', 0.1548),
-    (88, '1.0602.90.00', '2024-09-02T05:32:21', 0.304)
-ON CONFLICT DO NOTHING;
+    (88, '1.0602.90.00', '2024-09-02T05:32:21', 0.304);
 
 INSERT INTO relatorio VALUES
-    (89, '2022-05-27', '2023-12-22', '28.659.130', '0001-07', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (89, '2022-05-27', '2023-12-22', '28.659.130', '0001-07', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (89, '1604.17.00', 0.0629),
     (89, '5501.30.00', 0.1178),
-    (89, '2824.90.10', 0.2577)
-ON CONFLICT DO NOTHING;
+    (89, '2824.90.10', 0.2577);
 
 INSERT INTO relatorio_serv VALUES
     (89, '1.0401.19.00', '2022-06-23T13:01:22', 0.1816),
@@ -5012,16 +6563,13 @@ INSERT INTO relatorio_serv VALUES
     (89, '1.2404.13.00', '2022-06-05T12:47:13', 0.053),
     (89, '1.0901.35.00', '2022-06-25T14:23:56', 0.1082),
     (89, '1.1001.2', '2022-06-29T19:38:58', 0.0785),
-    (89, '1.0102', '2022-06-03T20:36:08', 0.2697)
-ON CONFLICT DO NOTHING;
+    (89, '1.0102', '2022-06-03T20:36:08', 0.2697);
 
 INSERT INTO relatorio VALUES
-    (90, '2023-08-21', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (90, '2023-08-21', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (90, '2933.91.6', 0.8868)
-ON CONFLICT DO NOTHING;
+    (90, '2933.91.6', 0.8868);
 
 INSERT INTO relatorio_serv VALUES
     (90, '1.1103.39.00', '2023-09-12T15:58:03', 0.0205),
@@ -5039,16 +6587,13 @@ INSERT INTO relatorio_serv VALUES
     (90, '1.0304', '2023-09-18T07:27:38', 0.2432),
     (90, '1.0403.22.00', '2023-09-19T22:29:28', 0.1386),
     (90, '1.2501.11.00', '2023-09-07T01:59:49', 0.2103),
-    (90, '1.0301.39.00', '2023-09-28T04:47:59', 0.1495)
-ON CONFLICT DO NOTHING;
+    (90, '1.0301.39.00', '2023-09-28T04:47:59', 0.1495);
 
 INSERT INTO relatorio VALUES
-    (91, '2023-07-15', '2024-11-24', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (91, '2023-07-15', '2024-11-24', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (91, '0302.53.00', 0.0081)
-ON CONFLICT DO NOTHING;
+    (91, '0302.53.00', 0.0081);
 
 INSERT INTO relatorio_serv VALUES
     (91, '1.1806.6', '2023-08-17T11:21:55', 0.0648),
@@ -5089,12 +6634,10 @@ INSERT INTO relatorio_serv VALUES
     (91, '1.2205.1', '2023-08-24T14:34:43', 0.0541),
     (91, '1.1406.12.00', '2023-08-09T03:26:46', 0.0334),
     (91, '1.1403', '2023-08-09T00:52:04', 0.0239),
-    (91, '1.0102.6', '2023-08-08T16:23:53', 0.1038)
-ON CONFLICT DO NOTHING;
+    (91, '1.0102.6', '2023-08-08T16:23:53', 0.1038);
 
 INSERT INTO relatorio VALUES
-    (92, '2022-03-15', '2022-09-23', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (92, '2022-03-15', '2022-09-23', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (92, '1103.19.00', 0.492),
@@ -5112,17 +6655,14 @@ INSERT INTO relatorio_prod VALUES
     (92, '3920.10.99', 0.8416),
     (92, '7612.90.12', 0.5584),
     (92, '2204.29.20', 0.1384),
-    (92, '5516.13.00', 1.169)
-ON CONFLICT DO NOTHING;
+    (92, '5516.13.00', 1.169);
 
 INSERT INTO relatorio_serv VALUES
     (92, '1.0901.52.90', '2022-04-20T05:45:11', 0.22),
-    (92, '1.0901.51.1', '2022-04-06T22:20:52', 0.1674)
-ON CONFLICT DO NOTHING;
+    (92, '1.0901.51.1', '2022-04-06T22:20:52', 0.1674);
 
 INSERT INTO relatorio VALUES
-    (93, '2023-09-18', '2026-03-12', '51.360.297', '0001-43', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (93, '2023-09-18', '2026-03-12', '51.360.297', '0001-43', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (93, '7801.10.19', 0.487),
@@ -5138,8 +6678,7 @@ INSERT INTO relatorio_prod VALUES
     (93, '0306.16.90', 0.0308),
     (93, '0303.45.00', 0.0939),
     (93, '2933.33.51', 0.1233),
-    (93, '8517.62.99', 0.0508)
-ON CONFLICT DO NOTHING;
+    (93, '8517.62.99', 0.0508);
 
 INSERT INTO relatorio_serv VALUES
     (93, '1.1503.00.00', '2023-10-22T20:32:35', 0.4858),
@@ -5148,12 +6687,10 @@ INSERT INTO relatorio_serv VALUES
     (93, '1.0401.16.20', '2023-10-23T21:05:05', 0.1393),
     (93, '1.2002.30.00', '2023-10-15T23:46:39', 0.2125),
     (93, '1.1101.90.00', '2023-10-20T18:57:46', 0.8012),
-    (93, '1.0402.21.20', '2023-10-29T19:14:40', 0.5544)
-ON CONFLICT DO NOTHING;
+    (93, '1.0402.21.20', '2023-10-29T19:14:40', 0.5544);
 
 INSERT INTO relatorio VALUES
-    (94, '2024-07-26', '2024-10-05', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (94, '2024-07-26', '2024-10-05', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (94, '3901.90.30', 0.0883),
@@ -5170,8 +6707,7 @@ INSERT INTO relatorio_prod VALUES
     (94, '5308.20.00', 0.014),
     (94, '8440.10.11', 0.0696),
     (94, '8301.30.00', 0.0337),
-    (94, '8514.40.00', 0.0273)
-ON CONFLICT DO NOTHING;
+    (94, '8514.40.00', 0.0273);
 
 INSERT INTO relatorio_serv VALUES
     (94, '1.1401.1', '2024-08-16T02:45:59', 0.0521),
@@ -5186,12 +6722,10 @@ INSERT INTO relatorio_serv VALUES
     (94, '1.0902.20.00', '2024-08-19T04:59:34', 0.0769),
     (94, '1.0403.21', '2024-08-19T18:43:03', 0.0252),
     (94, '1.1806.8', '2024-08-05T10:57:42', 0.0375),
-    (94, '1.2506.00.00', '2024-08-23T03:06:31', 0.0307)
-ON CONFLICT DO NOTHING;
+    (94, '1.2506.00.00', '2024-08-23T03:06:31', 0.0307);
 
 INSERT INTO relatorio VALUES
-    (95, '2022-03-12', '2025-11-21', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (95, '2022-03-12', '2025-11-21', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (95, '8540.20.90', 0.0498),
@@ -5206,8 +6740,7 @@ INSERT INTO relatorio_prod VALUES
     (95, '2932.19.10', 0.548),
     (95, '9021.39.11', 0.2439),
     (95, '7204.50.00', 0.1399),
-    (95, '5911.32.00', 0.0808)
-ON CONFLICT DO NOTHING;
+    (95, '5911.32.00', 0.0808);
 
 INSERT INTO relatorio_serv VALUES
     (95, '1.2003.24.00', '2022-04-09T04:10:38', 0.4883),
@@ -5221,18 +6754,15 @@ INSERT INTO relatorio_serv VALUES
     (95, '1.1303', '2022-04-07T17:29:35', 0.4906),
     (95, '1.1706.21.00', '2022-04-01T07:51:18', 0.1142),
     (95, '1.0105.12.00', '2022-04-24T06:41:36', 0.1868),
-    (95, '1.1403.21', '2022-04-29T16:07:51', 0.2836)
-ON CONFLICT DO NOTHING;
+    (95, '1.1403.21', '2022-04-29T16:07:51', 0.2836);
 
 INSERT INTO relatorio VALUES
-    (96, '2021-10-31', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (96, '2021-10-31', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (96, '8302.49.00', 0.1104),
     (96, '8206.00.00', 0.0073),
-    (96, '7304.29.31', 0.0529)
-ON CONFLICT DO NOTHING;
+    (96, '7304.29.31', 0.0529);
 
 INSERT INTO relatorio_serv VALUES
     (96, '1.0107.60.00', '2021-11-05T05:23:05', 0.1725),
@@ -5245,12 +6775,10 @@ INSERT INTO relatorio_serv VALUES
     (96, '1.0905.13.00', '2021-11-09T12:00:42', 0.0543),
     (96, '1.0401.41.00', '2021-11-05T06:44:36', 0.0036),
     (96, '1.0103.20.00', '2021-11-15T12:13:15', 0.055),
-    (96, '1.2403', '2021-11-18T10:09:03', 0.0524)
-ON CONFLICT DO NOTHING;
+    (96, '1.2403', '2021-11-18T10:09:03', 0.0524);
 
 INSERT INTO relatorio VALUES
-    (97, '2023-09-07', '2026-02-25', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (97, '2023-09-07', '2026-02-25', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (97, '3824.99.85', 0.4575),
@@ -5260,12 +6788,10 @@ INSERT INTO relatorio_prod VALUES
     (97, '6104.51.00', 0.2097),
     (97, '1701.91.00', 0.8864),
     (97, '3817.00.10', 0.1752),
-    (97, '2933.39.41', 0.8844)
-ON CONFLICT DO NOTHING;
+    (97, '2933.39.41', 0.8844);
 
 INSERT INTO relatorio VALUES
-    (98, '2023-05-04', NULL, '71.498.635', '0001-06', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (98, '2023-05-04', NULL, '71.498.635', '0001-06', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (98, '8711.10.00', 0.0044),
@@ -5293,19 +6819,16 @@ INSERT INTO relatorio_prod VALUES
     (98, '2930.80.10', 0.1253),
     (98, '2933.53.72', 0.0849),
     (98, '2903.78.00', 0.0727),
-    (98, '7004.90.00', 0.0142)
-ON CONFLICT DO NOTHING;
+    (98, '7004.90.00', 0.0142);
 
 INSERT INTO relatorio_serv VALUES
     (98, '1.0908.00.00', '2023-06-02T03:30:13', 0.3372),
     (98, '1.0502.11.30', '2023-06-19T14:03:49', 0.0826),
     (98, '1.1409.11.00', '2023-06-28T22:42:27', 0.0399),
-    (98, '1.1501.20.00', '2023-06-27T07:06:59', 0.1065)
-ON CONFLICT DO NOTHING;
+    (98, '1.1501.20.00', '2023-06-27T07:06:59', 0.1065);
 
 INSERT INTO relatorio VALUES
-    (99, '2022-07-11', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (99, '2022-07-11', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (99, '8461.40.10', 0.661),
@@ -5324,23 +6847,19 @@ INSERT INTO relatorio_prod VALUES
     (99, '7415.39.00', 0.0305),
     (99, '3004.50.90', 0.1414),
     (99, '3204.13.00', 0.3082),
-    (99, '3003.20.4', 1.0296)
-ON CONFLICT DO NOTHING;
+    (99, '3003.20.4', 1.0296);
 
 INSERT INTO relatorio_serv VALUES
     (99, '1.0501.12', '2022-08-07T20:53:30', 1.7275),
-    (99, '1.1406.39.00', '2022-08-28T21:04:35', 0.2201)
-ON CONFLICT DO NOTHING;
+    (99, '1.1406.39.00', '2022-08-28T21:04:35', 0.2201);
 
 INSERT INTO relatorio VALUES
-    (100, '2025-01-26', '2025-04-03', '53.921.807', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (100, '2025-01-26', '2025-04-03', '53.921.807', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (100, '3824.81.10', 0.0547),
     (100, '8501.40.11', 0.0229),
-    (100, '8546.90.00', 0.0164)
-ON CONFLICT DO NOTHING;
+    (100, '8546.90.00', 0.0164);
 
 INSERT INTO relatorio_serv VALUES
     (100, '1.0102.52', '2025-02-12T11:54:28', 0.0938),
@@ -5377,12 +6896,10 @@ INSERT INTO relatorio_serv VALUES
     (100, '1.2501.33.00', '2025-02-03T16:16:39', 0.0647),
     (100, '1.1401.15.00', '2025-02-26T11:33:39', 0.0529),
     (100, '1.0504.42.00', '2025-02-20T05:41:43', 0.0147),
-    (100, '1.1507.90.00', '2025-02-21T23:16:54', 0.0192)
-ON CONFLICT DO NOTHING;
+    (100, '1.1507.90.00', '2025-02-21T23:16:54', 0.0192);
 
 INSERT INTO relatorio VALUES
-    (101, '2025-03-27', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (101, '2025-03-27', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (101, '8208.20.00', 0.85),
@@ -5392,16 +6909,13 @@ INSERT INTO relatorio_prod VALUES
     (101, '8419.40.90', 0.717),
     (101, '8442.50.00', 1.5574),
     (101, '0302.42.10', 2.1794),
-    (101, '4008.21.00', 0.5828)
-ON CONFLICT DO NOTHING;
+    (101, '4008.21.00', 0.5828);
 
 INSERT INTO relatorio_serv VALUES
-    (101, '1.1201.1', '2025-04-11T14:01:47', 0.2997)
-ON CONFLICT DO NOTHING;
+    (101, '1.1201.1', '2025-04-11T14:01:47', 0.2997);
 
 INSERT INTO relatorio VALUES
-    (102, '2024-06-20', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (102, '2024-06-20', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (102, '8482.91.19', 0.1299),
@@ -5426,16 +6940,13 @@ INSERT INTO relatorio_prod VALUES
     (102, '7008.00.00', 0.0025),
     (102, '5407.71.00', 0.0366),
     (102, '0805.29.00', 0.0773),
-    (102, '2903.79.19', 0.0419)
-ON CONFLICT DO NOTHING;
+    (102, '2903.79.19', 0.0419);
 
 INSERT INTO relatorio_serv VALUES
-    (102, '1.1107.20.00', '2024-07-17T22:02:00', 0.3998)
-ON CONFLICT DO NOTHING;
+    (102, '1.1107.20.00', '2024-07-17T22:02:00', 0.3998);
 
 INSERT INTO relatorio VALUES
-    (103, '2024-01-12', '2025-04-08', '79.821.563', '0001-99', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (103, '2024-01-12', '2025-04-08', '79.821.563', '0001-99', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (103, '5602.90.00', 0.3137),
@@ -5452,8 +6963,7 @@ INSERT INTO relatorio_prod VALUES
     (103, '9306.30.00', 0.1031),
     (103, '7210.61.00', 0.1241),
     (103, '0804.50.20', 0.0444),
-    (103, '0703.10.29', 0.5433)
-ON CONFLICT DO NOTHING;
+    (103, '0703.10.29', 0.5433);
 
 INSERT INTO relatorio_serv VALUES
     (103, '1.0602.23.00', '2024-02-07T13:07:07', 0.1293),
@@ -5467,18 +6977,15 @@ INSERT INTO relatorio_serv VALUES
     (103, '1.0501.24.22', '2024-02-22T17:01:54', 0.549),
     (103, '1.0904.40.00', '2024-02-08T23:07:45', 0.17),
     (103, '1.2301.13.00', '2024-02-21T21:58:39', 0.2468),
-    (103, '1.0904.33.00', '2024-02-12T00:44:06', 0.0276)
-ON CONFLICT DO NOTHING;
+    (103, '1.0904.33.00', '2024-02-12T00:44:06', 0.0276);
 
 INSERT INTO relatorio VALUES
-    (104, '2024-10-22', '2025-04-23', '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (104, '2024-10-22', '2025-04-23', '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (104, '7304.29.10', 0.0255),
     (104, '7304.23.90', 0.02),
-    (104, '1401.10.00', 0.0311)
-ON CONFLICT DO NOTHING;
+    (104, '1401.10.00', 0.0311);
 
 INSERT INTO relatorio_serv VALUES
     (104, '1.0504.23.00', '2024-11-06T16:33:35', 0.0113),
@@ -5515,16 +7022,13 @@ INSERT INTO relatorio_serv VALUES
     (104, '1.0501.15.00', '2024-11-29T07:41:14', 0.0007),
     (104, '1.0502.14.10', '2024-11-16T14:15:49', 0.0474),
     (104, '1.2504.2', '2024-11-12T08:13:29', 0.0095),
-    (104, '1.0605.20.00', '2024-11-27T01:16:49', 0.0408)
-ON CONFLICT DO NOTHING;
+    (104, '1.0605.20.00', '2024-11-27T01:16:49', 0.0408);
 
 INSERT INTO relatorio VALUES
-    (105, '2022-09-17', NULL, '53.921.807', '0001-18', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (105, '2022-09-17', NULL, '53.921.807', '0001-18', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (105, '8102.94.00', 0.8331)
-ON CONFLICT DO NOTHING;
+    (105, '8102.94.00', 0.8331);
 
 INSERT INTO relatorio_serv VALUES
     (105, '1.0403.31.00', '2022-10-19T01:59:32', 0.242),
@@ -5545,12 +7049,10 @@ INSERT INTO relatorio_serv VALUES
     (105, '1.1403.22.14', '2022-10-07T05:48:07', 0.5458),
     (105, '1.2403.11.00', '2022-10-13T04:51:40', 0.011),
     (105, '1.0502.34.30', '2022-10-06T11:38:38', 0.1285),
-    (105, '1.2505.90.00', '2022-10-15T00:55:21', 0.1677)
-ON CONFLICT DO NOTHING;
+    (105, '1.2505.90.00', '2022-10-15T00:55:21', 0.1677);
 
 INSERT INTO relatorio VALUES
-    (106, '2024-09-03', NULL, '88.635.333', '0001-98', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (106, '2024-09-03', NULL, '88.635.333', '0001-98', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (106, '2710.19.1', 0.1392),
@@ -5573,17 +7075,14 @@ INSERT INTO relatorio_prod VALUES
     (106, '8902.00.90', 0.1455),
     (106, '3802.90.10', 0.6241),
     (106, '2827.39.93', 0.1942),
-    (106, '3911.10.2', 0.1989)
-ON CONFLICT DO NOTHING;
+    (106, '3911.10.2', 0.1989);
 
 INSERT INTO relatorio_serv VALUES
     (106, '1.1806.8', '2024-10-16T11:25:13', 0.124),
-    (106, '1.1404.12.00', '2024-10-10T23:34:55', 0.0672)
-ON CONFLICT DO NOTHING;
+    (106, '1.1404.12.00', '2024-10-10T23:34:55', 0.0672);
 
 INSERT INTO relatorio VALUES
-    (107, '2022-07-14', NULL, '48.912.037', '0001-48', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (107, '2022-07-14', NULL, '48.912.037', '0001-48', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (107, '2807.00.20', 2.3347),
@@ -5612,16 +7111,13 @@ INSERT INTO relatorio_prod VALUES
     (107, '9006.61.00', 0.0247),
     (107, '8517.62.91', 0.001),
     (107, '2903.79.39', 0.0157),
-    (107, '9018.50.90', 0.0173)
-ON CONFLICT DO NOTHING;
+    (107, '9018.50.90', 0.0173);
 
 INSERT INTO relatorio_serv VALUES
-    (107, '1.0503.2', '2022-08-16T22:41:20', 0.4191)
-ON CONFLICT DO NOTHING;
+    (107, '1.0503.2', '2022-08-16T22:41:20', 0.4191);
 
 INSERT INTO relatorio VALUES
-    (108, '2026-04-08', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (108, '2026-04-08', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (108, '6601.91.90', 2.7474),
@@ -5643,18 +7139,15 @@ INSERT INTO relatorio_prod VALUES
     (108, '2932.95.00', 0.0908),
     (108, '8438.90.00', 0.0003),
     (108, '8504.31.1', 0.0089),
-    (108, '2839.19.00', 0.0025)
-ON CONFLICT DO NOTHING;
+    (108, '2839.19.00', 0.0025);
 
 INSERT INTO relatorio_serv VALUES
     (108, '1.1402.15.00', '2026-05-13T06:07:35', 1.3887),
     (108, '1.1002.10.00', '2026-05-08T06:26:26', 0.0133),
-    (108, '1.1302.11.00', '2026-05-05T16:37:18', 0.0165)
-ON CONFLICT DO NOTHING;
+    (108, '1.1302.11.00', '2026-05-05T16:37:18', 0.0165);
 
 INSERT INTO relatorio VALUES
-    (109, '2026-01-05', '2026-06-14', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (109, '2026-01-05', '2026-06-14', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (109, '4601.99.00', 0.06),
@@ -5680,21 +7173,17 @@ INSERT INTO relatorio_prod VALUES
     (109, '8517.71.20', 0.0741),
     (109, '0306.93.00', 0.086),
     (109, '3808.94.22', 0.004),
-    (109, '8448.39.11', 0.1865)
-ON CONFLICT DO NOTHING;
+    (109, '8448.39.11', 0.1865);
 
 INSERT INTO relatorio_serv VALUES
-    (109, '1.2003.25.20', '2026-02-23T05:12:24', 0.5905)
-ON CONFLICT DO NOTHING;
+    (109, '1.2003.25.20', '2026-02-23T05:12:24', 0.5905);
 
 INSERT INTO relatorio VALUES
-    (110, '2023-03-11', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (110, '2023-03-11', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (110, '8504.90.40', 0.2875),
-    (110, '2828.90.20', 0.0165)
-ON CONFLICT DO NOTHING;
+    (110, '2828.90.20', 0.0165);
 
 INSERT INTO relatorio_serv VALUES
     (110, '1.02', '2023-04-22T17:12:37', 8.5519),
@@ -5714,12 +7203,10 @@ INSERT INTO relatorio_serv VALUES
     (110, '1.0102.69.00', '2023-04-08T14:09:58', 0.1089),
     (110, '1.1106', '2023-04-18T03:11:33', 0.1974),
     (110, '1.0901.39.00', '2023-04-06T23:56:37', 0.6708),
-    (110, '1.0504.45.20', '2023-04-28T22:07:39', 0.7131)
-ON CONFLICT DO NOTHING;
+    (110, '1.0504.45.20', '2023-04-28T22:07:39', 0.7131);
 
 INSERT INTO relatorio VALUES
-    (111, '2025-07-24', NULL, '48.912.037', '0001-38', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (111, '2025-07-24', NULL, '48.912.037', '0001-38', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (111, '2833.40.10', 0.8152),
@@ -5730,18 +7217,15 @@ INSERT INTO relatorio_prod VALUES
     (111, '8422.30.2', 0.0129),
     (111, '8101.99.90', 0.0394),
     (111, '4107.92.10', 0.0101),
-    (111, '2836.92.00', 0.0043)
-ON CONFLICT DO NOTHING;
+    (111, '2836.92.00', 0.0043);
 
 INSERT INTO relatorio_serv VALUES
     (111, '1.0501.11.30', '2025-08-21T02:23:18', 0.3215),
     (111, '1.0502.19.00', '2025-08-28T16:18:38', 0.0),
-    (111, '1.1401.16.00', '2025-08-07T12:03:42', 0.003)
-ON CONFLICT DO NOTHING;
+    (111, '1.1401.16.00', '2025-08-07T12:03:42', 0.003);
 
 INSERT INTO relatorio VALUES
-    (112, '2025-10-31', NULL, '09.723.145', '0001-56', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (112, '2025-10-31', NULL, '09.723.145', '0001-56', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (112, '9018.39.29', 1.1513),
@@ -5770,19 +7254,16 @@ INSERT INTO relatorio_prod VALUES
     (112, '2933.99.63', 0.0772),
     (112, '8536.90.20', 0.0236),
     (112, '2922.49.6', 0.1447),
-    (112, '7117.11.00', 0.0154)
-ON CONFLICT DO NOTHING;
+    (112, '7117.11.00', 0.0154);
 
 INSERT INTO relatorio_serv VALUES
     (112, '1.0502.23.20', '2025-11-13T09:58:25', 0.4776),
     (112, '1.1706.11.00', '2025-11-24T08:49:31', 0.0048),
     (112, '1.2001.33.00', '2025-11-02T19:09:47', 0.0107),
-    (112, '1.2003.26.90', '2025-11-10T13:33:29', 0.0068)
-ON CONFLICT DO NOTHING;
+    (112, '1.2003.26.90', '2025-11-10T13:33:29', 0.0068);
 
 INSERT INTO relatorio VALUES
-    (113, '2024-05-17', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (113, '2024-05-17', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (113, '8501.53.20', 0.139),
@@ -5805,16 +7286,13 @@ INSERT INTO relatorio_prod VALUES
     (113, '8528.49.90', 0.1954),
     (113, '8443.91.10', 0.232),
     (113, '2903.13.00', 0.0417),
-    (113, '8205.70.00', 0.0856)
-ON CONFLICT DO NOTHING;
+    (113, '8205.70.00', 0.0856);
 
 INSERT INTO relatorio_serv VALUES
-    (113, '1.1903.1', '2024-06-01T06:35:37', 1.3541)
-ON CONFLICT DO NOTHING;
+    (113, '1.1903.1', '2024-06-01T06:35:37', 1.3541);
 
 INSERT INTO relatorio VALUES
-    (114, '2025-10-11', '2026-03-25', '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (114, '2025-10-11', '2026-03-25', '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (114, '8545.11.00', 0.3797),
@@ -5843,20 +7321,16 @@ INSERT INTO relatorio_prod VALUES
     (114, '2933.99.53', 0.5585),
     (114, '5301.21.10', 0.3381),
     (114, '1301.90.10', 0.8089),
-    (114, '6303.92.00', 1.2809)
-ON CONFLICT DO NOTHING;
+    (114, '6303.92.00', 1.2809);
 
 INSERT INTO relatorio_serv VALUES
-    (114, '1.25', '2025-11-14T00:18:58', 1.1348)
-ON CONFLICT DO NOTHING;
+    (114, '1.25', '2025-11-14T00:18:58', 1.1348);
 
 INSERT INTO relatorio VALUES
-    (115, '2025-03-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (115, '2025-03-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (115, '9608.99.8', 0.507)
-ON CONFLICT DO NOTHING;
+    (115, '9608.99.8', 0.507);
 
 INSERT INTO relatorio_serv VALUES
     (115, '1.0201.00.00', '2025-04-10T23:05:48', 0.0175),
@@ -5872,12 +7346,10 @@ INSERT INTO relatorio_serv VALUES
     (115, '1.2003.21', '2025-04-26T07:34:40', 0.0344),
     (115, '1.0301.31.00', '2025-04-08T20:09:00', 0.1111),
     (115, '1.2301.91.00', '2025-04-13T20:00:39', 0.5647),
-    (115, '1.1501.10.00', '2025-04-15T14:33:30', 0.2046)
-ON CONFLICT DO NOTHING;
+    (115, '1.1501.10.00', '2025-04-15T14:33:30', 0.2046);
 
 INSERT INTO relatorio VALUES
-    (116, '2024-03-15', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (116, '2024-03-15', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (116, '7604.29.19', 0.0125),
@@ -5890,8 +7362,7 @@ INSERT INTO relatorio_prod VALUES
     (116, '8532.30.90', 0.0733),
     (116, '7229.20.00', 0.1382),
     (116, '3705.00.10', 0.0706),
-    (116, '2520.20.90', 0.0226)
-ON CONFLICT DO NOTHING;
+    (116, '2520.20.90', 0.0226);
 
 INSERT INTO relatorio_serv VALUES
     (116, '1.1903', '2024-04-11T21:30:11', 0.0615),
@@ -5906,16 +7377,13 @@ INSERT INTO relatorio_serv VALUES
     (116, '1.0501.14.40', '2024-04-05T16:58:46', 0.0739),
     (116, '1.1103.4', '2024-04-21T01:26:42', 0.0799),
     (116, '1.1408.19.00', '2024-04-16T23:13:21', 0.0784),
-    (116, '1.1703.9', '2024-04-07T23:57:00', 0.0616)
-ON CONFLICT DO NOTHING;
+    (116, '1.1703.9', '2024-04-07T23:57:00', 0.0616);
 
 INSERT INTO relatorio VALUES
-    (117, '2023-04-23', '2026-04-18', '28.659.130', '0001-07', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (117, '2023-04-23', '2026-04-18', '28.659.130', '0001-07', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (117, '3915.20.00', 0.3332)
-ON CONFLICT DO NOTHING;
+    (117, '3915.20.00', 0.3332);
 
 INSERT INTO relatorio_serv VALUES
     (117, '1.26', '2023-05-16T07:27:51', 0.2219),
@@ -5934,12 +7402,10 @@ INSERT INTO relatorio_serv VALUES
     (117, '1.1108.30.00', '2023-05-10T06:44:32', 0.048),
     (117, '1.2402', '2023-05-14T05:41:32', 0.0091),
     (117, '1.0901.51.2', '2023-05-10T18:48:38', 0.0769),
-    (117, '1.0901.31.00', '2023-05-13T02:58:02', 0.0202)
-ON CONFLICT DO NOTHING;
+    (117, '1.0901.31.00', '2023-05-13T02:58:02', 0.0202);
 
 INSERT INTO relatorio VALUES
-    (118, '2023-01-16', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (118, '2023-01-16', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (118, '2840.11.00', 0.4196),
@@ -5952,20 +7418,17 @@ INSERT INTO relatorio_prod VALUES
     (118, '8510.30.00', 0.0585),
     (118, '0305.41.00', 0.1818),
     (118, '6108.99.00', 0.0634),
-    (118, '4802.58.92', 0.189)
-ON CONFLICT DO NOTHING;
+    (118, '4802.58.92', 0.189);
 
 INSERT INTO relatorio_serv VALUES
     (118, '1.1102.90.00', '2023-02-21T10:30:23', 0.6246),
     (118, '1.1403.22.11', '2023-02-22T12:31:44', 0.0584),
     (118, '1.0501.24.21', '2023-02-07T07:46:14', 0.0911),
     (118, '1.0101.2', '2023-02-25T15:30:18', 0.2641),
-    (118, '1.0502.34.10', '2023-02-22T05:05:17', 0.4963)
-ON CONFLICT DO NOTHING;
+    (118, '1.0502.34.10', '2023-02-22T05:05:17', 0.4963);
 
 INSERT INTO relatorio VALUES
-    (119, '2024-11-23', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (119, '2024-11-23', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (119, '1.1103.36', '2024-12-02T19:02:15', 0.1104),
@@ -6007,12 +7470,10 @@ INSERT INTO relatorio_serv VALUES
     (119, '1.1403.22.90', '2024-12-01T02:09:25', 0.1314),
     (119, '1.1406.1', '2024-12-18T13:44:44', 0.1297),
     (119, '1.1302.11.00', '2024-12-23T22:29:09', 0.1529),
-    (119, '1.2501.37.00', '2024-12-13T18:37:00', 0.6945)
-ON CONFLICT DO NOTHING;
+    (119, '1.2501.37.00', '2024-12-13T18:37:00', 0.6945);
 
 INSERT INTO relatorio VALUES
-    (120, '2025-11-04', '2026-02-01', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (120, '2025-11-04', '2026-02-01', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (120, '2910.90.90', 0.7422),
@@ -6026,8 +7487,7 @@ INSERT INTO relatorio_prod VALUES
     (120, '2930.20.21', 0.3276),
     (120, '8506.10.20', 1.3873),
     (120, '8714.20.00', 0.439),
-    (120, '8456.11.19', 0.5074)
-ON CONFLICT DO NOTHING;
+    (120, '8456.11.19', 0.5074);
 
 INSERT INTO relatorio_serv VALUES
     (120, '1.2304.1', '2025-12-24T07:04:49', 0.1838),
@@ -6044,12 +7504,10 @@ INSERT INTO relatorio_serv VALUES
     (120, '1.0905.40.00', '2025-12-27T12:27:59', 0.1336),
     (120, '1.1106', '2025-12-28T08:25:35', 0.3231),
     (120, '1.1106.42.00', '2025-12-15T01:09:50', 0.2497),
-    (120, '1.0107.90.00', '2025-12-01T08:36:14', 0.0544)
-ON CONFLICT DO NOTHING;
+    (120, '1.0107.90.00', '2025-12-01T08:36:14', 0.0544);
 
 INSERT INTO relatorio VALUES
-    (121, '2024-07-05', '2025-09-07', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (121, '2024-07-05', '2025-09-07', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (121, '0302.55.00', 0.8411),
@@ -6063,18 +7521,15 @@ INSERT INTO relatorio_prod VALUES
     (121, '3301.90.10', 1.4175),
     (121, '9021.39.30', 0.1095),
     (121, '8716.31.00', 2.3428),
-    (121, '8471.70.90', 1.9027)
-ON CONFLICT DO NOTHING;
+    (121, '8471.70.90', 1.9027);
 
 INSERT INTO relatorio_serv VALUES
     (121, '1.0502.32.20', '2024-08-13T09:10:56', 0.9728),
     (121, '1.0105.11.00', '2024-08-14T09:56:08', 0.0118),
-    (121, '1.2001.20.00', '2024-08-22T01:59:50', 0.3905)
-ON CONFLICT DO NOTHING;
+    (121, '1.2001.20.00', '2024-08-22T01:59:50', 0.3905);
 
 INSERT INTO relatorio VALUES
-    (122, '2024-10-08', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (122, '2024-10-08', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (122, '8508.70.00', 0.0396),
@@ -6104,22 +7559,18 @@ INSERT INTO relatorio_prod VALUES
     (122, '6112.31.00', 0.1281),
     (122, '5104.00.00', 0.0234),
     (122, '7802.00.00', 0.2097),
-    (122, '9603.50.00', 0.0383)
-ON CONFLICT DO NOTHING;
+    (122, '9603.50.00', 0.0383);
 
 INSERT INTO relatorio_serv VALUES
     (122, '1.1706.21.00', '2024-11-12T07:49:57', 0.2579),
     (122, '1.2601', '2024-11-07T17:07:10', 0.0313),
-    (122, '1.1506', '2024-11-18T14:46:27', 0.1275)
-ON CONFLICT DO NOTHING;
+    (122, '1.1506', '2024-11-18T14:46:27', 0.1275);
 
 INSERT INTO relatorio VALUES
-    (123, '2025-10-26', '2026-02-26', '56.738.014', '0001-69', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (123, '2025-10-26', '2026-02-26', '56.738.014', '0001-69', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (123, '6802.29.00', 0.3054)
-ON CONFLICT DO NOTHING;
+    (123, '6802.29.00', 0.3054);
 
 INSERT INTO relatorio_serv VALUES
     (123, '1.2301.1', '2025-11-15T23:48:58', 0.1397),
@@ -6156,12 +7607,10 @@ INSERT INTO relatorio_serv VALUES
     (123, '1.0102.53.20', '2025-11-06T07:40:12', 0.0543),
     (123, '1.1302.1', '2025-11-07T00:18:05', 0.0069),
     (123, '1.1106.35.00', '2025-11-28T17:52:55', 0.1175),
-    (123, '1.1404.13.00', '2025-11-01T14:49:58', 0.1156)
-ON CONFLICT DO NOTHING;
+    (123, '1.1404.13.00', '2025-11-01T14:49:58', 0.1156);
 
 INSERT INTO relatorio VALUES
-    (124, '2022-08-26', '2026-04-01', '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (124, '2022-08-26', '2026-04-01', '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (124, '2933.39.8', 0.0458),
@@ -6182,18 +7631,15 @@ INSERT INTO relatorio_prod VALUES
     (124, '5303.90.90', 0.2748),
     (124, '2914.79.90', 0.3061),
     (124, '3403.19.00', 0.05),
-    (124, '7210.90.00', 0.3871)
-ON CONFLICT DO NOTHING;
+    (124, '7210.90.00', 0.3871);
 
 INSERT INTO relatorio_serv VALUES
     (124, '1.2204.30.00', '2022-09-13T01:35:28', 0.0592),
     (124, '1.0504.2', '2022-09-08T21:22:51', 0.0687),
-    (124, '1.0107.30.00', '2022-09-17T09:53:14', 0.1741)
-ON CONFLICT DO NOTHING;
+    (124, '1.0107.30.00', '2022-09-17T09:53:14', 0.1741);
 
 INSERT INTO relatorio VALUES
-    (125, '2021-11-30', '2023-05-07', '88.635.333', '0001-98', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (125, '2021-11-30', '2023-05-07', '88.635.333', '0001-98', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (125, '3212.90.10', 0.2337),
@@ -6205,12 +7651,10 @@ INSERT INTO relatorio_prod VALUES
     (125, '6304.92.00', 0.223),
     (125, '9705.21.00', 0.231),
     (125, '8459.69.00', 0.077),
-    (125, '4302.30.00', 0.0191)
-ON CONFLICT DO NOTHING;
+    (125, '4302.30.00', 0.0191);
 
 INSERT INTO relatorio VALUES
-    (126, '2025-01-20', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (126, '2025-01-20', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (126, '0207.25.00', 1.3746),
@@ -6226,20 +7670,17 @@ INSERT INTO relatorio_prod VALUES
     (126, '1212.99.10', 0.2534),
     (126, '4203.10.00', 1.8385),
     (126, '8601.20.00', 0.5531),
-    (126, '8428.33.00', 0.8688)
-ON CONFLICT DO NOTHING;
+    (126, '8428.33.00', 0.8688);
 
 INSERT INTO relatorio_serv VALUES
     (126, '1.0901.51.14', '2025-02-10T19:41:40', 3.7143),
     (126, '1.0205.00.00', '2025-02-23T22:22:49', 1.1588),
     (126, '1.2504.2', '2025-02-27T04:58:45', 0.6282),
     (126, '1.2301.23.00', '2025-02-11T01:13:05', 0.8009),
-    (126, '1.2204.20.00', '2025-02-16T13:12:09', 0.5095)
-ON CONFLICT DO NOTHING;
+    (126, '1.2204.20.00', '2025-02-16T13:12:09', 0.5095);
 
 INSERT INTO relatorio VALUES
-    (127, '2026-02-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (127, '2026-02-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (127, '1.0501.21', '2026-03-19T21:26:51', 1.2868),
@@ -6256,32 +7697,27 @@ INSERT INTO relatorio_serv VALUES
     (127, '1.1402.12.00', '2026-03-23T12:16:31', 0.6445),
     (127, '1.1001.12.90', '2026-03-27T11:01:29', 0.7916),
     (127, '1.0402.14.00', '2026-03-22T08:35:58', 0.065),
-    (127, '1.1404.49.00', '2026-03-17T02:45:26', 0.2258)
-ON CONFLICT DO NOTHING;
+    (127, '1.1404.49.00', '2026-03-17T02:45:26', 0.2258);
 
 INSERT INTO relatorio VALUES
-    (128, '2023-03-18', '2023-11-15', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (128, '2023-03-18', '2023-11-15', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (128, '8448.33.10', 2.3642),
     (128, '2903.79.12', 0.0039),
     (128, '2920.29.50', 0.0143),
     (128, '3004.39.94', 0.0142),
-    (128, '3903.20.00', 0.0468)
-ON CONFLICT DO NOTHING;
+    (128, '3903.20.00', 0.0468);
 
 INSERT INTO relatorio_serv VALUES
     (128, '1.0504.11.00', '2023-04-08T16:16:33', 2.0925),
     (128, '1.1507.90.00', '2023-04-13T06:14:54', 0.0083),
     (128, '1.1901.20.00', '2023-04-06T13:36:04', 0.0021),
     (128, '1.2001.34', '2023-04-14T04:18:00', 0.0081),
-    (128, '1.2002', '2023-04-16T22:44:57', 0.0335)
-ON CONFLICT DO NOTHING;
+    (128, '1.2002', '2023-04-16T22:44:57', 0.0335);
 
 INSERT INTO relatorio VALUES
-    (129, '2023-01-08', '2025-05-13', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (129, '2023-01-08', '2025-05-13', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (129, '3302.90.1', 2.013),
@@ -6289,8 +7725,7 @@ INSERT INTO relatorio_prod VALUES
     (129, '9027.20.29', 0.0496),
     (129, '3901.10.20', 0.0015),
     (129, '3003.90.79', 0.0289),
-    (129, '8448.20.90', 0.0259)
-ON CONFLICT DO NOTHING;
+    (129, '8448.20.90', 0.0259);
 
 INSERT INTO relatorio_serv VALUES
     (129, '1.1701.19.00', '2023-02-15T06:37:35', 1.8304),
@@ -6301,12 +7736,10 @@ INSERT INTO relatorio_serv VALUES
     (129, '1.0903.32.00', '2023-02-05T23:40:16', 0.025),
     (129, '1.1403.90.00', '2023-02-23T10:36:14', 0.0247),
     (129, '1.0901.51.13', '2023-02-25T17:39:26', 0.1874),
-    (129, '1.1903.40.00', '2023-02-22T14:37:18', 0.0342)
-ON CONFLICT DO NOTHING;
+    (129, '1.1903.40.00', '2023-02-22T14:37:18', 0.0342);
 
 INSERT INTO relatorio VALUES
-    (130, '2025-09-04', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (130, '2025-09-04', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (130, '8421.91.10', 3.1595),
@@ -6318,19 +7751,16 @@ INSERT INTO relatorio_prod VALUES
     (130, '5404.90.00', 0.1171),
     (130, '0702.00.00', 0.049),
     (130, '8479.89.40', 0.026),
-    (130, '6115.10.93', 0.0844)
-ON CONFLICT DO NOTHING;
+    (130, '6115.10.93', 0.0844);
 
 INSERT INTO relatorio_serv VALUES
     (130, '1.2201.19.00', '2025-10-16T02:59:28', 0.8467),
     (130, '1.2401.00.00', '2025-10-24T08:51:32', 0.0782),
     (130, '1.1703.91.00', '2025-10-19T18:30:28', 0.0085),
-    (130, '1.0504.12.00', '2025-10-25T00:07:54', 0.0178)
-ON CONFLICT DO NOTHING;
+    (130, '1.0504.12.00', '2025-10-25T00:07:54', 0.0178);
 
 INSERT INTO relatorio VALUES
-    (131, '2023-04-25', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (131, '2023-04-25', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (131, '4410.11.90', 1.638),
@@ -6342,16 +7772,13 @@ INSERT INTO relatorio_prod VALUES
     (131, '2916.15.1', 0.0169),
     (131, '8450.20.20', 0.0737),
     (131, '4105.10.90', 0.2991),
-    (131, '0709.30.00', 0.005)
-ON CONFLICT DO NOTHING;
+    (131, '0709.30.00', 0.005);
 
 INSERT INTO relatorio_serv VALUES
-    (131, '1.0301.39.00', '2023-05-11T13:50:18', 0.9441)
-ON CONFLICT DO NOTHING;
+    (131, '1.0301.39.00', '2023-05-11T13:50:18', 0.9441);
 
 INSERT INTO relatorio VALUES
-    (132, '2022-12-02', NULL, '28.659.130', '0001-07', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (132, '2022-12-02', NULL, '28.659.130', '0001-07', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (132, '1.0502.11.30', '2023-01-06T20:01:59', 0.1186),
@@ -6393,12 +7820,10 @@ INSERT INTO relatorio_serv VALUES
     (132, '1.1401.19.00', '2023-01-05T09:00:09', 0.0538),
     (132, '1.2404.22.00', '2023-01-07T15:28:43', 0.0387),
     (132, '1.0502.21.10', '2023-01-20T19:02:07', 0.0493),
-    (132, '1.0801', '2023-01-07T13:37:20', 0.1553)
-ON CONFLICT DO NOTHING;
+    (132, '1.0801', '2023-01-07T13:37:20', 0.1553);
 
 INSERT INTO relatorio VALUES
-    (133, '2023-07-24', '2025-02-25', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (133, '2023-07-24', '2025-02-25', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (133, '7505.12.29', 0.0338),
@@ -6414,16 +7839,13 @@ INSERT INTO relatorio_prod VALUES
     (133, '2827.39.94', 0.1171),
     (133, '9111.80.00', 0.0562),
     (133, '0209.10.21', 0.1357),
-    (133, '1404.90.10', 0.0531)
-ON CONFLICT DO NOTHING;
+    (133, '1404.90.10', 0.0531);
 
 INSERT INTO relatorio_serv VALUES
-    (133, '1.0102.42.10', '2023-08-23T05:00:57', 0.1952)
-ON CONFLICT DO NOTHING;
+    (133, '1.0102.42.10', '2023-08-23T05:00:57', 0.1952);
 
 INSERT INTO relatorio VALUES
-    (134, '2025-11-03', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (134, '2025-11-03', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (134, '8502.13.90', 0.8748),
@@ -6437,19 +7859,16 @@ INSERT INTO relatorio_prod VALUES
     (134, '3003.20.9', 2.8873),
     (134, '2926.90.21', 4.633),
     (134, '3809.10.10', 2.2914),
-    (134, '2936.21.12', 0.784)
-ON CONFLICT DO NOTHING;
+    (134, '2936.21.12', 0.784);
 
 INSERT INTO relatorio_serv VALUES
     (134, '1.1108.10.00', '2025-12-22T18:28:56', 1.3017),
     (134, '1.0101.29.00', '2025-12-23T15:51:00', 0.8478),
     (134, '1.2203.10.00', '2025-12-20T07:04:17', 1.5912),
-    (134, '1.1107.31.00', '2025-12-02T05:11:01', 1.8194)
-ON CONFLICT DO NOTHING;
+    (134, '1.1107.31.00', '2025-12-02T05:11:01', 1.8194);
 
 INSERT INTO relatorio VALUES
-    (135, '2023-03-25', '2024-03-22', '48.603.715', '0001-78', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (135, '2023-03-25', '2024-03-22', '48.603.715', '0001-78', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (135, '3003.39.26', 0.2345),
@@ -6459,8 +7878,7 @@ INSERT INTO relatorio_prod VALUES
     (135, '2939.79.40', 0.1568),
     (135, '2711.13.00', 0.1216),
     (135, '8429.51.2', 0.0173),
-    (135, '2006.00.00', 0.0624)
-ON CONFLICT DO NOTHING;
+    (135, '2006.00.00', 0.0624);
 
 INSERT INTO relatorio_serv VALUES
     (135, '1.0501.11.10', '2023-04-26T18:43:28', 0.2294),
@@ -6472,12 +7890,10 @@ INSERT INTO relatorio_serv VALUES
     (135, '1.1404.44.00', '2023-04-17T13:30:47', 0.0075),
     (135, '1.1506.90.00', '2023-04-10T16:05:52', 0.0159),
     (135, '1.1108.30.00', '2023-04-07T02:40:41', 0.1184),
-    (135, '1.2501.1', '2023-04-06T11:02:23', 0.238)
-ON CONFLICT DO NOTHING;
+    (135, '1.2501.1', '2023-04-06T11:02:23', 0.238);
 
 INSERT INTO relatorio VALUES
-    (136, '2023-11-12', '2024-06-07', '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (136, '2023-11-12', '2024-06-07', '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (136, '5514.19.90', 0.1459),
@@ -6486,8 +7902,7 @@ INSERT INTO relatorio_prod VALUES
     (136, '8428.60.00', 0.1804),
     (136, '2922.49.52', 0.4082),
     (136, '7505.12.2', 0.2441),
-    (136, '2915.39.5', 0.4762)
-ON CONFLICT DO NOTHING;
+    (136, '2915.39.5', 0.4762);
 
 INSERT INTO relatorio_serv VALUES
     (136, '1.0402.13', '2023-12-16T21:06:57', 0.4107),
@@ -6500,12 +7915,10 @@ INSERT INTO relatorio_serv VALUES
     (136, '1.2404.1', '2023-12-21T03:24:39', 0.379),
     (136, '1.0102.11.00', '2023-12-12T13:38:10', 0.0441),
     (136, '1.0605.40.00', '2023-12-22T19:37:47', 0.0116),
-    (136, '1.1401.11.00', '2023-12-18T07:40:10', 0.1511)
-ON CONFLICT DO NOTHING;
+    (136, '1.1401.11.00', '2023-12-18T07:40:10', 0.1511);
 
 INSERT INTO relatorio VALUES
-    (137, '2023-07-01', '2025-12-01', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (137, '2023-07-01', '2025-12-01', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (137, '8466.93.30', 0.549),
@@ -6515,8 +7928,7 @@ INSERT INTO relatorio_prod VALUES
     (137, '1522.00.00', 0.2143),
     (137, '2711.12.10', 0.4222),
     (137, '2832.30.20', 0.5396),
-    (137, '8445.19.27', 0.59)
-ON CONFLICT DO NOTHING;
+    (137, '8445.19.27', 0.59);
 
 INSERT INTO relatorio_serv VALUES
     (137, '1.0906.40.00', '2023-08-15T21:41:54', 0.1388),
@@ -6532,12 +7944,10 @@ INSERT INTO relatorio_serv VALUES
     (137, '1.1404.43.00', '2023-08-13T10:56:14', 0.1292),
     (137, '1.10', '2023-08-04T16:42:59', 0.0725),
     (137, '1.1701.2', '2023-08-09T20:59:43', 0.3837),
-    (137, '1.0102.6', '2023-08-04T14:28:18', 0.0298)
-ON CONFLICT DO NOTHING;
+    (137, '1.0102.6', '2023-08-04T14:28:18', 0.0298);
 
 INSERT INTO relatorio VALUES
-    (138, '2025-12-07', NULL, '88.635.333', '0001-98', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (138, '2025-12-07', NULL, '88.635.333', '0001-98', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (138, '0304.49.20', 0.087),
@@ -6567,18 +7977,15 @@ INSERT INTO relatorio_prod VALUES
     (138, '3507.90.19', 0.0218),
     (138, '8542.39.11', 0.0425),
     (138, '2009.12.00', 0.0504),
-    (138, '2710.12.4', 0.0356)
-ON CONFLICT DO NOTHING;
+    (138, '2710.12.4', 0.0356);
 
 INSERT INTO relatorio_serv VALUES
     (138, '1.2001.33.00', '2026-01-02T22:34:45', 0.0133),
     (138, '1.0501.3', '2026-01-14T01:03:40', 0.0782),
-    (138, '1.0501.14.40', '2026-01-13T23:56:54', 0.0142)
-ON CONFLICT DO NOTHING;
+    (138, '1.0501.14.40', '2026-01-13T23:56:54', 0.0142);
 
 INSERT INTO relatorio VALUES
-    (139, '2025-09-09', NULL, '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (139, '2025-09-09', NULL, '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (139, '2924.21.20', 0.0258),
@@ -6601,18 +8008,15 @@ INSERT INTO relatorio_prod VALUES
     (139, '7015.10.10', 0.0862),
     (139, '9017.20.00', 0.0383),
     (139, '2939.69.59', 0.1717),
-    (139, '3004.10.19', 0.1637)
-ON CONFLICT DO NOTHING;
+    (139, '3004.10.19', 0.1637);
 
 INSERT INTO relatorio_serv VALUES
     (139, '1.1405', '2025-10-02T04:29:58', 0.0376),
     (139, '1.1805.62.00', '2025-10-29T09:49:55', 0.4853),
-    (139, '1.0101.1', '2025-10-22T20:28:20', 0.158)
-ON CONFLICT DO NOTHING;
+    (139, '1.0101.1', '2025-10-22T20:28:20', 0.158);
 
 INSERT INTO relatorio VALUES
-    (140, '2023-05-14', '2023-12-13', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (140, '2023-05-14', '2023-12-13', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (140, '9202.10.00', 0.0454),
@@ -6624,19 +8028,16 @@ INSERT INTO relatorio_prod VALUES
     (140, '2934.10.10', 0.4981),
     (140, '0301.94.10', 0.3547),
     (140, '4301.90.00', 0.1684),
-    (140, '3809.91.41', 0.169)
-ON CONFLICT DO NOTHING;
+    (140, '3809.91.41', 0.169);
 
 INSERT INTO relatorio_serv VALUES
     (140, '1.1106.36.10', '2023-06-28T02:40:33', 0.1433),
     (140, '1.1109.30.00', '2023-06-28T10:24:10', 0.4618),
     (140, '1.0205.00.00', '2023-06-20T00:47:08', 0.1028),
-    (140, '1.0103.20.00', '2023-06-21T12:01:58', 0.126)
-ON CONFLICT DO NOTHING;
+    (140, '1.0103.20.00', '2023-06-21T12:01:58', 0.126);
 
 INSERT INTO relatorio VALUES
-    (141, '2025-01-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (141, '2025-01-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (141, '8714.96.11', 0.4721),
@@ -6646,12 +8047,10 @@ INSERT INTO relatorio_prod VALUES
     (141, '0301.94.10', 0.0025),
     (141, '0803.10.00', 0.0036),
     (141, '5205.13.90', 0.0013),
-    (141, '8542.31.90', 0.0116)
-ON CONFLICT DO NOTHING;
+    (141, '8542.31.90', 0.0116);
 
 INSERT INTO relatorio VALUES
-    (142, '2023-03-10', '2024-08-10', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (142, '2023-03-10', '2024-08-10', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (142, '8482.10.90', 0.1205),
@@ -6668,18 +8067,15 @@ INSERT INTO relatorio_prod VALUES
     (142, '2523.30.00', 0.1931),
     (142, '7415.21.00', 0.0981),
     (142, '6217.90.00', 0.3254),
-    (142, '8421.39.10', 0.0086)
-ON CONFLICT DO NOTHING;
+    (142, '8421.39.10', 0.0086);
 
 INSERT INTO relatorio_serv VALUES
     (142, '1.1805.40.00', '2023-04-01T03:12:26', 0.0864),
     (142, '1.1701.5', '2023-04-03T13:25:06', 0.0414),
-    (142, '1.0101.21.00', '2023-04-04T19:51:52', 0.0325)
-ON CONFLICT DO NOTHING;
+    (142, '1.0101.21.00', '2023-04-04T19:51:52', 0.0325);
 
 INSERT INTO relatorio VALUES
-    (143, '2026-04-04', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (143, '2026-04-04', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (143, '3804.00.12', 0.964),
@@ -6707,16 +8103,13 @@ INSERT INTO relatorio_prod VALUES
     (143, '2939.45.20', 0.1136),
     (143, '2839.90.20', 0.0065),
     (143, '6203.29.10', 0.005),
-    (143, '7226.91.00', 0.0032)
-ON CONFLICT DO NOTHING;
+    (143, '7226.91.00', 0.0032);
 
 INSERT INTO relatorio_serv VALUES
-    (143, '1.1405.11.00', '2026-05-05T01:39:09', 0.1049)
-ON CONFLICT DO NOTHING;
+    (143, '1.1405.11.00', '2026-05-05T01:39:09', 0.1049);
 
 INSERT INTO relatorio VALUES
-    (144, '2024-09-17', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (144, '2024-09-17', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (144, '9108.11.10', 0.0484),
@@ -6733,8 +8126,7 @@ INSERT INTO relatorio_prod VALUES
     (144, '2939.63.00', 0.044),
     (144, '5902.10.90', 0.1718),
     (144, '8101.99.10', 0.0807),
-    (144, '9705.21.00', 0.1307)
-ON CONFLICT DO NOTHING;
+    (144, '9705.21.00', 0.1307);
 
 INSERT INTO relatorio_serv VALUES
     (144, '1.0606', '2024-10-07T23:54:27', 0.0647),
@@ -6745,12 +8137,10 @@ INSERT INTO relatorio_serv VALUES
     (144, '1.1405.90.00', '2024-10-21T23:03:36', 0.0807),
     (144, '1.0502.32.30', '2024-10-04T18:19:48', 0.11),
     (144, '1.1406', '2024-10-16T08:10:46', 0.0528),
-    (144, '1.2501.3', '2024-10-13T14:31:48', 0.1403)
-ON CONFLICT DO NOTHING;
+    (144, '1.2501.3', '2024-10-13T14:31:48', 0.1403);
 
 INSERT INTO relatorio VALUES
-    (145, '2022-10-20', '2026-02-03', '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (145, '2022-10-20', '2026-02-03', '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (145, '4703.29.00', 1.0854),
@@ -6760,18 +8150,15 @@ INSERT INTO relatorio_prod VALUES
     (145, '2309.90.50', 0.2798),
     (145, '6804.10.00', 3.0877),
     (145, '3004.20.41', 0.4912),
-    (145, '2933.91.62', 0.9571)
-ON CONFLICT DO NOTHING;
+    (145, '2933.91.62', 0.9571);
 
 INSERT INTO relatorio_serv VALUES
     (145, '1.1102.50.00', '2022-11-29T01:06:27', 0.1159),
     (145, '1.0903.35.00', '2022-11-21T03:49:59', 0.7301),
-    (145, '1.0502.34', '2022-11-15T00:56:21', 0.428)
-ON CONFLICT DO NOTHING;
+    (145, '1.0502.34', '2022-11-15T00:56:21', 0.428);
 
 INSERT INTO relatorio VALUES
-    (146, '2025-12-24', '2026-02-28', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (146, '2025-12-24', '2026-02-28', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (146, '3004.43.00', 0.2792),
@@ -6796,18 +8183,15 @@ INSERT INTO relatorio_prod VALUES
     (146, '7407.29.2', 0.5181),
     (146, '8542.39.11', 0.1334),
     (146, '8481.20.90', 0.0728),
-    (146, '6006.32.10', 0.2693)
-ON CONFLICT DO NOTHING;
+    (146, '6006.32.10', 0.2693);
 
 INSERT INTO relatorio_serv VALUES
     (146, '1.2205.1', '2026-01-03T05:40:25', 0.0833),
     (146, '1.1103.42.00', '2026-01-25T18:12:11', 0.1914),
-    (146, '1.1303.20.00', '2026-01-26T03:23:51', 0.0515)
-ON CONFLICT DO NOTHING;
+    (146, '1.1303.20.00', '2026-01-26T03:23:51', 0.0515);
 
 INSERT INTO relatorio VALUES
-    (147, '2025-04-27', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (147, '2025-04-27', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (147, '2610.00.10', 72.0573),
@@ -6824,12 +8208,10 @@ INSERT INTO relatorio_prod VALUES
     (147, '8532.29.10', 0.306),
     (147, '4001.30.00', 1.4411),
     (147, '3808.59.2', 0.4155),
-    (147, '7901.12.10', 2.7956)
-ON CONFLICT DO NOTHING;
+    (147, '7901.12.10', 2.7956);
 
 INSERT INTO relatorio VALUES
-    (148, '2025-08-17', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (148, '2025-08-17', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (148, '2934.99.32', 9.1618),
@@ -6861,19 +8243,16 @@ INSERT INTO relatorio_prod VALUES
     (148, '0801.32.00', 0.1588),
     (148, '2923.20.00', 2.4259),
     (148, '5212.14.00', 1.6389),
-    (148, '3002.12.35', 0.0016)
-ON CONFLICT DO NOTHING;
+    (148, '3002.12.35', 0.0016);
 
 INSERT INTO relatorio_serv VALUES
     (148, '1.1105.90.00', '2025-09-28T09:43:39', 8.0509),
     (148, '1.06', '2025-09-27T16:07:48', 0.1679),
     (148, '1.2003.25.10', '2025-09-03T20:24:10', 0.249),
-    (148, '1.0102.52.20', '2025-09-03T18:46:13', 0.0414)
-ON CONFLICT DO NOTHING;
+    (148, '1.0102.52.20', '2025-09-03T18:46:13', 0.0414);
 
 INSERT INTO relatorio VALUES
-    (149, '2024-07-12', '2024-11-05', '79.821.563', '0001-65', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (149, '2024-07-12', '2024-11-05', '79.821.563', '0001-65', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (149, '2008.70.90', 16.6662),
@@ -6884,17 +8263,14 @@ INSERT INTO relatorio_prod VALUES
     (149, '2903.99.16', 2.7307),
     (149, '5407.94.00', 0.3015),
     (149, '8504.23.00', 1.3928),
-    (149, '6216.00.00', 7.2525)
-ON CONFLICT DO NOTHING;
+    (149, '6216.00.00', 7.2525);
 
 INSERT INTO relatorio_serv VALUES
     (149, '1.1802.50.00', '2024-08-17T00:02:27', 9.7659),
-    (149, '1.0401.16.20', '2024-08-09T21:05:24', 5.8521)
-ON CONFLICT DO NOTHING;
+    (149, '1.0401.16.20', '2024-08-09T21:05:24', 5.8521);
 
 INSERT INTO relatorio VALUES
-    (150, '2024-01-10', '2025-07-23', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (150, '2024-01-10', '2025-07-23', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (150, '5509.91.00', 1.2742),
@@ -6923,16 +8299,13 @@ INSERT INTO relatorio_prod VALUES
     (150, '6104.23.00', 0.0184),
     (150, '4407.11.00', 0.1072),
     (150, '7314.41.00', 0.1369),
-    (150, '2933.59.13', 0.2779)
-ON CONFLICT DO NOTHING;
+    (150, '2933.59.13', 0.2779);
 
 INSERT INTO relatorio_serv VALUES
-    (150, '1.2601.30.00', '2024-02-20T03:16:38', 0.909)
-ON CONFLICT DO NOTHING;
+    (150, '1.2601.30.00', '2024-02-20T03:16:38', 0.909);
 
 INSERT INTO relatorio VALUES
-    (151, '2023-10-08', NULL, '18.024.935', '0001-76', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (151, '2023-10-08', NULL, '18.024.935', '0001-76', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (151, '8207.70.20', 3.5946),
@@ -6946,22 +8319,18 @@ INSERT INTO relatorio_prod VALUES
     (151, '2921.12.00', 0.0128),
     (151, '9306.21.30', 0.0046),
     (151, '9606.10.00', 0.0215),
-    (151, '3605.00.00', 0.0231)
-ON CONFLICT DO NOTHING;
+    (151, '3605.00.00', 0.0231);
 
 INSERT INTO relatorio_serv VALUES
     (151, '1.1001.21.00', '2023-11-10T05:11:53', 0.8604),
     (151, '1.1401.12.00', '2023-11-25T00:49:05', 0.0309),
-    (151, '1.0404', '2023-11-22T03:01:12', 0.0324)
-ON CONFLICT DO NOTHING;
+    (151, '1.0404', '2023-11-22T03:01:12', 0.0324);
 
 INSERT INTO relatorio VALUES
-    (152, '2022-03-03', '2022-04-22', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (152, '2022-03-03', '2022-04-22', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (152, '0303.89.90', 0.1248)
-ON CONFLICT DO NOTHING;
+    (152, '0303.89.90', 0.1248);
 
 INSERT INTO relatorio_serv VALUES
     (152, '1.0502.2', '2022-04-02T19:08:57', 0.3772),
@@ -6986,12 +8355,10 @@ INSERT INTO relatorio_serv VALUES
     (152, '1.0102.69.00', '2022-04-04T13:50:34', 0.0072),
     (152, '1.2403.3', '2022-04-14T06:39:46', 0.0003),
     (152, '1.0102.52.20', '2022-04-03T16:54:57', 0.0062),
-    (152, '1.0502.12.20', '2022-04-19T17:34:56', 0.0045)
-ON CONFLICT DO NOTHING;
+    (152, '1.0502.12.20', '2022-04-19T17:34:56', 0.0045);
 
 INSERT INTO relatorio VALUES
-    (153, '2024-06-02', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (153, '2024-06-02', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (153, '8307.10.10', 3.9047),
@@ -7016,16 +8383,13 @@ INSERT INTO relatorio_prod VALUES
     (153, '8448.32.30', 0.3031),
     (153, '2841.90.8', 0.0095),
     (153, '0207.14.31', 0.0128),
-    (153, '4805.12.00', 0.0511)
-ON CONFLICT DO NOTHING;
+    (153, '4805.12.00', 0.0511);
 
 INSERT INTO relatorio_serv VALUES
-    (153, '1.0502.14.90', '2024-07-26T16:03:25', 1.1301)
-ON CONFLICT DO NOTHING;
+    (153, '1.0502.14.90', '2024-07-26T16:03:25', 1.1301);
 
 INSERT INTO relatorio VALUES
-    (154, '2022-03-14', '2022-07-21', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (154, '2022-03-14', '2022-07-21', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (154, '2922.49.61', 0.1721),
@@ -7045,18 +8409,15 @@ INSERT INTO relatorio_prod VALUES
     (154, '2909.50.19', 0.129),
     (154, '0106.39.00', 0.1099),
     (154, '4802.54.99', 0.1026),
-    (154, '8442.40.90', 0.0383)
-ON CONFLICT DO NOTHING;
+    (154, '8442.40.90', 0.0383);
 
 INSERT INTO relatorio VALUES
-    (155, '2021-10-10', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (155, '2021-10-10', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (155, '3907.10.10', 0.0442),
     (155, '4816.90.10', 0.0088),
-    (155, '2921.42.90', 0.0139)
-ON CONFLICT DO NOTHING;
+    (155, '2921.42.90', 0.0139);
 
 INSERT INTO relatorio_serv VALUES
     (155, '1.1106', '2021-11-13T20:56:45', 0.0558),
@@ -7076,12 +8437,10 @@ INSERT INTO relatorio_serv VALUES
     (155, '1.0503.90.00', '2021-11-01T17:32:00', 0.0628),
     (155, '1.1103.36.20', '2021-11-21T06:15:34', 0.0538),
     (155, '1.0504.45', '2021-11-17T02:04:11', 0.1424),
-    (155, '1.1403.21.10', '2021-11-02T13:28:46', 0.0821)
-ON CONFLICT DO NOTHING;
+    (155, '1.1403.21.10', '2021-11-02T13:28:46', 0.0821);
 
 INSERT INTO relatorio VALUES
-    (156, '2021-08-05', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (156, '2021-08-05', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (156, '5603.14.30', 0.1721),
@@ -7106,12 +8465,10 @@ INSERT INTO relatorio_prod VALUES
     (156, '7011.10.90', 0.0515),
     (156, '3404.90.21', 0.0605),
     (156, '5510.12.19', 0.0393),
-    (156, '2103.90.29', 0.0105)
-ON CONFLICT DO NOTHING;
+    (156, '2103.90.29', 0.0105);
 
 INSERT INTO relatorio VALUES
-    (157, '2024-02-19', NULL, '88.635.333', '0001-98', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (157, '2024-02-19', NULL, '88.635.333', '0001-98', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (157, '6004.10.92', 0.1064),
@@ -7141,12 +8498,10 @@ INSERT INTO relatorio_prod VALUES
     (157, '3207.20.9', 0.0103),
     (157, '4102.29.00', 0.0217),
     (157, '0713.33.21', 0.0015),
-    (157, '8461.20.10', 0.015)
-ON CONFLICT DO NOTHING;
+    (157, '8461.20.10', 0.015);
 
 INSERT INTO relatorio VALUES
-    (158, '2023-11-13', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (158, '2023-11-13', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (158, '1.0904.32.00', '2023-12-30T17:23:43', 0.0932),
@@ -7164,12 +8519,10 @@ INSERT INTO relatorio_serv VALUES
     (158, '1.1001.12.90', '2023-12-25T09:18:37', 0.0577),
     (158, '1.1706.24.00', '2023-12-25T10:40:49', 0.0152),
     (158, '1.0502.31.10', '2023-12-17T12:04:55', 0.0156),
-    (158, '1.1701.2', '2023-12-27T22:40:17', 0.703)
-ON CONFLICT DO NOTHING;
+    (158, '1.1701.2', '2023-12-27T22:40:17', 0.703);
 
 INSERT INTO relatorio VALUES
-    (159, '2023-06-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (159, '2023-06-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (159, '8455.22.90', 0.716),
@@ -7197,24 +8550,20 @@ INSERT INTO relatorio_prod VALUES
     (159, '2920.90.5', 0.0),
     (159, '4811.10.90', 0.0041),
     (159, '3004.20.9', 0.0871),
-    (159, '5603.94.20', 0.0677)
-ON CONFLICT DO NOTHING;
+    (159, '5603.94.20', 0.0677);
 
 INSERT INTO relatorio_serv VALUES
     (159, '1.1201.31.00', '2023-07-07T15:21:22', 0.4031),
     (159, '1.0401.15', '2023-07-13T21:20:00', 0.0129),
     (159, '1.0105.40.00', '2023-07-18T16:54:06', 0.079),
-    (159, '1.0202.00.00', '2023-07-01T15:28:32', 0.0152)
-ON CONFLICT DO NOTHING;
+    (159, '1.0202.00.00', '2023-07-01T15:28:32', 0.0152);
 
 INSERT INTO relatorio VALUES
-    (160, '2023-12-12', '2025-06-06', '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (160, '2023-12-12', '2025-06-06', '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (160, '6815.12.00', 0.3829),
-    (160, '8543.90.10', 0.1248)
-ON CONFLICT DO NOTHING;
+    (160, '8543.90.10', 0.1248);
 
 INSERT INTO relatorio_serv VALUES
     (160, '1.1001.1', '2024-01-13T14:18:55', 0.106),
@@ -7236,12 +8585,10 @@ INSERT INTO relatorio_serv VALUES
     (160, '1.2003.23.00', '2024-01-01T05:14:57', 0.5202),
     (160, '1.2003.26.10', '2024-01-08T13:34:42', 0.2056),
     (160, '1.2003.2', '2024-01-13T17:25:56', 0.3778),
-    (160, '1.2101.23.00', '2024-01-26T23:57:29', 0.9081)
-ON CONFLICT DO NOTHING;
+    (160, '1.2101.23.00', '2024-01-26T23:57:29', 0.9081);
 
 INSERT INTO relatorio VALUES
-    (161, '2024-03-28', NULL, '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (161, '2024-03-28', NULL, '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (161, '9031.80.11', 0.1111),
@@ -7272,16 +8619,13 @@ INSERT INTO relatorio_prod VALUES
     (161, '2833.11.90', 0.0141),
     (161, '4810.19.99', 0.0067),
     (161, '8517.79.00', 0.2733),
-    (161, '8402.90.00', 0.0119)
-ON CONFLICT DO NOTHING;
+    (161, '8402.90.00', 0.0119);
 
 INSERT INTO relatorio_serv VALUES
-    (161, '1.2501.12.00', '2024-04-07T14:29:41', 0.052)
-ON CONFLICT DO NOTHING;
+    (161, '1.2501.12.00', '2024-04-07T14:29:41', 0.052);
 
 INSERT INTO relatorio VALUES
-    (162, '2025-08-23', '2026-05-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (162, '2025-08-23', '2026-05-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (162, '2916.19.11', 0.9291),
@@ -7299,12 +8643,10 @@ INSERT INTO relatorio_prod VALUES
     (162, '2301.20.90', 0.0448),
     (162, '2937.23.21', 0.037),
     (162, '7110.29.00', 0.007),
-    (162, '0305.42.00', 0.0122)
-ON CONFLICT DO NOTHING;
+    (162, '0305.42.00', 0.0122);
 
 INSERT INTO relatorio VALUES
-    (163, '2025-01-04', '2026-05-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (163, '2025-01-04', '2026-05-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (163, '8414.90.20', 0.4003),
@@ -7319,18 +8661,15 @@ INSERT INTO relatorio_prod VALUES
     (163, '8466.20.10', 0.4492),
     (163, '0713.10.10', 0.1493),
     (163, '3904.10.20', 0.5202),
-    (163, '2841.90.2', 0.0907)
-ON CONFLICT DO NOTHING;
+    (163, '2841.90.2', 0.0907);
 
 INSERT INTO relatorio VALUES
-    (164, '2022-11-18', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (164, '2022-11-18', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (164, '8512.20.19', 0.0339),
     (164, '7304.59.90', 0.0353),
-    (164, '0305.63.00', 0.0775)
-ON CONFLICT DO NOTHING;
+    (164, '0305.63.00', 0.0775);
 
 INSERT INTO relatorio_serv VALUES
     (164, '1.1903.40.00', '2022-12-04T11:27:39', 0.0377),
@@ -7360,17 +8699,14 @@ INSERT INTO relatorio_serv VALUES
     (164, '1.2601.10.00', '2022-12-10T20:21:45', 0.0584),
     (164, '1.1401.39.00', '2022-12-29T09:41:10', 0.1337),
     (164, '1.1403.22', '2022-12-05T18:57:53', 0.0254),
-    (164, '1.2403.31.00', '2022-12-28T23:52:40', 0.1059)
-ON CONFLICT DO NOTHING;
+    (164, '1.2403.31.00', '2022-12-28T23:52:40', 0.1059);
 
 INSERT INTO relatorio VALUES
-    (165, '2025-03-30', NULL, '56.738.014', '0001-69', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (165, '2025-03-30', NULL, '56.738.014', '0001-69', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (165, '2933.53.60', 0.0599),
-    (165, '6211.12.00', 0.1451)
-ON CONFLICT DO NOTHING;
+    (165, '6211.12.00', 0.1451);
 
 INSERT INTO relatorio_serv VALUES
     (165, '1.0502.13.10', '2025-04-06T06:53:28', 0.034),
@@ -7398,12 +8734,10 @@ INSERT INTO relatorio_serv VALUES
     (165, '1.2003.25.10', '2025-04-19T00:42:02', 0.0661),
     (165, '1.1903.1', '2025-04-15T13:21:53', 0.0012),
     (165, '1.0401.16.10', '2025-04-25T21:12:44', 0.0214),
-    (165, '1.1803.2', '2025-04-22T03:37:49', 0.0375)
-ON CONFLICT DO NOTHING;
+    (165, '1.1803.2', '2025-04-22T03:37:49', 0.0375);
 
 INSERT INTO relatorio VALUES
-    (166, '2025-06-18', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (166, '2025-06-18', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (166, '2805.19.90', 6.4181),
@@ -7414,12 +8748,10 @@ INSERT INTO relatorio_prod VALUES
     (166, '0206.21.00', 0.2066),
     (166, '4810.14.90', 0.4428),
     (166, '2828.10.00', 0.0001),
-    (166, '9021.90.92', 0.0752)
-ON CONFLICT DO NOTHING;
+    (166, '9021.90.92', 0.0752);
 
 INSERT INTO relatorio VALUES
-    (167, '2023-01-09', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (167, '2023-01-09', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (167, '2812.19.20', 0.6928),
@@ -7444,12 +8776,10 @@ INSERT INTO relatorio_prod VALUES
     (167, '2809.20.20', 0.0014),
     (167, '0505.10.00', 0.0102),
     (167, '8466.92.00', 0.0125),
-    (167, '5516.91.00', 0.0119)
-ON CONFLICT DO NOTHING;
+    (167, '5516.91.00', 0.0119);
 
 INSERT INTO relatorio VALUES
-    (168, '2023-02-27', '2024-08-23', '71.498.635', '0001-06', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (168, '2023-02-27', '2024-08-23', '71.498.635', '0001-06', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (168, '3907.50.10', 0.1568),
@@ -7461,17 +8791,14 @@ INSERT INTO relatorio_prod VALUES
     (168, '8406.90.21', 1.4472),
     (168, '8523.21.20', 0.5363),
     (168, '2921.51.3', 0.1058),
-    (168, '3003.39.14', 0.4666)
-ON CONFLICT DO NOTHING;
+    (168, '3003.39.14', 0.4666);
 
 INSERT INTO relatorio_serv VALUES
     (168, '1.1101.14.00', '2023-03-16T05:18:18', 0.0043),
-    (168, '1.1507.90.00', '2023-03-24T01:40:07', 0.6194)
-ON CONFLICT DO NOTHING;
+    (168, '1.1507.90.00', '2023-03-24T01:40:07', 0.6194);
 
 INSERT INTO relatorio VALUES
-    (169, '2024-01-15', NULL, '39.605.871', '0001-83', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (169, '2024-01-15', NULL, '39.605.871', '0001-83', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (169, '7901.20.90', 0.2374),
@@ -7498,12 +8825,10 @@ INSERT INTO relatorio_prod VALUES
     (169, '8480.71.00', 0.0351),
     (169, '0304.73.00', 0.0671),
     (169, '0206.21.00', 0.1908),
-    (169, '2930.90.69', 0.0037)
-ON CONFLICT DO NOTHING;
+    (169, '2930.90.69', 0.0037);
 
 INSERT INTO relatorio VALUES
-    (170, '2022-11-18', NULL, '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (170, '2022-11-18', NULL, '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (170, '3806.90.1', 0.1117),
@@ -7513,8 +8838,7 @@ INSERT INTO relatorio_prod VALUES
     (170, '5702.50.10', 0.2718),
     (170, '2939.11.52', 0.0548),
     (170, '2930.20.23', 0.5442),
-    (170, '2530.10.90', 0.4248)
-ON CONFLICT DO NOTHING;
+    (170, '2530.10.90', 0.4248);
 
 INSERT INTO relatorio_serv VALUES
     (170, '1.2405.14.00', '2022-12-28T10:24:12', 0.6918),
@@ -7526,12 +8850,10 @@ INSERT INTO relatorio_serv VALUES
     (170, '1.1903', '2022-12-08T09:28:18', 0.0131),
     (170, '1.0402.3', '2022-12-27T03:31:16', 0.0405),
     (170, '1.2001.32.00', '2022-12-12T06:21:18', 0.0934),
-    (170, '1.0501.11.10', '2022-12-03T16:22:42', 0.6087)
-ON CONFLICT DO NOTHING;
+    (170, '1.0501.11.10', '2022-12-03T16:22:42', 0.6087);
 
 INSERT INTO relatorio VALUES
-    (171, '2025-10-07', '2026-06-12', '79.821.563', '0001-99', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (171, '2025-10-07', '2026-06-12', '79.821.563', '0001-99', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (171, '3825.90.00', 0.3213),
@@ -7540,8 +8862,7 @@ INSERT INTO relatorio_prod VALUES
     (171, '2917.39.40', 0.0797),
     (171, '8471.70.40', 0.0903),
     (171, '2906.19.90', 0.0536),
-    (171, '9027.90.99', 0.0512)
-ON CONFLICT DO NOTHING;
+    (171, '9027.90.99', 0.0512);
 
 INSERT INTO relatorio_serv VALUES
     (171, '1.1403.26.00', '2025-11-14T22:14:08', 0.0262),
@@ -7549,12 +8870,10 @@ INSERT INTO relatorio_serv VALUES
     (171, '1.1102.60.00', '2025-11-10T18:36:26', 0.0617),
     (171, '1.2204.30.00', '2025-11-09T05:05:01', 0.2373),
     (171, '1.0102.42.10', '2025-11-03T20:29:54', 0.6933),
-    (171, '1.1105.5', '2025-11-10T17:42:07', 0.0494)
-ON CONFLICT DO NOTHING;
+    (171, '1.1105.5', '2025-11-10T17:42:07', 0.0494);
 
 INSERT INTO relatorio VALUES
-    (172, '2025-03-03', '2025-10-29', '65.172.380', '0001-53', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (172, '2025-03-03', '2025-10-29', '65.172.380', '0001-53', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (172, '8419.90.40', 0.543),
@@ -7565,18 +8884,15 @@ INSERT INTO relatorio_prod VALUES
     (172, '8708.29.99', 0.005),
     (172, '8539.32.30', 0.0144),
     (172, '6902.20.10', 0.0042),
-    (172, '2931.41.00', 0.0134)
-ON CONFLICT DO NOTHING;
+    (172, '2931.41.00', 0.0134);
 
 INSERT INTO relatorio_serv VALUES
     (172, '1.1806.52.00', '2025-04-07T00:45:30', 0.0461),
     (172, '1.0503.12.00', '2025-04-02T04:48:27', 0.0002),
-    (172, '1.0102.53.20', '2025-04-23T15:50:45', 0.0083)
-ON CONFLICT DO NOTHING;
+    (172, '1.0102.53.20', '2025-04-23T15:50:45', 0.0083);
 
 INSERT INTO relatorio VALUES
-    (173, '2025-06-20', '2026-04-11', '20.978.635', '0001-10', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (173, '2025-06-20', '2026-04-11', '20.978.635', '0001-10', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (173, '8211.93.10', 2.4571),
@@ -7601,17 +8917,14 @@ INSERT INTO relatorio_prod VALUES
     (173, '2932.95.00', 0.0072),
     (173, '3507.90.32', 0.0034),
     (173, '4011.20.10', 0.0079),
-    (173, '2804.21.00', 0.0432)
-ON CONFLICT DO NOTHING;
+    (173, '2804.21.00', 0.0432);
 
 INSERT INTO relatorio_serv VALUES
     (173, '1.1806.8', '2025-07-05T00:13:51', 1.3548),
-    (173, '1.0403.11.90', '2025-07-13T22:59:09', 0.0382)
-ON CONFLICT DO NOTHING;
+    (173, '1.0403.11.90', '2025-07-13T22:59:09', 0.0382);
 
 INSERT INTO relatorio VALUES
-    (174, '2021-10-13', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (174, '2021-10-13', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (174, '0303.89.53', 0.1558),
@@ -7631,22 +8944,18 @@ INSERT INTO relatorio_prod VALUES
     (174, '8448.39.11', 0.1049),
     (174, '9021.40.00', 0.0921),
     (174, '4804.29.00', 0.1563),
-    (174, '8448.32.90', 0.4694)
-ON CONFLICT DO NOTHING;
+    (174, '8448.32.90', 0.4694);
 
 INSERT INTO relatorio_serv VALUES
     (174, '1.2301.92.00', '2021-11-20T00:07:09', 0.0445),
     (174, '1.0901.35.00', '2021-11-06T09:23:52', 0.7343),
-    (174, '1.0905.11.00', '2021-11-28T11:32:19', 0.1487)
-ON CONFLICT DO NOTHING;
+    (174, '1.0905.11.00', '2021-11-28T11:32:19', 0.1487);
 
 INSERT INTO relatorio VALUES
-    (175, '2025-10-22', '2026-02-21', '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (175, '2025-10-22', '2026-02-21', '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (175, '7210.90.00', 0.5221)
-ON CONFLICT DO NOTHING;
+    (175, '7210.90.00', 0.5221);
 
 INSERT INTO relatorio_serv VALUES
     (175, '1.1201.50.00', '2025-11-27T19:49:45', 0.1598),
@@ -7676,12 +8985,10 @@ INSERT INTO relatorio_serv VALUES
     (175, '1.1403.22.90', '2025-11-17T09:30:42', 0.7506),
     (175, '1.2508.00.00', '2025-11-27T10:36:11', 0.0212),
     (175, '1.2001.34.30', '2025-11-27T02:18:44', 0.1198),
-    (175, '1.0301.39.00', '2025-11-22T03:43:22', 0.3044)
-ON CONFLICT DO NOTHING;
+    (175, '1.0301.39.00', '2025-11-22T03:43:22', 0.3044);
 
 INSERT INTO relatorio VALUES
-    (176, '2023-06-04', '2025-03-01', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (176, '2023-06-04', '2025-03-01', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (176, '5205.24.00', 0.5642),
@@ -7689,8 +8996,7 @@ INSERT INTO relatorio_prod VALUES
     (176, '2825.30.90', 0.3921),
     (176, '8112.39.00', 0.1974),
     (176, '2849.90.10', 0.0657),
-    (176, '8541.41.12', 0.2067)
-ON CONFLICT DO NOTHING;
+    (176, '8541.41.12', 0.2067);
 
 INSERT INTO relatorio_serv VALUES
     (176, '1.2504.11.00', '2023-07-26T22:16:22', 0.0136),
@@ -7704,18 +9010,15 @@ INSERT INTO relatorio_serv VALUES
     (176, '1.1703.9', '2023-07-13T00:31:11', 0.0649),
     (176, '1.0505.10.00', '2023-07-06T12:02:48', 0.0392),
     (176, '1.2204.30.00', '2023-07-15T20:56:53', 0.1611),
-    (176, '1.0501.14.59', '2023-07-01T13:36:00', 0.0708)
-ON CONFLICT DO NOTHING;
+    (176, '1.0501.14.59', '2023-07-01T13:36:00', 0.0708);
 
 INSERT INTO relatorio VALUES
-    (177, '2023-09-18', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (177, '2023-09-18', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (177, '5607.50.90', 0.0394),
     (177, '2933.11.12', 0.0272),
-    (177, '2931.90.29', 0.0046)
-ON CONFLICT DO NOTHING;
+    (177, '2931.90.29', 0.0046);
 
 INSERT INTO relatorio_serv VALUES
     (177, '1.0502.33', '2023-10-28T16:19:31', 0.1763),
@@ -7733,18 +9036,15 @@ INSERT INTO relatorio_serv VALUES
     (177, '1.0703.00.00', '2023-10-26T04:03:39', 0.2672),
     (177, '1.1101.60.00', '2023-10-24T09:54:10', 0.2073),
     (177, '1.0904.33.00', '2023-10-20T05:51:23', 0.2251),
-    (177, '1.0605.20.00', '2023-10-23T11:28:29', 0.0113)
-ON CONFLICT DO NOTHING;
+    (177, '1.0605.20.00', '2023-10-23T11:28:29', 0.0113);
 
 INSERT INTO relatorio VALUES
-    (178, '2021-09-15', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (178, '2021-09-15', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (178, '7019.15.00', 0.3905),
     (178, '6216.00.00', 0.3926),
-    (178, '8529.90.1', 0.1368)
-ON CONFLICT DO NOTHING;
+    (178, '8529.90.1', 0.1368);
 
 INSERT INTO relatorio_serv VALUES
     (178, '1.0504.23.00', '2021-10-04T05:17:52', 0.1412),
@@ -7785,12 +9085,10 @@ INSERT INTO relatorio_serv VALUES
     (178, '1.2501.36.00', '2021-10-16T07:34:20', 0.2349),
     (178, '1.1105.59.00', '2021-10-04T22:00:46', 0.2094),
     (178, '1.0901.51.24', '2021-10-10T23:33:34', 0.2068),
-    (178, '1.0502.22.20', '2021-10-28T20:45:05', 0.0291)
-ON CONFLICT DO NOTHING;
+    (178, '1.0502.22.20', '2021-10-28T20:45:05', 0.0291);
 
 INSERT INTO relatorio VALUES
-    (179, '2024-04-04', '2024-10-08', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (179, '2024-04-04', '2024-10-08', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (179, '8505.90.80', 2.4774),
@@ -7814,17 +9112,14 @@ INSERT INTO relatorio_prod VALUES
     (179, '8471.60.53', 0.0016),
     (179, '4002.11.20', 0.2593),
     (179, '2827.60.1', 0.0456),
-    (179, '2712.20.00', 0.0017)
-ON CONFLICT DO NOTHING;
+    (179, '2712.20.00', 0.0017);
 
 INSERT INTO relatorio_serv VALUES
     (179, '1.1405.90.00', '2024-05-16T02:35:40', 0.4038),
-    (179, '1.1410', '2024-05-28T13:44:54', 0.0216)
-ON CONFLICT DO NOTHING;
+    (179, '1.1410', '2024-05-28T13:44:54', 0.0216);
 
 INSERT INTO relatorio VALUES
-    (180, '2022-07-18', '2025-07-04', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (180, '2022-07-18', '2025-07-04', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (180, '2903.79.11', 0.226),
@@ -7832,8 +9127,7 @@ INSERT INTO relatorio_prod VALUES
     (180, '5309.19.00', 0.4251),
     (180, '8456.30.90', 0.114),
     (180, '1902.20.00', 0.2553),
-    (180, '2924.29.63', 0.0204)
-ON CONFLICT DO NOTHING;
+    (180, '2924.29.63', 0.0204);
 
 INSERT INTO relatorio_serv VALUES
     (180, '1.0905.90.00', '2022-08-03T05:08:41', 0.3966),
@@ -7841,12 +9135,10 @@ INSERT INTO relatorio_serv VALUES
     (180, '1.2101.22.00', '2022-08-21T21:39:58', 0.8789),
     (180, '1.0602.29.00', '2022-08-29T16:48:51', 0.1201),
     (180, '1.0504.43.00', '2022-08-20T15:39:02', 0.1524),
-    (180, '1.0504', '2022-08-10T22:41:09', 0.1235)
-ON CONFLICT DO NOTHING;
+    (180, '1.0504', '2022-08-10T22:41:09', 0.1235);
 
 INSERT INTO relatorio VALUES
-    (181, '2022-08-03', '2024-11-26', '13.690.872', '0001-54', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (181, '2022-08-03', '2024-11-26', '13.690.872', '0001-54', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (181, '4304.00.00', 0.2803),
@@ -7858,8 +9150,7 @@ INSERT INTO relatorio_prod VALUES
     (181, '6909.12.10', 0.9736),
     (181, '2937.29.10', 0.2145),
     (181, '2924.29.4', 0.0497),
-    (181, '5607.90.10', 0.1472)
-ON CONFLICT DO NOTHING;
+    (181, '5607.90.10', 0.1472);
 
 INSERT INTO relatorio_serv VALUES
     (181, '1.1106.31.00', '2022-09-27T15:06:41', 1.4196),
@@ -7870,12 +9161,10 @@ INSERT INTO relatorio_serv VALUES
     (181, '1.0502.29.00', '2022-09-04T12:54:30', 0.1695),
     (181, '1.1101.40.00', '2022-09-01T14:54:07', 0.2446),
     (181, '1.1403.22.90', '2022-09-04T00:32:37', 0.252),
-    (181, '1.0503.90.00', '2022-09-10T14:40:17', 0.393)
-ON CONFLICT DO NOTHING;
+    (181, '1.0503.90.00', '2022-09-10T14:40:17', 0.393);
 
 INSERT INTO relatorio VALUES
-    (182, '2023-12-09', '2025-05-16', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (182, '2023-12-09', '2025-05-16', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (182, '5601.22.1', 1.0529),
@@ -7889,8 +9178,7 @@ INSERT INTO relatorio_prod VALUES
     (182, '7415.39.00', 0.2129),
     (182, '0804.10.10', 0.0559),
     (182, '8704.23.90', 0.0958),
-    (182, '2933.29.13', 0.3727)
-ON CONFLICT DO NOTHING;
+    (182, '2933.29.13', 0.3727);
 
 INSERT INTO relatorio_serv VALUES
     (182, '1.2301.95.00', '2024-01-09T06:40:42', 0.1927),
@@ -7904,16 +9192,13 @@ INSERT INTO relatorio_serv VALUES
     (182, '1.0403.33.00', '2024-01-29T21:59:40', 0.2931),
     (182, '1.1105.4', '2024-01-21T22:58:08', 0.1718),
     (182, '1.0802.30.00', '2024-01-06T22:12:34', 0.2257),
-    (182, '1.0905.2', '2024-01-26T22:10:07', 0.2512)
-ON CONFLICT DO NOTHING;
+    (182, '1.0905.2', '2024-01-26T22:10:07', 0.2512);
 
 INSERT INTO relatorio VALUES
-    (183, '2023-01-02', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (183, '2023-01-02', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (183, '0713.33.91', 0.0933)
-ON CONFLICT DO NOTHING;
+    (183, '0713.33.91', 0.0933);
 
 INSERT INTO relatorio_serv VALUES
     (183, '1.1001.40.00', '2023-02-02T19:28:05', 0.1748),
@@ -7955,12 +9240,10 @@ INSERT INTO relatorio_serv VALUES
     (183, '1.0904.37.00', '2023-02-03T19:41:23', 0.1201),
     (183, '1.1304.00.00', '2023-02-27T00:35:20', 0.1097),
     (183, '1.1102.30.00', '2023-02-11T04:30:24', 0.0429),
-    (183, '1.2003.26.10', '2023-02-09T14:44:25', 0.0125)
-ON CONFLICT DO NOTHING;
+    (183, '1.2003.26.10', '2023-02-09T14:44:25', 0.0125);
 
 INSERT INTO relatorio VALUES
-    (184, '2023-06-07', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (184, '2023-06-07', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (184, '6909.12.90', 0.0124),
@@ -7986,12 +9269,10 @@ INSERT INTO relatorio_prod VALUES
     (184, '6103.41.00', 0.0562),
     (184, '8458.99.00', 0.0414),
     (184, '7320.10.00', 0.0543),
-    (184, '6214.90.10', 0.0702)
-ON CONFLICT DO NOTHING;
+    (184, '6214.90.10', 0.0702);
 
 INSERT INTO relatorio VALUES
-    (185, '2025-07-24', '2025-09-25', '75.893.062', '0001-33', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (185, '2025-07-24', '2025-09-25', '75.893.062', '0001-33', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (185, '1.0501.22.20', '2025-08-17T11:46:10', 0.6471),
@@ -8011,12 +9292,10 @@ INSERT INTO relatorio_serv VALUES
     (185, '1.1001.90.00', '2025-08-19T22:18:43', 0.3991),
     (185, '1.0401.21.10', '2025-08-23T06:48:01', 0.5174),
     (185, '1.0502.24', '2025-08-19T19:15:15', 1.3501),
-    (185, '1.1507', '2025-08-18T05:11:49', 0.5135)
-ON CONFLICT DO NOTHING;
+    (185, '1.1507', '2025-08-18T05:11:49', 0.5135);
 
 INSERT INTO relatorio VALUES
-    (186, '2025-11-27', '2026-06-08', '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (186, '2025-11-27', '2026-06-08', '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (186, '1.0502.23.10', '2025-12-25T00:29:01', 0.0094),
@@ -8030,12 +9309,10 @@ INSERT INTO relatorio_serv VALUES
     (186, '1.0401.1', '2025-12-14T15:49:01', 0.0505),
     (186, '1.1404.13.00', '2025-12-02T19:06:16', 0.0845),
     (186, '1.0502.34.52', '2025-12-26T09:14:03', 0.1218),
-    (186, '1.2205.11.00', '2025-12-21T17:12:51', 0.034)
-ON CONFLICT DO NOTHING;
+    (186, '1.2205.11.00', '2025-12-21T17:12:51', 0.034);
 
 INSERT INTO relatorio VALUES
-    (187, '2026-03-25', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (187, '2026-03-25', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (187, '5212.25.00', 0.0066),
@@ -8052,8 +9329,7 @@ INSERT INTO relatorio_prod VALUES
     (187, '2811.19.90', 0.036),
     (187, '9111.90.90', 0.0169),
     (187, '9007.20.90', 0.0231),
-    (187, '8607.11.10', 0.071)
-ON CONFLICT DO NOTHING;
+    (187, '8607.11.10', 0.071);
 
 INSERT INTO relatorio_serv VALUES
     (187, '1.0901.10.00', '2026-04-25T16:25:17', 0.2474),
@@ -8067,12 +9343,10 @@ INSERT INTO relatorio_serv VALUES
     (187, '1.1706.21.00', '2026-04-17T17:06:48', 0.083),
     (187, '1.1805.3', '2026-04-19T11:13:55', 0.2517),
     (187, '1.1806.53.00', '2026-04-25T02:42:21', 0.0404),
-    (187, '1.2403.22.00', '2026-04-13T12:36:35', 0.0977)
-ON CONFLICT DO NOTHING;
+    (187, '1.2403.22.00', '2026-04-13T12:36:35', 0.0977);
 
 INSERT INTO relatorio VALUES
-    (188, '2021-12-21', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (188, '2021-12-21', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (188, '2921.19.99', 1.942),
@@ -8082,19 +9356,16 @@ INSERT INTO relatorio_prod VALUES
     (188, '3824.99.8', 0.3009),
     (188, '3808.92.91', 0.0702),
     (188, '0801.12.00', 0.003),
-    (188, '8471.50.10', 0.2384)
-ON CONFLICT DO NOTHING;
+    (188, '8471.50.10', 0.2384);
 
 INSERT INTO relatorio_serv VALUES
     (188, '1.1105.41.00', '2022-01-11T15:08:35', 0.5202),
     (188, '1.23', '2022-01-28T01:17:40', 0.0505),
     (188, '1.1401.31.00', '2022-01-09T00:05:42', 0.1021),
-    (188, '1.1107.20.00', '2022-01-11T05:59:22', 0.0221)
-ON CONFLICT DO NOTHING;
+    (188, '1.1107.20.00', '2022-01-11T05:59:22', 0.0221);
 
 INSERT INTO relatorio VALUES
-    (189, '2021-07-31', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (189, '2021-07-31', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (189, '9031.80.9', 8.8954),
@@ -8107,12 +9378,10 @@ INSERT INTO relatorio_prod VALUES
     (189, '2939.80.10', 0.0601),
     (189, '2817.00.20', 0.435),
     (189, '3812.39.19', 0.166),
-    (189, '7220.12.90', 0.3903)
-ON CONFLICT DO NOTHING;
+    (189, '7220.12.90', 0.3903);
 
 INSERT INTO relatorio VALUES
-    (190, '2023-11-19', '2026-05-27', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (190, '2023-11-19', '2026-05-27', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (190, '5510.90.12', 0.8344),
@@ -8130,19 +9399,16 @@ INSERT INTO relatorio_prod VALUES
     (190, '6004.10.42', 0.0022),
     (190, '2933.59.14', 0.0021),
     (190, '3926.10.00', 0.0608),
-    (190, '2103.90.1', 0.0072)
-ON CONFLICT DO NOTHING;
+    (190, '2103.90.1', 0.0072);
 
 INSERT INTO relatorio_serv VALUES
     (190, '1.0604.2', '2023-12-09T18:22:42', 0.3959),
     (190, '1.0102.53.20', '2023-12-26T05:35:49', 0.0151),
     (190, '1.0501.3', '2023-12-01T12:05:13', 0.0202),
-    (190, '1.0301.31.00', '2023-12-30T05:35:07', 0.0099)
-ON CONFLICT DO NOTHING;
+    (190, '1.0301.31.00', '2023-12-30T05:35:07', 0.0099);
 
 INSERT INTO relatorio VALUES
-    (191, '2021-10-11', '2025-03-02', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (191, '2021-10-11', '2025-03-02', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (191, '4811.90.19', 3.7516),
@@ -8172,16 +9438,13 @@ INSERT INTO relatorio_prod VALUES
     (191, '8433.11.00', 0.7505),
     (191, '4705.00.00', 0.0096),
     (191, '6107.19.00', 0.0018),
-    (191, '3703.10.2', 0.023)
-ON CONFLICT DO NOTHING;
+    (191, '3703.10.2', 0.023);
 
 INSERT INTO relatorio_serv VALUES
-    (191, '1.0401.15.10', '2021-11-13T18:32:48', 1.1923)
-ON CONFLICT DO NOTHING;
+    (191, '1.0401.15.10', '2021-11-13T18:32:48', 1.1923);
 
 INSERT INTO relatorio VALUES
-    (192, '2022-09-03', '2025-04-16', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (192, '2022-09-03', '2025-04-16', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (192, '2853.90.30', 3.1846),
@@ -8200,18 +9463,15 @@ INSERT INTO relatorio_prod VALUES
     (192, '9105.19.00', 0.0699),
     (192, '8605.00.10', 0.2344),
     (192, '8434.20.10', 0.176),
-    (192, '3004.90.76', 0.0315)
-ON CONFLICT DO NOTHING;
+    (192, '3004.90.76', 0.0315);
 
 INSERT INTO relatorio_serv VALUES
     (192, '1.0403.32.00', '2022-10-07T01:16:04', 1.1578),
     (192, '1.0602.29.00', '2022-10-19T23:27:44', 0.0042),
-    (192, '1.1202.30.00', '2022-10-04T16:03:03', 0.0674)
-ON CONFLICT DO NOTHING;
+    (192, '1.1202.30.00', '2022-10-04T16:03:03', 0.0674);
 
 INSERT INTO relatorio VALUES
-    (193, '2026-03-12', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (193, '2026-03-12', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (193, '8539.31.19', 4.3227),
@@ -8228,17 +9488,14 @@ INSERT INTO relatorio_prod VALUES
     (193, '8474.20.90', 0.2093),
     (193, '6811.81.00', 0.0357),
     (193, '2918.16.10', 0.2492),
-    (193, '8426.49.10', 0.0929)
-ON CONFLICT DO NOTHING;
+    (193, '8426.49.10', 0.0929);
 
 INSERT INTO relatorio VALUES
-    (194, '2024-05-08', '2026-05-14', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (194, '2024-05-08', '2026-05-14', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (194, '2933.91.8', 0.0948),
-    (194, '2933.99.6', 0.0971)
-ON CONFLICT DO NOTHING;
+    (194, '2933.99.6', 0.0971);
 
 INSERT INTO relatorio_serv VALUES
     (194, '1.0604.21.00', '2024-06-14T19:00:29', 0.0158),
@@ -8274,12 +9531,10 @@ INSERT INTO relatorio_serv VALUES
     (194, '1.0903.1', '2024-06-15T21:45:52', 0.6089),
     (194, '1.1106.34.00', '2024-06-05T16:56:54', 0.6333),
     (194, '1.0901.34.00', '2024-06-16T02:02:14', 0.087),
-    (194, '1.1404', '2024-06-08T06:20:26', 0.3139)
-ON CONFLICT DO NOTHING;
+    (194, '1.1404', '2024-06-08T06:20:26', 0.3139);
 
 INSERT INTO relatorio VALUES
-    (195, '2025-01-14', '2025-11-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (195, '2025-01-14', '2025-11-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (195, '3808.93.49', 0.0609),
@@ -8296,19 +9551,16 @@ INSERT INTO relatorio_prod VALUES
     (195, '0104.10.11', 0.3679),
     (195, '3825.90.00', 0.1087),
     (195, '0101.90.00', 0.1106),
-    (195, '1207.99.10', 0.0692)
-ON CONFLICT DO NOTHING;
+    (195, '1207.99.10', 0.0692);
 
 INSERT INTO relatorio_serv VALUES
     (195, '1.1404.22.00', '2025-02-02T21:31:29', 0.0555),
     (195, '1.0905.13.00', '2025-02-25T04:24:55', 0.2097),
     (195, '1.1103.33.00', '2025-02-04T14:42:56', 0.1547),
-    (195, '1.1105.10.00', '2025-02-21T21:45:10', 0.2676)
-ON CONFLICT DO NOTHING;
+    (195, '1.1105.10.00', '2025-02-21T21:45:10', 0.2676);
 
 INSERT INTO relatorio VALUES
-    (196, '2024-06-08', '2024-09-15', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (196, '2024-06-08', '2024-09-15', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (196, '1302.13.00', 2.1802),
@@ -8328,12 +9580,10 @@ INSERT INTO relatorio_prod VALUES
     (196, '5402.47.90', 0.1373),
     (196, '9021.90.91', 0.0044),
     (196, '5501.11.00', 0.0001),
-    (196, '3206.50.29', 0.0115)
-ON CONFLICT DO NOTHING;
+    (196, '3206.50.29', 0.0115);
 
 INSERT INTO relatorio VALUES
-    (197, '2021-08-04', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (197, '2021-08-04', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (197, '5208.11.00', 0.0075),
@@ -8356,17 +9606,14 @@ INSERT INTO relatorio_prod VALUES
     (197, '8209.00.19', 0.035),
     (197, '4408.90.10', 0.126),
     (197, '8542.90.00', 0.1424),
-    (197, '7211.90.90', 0.2948)
-ON CONFLICT DO NOTHING;
+    (197, '7211.90.90', 0.2948);
 
 INSERT INTO relatorio_serv VALUES
     (197, '1.1409.90.00', '2021-09-04T07:58:11', 0.0629),
-    (197, '1.1801.1', '2021-09-19T03:33:46', 0.0147)
-ON CONFLICT DO NOTHING;
+    (197, '1.1801.1', '2021-09-19T03:33:46', 0.0147);
 
 INSERT INTO relatorio VALUES
-    (198, '2025-02-07', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (198, '2025-02-07', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (198, '3603.50.00', 2.0339),
@@ -8386,16 +9633,13 @@ INSERT INTO relatorio_prod VALUES
     (198, '7315.12.90', 0.3104),
     (198, '9106.90.00', 0.1183),
     (198, '7203.10.00', 0.0258),
-    (198, '1605.10.00', 0.0204)
-ON CONFLICT DO NOTHING;
+    (198, '1605.10.00', 0.0204);
 
 INSERT INTO relatorio_serv VALUES
-    (198, '1.0103.10.00', '2025-03-10T06:08:30', 0.9442)
-ON CONFLICT DO NOTHING;
+    (198, '1.0103.10.00', '2025-03-10T06:08:30', 0.9442);
 
 INSERT INTO relatorio VALUES
-    (199, '2022-01-16', '2023-10-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (199, '2022-01-16', '2023-10-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (199, '0713.20.10', 0.8478),
@@ -8424,19 +9668,16 @@ INSERT INTO relatorio_prod VALUES
     (199, '2520.10.20', 0.0176),
     (199, '2914.19.21', 0.0938),
     (199, '3809.92.19', 0.0197),
-    (199, '2530.90.10', 0.0023)
-ON CONFLICT DO NOTHING;
+    (199, '2530.90.10', 0.0023);
 
 INSERT INTO relatorio_serv VALUES
     (199, '1.1405.21.00', '2022-02-17T20:08:39', 0.385),
     (199, '1.1406.34.00', '2022-02-01T16:15:38', 0.0286),
     (199, '1.0401.14.00', '2022-02-15T18:56:10', 0.0404),
-    (199, '1.1401.39.00', '2022-02-15T11:17:36', 0.0003)
-ON CONFLICT DO NOTHING;
+    (199, '1.1401.39.00', '2022-02-15T11:17:36', 0.0003);
 
 INSERT INTO relatorio VALUES
-    (200, '2021-09-03', '2025-12-19', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (200, '2021-09-03', '2025-12-19', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (200, '8422.40.30', 4.6942),
@@ -8458,17 +9699,14 @@ INSERT INTO relatorio_prod VALUES
     (200, '3003.90.87', 0.0825),
     (200, '7208.39.90', 0.0066),
     (200, '3923.21.90', 0.0275),
-    (200, '5305.00.10', 0.1328)
-ON CONFLICT DO NOTHING;
+    (200, '5305.00.10', 0.1328);
 
 INSERT INTO relatorio VALUES
-    (201, '2021-11-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (201, '2021-11-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (201, '5509.32.00', 0.0716),
-    (201, '6104.13.00', 0.1869)
-ON CONFLICT DO NOTHING;
+    (201, '6104.13.00', 0.1869);
 
 INSERT INTO relatorio_serv VALUES
     (201, '1.0501.2', '2021-12-22T08:38:53', 0.0019),
@@ -8502,12 +9740,10 @@ INSERT INTO relatorio_serv VALUES
     (201, '1.0501.11.20', '2021-12-04T01:44:56', 0.081),
     (201, '1.0402.21', '2021-12-22T06:16:53', 0.0572),
     (201, '1.0102', '2021-12-20T13:17:04', 0.0681),
-    (201, '1.2101', '2021-12-07T05:34:41', 0.051)
-ON CONFLICT DO NOTHING;
+    (201, '1.2101', '2021-12-07T05:34:41', 0.051);
 
 INSERT INTO relatorio VALUES
-    (202, '2025-08-23', '2026-06-08', '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (202, '2025-08-23', '2026-06-08', '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (202, '6110.20.00', 0.3912),
@@ -8522,16 +9758,13 @@ INSERT INTO relatorio_prod VALUES
     (202, '5109.10.00', 0.3558),
     (202, '2928.00.30', 0.3568),
     (202, '4010.12.00', 0.381),
-    (202, '2937.22.39', 0.1049)
-ON CONFLICT DO NOTHING;
+    (202, '2937.22.39', 0.1049);
 
 INSERT INTO relatorio_serv VALUES
-    (202, '1.0907.00.00', '2025-09-03T08:42:25', 0.7104)
-ON CONFLICT DO NOTHING;
+    (202, '1.0907.00.00', '2025-09-03T08:42:25', 0.7104);
 
 INSERT INTO relatorio VALUES
-    (203, '2024-07-13', '2025-10-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (203, '2024-07-13', '2025-10-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (203, '2926.90.30', 0.0843),
@@ -8557,18 +9790,15 @@ INSERT INTO relatorio_prod VALUES
     (203, '1302.19.40', 0.1383),
     (203, '3701.30.31', 0.0263),
     (203, '8540.91.20', 0.0613),
-    (203, '2930.90.79', 0.0076)
-ON CONFLICT DO NOTHING;
+    (203, '2930.90.79', 0.0076);
 
 INSERT INTO relatorio_serv VALUES
     (203, '1.1806.59.00', '2024-08-05T14:39:01', 0.0058),
     (203, '1.0901.51.25', '2024-08-27T15:55:57', 0.0092),
-    (203, '1.1109.90.00', '2024-08-22T04:17:43', 0.1291)
-ON CONFLICT DO NOTHING;
+    (203, '1.1109.90.00', '2024-08-22T04:17:43', 0.1291);
 
 INSERT INTO relatorio VALUES
-    (204, '2023-03-29', '2025-11-24', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (204, '2023-03-29', '2025-11-24', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (204, '8401.20.00', 0.0691),
@@ -8584,8 +9814,7 @@ INSERT INTO relatorio_prod VALUES
     (204, '0303.89.6', 0.0521),
     (204, '8421.91.10', 0.0161),
     (204, '3301.29.18', 0.205),
-    (204, '8539.31.3', 0.0731)
-ON CONFLICT DO NOTHING;
+    (204, '8539.31.3', 0.0731);
 
 INSERT INTO relatorio_serv VALUES
     (204, '1.2304.1', '2023-04-21T23:29:55', 0.0241),
@@ -8601,12 +9830,10 @@ INSERT INTO relatorio_serv VALUES
     (204, '1.0401.29.00', '2023-04-22T03:00:58', 0.0255),
     (204, '1.1401.2', '2023-04-17T13:35:46', 0.012),
     (204, '1.2606.00.00', '2023-04-17T14:04:56', 0.1576),
-    (204, '1.1802.40.00', '2023-04-24T04:58:54', 0.0116)
-ON CONFLICT DO NOTHING;
+    (204, '1.1802.40.00', '2023-04-24T04:58:54', 0.0116);
 
 INSERT INTO relatorio VALUES
-    (205, '2023-10-12', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (205, '2023-10-12', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (205, '2829.19.20', 1.6358),
@@ -8637,17 +9864,14 @@ INSERT INTO relatorio_prod VALUES
     (205, '8419.89.1', 0.0032),
     (205, '6201.90.00', 0.0579),
     (205, '2309.90.30', 0.0039),
-    (205, '3002.12.14', 0.2893)
-ON CONFLICT DO NOTHING;
+    (205, '3002.12.14', 0.2893);
 
 INSERT INTO relatorio VALUES
-    (206, '2024-07-16', NULL, '53.921.807', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (206, '2024-07-16', NULL, '53.921.807', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (206, '3004.20.91', 0.0595),
-    (206, '5208.23.00', 0.2465)
-ON CONFLICT DO NOTHING;
+    (206, '5208.23.00', 0.2465);
 
 INSERT INTO relatorio_serv VALUES
     (206, '1.1806.90.00', '2024-08-21T01:36:07', 0.6196),
@@ -8671,12 +9895,10 @@ INSERT INTO relatorio_serv VALUES
     (206, '1.0501.12.20', '2024-08-30T07:41:08', 0.4769),
     (206, '1.0602.3', '2024-08-04T01:52:41', 0.1036),
     (206, '1.1302.23.00', '2024-08-27T10:30:31', 0.2319),
-    (206, '1.2003.25.10', '2024-08-25T23:19:45', 0.042)
-ON CONFLICT DO NOTHING;
+    (206, '1.2003.25.10', '2024-08-25T23:19:45', 0.042);
 
 INSERT INTO relatorio VALUES
-    (207, '2025-06-05', NULL, '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (207, '2025-06-05', NULL, '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (207, '8201.90.00', 1.577),
@@ -8688,8 +9910,7 @@ INSERT INTO relatorio_prod VALUES
     (207, '8433.60.21', 0.0237),
     (207, '8424.30.90', 0.0212),
     (207, '2932.19.20', 0.0037),
-    (207, '0804.50.20', 0.0338)
-ON CONFLICT DO NOTHING;
+    (207, '0804.50.20', 0.0338);
 
 INSERT INTO relatorio_serv VALUES
     (207, '1.0102', '2025-07-25T18:42:43', 0.7062),
@@ -8697,12 +9918,10 @@ INSERT INTO relatorio_serv VALUES
     (207, '1.1001.12.90', '2025-07-08T04:37:45', 0.0038),
     (207, '1.1402.12.00', '2025-07-18T03:53:56', 0.0174),
     (207, '1.1805.39.00', '2025-07-11T10:58:08', 0.0014),
-    (207, '1.2505.20.00', '2025-07-26T00:13:04', 0.0012)
-ON CONFLICT DO NOTHING;
+    (207, '1.2505.20.00', '2025-07-26T00:13:04', 0.0012);
 
 INSERT INTO relatorio VALUES
-    (208, '2024-06-22', '2024-08-22', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (208, '2024-06-22', '2024-08-22', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (208, '6506.10.90', 0.6836),
@@ -8715,18 +9934,15 @@ INSERT INTO relatorio_prod VALUES
     (208, '3827.59.00', 0.0265),
     (208, '7217.20.10', 0.0557),
     (208, '2933.99.61', 0.0256),
-    (208, '3004.39.31', 0.054)
-ON CONFLICT DO NOTHING;
+    (208, '3004.39.31', 0.054);
 
 INSERT INTO relatorio_serv VALUES
     (208, '1.0101', '2024-07-12T06:04:16', 0.3328),
     (208, '1.0502.11.30', '2024-07-02T12:54:53', 0.0088),
-    (208, '1.1001.40.00', '2024-07-29T10:03:34', 0.0038)
-ON CONFLICT DO NOTHING;
+    (208, '1.1001.40.00', '2024-07-29T10:03:34', 0.0038);
 
 INSERT INTO relatorio VALUES
-    (209, '2022-11-19', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (209, '2022-11-19', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (209, '8523.52.90', 0.303),
@@ -8746,19 +9962,16 @@ INSERT INTO relatorio_prod VALUES
     (209, '5810.92.00', 0.8452),
     (209, '7222.19.90', 1.025),
     (209, '6214.20.00', 0.8112),
-    (209, '2903.61.00', 4.5127)
-ON CONFLICT DO NOTHING;
+    (209, '2903.61.00', 4.5127);
 
 INSERT INTO relatorio_serv VALUES
     (209, '1.0102.1', '2022-12-12T11:58:09', 0.6166),
     (209, '1.1506.22.00', '2022-12-22T05:19:26', 1.0564),
     (209, '1.0504.32.00', '2022-12-08T18:36:18', 0.524),
-    (209, '1.2201.20.00', '2022-12-19T18:33:56', 0.3634)
-ON CONFLICT DO NOTHING;
+    (209, '1.2201.20.00', '2022-12-19T18:33:56', 0.3634);
 
 INSERT INTO relatorio VALUES
-    (210, '2023-07-15', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (210, '2023-07-15', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (210, '5514.29.00', 0.9862),
@@ -8788,12 +10001,10 @@ INSERT INTO relatorio_prod VALUES
     (210, '3901.90.10', 0.23),
     (210, '2933.69.14', 0.0058),
     (210, '6802.91.00', 0.0006),
-    (210, '7227.20.00', 0.0165)
-ON CONFLICT DO NOTHING;
+    (210, '7227.20.00', 0.0165);
 
 INSERT INTO relatorio VALUES
-    (211, '2025-08-05', '2025-12-28', '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (211, '2025-08-05', '2025-12-28', '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (211, '8515.19.00', 3.075),
@@ -8808,16 +10019,13 @@ INSERT INTO relatorio_prod VALUES
     (211, '7205.10.00', 0.0263),
     (211, '5607.41.00', 0.0263),
     (211, '8708.94.1', 0.0772),
-    (211, '5204.11.11', 0.0385)
-ON CONFLICT DO NOTHING;
+    (211, '5204.11.11', 0.0385);
 
 INSERT INTO relatorio_serv VALUES
-    (211, '1.0502.13.20', '2025-09-17T02:03:07', 1.8214)
-ON CONFLICT DO NOTHING;
+    (211, '1.0502.13.20', '2025-09-17T02:03:07', 1.8214);
 
 INSERT INTO relatorio VALUES
-    (212, '2022-10-27', '2023-07-29', '71.498.635', '0001-06', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (212, '2022-10-27', '2023-07-29', '71.498.635', '0001-06', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (212, '9030.82.90', 0.2431),
@@ -8835,19 +10043,16 @@ INSERT INTO relatorio_prod VALUES
     (212, '5804.29.10', 0.0631),
     (212, '3004.20.69', 0.2047),
     (212, '2103.10.90', 0.2802),
-    (212, '2922.50.91', 0.6376)
-ON CONFLICT DO NOTHING;
+    (212, '2922.50.91', 0.6376);
 
 INSERT INTO relatorio_serv VALUES
     (212, '1.1706.23.00', '2022-11-02T12:59:35', 0.3674),
     (212, '1.2304.11.00', '2022-11-02T12:40:20', 0.0732),
     (212, '1.2504.11.00', '2022-11-29T09:57:02', 0.1363),
-    (212, '1.0502.11.10', '2022-11-12T14:58:35', 0.2597)
-ON CONFLICT DO NOTHING;
+    (212, '1.0502.11.10', '2022-11-12T14:58:35', 0.2597);
 
 INSERT INTO relatorio VALUES
-    (213, '2025-08-29', '2026-02-26', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (213, '2025-08-29', '2026-02-26', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (213, '1521.90.11', 0.0722),
@@ -8855,8 +10060,7 @@ INSERT INTO relatorio_prod VALUES
     (213, '3824.99.35', 0.2563),
     (213, '3002.41.15', 0.472),
     (213, '8471.60.90', 1.4956),
-    (213, '4802.58.92', 0.3965)
-ON CONFLICT DO NOTHING;
+    (213, '4802.58.92', 0.3965);
 
 INSERT INTO relatorio_serv VALUES
     (213, '1.2302.10.00', '2025-09-09T12:08:30', 0.3217),
@@ -8868,12 +10072,10 @@ INSERT INTO relatorio_serv VALUES
     (213, '1.1706.11.00', '2025-09-19T14:13:58', 0.381),
     (213, '1.1805', '2025-09-07T04:18:06', 0.0785),
     (213, '1.1805.50.00', '2025-09-22T16:19:14', 0.2431),
-    (213, '1.0301.29.00', '2025-09-19T16:20:40', 0.2095)
-ON CONFLICT DO NOTHING;
+    (213, '1.0301.29.00', '2025-09-19T16:20:40', 0.2095);
 
 INSERT INTO relatorio VALUES
-    (214, '2024-03-02', '2024-07-08', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (214, '2024-03-02', '2024-07-08', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (214, '8203.10.10', 0.6704),
@@ -8894,17 +10096,14 @@ INSERT INTO relatorio_prod VALUES
     (214, '3815.19.00', 0.0736),
     (214, '2933.53.21', 0.2232),
     (214, '8443.13.90', 0.2971),
-    (214, '3908.10.21', 0.2314)
-ON CONFLICT DO NOTHING;
+    (214, '3908.10.21', 0.2314);
 
 INSERT INTO relatorio_serv VALUES
     (214, '1.1803.22.00', '2024-04-21T06:44:22', 0.3195),
-    (214, '1.0502.3', '2024-04-04T00:02:36', 0.2614)
-ON CONFLICT DO NOTHING;
+    (214, '1.0502.3', '2024-04-04T00:02:36', 0.2614);
 
 INSERT INTO relatorio VALUES
-    (215, '2022-05-06', '2023-08-30', '01.274.895', '0001-23', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (215, '2022-05-06', '2023-08-30', '01.274.895', '0001-23', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (215, '2904.99.16', 0.146),
@@ -8925,19 +10124,16 @@ INSERT INTO relatorio_prod VALUES
     (215, '2903.13.00', 0.0343),
     (215, '3901.10.20', 0.0723),
     (215, '9031.90.10', 0.1187),
-    (215, '4202.12.20', 0.8435)
-ON CONFLICT DO NOTHING;
+    (215, '4202.12.20', 0.8435);
 
 INSERT INTO relatorio_serv VALUES
     (215, '1.2303.00.00', '2022-06-04T15:00:47', 0.7262),
     (215, '1.0901.51.21', '2022-06-14T00:19:50', 0.1327),
     (215, '1.0504', '2022-06-26T01:08:53', 0.065),
-    (215, '1.0502.12.30', '2022-06-19T02:13:47', 0.0289)
-ON CONFLICT DO NOTHING;
+    (215, '1.0502.12.30', '2022-06-19T02:13:47', 0.0289);
 
 INSERT INTO relatorio VALUES
-    (216, '2024-03-20', '2024-12-15', '09.723.145', '0001-93', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (216, '2024-03-20', '2024-12-15', '09.723.145', '0001-93', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (216, '9014.10.00', 0.1229),
@@ -8945,8 +10141,7 @@ INSERT INTO relatorio_prod VALUES
     (216, '5702.31.00', 0.0928),
     (216, '2922.29.90', 0.0657),
     (216, '3004.39.81', 0.1322),
-    (216, '2903.75.00', 0.0983)
-ON CONFLICT DO NOTHING;
+    (216, '2903.75.00', 0.0983);
 
 INSERT INTO relatorio_serv VALUES
     (216, '1.0102.1', '2024-04-17T20:32:26', 0.1336),
@@ -8957,12 +10152,10 @@ INSERT INTO relatorio_serv VALUES
     (216, '1.05', '2024-04-24T16:37:43', 0.0242),
     (216, '1.0402.90.00', '2024-04-01T08:35:04', 0.0367),
     (216, '1.0502.24', '2024-04-14T08:30:21', 0.0103),
-    (216, '1.1106.32.00', '2024-04-07T21:47:14', 0.0458)
-ON CONFLICT DO NOTHING;
+    (216, '1.1106.32.00', '2024-04-07T21:47:14', 0.0458);
 
 INSERT INTO relatorio VALUES
-    (217, '2021-08-04', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (217, '2021-08-04', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (217, '5603.91.30', 0.8029),
@@ -8994,17 +10187,14 @@ INSERT INTO relatorio_prod VALUES
     (217, '3502.20.00', 1.6573),
     (217, '0810.90.16', 0.3653),
     (217, '8414.70.00', 0.8487),
-    (217, '9405.31.00', 2.3344)
-ON CONFLICT DO NOTHING;
+    (217, '9405.31.00', 2.3344);
 
 INSERT INTO relatorio_serv VALUES
     (217, '1.0402.39.00', '2021-09-11T03:19:59', 4.274),
-    (217, '1.0501.32.00', '2021-09-19T17:01:31', 0.2219)
-ON CONFLICT DO NOTHING;
+    (217, '1.0501.32.00', '2021-09-19T17:01:31', 0.2219);
 
 INSERT INTO relatorio VALUES
-    (218, '2022-08-30', '2023-11-28', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (218, '2022-08-30', '2023-11-28', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (218, '2921.51.35', 0.1459),
@@ -9036,18 +10226,15 @@ INSERT INTO relatorio_prod VALUES
     (218, '7326.11.00', 0.5229),
     (218, '0901.22.00', 0.0674),
     (218, '7202.41.00', 0.073),
-    (218, '0302.89.2', 0.0409)
-ON CONFLICT DO NOTHING;
+    (218, '0302.89.2', 0.0409);
 
 INSERT INTO relatorio_serv VALUES
     (218, '1.0501.11.30', '2022-09-25T06:19:01', 0.3002),
     (218, '1.2101.21.00', '2022-09-28T14:10:35', 0.4035),
-    (218, '1.2203.10.00', '2022-09-29T05:36:39', 0.5835)
-ON CONFLICT DO NOTHING;
+    (218, '1.2203.10.00', '2022-09-29T05:36:39', 0.5835);
 
 INSERT INTO relatorio VALUES
-    (219, '2022-07-12', '2023-06-14', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (219, '2022-07-12', '2023-06-14', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (219, '8441.40.00', 0.0477),
@@ -9059,23 +10246,19 @@ INSERT INTO relatorio_prod VALUES
     (219, '3005.10.40', 0.2499),
     (219, '9010.50.20', 0.6011),
     (219, '2922.19.95', 0.1167),
-    (219, '0302.72.10', 0.6615)
-ON CONFLICT DO NOTHING;
+    (219, '0302.72.10', 0.6615);
 
 INSERT INTO relatorio_serv VALUES
     (219, '1.2405.14.00', '2022-08-04T13:15:02', 0.201),
-    (219, '1.0901.5', '2022-08-10T22:44:38', 0.1353)
-ON CONFLICT DO NOTHING;
+    (219, '1.0901.5', '2022-08-10T22:44:38', 0.1353);
 
 INSERT INTO relatorio VALUES
-    (220, '2024-12-04', '2026-05-16', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (220, '2024-12-04', '2026-05-16', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (220, '2710.19.99', 0.4509),
     (220, '8461.20.10', 0.0078),
-    (220, '3003.90.67', 0.0044)
-ON CONFLICT DO NOTHING;
+    (220, '3003.90.67', 0.0044);
 
 INSERT INTO relatorio_serv VALUES
     (220, '1.0602.23.00', '2025-01-10T10:18:06', 4.4113),
@@ -9094,12 +10277,10 @@ INSERT INTO relatorio_serv VALUES
     (220, '1.0910', '2025-01-24T18:04:34', 0.0423),
     (220, '1.1501', '2025-01-08T08:16:53', 0.0367),
     (220, '1.0501.24.29', '2025-01-20T17:52:29', 0.0141),
-    (220, '1.0502.14.59', '2025-01-29T17:55:49', 0.1409)
-ON CONFLICT DO NOTHING;
+    (220, '1.0502.14.59', '2025-01-29T17:55:49', 0.1409);
 
 INSERT INTO relatorio VALUES
-    (221, '2022-04-22', '2025-08-28', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (221, '2022-04-22', '2025-08-28', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (221, '4004.00.00', 1.0388),
@@ -9123,21 +10304,17 @@ INSERT INTO relatorio_prod VALUES
     (221, '9618.00.00', 0.0986),
     (221, '2915.39.94', 0.0062),
     (221, '9603.30.00', 0.0087),
-    (221, '7301.20.00', 0.0623)
-ON CONFLICT DO NOTHING;
+    (221, '7301.20.00', 0.0623);
 
 INSERT INTO relatorio_serv VALUES
-    (221, '1.1106.4', '2022-05-22T02:03:53', 0.9294)
-ON CONFLICT DO NOTHING;
+    (221, '1.1106.4', '2022-05-22T02:03:53', 0.9294);
 
 INSERT INTO relatorio VALUES
-    (222, '2025-06-27', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (222, '2025-06-27', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (222, '7216.22.00', 0.0293),
-    (222, '8482.99.10', 0.0975)
-ON CONFLICT DO NOTHING;
+    (222, '8482.99.10', 0.0975);
 
 INSERT INTO relatorio_serv VALUES
     (222, '1.1105.90.00', '2025-07-25T23:23:48', 0.0681),
@@ -9155,12 +10332,10 @@ INSERT INTO relatorio_serv VALUES
     (222, '1.0609.00.00', '2025-07-21T21:02:31', 0.1449),
     (222, '1.1106.36', '2025-07-19T23:09:43', 0.2068),
     (222, '1.0608', '2025-07-10T08:34:44', 0.0224),
-    (222, '1.26', '2025-07-17T22:48:44', 0.1736)
-ON CONFLICT DO NOTHING;
+    (222, '1.26', '2025-07-17T22:48:44', 0.1736);
 
 INSERT INTO relatorio VALUES
-    (223, '2025-08-16', NULL, '53.921.807', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (223, '2025-08-16', NULL, '53.921.807', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (223, '1.0501.3', '2025-09-27T15:46:14', 0.0257),
@@ -9196,12 +10371,10 @@ INSERT INTO relatorio_serv VALUES
     (223, '1.0802.20.00', '2025-09-25T08:58:57', 0.0646),
     (223, '1.1401.17.00', '2025-09-14T19:40:09', 0.1812),
     (223, '1.0401.4', '2025-09-19T22:40:44', 0.0377),
-    (223, '1.0906.30.00', '2025-09-07T13:01:12', 0.0986)
-ON CONFLICT DO NOTHING;
+    (223, '1.0906.30.00', '2025-09-07T13:01:12', 0.0986);
 
 INSERT INTO relatorio VALUES
-    (224, '2023-03-03', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (224, '2023-03-03', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_serv VALUES
     (224, '1.0102.80.00', '2023-04-05T08:26:29', 0.2438),
@@ -9220,12 +10393,10 @@ INSERT INTO relatorio_serv VALUES
     (224, '1.0901.40.00', '2023-04-09T10:08:02', 0.1226),
     (224, '1.1406.33.00', '2023-04-26T05:05:07', 0.059),
     (224, '1.1703.2', '2023-04-11T20:05:10', 0.1275),
-    (224, '1.0401.4', '2023-04-10T00:52:37', 0.3749)
-ON CONFLICT DO NOTHING;
+    (224, '1.0401.4', '2023-04-10T00:52:37', 0.3749);
 
 INSERT INTO relatorio VALUES
-    (225, '2022-04-29', '2025-01-29', '79.821.563', '0001-99', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (225, '2022-04-29', '2025-01-29', '79.821.563', '0001-99', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (225, '4811.90.90', 0.0085),
@@ -9241,8 +10412,7 @@ INSERT INTO relatorio_prod VALUES
     (225, '9014.20.90', 0.0613),
     (225, '2931.49.1', 0.0484),
     (225, '4002.31.00', 0.0744),
-    (225, '4810.29.10', 0.0503)
-ON CONFLICT DO NOTHING;
+    (225, '4810.29.10', 0.0503);
 
 INSERT INTO relatorio_serv VALUES
     (225, '1.0105.50.00', '2022-05-27T00:39:14', 0.0091),
@@ -9253,12 +10423,10 @@ INSERT INTO relatorio_serv VALUES
     (225, '1.1101.13.00', '2022-05-19T05:07:55', 0.0572),
     (225, '1.0103.30.00', '2022-05-26T03:06:33', 0.184),
     (225, '1.1502.30.00', '2022-05-27T01:19:23', 0.042),
-    (225, '1.0501.22.20', '2022-05-16T14:29:17', 0.1011)
-ON CONFLICT DO NOTHING;
+    (225, '1.0501.22.20', '2022-05-16T14:29:17', 0.1011);
 
 INSERT INTO relatorio VALUES
-    (226, '2022-12-18', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (226, '2022-12-18', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (226, '2928.00.30', 8.0513),
@@ -9277,19 +10445,16 @@ INSERT INTO relatorio_prod VALUES
     (226, '4412.10.00', 2.5875),
     (226, '7410.21.20', 0.5616),
     (226, '8903.22.00', 15.6232),
-    (226, '2916.20.13', 0.2105)
-ON CONFLICT DO NOTHING;
+    (226, '2916.20.13', 0.2105);
 
 INSERT INTO relatorio_serv VALUES
     (226, '1.1203.00.00', '2023-01-04T18:59:30', 18.3492),
     (226, '1.1702.2', '2023-01-16T16:11:51', 4.3174),
     (226, '1.1401.12.00', '2023-01-18T04:38:40', 2.5431),
-    (226, '1.1106.43.00', '2023-01-03T17:44:44', 10.2034)
-ON CONFLICT DO NOTHING;
+    (226, '1.1106.43.00', '2023-01-03T17:44:44', 10.2034);
 
 INSERT INTO relatorio VALUES
-    (227, '2023-07-25', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (227, '2023-07-25', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (227, '6403.51.90', 15.5138),
@@ -9313,16 +10478,13 @@ INSERT INTO relatorio_prod VALUES
     (227, '9019.20.90', 0.6058),
     (227, '6207.99.10', 0.4063),
     (227, '0104.10.90', 1.2068),
-    (227, '4805.12.00', 0.2087)
-ON CONFLICT DO NOTHING;
+    (227, '4805.12.00', 0.2087);
 
 INSERT INTO relatorio_serv VALUES
-    (227, '1.0402.14.00', '2023-08-08T16:49:29', 11.0673)
-ON CONFLICT DO NOTHING;
+    (227, '1.0402.14.00', '2023-08-08T16:49:29', 11.0673);
 
 INSERT INTO relatorio VALUES
-    (228, '2022-10-16', '2024-04-10', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (228, '2022-10-16', '2024-04-10', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (228, '2852.10.21', 0.8971),
@@ -9332,16 +10494,13 @@ INSERT INTO relatorio_prod VALUES
     (228, '3002.41.2', 0.8485),
     (228, '5407.83.00', 1.4442),
     (228, '2941.90.49', 0.3457),
-    (228, '9005.90.90', 0.1588)
-ON CONFLICT DO NOTHING;
+    (228, '9005.90.90', 0.1588);
 
 INSERT INTO relatorio_serv VALUES
-    (228, '1.0901.52', '2022-11-14T23:09:31', 0.7389)
-ON CONFLICT DO NOTHING;
+    (228, '1.0901.52', '2022-11-14T23:09:31', 0.7389);
 
 INSERT INTO relatorio VALUES
-    (229, '2021-11-17', NULL, '09.723.145', '0001-93', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (229, '2021-11-17', NULL, '09.723.145', '0001-93', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (229, '2933.91.19', 0.1656),
@@ -9358,8 +10517,7 @@ INSERT INTO relatorio_prod VALUES
     (229, '8201.60.00', 0.2432),
     (229, '0602.30.00', 0.3009),
     (229, '6909.19.90', 0.0985),
-    (229, '2935.90.92', 0.2112)
-ON CONFLICT DO NOTHING;
+    (229, '2935.90.92', 0.2112);
 
 INSERT INTO relatorio_serv VALUES
     (229, '1.1805.13.00', '2021-12-28T20:15:44', 0.0119),
@@ -9374,12 +10532,10 @@ INSERT INTO relatorio_serv VALUES
     (229, '1.0501.31.00', '2021-12-20T15:47:59', 0.2831),
     (229, '1.2002.30.00', '2021-12-25T20:19:35', 0.0243),
     (229, '1.1401.18.00', '2021-12-09T18:05:08', 0.0758),
-    (229, '1.0502.12.10', '2021-12-22T01:08:04', 0.0596)
-ON CONFLICT DO NOTHING;
+    (229, '1.0502.12.10', '2021-12-22T01:08:04', 0.0596);
 
 INSERT INTO relatorio VALUES
-    (230, '2021-11-03', '2025-09-25', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (230, '2021-11-03', '2025-09-25', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (230, '2933.33.3', 0.0713),
@@ -9396,8 +10552,7 @@ INSERT INTO relatorio_prod VALUES
     (230, '6102.30.00', 0.4483),
     (230, '4806.30.00', 0.0423),
     (230, '6302.29.00', 0.0641),
-    (230, '3301.29.19', 0.2962)
-ON CONFLICT DO NOTHING;
+    (230, '3301.29.19', 0.2962);
 
 INSERT INTO relatorio_serv VALUES
     (230, '1.1103.36.10', '2021-12-07T06:23:20', 0.279),
@@ -9410,12 +10565,10 @@ INSERT INTO relatorio_serv VALUES
     (230, '1.1805.50.00', '2021-12-24T06:58:51', 0.1447),
     (230, '1.0106.2', '2021-12-12T04:23:20', 0.2257),
     (230, '1.0401.16.10', '2021-12-08T15:59:35', 0.3435),
-    (230, '1.0501.29.00', '2021-12-03T10:50:15', 0.1933)
-ON CONFLICT DO NOTHING;
+    (230, '1.0501.29.00', '2021-12-03T10:50:15', 0.1933);
 
 INSERT INTO relatorio VALUES
-    (231, '2025-11-09', '2025-12-24', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (231, '2025-11-09', '2025-12-24', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (231, '8406.10.00', 0.006),
@@ -9427,17 +10580,14 @@ INSERT INTO relatorio_prod VALUES
     (231, '9025.11.91', 0.0575),
     (231, '2506.20.00', 0.0084),
     (231, '2924.29.41', 0.0416),
-    (231, '4811.90.20', 0.2038)
-ON CONFLICT DO NOTHING;
+    (231, '4811.90.20', 0.2038);
 
 INSERT INTO relatorio_serv VALUES
     (231, '1.1102.60.00', '2025-12-10T02:35:58', 0.0652),
-    (231, '1.2001.50.00', '2025-12-05T12:16:33', 0.0619)
-ON CONFLICT DO NOTHING;
+    (231, '1.2001.50.00', '2025-12-05T12:16:33', 0.0619);
 
 INSERT INTO relatorio VALUES
-    (232, '2023-12-26', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (232, '2023-12-26', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (232, '2306.60.00', 0.1892),
@@ -9446,8 +10596,7 @@ INSERT INTO relatorio_prod VALUES
     (232, '0903.00.10', 0.1927),
     (232, '2905.19.12', 0.6344),
     (232, '8481.20.90', 0.2095),
-    (232, '2811.19.20', 0.1994)
-ON CONFLICT DO NOTHING;
+    (232, '2811.19.20', 0.1994);
 
 INSERT INTO relatorio_serv VALUES
     (232, '1.1903', '2024-01-20T09:28:34', 0.0511),
@@ -9462,12 +10611,10 @@ INSERT INTO relatorio_serv VALUES
     (232, '1.0402.22.00', '2024-01-23T15:40:06', 0.2861),
     (232, '1.0106.40.00', '2024-01-21T04:56:43', 0.0768),
     (232, '1.1805.39.00', '2024-01-01T00:58:49', 0.4648),
-    (232, '1.08', '2024-01-25T06:33:48', 0.2188)
-ON CONFLICT DO NOTHING;
+    (232, '1.08', '2024-01-25T06:33:48', 0.2188);
 
 INSERT INTO relatorio VALUES
-    (233, '2021-10-02', '2025-09-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (233, '2021-10-02', '2025-09-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (233, '6004.10.12', 228.7657),
@@ -9489,22 +10636,18 @@ INSERT INTO relatorio_prod VALUES
     (233, '8714.99.90', 37.4423),
     (233, '3305.20.00', 6.8868),
     (233, '3003.90.38', 14.6155),
-    (233, '9023.00.00', 5.308)
-ON CONFLICT DO NOTHING;
+    (233, '9023.00.00', 5.308);
 
 INSERT INTO relatorio_serv VALUES
     (233, '1.0503', '2021-11-28T22:43:37', 11.8182),
-    (233, '1.1105.30.00', '2021-11-06T11:19:22', 0.2714)
-ON CONFLICT DO NOTHING;
+    (233, '1.1105.30.00', '2021-11-06T11:19:22', 0.2714);
 
 INSERT INTO relatorio VALUES
-    (234, '2023-11-08', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (234, '2023-11-08', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (234, '6903.10.40', 0.0178),
-    (234, '7015.90.90', 0.0583)
-ON CONFLICT DO NOTHING;
+    (234, '7015.90.90', 0.0583);
 
 INSERT INTO relatorio_serv VALUES
     (234, '1.2602.10.00', '2023-12-18T09:10:12', 0.0402),
@@ -9516,17 +10659,14 @@ INSERT INTO relatorio_serv VALUES
     (234, '1.1701.32.00', '2023-12-12T17:46:18', 0.0756),
     (234, '1.1403.25.00', '2023-12-22T19:53:45', 0.0127),
     (234, '1.0502.11.20', '2023-12-16T12:40:44', 0.0101),
-    (234, '1.0501.24.22', '2023-12-12T15:37:29', 0.0154)
-ON CONFLICT DO NOTHING;
+    (234, '1.0501.24.22', '2023-12-12T15:37:29', 0.0154);
 
 INSERT INTO relatorio VALUES
-    (235, '2023-09-24', '2023-12-30', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (235, '2023-09-24', '2023-12-30', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (235, '8425.19.10', 0.4363),
-    (235, '3922.90.00', 0.0158)
-ON CONFLICT DO NOTHING;
+    (235, '3922.90.00', 0.0158);
 
 INSERT INTO relatorio_serv VALUES
     (235, '1.1102.60.00', '2023-10-25T15:41:06', 2.5612),
@@ -9551,12 +10691,10 @@ INSERT INTO relatorio_serv VALUES
     (235, '1.1406', '2023-10-21T08:10:20', 0.0056),
     (235, '1.0502.24.52', '2023-10-17T16:05:52', 0.0323),
     (235, '1.2501.35.00', '2023-10-09T09:07:30', 0.1218),
-    (235, '1.0401.11.11', '2023-10-30T16:35:49', 0.0576)
-ON CONFLICT DO NOTHING;
+    (235, '1.0401.11.11', '2023-10-30T16:35:49', 0.0576);
 
 INSERT INTO relatorio VALUES
-    (236, '2023-03-28', '2024-06-13', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (236, '2023-03-28', '2024-06-13', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (236, '8445.40.3', 1.6467),
@@ -9585,17 +10723,14 @@ INSERT INTO relatorio_prod VALUES
     (236, '6203.33.00', 0.5744),
     (236, '1514.11.00', 0.9821),
     (236, '5407.73.00', 0.2178),
-    (236, '9029.90.10', 1.3746)
-ON CONFLICT DO NOTHING;
+    (236, '9029.90.10', 1.3746);
 
 INSERT INTO relatorio_serv VALUES
     (236, '1.2504.2', '2023-04-22T16:04:49', 3.3679),
-    (236, '1.2602', '2023-04-19T21:01:59', 2.0072)
-ON CONFLICT DO NOTHING;
+    (236, '1.2602', '2023-04-19T21:01:59', 2.0072);
 
 INSERT INTO relatorio VALUES
-    (237, '2021-08-02', '2026-04-06', '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (237, '2021-08-02', '2026-04-06', '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (237, '1513.29.20', 0.6541),
@@ -9617,25 +10752,21 @@ INSERT INTO relatorio_prod VALUES
     (237, '2901.23.00', 0.0003),
     (237, '1602.32.10', 0.0087),
     (237, '3904.40.10', 0.0351),
-    (237, '1514.11.00', 0.0632)
-ON CONFLICT DO NOTHING;
+    (237, '1514.11.00', 0.0632);
 
 INSERT INTO relatorio_serv VALUES
     (237, '1.2501.1', '2021-09-18T05:47:53', 0.0175),
     (237, '1.2403.2', '2021-09-21T22:29:48', 0.0007),
     (237, '1.1504.00.00', '2021-09-08T14:45:23', 0.002),
-    (237, '1.1403.22.14', '2021-09-23T20:14:26', 0.0011)
-ON CONFLICT DO NOTHING;
+    (237, '1.1403.22.14', '2021-09-23T20:14:26', 0.0011);
 
 INSERT INTO relatorio VALUES
-    (238, '2021-07-02', '2023-02-18', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (238, '2021-07-02', '2023-02-18', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (238, '5603.14.30', 0.0204),
     (238, '8463.10.10', 0.0204),
-    (238, '2833.40.20', 0.0201)
-ON CONFLICT DO NOTHING;
+    (238, '2833.40.20', 0.0201);
 
 INSERT INTO relatorio_serv VALUES
     (238, '1.0103.20.00', '2021-08-09T08:23:55', 0.052),
@@ -9661,17 +10792,14 @@ INSERT INTO relatorio_serv VALUES
     (238, '1.2404.31.00', '2021-08-01T07:47:02', 0.0753),
     (238, '1.1103.42.00', '2021-08-05T11:41:49', 0.1315),
     (238, '1.2301.23.00', '2021-08-02T19:45:41', 0.1067),
-    (238, '1.1103.41.00', '2021-08-07T17:37:18', 0.0535)
-ON CONFLICT DO NOTHING;
+    (238, '1.1103.41.00', '2021-08-07T17:37:18', 0.0535);
 
 INSERT INTO relatorio VALUES
-    (239, '2022-10-28', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (239, '2022-10-28', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (239, '2920.90.2', 0.5681),
-    (239, '7408.11.00', 0.3697)
-ON CONFLICT DO NOTHING;
+    (239, '7408.11.00', 0.3697);
 
 INSERT INTO relatorio_serv VALUES
     (239, '1.1703.31.00', '2022-11-28T16:12:15', 0.4559),
@@ -9691,12 +10819,10 @@ INSERT INTO relatorio_serv VALUES
     (239, '1.0103.30.00', '2022-11-24T03:32:39', 0.3733),
     (239, '1.1402.1', '2022-11-24T14:04:47', 0.0959),
     (239, '1.1202.20.00', '2022-11-26T14:29:13', 0.2196),
-    (239, '1.0606.11.00', '2022-11-27T00:33:57', 0.5165)
-ON CONFLICT DO NOTHING;
+    (239, '1.0606.11.00', '2022-11-27T00:33:57', 0.5165);
 
 INSERT INTO relatorio VALUES
-    (240, '2023-02-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (240, '2023-02-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (240, '8452.29.25', 0.0159),
@@ -9724,21 +10850,17 @@ INSERT INTO relatorio_prod VALUES
     (240, '6202.30.00', 0.0377),
     (240, '8419.40.20', 0.0104),
     (240, '2903.49.00', 0.2822),
-    (240, '3002.41.14', 0.2581)
-ON CONFLICT DO NOTHING;
+    (240, '3002.41.14', 0.2581);
 
 INSERT INTO relatorio_serv VALUES
     (240, '1.2504.1', '2023-03-19T11:18:01', 0.2948),
-    (240, '1.0106.60.00', '2023-03-20T23:47:53', 0.6978)
-ON CONFLICT DO NOTHING;
+    (240, '1.0106.60.00', '2023-03-20T23:47:53', 0.6978);
 
 INSERT INTO relatorio VALUES
-    (241, '2025-06-21', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (241, '2025-06-21', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (241, '2008.99.00', 0.2081)
-ON CONFLICT DO NOTHING;
+    (241, '2008.99.00', 0.2081);
 
 INSERT INTO relatorio_serv VALUES
     (241, '1.0502.12.20', '2025-07-29T14:36:38', 0.0951),
@@ -9761,12 +10883,10 @@ INSERT INTO relatorio_serv VALUES
     (241, '1.0401.17.10', '2025-07-11T11:27:15', 0.0451),
     (241, '1.2404.11.00', '2025-07-09T02:49:38', 0.0462),
     (241, '1.0608.30.00', '2025-07-10T05:08:39', 0.0635),
-    (241, '1.1806.5', '2025-07-04T07:55:48', 0.0342)
-ON CONFLICT DO NOTHING;
+    (241, '1.1806.5', '2025-07-04T07:55:48', 0.0342);
 
 INSERT INTO relatorio VALUES
-    (242, '2022-11-26', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (242, '2022-11-26', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (242, '8517.62.2', 0.0642),
@@ -9786,16 +10906,13 @@ INSERT INTO relatorio_prod VALUES
     (242, '0901.11.90', 0.0429),
     (242, '8452.10.00', 0.0461),
     (242, '8211.92.10', 0.0608),
-    (242, '7310.10.10', 0.032)
-ON CONFLICT DO NOTHING;
+    (242, '7310.10.10', 0.032);
 
 INSERT INTO relatorio_serv VALUES
-    (242, '1.1806.8', '2022-12-17T02:35:41', 0.0821)
-ON CONFLICT DO NOTHING;
+    (242, '1.1806.8', '2022-12-17T02:35:41', 0.0821);
 
 INSERT INTO relatorio VALUES
-    (243, '2024-05-17', '2025-06-03', '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (243, '2024-05-17', '2025-06-03', '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (243, '8477.10.2', 0.2996),
@@ -9805,8 +10922,7 @@ INSERT INTO relatorio_prod VALUES
     (243, '9701.21.00', 0.014),
     (243, '8471.30.11', 0.2618),
     (243, '8410.11.00', 0.1015),
-    (243, '0305.71.00', 0.8924)
-ON CONFLICT DO NOTHING;
+    (243, '0305.71.00', 0.8924);
 
 INSERT INTO relatorio_serv VALUES
     (243, '1.0901.52.20', '2024-06-09T14:52:56', 1.122),
@@ -9817,12 +10933,10 @@ INSERT INTO relatorio_serv VALUES
     (243, '1.0401.29.00', '2024-06-08T04:09:47', 1.8411),
     (243, '1.0602.90.00', '2024-06-20T22:08:57', 0.1296),
     (243, '1.0906.20.00', '2024-06-25T09:53:48', 0.3742),
-    (243, '1.0403.90.00', '2024-06-07T18:48:46', 0.1875)
-ON CONFLICT DO NOTHING;
+    (243, '1.0403.90.00', '2024-06-07T18:48:46', 0.1875);
 
 INSERT INTO relatorio VALUES
-    (244, '2022-01-23', NULL, '01.274.895', '0001-23', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (244, '2022-01-23', NULL, '01.274.895', '0001-23', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (244, '5802.10.00', 0.3101),
@@ -9845,16 +10959,13 @@ INSERT INTO relatorio_prod VALUES
     (244, '5402.19.10', 0.1488),
     (244, '8211.10.00', 0.2714),
     (244, '0307.43.10', 0.0721),
-    (244, '2827.51.00', 0.1301)
-ON CONFLICT DO NOTHING;
+    (244, '2827.51.00', 0.1301);
 
 INSERT INTO relatorio_serv VALUES
-    (244, '1.0402.33.00', '2022-02-13T09:33:44', 0.2565)
-ON CONFLICT DO NOTHING;
+    (244, '1.0402.33.00', '2022-02-13T09:33:44', 0.2565);
 
 INSERT INTO relatorio VALUES
-    (245, '2021-08-04', '2022-03-16', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (245, '2021-08-04', '2022-03-16', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (245, '9032.89.25', 0.3252),
@@ -9864,24 +10975,20 @@ INSERT INTO relatorio_prod VALUES
     (245, '0103.92.00', 0.4357),
     (245, '8416.10.00', 0.3183),
     (245, '8518.10.10', 0.306),
-    (245, '9110.90.00', 0.3559)
-ON CONFLICT DO NOTHING;
+    (245, '9110.90.00', 0.3559);
 
 INSERT INTO relatorio_serv VALUES
     (245, '1.1001.50.00', '2021-09-20T11:26:20', 0.1908),
     (245, '1.0502.19.00', '2021-09-21T05:49:53', 0.0672),
-    (245, '1.1405.22.00', '2021-09-25T12:40:54', 0.1187)
-ON CONFLICT DO NOTHING;
+    (245, '1.1405.22.00', '2021-09-25T12:40:54', 0.1187);
 
 INSERT INTO relatorio VALUES
-    (246, '2023-06-10', NULL, '75.893.062', '0001-31', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (246, '2023-06-10', NULL, '75.893.062', '0001-31', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (246, '8483.20.00', 0.2745),
     (246, '2841.80.20', 0.1237),
-    (246, '3905.19.90', 0.2115)
-ON CONFLICT DO NOTHING;
+    (246, '3905.19.90', 0.2115);
 
 INSERT INTO relatorio_serv VALUES
     (246, '1.1501.20.00', '2023-07-09T05:18:40', 0.5941),
@@ -9896,12 +11003,10 @@ INSERT INTO relatorio_serv VALUES
     (246, '1.1409.23.00', '2023-07-15T22:19:45', 0.1987),
     (246, '1.2101.10.00', '2023-07-10T21:13:41', 0.0573),
     (246, '1.2304.12.00', '2023-07-27T15:31:08', 0.4743),
-    (246, '1.0906.11.00', '2023-07-18T16:28:32', 0.0982)
-ON CONFLICT DO NOTHING;
+    (246, '1.0906.11.00', '2023-07-18T16:28:32', 0.0982);
 
 INSERT INTO relatorio VALUES
-    (247, '2024-08-05', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (247, '2024-08-05', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (247, '2906.19.30', 0.4867),
@@ -9915,18 +11020,15 @@ INSERT INTO relatorio_prod VALUES
     (247, '6903.10.1', 0.4706),
     (247, '9018.14.10', 0.4441),
     (247, '8702.40.10', 0.2984),
-    (247, '8428.39.90', 0.3993)
-ON CONFLICT DO NOTHING;
+    (247, '8428.39.90', 0.3993);
 
 INSERT INTO relatorio_serv VALUES
     (247, '1.0401.22.00', '2024-09-28T21:14:15', 0.108),
     (247, '1.04', '2024-09-23T18:14:42', 0.057),
-    (247, '1.0502.14.5', '2024-09-13T00:55:12', 0.0562)
-ON CONFLICT DO NOTHING;
+    (247, '1.0502.14.5', '2024-09-13T00:55:12', 0.0562);
 
 INSERT INTO relatorio VALUES
-    (248, '2025-05-27', '2025-12-22', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (248, '2025-05-27', '2025-12-22', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (248, '2939.69.4', 1.4492),
@@ -9935,8 +11037,7 @@ INSERT INTO relatorio_prod VALUES
     (248, '7220.20.10', 0.1621),
     (248, '2908.99.13', 0.0417),
     (248, '2207.20.1', 0.0366),
-    (248, '7505.11.2', 0.0448)
-ON CONFLICT DO NOTHING;
+    (248, '7505.11.2', 0.0448);
 
 INSERT INTO relatorio_serv VALUES
     (248, '1.0404.10.00', '2025-06-27T14:16:27', 2.3428),
@@ -9948,12 +11049,10 @@ INSERT INTO relatorio_serv VALUES
     (248, '1.1404.43.00', '2025-06-24T12:01:59', 0.2361),
     (248, '1.1409', '2025-06-24T17:16:27', 0.0115),
     (248, '1.1101.11.00', '2025-06-09T01:58:09', 0.051),
-    (248, '1.0502.23', '2025-06-23T05:20:15', 0.0908)
-ON CONFLICT DO NOTHING;
+    (248, '1.0502.23', '2025-06-23T05:20:15', 0.0908);
 
 INSERT INTO relatorio VALUES
-    (249, '2022-12-03', NULL, '01.274.895', '0001-23', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (249, '2022-12-03', NULL, '01.274.895', '0001-23', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (249, '2917.11.20', 0.0305),
@@ -9982,22 +11081,18 @@ INSERT INTO relatorio_prod VALUES
     (249, '8908.00.00', 0.0201),
     (249, '1512.21.00', 0.0208),
     (249, '1512.11.20', 0.0309),
-    (249, '0306.99.90', 0.08)
-ON CONFLICT DO NOTHING;
+    (249, '0306.99.90', 0.08);
 
 INSERT INTO relatorio_serv VALUES
     (249, '1.1103.4', '2023-01-19T08:54:42', 0.0513),
     (249, '1.0401.30.00', '2023-01-17T21:50:16', 0.0606),
-    (249, '1.0301.10.00', '2023-01-14T08:22:33', 0.0137)
-ON CONFLICT DO NOTHING;
+    (249, '1.0301.10.00', '2023-01-14T08:22:33', 0.0137);
 
 INSERT INTO relatorio VALUES
-    (250, '2022-09-07', '2025-08-27', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL)
-ON CONFLICT DO NOTHING;
+    (250, '2022-09-07', '2025-08-27', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
-    (250, '2915.50.20', 0.0939)
-ON CONFLICT DO NOTHING;
+    (250, '2915.50.20', 0.0939);
 
 INSERT INTO relatorio_serv VALUES
     (250, '1.0503.26.00', '2022-10-26T05:19:35', 0.1848),
@@ -10032,14 +11127,11 @@ INSERT INTO relatorio_serv VALUES
     (250, '1.1805.21.00', '2022-10-22T10:29:19', 0.0325),
     (250, '1.0502.12', '2022-10-02T03:48:05', 0.0562),
     (250, '1.0102.34.00', '2022-10-16T18:58:10', 0.0779),
-    (250, '1.1409.25.00', '2022-10-25T16:13:40', 0.0574)
-ON CONFLICT DO NOTHING;
+    (250, '1.1409.25.00', '2022-10-25T16:13:40', 0.0574);
 
 -- NOTE: O histórico de CO2 pode (deve) ser gerado com base
 -- em relatórios e contribuições já existentes
 
--- INSERT INTO hist_co2 VALUES
---     ()
--- ON CONFLICT DO NOTHING;
+-- INSERT INTO hist_co2 VALUES ...
 
 COMMIT;

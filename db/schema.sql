@@ -72,7 +72,7 @@ CREATE TABLE acao_co2 (
 CREATE TABLE vinc_contrib_co2 (
     id SERIAL PRIMARY KEY,
     cnpj_filial_raiz CHAR(10) NOT NULL,
-    cnpj_filial_ordem CHAR(4) NOT NULL,
+    cnpj_filial_ordem CHAR(7) NOT NULL,
     cnpj_organiz_socioamb CHAR(18) NOT NULL,
     dt_inicio_acao_co2 DATE NOT NULL,
     nome_acao_co2 TEXT NOT NULL,
