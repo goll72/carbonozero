@@ -11129,10 +11129,43 @@ INSERT INTO relatorio_serv VALUES
     (250, '1.0102.34.00', '2022-10-16T18:58:10', 0.0779),
     (250, '1.1409.25.00', '2022-10-25T16:13:40', 0.0574);
 
--- NOTE: O histórico de CO2 pode (deve) ser gerado com base
--- em relatórios e contribuições já existentes
+-- O histórico de CO2 é gerado inicialmente com uma query que não é tão eficiente,
+-- porém isso não é um problema, pois a tabela será mantida atualizada posteriormente
+-- por meio de triggers, a cada inserção de um relatório, ou seja, o custo dessa
+-- query é pago apenas no contexto artificial de inicialização da base de dados.
+WITH contrib_mensal(cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, contrib) AS (
+    SELECT
+            r.cnpj_filial_raiz,
+            r.cnpj_filial_ordem,
+            date_part('year', r.dt_pedido + interval '1 month') AS ano,
+            date_part('month', r.dt_pedido + interval '1 month') AS mes,
+            SUM(p.tco2_p_un * p.qtde)
+        FROM relatorio AS r
+        JOIN relatorio_prod AS p ON r.id = p.id_relatorio
+        GROUP BY
+            r.cnpj_filial_raiz,
+            r.cnpj_filial_ordem,
+            ano, mes
 
--- INSERT INTO hist_co2 VALUES ...
+    UNION
+
+    SELECT
+            r.cnpj_filial_raiz,
+            r.cnpj_filial_ordem,
+            date_part('year', s.ocorrencia) AS ano,
+            date_part('month', s.ocorrencia) AS mes,
+            s.tco2
+        FROM relatorio AS r
+        JOIN relatorio_serv AS s ON r.id = s.id_relatorio
+        GROUP BY
+            r.cnpj_filial_raiz,
+            r.cnpj_filial_ordem,
+            ano, mes
+) INSERT INTO hist_co2 (
+    SELECT cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, SUM(contrib)
+        FROM contrib_mensal
+        GROUP BY cnpj_filial_raiz, cnpj_filial_ordem, ano, mes
+);
 
 -- Remove regras legislativas contraditórias, ou seja, incentivos
 -- fiscais cuja meta é maior que o limite de uma multa que se aplica
