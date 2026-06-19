@@ -22,6 +22,13 @@
 
 -- (útil)
 -- Todas as regras legislativas que se aplicam a um certo município.
+--
+-- Argumentos: nome do município (assumindo que o nome é único)
+PREPARE reg_leg_mun(text) AS
+    WITH cod(mun, uf) AS (
+        SELECT cod_ibge, substring(cod_ibge, 1, 2) FROM org_adm_mun WHERE nome_mun = $1
+    )
+    SELECT * FROM reg_leg, cod WHERE ent = cod.uf OR ent = cod.mun; 
 
 -- (útil)
 -- Todas as regras legislativas que se aplicam a uma determinada filial, em um determinado mês.
