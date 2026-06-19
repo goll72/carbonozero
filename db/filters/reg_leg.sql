@@ -9,5 +9,6 @@ CREATE OR REPLACE PROCEDURE remove_contradictory_rules() AS $$
                 WHERE a.tipo = 'if'
                     AND ((a.prod IS NULL AND a.serv IS NULL) OR (b.prod IS NULL AND b.serv IS NULL) OR (a.prod = b.prod AND a.serv = b.serv))
                     AND a.meta_if > b.lim_multa
+                    AND tsrange(a.dt_vigencia, a.dt_revogacao) && tsrange(b.dt_vigencia, b.dt_revogacao)
         );
 $$ LANGUAGE sql;

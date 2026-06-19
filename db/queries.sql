@@ -23,10 +23,12 @@
 -- (útil)
 -- Todas as regras legislativas que se aplicam a um certo município.
 --
--- Argumentos: nome do município (assumindo que o nome é único)
-PREPARE reg_leg_mun(text) AS
+-- Argumentos:
+--  - Nome do município
+--  - Sigla da UF
+PREPARE reg_leg_mun(TEXT, CHAR(2)) AS
     WITH cod(mun, uf) AS (
-        SELECT cod_ibge, substring(cod_ibge, 1, 2) FROM org_adm_mun WHERE nome_mun = $1
+        SELECT cod_ibge, substring(cod_ibge, 1, 2) FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
     )
     SELECT * FROM reg_leg, cod WHERE ent = cod.uf OR ent = cod.mun; 
 
