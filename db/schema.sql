@@ -62,7 +62,7 @@ CREATE TABLE empresa (
     cnpj_raiz CHAR(10),
     cnae CHAR(9),
     dt_fund DATE NOT NULL,
-    raz_soc VARCHAR(255),
+    raz_soc TEXT,
     nat_jur CHAR(5) NOT NULL,
     dt_adesao DATE NOT NULL,
 
