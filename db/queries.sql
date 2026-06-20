@@ -98,3 +98,15 @@ PREPARE filial_contrib_min_prop(DECIMAL, INT, DECIMAL, TEXT) AS
 -- Todas as regras legislativas de incentivo fiscal cujas metas não foram atingidas por nenhuma filial nos últimos X meses
 
 -- Para todas as Instituições Cientificas do município X, listar a média do histórico de CO2 de cada empresa avaliadas por suas equipes, ordenadas pela média do histórico.
+-- Argumento:
+--  - Nome do município (CódigoIBGE)
+PREPARE co2_por_inst_cient_em_municipio(TEXT) AS
+SELECT h.cnpj_raiz as Empresa, avg(h.emissao_tot - h.compens_tot) AS Media
+    FROM hist_co2 h
+    WHERE EXISTS (
+        SELECT 1
+        FROM inst_cient ic JOIN relatorio r ON ic.cnpj = r.cnpj_inst_cient
+        WHERE ic.mun_cod = $1 AND h.cnpj_raiz = r.cnpj_raiz
+    )
+    GROUP BY h.cnpj_raiz
+    ORDER BY Media;
