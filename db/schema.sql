@@ -1,20 +1,20 @@
 CREATE DOMAIN CNPJ_TIPO AS CHAR(18)
 CHECK (
-    VALUE ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-[0-9]{2}$'
+    value ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-[0-9]{2}$'
 );
 
 CREATE DOMAIN CNPJ_RAIZ_TIPO AS CHAR(10)
 CHECK (
-    VALUE ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}$'
+    value ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}$'
 );
 
 CREATE DOMAIN CNPJ_ORDEM_TIPO AS CHAR(7)
 CHECK (
-    VALUE ~ '^[0-9A-Z]{4}-[0-9]{2}$'
+    value ~ '^[0-9A-Z]{4}-[0-9]{2}$'
 );
 
 CREATE DOMAIN CEP_TIPO AS CHAR(9)
-CHECK (VALUE ~ '^[0-9]{5}-[0-9]{3}$');
+CHECK (value ~ '^[0-9]{5}-[0-9]{3}$');
 
 CREATE TYPE ENT_FED_TIPO AS ENUM ('mun', 'uf');
 

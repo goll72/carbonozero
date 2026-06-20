@@ -8734,8 +8734,8 @@ WITH
         SELECT
                 r.cnpj_filial_raiz,
                 r.cnpj_filial_ordem,
-                date_part('year', r.dt_pedido + interval '1 month')::int AS ano,
-                date_part('month', r.dt_pedido + interval '1 month')::int AS mes,
+                date_part('year', r.dt_pedido + INTERVAL '1 month')::int AS ano,
+                date_part('month', r.dt_pedido + INTERVAL '1 month')::int AS mes,
                 SUM(p.tco2_p_un * p.qtde)
             FROM relatorio AS r
             JOIN relatorio_prod AS p ON r.id = p.id_relatorio
@@ -8749,8 +8749,8 @@ WITH
         SELECT
                 r.cnpj_filial_raiz,
                 r.cnpj_filial_ordem,
-                date_part('year', s.ocorrencia)::int AS ano,
-                date_part('month', s.ocorrencia)::int AS mes,
+                date_part('year', s.ocorrencia)::INT AS ano,
+                date_part('month', s.ocorrencia)::INT AS mes,
                 SUM(s.tco2)
             FROM relatorio AS r
             JOIN relatorio_serv AS s ON r.id = s.id_relatorio
@@ -8763,8 +8763,8 @@ WITH
         SELECT
                 v.cnpj_filial_raiz,
                 v.cnpj_filial_ordem,
-                date_part('year', dt)::int AS ano,
-                date_part('month', dt)::int AS mes,
+                date_part('year', dt)::INT AS ano,
+                date_part('month', dt)::INT AS mes,
                 SUM(valor)
             FROM contrib_co2 AS c
             JOIN vinc_contrib_co2 AS v ON v.id = c.id_contrib
@@ -8792,9 +8792,15 @@ INSERT INTO hist_co2 (
 
 -- Remove regras legislativas contraditórias, ou seja, incentivos
 -- fiscais cuja meta é maior que o limite de uma multa que se aplica
--- ao mesmo produto/serviço, na mesma jurisdição, em intervalos de
+-- ao mesmo produto/serviço, na mesma jurisdição, em INTERVALos de
 -- tempo não disjuntos.
 CALL remove_contradictory_rules();
+
+CREATE OR REPLACE TRIGGER reg_leg_no_contradictory_rules
+    BEFORE INSERT OR UPDATE ON reg_leg
+    FOR EACH ROW
+    WHEN (new.tipo = 'if')
+    EXECUTE FUNCTION no_contradictory_rules();
 
 -- Remove todas as contribuições para ações de
 -- compensação cujo valor limite foi atingido.

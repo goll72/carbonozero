@@ -12,3 +12,22 @@ CREATE OR REPLACE PROCEDURE remove_contradictory_rules() AS $$
                     AND tsrange(a.dt_vigencia, a.dt_revogacao) && tsrange(b.dt_vigencia, b.dt_revogacao)
         );
 $$ LANGUAGE sql;
+
+CREATE OR REPLACE FUNCTION no_contradictory_rules() RETURNS TRIGGER AS $$
+    BEGIN
+        IF EXISTS (
+            SELECT *
+                FROM reg_leg
+                WHERE
+                    tipo = 'multa'
+                    AND (ent = new.ent OR ent = substring(new.ent, 1, 2))
+                    AND ((new.prod IS NULL AND new.serv IS NULL) OR (prod IS NULL and serv IS NULL) OR (new.prod = prod AND new.serv = serv))
+                    AND new.meta_if > b.lim_multa
+                    AND tsrange(new.dt_vigencia, new.dt_revogacao) && tsrange(dt_vigencia, dt_revogacao)
+        ) THEN
+            RETURN NULL;
+        ELSE
+            RETURN new;
+        END IF;
+    END;
+$$ LANGUAGE plpgsql;
