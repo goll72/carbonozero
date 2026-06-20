@@ -4022,11 +4022,11 @@ INSERT INTO reg_leg VALUES
     ('4314902', 'multa', 1346, 2021, '2026-12-05', NULL, '1.1806.8', '3911.90.2', 425.38, 0.0374, NULL, NULL);
 
 INSERT INTO inst_cient VALUES
-    ('58.826.745/0001-34', 'Universidade de São Paulo', 'Praça da Sé', 33, '00000001', '3550308'),
-    ('37.669.280/0001-29', 'Universidade Federal de São Carlos', 'Rodovia Carlos Vignon', 767, '13769020', '3548906'),
-    ('11.679.309/0001-01', 'Instituto de Pesquisa FioCruz', 'Avenida Pinheiro', 88, '01473394', '3550308'),
-    ('53.396.825/0001-34', 'Laboratório de Pesquisa A.K.L.', 'Rua Sésamo', 35, '39445014', '3106200'),
-    ('09.850.333/0001-77', 'Universidade Federal do Rio de Janeiro', 'Avenida Laerte', 56, '38997345', '3304557'),
+    ('58.826.745/0001-34', 'Universidade de São Paulo', 'Praça da Sé', 33, '00000-001', '3550308'),
+    ('37.669.280/0001-29', 'Universidade Federal de São Carlos', 'Rodovia Carlos Vignon', 767, '13769-020', '3548906'),
+    ('11.679.309/0001-01', 'Instituto de Pesquisa FioCruz', 'Avenida Pinheiro', 88, '01473-394', '3550308'),
+    ('53.396.825/0001-34', 'Laboratório de Pesquisa A.K.L.', 'Rua Sésamo', 35, '39445-014', '3106200'),
+    ('09.850.333/0001-77', 'Universidade Federal do Rio de Janeiro', 'Avenida Laerte', 56, '38997-345', '3304557'),
     ('87.888.161/0001-65', 'Unidade Científica do Norte', 'Rua Corrêa', 1048, '69994-295', '1302603'),
     ('00.001.333/0001-99', 'Universidade Federal da Bahia', 'Rua Roberto Peixoto', 444, '43144-383', '2927408'),
     ('54.777.163/0001-46', 'Universidade Federal de Minas Gerais', 'Rodovia Afonso Pena', 998, '39802-120', '3106200');

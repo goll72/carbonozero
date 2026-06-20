@@ -1,15 +1,25 @@
 CREATE DOMAIN CNPJ_TIPO AS CHAR(18)
 CHECK (
-    VALUE ~ '^[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}$'
+    VALUE ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-[0-9]{2}$'
 );
 
-CREATE DOMAIN COD_IBGE_TIPO AS CHAR(7)
-CHECK (VALUE ~ '^[0-9]{7}$');
+CREATE DOMAIN CNPJ_RAIZ_TIPO AS CHAR(10)
+CHECK (
+    VALUE ~ '^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}$'
+);
+
+CREATE DOMAIN CNPJ_ORDEM_TIPO AS CHAR(7)
+CHECK (
+    VALUE ~ '^[0-9A-Z]{4}-[0-9]{2}$'
+);
+
+CREATE DOMAIN CEP_TIPO AS CHAR(9)
+CHECK (VALUE ~ '^[0-9]{5}-[0-9]{3}$');
 
 CREATE TYPE ENT_FED_TIPO AS ENUM ('mun', 'uf');
 
 CREATE TABLE ent_fed (
-    cod_ibge COD_IBGE_TIPO,
+    cod_ibge CHAR(7),
     tipo ENT_FED_TIPO,
 
     CONSTRAINT enf_fed_pk
@@ -18,7 +28,7 @@ CREATE TABLE ent_fed (
 
 CREATE TABLE uf (
     sigla CHAR(2),
-    cod_ibge COD_IBGE_TIPO NOT NULL,
+    cod_ibge CHAR(7) NOT NULL,
     
     CONSTRAINT uf_pk
         PRIMARY KEY(sigla),
@@ -34,12 +44,12 @@ CREATE TABLE uf (
 );
 
 CREATE TABLE org_adm_mun (
-    cod_ibge COD_IBGE_TIPO,
+    cod_ibge CHAR(7),
     cnpj CNPJ_TIPO NOT NULL,
     raz_soc TEXT,
     end_rua TEXT,
     end_nro INT,
-    end_cep CHAR(9),
+    end_cep CEP_TIPO,
     nome_mun TEXT NOT NULL,
     sigla_uf CHAR(2),
 
@@ -71,13 +81,13 @@ CREATE TABLE empresa (
 );
 
 CREATE TABLE filial (
-    cnpj_raiz CHAR(10),
-    cnpj_ordem CHAR(7),
+    cnpj_raiz CNPJ_RAIZ_TIPO,
+    cnpj_ordem CNPJ_ORDEM_TIPO,
     qtde_func INT,
     end_rua TEXT,
     end_nro INT,
-    end_cep CHAR(9),
-    mun_cod COD_IBGE_TIPO NOT NULL,
+    end_cep CEP_TIPO,
+    mun_cod CHAR(7) NOT NULL,
 
     CONSTRAINT filial_pk
         PRIMARY KEY (cnpj_raiz, cnpj_ordem),
@@ -96,8 +106,8 @@ CREATE TABLE organiz_socioamb (
     nome TEXT,
     end_rua TEXT,
     end_nro INT,
-    end_cep CHAR(9),
-    mun_cod COD_IBGE_TIPO,
+    end_cep CEP_TIPO,
+    mun_cod CHAR(7),
 
     CONSTRAINT organiz_socioamb_pk
         PRIMARY KEY(cnpj),
@@ -132,8 +142,8 @@ CREATE TABLE acao_co2 (
 -- MRel: Financia
 CREATE TABLE vinc_contrib_co2 (
     id SERIAL,
-    cnpj_filial_raiz CHAR(10) NOT NULL,
-    cnpj_filial_ordem CHAR(7) NOT NULL,
+    cnpj_filial_raiz CNPJ_RAIZ_TIPO NOT NULL,
+    cnpj_filial_ordem CNPJ_ORDEM_TIPO NOT NULL,
     cnpj_organiz_socioamb CNPJ_TIPO NOT NULL,
     dt_inicio_acao_co2 DATE NOT NULL,
     nome_acao_co2 TEXT NOT NULL,
@@ -178,8 +188,8 @@ CREATE TABLE contrib_co2 (
 );
 
 CREATE TABLE hist_co2 (
-    cnpj_raiz CHAR(10),
-    cnpj_ordem CHAR(7),
+    cnpj_raiz CNPJ_RAIZ_TIPO,
+    cnpj_ordem CNPJ_ORDEM_TIPO,
     ano INT,
     mes INT,
 
@@ -213,7 +223,7 @@ CREATE TABLE prod_ncm (
 CREATE TYPE REG_LEG_TIPO AS ENUM ('if', 'multa');
 
 CREATE TABLE reg_leg (
-    ent COD_IBGE_TIPO,
+    ent CHAR(9),
     tipo REG_LEG_TIPO,
     nro INT,
     ano INT,
@@ -257,8 +267,8 @@ CREATE TABLE inst_cient (
     nome TEXT NOT NULL,
     end_rua TEXT,
     end_nro INT,
-    end_cep CHAR(9),
-    mun_cod COD_IBGE_TIPO,
+    end_cep CEP_TIPO,
+    mun_cod CHAR(7),
 
     CONSTRAINT inst_cient_pk
         PRIMARY KEY (cnpj),
@@ -298,13 +308,13 @@ CREATE TABLE relatorio (
     dt_pedido DATE NOT NULL,
     dt_pub DATE,
     
-    cnpj_filial_raiz CHAR(10) NOT NULL,
-    cnpj_filial_ordem CHAR(7) NOT NULL,
+    cnpj_filial_raiz CNPJ_RAIZ_TIPO NOT NULL,
+    cnpj_filial_ordem CNPJ_ORDEM_TIPO NOT NULL,
     
     cnpj_inst_cient CNPJ_TIPO NOT NULL,
     nome_equipe TEXT NOT NULL,
     
-    mun_cod COD_IBGE_TIPO REFERENCES org_adm_mun(cod_ibge),
+    mun_cod CHAR(7) REFERENCES org_adm_mun(cod_ibge),
     
     aliq_if DECIMAL,
     multa_aplic DECIMAL,
