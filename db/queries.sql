@@ -1,3 +1,5 @@
+DEALLOCATE ALL;
+
 -- N filiais com o menor histórico de emissão de carbono nos últimos K meses.
 
 -- Todas as filiais que contribuíram mais do que R$ 500.000,00 em ações de compensação
@@ -48,21 +50,27 @@ PREPARE reg_leg_mun(TEXT, CHAR(2)) AS
 -- menos uma filial todo mês, em um período de três meses subsequentes.
 
 -- 1) Todas as filiais que não receberam nenhuma multa em um intervalo
-PREPARE filial_sem_multa_p(DATE, DATE) AS
-    SELECT cnpj_raiz, cnpj_ordem FROM filial 
+PREPARE filial_sem_multa_p(DATERANGE) AS
+    SELECT cnpj_raiz, cnpj_ordem FROM filial
         EXCEPT 
         SELECT 
             f.cnpj_raiz, 
             f.cnpj_ordem
         FROM filial AS f
-            JOIN relatorio AS r 
-                ON f.cnpj_raiz = r.cnpj_filial_raiz 
-                AND f.cnpj_ordem = r.cnpj_filial_ordem
-        WHERE r.dt_pedido BETWEEN $1 AND $2 AND r.multa_aplic > 0; 
+        JOIN relatorio AS r 
+            ON f.cnpj_raiz = r.cnpj_filial_raiz 
+            AND f.cnpj_ordem = r.cnpj_filial_ordem
+        WHERE
+            $1 && DATERANGE(
+                date_trunc('month', r.dt_pedido + INTERVAL '1 month')::DATE,
+                date_trunc('month', r.dt_pedido + INTERVAL '2 months')::DATE
+            )
+            AND r.multa_aplic > 0;
 
 -- 2) Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação, nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma area Z
 
--- 3) Todas as filiais cujas emissões nos últimos X meses foram oriundas majoritariamente de um único tipo de produto ou serviço. -- Implementar
+-- 3) Todas as filiais cujas emissões nos últimos X meses foram oriundas majoritariamente de um único tipo de produto ou serviço.
+-- PREPARE filiais_emissao_concentrada_k(DECIMAL, INT)
 
 -- 4) Todas as regras legislativas de incentivo fiscal cujas metas não foram atingidas por nenhuma filial nos últimos X meses
 
