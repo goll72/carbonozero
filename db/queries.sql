@@ -45,8 +45,8 @@ PREPARE filial_sem_multa_p(DATERANGE) AS
             )
             AND r.multa_aplic > 0;
 
--- Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação
--- nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma área Z.
+-- Todas as filiais que contribuíram mais do que R$X em ações de compensação,
+-- nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma area Z.
 -- O resultado deve ser ordenado, em ordem decrescente, pela porcentagem.
 --
 -- Argumentos:
@@ -92,21 +92,87 @@ PREPARE filial_contrib_min_prop(DECIMAL, INT, DECIMAL, TEXT) AS
         WHERE transp + energ + recic >= $1 AND v.p >= $3
         ORDER BY v.p DESC;
 
--- Todas as filiais cujas emissões nos últimos X meses foram oriundas majoritariamente de um único tipo de produto ou serviço.
--- PREPARE filiais_emissao_concentrada_k(DECIMAL, INT)
+-- Todas as filiais cujas emissões em um intervalo de data (DATERANGE) for oriundas 
+-- majoritariamente (>=50%) de um único tipo de produto ou serviço.
+--
+-- Argumentos:
+--  - Intervalo de data (DATERANGE)
+PREPARE filiais_emissao_major(DATERANGE) AS
+    WITH 
+        emissao_grupo_produto(cnpj_filial_raiz, cnpj_filial_ordem, emissao_p, produto) AS (
+            SELECT 
+                    r.cnpj_filial_raiz,
+                    r.cnpj_filial_ordem,
+                    sum(p.tco2_p_un * p.qtde) as emissao_p,
+                    p.ncm
+                FROM relatorio AS r 
+                JOIN relatorio_prod AS p ON r.id = p.id_relatorio
+                WHERE $1 @> r.dt_pedido
+                GROUP BY
+                    r.cnpj_filial_raiz,
+                    r.cnpj_filial_ordem,
+                    p.ncm
+            ),
+        emissao_produto(cnpj_filial_raiz, cnpj_filial_ordem, emissao_total_p, maior_emissao_p) AS (
+            SELECT
+                    p.cnpj_filial_raiz, 
+                    p.cnpj_filial_ordem, 
+                    COALESCE(SUM(p.emissao_p), 0) emissao_total_p, 
+                    COALESCE(MAX(p.emissao_p), 0) maior_emissao_p
+                FROM emissao_grupo_produto AS p
+                GROUP BY
+                    p.cnpj_filial_raiz,
+                    p.cnpj_filial_ordem
+
+            ),
+        emissao_grupo_servico(cnpj_filial_raiz, cnpj_filial_ordem, emissao_s, servico) AS (
+            SELECT 
+                    r.cnpj_filial_raiz,
+                    r.cnpj_filial_ordem,
+                    sum(s.tco2) as emissao_s, 
+                    s.nbs
+                FROM relatorio AS r 
+                JOIN relatorio_serv AS s ON r.id = s.id_relatorio
+                WHERE $1 @> r.dt_pedido
+                GROUP BY
+                    r.cnpj_filial_raiz,
+                    r.cnpj_filial_ordem,
+                    s.nbs
+            ),
+        emissao_servico(cnpj_filial_raiz, cnpj_filial_ordem, emissao_total_s, maior_emissao_s) AS (
+            SELECT
+                    s.cnpj_filial_raiz, 
+                    s.cnpj_filial_ordem, 
+                    COALESCE(SUM(s.emissao_s), 0) emissao_total_s, 
+                    COALESCE(MAX(s.emissao_s), 0) maior_emissao_s
+                FROM emissao_grupo_servico AS s
+                GROUP BY
+                    s.cnpj_filial_raiz,
+                    s.cnpj_filial_ordem
+        )
+    SELECT 
+            COALESCE(p.cnpj_filial_raiz, s.cnpj_filial_raiz), 
+            COALESCE(p.cnpj_filial_ordem, s.cnpj_filial_ordem) 
+        FROM emissao_produto AS p
+        FULL OUTER JOIN emissao_servico AS s 
+            ON (p.cnpj_filial_raiz, p.cnpj_filial_ordem) = (s.cnpj_filial_raiz, s.cnpj_filial_ordem)
+        WHERE (s.maior_emissao_s/NULLIF((s.emissao_total_s + p.emissao_total_p),0) >= 0.5) 
+            OR (p.maior_emissao_p/NULLIF((s.emissao_total_s + p.emissao_total_p),0) >= 0.5);
 
 -- Todas as regras legislativas de incentivo fiscal cujas metas não foram atingidas por nenhuma filial nos últimos X meses
 
--- Para todas as Instituições Cientificas do município X, listar a média do histórico de CO2 de cada empresa avaliadas por suas equipes, ordenadas pela média do histórico.
+-- Para todas as Instituições Cientificas do município X, listar a média do histórico de CO2
+-- de cada empresa avaliadas por suas equipes, ordenadas pela média do histórico.
+--
 -- Argumento:
---  - Nome do município (CódigoIBGE)
+--  - código IBGE do município 
 PREPARE co2_por_inst_cient_em_municipio(TEXT) AS
-SELECT h.cnpj_raiz as Empresa, avg(h.emissao_tot - h.compens_tot) AS Media
-    FROM hist_co2 h
-    WHERE EXISTS (
-        SELECT 1
-        FROM inst_cient ic JOIN relatorio r ON ic.cnpj = r.cnpj_inst_cient
-        WHERE ic.mun_cod = $1 AND h.cnpj_raiz = r.cnpj_raiz
-    )
-    GROUP BY h.cnpj_raiz
-    ORDER BY Media;
+    SELECT h.cnpj_raiz as Empresa, avg(h.emissao_tot - h.compens_tot) AS Media
+        FROM hist_co2 h
+        WHERE EXISTS (
+            SELECT 1
+            FROM inst_cient ic JOIN relatorio r ON ic.cnpj = r.cnpj_inst_cient
+            WHERE ic.mun_cod = $1 AND h.cnpj_raiz = r.cnpj_raiz
+        )
+        GROUP BY h.cnpj_raiz
+        ORDER BY Media;
