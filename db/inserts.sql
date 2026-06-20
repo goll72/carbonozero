@@ -184,1824 +184,828 @@ INSERT INTO acao_co2 VALUES
     ('63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática', 0.00121, 150000.0, 65, 81, 28, 16, 7, 3);
 
 INSERT INTO vinc_contrib_co2 VALUES
-    (1, '45.690.123', '0001-36', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
+    (1, '45.690.123', '0001-36', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem'),
+    (2, '33.738.001', '0001-77', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (3, '01.274.895', '0001-40', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (4, '13.690.872', '0001-54', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (5, '09.723.145', '0001-56', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono'),
+    (6, '48.912.037', '0001-38', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos'),
+    (7, '75.893.062', '0001-33', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono'),
+    (8, '56.738.014', '0001-69', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono'),
+    (9, '53.921.807', '0001-18', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (10, '01.274.895', '0001-13', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (11, '09.723.145', '0001-56', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (12, '01.274.895', '0001-40', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos'),
+    (13, '48.912.037', '0001-38', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão'),
+    (14, '13.690.872', '0001-09', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (15, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano'),
+    (16, '48.603.715', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (17, '13.690.872', '0001-09', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (18, '79.821.563', '0001-99', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (19, '53.921.807', '0001-18', '68.532.497/0001-22', '2023-04-22', 'Recuperação da vegetação nativa'),
+    (20, '71.498.635', '0001-06', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (21, '01.274.895', '0001-13', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo'),
+    (22, '13.690.872', '0001-09', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano'),
+    (23, '48.912.037', '0001-48', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (24, '45.690.123', '0001-36', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas'),
+    (25, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental'),
+    (26, '71.498.635', '0001-06', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (27, '20.978.635', '0001-10', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (28, '48.603.715', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (29, '20.978.635', '0001-10', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico'),
+    (30, '88.635.333', '0001-98', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade'),
+    (31, '79.821.563', '0001-00', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono'),
+    (32, '65.172.380', '0001-53', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (33, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (34, '09.723.145', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (35, '64.087.915', '0001-27', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (36, '71.498.635', '0001-06', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local'),
+    (37, '88.635.333', '0001-98', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental'),
+    (38, '28.659.130', '0001-07', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem'),
+    (39, '65.172.380', '0001-61', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (40, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano'),
+    (41, '71.498.635', '0001-06', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável'),
+    (42, '13.690.872', '0001-54', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima'),
+    (43, '01.274.895', '0001-23', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos'),
+    (44, '88.635.333', '0001-98', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (45, '39.605.871', '0001-83', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (46, '48.603.715', '0001-45', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões'),
+    (47, '20.978.635', '0001-10', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática'),
+    (48, '65.172.380', '0001-53', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (49, '01.274.895', '0001-13', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática'),
+    (50, '28.659.130', '0001-07', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (51, '09.723.145', '0001-78', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono'),
+    (52, '75.893.062', '0001-33', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima'),
+    (53, '20.978.635', '0001-10', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (54, '79.821.563', '0001-65', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão'),
+    (55, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local'),
+    (56, '75.893.062', '0001-31', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas'),
+    (57, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (58, '79.821.563', '0001-00', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima'),
+    (59, '79.821.563', '0001-00', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (60, '33.738.001', '0001-77', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono'),
+    (61, '48.603.715', '0001-45', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (62, '18.024.935', '0001-76', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais'),
+    (63, '53.921.807', '0001-18', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (64, '51.360.297', '0001-43', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos'),
+    (65, '01.274.895', '0001-40', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões'),
+    (66, '13.690.872', '0001-09', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (67, '79.821.563', '0001-43', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade'),
+    (68, '18.024.935', '0001-76', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (69, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos'),
+    (70, '01.274.895', '0001-13', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade'),
+    (71, '56.738.014', '0001-69', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos'),
+    (72, '28.659.130', '0001-07', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (73, '01.274.895', '0001-13', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (74, '20.978.635', '0001-10', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (75, '56.738.014', '0001-69', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima'),
+    (76, '64.087.915', '0001-27', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (77, '09.723.145', '0001-56', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano'),
+    (78, '27.401.593', '0001-66', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono'),
+    (79, '13.690.872', '0001-54', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo'),
+    (80, '88.635.333', '0001-98', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (81, '09.723.145', '0001-56', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (82, '12.905.674', '0001-18', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (83, '65.172.380', '0001-53', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões'),
+    (84, '01.274.895', '0001-23', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável'),
+    (85, '56.738.014', '0001-69', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos'),
+    (86, '13.690.872', '0001-09', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (87, '79.821.563', '0001-43', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (88, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (89, '79.821.563', '0001-00', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (90, '13.690.872', '0001-09', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (91, '75.893.062', '0001-31', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável'),
+    (92, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática'),
+    (93, '01.274.895', '0001-40', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais'),
+    (94, '65.172.380', '0001-53', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (95, '28.659.130', '0001-07', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (96, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local'),
+    (97, '79.821.563', '0001-00', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (98, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática'),
+    (99, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (100, '75.893.062', '0001-31', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (101, '09.723.145', '0001-93', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos'),
+    (102, '88.635.333', '0001-98', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (103, '75.893.062', '0001-31', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável'),
+    (104, '13.690.872', '0001-09', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (105, '09.723.145', '0001-56', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (106, '48.912.037', '0001-48', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão'),
+    (107, '56.738.014', '0001-69', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (108, '45.690.123', '0001-36', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima'),
+    (109, '13.690.872', '0001-54', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (110, '09.723.145', '0001-78', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (111, '75.893.062', '0001-33', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (112, '45.690.123', '0001-36', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (113, '51.360.297', '0001-43', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (114, '65.172.380', '0001-53', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas'),
+    (115, '79.821.563', '0001-00', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (116, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo'),
+    (117, '65.172.380', '0001-61', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (118, '79.821.563', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (119, '51.360.297', '0001-43', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (120, '48.603.715', '0001-45', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (121, '53.921.807', '0001-18', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (122, '45.690.123', '0001-36', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (123, '65.172.380', '0001-61', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono'),
+    (124, '27.401.593', '0001-66', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (125, '09.723.145', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (126, '01.274.895', '0001-13', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (127, '71.498.635', '0001-06', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (128, '20.978.635', '0001-10', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (129, '56.738.014', '0001-69', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (130, '27.401.593', '0001-66', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (131, '28.659.130', '0001-07', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável'),
+    (132, '09.723.145', '0001-56', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (133, '51.360.297', '0001-43', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática'),
+    (134, '18.024.935', '0001-76', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária'),
+    (135, '01.274.895', '0001-40', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (136, '33.738.001', '0001-77', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (137, '13.690.872', '0001-09', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo'),
+    (138, '18.024.935', '0001-76', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (139, '18.024.935', '0001-76', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (140, '33.738.001', '0001-77', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (141, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local'),
+    (142, '01.274.895', '0001-23', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (143, '48.912.037', '0001-38', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (144, '20.978.635', '0001-10', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária'),
+    (145, '39.605.871', '0001-83', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono'),
+    (146, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (147, '65.172.380', '0001-61', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (148, '48.603.715', '0001-45', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima'),
+    (149, '53.921.807', '0001-18', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima'),
+    (150, '64.087.915', '0001-27', '68.532.497/0001-22', '2021-06-25', 'Conservação florestal e créditos de carbono'),
+    (151, '56.738.014', '0001-69', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária'),
+    (152, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática'),
+    (153, '53.921.807', '0001-18', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (154, '39.605.871', '0001-83', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (155, '79.821.563', '0001-43', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas'),
+    (156, '33.738.001', '0001-77', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável'),
+    (157, '18.024.935', '0001-76', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono'),
+    (158, '01.274.895', '0001-13', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões'),
+    (159, '88.635.333', '0001-98', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo'),
+    (160, '88.635.333', '0001-98', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (161, '64.087.915', '0001-27', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (162, '18.024.935', '0001-76', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (163, '48.912.037', '0001-38', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (164, '12.905.674', '0001-18', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (165, '45.690.123', '0001-36', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (166, '27.401.593', '0001-66', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais'),
+    (167, '79.821.563', '0001-65', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono'),
+    (168, '13.690.872', '0001-09', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática'),
+    (169, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano'),
+    (170, '18.024.935', '0001-76', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (171, '28.659.130', '0001-07', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável'),
+    (172, '71.498.635', '0001-06', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo'),
+    (173, '28.659.130', '0001-07', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (174, '48.912.037', '0001-38', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (175, '28.659.130', '0001-07', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos'),
+    (176, '13.690.872', '0001-54', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão'),
+    (177, '48.603.715', '0001-45', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar'),
+    (178, '79.821.563', '0001-65', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (179, '64.087.915', '0001-27', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais'),
+    (180, '13.690.872', '0001-09', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações'),
+    (181, '28.659.130', '0001-07', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (182, '64.087.915', '0001-27', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico'),
+    (183, '33.738.001', '0001-77', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos'),
+    (184, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (185, '51.360.297', '0001-43', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (186, '79.821.563', '0001-99', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (187, '64.087.915', '0001-27', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (188, '79.821.563', '0001-43', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável'),
+    (189, '12.905.674', '0001-18', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão'),
+    (190, '01.274.895', '0001-40', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono'),
+    (191, '12.905.674', '0001-18', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (192, '79.821.563', '0001-99', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (193, '13.690.872', '0001-54', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões'),
+    (194, '51.360.297', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (195, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental'),
+    (196, '09.723.145', '0001-78', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono'),
+    (197, '18.024.935', '0001-76', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas'),
+    (198, '13.690.872', '0001-54', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (199, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem'),
+    (200, '75.893.062', '0001-33', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária'),
+    (201, '18.024.935', '0001-76', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (202, '33.738.001', '0001-77', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico'),
+    (203, '75.893.062', '0001-33', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (204, '75.893.062', '0001-33', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (205, '65.172.380', '0001-53', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário'),
+    (206, '75.893.062', '0001-31', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais'),
+    (207, '53.921.807', '0001-18', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas'),
+    (208, '28.659.130', '0001-07', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (209, '28.659.130', '0001-07', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (210, '75.893.062', '0001-31', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (211, '01.274.895', '0001-40', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima'),
+    (212, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis'),
+    (213, '45.690.123', '0001-36', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas'),
+    (214, '01.274.895', '0001-23', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (215, '64.087.915', '0001-27', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos'),
+    (216, '75.893.062', '0001-31', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática'),
+    (217, '45.690.123', '0001-36', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono'),
+    (218, '09.723.145', '0001-93', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono'),
+    (219, '09.723.145', '0001-93', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental'),
+    (220, '79.821.563', '0001-00', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono'),
+    (221, '27.401.593', '0001-66', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável'),
+    (222, '65.172.380', '0001-53', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono'),
+    (223, '33.738.001', '0001-77', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo'),
+    (224, '20.978.635', '0001-10', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (225, '53.921.807', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (226, '71.498.635', '0001-06', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática'),
+    (227, '75.893.062', '0001-31', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo'),
+    (228, '65.172.380', '0001-61', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável'),
+    (229, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática'),
+    (230, '09.723.145', '0001-93', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade'),
+    (231, '79.821.563', '0001-65', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade'),
+    (232, '33.738.001', '0001-77', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais'),
+    (233, '48.603.715', '0001-45', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro'),
+    (234, '65.172.380', '0001-53', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão'),
+    (235, '64.087.915', '0001-27', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (236, '28.659.130', '0001-07', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono'),
+    (237, '09.723.145', '0001-93', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental'),
+    (238, '18.024.935', '0001-76', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão'),
+    (239, '01.274.895', '0001-23', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (240, '09.723.145', '0001-93', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária'),
+    (241, '09.723.145', '0001-93', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão'),
+    (242, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local'),
+    (243, '65.172.380', '0001-61', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais'),
+    (244, '79.821.563', '0001-65', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades'),
+    (245, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos'),
+    (246, '65.172.380', '0001-53', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática'),
+    (247, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais'),
+    (248, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental'),
+    (249, '51.360.297', '0001-43', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo'),
+    (250, '64.087.915', '0001-27', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
 
 INSERT INTO contrib_co2 VALUES
     (1, '2020-08-08', 5500),
     (1, '2020-08-30', 3500),
     (1, '2020-07-30', 3500),
-    (1, '2020-09-12', 7800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (2, '33.738.001', '0001-77', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
-    (2, '2023-08-11', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (3, '01.274.895', '0001-40', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
+    (1, '2020-09-12', 7800),
+    (2, '2023-08-11', 3500),
     (3, '2022-06-23', 7400),
-    (3, '2022-08-03', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (4, '13.690.872', '0001-54', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (3, '2022-08-03', 3500),
     (4, '2022-05-11', 6200),
-    (4, '2022-04-29', 9000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (5, '09.723.145', '0001-56', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (4, '2022-04-29', 9000),
     (5, '2020-04-27', 9100),
-    (5, '2020-05-07', 5000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (6, '48.912.037', '0001-38', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
-
-INSERT INTO contrib_co2 VALUES
-    (6, '2025-05-22', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (7, '75.893.062', '0001-33', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (5, '2020-05-07', 5000),
+    (6, '2025-05-22', 3500),
     (7, '2021-09-18', 3500),
     (7, '2021-07-13', 3500),
     (7, '2021-09-11', 6200),
     (7, '2021-09-15', 8200),
     (7, '2021-07-22', 14000),
-    (7, '2021-07-08', 14600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (8, '56.738.014', '0001-69', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (8, '2021-06-30', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (9, '53.921.807', '0001-18', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
+    (7, '2021-07-08', 14600),
+    (8, '2021-06-30', 3500),
     (9, '2022-07-31', 5100),
-    (9, '2022-07-21', 9500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (10, '01.274.895', '0001-13', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
-    (10, '2023-12-23', 8200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (11, '09.723.145', '0001-56', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (9, '2022-07-21', 9500),
+    (10, '2023-12-23', 8200),
     (11, '2025-06-21', 8500),
     (11, '2025-05-09', 3500),
-    (11, '2025-05-29', 13900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (12, '01.274.895', '0001-40', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
-
-INSERT INTO contrib_co2 VALUES
+    (11, '2025-05-29', 13900),
     (12, '2024-02-05', 11900),
     (12, '2023-11-22', 3500),
     (12, '2023-12-03', 7700),
     (12, '2023-12-26', 21100),
     (12, '2024-01-09', 3500),
     (12, '2024-01-17', 3500),
-    (12, '2023-12-27', 6600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (13, '48.912.037', '0001-38', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
+    (12, '2023-12-27', 6600),
     (13, '2022-01-07', 6900),
     (13, '2021-11-29', 3500),
     (13, '2022-01-14', 7600),
-    (13, '2021-11-27', 8100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (14, '13.690.872', '0001-09', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (13, '2021-11-27', 8100),
     (14, '2026-02-28', 3500),
-    (14, '2026-05-11', 6200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (15, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
-
-INSERT INTO contrib_co2 VALUES
-    (15, '2022-03-13', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (16, '48.603.715', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
+    (14, '2026-05-11', 6200),
+    (15, '2022-03-13', 3500),
     (16, '2022-06-04', 3500),
     (16, '2022-08-11', 3500),
     (16, '2022-06-21', 6000),
     (16, '2022-08-28', 3500),
-    (16, '2022-07-13', 7100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (17, '13.690.872', '0001-09', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
-    (17, '2022-06-08', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (18, '79.821.563', '0001-99', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
+    (16, '2022-07-13', 7100),
+    (17, '2022-06-08', 3500),
     (18, '2022-07-25', 5800),
-    (18, '2022-06-23', 4900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (19, '53.921.807', '0001-18', '68.532.497/0001-22', '2023-04-22', 'Recuperação da vegetação nativa');
-
-INSERT INTO contrib_co2 VALUES
+    (18, '2022-06-23', 4900),
     (19, '2023-06-04', 8200),
-    (19, '2023-06-13', 12200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (20, '71.498.635', '0001-06', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
-    (20, '2021-12-30', 3800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (21, '01.274.895', '0001-13', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
-
-INSERT INTO contrib_co2 VALUES
+    (19, '2023-06-13', 12200),
+    (20, '2021-12-30', 3800),
     (21, '2024-02-08', 3500),
     (21, '2024-01-11', 3500),
     (21, '2024-01-13', 8300),
     (21, '2024-01-16', 21300),
-    (21, '2023-12-02', 8100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (22, '13.690.872', '0001-09', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
-
-INSERT INTO contrib_co2 VALUES
-    (22, '2021-12-28', 12800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (23, '48.912.037', '0001-48', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
+    (21, '2023-12-02', 8100),
+    (22, '2021-12-28', 12800),
     (23, '2024-10-24', 3500),
-    (23, '2024-10-05', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (24, '45.690.123', '0001-36', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
-
-INSERT INTO contrib_co2 VALUES
-    (24, '2025-01-31', 6900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (25, '45.690.123', '0001-36', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (23, '2024-10-05', 5700),
+    (24, '2025-01-31', 6900),
     (25, '2021-05-24', 8200),
     (25, '2021-06-29', 3500),
     (25, '2021-07-14', 10300),
     (25, '2021-05-17', 4500),
-    (25, '2021-05-21', 10600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (26, '71.498.635', '0001-06', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
+    (25, '2021-05-21', 10600),
     (26, '2024-09-23', 3500),
     (26, '2024-09-17', 6700),
     (26, '2024-09-14', 3500),
-    (26, '2024-11-06', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (27, '20.978.635', '0001-10', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
-    (27, '2022-08-02', 9800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (28, '48.603.715', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
+    (26, '2024-11-06', 3500),
+    (27, '2022-08-02', 9800),
     (28, '2020-08-21', 4500),
-    (28, '2020-07-29', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (29, '20.978.635', '0001-10', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
-
-INSERT INTO contrib_co2 VALUES
+    (28, '2020-07-29', 3500),
     (29, '2021-04-13', 9400),
     (29, '2021-05-15', 5000),
     (29, '2021-03-24', 6300),
     (29, '2021-05-07', 10400),
-    (29, '2021-06-10', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (30, '88.635.333', '0001-98', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
-
-INSERT INTO contrib_co2 VALUES
+    (29, '2021-06-10', 3500),
     (30, '2023-01-29', 15700),
     (30, '2023-03-11', 8200),
     (30, '2023-02-08', 14700),
-    (30, '2023-02-13', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (31, '79.821.563', '0001-00', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (30, '2023-02-13', 3500),
     (31, '2021-08-17', 5400),
     (31, '2021-07-09', 4300),
-    (31, '2021-07-31', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (32, '65.172.380', '0001-53', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (31, '2021-07-31', 3500),
     (32, '2026-04-22', 3500),
-    (32, '2026-04-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (33, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (33, '2025-06-05', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (34, '09.723.145', '0001-78', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
+    (32, '2026-04-04', 3500),
+    (33, '2025-06-05', 3500),
     (34, '2022-07-16', 3500),
     (34, '2022-06-10', 10500),
-    (34, '2022-07-23', 8800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (35, '64.087.915', '0001-27', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (35, '2022-07-10', 5300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (36, '71.498.635', '0001-06', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
-
-INSERT INTO contrib_co2 VALUES
-    (36, '2020-09-16', 5200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (37, '88.635.333', '0001-98', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
-    (37, '2021-07-09', 5200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (38, '28.659.130', '0001-07', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
-
-INSERT INTO contrib_co2 VALUES
+    (34, '2022-07-23', 8800),
+    (35, '2022-07-10', 5300),
+    (36, '2020-09-16', 5200),
+    (37, '2021-07-09', 5200),
     (38, '2020-09-10', 3500),
     (38, '2020-07-22', 4000),
     (38, '2020-07-14', 12000),
     (38, '2020-09-21', 8200),
     (38, '2020-07-15', 6500),
     (38, '2020-08-08', 10600),
-    (38, '2020-07-26', 10600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (39, '65.172.380', '0001-61', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
-    (39, '2025-02-18', 8800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (40, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
-
-INSERT INTO contrib_co2 VALUES
+    (38, '2020-07-26', 10600),
+    (39, '2025-02-18', 8800),
     (40, '2022-03-04', 3500),
-    (40, '2022-02-13', 6300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (41, '71.498.635', '0001-06', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (40, '2022-02-13', 6300),
     (41, '2022-12-25', 4200),
     (41, '2022-11-22', 3500),
-    (41, '2022-11-24', 10200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (42, '13.690.872', '0001-54', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
-
-INSERT INTO contrib_co2 VALUES
+    (41, '2022-11-24', 10200),
     (42, '2025-09-12', 3500),
     (42, '2025-08-26', 3500),
-    (42, '2025-09-23', 5500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (43, '01.274.895', '0001-23', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
-
-INSERT INTO contrib_co2 VALUES
-    (43, '2023-11-24', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (44, '88.635.333', '0001-98', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
-    (44, '2026-05-30', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (45, '39.605.871', '0001-83', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (45, '2023-12-11', 8500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (46, '48.603.715', '0001-45', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
-
-INSERT INTO contrib_co2 VALUES
-    (46, '2020-06-19', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (47, '20.978.635', '0001-10', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (42, '2025-09-23', 5500),
+    (43, '2023-11-24', 3500),
+    (44, '2026-05-30', 3500),
+    (45, '2023-12-11', 8500),
+    (46, '2020-06-19', 5700),
     (47, '2021-11-11', 4300),
     (47, '2021-10-24', 3500),
-    (47, '2021-11-23', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (48, '65.172.380', '0001-53', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (48, '2024-04-08', 5000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (49, '01.274.895', '0001-13', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (47, '2021-11-23', 3500),
+    (48, '2024-04-08', 5000),
     (49, '2021-12-10', 3700),
     (49, '2022-01-20', 9500),
-    (49, '2022-01-15', 9200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (50, '28.659.130', '0001-07', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (50, '2025-05-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (51, '09.723.145', '0001-78', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (49, '2022-01-15', 9200),
+    (50, '2025-05-12', 3500),
     (51, '2021-09-01', 3500),
     (51, '2021-08-17', 14100),
-    (51, '2021-07-25', 10500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (52, '75.893.062', '0001-33', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
-
-INSERT INTO contrib_co2 VALUES
-    (52, '2023-11-15', 13900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (53, '20.978.635', '0001-10', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (53, '2023-10-30', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (54, '79.821.563', '0001-65', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
+    (51, '2021-07-25', 10500),
+    (52, '2023-11-15', 13900),
+    (53, '2023-10-30', 3500),
     (54, '2026-06-04', 11800),
     (54, '2026-05-24', 8000),
-    (54, '2026-06-11', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (55, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
-
-INSERT INTO contrib_co2 VALUES
-    (55, '2020-07-16', 8700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (56, '75.893.062', '0001-31', '37.186.429/0001-25', '2022-06-02', 'Compensação de viagens corporativas');
-
-INSERT INTO contrib_co2 VALUES
-    (56, '2022-06-25', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (57, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
+    (54, '2026-06-11', 3500),
+    (55, '2020-07-16', 8700),
+    (56, '2022-06-25', 3500),
     (57, '2022-02-05', 10200),
     (57, '2022-03-01', 3500),
-    (57, '2022-02-23', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (58, '79.821.563', '0001-00', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
-
-INSERT INTO contrib_co2 VALUES
-    (58, '2023-11-20', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (59, '79.821.563', '0001-00', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
-    (59, '2024-11-01', 6000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (60, '33.738.001', '0001-77', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (60, '2021-09-19', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (61, '48.603.715', '0001-45', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
+    (57, '2022-02-23', 3500),
+    (58, '2023-11-20', 3500),
+    (59, '2024-11-01', 6000),
+    (60, '2021-09-19', 3500),
     (61, '2025-02-09', 3500),
     (61, '2025-03-18', 5300),
-    (61, '2025-03-13', 8300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (62, '18.024.935', '0001-76', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
-
-INSERT INTO contrib_co2 VALUES
+    (61, '2025-03-13', 8300),
     (62, '2024-04-13', 16500),
     (62, '2024-04-01', 7900),
-    (62, '2024-03-10', 11400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (63, '53.921.807', '0001-18', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (62, '2024-03-10', 11400),
     (63, '2021-03-29', 18700),
-    (63, '2021-04-09', 8400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (64, '51.360.297', '0001-43', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
-
-INSERT INTO contrib_co2 VALUES
+    (63, '2021-04-09', 8400),
     (64, '2025-03-27', 3500),
     (64, '2025-06-12', 3500),
-    (64, '2025-03-29', 7600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (65, '01.274.895', '0001-40', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
-
-INSERT INTO contrib_co2 VALUES
+    (64, '2025-03-29', 7600),
     (65, '2020-04-06', 3500),
     (65, '2020-05-13', 3500),
     (65, '2020-03-31', 3500),
-    (65, '2020-05-17', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (66, '13.690.872', '0001-09', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
+    (65, '2020-05-17', 3500),
     (66, '2020-08-03', 5200),
-    (66, '2020-09-20', 8600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (67, '79.821.563', '0001-43', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
-
-INSERT INTO contrib_co2 VALUES
-    (67, '2023-02-28', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (68, '18.024.935', '0001-76', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (66, '2020-09-20', 8600),
+    (67, '2023-02-28', 5700),
     (68, '2026-07-26', 4700),
     (68, '2026-06-19', 9400),
-    (68, '2026-07-30', 12000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (69, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
-
-INSERT INTO contrib_co2 VALUES
-    (69, '2025-04-08', 3600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (70, '01.274.895', '0001-13', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
-
-INSERT INTO contrib_co2 VALUES
+    (68, '2026-07-30', 12000),
+    (69, '2025-04-08', 3600),
     (70, '2023-04-09', 8000),
     (70, '2023-04-13', 7400),
     (70, '2023-02-10', 3500),
-    (70, '2023-03-14', 6200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (71, '56.738.014', '0001-69', '74.029.536/0001-76', '2025-03-15', 'Energia renovável para todos');
-
-INSERT INTO contrib_co2 VALUES
-    (71, '2025-06-12', 4900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (72, '28.659.130', '0001-07', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (70, '2023-03-14', 6200),
+    (71, '2025-06-12', 4900),
     (72, '2026-04-25', 3500),
-    (72, '2026-04-08', 4900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (73, '01.274.895', '0001-13', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (72, '2026-04-08', 4900),
     (73, '2023-11-15', 8100),
     (73, '2023-12-16', 8200),
-    (73, '2023-12-17', 4800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (74, '20.978.635', '0001-10', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
-    (74, '2024-02-01', 5800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (75, '56.738.014', '0001-69', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
-
-INSERT INTO contrib_co2 VALUES
-    (75, '2025-09-06', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (76, '64.087.915', '0001-27', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (73, '2023-12-17', 4800),
+    (74, '2024-02-01', 5800),
+    (75, '2025-09-06', 3500),
     (76, '2026-07-17', 6600),
     (76, '2026-06-30', 11900),
-    (76, '2026-07-19', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (77, '09.723.145', '0001-56', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
-
-INSERT INTO contrib_co2 VALUES
+    (76, '2026-07-19', 3500),
     (77, '2022-01-07', 14100),
-    (77, '2022-03-16', 11300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (78, '27.401.593', '0001-66', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (77, '2022-03-16', 11300),
     (78, '2020-04-20', 7800),
     (78, '2020-04-27', 3700),
     (78, '2020-04-15', 7200),
-    (78, '2020-04-06', 7200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (79, '13.690.872', '0001-54', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
-
-INSERT INTO contrib_co2 VALUES
-    (79, '2023-12-28', 5600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (80, '88.635.333', '0001-98', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
-    (80, '2025-04-02', 3600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (81, '09.723.145', '0001-56', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (81, '2022-09-10', 7800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (82, '12.905.674', '0001-18', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (82, '2026-05-10', 6400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (83, '65.172.380', '0001-53', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
-
-INSERT INTO contrib_co2 VALUES
+    (78, '2020-04-06', 7200),
+    (79, '2023-12-28', 5600),
+    (80, '2025-04-02', 3600),
+    (81, '2022-09-10', 7800),
+    (82, '2026-05-10', 6400),
     (83, '2020-04-06', 8500),
     (83, '2020-05-31', 3900),
     (83, '2020-05-20', 3500),
-    (83, '2020-05-01', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (84, '01.274.895', '0001-23', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (83, '2020-05-01', 3500),
     (84, '2022-12-18', 9000),
-    (84, '2022-10-25', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (85, '56.738.014', '0001-69', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
-
-INSERT INTO contrib_co2 VALUES
+    (84, '2022-10-25', 3500),
     (85, '2024-01-01', 6800),
     (85, '2024-01-19', 3500),
     (85, '2024-01-18', 6900),
     (85, '2024-01-30', 3500),
     (85, '2023-12-15', 3500),
     (85, '2024-01-27', 13100),
-    (85, '2024-01-20', 6900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (86, '13.690.872', '0001-09', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (85, '2024-01-20', 6900),
     (86, '2022-05-24', 3500),
-    (86, '2022-06-06', 9000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (87, '79.821.563', '0001-43', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (86, '2022-06-06', 9000),
     (87, '2023-02-07', 3500),
     (87, '2022-11-16', 3500),
-    (87, '2023-01-22', 6900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (88, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
-    (88, '2020-06-24', 7700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (89, '79.821.563', '0001-00', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
+    (87, '2023-01-22', 6900),
+    (88, '2020-06-24', 7700),
     (89, '2025-01-09', 6300),
     (89, '2025-03-16', 3500),
-    (89, '2025-03-02', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (90, '13.690.872', '0001-09', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (89, '2025-03-02', 3500),
     (90, '2024-06-07', 3500),
-    (90, '2024-05-05', 6600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (91, '75.893.062', '0001-31', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (91, '2022-06-04', 3800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (92, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
-    (92, '2025-10-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (93, '01.274.895', '0001-40', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
-
-INSERT INTO contrib_co2 VALUES
-    (93, '2024-03-13', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (94, '65.172.380', '0001-53', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (94, '2025-06-02', 4100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (95, '28.659.130', '0001-07', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
-    (95, '2026-06-16', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (96, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
-
-INSERT INTO contrib_co2 VALUES
+    (90, '2024-05-05', 6600),
+    (91, '2022-06-04', 3800),
+    (92, '2025-10-12', 3500),
+    (93, '2024-03-13', 3500),
+    (94, '2025-06-02', 4100),
+    (95, '2026-06-16', 3500),
     (96, '2020-08-22', 6900),
     (96, '2020-08-15', 3500),
     (96, '2020-08-01', 10200),
-    (96, '2020-09-12', 7500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (97, '79.821.563', '0001-00', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (96, '2020-09-12', 7500),
     (97, '2023-12-31', 4400),
     (97, '2024-01-30', 3500),
-    (97, '2024-01-15', 10000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (98, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (97, '2024-01-15', 10000),
     (98, '2021-12-03', 3500),
     (98, '2021-11-14', 4100),
     (98, '2021-12-14', 6700),
     (98, '2021-10-08', 9100),
-    (98, '2021-11-03', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (99, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
+    (98, '2021-11-03', 3500),
     (99, '2023-11-10', 10200),
     (99, '2023-11-25', 3500),
-    (99, '2023-12-08', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (100, '75.893.062', '0001-31', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (100, '2022-07-21', 6700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (101, '09.723.145', '0001-93', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
-
-INSERT INTO contrib_co2 VALUES
-    (101, '2020-03-02', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (102, '88.635.333', '0001-98', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (102, '2022-07-06', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (103, '75.893.062', '0001-31', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (99, '2023-12-08', 3500),
+    (100, '2022-07-21', 6700),
+    (101, '2020-03-02', 3500),
+    (102, '2022-07-06', 3500),
     (103, '2022-11-15', 13900),
-    (103, '2022-12-19', 9900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (104, '13.690.872', '0001-09', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (103, '2022-12-19', 9900),
     (104, '2022-11-17', 12600),
     (104, '2023-01-16', 7000),
     (104, '2022-11-27', 6200),
-    (104, '2023-02-07', 3900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (105, '09.723.145', '0001-56', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (104, '2023-02-07', 3900),
     (105, '2024-04-24', 3500),
     (105, '2024-04-26', 8300),
-    (105, '2024-06-29', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (106, '48.912.037', '0001-48', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
-    (106, '2021-11-24', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (107, '56.738.014', '0001-69', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (105, '2024-06-29', 3500),
+    (106, '2021-11-24', 3500),
     (107, '2026-07-12', 14800),
-    (107, '2026-05-21', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (108, '45.690.123', '0001-36', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
-
-INSERT INTO contrib_co2 VALUES
+    (107, '2026-05-21', 3500),
     (108, '2023-12-16', 5900),
     (108, '2023-11-17', 8000),
-    (108, '2023-11-13', 7100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (109, '13.690.872', '0001-54', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
-    (109, '2022-01-18', 7500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (110, '09.723.145', '0001-78', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
+    (108, '2023-11-13', 7100),
+    (109, '2022-01-18', 7500),
     (110, '2023-11-29', 6400),
-    (110, '2024-01-19', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (111, '75.893.062', '0001-33', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (110, '2024-01-19', 3500),
     (111, '2022-11-14', 12900),
     (111, '2023-01-27', 3500),
-    (111, '2023-01-15', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (112, '45.690.123', '0001-36', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (112, '2025-06-06', 5800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (113, '51.360.297', '0001-43', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (113, '2025-06-10', 4200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (114, '65.172.380', '0001-53', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
-
-INSERT INTO contrib_co2 VALUES
+    (111, '2023-01-15', 3500),
+    (112, '2025-06-06', 5800),
+    (113, '2025-06-10', 4200),
     (114, '2025-02-18', 3500),
     (114, '2025-03-14', 10500),
-    (114, '2025-03-15', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (115, '79.821.563', '0001-00', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (114, '2025-03-15', 3500),
     (115, '2026-07-24', 6200),
     (115, '2026-05-17', 3500),
-    (115, '2026-06-08', 9600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (116, '65.172.380', '0001-53', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
-
-INSERT INTO contrib_co2 VALUES
+    (115, '2026-06-08', 9600),
     (116, '2026-01-15', 3500),
     (116, '2025-12-17', 3500),
-    (116, '2025-12-25', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (117, '65.172.380', '0001-61', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
-    (117, '2025-06-21', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (118, '79.821.563', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
-    (118, '2023-08-30', 3900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (119, '51.360.297', '0001-43', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
-    (119, '2025-06-10', 8800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (120, '48.603.715', '0001-45', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (120, '2022-05-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (121, '53.921.807', '0001-18', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (116, '2025-12-25', 3500),
+    (117, '2025-06-21', 3500),
+    (118, '2023-08-30', 3900),
+    (119, '2025-06-10', 8800),
+    (120, '2022-05-04', 3500),
     (121, '2022-05-04', 3500),
     (121, '2022-04-28', 16600),
-    (121, '2022-06-22', 7900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (122, '45.690.123', '0001-36', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (122, '2026-03-27', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (123, '65.172.380', '0001-61', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (121, '2022-06-22', 7900),
+    (122, '2026-03-27', 3500),
     (123, '2021-09-21', 3500),
     (123, '2021-08-16', 3500),
-    (123, '2021-09-18', 9600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (124, '27.401.593', '0001-66', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (123, '2021-09-18', 9600),
     (124, '2024-05-17', 4100),
-    (124, '2024-05-30', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (125, '09.723.145', '0001-78', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
-    (125, '2020-07-07', 3600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (126, '01.274.895', '0001-13', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (124, '2024-05-30', 3500),
+    (125, '2020-07-07', 3600),
     (126, '2022-12-21', 9000),
-    (126, '2022-12-07', 5600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (127, '71.498.635', '0001-06', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (127, '2022-08-22', 6600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (128, '20.978.635', '0001-10', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (128, '2021-05-06', 9600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (129, '56.738.014', '0001-69', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (126, '2022-12-07', 5600),
+    (127, '2022-08-22', 6600),
+    (128, '2021-05-06', 9600),
     (129, '2021-05-05', 5500),
-    (129, '2021-03-09', 7600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (130, '27.401.593', '0001-66', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (130, '2026-03-29', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (131, '28.659.130', '0001-07', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (131, '2022-11-24', 9200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (132, '09.723.145', '0001-56', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
+    (129, '2021-03-09', 7600),
+    (130, '2026-03-29', 3500),
+    (131, '2022-11-24', 9200),
     (132, '2021-12-20', 3500),
     (132, '2021-12-27', 5400),
     (132, '2022-02-08', 3500),
-    (132, '2022-02-22', 11100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (133, '51.360.297', '0001-43', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
-    (133, '2022-01-01', 7400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (134, '18.024.935', '0001-76', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
-
-INSERT INTO contrib_co2 VALUES
-    (134, '2022-04-21', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (135, '01.274.895', '0001-40', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (132, '2022-02-22', 11100),
+    (133, '2022-01-01', 7400),
+    (134, '2022-04-21', 3500),
     (135, '2026-06-19', 10000),
-    (135, '2026-07-26', 11300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (136, '33.738.001', '0001-77', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
-    (136, '2022-12-17', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (137, '13.690.872', '0001-09', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
-
-INSERT INTO contrib_co2 VALUES
-    (137, '2025-11-27', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (138, '18.024.935', '0001-76', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (138, '2022-04-28', 7300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (139, '18.024.935', '0001-76', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (135, '2026-07-26', 11300),
+    (136, '2022-12-17', 3500),
+    (137, '2025-11-27', 3500),
+    (138, '2022-04-28', 7300),
     (139, '2021-03-28', 6800),
     (139, '2021-05-01', 3500),
     (139, '2021-03-22', 10200),
-    (139, '2021-04-19', 4600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (140, '33.738.001', '0001-77', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
-    (140, '2024-01-28', 9800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (141, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
-
-INSERT INTO contrib_co2 VALUES
+    (139, '2021-04-19', 4600),
+    (140, '2024-01-28', 9800),
     (141, '2020-06-29', 5400),
     (141, '2020-08-29', 4700),
-    (141, '2020-07-30', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (142, '01.274.895', '0001-23', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (142, '2026-03-28', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (143, '48.912.037', '0001-38', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (141, '2020-07-30', 3500),
+    (142, '2026-03-28', 3500),
     (143, '2025-06-24', 10700),
     (143, '2025-06-04', 3500),
     (143, '2025-04-08', 5700),
     (143, '2025-05-13', 3500),
     (143, '2025-04-27', 3500),
-    (143, '2025-05-08', 6800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (144, '20.978.635', '0001-10', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
-
-INSERT INTO contrib_co2 VALUES
-    (144, '2022-04-10', 5200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (145, '39.605.871', '0001-83', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (143, '2025-05-08', 6800),
+    (144, '2022-04-10', 5200),
     (145, '2021-09-19', 3500),
     (145, '2021-07-17', 3500),
     (145, '2021-07-18', 9800),
-    (145, '2021-08-06', 16800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (146, '13.690.872', '0001-54', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
+    (145, '2021-08-06', 16800),
     (146, '2020-08-21', 10300),
-    (146, '2020-09-04', 6300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (147, '65.172.380', '0001-61', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (146, '2020-09-04', 6300),
     (147, '2022-05-10', 6700),
-    (147, '2022-06-24', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (148, '48.603.715', '0001-45', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
-
-INSERT INTO contrib_co2 VALUES
+    (147, '2022-06-24', 3500),
     (148, '2023-12-29', 3500),
     (148, '2024-01-10', 3500),
     (148, '2023-11-12', 3500),
-    (148, '2023-11-25', 8900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (149, '53.921.807', '0001-18', '52.061.387/0001-90', '2025-08-07', 'Recuperação de áreas degradadas e clima');
-
-INSERT INTO contrib_co2 VALUES
-    (149, '2025-10-18', 9900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (150, '64.087.915', '0001-27', '68.532.497/0001-22', '2021-06-25', 'Conservação florestal e créditos de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (148, '2023-11-25', 8900),
+    (149, '2025-10-18', 9900),
     (150, '2021-09-02', 4300),
     (150, '2021-07-02', 3500),
-    (150, '2021-09-11', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (151, '56.738.014', '0001-69', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
-
-INSERT INTO contrib_co2 VALUES
+    (150, '2021-09-11', 3500),
     (151, '2022-04-13', 3500),
     (151, '2022-04-17', 6200),
     (151, '2022-04-14', 3500),
     (151, '2022-03-28', 3500),
     (151, '2022-04-20', 12200),
-    (151, '2022-04-29', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (152, '12.905.674', '0001-18', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (151, '2022-04-29', 3500),
     (152, '2021-12-07', 3500),
     (152, '2021-12-05', 3500),
     (152, '2021-11-19', 3500),
     (152, '2021-09-24', 3500),
-    (152, '2021-10-23', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (153, '53.921.807', '0001-18', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (152, '2021-10-23', 3500),
     (153, '2026-08-08', 9800),
-    (153, '2026-05-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (154, '39.605.871', '0001-83', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (153, '2026-05-12', 3500),
     (154, '2024-02-18', 14100),
     (154, '2024-02-01', 3500),
-    (154, '2023-12-28', 8200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (155, '79.821.563', '0001-43', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
-
-INSERT INTO contrib_co2 VALUES
-    (155, '2025-01-16', 6000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (156, '33.738.001', '0001-77', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (156, '2022-06-08', 11300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (157, '18.024.935', '0001-76', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (157, '2026-02-09', 5800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (158, '01.274.895', '0001-13', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
-
-INSERT INTO contrib_co2 VALUES
+    (154, '2023-12-28', 8200),
+    (155, '2025-01-16', 6000),
+    (156, '2022-06-08', 11300),
+    (157, '2026-02-09', 5800),
     (158, '2020-06-15', 9300),
     (158, '2020-04-11', 3500),
-    (158, '2020-05-12', 10600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (159, '88.635.333', '0001-98', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
-
-INSERT INTO contrib_co2 VALUES
-    (159, '2024-01-23', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (160, '88.635.333', '0001-98', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
+    (158, '2020-05-12', 10600),
+    (159, '2024-01-23', 3500),
     (160, '2020-07-02', 8700),
     (160, '2020-09-12', 10400),
-    (160, '2020-07-06', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (161, '64.087.915', '0001-27', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
-    (161, '2025-02-17', 4400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (162, '18.024.935', '0001-76', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (160, '2020-07-06', 3500),
+    (161, '2025-02-17', 4400),
     (162, '2026-05-20', 9300),
     (162, '2026-04-16', 3500),
     (162, '2026-05-08', 8000),
-    (162, '2026-05-05', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (163, '48.912.037', '0001-38', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
-    (163, '2023-10-16', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (164, '12.905.674', '0001-18', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
+    (162, '2026-05-05', 3500),
+    (163, '2023-10-16', 3500),
     (164, '2023-08-10', 3500),
-    (164, '2023-08-26', 16500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (165, '45.690.123', '0001-36', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (164, '2023-08-26', 16500),
     (165, '2021-05-09', 8200),
     (165, '2021-04-15', 3500),
     (165, '2021-03-04', 4500),
     (165, '2021-03-06', 11300),
-    (165, '2021-03-17', 6900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (166, '27.401.593', '0001-66', '52.061.387/0001-90', '2025-01-03', 'Compensação ambiental de operações organizacionais');
-
-INSERT INTO contrib_co2 VALUES
+    (165, '2021-03-17', 6900),
     (166, '2025-03-29', 3500),
-    (166, '2025-01-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (167, '79.821.563', '0001-65', '14.679.502/0001-03', '2021-02-16', 'Modernização energética de baixo carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (166, '2025-01-04', 3500),
     (167, '2021-03-22', 4300),
-    (167, '2021-04-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (168, '13.690.872', '0001-09', '52.061.387/0001-90', '2021-09-22', 'Proteção de biomas e compensação climática');
-
-INSERT INTO contrib_co2 VALUES
-    (168, '2021-09-24', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (169, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-12-25', 'Compensação de emissões no transporte urbano');
-
-INSERT INTO contrib_co2 VALUES
+    (167, '2021-04-04', 3500),
+    (168, '2021-09-24', 3500),
     (169, '2022-02-21', 8500),
     (169, '2022-02-06', 7300),
-    (169, '2022-02-28', 10100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (170, '18.024.935', '0001-76', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (169, '2022-02-28', 10100),
     (170, '2022-12-11', 10300),
-    (170, '2022-12-25', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (171, '28.659.130', '0001-07', '52.061.387/0001-90', '2022-04-07', 'Transição energética sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (170, '2022-12-25', 5700),
     (171, '2022-05-14', 5800),
     (171, '2022-06-03', 3500),
     (171, '2022-04-26', 3500),
-    (171, '2022-06-10', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (172, '71.498.635', '0001-06', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
-
-INSERT INTO contrib_co2 VALUES
+    (171, '2022-06-10', 3500),
     (172, '2024-02-04', 3500),
-    (172, '2024-01-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (173, '28.659.130', '0001-07', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
-    (173, '2025-04-18', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (174, '48.912.037', '0001-38', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
+    (172, '2024-01-12', 3500),
+    (173, '2025-04-18', 3500),
     (174, '2025-04-25', 3500),
     (174, '2025-06-11', 13500),
-    (174, '2025-06-16', 6800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (175, '28.659.130', '0001-07', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
-
-INSERT INTO contrib_co2 VALUES
+    (174, '2025-06-16', 6800),
     (175, '2020-04-28', 5000),
-    (175, '2020-04-10', 6300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (176, '13.690.872', '0001-54', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
+    (175, '2020-04-10', 6300),
     (176, '2021-12-21', 3500),
-    (176, '2021-11-10', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (177, '48.603.715', '0001-45', '64.253.970/0001-81', '2022-06-27', 'Geração comunitária de energia solar');
-
-INSERT INTO contrib_co2 VALUES
-    (177, '2022-08-05', 12100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (178, '79.821.563', '0001-65', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (176, '2021-11-10', 3500),
+    (177, '2022-08-05', 12100),
     (178, '2024-05-21', 6200),
     (178, '2024-04-22', 4400),
     (178, '2024-05-06', 3500),
     (178, '2024-05-12', 3500),
-    (178, '2024-05-07', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (179, '64.087.915', '0001-27', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
-
-INSERT INTO contrib_co2 VALUES
-    (179, '2024-02-04', 7200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (180, '13.690.872', '0001-09', '14.679.502/0001-03', '2026-05-11', 'Eficiência energética em edificações');
-
-INSERT INTO contrib_co2 VALUES
+    (178, '2024-05-07', 3500),
+    (179, '2024-02-04', 7200),
     (180, '2026-08-07', 9100),
     (180, '2026-07-26', 3500),
     (180, '2026-05-27', 14400),
-    (180, '2026-06-09', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (181, '28.659.130', '0001-07', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
+    (180, '2026-06-09', 3500),
     (181, '2023-12-15', 13400),
     (181, '2023-11-15', 3500),
     (181, '2024-01-03', 4400),
     (181, '2023-12-18', 6000),
-    (181, '2024-01-22', 6400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (182, '64.087.915', '0001-27', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
-
-INSERT INTO contrib_co2 VALUES
+    (181, '2024-01-22', 6400),
     (182, '2021-04-19', 3500),
     (182, '2021-05-29', 5100),
     (182, '2021-04-29', 9500),
-    (182, '2021-06-03', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (183, '33.738.001', '0001-77', '35.179.804/0001-84', '2020-02-01', 'Gestão circular de resíduos urbanos');
-
-INSERT INTO contrib_co2 VALUES
-    (183, '2020-02-07', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (184, '27.401.593', '0001-66', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
+    (182, '2021-06-03', 3500),
+    (183, '2020-02-07', 3500),
     (184, '2022-01-28', 13800),
-    (184, '2022-02-21', 6700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (185, '51.360.297', '0001-43', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (184, '2022-02-21', 6700),
     (185, '2022-06-05', 3500),
-    (185, '2022-07-04', 5000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (186, '79.821.563', '0001-99', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (185, '2022-07-04', 5000),
     (186, '2025-06-11', 3500),
     (186, '2025-06-10', 3500),
     (186, '2025-06-12', 3500),
-    (186, '2025-04-18', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (187, '64.087.915', '0001-27', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
+    (186, '2025-04-18', 3500),
     (187, '2025-05-06', 4800),
-    (187, '2025-04-15', 9500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (188, '79.821.563', '0001-43', '74.029.536/0001-76', '2022-10-02', 'Reciclagem inclusiva e sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (187, '2025-04-15', 9500),
     (188, '2022-10-10', 10800),
     (188, '2022-12-29', 10400),
     (188, '2022-12-11', 5100),
-    (188, '2022-12-14', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (189, '12.905.674', '0001-18', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
+    (188, '2022-12-14', 3500),
     (189, '2026-05-11', 3500),
-    (189, '2026-06-06', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (190, '01.274.895', '0001-40', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (190, '2021-07-31', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (191, '12.905.674', '0001-18', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (189, '2026-06-06', 3500),
+    (190, '2021-07-31', 3500),
     (191, '2023-10-30', 3500),
     (191, '2023-11-06', 3900),
-    (191, '2023-10-04', 8200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (192, '79.821.563', '0001-99', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
-    (192, '2025-05-18', 10400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (193, '13.690.872', '0001-54', '64.253.970/0001-81', '2020-03-22', 'Frota verde para redução de emissões');
-
-INSERT INTO contrib_co2 VALUES
+    (191, '2023-10-04', 8200),
+    (192, '2025-05-18', 10400),
     (193, '2020-06-03', 12200),
     (193, '2020-06-19', 3500),
     (193, '2020-03-30', 3500),
-    (193, '2020-05-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (194, '51.360.297', '0001-43', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
-    (194, '2023-10-01', 10800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (195, '18.024.935', '0001-76', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
-    (195, '2021-06-14', 4600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (196, '09.723.145', '0001-78', '14.679.502/0001-03', '2020-02-10', 'Programa de economia de energia e carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (196, '2020-03-27', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (197, '18.024.935', '0001-76', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
-
-INSERT INTO contrib_co2 VALUES
-    (197, '2025-02-05', 8600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (198, '13.690.872', '0001-54', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (193, '2020-05-04', 3500),
+    (194, '2023-10-01', 10800),
+    (195, '2021-06-14', 4600),
+    (196, '2020-03-27', 3500),
+    (197, '2025-02-05', 8600),
     (198, '2025-05-01', 5500),
     (198, '2025-04-13', 6900),
-    (198, '2025-05-24', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (199, '79.821.563', '0001-43', '74.029.536/0001-76', '2020-06-26', 'Cadeia sustentável de reciclagem');
-
-INSERT INTO contrib_co2 VALUES
-    (199, '2020-06-26', 9900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (200, '75.893.062', '0001-33', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
-
-INSERT INTO contrib_co2 VALUES
+    (198, '2025-05-24', 3500),
+    (199, '2020-06-26', 9900),
     (200, '2022-04-30', 6200),
     (200, '2022-06-03', 10000),
-    (200, '2022-04-28', 5900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (201, '18.024.935', '0001-76', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
-    (201, '2024-11-14', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (202, '33.738.001', '0001-77', '37.186.429/0001-25', '2021-03-21', 'Programa de neutralização de carbono logístico');
-
-INSERT INTO contrib_co2 VALUES
-    (202, '2021-04-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (203, '75.893.062', '0001-33', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (200, '2022-04-28', 5900),
+    (201, '2024-11-14', 3500),
+    (202, '2021-04-04', 3500),
     (203, '2023-12-12', 5200),
     (203, '2024-01-01', 3500),
     (203, '2024-02-03', 10500),
-    (203, '2023-12-17', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (204, '75.893.062', '0001-33', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
-    (204, '2023-11-20', 8200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (205, '65.172.380', '0001-53', '52.061.387/0001-90', '2023-11-04', 'Redução de carbono no deslocamento diário');
-
-INSERT INTO contrib_co2 VALUES
+    (203, '2023-12-17', 3500),
+    (204, '2023-11-20', 8200),
     (205, '2023-12-14', 4600),
     (205, '2023-12-23', 3500),
     (205, '2023-12-06', 11100),
-    (205, '2024-01-20', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (206, '75.893.062', '0001-31', '14.679.502/0001-03', '2023-09-21', 'Ação climática para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (205, '2024-01-20', 3500),
     (206, '2023-10-22', 3500),
     (206, '2023-10-29', 3500),
-    (206, '2023-11-28', 8200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (207, '53.921.807', '0001-18', '20.594.183/0001-28', '2025-01-07', 'Neutralização de emissões de entregas');
-
-INSERT INTO contrib_co2 VALUES
+    (206, '2023-11-28', 8200),
     (207, '2025-01-30', 3500),
-    (207, '2025-02-13', 7300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (208, '28.659.130', '0001-07', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
+    (207, '2025-02-13', 7300),
     (208, '2024-10-21', 3500),
-    (208, '2024-11-02', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (209, '28.659.130', '0001-07', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
-    (209, '2023-10-12', 8800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (210, '75.893.062', '0001-31', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
-    (210, '2026-04-02', 6300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (211, '01.274.895', '0001-40', '74.029.536/0001-76', '2023-10-17', 'Florestas comunitárias para o clima');
-
-INSERT INTO contrib_co2 VALUES
+    (208, '2024-11-02', 3500),
+    (209, '2023-10-12', 8800),
+    (210, '2026-04-02', 6300),
     (211, '2023-10-23', 3500),
-    (211, '2023-12-05', 5900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (212, '65.172.380', '0001-61', '74.029.536/0001-76', '2020-06-24', 'Substituição de fontes fósseis por renováveis');
-
-INSERT INTO contrib_co2 VALUES
+    (211, '2023-12-05', 5900),
     (212, '2020-09-09', 5200),
     (212, '2020-07-28', 16000),
     (212, '2020-06-28', 3500),
     (212, '2020-09-15', 3500),
-    (212, '2020-07-09', 11200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (213, '45.690.123', '0001-36', '64.253.970/0001-81', '2025-04-10', 'Campanha de reflorestamento no Amazonas');
-
-INSERT INTO contrib_co2 VALUES
+    (212, '2020-07-09', 11200),
     (213, '2025-07-07', 3500),
     (213, '2025-06-29', 12400),
-    (213, '2025-06-20', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (214, '01.274.895', '0001-23', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (213, '2025-06-20', 3500),
     (214, '2022-04-27', 3500),
     (214, '2022-07-04', 3500),
     (214, '2022-06-24', 5200),
-    (214, '2022-05-17', 6400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (215, '64.087.915', '0001-27', '52.061.387/0001-90', '2024-08-26', 'Implantação de painéis solares em estabelecimentos públicos');
-
-INSERT INTO contrib_co2 VALUES
+    (214, '2022-05-17', 6400),
     (215, '2024-10-08', 3500),
     (215, '2024-09-20', 8800),
     (215, '2024-10-17', 3500),
     (215, '2024-09-11', 7500),
-    (215, '2024-09-29', 9400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (216, '75.893.062', '0001-31', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
-    (216, '2025-10-19', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (217, '45.690.123', '0001-36', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (215, '2024-09-29', 9400),
+    (216, '2025-10-19', 5700),
     (217, '2021-06-26', 8900),
     (217, '2021-09-19', 10000),
     (217, '2021-07-21', 3500),
-    (217, '2021-08-03', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (218, '09.723.145', '0001-93', '63.754.089/0001-00', '2022-04-13', 'Corredores ecológicos para captura de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (217, '2021-08-03', 3500),
     (218, '2022-05-20', 11000),
     (218, '2022-05-01', 4800),
     (218, '2022-05-11', 3500),
-    (218, '2022-07-07', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (219, '09.723.145', '0001-93', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (218, '2022-07-07', 3500),
     (219, '2021-06-01', 3500),
     (219, '2021-06-15', 3500),
     (219, '2021-05-10', 3500),
     (219, '2021-07-02', 8900),
-    (219, '2021-07-03', 10300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (220, '79.821.563', '0001-00', '07.219.354/0001-70', '2024-04-07', 'Gestão sustentável da pegada de carbono');
-
-INSERT INTO contrib_co2 VALUES
-    (220, '2024-06-20', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (221, '27.401.593', '0001-66', '35.179.804/0001-84', '2023-07-28', 'Compensação de emissões por energia renovável');
-
-INSERT INTO contrib_co2 VALUES
+    (219, '2021-07-03', 10300),
+    (220, '2024-06-20', 3500),
     (221, '2023-09-23', 6400),
     (221, '2023-09-12', 8600),
     (221, '2023-08-23', 8400),
-    (221, '2023-10-01', 4400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (222, '65.172.380', '0001-53', '64.253.970/0001-81', '2025-12-20', 'Reflorestamento para neutralização de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (221, '2023-10-01', 4400),
     (222, '2025-12-21', 7900),
-    (222, '2026-02-24', 11700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (223, '33.738.001', '0001-77', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
-
-INSERT INTO contrib_co2 VALUES
-    (223, '2025-12-18', 7900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (224, '20.978.635', '0001-10', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
-    (224, '2024-02-18', 4400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (225, '53.921.807', '0001-18', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
-    (225, '2021-12-24', 11800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (226, '71.498.635', '0001-06', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
-    (226, '2025-10-12', 4500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (227, '75.893.062', '0001-31', '74.029.536/0001-76', '2025-11-17', 'Reaproveitamento de materiais pós-consumo');
-
-INSERT INTO contrib_co2 VALUES
+    (222, '2026-02-24', 11700),
+    (223, '2025-12-18', 7900),
+    (224, '2024-02-18', 4400),
+    (225, '2021-12-24', 11800),
+    (226, '2025-10-12', 4500),
     (227, '2025-11-18', 4500),
-    (227, '2026-01-22', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (228, '65.172.380', '0001-61', '74.029.536/0001-76', '2026-02-25', 'Incentivos de transporte sustentável');
-
-INSERT INTO contrib_co2 VALUES
+    (227, '2026-01-22', 3500),
     (228, '2026-03-10', 3500),
     (228, '2026-03-06', 3500),
     (228, '2026-02-26', 3500),
-    (228, '2026-04-20', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (229, '09.723.145', '0001-93', '63.754.089/0001-00', '2025-09-22', 'Programa integrado de mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (228, '2026-04-20', 5700),
     (229, '2025-10-29', 5500),
-    (229, '2025-11-12', 9600);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (230, '09.723.145', '0001-93', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
-
-INSERT INTO contrib_co2 VALUES
+    (229, '2025-11-12', 9600),
     (230, '2023-04-03', 10200),
-    (230, '2023-03-02', 13000);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (231, '79.821.563', '0001-65', '68.532.497/0001-22', '2023-01-16', 'Corredores verdes de mobilidade');
-
-INSERT INTO contrib_co2 VALUES
+    (230, '2023-03-02', 13000),
     (231, '2023-02-27', 3500),
     (231, '2023-03-19', 3500),
-    (231, '2023-04-03', 3800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (232, '33.738.001', '0001-77', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
-
-INSERT INTO contrib_co2 VALUES
+    (231, '2023-04-03', 3800),
     (232, '2024-02-21', 3500),
     (232, '2024-02-05', 12800),
     (232, '2024-02-08', 6100),
     (232, '2024-03-12', 3500),
-    (232, '2024-03-22', 13900);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (233, '48.603.715', '0001-45', '14.679.502/0001-03', '2022-11-12', 'Transporte coletivo carbono neutro');
-
-INSERT INTO contrib_co2 VALUES
+    (232, '2024-03-22', 13900),
     (233, '2022-11-14', 3800),
-    (233, '2022-12-28', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (234, '65.172.380', '0001-53', '37.186.429/0001-25', '2026-03-25', 'Programa de resíduos com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
-    (234, '2026-04-30', 7200);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (235, '64.087.915', '0001-27', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (233, '2022-12-28', 3500),
+    (234, '2026-04-30', 7200),
     (235, '2024-01-13', 9200),
     (235, '2023-12-21', 3500),
     (235, '2024-01-11', 7600),
-    (235, '2023-12-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (236, '28.659.130', '0001-07', '52.061.387/0001-90', '2021-06-26', 'Coleta seletiva para redução de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (235, '2023-12-12', 3500),
     (236, '2021-08-15', 3500),
-    (236, '2021-08-12', 3700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (237, '09.723.145', '0001-93', '63.754.089/0001-00', '2023-12-04', 'Reciclagem solidária com compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
+    (236, '2021-08-12', 3700),
     (237, '2024-01-31', 14600),
     (237, '2024-01-01', 3500),
     (237, '2023-12-11', 11800),
-    (237, '2024-01-19', 5700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (238, '18.024.935', '0001-76', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
-    (238, '2021-12-12', 6300);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (239, '01.274.895', '0001-23', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
+    (237, '2024-01-19', 5700),
+    (238, '2021-12-12', 6300),
     (239, '2021-12-17', 3500),
     (239, '2022-01-23', 9600),
     (239, '2022-02-11', 7300),
-    (239, '2022-02-26', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (240, '09.723.145', '0001-93', '20.594.183/0001-28', '2022-03-18', 'Rede de energia solar comunitária');
-
-INSERT INTO contrib_co2 VALUES
-    (240, '2022-06-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (241, '09.723.145', '0001-93', '63.754.089/0001-00', '2021-11-01', 'Mobilidade sustentável com baixa emissão');
-
-INSERT INTO contrib_co2 VALUES
+    (239, '2022-02-26', 3500),
+    (240, '2022-06-04', 3500),
     (241, '2021-11-26', 11900),
     (241, '2021-12-23', 3500),
     (241, '2021-11-15', 3500),
-    (241, '2021-12-25', 3700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (242, '01.274.895', '0001-23', '74.029.536/0001-76', '2020-06-21', 'Campanha de reflorestamento local');
-
-INSERT INTO contrib_co2 VALUES
-    (242, '2020-07-26', 4500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (243, '65.172.380', '0001-61', '74.029.536/0001-76', '2024-01-23', 'Economia circular em comunidades locais');
-
-INSERT INTO contrib_co2 VALUES
-    (243, '2024-02-11', 7700);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (244, '79.821.563', '0001-65', '52.061.387/0001-90', '2021-12-16', 'Transporte limpo para comunidades');
-
-INSERT INTO contrib_co2 VALUES
-    (244, '2022-03-12', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (245, '27.401.593', '0001-66', '52.061.387/0001-90', '2023-11-20', 'Neutralização de emissões de eventos');
-
-INSERT INTO contrib_co2 VALUES
+    (241, '2021-12-25', 3700),
+    (242, '2020-07-26', 4500),
+    (243, '2024-02-11', 7700),
+    (244, '2022-03-12', 3500),
     (245, '2024-02-16', 3500),
-    (245, '2024-01-04', 3500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (246, '65.172.380', '0001-53', '52.061.387/0001-90', '2021-10-30', 'Valorização de resíduos para mitigação climática');
-
-INSERT INTO contrib_co2 VALUES
+    (245, '2024-01-04', 3500),
     (246, '2021-12-20', 3500),
     (246, '2022-01-14', 4100),
     (246, '2021-12-31', 5300),
     (246, '2022-01-16', 8200),
     (246, '2022-01-06', 3800),
-    (246, '2022-01-24', 12800);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (247, '75.893.062', '0001-33', '63.754.089/0001-00', '2025-04-04', 'Energia limpa para organizações sociais');
-
-INSERT INTO contrib_co2 VALUES
+    (246, '2022-01-24', 12800),
     (247, '2025-06-16', 3500),
     (247, '2025-04-24', 8200),
     (247, '2025-05-06', 9400),
     (247, '2025-06-28', 3500),
-    (247, '2025-04-04', 4100);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (248, '01.274.895', '0001-40', '68.532.497/0001-22', '2021-04-25', 'Plantio de árvores para compensação ambiental');
-
-INSERT INTO contrib_co2 VALUES
-    (248, '2021-04-29', 10500);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (249, '51.360.297', '0001-43', '37.186.429/0001-25', '2023-12-02', 'Transformação de resíduos em impacto positivo');
-
-INSERT INTO contrib_co2 VALUES
-    (249, '2024-02-01', 9400);
-
-INSERT INTO vinc_contrib_co2 VALUES
-    (250, '64.087.915', '0001-27', '52.061.387/0001-90', '2021-06-23', 'Restauração de nascentes e sequestro de carbono');
-
-INSERT INTO contrib_co2 VALUES
+    (247, '2025-04-04', 4100),
+    (248, '2021-04-29', 10500),
+    (249, '2024-02-01', 9400),
     (250, '2021-07-24', 3500),
     (250, '2021-07-07', 4100),
     (250, '2021-09-06', 5500);
@@ -4100,8 +3104,258 @@ INSERT INTO equipe_inst_cient_membro VALUES
     ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Thomas Barbosa'),
     ('54.777.163/0001-46', 'Andamento das metas da ONU', 'Léo Moura');
 
+
 INSERT INTO relatorio VALUES
-    (1, '2023-05-31', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
+    (1, '2023-05-31', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (2, '2021-08-28', '2024-05-22', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (3, '2022-07-06', '2026-02-20', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (4, '2024-01-13', '2026-05-19', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (5, '2025-04-11', '2025-09-11', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (6, '2026-02-05', '2026-06-01', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (7, '2025-08-12', '2025-11-22', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (8, '2021-11-17', NULL, '20.978.635', '0001-10', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (9, '2024-03-27', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (10, '2022-02-20', '2022-04-20', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (11, '2023-07-13', '2025-11-14', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (12, '2022-09-19', '2024-09-17', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (13, '2024-10-09', '2025-08-13', '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (14, '2025-03-08', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (15, '2022-10-29', '2025-06-04', '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (16, '2025-01-02', '2025-03-19', '12.905.674', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (17, '2026-01-04', NULL, '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (18, '2025-10-23', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (19, '2026-01-09', '2026-04-04', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (20, '2024-07-25', '2026-04-30', '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (21, '2024-06-11', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (22, '2021-11-30', NULL, '75.893.062', '0001-33', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (23, '2026-01-09', '2026-03-03', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (24, '2025-12-23', '2026-04-16', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (25, '2024-12-08', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (26, '2024-08-05', '2026-02-22', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (27, '2024-04-08', '2026-02-12', '01.274.895', '0001-23', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (28, '2023-11-06', NULL, '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (29, '2024-11-01', '2026-04-12', '39.605.871', '0001-83', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (30, '2023-09-20', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (31, '2023-11-18', NULL, '48.912.037', '0001-48', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (32, '2022-06-18', '2024-09-27', '28.659.130', '0001-07', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (33, '2023-05-14', '2026-04-15', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (34, '2021-10-06', NULL, '71.498.635', '0001-06', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (35, '2025-11-01', '2026-02-27', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (36, '2023-06-09', '2025-01-21', '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (37, '2021-06-26', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (38, '2022-10-07', '2024-05-13', '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (39, '2024-09-09', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (40, '2024-06-25', '2025-08-06', '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (41, '2022-09-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (42, '2024-02-03', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (43, '2026-02-01', NULL, '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (44, '2024-12-18', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (45, '2024-12-27', '2025-04-04', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (46, '2024-10-15', '2026-02-07', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (47, '2023-10-24', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (48, '2023-10-13', '2025-01-01', '75.893.062', '0001-33', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (49, '2024-03-01', '2025-12-27', '79.821.563', '0001-00', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (50, '2023-02-23', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (51, '2021-07-23', NULL, '79.821.563', '0001-99', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (52, '2025-01-16', '2026-01-29', '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (53, '2024-10-23', NULL, '79.821.563', '0001-99', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (54, '2024-02-08', '2025-10-16', '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (55, '2025-03-30', '2026-03-02', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (56, '2023-02-21', '2024-01-11', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (57, '2025-10-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (58, '2024-05-17', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (59, '2024-11-17', '2025-04-24', '75.893.062', '0001-33', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (60, '2023-10-28', '2025-06-22', '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (61, '2025-10-08', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (62, '2024-08-03', NULL, '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (63, '2021-08-12', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (64, '2024-07-26', '2025-12-29', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (65, '2021-11-21', NULL, '79.821.563', '0001-00', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (66, '2022-01-14', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (67, '2025-04-23', '2025-07-15', '28.659.130', '0001-07', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (68, '2025-10-15', '2026-03-02', '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (69, '2024-12-28', NULL, '79.821.563', '0001-00', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (70, '2025-05-19', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (71, '2022-11-05', '2023-02-19', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (72, '2025-10-04', '2026-02-08', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (73, '2022-01-15', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (74, '2021-06-27', '2022-12-11', '39.605.871', '0001-83', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (75, '2024-12-25', '2026-03-07', '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (76, '2025-10-12', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (77, '2026-03-27', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (78, '2022-02-06', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (79, '2021-10-22', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (80, '2025-04-11', '2025-06-19', '48.603.715', '0001-45', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (81, '2026-01-08', '2026-06-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (82, '2025-12-08', '2026-03-10', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (83, '2025-02-18', '2025-09-09', '51.360.297', '0001-43', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (84, '2023-06-22', '2026-04-07', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (85, '2022-04-27', '2023-10-05', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (86, '2024-03-13', '2026-01-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (87, '2022-10-06', '2023-04-05', '27.401.593', '0001-66', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (88, '2024-08-04', NULL, '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (89, '2022-05-27', '2023-12-22', '28.659.130', '0001-07', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (90, '2023-08-21', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (91, '2023-07-15', '2024-11-24', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (92, '2022-03-15', '2022-09-23', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (93, '2023-09-18', '2026-03-12', '51.360.297', '0001-43', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (94, '2024-07-26', '2024-10-05', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (95, '2022-03-12', '2025-11-21', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (96, '2021-10-31', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (97, '2023-09-07', '2026-02-25', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (98, '2023-05-04', NULL, '71.498.635', '0001-06', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (99, '2022-07-11', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (100, '2025-01-26', '2025-04-03', '53.921.807', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (101, '2025-03-27', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (102, '2024-06-20', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (103, '2024-01-12', '2025-04-08', '79.821.563', '0001-99', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (104, '2024-10-22', '2025-04-23', '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (105, '2022-09-17', NULL, '53.921.807', '0001-18', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (106, '2024-09-03', NULL, '88.635.333', '0001-98', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (107, '2022-07-14', NULL, '48.912.037', '0001-48', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (108, '2026-04-08', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (109, '2026-01-05', '2026-06-14', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (110, '2023-03-11', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (111, '2025-07-24', NULL, '48.912.037', '0001-38', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (112, '2025-10-31', NULL, '09.723.145', '0001-56', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (113, '2024-05-17', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (114, '2025-10-11', '2026-03-25', '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (115, '2025-03-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (116, '2024-03-15', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (117, '2023-04-23', '2026-04-18', '28.659.130', '0001-07', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (118, '2023-01-16', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (119, '2024-11-23', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (120, '2025-11-04', '2026-02-01', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (121, '2024-07-05', '2025-09-07', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (122, '2024-10-08', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (123, '2025-10-26', '2026-02-26', '56.738.014', '0001-69', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (124, '2022-08-26', '2026-04-01', '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (125, '2021-11-30', '2023-05-07', '88.635.333', '0001-98', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (126, '2025-01-20', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (127, '2026-02-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (128, '2023-03-18', '2023-11-15', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (129, '2023-01-08', '2025-05-13', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (130, '2025-09-04', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (131, '2023-04-25', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (132, '2022-12-02', NULL, '28.659.130', '0001-07', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (133, '2023-07-24', '2025-02-25', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (134, '2025-11-03', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (135, '2023-03-25', '2024-03-22', '48.603.715', '0001-78', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (136, '2023-11-12', '2024-06-07', '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (137, '2023-07-01', '2025-12-01', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (138, '2025-12-07', NULL, '88.635.333', '0001-98', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (139, '2025-09-09', NULL, '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (140, '2023-05-14', '2023-12-13', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (141, '2025-01-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (142, '2023-03-10', '2024-08-10', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (143, '2026-04-04', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (144, '2024-09-17', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (145, '2022-10-20', '2026-02-03', '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (146, '2025-12-24', '2026-02-28', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (147, '2025-04-27', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (148, '2025-08-17', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (149, '2024-07-12', '2024-11-05', '79.821.563', '0001-65', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (150, '2024-01-10', '2025-07-23', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (151, '2023-10-08', NULL, '18.024.935', '0001-76', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (152, '2022-03-03', '2022-04-22', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (153, '2024-06-02', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (154, '2022-03-14', '2022-07-21', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (155, '2021-10-10', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (156, '2021-08-05', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (157, '2024-02-19', NULL, '88.635.333', '0001-98', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (158, '2023-11-13', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (159, '2023-06-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (160, '2023-12-12', '2025-06-06', '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (161, '2024-03-28', NULL, '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (162, '2025-08-23', '2026-05-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (163, '2025-01-04', '2026-05-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (164, '2022-11-18', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (165, '2025-03-30', NULL, '56.738.014', '0001-69', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (166, '2025-06-18', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (167, '2023-01-09', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (168, '2023-02-27', '2024-08-23', '71.498.635', '0001-06', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (169, '2024-01-15', NULL, '39.605.871', '0001-83', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (170, '2022-11-18', NULL, '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (171, '2025-10-07', '2026-06-12', '79.821.563', '0001-99', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (172, '2025-03-03', '2025-10-29', '65.172.380', '0001-53', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (173, '2025-06-20', '2026-04-11', '20.978.635', '0001-10', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (174, '2021-10-13', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (175, '2025-10-22', '2026-02-21', '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (176, '2023-06-04', '2025-03-01', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (177, '2023-09-18', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (178, '2021-09-15', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (179, '2024-04-04', '2024-10-08', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (180, '2022-07-18', '2025-07-04', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (181, '2022-08-03', '2024-11-26', '13.690.872', '0001-54', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (182, '2023-12-09', '2025-05-16', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (183, '2023-01-02', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (184, '2023-06-07', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (185, '2025-07-24', '2025-09-25', '75.893.062', '0001-33', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL),
+    (186, '2025-11-27', '2026-06-08', '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (187, '2026-03-25', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL),
+    (188, '2021-12-21', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (189, '2021-07-31', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (190, '2023-11-19', '2026-05-27', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (191, '2021-10-11', '2025-03-02', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (192, '2022-09-03', '2025-04-16', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (193, '2026-03-12', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (194, '2024-05-08', '2026-05-14', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (195, '2025-01-14', '2025-11-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (196, '2024-06-08', '2024-09-15', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (197, '2021-08-04', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (198, '2025-02-07', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (199, '2022-01-16', '2023-10-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (200, '2021-09-03', '2025-12-19', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (201, '2021-11-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (202, '2025-08-23', '2026-06-08', '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (203, '2024-07-13', '2025-10-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (204, '2023-03-29', '2025-11-24', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (205, '2023-10-12', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (206, '2024-07-16', NULL, '53.921.807', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (207, '2025-06-05', NULL, '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (208, '2024-06-22', '2024-08-22', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL),
+    (209, '2022-11-19', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (210, '2023-07-15', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (211, '2025-08-05', '2025-12-28', '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (212, '2022-10-27', '2023-07-29', '71.498.635', '0001-06', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (213, '2025-08-29', '2026-02-26', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (214, '2024-03-02', '2024-07-08', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (215, '2022-05-06', '2023-08-30', '01.274.895', '0001-23', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (216, '2024-03-20', '2024-12-15', '09.723.145', '0001-93', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (217, '2021-08-04', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (218, '2022-08-30', '2023-11-28', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (219, '2022-07-12', '2023-06-14', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (220, '2024-12-04', '2026-05-16', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (221, '2022-04-22', '2025-08-28', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (222, '2025-06-27', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (223, '2025-08-16', NULL, '53.921.807', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (224, '2023-03-03', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (225, '2022-04-29', '2025-01-29', '79.821.563', '0001-99', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (226, '2022-12-18', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (227, '2023-07-25', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (228, '2022-10-16', '2024-04-10', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (229, '2021-11-17', NULL, '09.723.145', '0001-93', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (230, '2021-11-03', '2025-09-25', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL),
+    (231, '2025-11-09', '2025-12-24', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (232, '2023-12-26', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (233, '2021-10-02', '2025-09-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL),
+    (234, '2023-11-08', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (235, '2023-09-24', '2023-12-30', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (236, '2023-03-28', '2024-06-13', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (237, '2021-08-02', '2026-04-06', '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (238, '2021-07-02', '2023-02-18', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL),
+    (239, '2022-10-28', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (240, '2023-02-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (241, '2025-06-21', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (242, '2022-11-26', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL),
+    (243, '2024-05-17', '2025-06-03', '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL),
+    (244, '2022-01-23', NULL, '01.274.895', '0001-23', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (245, '2021-08-04', '2022-03-16', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL),
+    (246, '2023-06-10', NULL, '75.893.062', '0001-31', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL),
+    (247, '2024-08-05', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL),
+    (248, '2025-05-27', '2025-12-22', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL),
+    (249, '2022-12-03', NULL, '01.274.895', '0001-23', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL),
+    (250, '2022-09-07', '2025-08-27', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
 
 INSERT INTO relatorio_prod VALUES
     (1, '3908.10.14', 0.0385, 11477),
@@ -4118,22 +3372,7 @@ INSERT INTO relatorio_prod VALUES
     (1, '4811.49.90', 0.1302, 4510),
     (1, '3004.20.29', 0.1037, 3414),
     (1, '7302.10.90', 0.2017, 13561),
-    (1, '7208.53.00', 0.0123, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (1, '1.0105.21.00', '2023-06-03T13:32:01', 0.4037),
-    (1, '1.1404.49.00', '2023-06-29T15:16:53', 0.2111),
-    (1, '1.01', '2023-06-24T04:27:59', 0.1666),
-    (1, '1.1103.43.00', '2023-06-03T01:10:27', 0.5771),
-    (1, '1.1406.20.00', '2023-06-27T14:30:23', 0.5417),
-    (1, '1.1403.22.21', '2023-06-06T15:15:41', 0.5213),
-    (1, '1.0502.23.10', '2023-06-10T23:00:20', 0.4608),
-    (1, '1.1403.22.90', '2023-06-01T21:14:20', 0.3523);
-
-INSERT INTO relatorio VALUES
-    (2, '2021-08-28', '2024-05-22', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (1, '7208.53.00', 0.0123, 400),
     (2, '3806.90.12', 0.0286, 400),
     (2, '8471.60.59', 0.0075, 11895),
     (2, '4911.99.00', 0.0215, 6325),
@@ -4145,29 +3384,7 @@ INSERT INTO relatorio_prod VALUES
     (2, '4411.13.10', 0.0023, 642),
     (2, '2934.99.24', 0.0151, 667),
     (2, '2921.51.33', 0.0421, 9657),
-    (2, '8411.91.00', 0.0099, 583);
-
-INSERT INTO relatorio_serv VALUES
-    (2, '1.0903.21.00', '2021-09-22T14:11:37', 0.0107),
-    (2, '1.1103.3', '2021-09-27T03:18:13', 0.0739),
-    (2, '1.1408.15.00', '2021-09-10T17:02:48', 0.0176),
-    (2, '1.0901.5', '2021-09-13T06:22:20', 0.0065),
-    (2, '1.2502.10.00', '2021-09-10T21:08:57', 0.0254),
-    (2, '1.0401.11', '2021-09-11T17:09:25', 0.0535),
-    (2, '1.0504.1', '2021-09-13T01:44:09', 0.0064),
-    (2, '1.0601', '2021-09-27T01:11:12', 0.0142),
-    (2, '1.0501.14.5', '2021-09-17T19:59:47', 0.0331),
-    (2, '1.0903.22.00', '2021-09-10T20:10:21', 0.0088),
-    (2, '1.07', '2021-09-05T03:32:28', 0.0182),
-    (2, '1.1805.14.00', '2021-09-11T16:28:51', 0.0088),
-    (2, '1.2001.31.10', '2021-09-29T05:13:20', 0.0198),
-    (2, '1.2403.22.00', '2021-09-27T05:32:24', 0.026),
-    (2, '1.0904.22.00', '2021-09-11T09:08:28', 0.0413);
-
-INSERT INTO relatorio VALUES
-    (3, '2022-07-06', '2026-02-20', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (2, '8411.91.00', 0.0099, 583),
     (3, '6903.90.91', 0.0735, 2775),
     (3, '8504.23.00', 0.1275, 5065),
     (3, '8523.52.90', 0.0397, 821),
@@ -4181,17 +3398,7 @@ INSERT INTO relatorio_prod VALUES
     (3, '2939.61.00', 0.1117, 11020),
     (3, '2910.20.00', 0.0925, 2736),
     (3, '6812.99.90', 0.0699, 3520),
-    (3, '2921.19.49', 0.0205, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (3, '1.0901.51.22', '2022-08-07T12:02:26', 0.0245),
-    (3, '1.0502.34.51', '2022-08-10T08:02:54', 0.3454),
-    (3, '1.1101.15.00', '2022-08-27T14:50:28', 0.4017);
-
-INSERT INTO relatorio VALUES
-    (4, '2024-01-13', '2026-05-19', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (3, '2921.19.49', 0.0205, 400),
     (4, '3803.00.90', 0.0391, 2684),
     (4, '9031.49.20', 0.0847, 12836),
     (4, '3004.39.3', 0.1011, 400),
@@ -4203,45 +3410,12 @@ INSERT INTO relatorio_prod VALUES
     (4, '2909.60.1', 0.0625, 8780),
     (4, '2909.49.24', 0.0551, 8296),
     (4, '4810.19.81', 0.0199, 3969),
-    (4, '8473.30.90', 0.0697, 3896);
-
-INSERT INTO relatorio_serv VALUES
-    (4, '1.0605.90.00', '2024-02-12T08:18:47', 0.2002),
-    (4, '1.10', '2024-02-24T23:40:53', 0.074),
-    (4, '1.2403.32.00', '2024-02-23T05:24:24', 0.1374),
-    (4, '1.0602.90.00', '2024-02-22T07:38:32', 0.044),
-    (4, '1.0504.45.10', '2024-02-02T01:24:02', 0.0654),
-    (4, '1.1806.53.00', '2024-02-26T00:23:50', 0.2168),
-    (4, '1.2404.1', '2024-02-07T12:44:04', 0.1015),
-    (4, '1.1506.2', '2024-02-02T12:26:50', 0.1707);
-
-INSERT INTO relatorio VALUES
-    (5, '2025-04-11', '2025-09-11', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (4, '8473.30.90', 0.0697, 3896),
     (5, '5603.12.40', 0.0068, 4207),
     (5, '8537.10.1', 1.0832, 9429),
     (5, '5204.11.1', 0.0652, 400),
     (5, '9701.91.00', 1.2202, 4403),
-    (5, '8536.90.40', 0.1471, 9853);
-
-INSERT INTO relatorio_serv VALUES
-    (5, '1.0501.23.10', '2025-05-14T02:04:22', 0.1855),
-    (5, '1.1502.90.00', '2025-05-24T08:58:32', 0.1799),
-    (5, '1.1102', '2025-05-30T18:16:13', 0.2856),
-    (5, '1.2101.22.00', '2025-05-29T11:49:18', 0.0393),
-    (5, '1.0502.34.10', '2025-05-01T10:46:00', 0.2505),
-    (5, '1.2404.31.00', '2025-05-20T00:56:19', 0.0938),
-    (5, '1.0502.12', '2025-05-18T10:41:07', 0.1792),
-    (5, '1.0403.11.90', '2025-05-25T00:10:40', 0.0615),
-    (5, '1.0402', '2025-05-24T03:41:14', 0.3506),
-    (5, '1.0907.00.00', '2025-05-19T05:46:01', 0.0408),
-    (5, '1.0502.14.5', '2025-05-01T08:09:16', 0.2837);
-
-INSERT INTO relatorio VALUES
-    (6, '2026-02-05', '2026-06-01', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (5, '8536.90.40', 0.1471, 9853),
     (6, '0302.44.00', 0.1235, 8115),
     (6, '3920.99.50', 0.0498, 12317),
     (6, '3827.40.00', 0.0811, 400),
@@ -4255,26 +3429,7 @@ INSERT INTO relatorio_prod VALUES
     (6, '2933.59.12', 0.0203, 400),
     (6, '8448.32.40', 0.1508, 2200),
     (6, '5515.22.00', 0.0306, 400),
-    (6, '2530.90.10', 0.0284, 12907);
-
-INSERT INTO relatorio_serv VALUES
-    (6, '1.1410.10.00', '2026-03-17T06:50:16', 0.0223),
-    (6, '1.2301', '2026-03-08T21:05:26', 0.1903),
-    (6, '1.0903.33.00', '2026-03-22T18:43:03', 0.1094),
-    (6, '1.1406.12.00', '2026-03-05T18:40:13', 0.116),
-    (6, '1.0503.23.00', '2026-03-14T18:48:08', 0.331),
-    (6, '1.0403.12.00', '2026-03-15T22:17:27', 0.0961),
-    (6, '1.1805.3', '2026-03-14T21:27:52', 0.7935),
-    (6, '1.1806.82.00', '2026-03-23T03:45:00', 0.1413),
-    (6, '1.1901.50.00', '2026-03-03T21:55:29', 0.1031),
-    (6, '1.0403.21.10', '2026-03-10T11:43:23', 0.0714),
-    (6, '1.1105.30.00', '2026-03-02T17:54:43', 0.1446),
-    (6, '1.0901.52.40', '2026-03-04T07:38:09', 0.0707);
-
-INSERT INTO relatorio VALUES
-    (7, '2025-08-12', '2025-11-22', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (6, '2530.90.10', 0.0284, 12907),
     (7, '8428.20.90', 0.2457, 400),
     (7, '6902.20.92', 0.7987, 6159),
     (7, '2918.29.50', 0.0219, 8100),
@@ -4284,12 +3439,7 @@ INSERT INTO relatorio_prod VALUES
     (7, '5402.61.90', 0.0826, 1488),
     (7, '8538.10.00', 0.3715, 1267),
     (7, '4011.80.20', 0.0377, 400),
-    (7, '2933.91.81', 0.2683, 6982);
-
-INSERT INTO relatorio VALUES
-    (8, '2021-11-17', NULL, '20.978.635', '0001-10', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (7, '2933.91.81', 0.2683, 6982),
     (8, '2930.90.72', 0.9487, 6259),
     (8, '9105.91.00', 0.007, 400),
     (8, '1004.90.00', 0.006, 6331),
@@ -4312,12 +3462,7 @@ INSERT INTO relatorio_prod VALUES
     (8, '2930.90.84', 0.0079, 740),
     (8, '7410.11.19', 0.0248, 7578),
     (8, '8478.90.00', 0.0236, 1429),
-    (8, '8465.92.19', 0.0249, 1977);
-
-INSERT INTO relatorio VALUES
-    (9, '2024-03-27', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (8, '8465.92.19', 0.0249, 1977),
     (9, '2922.49.61', 1.8173, 8519),
     (9, '2710.91.20', 0.0617, 14867),
     (9, '5407.61.00', 0.1931, 6806),
@@ -4325,28 +3470,7 @@ INSERT INTO relatorio_prod VALUES
     (9, '5510.12.90', 0.0196, 400),
     (9, '3808.93.27', 0.2436, 400),
     (9, '0210.99.19', 0.1678, 400),
-    (9, '4418.21.00', 0.0272, 12031);
-
-INSERT INTO relatorio_serv VALUES
-    (9, '1.2404.31.00', '2024-04-26T14:27:42', 2.0763),
-    (9, '1.1108.30.00', '2024-04-15T06:43:07', 0.0212),
-    (9, '1.1101.14.00', '2024-04-06T23:20:40', 0.0041),
-    (9, '1.1401.1', '2024-04-11T00:58:44', 0.0659),
-    (9, '1.1105.59.00', '2024-04-09T11:07:05', 0.151),
-    (9, '1.1703.9', '2024-04-04T11:04:56', 0.0648),
-    (9, '1.2505.20.00', '2024-04-19T11:26:03', 0.0203),
-    (9, '1.2406.90.00', '2024-04-11T05:12:51', 0.0732),
-    (9, '1.1107.32.00', '2024-04-21T14:01:28', 0.0869),
-    (9, '1.2501.39.00', '2024-04-23T15:55:48', 0.0137),
-    (9, '1.1801.21.00', '2024-04-06T13:06:02', 0.1183),
-    (9, '1.1102.40.00', '2024-04-18T09:06:40', 0.0032),
-    (9, '1.2501.1', '2024-04-08T03:57:14', 0.0968),
-    (9, '1.0904.32.00', '2024-04-22T08:02:52', 0.023);
-
-INSERT INTO relatorio VALUES
-    (10, '2022-02-20', '2022-04-20', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (9, '4418.21.00', 0.0272, 12031),
     (10, '8454.30.90', 1.8691, 400),
     (10, '8414.80.32', 0.0252, 400),
     (10, '8805.21.00', 0.0593, 400),
@@ -4362,12 +3486,7 @@ INSERT INTO relatorio_prod VALUES
     (10, '8410.13.00', 0.1249, 8222),
     (10, '2008.97.10', 0.011, 3532),
     (10, '5404.12.00', 0.0412, 3388),
-    (10, '4104.11.12', 0.0056, 5442);
-
-INSERT INTO relatorio VALUES
-    (11, '2023-07-13', '2025-11-14', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (10, '4104.11.12', 0.0056, 5442),
     (11, '8211.92.10', 8.3991, 4231),
     (11, '3910.00.12', 0.011, 2485),
     (11, '8481.20.1', 0.3209, 6697),
@@ -4382,22 +3501,7 @@ INSERT INTO relatorio_prod VALUES
     (11, '5101.30.00', 0.2559, 12984),
     (11, '1003.90.10', 0.4754, 9964),
     (11, '1515.90.2', 0.1593, 6879),
-    (11, '7202.11.00', 0.1653, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (11, '1.0901', '2023-08-02T19:14:12', 6.3561),
-    (11, '1.1201', '2023-08-06T22:13:13', 0.0172),
-    (11, '1.0901.51.29', '2023-08-27T11:37:34', 0.0615),
-    (11, '1.0502.14.40', '2023-08-06T00:39:59', 0.2097),
-    (11, '1.0901.40.00', '2023-08-07T16:56:11', 0.0289),
-    (11, '1.0903.11.00', '2023-08-13T10:34:30', 0.415),
-    (11, '1.2001.40.00', '2023-08-24T19:50:57', 0.6965),
-    (11, '1.1001.12', '2023-08-28T06:45:21', 0.0862);
-
-INSERT INTO relatorio VALUES
-    (12, '2022-09-19', '2024-09-17', '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
+    (11, '7202.11.00', 0.1653, 400),
     (12, '4802.58.99', 0.1002, 5651),
     (12, '8422.30.2', 0.0654, 2046),
     (12, '3906.90.51', 0.0123, 3837),
@@ -4407,24 +3511,3057 @@ INSERT INTO relatorio_prod VALUES
     (12, '0707.00.00', 0.0405, 6425),
     (12, '8505.19.90', 0.0264, 3921),
     (12, '6305.10.00', 0.0183, 4624),
-    (12, '5402.31.90', 0.1089, 6921);
+    (12, '5402.31.90', 0.1089, 6921),
+    (13, '2008.19.00', 0.0867, 3609),
+    (14, '0705.21.00', 0.2494, 9994),
+    (14, '3004.20.63', 0.1928, 6771),
+    (14, '8472.90.9', 0.0667, 6434),
+    (15, '0308.22.00', 0.0167, 400),
+    (15, '0801.32.00', 0.0023, 1169),
+    (15, '8431.42.00', 0.0, 4880),
+    (16, '8467.22.00', 0.9803, 400),
+    (16, '8212.10.10', 0.4984, 400),
+    (16, '8473.50.50', 0.6608, 400),
+    (16, '6108.21.00', 1.2317, 13207),
+    (16, '5704.20.00', 0.467, 12036),
+    (16, '0305.32.10', 0.257, 5630),
+    (16, '2839.90.20', 1.1437, 5699),
+    (16, '7114.11.00', 0.5209, 6946),
+    (16, '8430.69.1', 0.2758, 400),
+    (16, '3004.90.94', 2.4478, 400),
+    (17, '8445.19.23', 0.2667, 10521),
+    (17, '9024.80.29', 0.1542, 400),
+    (17, '5309.21.00', 0.1022, 2740),
+    (17, '2921.51.3', 0.0546, 400),
+    (17, '0703.10.2', 0.2591, 5317),
+    (17, '4418.30.00', 0.0195, 9076),
+    (17, '8433.20.10', 0.0618, 3699),
+    (17, '6909.12.20', 0.1197, 8581),
+    (17, '0812.90.00', 0.3652, 10863),
+    (17, '8539.90.20', 0.1811, 11886),
+    (17, '8474.90.00', 0.0708, 3666),
+    (17, '8545.90.20', 0.0119, 9820),
+    (17, '3004.39.82', 0.0355, 14464),
+    (17, '8521.10.8', 0.1703, 7614),
+    (17, '8207.19.90', 0.15, 4753),
+    (17, '8431.49.21', 0.0326, 1720),
+    (18, '0802.11.00', 5.7474, 2567),
+    (18, '9018.31.19', 0.0067, 5515),
+    (18, '7804.20.00', 0.0425, 400),
+    (18, '4817.10.00', 0.0015, 1416),
+    (18, '2841.69.30', 0.2086, 7276),
+    (18, '2924.29.64', 0.2118, 6949),
+    (18, '8502.39.00', 0.0019, 4269),
+    (18, '8430.41.20', 0.1722, 400),
+    (18, '5603.11.40', 0.0179, 6929),
+    (18, '2909.19.90', 0.5482, 400),
+    (18, '8412.10.00', 0.0839, 400),
+    (19, '2926.90.24', 0.2713, 7761),
+    (19, '6902.10.19', 0.6846, 400),
+    (20, '3006.92.00', 0.5412, 3848),
+    (20, '4011.20.90', 1.0091, 7721),
+    (20, '2937.29.3', 2.6231, 7039),
+    (20, '8703.60.00', 0.4725, 8026),
+    (20, '0302.82.00', 1.1483, 2617),
+    (20, '2933.91.4', 1.0171, 9683),
+    (20, '2602.00.90', 1.9085, 13181),
+    (20, '2905.19.21', 0.3755, 4395),
+    (20, '2904.10.19', 0.0163, 400),
+    (20, '0511.99.99', 1.4158, 400),
+    (21, '3824.84.00', 2.0128, 4774),
+    (21, '7320.20.90', 0.6934, 10999),
+    (21, '9021.39.40', 1.9736, 400),
+    (21, '8523.49.20', 1.4465, 11363),
+    (21, '8457.20.90', 0.3181, 1107),
+    (21, '2915.90.41', 2.8877, 400),
+    (21, '9307.00.00', 2.2748, 400),
+    (21, '1008.40.10', 0.7291, 3244),
+    (21, '2930.40.90', 0.2217, 2981),
+    (21, '8542.39.31', 0.4343, 1296),
+    (21, '3004.39.15', 1.7934, 7400),
+    (21, '2930.90.11', 0.9108, 1026),
+    (22, '2915.39.51', 0.1497, 400),
+    (22, '9012.90.10', 0.0754, 3238),
+    (22, '8425.31.10', 0.1489, 7292),
+    (23, '8806.29.00', 0.5219, 1420),
+    (23, '9025.19.10', 0.2209, 6529),
+    (23, '2907.19.90', 0.3571, 2348),
+    (24, '2931.41.00', 0.3165, 560),
+    (24, '1211.50.00', 0.3017, 1256),
+    (24, '2924.29.43', 0.2422, 12433),
+    (24, '8443.19.90', 0.0383, 3360),
+    (24, '4407.99.90', 0.1008, 715),
+    (24, '2710.12.30', 0.0684, 2899),
+    (24, '7215.90.10', 0.2488, 3705),
+    (24, '2909.49.29', 0.0162, 14984),
+    (24, '8716.40.00', 0.8641, 4909),
+    (24, '3808.93.33', 0.0654, 400),
+    (24, '8511.50.10', 0.1125, 400),
+    (25, '2937.29.39', 0.689, 5817),
+    (25, '4707.90.00', 0.0034, 7965),
+    (25, '2925.29.23', 0.0059, 1965),
+    (25, '1701.12.00', 0.0027, 6304),
+    (25, '8433.40.00', 0.009, 5029),
+    (25, '2808.00.20', 0.0012, 400),
+    (25, '2301.20.10', 0.0505, 400),
+    (25, '2843.90.11', 0.0142, 3946),
+    (25, '3303.00.10', 0.0052, 3212),
+    (25, '8901.20.00', 0.099, 3357),
+    (25, '8527.12.00', 0.0019, 400),
+    (25, '8517.62.29', 0.0001, 5158),
+    (25, '2931.49.16', 0.045, 9459),
+    (25, '7004.20.00', 0.0522, 11227),
+    (26, '5205.43.00', 1.2962, 2365),
+    (26, '3808.93.27', 0.0458, 400),
+    (26, '9021.31.90', 0.0147, 400),
+    (26, '3906.90.12', 0.0049, 8256),
+    (26, '2903.41.00', 0.0072, 3116),
+    (26, '8422.30.21', 0.1011, 400),
+    (26, '4802.20.90', 0.1443, 400),
+    (26, '1513.19.00', 0.0122, 4942),
+    (26, '8448.32.19', 0.0184, 3573),
+    (26, '2918.99.94', 0.0116, 5173),
+    (26, '9018.39.21', 0.0067, 1214),
+    (26, '4820.30.00', 0.084, 4044),
+    (26, '8445.19.23', 0.0278, 400),
+    (27, '7403.11.00', 0.2208, 5380),
+    (27, '2915.39.6', 0.341, 6327),
+    (27, '8205.90.00', 0.1039, 400),
+    (27, '6301.20.00', 0.2016, 9458),
+    (27, '3808.92.91', 0.0333, 4275),
+    (27, '5210.11.00', 0.5149, 931),
+    (27, '1504.10.11', 0.1888, 400),
+    (27, '2921.49.90', 0.0783, 3400),
+    (27, '8479.89.22', 0.2224, 16365),
+    (27, '8906.10.00', 0.1096, 8618),
+    (27, '7209.16.00', 0.1805, 400),
+    (27, '9403.91.00', 0.1413, 5421),
+    (27, '8409.99.51', 0.6086, 400),
+    (27, '7213.10.00', 0.9184, 3467),
+    (27, '7601.20.00', 0.2075, 4077),
+    (27, '6208.19.00', 0.308, 9244),
+    (27, '6802.93.10', 0.2883, 9264),
+    (28, '3701.30.29', 1.6157, 10292),
+    (28, '8443.39.30', 4.4266, 464),
+    (28, '1517.10.00', 4.1105, 11071),
+    (28, '6901.00.00', 2.7688, 400),
+    (28, '8308.10.00', 2.0092, 8740),
+    (28, '2940.00.29', 3.7825, 1560),
+    (29, '2930.90.72', 0.0352, 400),
+    (29, '6108.91.00', 0.0878, 13097),
+    (29, '4802.40.90', 0.0491, 2475),
+    (29, '0810.90.1', 0.0484, 3039),
+    (29, '6804.10.00', 0.0171, 2488),
+    (29, '0804.30.00', 0.0133, 400),
+    (29, '2843.29.90', 0.1027, 400),
+    (29, '0306.12.00', 0.0578, 3128),
+    (29, '9027.90.99', 0.0928, 3469),
+    (29, '8418.69.31', 0.0447, 402),
+    (29, '3004.90.39', 0.1255, 4176),
+    (29, '9021.29.00', 0.0563, 5219),
+    (29, '7217.30.90', 0.1193, 5749),
+    (29, '3920.61.00', 0.0352, 2657),
+    (29, '6115.99.00', 0.142, 6002),
+    (29, '2931.46.00', 0.2786, 4404),
+    (29, '2932.19.20', 0.1542, 425),
+    (30, '2934.99.29', 0.0697, 400),
+    (30, '2822.00.90', 0.0014, 400),
+    (30, '7210.69.1', 0.002, 6798),
+    (31, '2917.39.1', 1.7077, 5422),
+    (31, '8481.80.21', 0.0328, 6607),
+    (31, '1207.29.00', 0.022, 8802),
+    (31, '9307.00.00', 0.005, 400),
+    (31, '2930.90.84', 0.0307, 400),
+    (31, '2925.19.10', 0.2694, 400),
+    (31, '3701.10.21', 0.0562, 2249),
+    (31, '8511.10.00', 0.0659, 2146),
+    (31, '3301.29.11', 0.0739, 400),
+    (31, '7409.19.00', 0.0013, 2526),
+    (31, '9111.20.90', 0.1709, 400),
+    (31, '5509.52.00', 0.0307, 12515),
+    (31, '9403.20.90', 0.1085, 8041),
+    (31, '2922.50.32', 0.0102, 4317),
+    (31, '1213.00.00', 0.0056, 400),
+    (32, '8443.99.21', 0.1798, 400),
+    (32, '8409.91.11', 0.3407, 400),
+    (33, '2933.79.10', 0.5215, 400),
+    (34, '8413.60.19', 0.5472, 9612),
+    (34, '6804.22.11', 0.2852, 3458),
+    (34, '9030.20.29', 0.1132, 7315),
+    (34, '9006.59.40', 0.2814, 1782),
+    (34, '8704.23.40', 0.1756, 6020),
+    (34, '3001.90.3', 0.051, 4783),
+    (34, '8422.30.23', 0.5519, 693),
+    (34, '0406.90.90', 0.1913, 8620),
+    (34, '5007.10.90', 0.1203, 10472),
+    (34, '2941.90.9', 0.6744, 2717),
+    (34, '9101.99.00', 0.0009, 7933),
+    (34, '3201.90.11', 1.3378, 11487),
+    (35, '3209.90.1', 0.0561, 5597),
+    (35, '2710.19.92', 0.0129, 1300),
+    (35, '4811.90.19', 4.409, 400),
+    (35, '2824.90.10', 1.1292, 400),
+    (35, '3102.60.00', 0.9118, 5664),
+    (35, '5904.90.00', 0.9448, 4327),
+    (35, '1515.90.2', 1.8114, 10378),
+    (35, '6206.20.00', 0.9083, 6371),
+    (35, '3401.20.90', 0.9462, 6196),
+    (35, '7612.90.90', 0.5954, 7621),
+    (35, '0813.20.20', 2.3913, 5380),
+    (35, '0502.90.10', 0.8433, 400),
+    (35, '8525.89.22', 1.8651, 575),
+    (35, '7318.15.00', 0.2791, 400),
+    (35, '3907.10.9', 0.8528, 20419),
+    (35, '7208.27.90', 1.5113, 5986),
+    (35, '6403.20.00', 0.4735, 7370),
+    (36, '9305.20.00', 0.5385, 3554),
+    (36, '2710.19.94', 0.871, 7761),
+    (36, '2840.30.00', 0.5153, 9197),
+    (36, '8421.99.10', 1.8547, 9412),
+    (36, '0507.90.00', 1.9408, 6054),
+    (36, '8443.91.10', 0.1396, 6980),
+    (36, '1102.20.00', 0.7326, 400),
+    (36, '3824.99.21', 1.0226, 400),
+    (36, '2712.20.00', 0.995, 400),
+    (36, '2921.51.3', 2.5285, 3688),
+    (36, '8407.29.10', 0.5502, 12458),
+    (36, '8548.00.10', 1.1255, 400),
+    (36, '7020.00.90', 0.1298, 4537),
+    (36, '9018.31.90', 0.8917, 9791),
+    (36, '2914.29.90', 1.379, 400),
+    (36, '2833.29.60', 0.7336, 8651),
+    (36, '2921.43.1', 0.6802, 9981),
+    (36, '4003.00.00', 2.1534, 9980),
+    (36, '5208.21.00', 0.4433, 400),
+    (36, '2933.72.20', 0.5329, 6921),
+    (36, '4822.10.00', 1.3591, 400),
+    (37, '2916.32.10', 1.5255, 5724),
+    (37, '2005.59.00', 0.1592, 2639),
+    (37, '2924.19.19', 0.028, 2054),
+    (37, '6903.20.10', 0.0005, 6824),
+    (37, '8428.90.30', 0.0681, 400),
+    (37, '3701.10.29', 0.0649, 11477),
+    (37, '8535.30.23', 0.0023, 9300),
+    (38, '0511.99.9', 1.0384, 8630),
+    (38, '8409.99.30', 0.0014, 400),
+    (38, '2916.19.23', 0.2039, 400),
+    (38, '9025.19.10', 0.0566, 7407),
+    (38, '8541.10.11', 0.0107, 10755),
+    (39, '9018.49.19', 0.2762, 5973),
+    (39, '7305.39.00', 0.3009, 10129),
+    (39, '9010.60.00', 0.3322, 5591),
+    (39, '2931.41.00', 0.7985, 897),
+    (39, '3906.90.62', 0.0815, 400),
+    (39, '3824.99.82', 0.3039, 400),
+    (39, '6101.90.90', 0.7549, 400),
+    (40, '9025.11.91', 0.4549, 1065),
+    (40, '8418.29.00', 1.1889, 3922),
+    (40, '3004.39.99', 2.5835, 5161),
+    (40, '8467.21.00', 1.3575, 400),
+    (40, '4810.31.10', 1.4665, 1308),
+    (41, '0303.55.00', 0.5084, 8784),
+    (41, '3003.90.79', 0.515, 10600),
+    (42, '8542.32.21', 0.7491, 5138),
+    (42, '3806.90.11', 0.0111, 994),
+    (42, '3901.90.90', 0.0227, 5449),
+    (42, '3906.90.21', 0.0241, 3095),
+    (42, '2918.22.20', 0.0252, 400),
+    (42, '4810.19.10', 0.0164, 8135),
+    (42, '8517.62.94', 0.0471, 1734),
+    (42, '2932.99.99', 0.0127, 1217),
+    (42, '3503.00.1', 0.0056, 1359),
+    (43, '3909.20.19', 3.9313, 9222),
+    (43, '3304.10.00', 0.8718, 3744),
+    (43, '3907.99.9', 1.2465, 9779),
+    (43, '3822.90.00', 0.7436, 10470),
+    (43, '5206.14.00', 2.6761, 512),
+    (43, '8541.10.99', 1.2512, 6667),
+    (43, '5308.20.00', 4.5696, 4238),
+    (43, '7507.12.00', 0.9767, 3615),
+    (43, '3206.11.30', 1.0633, 2970),
+    (43, '0306.19.10', 0.2682, 2543),
+    (43, '2306.41.00', 0.7681, 1213),
+    (43, '0306.34.00', 0.2485, 400),
+    (43, '1207.40.10', 2.1848, 400),
+    (43, '3824.99.62', 1.0005, 400),
+    (43, '8542.33.90', 0.6493, 7753),
+    (43, '9303.10.00', 3.3495, 7371),
+    (43, '3909.20.1', 0.8979, 11172),
+    (43, '5502.10.00', 1.0981, 684),
+    (43, '6805.30.10', 0.5169, 7041),
+    (44, '4010.12.00', 1.69, 7723),
+    (44, '7409.40.19', 0.0353, 6963),
+    (44, '2940.00.94', 0.0018, 4658),
+    (44, '8479.81.90', 0.1518, 3545),
+    (44, '6402.91.10', 0.0002, 7315),
+    (44, '8460.19.00', 0.1193, 11456),
+    (44, '0303.89.65', 0.0592, 400),
+    (44, '5305.00.10', 0.0282, 2426),
+    (44, '0709.70.00', 0.0259, 400),
+    (44, '2931.49.40', 0.0007, 2280),
+    (44, '5209.41.00', 0.0166, 12822),
+    (44, '8215.99.90', 0.0173, 400),
+    (44, '2937.22.2', 0.0112, 400),
+    (44, '8479.50.00', 0.0015, 8534),
+    (44, '5403.39.00', 0.0171, 7472),
+    (44, '9209.92.00', 0.0671, 3200),
+    (44, '6109.10.00', 0.0312, 7289),
+    (44, '8533.40.91', 0.0628, 11780),
+    (44, '3808.93.33', 0.0782, 5372),
+    (44, '7015.10.91', 0.0009, 4283),
+    (44, '5408.23.00', 0.0059, 2116),
+    (44, '6004.10.12', 0.0673, 13101),
+    (44, '0203.29.00', 0.0278, 400),
+    (44, '2934.91.11', 0.1256, 564),
+    (44, '5301.10.00', 0.0916, 2898),
+    (44, '6815.99.1', 0.0711, 6081),
+    (44, '8701.30.00', 0.0713, 400),
+    (45, '8483.40.90', 0.0559, 2475),
+    (45, '1207.99.90', 0.0901, 2752),
+    (45, '4016.91.00', 0.04, 400),
+    (45, '0406.90.20', 0.3265, 2830),
+    (45, '8443.32.39', 0.5815, 1424),
+    (45, '5501.19.00', 0.0418, 8821),
+    (45, '3402.31.00', 0.0025, 400),
+    (45, '9108.11.10', 0.3349, 2900),
+    (45, '8439.30.20', 0.0622, 400),
+    (45, '9303.90.90', 0.0492, 1271),
+    (45, '2933.91.72', 0.2252, 400),
+    (45, '3702.54.1', 0.1232, 2954),
+    (45, '8101.97.00', 0.0896, 400),
+    (45, '3923.30.90', 0.0113, 4942),
+    (45, '2933.91.61', 0.0748, 8194),
+    (45, '8413.70.10', 0.1371, 8363),
+    (45, '0402.29.30', 0.5523, 10444),
+    (45, '8525.81.00', 1.0648, 400),
+    (45, '8471.50.10', 0.1596, 5715),
+    (46, '9018.19.80', 0.1662, 5143),
+    (46, '9019.20.40', 0.0771, 1696),
+    (46, '7901.11.11', 0.4059, 4951),
+    (46, '7011.90.00', 0.0426, 400),
+    (46, '2615.10.90', 0.1465, 3105),
+    (46, '2937.29.60', 0.0572, 10081),
+    (46, '9001.20.00', 0.0523, 9768),
+    (46, '8607.21.00', 0.1909, 7158),
+    (46, '2931.90.41', 0.2174, 400),
+    (46, '3004.20.19', 0.0974, 3721),
+    (46, '3923.21.90', 0.1383, 6800),
+    (46, '4011.30.00', 0.0474, 1580),
+    (46, '3004.90.25', 0.05, 11856),
+    (46, '3908.10.11', 0.1866, 400),
+    (46, '8423.90.21', 0.0707, 3251),
+    (46, '2936.23.10', 0.4541, 400),
+    (46, '8511.10.00', 0.0411, 9988),
+    (46, '6804.22.11', 0.029, 1395),
+    (46, '3920.10.9', 0.0213, 400),
+    (46, '7406.10.10', 0.1557, 7507),
+    (46, '2829.90.1', 0.0183, 5194),
+    (47, '6115.30.10', 0.0923, 4508),
+    (47, '6805.30.20', 0.0005, 9635),
+    (48, '2915.39.63', 0.2653, 400),
+    (48, '4010.32.00', 0.1272, 2658),
+    (48, '7901.12.90', 0.6671, 5736),
+    (49, '8531.10.10', 2.9489, 9688),
+    (49, '2922.19.8', 0.0291, 3276),
+    (49, '3917.22.90', 0.0085, 400),
+    (49, '2849.90.90', 0.0082, 4149),
+    (49, '2711.13.00', 0.1352, 400),
+    (49, '3507.90.26', 0.0244, 4331),
+    (49, '0908.21.00', 0.0152, 400),
+    (49, '3002.12.33', 0.0049, 400),
+    (49, '3501.10.00', 0.1172, 13990),
+    (49, '8443.99.11', 0.2744, 6698),
+    (49, '8516.33.00', 0.0088, 5764),
+    (50, '8462.69.00', 0.3402, 8356),
+    (50, '3811.29.90', 0.1516, 1731),
+    (51, '6103.32.00', 0.0795, 2088),
+    (51, '8802.20.10', 0.0382, 13962),
+    (51, '0303.32.00', 0.0674, 400),
+    (51, '8417.20.00', 0.0352, 5000),
+    (51, '5106.20.00', 0.0557, 400),
+    (51, '2910.90.10', 0.009, 400),
+    (51, '2936.21.12', 0.053, 1241),
+    (51, '4407.19.00', 0.0669, 1497),
+    (51, '3903.11.10', 0.0221, 9155),
+    (51, '4811.59.29', 0.0257, 6701),
+    (51, '7208.37.00', 0.0159, 5512),
+    (51, '4202.22.20', 0.0125, 9677),
+    (51, '2903.99.29', 0.4629, 15008),
+    (51, '7614.10.10', 0.0966, 8554),
+    (52, '8542.32.2', 0.7535, 6820),
+    (52, '4002.59.00', 0.081, 4358),
+    (52, '8708.29.91', 0.0059, 3026),
+    (52, '3907.10.31', 0.0635, 7218),
+    (52, '2922.31.12', 0.0017, 10095),
+    (52, '0801.22.00', 0.0591, 400),
+    (52, '4801.00.30', 0.0035, 2493),
+    (52, '3004.90.32', 0.0013, 9459),
+    (52, '2921.45.00', 0.0548, 12567),
+    (52, '2936.28.1', 0.0342, 14443),
+    (52, '2933.33.69', 0.0002, 8980),
+    (52, '3006.30.21', 0.0058, 5405),
+    (52, '2934.20.32', 0.0712, 5195),
+    (52, '3002.49.92', 0.0059, 9624),
+    (52, '8425.31.90', 0.0276, 8894),
+    (52, '4107.19.90', 0.0179, 2280),
+    (52, '2925.29.30', 0.0044, 400),
+    (52, '3002.12.12', 0.107, 2903),
+    (52, '3102.50.11', 0.0049, 4579),
+    (52, '8708.94.81', 0.0051, 8722),
+    (52, '5107.10.1', 0.0041, 805),
+    (52, '2924.29.20', 0.0188, 4468),
+    (52, '8415.90.90', 0.0289, 3290),
+    (52, '5801.10.00', 0.014, 400),
+    (53, '8711.20.20', 0.0255, 9662),
+    (53, '8461.90.10', 0.0203, 400),
+    (53, '3814.00.90', 0.029, 2861),
+    (53, '3901.20.2', 0.0093, 6051),
+    (53, '8433.59.19', 0.0504, 5235),
+    (53, '6302.31.00', 0.0235, 400),
+    (53, '2930.90.12', 0.0133, 400),
+    (53, '7219.90.90', 0.0176, 10886),
+    (53, '2905.19.9', 0.0679, 5802),
+    (53, '1008.90.90', 0.0254, 400),
+    (53, '4419.11.00', 0.0879, 11862),
+    (53, '7804.11.00', 0.0158, 6598),
+    (53, '0203.11.00', 0.0005, 8812),
+    (54, '3006.93.00', 0.3502, 5176),
+    (54, '2914.79.29', 0.3041, 7060),
+    (54, '7313.00.00', 0.368, 400),
+    (54, '3907.10.41', 0.0903, 6668),
+    (54, '6203.43.00', 0.234, 2335),
+    (54, '8448.11.10', 0.4355, 400),
+    (54, '4002.19.1', 0.1974, 8442),
+    (55, '8418.61.00', 0.0159, 400),
+    (55, '2915.90.41', 0.0768, 7502),
+    (55, '8418.40.00', 0.1453, 2056),
+    (55, '3004.39.82', 0.1509, 8593),
+    (55, '3703.90.10', 0.0738, 400),
+    (55, '7316.00.00', 0.0586, 11508),
+    (55, '2615.90.00', 0.0522, 9705),
+    (55, '9018.90.94', 0.0189, 2967),
+    (55, '8308.20.00', 0.2248, 4852),
+    (55, '8543.70.11', 0.0206, 11092),
+    (55, '6406.20.00', 0.1487, 400),
+    (55, '0304.43.00', 0.0939, 9090),
+    (55, '8532.21.1', 0.0473, 13145),
+    (55, '8477.90.00', 0.1162, 4596),
+    (55, '6204.21.00', 0.0355, 4003),
+    (55, '6104.61.00', 0.0312, 3831),
+    (55, '2933.29.30', 0.0525, 4553),
+    (55, '2933.91.29', 0.0464, 684),
+    (55, '3808.93.52', 0.1438, 7484),
+    (55, '9014.20.10', 0.0334, 902),
+    (55, '2934.91.60', 0.0586, 2972),
+    (55, '3811.21.50', 0.0052, 9655),
+    (55, '7607.19.90', 0.0201, 10236),
+    (55, '2933.69.16', 0.1664, 11053),
+    (55, '3004.20.95', 0.094, 6069),
+    (55, '8442.40.20', 0.0502, 2932),
+    (55, '2524.10.00', 0.0165, 5372),
+    (55, '6212.90.00', 0.1071, 1219),
+    (56, '4820.40.00', 0.0718, 400),
+    (56, '2907.19.20', 0.3732, 7727),
+    (56, '3004.20.92', 0.121, 2520),
+    (56, '6302.99.90', 0.0223, 2394),
+    (56, '3803.00.10', 0.0046, 14210),
+    (56, '7306.69.00', 0.1686, 9727),
+    (56, '5603.93.40', 0.1853, 400),
+    (56, '4802.20.90', 0.3378, 6517),
+    (56, '8476.90.00', 0.634, 400),
+    (56, '2921.19.91', 0.3469, 400),
+    (56, '9022.13.1', 0.2312, 5192),
+    (56, '2941.30.10', 0.0473, 400),
+    (56, '6207.22.00', 0.2876, 400),
+    (56, '3102.90.00', 0.1593, 4909),
+    (56, '6905.90.00', 0.1128, 400),
+    (56, '2934.20.10', 0.0824, 3708),
+    (56, '8414.80.12', 0.035, 5362),
+    (56, '2933.91.81', 0.0438, 3902),
+    (57, '2933.69.23', 7.5306, 400),
+    (57, '2915.90.70', 6.6138, 9113),
+    (57, '2915.90.4', 2.1019, 766),
+    (57, '7410.21.90', 3.0118, 400),
+    (57, '2934.99.51', 7.5834, 6684),
+    (57, '2933.91.2', 2.4039, 11524),
+    (57, '8443.99.11', 0.6079, 400),
+    (57, '2517.20.00', 5.5735, 5399),
+    (57, '2924.19.4', 4.6202, 4549),
+    (57, '8532.23.90', 1.8322, 400),
+    (57, '6304.19.90', 3.0822, 400),
+    (57, '7019.11.00', 1.5908, 10854),
+    (57, '2933.39.23', 9.1471, 12829),
+    (57, '0207.14.33', 1.4346, 6252),
+    (57, '8302.42.00', 2.6787, 9338),
+    (57, '3003.90.65', 1.8361, 400),
+    (58, '9018.49.20', 0.0499, 512),
+    (58, '5604.90.2', 0.0163, 7566),
+    (58, '2306.49.00', 0.1745, 1282),
+    (59, '3204.12.20', 0.0092, 10419),
+    (59, '2939.80.90', 0.1863, 4180),
+    (60, '2009.19.00', 15.7027, 8378),
+    (60, '5601.30.10', 0.0101, 400),
+    (60, '2715.00.00', 0.4788, 4016),
+    (60, '1605.51.00', 0.1864, 455),
+    (60, '8479.60.00', 0.0692, 4072),
+    (60, '3920.99.50', 0.3674, 1243),
+    (60, '8467.99.00', 1.4344, 400),
+    (60, '7508.10.00', 0.2197, 9663),
+    (60, '8529.90.50', 0.9288, 11693),
+    (60, '8534.00.1', 1.0215, 8080),
+    (60, '2920.19.90', 0.2761, 400),
+    (60, '3004.20.39', 0.0308, 8801),
+    (60, '3906.90.62', 0.2228, 4759),
+    (60, '0712.90.20', 0.3471, 400),
+    (60, '6505.00.2', 0.01, 2956),
+    (60, '0713.60.90', 0.2994, 400),
+    (60, '4010.34.00', 0.4601, 1389),
+    (60, '8523.52.90', 0.1806, 400),
+    (60, '6101.20.00', 1.286, 738),
+    (60, '3004.90.59', 2.3891, 10651),
+    (60, '8708.93.00', 0.2521, 5491),
+    (60, '0306.35.00', 0.0552, 400),
+    (60, '0302.72.90', 0.5118, 8733),
+    (60, '1805.00.00', 0.1001, 6205),
+    (60, '7606.12.30', 1.3348, 2250),
+    (60, '5515.29.00', 0.1856, 7162),
+    (60, '5311.00.00', 0.2057, 1548),
+    (60, '6006.34.10', 0.7878, 2257),
+    (61, '8471.60.54', 0.0108, 13427),
+    (62, '8305.10.00', 0.2265, 7340),
+    (62, '2910.10.00', 0.0839, 4380),
+    (62, '1107.10.10', 0.2309, 5295),
+    (62, '8506.50.90', 0.101, 5852),
+    (62, '2933.91.29', 0.1756, 8526),
+    (62, '6204.19.00', 0.0189, 16061),
+    (62, '8539.90.90', 0.0785, 6104),
+    (62, '2935.90.24', 0.0781, 5516),
+    (62, '2835.10.11', 0.0582, 400),
+    (62, '4811.59.22', 0.3108, 1603),
+    (62, '8801.00.00', 0.1323, 2555),
+    (62, '2933.29.1', 0.2085, 4128),
+    (62, '8402.11.00', 0.1274, 6439),
+    (62, '0102.29.11', 0.0955, 11353),
+    (62, '2924.29.61', 0.2426, 6152),
+    (63, '8453.80.00', 0.0215, 400),
+    (63, '2829.90.39', 0.0204, 3947),
+    (63, '2804.21.00', 0.1552, 1076),
+    (63, '2710.12.10', 0.0547, 3459),
+    (63, '9021.21.90', 0.045, 5635),
+    (63, '0102.39.19', 0.067, 400),
+    (63, '8533.39.90', 0.0085, 400),
+    (63, '3002.49.94', 0.0187, 400),
+    (63, '1508.10.00', 0.0636, 400),
+    (63, '2931.44.00', 0.1064, 400),
+    (64, '2603.00.90', 0.0214, 8515),
+    (64, '5211.51.00', 0.1412, 11277),
+    (64, '8409.99.2', 0.0307, 1136),
+    (64, '8533.31.10', 0.0368, 400),
+    (64, '0303.83.11', 0.0152, 400),
+    (64, '2829.90.29', 0.127, 9262),
+    (64, '7101.22.00', 0.1337, 400),
+    (64, '0304.55.00', 0.0244, 400),
+    (64, '2933.33.94', 0.1202, 6719),
+    (64, '0802.91.00', 0.0853, 4303),
+    (64, '3824.99.1', 0.1646, 3482),
+    (64, '0210.92.00', 0.0484, 6686),
+    (64, '3820.00.00', 0.069, 1934),
+    (64, '7208.10.00', 0.0855, 7916),
+    (64, '7205.10.00', 0.0191, 7530),
+    (64, '8441.40.00', 0.0283, 627),
+    (64, '7304.23.90', 0.0122, 12677),
+    (64, '7210.61.00', 0.0571, 6329),
+    (64, '3003.90.12', 0.009, 400),
+    (64, '0305.49.10', 0.2398, 524),
+    (64, '8903.32.00', 0.224, 9814),
+    (64, '4418.89.00', 0.0068, 4669),
+    (64, '3003.90.66', 0.0308, 3064),
+    (64, '8540.60.10', 0.0526, 3178),
+    (64, '3808.91.9', 0.0126, 400),
+    (64, '8440.10.90', 0.0412, 10908),
+    (64, '6901.00.00', 0.0791, 8532),
+    (65, '3907.99.93', 1.5036, 400),
+    (65, '8708.50.91', 0.0793, 3240),
+    (65, '3808.91.99', 0.0381, 7427),
+    (65, '3701.99.00', 0.0144, 4294),
+    (65, '6903.10.40', 0.026, 7749),
+    (65, '0705.19.00', 0.0539, 3795),
+    (66, '7315.11.90', 0.0233, 15794),
+    (66, '1212.93.00', 0.0144, 9604),
+    (66, '7222.19.90', 0.0551, 6368),
+    (66, '3808.59.26', 0.0278, 905),
+    (66, '8528.69.10', 0.0359, 1846),
+    (66, '2103.20.90', 0.0029, 3030),
+    (66, '8535.30.27', 0.0498, 2838),
+    (66, '2906.19.40', 0.0392, 2977),
+    (66, '6103.10.10', 0.0298, 3806),
+    (66, '8424.30.20', 0.0573, 9150),
+    (66, '0303.89.53', 0.0017, 14041),
+    (66, '6108.21.00', 0.1147, 6731),
+    (66, '7304.29.39', 0.022, 400),
+    (66, '2910.90.90', 0.0895, 9389),
+    (66, '2845.30.00', 0.1299, 400),
+    (66, '8414.70.00', 0.0194, 3386),
+    (66, '6305.20.00', 0.0067, 5952),
+    (66, '2921.19.4', 0.019, 400),
+    (66, '8422.40.90', 0.0963, 524),
+    (66, '3102.50.11', 0.0591, 7568),
+    (67, '4104.49.90', 0.3654, 9122),
+    (67, '3920.62.91', 0.2296, 3188),
+    (67, '8704.22.30', 0.0322, 3445),
+    (68, '3003.10.12', 0.3083, 3165),
+    (69, '3815.90.10', 1.5646, 4469),
+    (69, '0210.99.40', 0.0396, 1044),
+    (69, '5111.11.10', 0.0081, 4412),
+    (69, '2832.20.00', 0.0765, 3455),
+    (69, '0306.39.90', 0.1264, 400),
+    (69, '9401.59.00', 0.2503, 400),
+    (70, '5206.15.00', 0.1085, 1976),
+    (70, '0908.31.00', 0.0202, 4966),
+    (70, '3003.90.59', 0.0486, 12532),
+    (70, '3811.21.30', 0.0895, 750),
+    (70, '5103.20.00', 0.0472, 4958),
+    (70, '6005.43.00', 0.0097, 6845),
+    (70, '2941.90.51', 0.0347, 2768),
+    (70, '2701.20.00', 0.0489, 3386),
+    (70, '3004.39.21', 0.0007, 7771),
+    (70, '2837.20.21', 0.0084, 4076),
+    (70, '7216.40.10', 0.0231, 18151),
+    (70, '2936.26.90', 0.0032, 9116),
+    (70, '2916.31.31', 0.0258, 6063),
+    (70, '2912.49.10', 0.0452, 4219),
+    (70, '5503.11.00', 0.0383, 2094),
+    (70, '7901.20.10', 0.0096, 400),
+    (70, '2939.69.1', 0.0229, 12426),
+    (70, '2941.90.83', 0.0951, 5686),
+    (70, '2937.23.21', 0.0749, 400),
+    (70, '3002.14.00', 0.1068, 3507),
+    (70, '5603.13.50', 0.002, 1186),
+    (70, '8541.10.19', 0.0222, 5885),
+    (70, '2918.23.00', 0.0332, 4401),
+    (70, '1207.91.10', 0.041, 400),
+    (70, '8428.60.00', 0.0252, 3896),
+    (70, '2924.29.94', 0.0287, 4661),
+    (70, '1008.50.10', 0.0392, 2301),
+    (71, '9027.20.12', 0.078, 1881),
+    (71, '0510.00.90', 0.1239, 5265),
+    (71, '1302.32.1', 0.1513, 2189),
+    (71, '0713.10.90', 0.1961, 4454),
+    (71, '4407.28.00', 0.4594, 11466),
+    (71, '6208.22.00', 0.6212, 3313),
+    (71, '0407.90.00', 0.0798, 9546),
+    (71, '2103.90.19', 0.1023, 13083),
+    (71, '8539.51.00', 0.0761, 4302),
+    (71, '3206.50.1', 0.124, 6279),
+    (72, '7210.41.10', 0.13, 2161),
+    (72, '2941.90.31', 0.0233, 3204),
+    (72, '5209.11.00', 0.0904, 1091),
+    (72, '2926.90.23', 0.2267, 4710),
+    (72, '2853.90.30', 0.258, 2632),
+    (72, '0703.10.21', 0.0919, 6327),
+    (72, '7306.90.20', 0.0439, 4920),
+    (72, '3702.42.10', 0.132, 400),
+    (72, '8539.31.20', 0.0583, 12747),
+    (72, '3917.32.29', 0.2266, 6328),
+    (72, '2523.29.90', 0.0135, 400),
+    (72, '0808.30.00', 0.0266, 1662),
+    (72, '7308.20.00', 0.0859, 13393),
+    (72, '9104.00.00', 0.0255, 1282),
+    (72, '0303.83.21', 0.0756, 1135),
+    (72, '2922.43.00', 0.03, 400),
+    (72, '6204.31.00', 0.0221, 7858),
+    (72, '2903.77.90', 0.0466, 1865),
+    (72, '2922.50.9', 0.0133, 4147),
+    (72, '3002.12.15', 0.0678, 400),
+    (72, '1105.10.00', 0.0802, 6849),
+    (73, '3919.90.20', 0.3424, 9047),
+    (73, '2917.39.19', 0.0082, 9963),
+    (73, '6204.31.00', 0.0047, 5198),
+    (73, '8539.41.10', 0.0211, 400),
+    (73, '3903.30.10', 0.0162, 466),
+    (73, '2615.10.90', 0.0716, 400),
+    (73, '7211.90.90', 0.0083, 3133),
+    (73, '7307.21.00', 0.0, 400),
+    (73, '9306.90.90', 0.0079, 400),
+    (73, '9701.21.00', 0.0213, 13327),
+    (73, '3306.90.00', 0.0015, 1720),
+    (73, '7508.90.10', 0.059, 400),
+    (73, '8421.99.91', 0.034, 5209),
+    (73, '6104.59.00', 0.0143, 11559),
+    (73, '2831.10.19', 0.0011, 2176),
+    (73, '8422.30.23', 0.0091, 5658),
+    (73, '0304.95.00', 0.009, 12668),
+    (73, '8525.89.21', 0.0097, 4652),
+    (73, '4811.51.10', 0.0408, 4716),
+    (73, '8422.90.10', 0.0036, 2168),
+    (73, '8455.22.90', 0.0004, 400),
+    (73, '8443.99.80', 0.0015, 400),
+    (73, '6306.30.90', 0.0181, 13217),
+    (73, '2926.30.11', 0.0141, 2215),
+    (74, '5210.39.00', 0.028, 2915),
+    (74, '2918.19.43', 0.0074, 843),
+    (74, '0105.13.00', 0.0745, 1021),
+    (74, '8711.10.00', 0.0008, 400),
+    (74, '0712.90.20', 0.0116, 4228),
+    (74, '0307.82.00', 0.1232, 400),
+    (74, '2827.39.91', 0.0215, 400),
+    (74, '2807.00.20', 0.0099, 3598),
+    (74, '8529.10.90', 0.0399, 7183),
+    (74, '8419.89.19', 0.0092, 400),
+    (74, '7209.16.00', 0.0091, 8281),
+    (74, '2832.10.10', 0.0182, 10784),
+    (74, '2530.90.90', 0.0932, 447),
+    (74, '6909.12.30', 0.0185, 4331),
+    (74, '9027.89.11', 0.0391, 400),
+    (74, '6104.51.00', 0.0071, 6523),
+    (74, '8903.12.00', 0.009, 400),
+    (74, '2921.11.32', 0.0473, 17913),
+    (74, '0304.75.00', 0.0438, 815),
+    (74, '8607.29.00', 0.0379, 15171),
+    (74, '8517.62.14', 0.2035, 2015),
+    (74, '5510.30.1', 0.0108, 400),
+    (74, '2939.11.10', 0.0331, 400),
+    (74, '0401.10.10', 0.1175, 3011),
+    (74, '8440.90.00', 0.039, 6931),
+    (74, '8414.80.21', 0.0104, 400),
+    (74, '8716.80.00', 0.0236, 400),
+    (75, '5207.10.00', 0.0408, 5874),
+    (75, '9028.90.10', 0.0239, 7557),
+    (75, '3915.20.00', 0.1058, 400),
+    (76, '5211.20.90', 1.9139, 5988),
+    (76, '3907.99.92', 0.0663, 8335),
+    (76, '8536.90.90', 0.0039, 3241),
+    (76, '0301.99.9', 0.066, 9084),
+    (76, '5407.93.00', 0.0555, 965),
+    (76, '6005.37.00', 0.0104, 11861),
+    (76, '2922.19.3', 0.0167, 8609),
+    (76, '2921.51.39', 0.0873, 11108),
+    (76, '2916.31.21', 0.0957, 1172),
+    (76, '0307.71.00', 0.1677, 6336),
+    (76, '2937.23.21', 0.0877, 1735),
+    (76, '8204.20.00', 0.1207, 400),
+    (76, '0102.29.1', 0.0958, 400),
+    (76, '2934.99.29', 0.0082, 6578),
+    (76, '8210.00.10', 0.0912, 400),
+    (76, '5402.51.10', 0.0066, 656),
+    (76, '2826.12.00', 0.0638, 5861),
+    (76, '1702.20.00', 0.0607, 7397),
+    (76, '2913.00.10', 0.0884, 5886),
+    (76, '9508.23.00', 0.0554, 8140),
+    (76, '6903.90.91', 0.0107, 400),
+    (76, '6115.10.92', 0.0104, 9703),
+    (77, '7405.00.00', 0.0315, 8447),
+    (77, '0102.31.90', 0.0572, 4855),
+    (77, '8403.10.90', 0.2512, 3514),
+    (77, '6505.00.32', 0.1526, 5964),
+    (77, '8702.20.00', 0.2079, 2576),
+    (77, '2930.20.23', 0.0777, 6170),
+    (77, '2922.19.2', 0.1459, 3201),
+    (77, '4408.10.91', 0.0932, 6627),
+    (77, '2933.39.36', 0.0213, 1454),
+    (77, '2843.29.10', 0.1328, 6143),
+    (77, '7010.10.00', 0.104, 4640),
+    (77, '8517.62.65', 0.1262, 3571),
+    (77, '8708.50.9', 0.0246, 5939),
+    (77, '8704.32.90', 0.0649, 4154),
+    (78, '0304.63.00', 0.0166, 5969),
+    (78, '7407.10.10', 0.0114, 8957),
+    (78, '8413.91.90', 0.0135, 400),
+    (79, '8446.30.20', 0.1687, 1837),
+    (80, '8419.90.31', 0.1166, 400),
+    (80, '2105.00.10', 0.0315, 11396),
+    (80, '4806.20.00', 0.092, 400),
+    (80, '2302.10.00', 0.0091, 400),
+    (80, '3212.90.90', 0.2628, 10868),
+    (80, '8703.70.00', 0.0408, 6555),
+    (80, '7419.80.10', 0.0129, 12703),
+    (80, '6003.30.00', 0.0223, 400),
+    (80, '2921.19.1', 0.0929, 1199),
+    (80, '2924.29.11', 0.0361, 2497),
+    (80, '8438.50.00', 0.0352, 4318),
+    (80, '3811.90.10', 0.1072, 7139),
+    (80, '4704.11.00', 0.0416, 400),
+    (81, '6104.19.10', 0.0177, 8125),
+    (81, '7208.10.00', 0.0583, 400),
+    (81, '3808.92.94', 0.1075, 400),
+    (81, '7011.10.90', 0.044, 400),
+    (81, '3813.00.10', 0.1129, 400),
+    (81, '7901.12.10', 0.0283, 11346),
+    (81, '7605.29.90', 0.0581, 11140),
+    (81, '9018.39.21', 0.1533, 7407),
+    (81, '2926.20.00', 0.0251, 3527),
+    (81, '3004.49.50', 0.0702, 4626),
+    (81, '2827.39.97', 0.04, 1363),
+    (81, '8473.40.10', 0.0082, 11529),
+    (81, '0709.56.00', 0.0634, 10557),
+    (81, '2941.10.39', 0.0256, 11420),
+    (81, '3506.91.10', 0.036, 5803),
+    (81, '8513.90.00', 0.0217, 4442),
+    (81, '7409.40.90', 0.0582, 3010),
+    (81, '2934.99.15', 0.1511, 4899),
+    (81, '8501.10.19', 0.219, 1264),
+    (81, '2926.30.20', 0.0326, 400),
+    (81, '2922.39.21', 0.0123, 1053),
+    (81, '6005.21.00', 0.0449, 2154),
+    (81, '0301.99.11', 0.1293, 5592),
+    (81, '0710.29.00', 0.0578, 2495),
+    (81, '3906.90.22', 0.0461, 5222),
+    (82, '8481.80.2', 0.1379, 11011),
+    (82, '6004.10.14', 0.0806, 10621),
+    (82, '2917.19.2', 0.4317, 6747),
+    (82, '8460.40.11', 0.3976, 2257),
+    (82, '2930.90.19', 0.0935, 6888),
+    (82, '9027.89.13', 0.2646, 8560),
+    (82, '4802.57.91', 0.1209, 400),
+    (82, '8806.22.00', 0.0166, 510),
+    (82, '3827.69.00', 0.0071, 400),
+    (82, '2715.00.00', 0.2182, 2673),
+    (82, '5509.11.00', 0.1024, 11714),
+    (82, '2915.39.55', 0.06, 400),
+    (82, '2530.90.90', 0.1197, 5673),
+    (82, '2939.69.19', 0.2843, 5763),
+    (82, '8304.00.00', 0.0485, 10560),
+    (82, '2930.90.4', 0.1724, 7437),
+    (82, '3917.32.51', 0.042, 6963),
+    (82, '2914.79.1', 0.2442, 400),
+    (82, '2606.00.1', 0.252, 400),
+    (82, '9506.51.00', 0.1158, 4494),
+    (82, '6401.99.10', 0.4065, 6176),
+    (82, '8456.11.90', 0.2124, 400),
+    (82, '8708.70.90', 0.1886, 3587),
+    (82, '1602.32.20', 0.1554, 2162),
+    (82, '8504.40.10', 0.124, 7980),
+    (82, '8433.60.90', 0.0781, 2761),
+    (82, '8544.42.00', 0.0777, 3679),
+    (83, '5402.32.19', 0.1976, 400),
+    (83, '2935.90.95', 0.1803, 400),
+    (83, '3003.10.13', 0.1236, 400),
+    (83, '2933.39.2', 0.136, 400),
+    (83, '5206.23.00', 0.1334, 438),
+    (83, '0305.69.90', 0.0571, 5195),
+    (83, '0103.10.00', 0.418, 5638),
+    (84, '6813.20.00', 0.2147, 400),
+    (84, '8434.10.00', 0.0676, 2185),
+    (84, '2517.10.00', 0.2531, 5473),
+    (84, '2836.30.00', 0.0756, 1012),
+    (84, '4810.32.90', 0.0305, 4190),
+    (84, '8207.60.00', 0.0161, 7205),
+    (84, '9508.10.00', 0.2224, 400),
+    (84, '8712.00.90', 0.2632, 5052),
+    (84, '8423.10.00', 0.1936, 3591),
+    (84, '9001.10.20', 0.0505, 7140),
+    (84, '8504.40.40', 0.1083, 400),
+    (84, '9201.20.00', 0.1105, 400),
+    (84, '3006.30.18', 0.2721, 400),
+    (84, '0305.32.30', 0.0394, 9516),
+    (85, '3911.90.24', 0.3104, 6687),
+    (85, '8421.99.9', 0.3743, 400),
+    (85, '0303.24.10', 0.4725, 6360),
+    (85, '0304.92.12', 0.1712, 8381),
+    (85, '8112.69.00', 0.5613, 400),
+    (85, '9031.20.90', 0.8394, 11349),
+    (85, '9608.91.00', 0.471, 4776),
+    (85, '1214.90.00', 0.8061, 400),
+    (86, '8801.00.00', 1.2342, 400),
+    (86, '5514.30.19', 0.0021, 1480),
+    (86, '3808.91.9', 0.0056, 400),
+    (86, '3803.00.90', 0.2247, 2315),
+    (86, '2403.19.00', 0.0064, 3253),
+    (86, '1602.50.00', 0.0945, 400),
+    (86, '2306.50.00', 0.0979, 1627),
+    (86, '3002.42.70', 0.0047, 4132),
+    (86, '9113.10.00', 0.052, 7309),
+    (86, '2903.77.34', 0.0857, 10730),
+    (86, '8502.11.90', 0.0394, 2752),
+    (86, '8504.50.90', 0.0601, 8010),
+    (86, '8521.90.00', 0.0177, 11652),
+    (86, '5401.10.12', 0.0817, 6452),
+    (86, '6204.39.00', 0.0269, 400),
+    (86, '3003.90.64', 0.1731, 400),
+    (86, '8428.39.20', 0.0702, 6854),
+    (86, '3307.90.00', 0.0241, 10468),
+    (86, '3910.00.29', 0.0065, 2243),
+    (86, '3003.90.4', 0.0015, 2019),
+    (86, '2934.91.3', 0.0086, 400),
+    (86, '8443.99.29', 0.0285, 983),
+    (88, '2901.22.00', 0.0846, 400),
+    (88, '8414.80.33', 0.0333, 9845),
+    (88, '8802.30.29', 0.0512, 1584),
+    (88, '6506.99.00', 0.2328, 1682),
+    (88, '0303.32.00', 0.0301, 4726),
+    (88, '8479.89.40', 0.0611, 5926),
+    (88, '3004.49.10', 0.087, 400),
+    (88, '0302.99.00', 0.0406, 2927),
+    (88, '2924.29.41', 0.0574, 1058),
+    (88, '3003.10.11', 0.0583, 2093),
+    (88, '8473.50.10', 0.0861, 1748),
+    (88, '9027.89.12', 0.0086, 9706),
+    (88, '3402.90.29', 0.1216, 10646),
+    (88, '5510.90.1', 0.0814, 8144),
+    (89, '1604.17.00', 0.0629, 400),
+    (89, '5501.30.00', 0.1178, 400),
+    (89, '2824.90.10', 0.2577, 400),
+    (90, '2933.91.6', 0.8868, 4273),
+    (91, '0302.53.00', 0.0081, 12130),
+    (92, '1103.19.00', 0.492, 8842),
+    (92, '5501.90.00', 0.0206, 5926),
+    (92, '7406.10.20', 0.1864, 5213),
+    (92, '1207.30.10', 1.3549, 3671),
+    (92, '2934.91.33', 0.4931, 11633),
+    (92, '3002.49.92', 0.3739, 8441),
+    (92, '2939.11.61', 0.2909, 400),
+    (92, '1212.94.00', 0.3461, 10875),
+    (92, '2918.29.29', 0.3147, 4333),
+    (92, '7116.20.90', 1.5511, 7826),
+    (92, '8501.52.20', 0.2779, 9412),
+    (92, '2808.00.20', 0.1982, 1719),
+    (92, '3920.10.99', 0.8416, 400),
+    (92, '7612.90.12', 0.5584, 1649),
+    (92, '2204.29.20', 0.1384, 3962),
+    (92, '5516.13.00', 1.169, 3439),
+    (93, '7801.10.19', 0.487, 11122),
+    (93, '2924.29.96', 1.2503, 10041),
+    (93, '5208.51.00', 0.5865, 8352),
+    (93, '7017.10.00', 0.6121, 11715),
+    (93, '1201.90.00', 0.4717, 9122),
+    (93, '5407.52.10', 0.0117, 1983),
+    (93, '0101.30.00', 0.654, 4928),
+    (93, '6004.10.91', 0.5607, 12328),
+    (93, '7216.61.10', 0.2669, 2783),
+    (93, '4818.90.90', 0.0636, 400),
+    (93, '0306.16.90', 0.0308, 1179),
+    (93, '0303.45.00', 0.0939, 4749),
+    (93, '2933.33.51', 0.1233, 11103),
+    (93, '8517.62.99', 0.0508, 7845),
+    (94, '3901.90.30', 0.0883, 11602),
+    (94, '4811.59.22', 0.0213, 400),
+    (94, '3003.20.93', 0.1455, 400),
+    (94, '2852.10.25', 0.0204, 15933),
+    (94, '6005.41.00', 0.0086, 13583),
+    (94, '7212.50.10', 0.0701, 6743),
+    (94, '8704.23.20', 0.0218, 9592),
+    (94, '8711.40.00', 0.018, 14476),
+    (94, '8456.90.00', 0.0123, 918),
+    (94, '2909.49.32', 0.0552, 5158),
+    (94, '1213.00.00', 0.0613, 5601),
+    (94, '5308.20.00', 0.014, 400),
+    (94, '8440.10.11', 0.0696, 400),
+    (94, '8301.30.00', 0.0337, 15137),
+    (94, '8514.40.00', 0.0273, 5079),
+    (95, '8540.20.90', 0.0498, 6205),
+    (95, '2934.20.33', 0.4239, 400),
+    (95, '4104.11.23', 0.2872, 6311),
+    (95, '9021.90.1', 0.2866, 8188),
+    (95, '3813.00.90', 0.4619, 5506),
+    (95, '1514.99.10', 1.1259, 400),
+    (95, '3301.29.21', 0.2615, 5230),
+    (95, '9706.90.00', 0.1809, 7459),
+    (95, '2924.19.29', 1.5629, 15978),
+    (95, '2932.19.10', 0.548, 1649),
+    (95, '9021.39.11', 0.2439, 400),
+    (95, '7204.50.00', 0.1399, 400),
+    (95, '5911.32.00', 0.0808, 7227),
+    (96, '8302.49.00', 0.1104, 400),
+    (96, '8206.00.00', 0.0073, 2264),
+    (96, '7304.29.31', 0.0529, 9418),
+    (97, '3824.99.85', 0.4575, 7283),
+    (97, '2841.90.1', 3.6037, 7078),
+    (97, '8487.10.00', 0.3137, 400),
+    (97, '3003.90.1', 0.1778, 3741),
+    (97, '6104.51.00', 0.2097, 2078),
+    (97, '1701.91.00', 0.8864, 400),
+    (97, '3817.00.10', 0.1752, 5913),
+    (97, '2933.39.41', 0.8844, 9495),
+    (98, '8711.10.00', 0.0044, 6380),
+    (98, '4811.59.10', 0.0728, 877),
+    (98, '7019.15.00', 0.0599, 8975),
+    (98, '3003.90.11', 0.0644, 666),
+    (98, '4012.90.90', 0.0937, 6885),
+    (98, '2931.51.00', 0.0412, 400),
+    (98, '2905.16.00', 0.0893, 7614),
+    (98, '8480.20.00', 0.0037, 14309),
+    (98, '0106.39.00', 0.0021, 2155),
+    (98, '2909.41.00', 0.0162, 400),
+    (98, '3921.19.00', 0.1781, 1005),
+    (98, '2845.10.00', 0.0746, 7264),
+    (98, '8467.19.00', 0.0858, 443),
+    (98, '1901.10.20', 0.0535, 1403),
+    (98, '7110.29.00', 0.0843, 3503),
+    (98, '1205.90.10', 0.1345, 7801),
+    (98, '7307.19.90', 0.0105, 4369),
+    (98, '3909.10.00', 0.1255, 7974),
+    (98, '8708.40.80', 0.2295, 7383),
+    (98, '5603.12.40', 0.103, 13411),
+    (98, '8443.32.99', 0.1044, 400),
+    (98, '6115.29.90', 0.0574, 7607),
+    (98, '2930.80.10', 0.1253, 6081),
+    (98, '2933.53.72', 0.0849, 1585),
+    (98, '2903.78.00', 0.0727, 400),
+    (98, '7004.90.00', 0.0142, 5187),
+    (99, '8461.40.10', 0.661, 4276),
+    (99, '3806.30.00', 0.2026, 6846),
+    (99, '6806.20.00', 0.3385, 2788),
+    (99, '6001.10.90', 0.1309, 11819),
+    (99, '6403.12.00', 0.4255, 8383),
+    (99, '2921.43.23', 0.3655, 4214),
+    (99, '9007.92.00', 0.0233, 8668),
+    (99, '2930.30.2', 0.2677, 3558),
+    (99, '8468.90.20', 0.0524, 2854),
+    (99, '1903.00.00', 0.2625, 400),
+    (99, '2931.59.95', 0.1963, 400),
+    (99, '8455.90.00', 0.1153, 6576),
+    (99, '4702.00.00', 0.5509, 400),
+    (99, '7415.39.00', 0.0305, 2077),
+    (99, '3004.50.90', 0.1414, 400),
+    (99, '3204.13.00', 0.3082, 5796),
+    (99, '3003.20.4', 1.0296, 400),
+    (100, '3824.81.10', 0.0547, 6058),
+    (100, '8501.40.11', 0.0229, 5641),
+    (100, '8546.90.00', 0.0164, 11848),
+    (101, '8208.20.00', 0.85, 400),
+    (101, '1207.40.90', 1.1184, 5853),
+    (101, '2921.43.21', 0.7893, 400),
+    (101, '1002.90.00', 1.34, 400),
+    (101, '8419.40.90', 0.717, 15225),
+    (101, '8442.50.00', 1.5574, 3669),
+    (101, '0302.42.10', 2.1794, 8758),
+    (101, '4008.21.00', 0.5828, 5710),
+    (102, '8482.91.19', 0.1299, 400),
+    (102, '5210.32.00', 0.0079, 10346),
+    (102, '8459.21.99', 0.0253, 5758),
+    (102, '8419.90.40', 0.0072, 6244),
+    (102, '7217.10.19', 0.0967, 12028),
+    (102, '3004.39.39', 0.0632, 6126),
+    (102, '2941.40.11', 0.0164, 602),
+    (102, '8439.99.90', 0.0033, 400),
+    (102, '5506.40.00', 0.007, 1566),
+    (102, '5211.43.00', 0.034, 10761),
+    (102, '2921.43.22', 0.0647, 7522),
+    (102, '7205.29.90', 0.0405, 8692),
+    (102, '9028.30.3', 0.0321, 400),
+    (102, '2939.72.10', 0.0467, 5659),
+    (102, '2922.19.99', 0.1163, 10670),
+    (102, '7302.40.00', 0.017, 400),
+    (102, '3203.00.11', 0.1193, 9305),
+    (102, '8705.30.00', 0.0476, 4319),
+    (102, '7218.99.00', 0.0182, 3191),
+    (102, '7008.00.00', 0.0025, 15522),
+    (102, '5407.71.00', 0.0366, 5185),
+    (102, '0805.29.00', 0.0773, 5621),
+    (102, '2903.79.19', 0.0419, 5789),
+    (103, '5602.90.00', 0.3137, 400),
+    (103, '4707.10.00', 0.0074, 12103),
+    (103, '8479.89.2', 0.4128, 400),
+    (103, '4202.92.00', 0.2086, 400),
+    (103, '0304.31.00', 0.279, 1030),
+    (103, '4811.90.1', 0.3054, 6518),
+    (103, '2933.39.8', 0.1315, 8945),
+    (103, '7409.29.00', 0.0287, 5832),
+    (103, '0303.89.65', 0.1799, 10851),
+    (103, '7302.40.00', 0.0462, 7076),
+    (103, '8440.10.1', 0.1043, 438),
+    (103, '9306.30.00', 0.1031, 3517),
+    (103, '7210.61.00', 0.1241, 4597),
+    (103, '0804.50.20', 0.0444, 6329),
+    (103, '0703.10.29', 0.5433, 8602),
+    (104, '7304.29.10', 0.0255, 400),
+    (104, '7304.23.90', 0.02, 6244),
+    (104, '1401.10.00', 0.0311, 1928),
+    (105, '8102.94.00', 0.8331, 10180),
+    (106, '2710.19.1', 0.1392, 3952),
+    (106, '1605.61.00', 0.2155, 9180),
+    (106, '8409.91.1', 0.1062, 6334),
+    (106, '9114.30.00', 0.1437, 13449),
+    (106, '2926.20.00', 0.1559, 6197),
+    (106, '8467.29.91', 0.1931, 5251),
+    (106, '3912.20.2', 0.0869, 5505),
+    (106, '5404.11.00', 0.0962, 3473),
+    (106, '9406.90.10', 0.1193, 400),
+    (106, '8420.10.10', 0.1585, 9254),
+    (106, '2710.19.9', 0.0745, 400),
+    (106, '7209.16.00', 0.0954, 7882),
+    (106, '2934.92.00', 0.0759, 3888),
+    (106, '0208.10.00', 0.1803, 4698),
+    (106, '2827.49.19', 0.1683, 400),
+    (106, '8544.30.00', 0.2125, 4806),
+    (106, '7011.10.10', 0.1736, 1389),
+    (106, '8902.00.90', 0.1455, 13687),
+    (106, '3802.90.10', 0.6241, 5785),
+    (106, '2827.39.93', 0.1942, 3097),
+    (106, '3911.10.2', 0.1989, 400),
+    (107, '2807.00.20', 2.3347, 5072),
+    (107, '2804.69.00', 0.1132, 1242),
+    (107, '2925.11.00', 0.2133, 7616),
+    (107, '7207.12.00', 0.0824, 1367),
+    (107, '8471.30.12', 0.1331, 400),
+    (107, '3204.18.90', 0.0329, 7032),
+    (107, '3804.00.11', 0.0441, 10252),
+    (107, '8448.39.1', 0.104, 3097),
+    (107, '0909.21.00', 0.0593, 13125),
+    (107, '5407.52.20', 0.0115, 582),
+    (107, '8714.95.00', 0.0099, 9723),
+    (107, '2939.44.00', 0.0541, 7367),
+    (107, '3002.12.16', 0.0419, 13598),
+    (107, '2927.00.29', 0.0014, 400),
+    (107, '9101.11.00', 0.2166, 11333),
+    (107, '8443.91.99', 0.1533, 16855),
+    (107, '6104.22.00', 0.0638, 11707),
+    (107, '2933.91.51', 0.0542, 4503),
+    (107, '7312.90.00', 0.0107, 400),
+    (107, '0210.12.00', 0.0746, 400),
+    (107, '2918.29.90', 0.0032, 2293),
+    (107, '6902.20.92', 0.0525, 4369),
+    (107, '0710.80.00', 0.0751, 5066),
+    (107, '9006.61.00', 0.0247, 8127),
+    (107, '8517.62.91', 0.001, 6617),
+    (107, '2903.79.39', 0.0157, 400),
+    (107, '9018.50.90', 0.0173, 1296),
+    (108, '6601.91.90', 2.7474, 6076),
+    (108, '2905.19.11', 0.0363, 7532),
+    (108, '0105.11.10', 0.0106, 1558),
+    (108, '8448.32.11', 0.1018, 4521),
+    (108, '8607.11.20', 0.1373, 11979),
+    (108, '6910.10.00', 0.0752, 4720),
+    (108, '8432.39.10', 0.0582, 2440),
+    (108, '2924.29.92', 0.0149, 400),
+    (108, '8703.32.10', 0.371, 400),
+    (108, '2939.79.39', 0.0473, 12476),
+    (108, '3507.90.1', 0.1802, 400),
+    (108, '2933.99.4', 0.1263, 1200),
+    (108, '8207.13.00', 0.0024, 4341),
+    (108, '7210.70.10', 0.1375, 8141),
+    (108, '8456.50.00', 0.0372, 2599),
+    (108, '3209.90.19', 0.1336, 642),
+    (108, '2932.95.00', 0.0908, 4833),
+    (108, '8438.90.00', 0.0003, 400),
+    (108, '8504.31.1', 0.0089, 400),
+    (108, '2839.19.00', 0.0025, 2477),
+    (109, '4601.99.00', 0.06, 6975),
+    (109, '7214.30.00', 0.049, 6929),
+    (109, '6112.11.00', 0.0291, 8460),
+    (109, '8609.00.00', 0.0102, 400),
+    (109, '2912.12.00', 0.0583, 400),
+    (109, '8443.32.51', 0.1542, 7502),
+    (109, '2921.42.29', 0.0053, 11341),
+    (109, '8413.30.90', 0.1114, 950),
+    (109, '7308.20.00', 0.0869, 5330),
+    (109, '6006.31.20', 0.0356, 2607),
+    (109, '6303.12.00', 0.0667, 2828),
+    (109, '2917.39.50', 0.1026, 400),
+    (109, '8709.90.00', 0.0934, 2142),
+    (109, '7310.21.10', 0.0417, 400),
+    (109, '4811.51.30', 0.0398, 7315),
+    (109, '2852.10.19', 0.0217, 1768),
+    (109, '8486.10.00', 0.1305, 3980),
+    (109, '2916.14.90', 0.0291, 3634),
+    (109, '3004.39.39', 0.0317, 3111),
+    (109, '8482.50.10', 0.007, 2364),
+    (109, '8517.71.20', 0.0741, 8104),
+    (109, '0306.93.00', 0.086, 400),
+    (109, '3808.94.22', 0.004, 11759),
+    (109, '8448.39.11', 0.1865, 5385),
+    (110, '8504.90.40', 0.2875, 400),
+    (110, '2828.90.20', 0.0165, 1182),
+    (111, '2833.40.10', 0.8152, 8673),
+    (111, '5802.20.00', 0.0081, 5267),
+    (111, '3002.12.21', 0.006, 5577),
+    (111, '0305.51.00', 0.0161, 3209),
+    (111, '1209.24.00', 0.0063, 4195),
+    (111, '8422.30.2', 0.0129, 2562),
+    (111, '8101.99.90', 0.0394, 12240),
+    (111, '4107.92.10', 0.0101, 2896),
+    (111, '2836.92.00', 0.0043, 400),
+    (112, '9018.39.29', 1.1513, 400),
+    (112, '0603.90.00', 0.0231, 3944),
+    (112, '2933.39.41', 0.0823, 3751),
+    (112, '2306.41.00', 0.0281, 8340),
+    (112, '2933.55.40', 0.0172, 6282),
+    (112, '8473.30.31', 0.0255, 1760),
+    (112, '2833.24.00', 0.0045, 400),
+    (112, '4202.39.00', 0.0569, 400),
+    (112, '8430.41.20', 0.0596, 20243),
+    (112, '5509.22.00', 0.0139, 400),
+    (112, '2933.59.34', 0.1899, 400),
+    (112, '8476.21.00', 0.0054, 6499),
+    (112, '8429.51.2', 0.043, 3928),
+    (112, '8424.82.21', 0.0018, 4268),
+    (112, '8473.50.10', 0.0722, 6842),
+    (112, '8472.90.99', 0.0024, 1941),
+    (112, '5102.20.00', 0.2293, 2713),
+    (112, '6909.12.10', 0.1036, 400),
+    (112, '0901.12.00', 0.0103, 3083),
+    (112, '8517.62.39', 0.0099, 400),
+    (112, '0304.92.12', 0.0307, 400),
+    (112, '3907.10.3', 0.1407, 4455),
+    (112, '2924.19.2', 0.0796, 9500),
+    (112, '2933.99.63', 0.0772, 1258),
+    (112, '8536.90.20', 0.0236, 400),
+    (112, '2922.49.6', 0.1447, 9115),
+    (112, '7117.11.00', 0.0154, 11209),
+    (113, '8501.53.20', 0.139, 18794),
+    (113, '8406.90.2', 0.2339, 400),
+    (113, '1702.40.20', 0.722, 3351),
+    (113, '2931.59.11', 0.4082, 876),
+    (113, '2904.10.11', 0.1694, 10907),
+    (113, '9404.29.00', 0.4989, 3758),
+    (113, '0306.94.00', 0.0861, 7886),
+    (113, '4010.11.00', 0.1954, 5432),
+    (113, '0104.20.90', 0.2601, 400),
+    (113, '3003.90.64', 0.4844, 3512),
+    (113, '7310.29.20', 0.1717, 400),
+    (113, '8429.40.00', 0.1722, 400),
+    (113, '3507.90.49', 0.1334, 9605),
+    (113, '2907.21.00', 0.1168, 400),
+    (113, '8536.50.10', 0.1606, 10090),
+    (113, '8448.39.9', 0.0833, 400),
+    (113, '5205.26.00', 0.3805, 400),
+    (113, '8528.49.90', 0.1954, 400),
+    (113, '8443.91.10', 0.232, 8175),
+    (113, '2903.13.00', 0.0417, 400),
+    (113, '8205.70.00', 0.0856, 400),
+    (114, '8545.11.00', 0.3797, 5283),
+    (114, '6003.10.00', 1.3481, 8873),
+    (114, '0303.89.64', 0.2762, 5957),
+    (114, '2920.23.00', 0.2646, 400),
+    (114, '8549.31.00', 0.7345, 400),
+    (114, '7222.19.10', 1.0202, 7305),
+    (114, '8521.10.81', 0.1631, 10615),
+    (114, '2922.29.90', 0.8713, 4839),
+    (114, '2833.29.30', 0.1885, 3001),
+    (114, '3926.90.40', 0.0731, 400),
+    (114, '2912.19.12', 0.1078, 5624),
+    (114, '2614.00.90', 0.4487, 4617),
+    (114, '1404.20.10', 0.4479, 657),
+    (114, '2935.90.2', 0.4038, 16089),
+    (114, '3915.90.00', 1.2295, 3695),
+    (114, '3808.93.27', 0.4341, 9648),
+    (114, '5703.21.00', 0.0459, 400),
+    (114, '2913.00.10', 1.0475, 400),
+    (114, '9603.29.00', 0.1332, 400),
+    (114, '8433.51.00', 0.3357, 8279),
+    (114, '8472.90.59', 0.2845, 4190),
+    (114, '2834.10.10', 0.1528, 2508),
+    (114, '3606.10.00', 0.4648, 8501),
+    (114, '2933.99.53', 0.5585, 400),
+    (114, '5301.21.10', 0.3381, 1084),
+    (114, '1301.90.10', 0.8089, 2368),
+    (114, '6303.92.00', 1.2809, 400),
+    (115, '9608.99.8', 0.507, 7482),
+    (116, '7604.29.19', 0.0125, 10758),
+    (116, '2905.17.20', 0.0744, 3945),
+    (116, '2933.33.69', 0.1567, 8706),
+    (116, '8479.82.90', 0.1551, 4292),
+    (116, '3926.10.00', 0.0971, 400),
+    (116, '8517.62.56', 0.1062, 10694),
+    (116, '3707.90.29', 0.343, 400),
+    (116, '8532.30.90', 0.0733, 2344),
+    (116, '7229.20.00', 0.1382, 400),
+    (116, '3705.00.10', 0.0706, 3581),
+    (116, '2520.20.90', 0.0226, 400),
+    (117, '3915.20.00', 0.3332, 7528),
+    (118, '2840.11.00', 0.4196, 1444),
+    (118, '7304.90.1', 0.2173, 8897),
+    (118, '8456.90.00', 0.3085, 7315),
+    (118, '8502.13.19', 0.5579, 7424),
+    (118, '8465.95.12', 0.1871, 5755),
+    (118, '7225.30.00', 0.559, 6619),
+    (118, '8508.60.00', 0.4177, 14246),
+    (118, '8510.30.00', 0.0585, 3220),
+    (118, '0305.41.00', 0.1818, 9417),
+    (118, '6108.99.00', 0.0634, 400),
+    (118, '4802.58.92', 0.189, 6213),
+    (120, '2910.90.90', 0.7422, 400),
+    (120, '2933.53.7', 0.5064, 5620),
+    (120, '0303.89.3', 0.9923, 400),
+    (120, '6212.20.00', 1.6494, 400),
+    (120, '8708.94.82', 0.5504, 400),
+    (120, '8433.59.1', 0.3225, 400),
+    (120, '2933.53.2', 0.1774, 687),
+    (120, '7110.21.00', 1.4362, 400),
+    (120, '2930.20.21', 0.3276, 5435),
+    (120, '8506.10.20', 1.3873, 8489),
+    (120, '8714.20.00', 0.439, 4995),
+    (120, '8456.11.19', 0.5074, 2198),
+    (121, '0302.55.00', 0.8411, 400),
+    (121, '4810.19.82', 2.3295, 2900),
+    (121, '2931.49.1', 0.0927, 8224),
+    (121, '8474.80.90', 0.3418, 3957),
+    (121, '2935.90.24', 0.8874, 3671),
+    (121, '2904.10.12', 0.814, 1667),
+    (121, '8464.20.2', 1.0465, 400),
+    (121, '3906.90.52', 0.2517, 5698),
+    (121, '3301.90.10', 1.4175, 2347),
+    (121, '9021.39.30', 0.1095, 400),
+    (121, '8716.31.00', 2.3428, 3160),
+    (121, '8471.70.90', 1.9027, 8377),
+    (122, '8508.70.00', 0.0396, 7741),
+    (122, '2208.40.00', 0.0568, 400),
+    (122, '4802.57.93', 0.0263, 4342),
+    (122, '9506.59.00', 0.1804, 6330),
+    (122, '8466.93.50', 0.0321, 1697),
+    (122, '5205.21.00', 0.1571, 400),
+    (122, '2903.92.20', 0.0979, 7238),
+    (122, '5407.73.00', 0.1227, 7971),
+    (122, '8419.12.00', 0.0461, 13273),
+    (122, '3811.90.90', 0.0523, 6971),
+    (122, '4401.32.00', 0.2548, 400),
+    (122, '8527.13.00', 0.0898, 400),
+    (122, '2933.69.2', 0.0361, 6101),
+    (122, '2908.19.90', 0.084, 1603),
+    (122, '7304.90.1', 0.0526, 400),
+    (122, '2933.39.12', 0.1466, 400),
+    (122, '3705.00.90', 0.0567, 6019),
+    (122, '0303.89.41', 0.0443, 400),
+    (122, '6909.90.00', 0.1228, 400),
+    (122, '2846.10.10', 0.0272, 4584),
+    (122, '3812.39.11', 0.0339, 5254),
+    (122, '2008.30.00', 0.0754, 1520),
+    (122, '6215.10.00', 0.1205, 2280),
+    (122, '8434.10.00', 0.2379, 400),
+    (122, '6112.31.00', 0.1281, 3694),
+    (122, '5104.00.00', 0.0234, 9505),
+    (122, '7802.00.00', 0.2097, 400),
+    (122, '9603.50.00', 0.0383, 8931),
+    (123, '6802.29.00', 0.3054, 400),
+    (124, '2933.39.8', 0.0458, 400),
+    (124, '8708.40.80', 0.2158, 400),
+    (124, '2918.12.00', 0.2329, 6577),
+    (124, '2933.69.19', 0.0512, 400),
+    (124, '0502.90.10', 0.1719, 12786),
+    (124, '2941.50.10', 0.1122, 400),
+    (124, '6302.39.00', 0.2654, 1002),
+    (124, '0304.32.10', 0.0809, 10101),
+    (124, '5407.71.00', 0.0396, 3187),
+    (124, '6117.10.00', 0.1405, 5626),
+    (124, '7616.10.00', 0.479, 1264),
+    (124, '3003.90.7', 0.0248, 400),
+    (124, '2504.10.00', 0.1449, 7286),
+    (124, '9030.33.2', 0.1886, 400),
+    (124, '2811.22.20', 0.2002, 3754),
+    (124, '5303.90.90', 0.2748, 8553),
+    (124, '2914.79.90', 0.3061, 4028),
+    (124, '3403.19.00', 0.05, 400),
+    (124, '7210.90.00', 0.3871, 400),
+    (125, '3212.90.10', 0.2337, 9844),
+    (125, '7307.92.00', 0.0442, 4559),
+    (125, '4820.90.00', 0.2206, 1852),
+    (125, '6006.22.00', 0.0012, 9842),
+    (125, '2936.27.10', 0.108, 2096),
+    (125, '9018.90.3', 0.1947, 400),
+    (125, '6304.92.00', 0.223, 12212),
+    (125, '9705.21.00', 0.231, 12728),
+    (125, '8459.69.00', 0.077, 10840),
+    (125, '4302.30.00', 0.0191, 2520),
+    (126, '0207.25.00', 1.3746, 3388),
+    (126, '2909.60.1', 0.4596, 400),
+    (126, '2939.59.10', 0.7825, 3813),
+    (126, '2941.40.19', 0.6664, 3234),
+    (126, '2934.99.51', 0.7548, 400),
+    (126, '7217.10.19', 1.1092, 6188),
+    (126, '3307.30.00', 0.4135, 6186),
+    (126, '2933.33.3', 0.3078, 8525),
+    (126, '3808.99.95', 0.517, 400),
+    (126, '2933.69.9', 0.8333, 7893),
+    (126, '1212.99.10', 0.2534, 2229),
+    (126, '4203.10.00', 1.8385, 7494),
+    (126, '8601.20.00', 0.5531, 18359),
+    (126, '8428.33.00', 0.8688, 400),
+    (128, '8448.33.10', 2.3642, 7563),
+    (128, '2903.79.12', 0.0039, 7078),
+    (128, '2920.29.50', 0.0143, 2875),
+    (128, '3004.39.94', 0.0142, 400),
+    (128, '3903.20.00', 0.0468, 400),
+    (129, '3302.90.1', 2.013, 4377),
+    (129, '3907.10.49', 0.0757, 6378),
+    (129, '9027.20.29', 0.0496, 1167),
+    (129, '3901.10.20', 0.0015, 11059),
+    (129, '3003.90.79', 0.0289, 1885),
+    (129, '8448.20.90', 0.0259, 400),
+    (130, '8421.91.10', 3.1595, 400),
+    (130, '4408.39.91', 0.0107, 400),
+    (130, '4805.50.00', 0.0201, 1980),
+    (130, '4008.19.00', 0.0265, 5114),
+    (130, '3003.90.7', 0.0082, 2618),
+    (130, '3003.39.19', 0.0595, 1769),
+    (130, '5404.90.00', 0.1171, 1363),
+    (130, '0702.00.00', 0.049, 6464),
+    (130, '8479.89.40', 0.026, 8632),
+    (130, '6115.10.93', 0.0844, 4983),
+    (131, '4410.11.90', 1.638, 1501),
+    (131, '8413.30.10', 0.0215, 7117),
+    (131, '0704.90.00', 0.0001, 470),
+    (131, '3815.90.91', 0.1492, 400),
+    (131, '2835.10.11', 0.0355, 3299),
+    (131, '4410.19.11', 0.027, 3719),
+    (131, '2916.15.1', 0.0169, 6387),
+    (131, '8450.20.20', 0.0737, 400),
+    (131, '4105.10.90', 0.2991, 7432),
+    (131, '0709.30.00', 0.005, 400),
+    (133, '7505.12.29', 0.0338, 17605),
+    (133, '0105.13.00', 0.1498, 6891),
+    (133, '3909.50.1', 0.0818, 400),
+    (133, '8443.31.13', 0.2113, 964),
+    (133, '2916.12.20', 0.1147, 400),
+    (133, '8450.11.00', 0.022, 6583),
+    (133, '9503.00.9', 0.0812, 6562),
+    (133, '2916.19.2', 0.0323, 400),
+    (133, '8443.32.35', 0.0638, 400),
+    (133, '6205.90.10', 0.1376, 400),
+    (133, '2827.39.94', 0.1171, 8897),
+    (133, '9111.80.00', 0.0562, 839),
+    (133, '0209.10.21', 0.1357, 6478),
+    (133, '1404.90.10', 0.0531, 2389),
+    (134, '8502.13.90', 0.8748, 8958),
+    (134, '0904.11.00', 12.0381, 2982),
+    (134, '8481.80.39', 4.6015, 400),
+    (134, '5903.20.00', 1.7251, 400),
+    (134, '3926.90.22', 2.8522, 9514),
+    (134, '0406.20.00', 1.6689, 2939),
+    (134, '6207.22.00', 3.5587, 6188),
+    (134, '3004.90.24', 1.619, 7735),
+    (134, '3003.20.9', 2.8873, 400),
+    (134, '2926.90.21', 4.633, 14080),
+    (134, '3809.10.10', 2.2914, 400),
+    (134, '2936.21.12', 0.784, 1805),
+    (135, '3003.39.26', 0.2345, 1987),
+    (135, '8481.80.39', 0.0013, 400),
+    (135, '2302.30.10', 0.0766, 6237),
+    (135, '8517.62.39', 0.1341, 9165),
+    (135, '2939.79.40', 0.1568, 4888),
+    (135, '2711.13.00', 0.1216, 6311),
+    (135, '8429.51.2', 0.0173, 4221),
+    (135, '2006.00.00', 0.0624, 4759),
+    (136, '5514.19.90', 0.1459, 400),
+    (136, '5405.00.00', 0.2811, 4655),
+    (136, '2920.90.90', 0.011, 2986),
+    (136, '8428.60.00', 0.1804, 14172),
+    (136, '2922.49.52', 0.4082, 7330),
+    (136, '7505.12.2', 0.2441, 2729),
+    (136, '2915.39.5', 0.4762, 558),
+    (137, '8466.93.30', 0.549, 4182),
+    (137, '2933.36.00', 0.0875, 2713),
+    (137, '9006.30.00', 0.662, 4880),
+    (137, '4407.25.00', 0.0677, 6725),
+    (137, '1522.00.00', 0.2143, 6480),
+    (137, '2711.12.10', 0.4222, 11730),
+    (137, '2832.30.20', 0.5396, 14453),
+    (137, '8445.19.27', 0.59, 13094),
+    (138, '0304.49.20', 0.087, 6369),
+    (138, '8420.10.10', 0.0214, 1618),
+    (138, '0305.51.00', 0.0476, 400),
+    (138, '7413.00.00', 0.0056, 3388),
+    (138, '0802.32.00', 0.0087, 5493),
+    (138, '8801.00.00', 0.0712, 3528),
+    (138, '2940.00.12', 0.0136, 6858),
+    (138, '4002.19.20', 0.0393, 5221),
+    (138, '6403.91.10', 0.0078, 10465),
+    (138, '8543.40.00', 0.0868, 400),
+    (138, '2530.90.90', 0.0858, 3562),
+    (138, '2826.90.90', 0.0773, 2736),
+    (138, '2917.39.3', 0.039, 8936),
+    (138, '0602.30.00', 0.0338, 2853),
+    (138, '8501.51.10', 0.0083, 3718),
+    (138, '8501.40.11', 0.0258, 400),
+    (138, '8465.99.00', 0.0675, 506),
+    (138, '3105.90.19', 0.0899, 2789),
+    (138, '3003.39.9', 0.0175, 7034),
+    (138, '9021.39.20', 0.0615, 400),
+    (138, '0304.92.29', 0.027, 400),
+    (138, '3824.99.83', 0.0075, 6160),
+    (138, '2918.29.10', 0.0372, 6196),
+    (138, '0602.10.00', 0.0177, 11138),
+    (138, '3507.90.19', 0.0218, 400),
+    (138, '8542.39.11', 0.0425, 7855),
+    (138, '2009.12.00', 0.0504, 12896),
+    (138, '2710.12.4', 0.0356, 3782),
+    (139, '2924.21.20', 0.0258, 7280),
+    (139, '3808.69.10', 0.0764, 12135),
+    (139, '8466.93.19', 0.1837, 400),
+    (139, '5105.29.91', 0.1817, 8633),
+    (139, '2504.10.00', 0.5622, 1918),
+    (139, '8533.90.00', 0.1467, 2251),
+    (139, '8806.99.00', 0.0395, 2396),
+    (139, '8536.50.30', 0.0679, 12920),
+    (139, '0302.53.00', 0.2903, 8527),
+    (139, '8443.99.42', 0.0436, 8765),
+    (139, '2849.20.00', 0.1621, 6832),
+    (139, '9021.39.40', 0.1824, 10657),
+    (139, '3003.90.58', 0.0411, 400),
+    (139, '6306.22.00', 0.0222, 6141),
+    (139, '5210.32.00', 0.435, 12595),
+    (139, '2939.19.00', 0.0936, 3651),
+    (139, '8532.30.90', 0.4842, 4387),
+    (139, '7015.10.10', 0.0862, 6256),
+    (139, '9017.20.00', 0.0383, 6494),
+    (139, '2939.69.59', 0.1717, 400),
+    (139, '3004.10.19', 0.1637, 4946),
+    (140, '9202.10.00', 0.0454, 7435),
+    (140, '5801.27.00', 0.4922, 400),
+    (140, '8477.59.1', 0.2746, 4886),
+    (140, '8529.90.1', 0.1154, 400),
+    (140, '8506.10.1', 0.2818, 5399),
+    (140, '8602.90.00', 0.2006, 7398),
+    (140, '2934.10.10', 0.4981, 1656),
+    (140, '0301.94.10', 0.3547, 16470),
+    (140, '4301.90.00', 0.1684, 7674),
+    (140, '3809.91.41', 0.169, 890),
+    (141, '8714.96.11', 0.4721, 6042),
+    (141, '8422.20.00', 0.0048, 3630),
+    (141, '2914.79.1', 0.0029, 3259),
+    (141, '0304.95.00', 0.003, 7736),
+    (141, '0301.94.10', 0.0025, 1435),
+    (141, '0803.10.00', 0.0036, 14281),
+    (141, '5205.13.90', 0.0013, 5843),
+    (141, '8542.31.90', 0.0116, 7975),
+    (142, '8482.10.90', 0.1205, 1710),
+    (142, '7010.90.2', 0.2155, 400),
+    (142, '8418.21.00', 0.0957, 12308),
+    (142, '5211.12.00', 0.3426, 7993),
+    (142, '8419.50.2', 0.0847, 2234),
+    (142, '8419.50.10', 0.7162, 1851),
+    (142, '6802.99.10', 0.3686, 1246),
+    (142, '2208.30.10', 0.0856, 10384),
+    (142, '8108.90.00', 0.069, 1004),
+    (142, '8433.40.00', 0.1224, 21920),
+    (142, '7315.90.00', 0.043, 2972),
+    (142, '2523.30.00', 0.1931, 5272),
+    (142, '7415.21.00', 0.0981, 400),
+    (142, '6217.90.00', 0.3254, 1586),
+    (142, '8421.39.10', 0.0086, 4128),
+    (143, '3804.00.12', 0.964, 4641),
+    (143, '2905.19.11', 0.0369, 1926),
+    (143, '3701.30.21', 0.0057, 400),
+    (143, '4706.10.00', 0.0365, 12275),
+    (143, '2933.59.33', 0.1181, 5223),
+    (143, '6903.20.20', 0.0412, 811),
+    (143, '0304.33.00', 0.0113, 4519),
+    (143, '2936.27.10', 0.0018, 400),
+    (143, '8473.30.41', 0.0051, 400),
+    (143, '8536.50.90', 0.0614, 1883),
+    (143, '7004.20.00', 0.0987, 400),
+    (143, '2933.35.00', 0.0001, 2678),
+    (143, '8443.91.99', 0.0286, 4107),
+    (143, '9024.80.90', 0.0213, 400),
+    (143, '8443.39.28', 0.0303, 12283),
+    (143, '2403.99.90', 0.0668, 7502),
+    (143, '3003.39.16', 0.0028, 8396),
+    (143, '5911.20.90', 0.0258, 400),
+    (143, '9030.89.20', 0.0878, 4930),
+    (143, '8703.32.90', 0.0273, 517),
+    (143, '2903.79.90', 0.0396, 400),
+    (143, '2924.29.94', 0.002, 3312),
+    (143, '2939.45.20', 0.1136, 1450),
+    (143, '2839.90.20', 0.0065, 8278),
+    (143, '6203.29.10', 0.005, 400),
+    (143, '7226.91.00', 0.0032, 18293),
+    (144, '9108.11.10', 0.0484, 10206),
+    (144, '7404.00.00', 0.1287, 4717),
+    (144, '8424.89.90', 0.2819, 3077),
+    (144, '7219.34.00', 0.1877, 13716),
+    (144, '4820.90.00', 0.0278, 1775),
+    (144, '3005.90.90', 0.3217, 7001),
+    (144, '7226.20.90', 0.0435, 3508),
+    (144, '8536.90.10', 0.0808, 400),
+    (144, '1604.19.00', 0.3583, 2345),
+    (144, '3912.11.10', 0.1916, 15613),
+    (144, '2922.19.52', 0.3864, 400),
+    (144, '2939.63.00', 0.044, 2970),
+    (144, '5902.10.90', 0.1718, 4336),
+    (144, '8101.99.10', 0.0807, 400),
+    (144, '9705.21.00', 0.1307, 4856),
+    (145, '4703.29.00', 1.0854, 4242),
+    (145, '3215.90.00', 3.5198, 400),
+    (145, '9027.20.12', 1.446, 542),
+    (145, '3003.90.4', 0.6822, 4160),
+    (145, '2309.90.50', 0.2798, 2504),
+    (145, '6804.10.00', 3.0877, 2966),
+    (145, '3004.20.41', 0.4912, 400),
+    (145, '2933.91.62', 0.9571, 2020),
+    (146, '3004.43.00', 0.2792, 5303),
+    (146, '4810.14.90', 0.484, 400),
+    (146, '8414.10.00', 0.0097, 5788),
+    (146, '9021.90.12', 0.0596, 6820),
+    (146, '4114.20.10', 0.1896, 6889),
+    (146, '2852.10.14', 0.0643, 8892),
+    (146, '2923.90.30', 0.0381, 10153),
+    (146, '3004.20.41', 0.0199, 400),
+    (146, '2007.99.26', 0.1663, 400),
+    (146, '3606.90.00', 0.0496, 3542),
+    (146, '3905.19.90', 0.3321, 6759),
+    (146, '2103.10.90', 0.169, 404),
+    (146, '0204.42.00', 0.0097, 1565),
+    (146, '8460.90.1', 0.1926, 10902),
+    (146, '5201.00.90', 0.0671, 850),
+    (146, '0106.20.00', 0.2159, 8328),
+    (146, '1204.00.90', 0.0208, 400),
+    (146, '8412.39.00', 0.0964, 7986),
+    (146, '8204.12.00', 0.6005, 400),
+    (146, '7407.29.2', 0.5181, 3955),
+    (146, '8542.39.11', 0.1334, 6105),
+    (146, '8481.20.90', 0.0728, 6283),
+    (146, '6006.32.10', 0.2693, 7109),
+    (147, '2610.00.10', 72.0573, 7513),
+    (147, '3004.90.19', 4.0893, 11728),
+    (147, '5111.11.20', 0.1695, 18056),
+    (147, '8426.49.10', 0.5556, 3775),
+    (147, '6812.99.90', 0.4652, 5304),
+    (147, '2915.90.4', 1.3178, 400),
+    (147, '9017.20.00', 3.8037, 400),
+    (147, '2915.39.91', 1.0277, 5157),
+    (147, '2933.99.99', 1.262, 2384),
+    (147, '6306.19.10', 0.502, 1741),
+    (147, '4806.10.00', 0.6553, 2506),
+    (147, '8532.29.10', 0.306, 7539),
+    (147, '4001.30.00', 1.4411, 400),
+    (147, '3808.59.2', 0.4155, 400),
+    (147, '7901.12.10', 2.7956, 1046),
+    (148, '2934.99.32', 9.1618, 7577),
+    (148, '6306.40.90', 0.2493, 14822),
+    (148, '2903.99.21', 0.0318, 13168),
+    (148, '6203.42.00', 0.7871, 1738),
+    (148, '3003.90.65', 1.4289, 2935),
+    (148, '6004.10.91', 0.3414, 2867),
+    (148, '2903.76.00', 0.0193, 7574),
+    (148, '1302.14.00', 0.229, 9470),
+    (148, '8412.21.90', 0.008, 4024),
+    (148, '4805.12.00', 0.4312, 400),
+    (148, '8471.50.10', 0.1017, 400),
+    (148, '4410.90.00', 0.0391, 400),
+    (148, '8539.39.11', 0.8465, 8975),
+    (148, '6909.19.10', 0.5032, 5396),
+    (148, '5207.10.00', 0.1663, 2461),
+    (148, '4106.91.00', 0.8312, 2380),
+    (148, '2922.19.91', 0.7589, 7710),
+    (148, '8542.31.20', 0.1364, 13746),
+    (148, '8433.40.00', 0.2639, 5780),
+    (148, '3002.49.99', 0.1464, 8218),
+    (148, '1513.21.20', 0.4715, 5048),
+    (148, '5509.12.90', 0.4912, 2705),
+    (148, '2103.30.21', 0.0781, 7692),
+    (148, '2918.99.29', 0.5516, 11616),
+    (148, '1302.19.20', 0.0327, 7215),
+    (148, '2904.32.00', 0.0124, 8969),
+    (148, '0801.32.00', 0.1588, 400),
+    (148, '2923.20.00', 2.4259, 9619),
+    (148, '5212.14.00', 1.6389, 2343),
+    (148, '3002.12.35', 0.0016, 3798),
+    (149, '2008.70.90', 16.6662, 4631),
+    (149, '9032.89.8', 5.0416, 6905),
+    (149, '3006.60.00', 4.8621, 6697),
+    (149, '2103.10.90', 2.7942, 6197),
+    (149, '6112.11.00', 8.1474, 1914),
+    (149, '2903.99.16', 2.7307, 4020),
+    (149, '5407.94.00', 0.3015, 400),
+    (149, '8504.23.00', 1.3928, 8994),
+    (149, '6216.00.00', 7.2525, 400),
+    (150, '5509.91.00', 1.2742, 400),
+    (150, '3904.10.10', 0.0478, 10975),
+    (150, '2916.39.40', 0.018, 400),
+    (150, '7211.14.00', 0.3652, 7634),
+    (150, '8510.90.11', 0.0146, 4375),
+    (150, '2852.10.11', 0.157, 5275),
+    (150, '9010.10.10', 0.0441, 3697),
+    (150, '9024.10.90', 0.0013, 400),
+    (150, '8415.10.19', 0.043, 11655),
+    (150, '2937.90.30', 0.1167, 7270),
+    (150, '0908.22.00', 0.0063, 400),
+    (150, '3301.12.90', 0.2458, 8416),
+    (150, '8421.39.90', 0.113, 4004),
+    (150, '4818.90.10', 0.0688, 400),
+    (150, '2707.50.90', 0.1707, 400),
+    (150, '9030.33.21', 0.0722, 2392),
+    (150, '9021.10.20', 0.0307, 5624),
+    (150, '8501.32.10', 0.0557, 400),
+    (150, '3827.63.00', 0.1405, 3750),
+    (150, '6207.99.90', 0.0267, 8297),
+    (150, '8459.51.00', 0.0869, 5953),
+    (150, '2903.19.90', 0.3954, 400),
+    (150, '8421.21.00', 0.355, 2316),
+    (150, '6104.23.00', 0.0184, 1679),
+    (150, '4407.11.00', 0.1072, 401),
+    (150, '7314.41.00', 0.1369, 3992),
+    (150, '2933.59.13', 0.2779, 3365),
+    (151, '8207.70.20', 3.5946, 4638),
+    (151, '4011.10.00', 0.1667, 1213),
+    (151, '2835.29.10', 0.0153, 7279),
+    (151, '3507.90.49', 0.0125, 7743),
+    (151, '2917.19.90', 0.0116, 10826),
+    (151, '3909.40.9', 0.2653, 4965),
+    (151, '3505.20.00', 0.171, 15543),
+    (151, '4102.21.00', 0.0401, 1057),
+    (151, '2921.12.00', 0.0128, 7059),
+    (151, '9306.21.30', 0.0046, 5390),
+    (151, '9606.10.00', 0.0215, 5900),
+    (151, '3605.00.00', 0.0231, 3959),
+    (152, '0303.89.90', 0.1248, 10666),
+    (153, '8307.10.10', 3.9047, 8001),
+    (153, '5404.19.90', 0.1332, 2423),
+    (153, '3004.10.1', 0.5891, 8667),
+    (153, '8517.14.90', 0.2385, 400),
+    (153, '7318.19.00', 0.0317, 10121),
+    (153, '9405.19.90', 0.0354, 5099),
+    (153, '8409.91.11', 0.0008, 3247),
+    (153, '5402.31.1', 0.0155, 4688),
+    (153, '0105.94.00', 0.0369, 5941),
+    (153, '0210.93.00', 0.2307, 530),
+    (153, '3004.90.69', 0.0498, 5695),
+    (153, '2918.19.43', 0.0397, 400),
+    (153, '6209.20.00', 0.0001, 400),
+    (153, '5806.10.00', 0.0056, 400),
+    (153, '6211.11.00', 0.1014, 3939),
+    (153, '0209.10.11', 0.299, 6799),
+    (153, '6304.11.00', 0.0193, 443),
+    (153, '5601.30.10', 0.0445, 400),
+    (153, '2928.00.90', 0.2709, 588),
+    (153, '8448.32.30', 0.3031, 400),
+    (153, '2841.90.8', 0.0095, 400),
+    (153, '0207.14.31', 0.0128, 13714),
+    (153, '4805.12.00', 0.0511, 8075),
+    (154, '2922.49.61', 0.1721, 5311),
+    (154, '2834.29.30', 0.22, 4988),
+    (154, '6305.32.00', 0.4273, 400),
+    (154, '8504.31.19', 0.1125, 8201),
+    (154, '8714.95.00', 0.2447, 9891),
+    (154, '2909.44.11', 0.6431, 8733),
+    (154, '3003.39.34', 0.6452, 400),
+    (154, '2941.90.3', 0.0199, 836),
+    (154, '7901.11.11', 0.4474, 400),
+    (154, '7307.21.00', 0.064, 4314),
+    (154, '2903.81.30', 0.1131, 400),
+    (154, '2818.30.00', 0.2009, 400),
+    (154, '9002.11.11', 0.1812, 3720),
+    (154, '2933.33.6', 0.1734, 8577),
+    (154, '2909.50.19', 0.129, 5184),
+    (154, '0106.39.00', 0.1099, 4575),
+    (154, '4802.54.99', 0.1026, 4042),
+    (154, '8442.40.90', 0.0383, 400),
+    (155, '3907.10.10', 0.0442, 7049),
+    (155, '4816.90.10', 0.0088, 10184),
+    (155, '2921.42.90', 0.0139, 400),
+    (156, '5603.14.30', 0.1721, 7815),
+    (156, '2930.90.3', 0.0216, 2050),
+    (156, '8501.63.00', 0.0236, 400),
+    (156, '1210.20.10', 0.1023, 2126),
+    (156, '5004.00.00', 0.0271, 400),
+    (156, '9032.89.24', 0.0068, 8536),
+    (156, '5208.59.90', 0.0135, 4965),
+    (156, '3201.20.00', 0.06, 4030),
+    (156, '8443.13.90', 0.0633, 1548),
+    (156, '0206.30.00', 0.0147, 5064),
+    (156, '8443.32.40', 0.1212, 400),
+    (156, '2921.59.19', 0.1073, 6958),
+    (156, '2938.90.20', 0.0313, 2470),
+    (156, '4816.90.10', 0.0148, 7891),
+    (156, '3901.20.19', 0.0097, 9964),
+    (156, '2932.99.13', 0.0307, 6650),
+    (156, '5403.31.90', 0.148, 4431),
+    (156, '3004.90.13', 0.023, 6432),
+    (156, '2920.90.32', 0.0745, 5684),
+    (156, '7011.10.90', 0.0515, 7354),
+    (156, '3404.90.21', 0.0605, 1628),
+    (156, '5510.12.19', 0.0393, 6363),
+    (156, '2103.90.29', 0.0105, 3855),
+    (157, '6004.10.92', 0.1064, 11577),
+    (157, '8536.90.40', 0.0148, 400),
+    (157, '8525.89.13', 0.046, 2329),
+    (157, '4401.21.00', 0.0174, 5556),
+    (157, '2937.29.60', 0.0031, 400),
+    (157, '2704.00.12', 0.0242, 400),
+    (157, '8532.23.10', 0.0122, 2853),
+    (157, '2836.20.10', 0.0426, 9313),
+    (157, '5509.91.00', 0.0042, 698),
+    (157, '2908.19.2', 0.0733, 3190),
+    (157, '2920.19.90', 0.0028, 4998),
+    (157, '2903.29.10', 0.0235, 13080),
+    (157, '2934.99.34', 0.0455, 12678),
+    (157, '9018.90.94', 0.0086, 8769),
+    (157, '1212.99.90', 0.0057, 4053),
+    (157, '8477.20.10', 0.0401, 6140),
+    (157, '2934.99.43', 0.0523, 400),
+    (157, '5401.10.11', 0.015, 400),
+    (157, '3812.31.00', 0.0247, 2274),
+    (157, '6804.22.1', 0.0346, 400),
+    (157, '8481.80.99', 0.0174, 400),
+    (157, '8212.20.20', 0.0859, 2786),
+    (157, '6209.20.00', 0.006, 400),
+    (157, '7225.50.90', 0.0067, 2035),
+    (157, '3207.20.9', 0.0103, 4850),
+    (157, '4102.29.00', 0.0217, 7639),
+    (157, '0713.33.21', 0.0015, 1573),
+    (157, '8461.20.10', 0.015, 400),
+    (159, '8455.22.90', 0.716, 6340),
+    (159, '6815.99.14', 0.0546, 400),
+    (159, '3003.90.73', 0.0074, 2202),
+    (159, '2920.11.20', 0.0686, 9907),
+    (159, '3002.12.22', 0.0026, 779),
+    (159, '5513.39.19', 0.0208, 2972),
+    (159, '2504.10.00', 0.0081, 5600),
+    (159, '0207.14.21', 0.098, 1857),
+    (159, '2511.20.00', 0.1473, 400),
+    (159, '6104.41.00', 0.0227, 11049),
+    (159, '5603.94.90', 0.0032, 8797),
+    (159, '8462.59.00', 0.0349, 10485),
+    (159, '8536.69.90', 0.0128, 2548),
+    (159, '1604.19.00', 0.0007, 16182),
+    (159, '2941.50.20', 0.0563, 2698),
+    (159, '8464.20.29', 0.0312, 400),
+    (159, '8450.11.00', 0.1311, 1220),
+    (159, '3921.90.12', 0.04, 400),
+    (159, '4011.40.00', 0.0192, 1745),
+    (159, '9030.40.20', 0.0141, 7122),
+    (159, '8424.10.00', 0.0026, 9105),
+    (159, '5609.00.90', 0.0237, 4990),
+    (159, '2920.90.5', 0.0, 400),
+    (159, '4811.10.90', 0.0041, 400),
+    (159, '3004.20.9', 0.0871, 11243),
+    (159, '5603.94.20', 0.0677, 400),
+    (160, '6815.12.00', 0.3829, 6903),
+    (160, '8543.90.10', 0.1248, 400),
+    (161, '9031.80.11', 0.1111, 5539),
+    (161, '2909.49.2', 0.0426, 7304),
+    (161, '0801.32.00', 0.0616, 400),
+    (161, '8424.89.20', 0.0436, 400),
+    (161, '2826.19.20', 0.1279, 6317),
+    (161, '2924.29.45', 0.0214, 2448),
+    (161, '4011.70.90', 0.0871, 2305),
+    (161, '3703.10.10', 0.0018, 4619),
+    (161, '8443.32.35', 0.0115, 6669),
+    (161, '7010.90.2', 0.0571, 721),
+    (161, '2930.90.42', 0.0092, 400),
+    (161, '8512.20.21', 0.104, 3806),
+    (161, '2620.29.00', 0.0354, 13810),
+    (161, '8702.40.90', 0.1307, 400),
+    (161, '5602.29.00', 0.047, 3704),
+    (161, '8443.14.00', 0.115, 9925),
+    (161, '8512.20.29', 0.0101, 4554),
+    (161, '2306.90.10', 0.0515, 7186),
+    (161, '3004.20.62', 0.0405, 3514),
+    (161, '4803.00.90', 0.0263, 11397),
+    (161, '0301.99.11', 0.1512, 5231),
+    (161, '9032.89.22', 0.076, 400),
+    (161, '8516.40.00', 0.1028, 4506),
+    (161, '2208.70.00', 0.0099, 3205),
+    (161, '4802.57.92', 0.0311, 1933),
+    (161, '2833.11.90', 0.0141, 4707),
+    (161, '4810.19.99', 0.0067, 12848),
+    (161, '8517.79.00', 0.2733, 400),
+    (161, '8402.90.00', 0.0119, 1140),
+    (162, '2916.19.11', 0.9291, 1373),
+    (162, '8479.10.90', 0.006, 7942),
+    (162, '0713.35.90', 0.0644, 4856),
+    (162, '5202.10.00', 0.0795, 3379),
+    (162, '3403.91.90', 0.0016, 400),
+    (162, '5601.22.91', 0.0223, 12023),
+    (162, '8539.32.20', 0.0118, 2127),
+    (162, '8532.24.20', 0.0027, 5770),
+    (162, '8467.89.00', 0.0025, 3816),
+    (162, '4705.00.00', 0.0037, 5738),
+    (162, '3202.90.12', 0.0861, 400),
+    (162, '3907.29.4', 0.0244, 833),
+    (162, '2301.20.90', 0.0448, 1629),
+    (162, '2937.23.21', 0.037, 7024),
+    (162, '7110.29.00', 0.007, 4520),
+    (162, '0305.42.00', 0.0122, 400),
+    (163, '8414.90.20', 0.4003, 7755),
+    (163, '1513.29.11', 0.6847, 400),
+    (163, '9401.41.00', 0.361, 400),
+    (163, '7315.89.00', 0.0349, 400),
+    (163, '4802.20.10', 0.0676, 680),
+    (163, '8212.20.20', 0.3183, 400),
+    (163, '8109.21.00', 0.2269, 2596),
+    (163, '7804.19.00', 0.0416, 5899),
+    (163, '7217.90.00', 0.2499, 14669),
+    (163, '8466.20.10', 0.4492, 4661),
+    (163, '0713.10.10', 0.1493, 11204),
+    (163, '3904.10.20', 0.5202, 4604),
+    (163, '2841.90.2', 0.0907, 5141),
+    (164, '8512.20.19', 0.0339, 4736),
+    (164, '7304.59.90', 0.0353, 400),
+    (164, '0305.63.00', 0.0775, 1209),
+    (165, '2933.53.60', 0.0599, 5439),
+    (165, '6211.12.00', 0.1451, 1328),
+    (166, '2805.19.90', 6.4181, 1625),
+    (166, '8423.81.90', 0.156, 3468),
+    (166, '8504.32.11', 0.2225, 400),
+    (166, '5516.23.00', 0.0002, 4351),
+    (166, '6902.20.10', 0.8196, 400),
+    (166, '0206.21.00', 0.2066, 4176),
+    (166, '4810.14.90', 0.4428, 4943),
+    (166, '2828.10.00', 0.0001, 1996),
+    (166, '9021.90.92', 0.0752, 2956),
+    (167, '2812.19.20', 0.6928, 617),
+    (167, '3801.30.10', 0.0305, 2044),
+    (167, '9004.90.90', 0.0024, 5347),
+    (167, '2827.39.60', 0.0015, 6813),
+    (167, '5402.51.10', 0.0061, 7060),
+    (167, '8105.20.29', 0.0108, 1760),
+    (167, '5104.00.00', 0.0384, 7115),
+    (167, '9010.50.20', 0.0034, 400),
+    (167, '8421.11.90', 0.0194, 1327),
+    (167, '5211.20.20', 0.0148, 7120),
+    (167, '8419.40.20', 0.0127, 400),
+    (167, '0303.23.00', 0.0337, 400),
+    (167, '6005.44.00', 0.0113, 8042),
+    (167, '8414.90.34', 0.0014, 400),
+    (167, '9032.89.89', 0.0031, 2413),
+    (167, '2941.30.10', 0.0317, 16614),
+    (167, '8212.10.20', 0.0526, 2711),
+    (167, '9021.90.19', 0.0004, 9074),
+    (167, '3402.90.90', 0.0004, 12412),
+    (167, '2809.20.20', 0.0014, 585),
+    (167, '0505.10.00', 0.0102, 1989),
+    (167, '8466.92.00', 0.0125, 400),
+    (167, '5516.91.00', 0.0119, 2211),
+    (168, '3907.50.10', 0.1568, 400),
+    (168, '7013.91.10', 1.048, 2090),
+    (168, '9018.49.11', 0.0375, 400),
+    (168, '4907.00.90', 0.8192, 8195),
+    (168, '4911.91.00', 0.5947, 3389),
+    (168, '0303.24.90', 0.4387, 5303),
+    (168, '8406.90.21', 1.4472, 10399),
+    (168, '8523.21.20', 0.5363, 15549),
+    (168, '2921.51.3', 0.1058, 400),
+    (168, '3003.39.14', 0.4666, 7971),
+    (169, '7901.20.90', 0.2374, 8301),
+    (169, '8450.20.10', 0.1193, 3121),
+    (169, '2504.90.00', 0.0106, 5088),
+    (169, '2934.99.43', 0.0555, 3112),
+    (169, '9403.40.00', 0.071, 9272),
+    (169, '6203.19.00', 0.0468, 17383),
+    (169, '5210.32.00', 0.0256, 3255),
+    (169, '8416.90.00', 0.087, 6875),
+    (169, '6307.10.00', 0.0302, 820),
+    (169, '0504.00.1', 0.0702, 10391),
+    (169, '6116.99.00', 0.0546, 3791),
+    (169, '9106.10.00', 0.0222, 7534),
+    (169, '5206.21.00', 0.1447, 11053),
+    (169, '0307.51.00', 0.1432, 7386),
+    (169, '2827.39.91', 0.0233, 400),
+    (169, '8441.40.00', 0.027, 5829),
+    (169, '2933.29.13', 0.2439, 6039),
+    (169, '2920.90.59', 0.048, 400),
+    (169, '7202.11.00', 0.0757, 3187),
+    (169, '7216.10.00', 0.0415, 9199),
+    (169, '8538.90.90', 0.2471, 400),
+    (169, '8480.71.00', 0.0351, 400),
+    (169, '0304.73.00', 0.0671, 400),
+    (169, '0206.21.00', 0.1908, 3572),
+    (169, '2930.90.69', 0.0037, 6995),
+    (170, '3806.90.1', 0.1117, 2404),
+    (170, '9018.41.00', 0.0787, 10591),
+    (170, '3301.90.30', 0.0696, 400),
+    (170, '3808.59.29', 0.3404, 2494),
+    (170, '5702.50.10', 0.2718, 3980),
+    (170, '2939.11.52', 0.0548, 7573),
+    (170, '2930.20.23', 0.5442, 3101),
+    (170, '2530.10.90', 0.4248, 3382),
+    (171, '3825.90.00', 0.3213, 400),
+    (171, '7408.29.1', 0.3277, 400),
+    (171, '6107.12.00', 0.095, 400),
+    (171, '2917.39.40', 0.0797, 400),
+    (171, '8471.70.40', 0.0903, 7171),
+    (171, '2906.19.90', 0.0536, 485),
+    (171, '9027.90.99', 0.0512, 6285),
+    (172, '8419.90.40', 0.543, 11208),
+    (172, '6204.12.00', 0.0041, 7990),
+    (172, '3824.99.5', 0.0276, 2850),
+    (172, '2933.33.51', 0.0403, 2579),
+    (172, '1704.90.10', 0.0177, 400),
+    (172, '8708.29.99', 0.005, 1255),
+    (172, '8539.32.30', 0.0144, 3727),
+    (172, '6902.20.10', 0.0042, 1741),
+    (172, '2931.41.00', 0.0134, 400),
+    (173, '8211.93.10', 2.4571, 4773),
+    (173, '5209.31.00', 0.208, 9842),
+    (173, '3502.90.10', 0.1101, 9759),
+    (173, '8419.90.39', 0.3936, 2195),
+    (173, '2909.49.23', 0.4104, 400),
+    (173, '7602.00.00', 0.0684, 9236),
+    (173, '6405.10.90', 0.1831, 1812),
+    (173, '6108.22.00', 0.0294, 400),
+    (173, '8448.11.20', 0.0894, 5272),
+    (173, '2931.41.00', 0.0054, 400),
+    (173, '2939.69.41', 0.0113, 400),
+    (173, '2907.11.00', 0.0916, 400),
+    (173, '2827.60.1', 0.0004, 400),
+    (173, '3208.10.10', 0.0061, 4699),
+    (173, '9022.90.10', 0.0213, 7646),
+    (173, '3206.50.2', 0.0083, 3624),
+    (173, '2941.90.13', 0.0766, 5890),
+    (173, '3908.10.19', 0.0326, 16026),
+    (173, '3204.14.00', 0.0119, 7743),
+    (173, '2932.95.00', 0.0072, 10500),
+    (173, '3507.90.32', 0.0034, 10549),
+    (173, '4011.20.10', 0.0079, 400),
+    (173, '2804.21.00', 0.0432, 8226),
+    (174, '0303.89.53', 0.1558, 11143),
+    (174, '9032.90.91', 0.532, 8394),
+    (174, '2837.20.29', 0.2164, 400),
+    (174, '6815.99.90', 1.0582, 4382),
+    (174, '2922.50.32', 0.3229, 6443),
+    (174, '3004.20.6', 1.5228, 6250),
+    (174, '3827.20.00', 0.479, 6754),
+    (174, '3701.91.00', 0.6945, 5361),
+    (174, '6204.39.00', 0.2265, 400),
+    (174, '5504.90.10', 0.5758, 400),
+    (174, '2106.90.2', 0.4141, 442),
+    (174, '2930.90.29', 0.6184, 400),
+    (174, '2818.20.90', 0.2486, 1236),
+    (174, '7208.27.10', 0.2369, 3491),
+    (174, '8448.39.11', 0.1049, 6854),
+    (174, '9021.40.00', 0.0921, 400),
+    (174, '4804.29.00', 0.1563, 4472),
+    (174, '8448.32.90', 0.4694, 8756),
+    (175, '7210.90.00', 0.5221, 6514),
+    (176, '5205.24.00', 0.5642, 6389),
+    (176, '2921.46.80', 0.327, 4633),
+    (176, '2825.30.90', 0.3921, 9868),
+    (176, '8112.39.00', 0.1974, 5457),
+    (176, '2849.90.10', 0.0657, 2076),
+    (176, '8541.41.12', 0.2067, 2670),
+    (177, '5607.50.90', 0.0394, 8492),
+    (177, '2933.11.12', 0.0272, 579),
+    (177, '2931.90.29', 0.0046, 976),
+    (178, '7019.15.00', 0.3905, 4646),
+    (178, '6216.00.00', 0.3926, 1202),
+    (178, '8529.90.1', 0.1368, 1362),
+    (179, '8505.90.80', 2.4774, 1797),
+    (179, '7410.11.12', 0.0109, 4975),
+    (179, '3809.91.4', 0.0264, 4383),
+    (179, '8407.21.10', 0.0911, 9542),
+    (179, '0301.95.90', 0.0003, 1318),
+    (179, '8201.90.00', 0.0218, 400),
+    (179, '2916.19.90', 0.0038, 1551),
+    (179, '8412.21.90', 0.1044, 3700),
+    (179, '1602.31.00', 0.1005, 400),
+    (179, '7314.39.00', 0.276, 11039),
+    (179, '2930.90.41', 0.003, 9225),
+    (179, '3003.90.85', 0.0372, 4627),
+    (179, '8406.90.2', 0.076, 7839),
+    (179, '3824.99.85', 0.0216, 8119),
+    (179, '2849.20.00', 0.3745, 5116),
+    (179, '8708.94.90', 0.0868, 400),
+    (179, '0304.46.00', 0.0126, 2946),
+    (179, '9010.50.90', 0.0954, 7289),
+    (179, '8471.60.53', 0.0016, 11175),
+    (179, '4002.11.20', 0.2593, 400),
+    (179, '2827.60.1', 0.0456, 400),
+    (179, '2712.20.00', 0.0017, 400),
+    (180, '2903.79.11', 0.226, 3341),
+    (180, '5504.90.10', 0.213, 3511),
+    (180, '5309.19.00', 0.4251, 400),
+    (180, '8456.30.90', 0.114, 400),
+    (180, '1902.20.00', 0.2553, 5713),
+    (180, '2924.29.63', 0.0204, 3483),
+    (181, '4304.00.00', 0.2803, 5024),
+    (181, '2207.10.90', 0.4957, 7623),
+    (181, '6303.99.00', 0.1552, 1957),
+    (181, '8413.50.10', 0.0544, 6740),
+    (181, '5808.90.00', 0.3501, 6051),
+    (181, '8506.10.3', 0.32, 400),
+    (181, '6909.12.10', 0.9736, 3997),
+    (181, '2937.29.10', 0.2145, 416),
+    (181, '2924.29.4', 0.0497, 10881),
+    (181, '5607.90.10', 0.1472, 3471),
+    (182, '5601.22.1', 1.0529, 8397),
+    (182, '8542.32.2', 0.464, 4236),
+    (182, '2106.90.21', 0.0197, 11347),
+    (182, '8414.90.3', 0.938, 2803),
+    (182, '6309.00.90', 0.1332, 400),
+    (182, '2834.29.30', 0.3953, 5991),
+    (182, '7006.00.00', 1.0891, 5839),
+    (182, '6208.21.00', 0.7401, 400),
+    (182, '7415.39.00', 0.2129, 400),
+    (182, '0804.10.10', 0.0559, 11329),
+    (182, '8704.23.90', 0.0958, 400),
+    (182, '2933.29.13', 0.3727, 6753),
+    (183, '0713.33.91', 0.0933, 400),
+    (184, '6909.12.90', 0.0124, 11966),
+    (184, '1605.40.00', 0.0008, 10963),
+    (184, '2826.19.10', 0.0426, 1282),
+    (184, '9305.99.00', 0.245, 14795),
+    (184, '2401.30.00', 0.1126, 1397),
+    (184, '7019.14.00', 0.0317, 6553),
+    (184, '3004.90.13', 0.1059, 6888),
+    (184, '6904.10.00', 0.0561, 11693),
+    (184, '9307.00.00', 0.0983, 6616),
+    (184, '2933.69.22', 0.0685, 6137),
+    (184, '8540.60.10', 0.0115, 8879),
+    (184, '7605.11.10', 0.0182, 4270),
+    (184, '3003.90.76', 0.0425, 12339),
+    (184, '9507.30.00', 0.1347, 400),
+    (184, '6004.90.10', 0.0382, 3786),
+    (184, '2922.19.11', 0.0806, 6327),
+    (184, '8419.40.10', 0.0251, 6727),
+    (184, '9030.33.90', 0.049, 2257),
+    (184, '7305.12.00', 0.0155, 5198),
+    (184, '6307.10.00', 0.0086, 400),
+    (184, '6103.41.00', 0.0562, 4412),
+    (184, '8458.99.00', 0.0414, 1806),
+    (184, '7320.10.00', 0.0543, 3780),
+    (184, '6214.90.10', 0.0702, 1371),
+    (187, '5212.25.00', 0.0066, 3445),
+    (187, '3301.13.00', 0.0727, 4043),
+    (187, '2924.29.6', 0.0655, 9835),
+    (187, '3907.10.41', 0.0246, 400),
+    (187, '5510.30.12', 0.2479, 4664),
+    (187, '3824.99.88', 0.0414, 6978),
+    (187, '0802.99.00', 0.0395, 1817),
+    (187, '1505.00.10', 0.0957, 3661),
+    (187, '8413.81.00', 0.1091, 3342),
+    (187, '8473.21.00', 0.0566, 400),
+    (187, '4107.19.10', 0.1064, 4765),
+    (187, '2811.19.90', 0.036, 2641),
+    (187, '9111.90.90', 0.0169, 400),
+    (187, '9007.20.90', 0.0231, 7639),
+    (187, '8607.11.10', 0.071, 400),
+    (188, '2921.19.99', 1.942, 400),
+    (188, '0302.89.21', 0.0285, 720),
+    (188, '7604.21.00', 0.0125, 1173),
+    (188, '8211.92.10', 0.0053, 3097),
+    (188, '3824.99.8', 0.3009, 8652),
+    (188, '3808.92.91', 0.0702, 6505),
+    (188, '0801.12.00', 0.003, 4434),
+    (188, '8471.50.10', 0.2384, 9342),
+    (189, '9031.80.9', 8.8954, 400),
+    (189, '8476.89.10', 0.0256, 4427),
+    (189, '1602.20.00', 0.3873, 400),
+    (189, '4814.90.00', 0.0511, 10249),
+    (189, '8309.90.00', 0.0372, 5874),
+    (189, '2915.90.33', 0.7203, 7125),
+    (189, '8413.30.20', 0.7097, 1150),
+    (189, '2939.80.10', 0.0601, 1745),
+    (189, '2817.00.20', 0.435, 7332),
+    (189, '3812.39.19', 0.166, 400),
+    (189, '7220.12.90', 0.3903, 3398),
+    (190, '5510.90.12', 0.8344, 4274),
+    (190, '6806.90.10', 0.0143, 400),
+    (190, '8514.90.00', 0.0111, 14107),
+    (190, '8413.70.10', 0.0513, 7099),
+    (190, '4805.19.00', 0.0079, 400),
+    (190, '5211.49.00', 0.026, 3554),
+    (190, '5402.45.20', 0.0148, 4537),
+    (190, '2825.50.10', 0.0131, 400),
+    (190, '8445.40.12', 0.0193, 4835),
+    (190, '3101.00.00', 0.0078, 5724),
+    (190, '9208.10.00', 0.0686, 7006),
+    (190, '2933.91.4', 0.0062, 1108),
+    (190, '6004.10.42', 0.0022, 400),
+    (190, '2933.59.14', 0.0021, 2036),
+    (190, '3926.10.00', 0.0608, 400),
+    (190, '2103.90.1', 0.0072, 2119),
+    (191, '4811.90.19', 3.7516, 1451),
+    (191, '3824.88.20', 0.0724, 1885),
+    (191, '2931.59.98', 0.1459, 400),
+    (191, '8504.31.11', 0.0392, 1540),
+    (191, '9402.90.90', 0.3607, 12451),
+    (191, '8517.61.30', 0.1327, 2369),
+    (191, '3808.92.91', 0.4335, 10755),
+    (191, '0703.90.90', 0.2594, 5219),
+    (191, '4410.19.99', 0.0022, 1702),
+    (191, '7301.20.00', 0.0451, 9588),
+    (191, '3702.41.00', 0.0888, 1627),
+    (191, '8465.91.20', 0.0234, 400),
+    (191, '3701.30.10', 0.0077, 7966),
+    (191, '3002.12.33', 0.6161, 8852),
+    (191, '4002.19.12', 0.0227, 400),
+    (191, '8425.11.00', 0.1033, 2512),
+    (191, '2523.10.00', 0.2739, 7617),
+    (191, '6202.40.00', 0.2927, 400),
+    (191, '8507.30.1', 0.044, 400),
+    (191, '8540.40.00', 0.0361, 5891),
+    (191, '4802.61.92', 0.0668, 2317),
+    (191, '2852.10.29', 0.2432, 400),
+    (191, '1105.10.00', 0.0398, 4768),
+    (191, '3919.90.20', 0.7311, 2198),
+    (191, '8433.11.00', 0.7505, 400),
+    (191, '4705.00.00', 0.0096, 4829),
+    (191, '6107.19.00', 0.0018, 5466),
+    (191, '3703.10.2', 0.023, 7865),
+    (192, '2853.90.30', 3.1846, 400),
+    (192, '2940.00.22', 0.0443, 1738),
+    (192, '3906.90.2', 0.1859, 3120),
+    (192, '3004.39.26', 0.1448, 13374),
+    (192, '2523.90.00', 0.0367, 400),
+    (192, '2915.70.39', 0.003, 4979),
+    (192, '9022.90.9', 0.0901, 400),
+    (192, '5211.52.00', 0.2426, 10656),
+    (192, '6813.89.90', 0.0335, 4908),
+    (192, '6005.24.00', 0.0023, 6535),
+    (192, '6107.91.00', 0.0295, 6493),
+    (192, '2841.30.00', 0.3075, 400),
+    (192, '8421.99.10', 0.1547, 9678),
+    (192, '9105.19.00', 0.0699, 10239),
+    (192, '8605.00.10', 0.2344, 2694),
+    (192, '8434.20.10', 0.176, 1271),
+    (192, '3004.90.76', 0.0315, 8209),
+    (193, '8539.31.19', 4.3227, 400),
+    (193, '2915.90.32', 0.1708, 400),
+    (193, '3603.30.00', 0.0045, 4598),
+    (193, '2702.20.00', 0.1578, 7463),
+    (193, '1505.00.90', 0.1058, 11803),
+    (193, '8511.10.00', 0.2473, 400),
+    (193, '0303.64.00', 0.0012, 12887),
+    (193, '3002.41.22', 0.0457, 8677),
+    (193, '2934.99.93', 0.1723, 400),
+    (193, '5305.00.90', 0.2738, 8277),
+    (193, '2807.00.20', 0.0909, 400),
+    (193, '8474.20.90', 0.2093, 4051),
+    (193, '6811.81.00', 0.0357, 400),
+    (193, '2918.16.10', 0.2492, 400),
+    (193, '8426.49.10', 0.0929, 1267),
+    (194, '2933.91.8', 0.0948, 6933),
+    (194, '2933.99.6', 0.0971, 400),
+    (195, '3808.93.49', 0.0609, 7629),
+    (195, '8536.30.90', 0.0381, 4121),
+    (195, '7415.33.00', 0.1313, 2194),
+    (195, '8479.71.00', 0.1773, 2923),
+    (195, '8708.21.00', 0.0096, 9210),
+    (195, '2710.12.60', 0.0706, 400),
+    (195, '6202.90.00', 0.3442, 11573),
+    (195, '6111.90.90', 0.1772, 9111),
+    (195, '3911.90.29', 0.0574, 4595),
+    (195, '8413.60.11', 0.0781, 5825),
+    (195, '8481.80.29', 0.0543, 400),
+    (195, '0104.10.11', 0.3679, 5519),
+    (195, '3825.90.00', 0.1087, 3577),
+    (195, '0101.90.00', 0.1106, 400),
+    (195, '1207.99.10', 0.0692, 4579),
+    (196, '1302.13.00', 2.1802, 400),
+    (196, '8504.31.99', 0.0823, 6956),
+    (196, '3914.00.1', 0.1341, 10536),
+    (196, '2921.19.3', 0.1572, 7538),
+    (196, '2834.10.10', 0.0173, 676),
+    (196, '4407.19.00', 0.0367, 8687),
+    (196, '8415.90.20', 0.0023, 435),
+    (196, '2621.90.10', 0.0081, 13725),
+    (196, '3507.10.00', 0.0459, 400),
+    (196, '7605.11.10', 0.0249, 10415),
+    (196, '2930.90.94', 0.0464, 400),
+    (196, '8525.89.29', 0.2901, 2275),
+    (196, '5607.50.1', 0.0623, 7651),
+    (196, '2308.00.00', 0.0278, 400),
+    (196, '5402.47.90', 0.1373, 12166),
+    (196, '9021.90.91', 0.0044, 400),
+    (196, '5501.11.00', 0.0001, 3733),
+    (196, '3206.50.29', 0.0115, 11419),
+    (197, '5208.11.00', 0.0075, 8315),
+    (197, '7114.20.00', 0.1297, 7353),
+    (197, '5401.10.12', 0.1129, 2154),
+    (197, '3206.50.1', 0.0562, 6387),
+    (197, '8541.10.9', 0.0217, 8387),
+    (197, '4419.20.00', 0.0646, 7278),
+    (197, '8425.31.10', 0.2164, 2483),
+    (197, '6117.90.00', 0.1999, 14959),
+    (197, '3909.10.00', 0.1103, 1225),
+    (197, '2933.55.10', 0.0545, 12665),
+    (197, '0401.20.90', 0.1523, 2668),
+    (197, '5512.29.00', 0.0129, 400),
+    (197, '8201.10.00', 0.0334, 9701),
+    (197, '5911.90.00', 0.0455, 3838),
+    (197, '8513.10.90', 0.0011, 400),
+    (197, '2921.51.34', 0.1029, 400),
+    (197, '2933.39.3', 0.1096, 400),
+    (197, '8209.00.19', 0.035, 5262),
+    (197, '4408.90.10', 0.126, 3183),
+    (197, '8542.90.00', 0.1424, 14312),
+    (197, '7211.90.90', 0.2948, 5265),
+    (198, '3603.50.00', 2.0339, 11236),
+    (198, '5509.31.00', 0.2439, 7449),
+    (198, '2922.49.6', 0.0444, 4089),
+    (198, '2924.29.47', 0.1337, 4946),
+    (198, '0102.29.19', 0.2814, 4088),
+    (198, '5402.39.00', 0.0196, 4396),
+    (198, '8465.95.92', 0.0491, 7427),
+    (198, '3002.41.21', 0.0685, 650),
+    (198, '8539.32.30', 0.0168, 6193),
+    (198, '3808.61.00', 0.241, 12014),
+    (198, '1605.62.00', 0.0028, 4540),
+    (198, '2916.20.13', 0.0497, 400),
+    (198, '2710.19.91', 0.1077, 8496),
+    (198, '2933.53.21', 0.026, 4654),
+    (198, '7315.12.90', 0.3104, 722),
+    (198, '9106.90.00', 0.1183, 12186),
+    (198, '7203.10.00', 0.0258, 11845),
+    (198, '1605.10.00', 0.0204, 1295),
+    (199, '0713.20.10', 0.8478, 6772),
+    (199, '6812.99.90', 0.0188, 15040),
+    (199, '8410.12.00', 0.0124, 11732),
+    (199, '2917.13.29', 0.0323, 400),
+    (199, '8424.30.20', 0.0307, 654),
+    (199, '2009.12.00', 0.001, 400),
+    (199, '8448.20.10', 0.0054, 4578),
+    (199, '2924.29.92', 0.0028, 10866),
+    (199, '2939.79.1', 0.0286, 3241),
+    (199, '0105.15.00', 0.0063, 10330),
+    (199, '2931.90.90', 0.0003, 7717),
+    (199, '3002.12.21', 0.0077, 5755),
+    (199, '2811.12.00', 0.0203, 400),
+    (199, '2931.90.52', 0.0028, 400),
+    (199, '8105.90.10', 0.0934, 3743),
+    (199, '2916.16.00', 0.0013, 3172),
+    (199, '9405.50.00', 0.0024, 2771),
+    (199, '3825.50.00', 0.1232, 11089),
+    (199, '8525.83.00', 0.0062, 1099),
+    (199, '5211.49.00', 0.0033, 3274),
+    (199, '5402.32.11', 0.0094, 2157),
+    (199, '4202.91.00', 0.021, 6668),
+    (199, '2933.59.91', 0.0051, 400),
+    (199, '2520.10.20', 0.0176, 4942),
+    (199, '2914.19.21', 0.0938, 9193),
+    (199, '3809.92.19', 0.0197, 11135),
+    (199, '2530.90.10', 0.0023, 8392),
+    (200, '8422.40.30', 4.6942, 6158),
+    (200, '4012.13.00', 0.0389, 5367),
+    (200, '0303.99.90', 0.0665, 3370),
+    (200, '4410.11.29', 0.0056, 4004),
+    (200, '3003.20.63', 0.0084, 400),
+    (200, '0304.89.10', 0.1081, 400),
+    (200, '7304.41.90', 0.6049, 400),
+    (200, '9504.90.10', 0.0027, 400),
+    (200, '8423.30.19', 0.0415, 7455),
+    (200, '5501.20.00', 0.0694, 439),
+    (200, '2843.90.90', 0.2989, 20449),
+    (200, '0811.20.00', 0.117, 400),
+    (200, '3808.94.1', 0.002, 10037),
+    (200, '2933.99.35', 0.0164, 5813),
+    (200, '8704.21.10', 0.5142, 4675),
+    (200, '4823.20.91', 0.4455, 1364),
+    (200, '3003.90.87', 0.0825, 12188),
+    (200, '7208.39.90', 0.0066, 7823),
+    (200, '3923.21.90', 0.0275, 400),
+    (200, '5305.00.10', 0.1328, 11995),
+    (201, '5509.32.00', 0.0716, 9868),
+    (201, '6104.13.00', 0.1869, 634),
+    (202, '6110.20.00', 0.3912, 1707),
+    (202, '6204.61.00', 0.4119, 9124),
+    (202, '2842.90.00', 0.32, 400),
+    (202, '8806.94.00', 0.0625, 9127),
+    (202, '3906.90.21', 0.1273, 400),
+    (202, '3707.90.29', 0.4872, 3257),
+    (202, '2306.20.00', 0.1615, 5585),
+    (202, '8516.10.00', 0.1902, 1544),
+    (202, '5402.62.00', 0.2171, 16253),
+    (202, '5109.10.00', 0.3558, 2960),
+    (202, '2928.00.30', 0.3568, 2517),
+    (202, '4010.12.00', 0.381, 9443),
+    (202, '2937.22.39', 0.1049, 400),
+    (203, '2926.90.30', 0.0843, 9320),
+    (203, '4802.40.10', 0.008, 9167),
+    (203, '8426.19.00', 0.0193, 4411),
+    (203, '8543.70.15', 0.1353, 400),
+    (203, '3002.12.14', 0.031, 12963),
+    (203, '3920.59.00', 0.0428, 4329),
+    (203, '2921.42.4', 0.0435, 5273),
+    (203, '2924.19.32', 0.0568, 1501),
+    (203, '9027.30.1', 0.0032, 7492),
+    (203, '0105.13.00', 0.1308, 400),
+    (203, '8446.30.90', 0.0265, 3903),
+    (203, '3825.61.00', 0.0498, 12357),
+    (203, '8448.39.92', 0.0897, 9112),
+    (203, '0602.90.10', 0.0718, 3766),
+    (203, '6815.99.13', 0.044, 400),
+    (203, '8534.00.1', 0.0305, 400),
+    (203, '2941.90.49', 0.0681, 2708),
+    (203, '8517.62.64', 0.0297, 14933),
+    (203, '6115.29.20', 0.0866, 6199),
+    (203, '2903.46.00', 0.0806, 4243),
+    (203, '1302.19.40', 0.1383, 400),
+    (203, '3701.30.31', 0.0263, 5461),
+    (203, '8540.91.20', 0.0613, 3759),
+    (203, '2930.90.79', 0.0076, 3508),
+    (204, '8401.20.00', 0.0691, 10780),
+    (204, '5210.19.10', 0.001, 2618),
+    (204, '2804.70.10', 0.0761, 400),
+    (204, '8406.90.21', 0.0652, 5465),
+    (204, '8409.91.15', 0.0878, 400),
+    (204, '2621.90.90', 0.0224, 6829),
+    (204, '2903.77.33', 0.1151, 7625),
+    (204, '9305.91.00', 0.056, 400),
+    (204, '8479.89.40', 0.1951, 1452),
+    (204, '2922.49.20', 0.0265, 7382),
+    (204, '0303.89.6', 0.0521, 1910),
+    (204, '8421.91.10', 0.0161, 8827),
+    (204, '3301.29.18', 0.205, 400),
+    (204, '8539.31.3', 0.0731, 1385),
+    (205, '2829.19.20', 1.6358, 8415),
+    (205, '1302.14.00', 0.017, 1651),
+    (205, '2917.39.1', 0.0635, 400),
+    (205, '9608.91.00', 0.1941, 6753),
+    (205, '8105.90.10', 0.0158, 10410),
+    (205, '0907.10.00', 0.0069, 793),
+    (205, '0302.73.00', 0.0517, 5197),
+    (205, '8456.12.1', 0.0219, 1595),
+    (205, '2904.99.40', 0.1081, 4230),
+    (205, '2852.10.11', 0.1038, 7117),
+    (205, '7214.10.90', 0.3426, 400),
+    (205, '0304.96.00', 0.0035, 529),
+    (205, '3003.20.95', 0.0001, 400),
+    (205, '4805.93.00', 0.005, 490),
+    (205, '2933.59.19', 0.3133, 11884),
+    (205, '6403.59.10', 0.0001, 11223),
+    (205, '8511.80.30', 0.1417, 400),
+    (205, '5806.32.00', 0.0942, 400),
+    (205, '8903.22.00', 0.0165, 7404),
+    (205, '2933.99.33', 0.0143, 3251),
+    (205, '5806.40.00', 0.0013, 1623),
+    (205, '9001.90.10', 0.0631, 5838),
+    (205, '6203.12.00', 0.148, 400),
+    (205, '8409.91.1', 0.061, 4753),
+    (205, '9110.11.90', 0.3819, 1953),
+    (205, '8419.89.1', 0.0032, 9458),
+    (205, '6201.90.00', 0.0579, 400),
+    (205, '2309.90.30', 0.0039, 400),
+    (205, '3002.12.14', 0.2893, 3759),
+    (206, '3004.20.91', 0.0595, 13645),
+    (206, '5208.23.00', 0.2465, 5181),
+    (207, '8201.90.00', 1.577, 14476),
+    (207, '2921.49.10', 0.0493, 1984),
+    (207, '8527.21.00', 0.0085, 2356),
+    (207, '6004.10.14', 0.0785, 4531),
+    (207, '0106.33.90', 0.0136, 400),
+    (207, '8479.89.32', 0.1518, 4203),
+    (207, '8433.60.21', 0.0237, 400),
+    (207, '8424.30.90', 0.0212, 400),
+    (207, '2932.19.20', 0.0037, 972),
+    (207, '0804.50.20', 0.0338, 400),
+    (208, '6506.10.90', 0.6836, 6800),
+    (208, '3808.94.1', 0.0354, 3033),
+    (208, '2915.60.1', 0.0481, 400),
+    (208, '2833.29.70', 0.0138, 400),
+    (208, '3302.90.9', 0.0001, 400),
+    (208, '7225.50.10', 0.0143, 400),
+    (208, '0802.11.00', 0.0328, 3750),
+    (208, '3827.59.00', 0.0265, 12247),
+    (208, '7217.20.10', 0.0557, 712),
+    (208, '2933.99.61', 0.0256, 6994),
+    (208, '3004.39.31', 0.054, 400),
+    (209, '8523.52.90', 0.303, 3517),
+    (209, '2810.00.10', 0.6232, 400),
+    (209, '1605.56.00', 1.7745, 5460),
+    (209, '6005.90.90', 2.2943, 2382),
+    (209, '2925.29.21', 0.6691, 5179),
+    (209, '9030.20.2', 0.2827, 3908),
+    (209, '5902.10.10', 0.815, 400),
+    (209, '7319.40.00', 1.7721, 3420),
+    (209, '2937.29.50', 0.4601, 7931),
+    (209, '6304.91.00', 1.2241, 2229),
+    (209, '2009.50.00', 1.9114, 400),
+    (209, '8423.89.00', 1.0664, 4320),
+    (209, '3919.90.90', 1.5859, 11202),
+    (209, '3815.90.92', 0.3786, 11829),
+    (209, '5810.92.00', 0.8452, 4437),
+    (209, '7222.19.90', 1.025, 400),
+    (209, '6214.20.00', 0.8112, 3416),
+    (209, '2903.61.00', 4.5127, 400),
+    (210, '5514.29.00', 0.9862, 400),
+    (210, '3816.00.11', 0.0478, 400),
+    (210, '2941.90.35', 0.0222, 1419),
+    (210, '8408.20.30', 0.0154, 3954),
+    (210, '6204.52.00', 0.11, 400),
+    (210, '2009.50.00', 0.0032, 1099),
+    (210, '5402.48.00', 0.0104, 9161),
+    (210, '2843.90.19', 0.0284, 12973),
+    (210, '7010.90.21', 0.0, 8294),
+    (210, '4811.41.10', 0.1818, 400),
+    (210, '6204.53.00', 0.0118, 6581),
+    (210, '3811.90.90', 0.0519, 5242),
+    (210, '9402.10.00', 0.0643, 7933),
+    (210, '9026.10.2', 0.0404, 7922),
+    (210, '5105.29.99', 0.0148, 6863),
+    (210, '8409.99.15', 0.008, 2930),
+    (210, '3808.92.96', 0.0061, 2377),
+    (210, '3003.90.76', 0.0366, 9006),
+    (210, '0209.10.11', 0.1124, 1454),
+    (210, '8541.21.10', 0.0415, 6566),
+    (210, '3813.00.10', 0.0701, 998),
+    (210, '3901.90.40', 0.0133, 13716),
+    (210, '2933.33.59', 0.1306, 2944),
+    (210, '6902.90.10', 0.0143, 6423),
+    (210, '3901.90.10', 0.23, 8860),
+    (210, '2933.69.14', 0.0058, 555),
+    (210, '6802.91.00', 0.0006, 10932),
+    (210, '7227.20.00', 0.0165, 400),
+    (211, '8515.19.00', 3.075, 5641),
+    (211, '7801.10.1', 0.5077, 1659),
+    (211, '5510.20.19', 0.0157, 7105),
+    (211, '6505.00.12', 0.0083, 6186),
+    (211, '0305.79.00', 0.1235, 3413),
+    (211, '9028.30.21', 0.0018, 1212),
+    (211, '5510.12.12', 0.1421, 2750),
+    (211, '8007.00.10', 0.0804, 400),
+    (211, '8411.82.00', 0.2423, 9920),
+    (211, '7205.10.00', 0.0263, 400),
+    (211, '5607.41.00', 0.0263, 7426),
+    (211, '8708.94.1', 0.0772, 2027),
+    (211, '5204.11.11', 0.0385, 10785),
+    (212, '9030.82.90', 0.2431, 7775),
+    (212, '7208.54.00', 0.2082, 400),
+    (212, '2914.23.20', 0.1999, 400),
+    (212, '2827.35.00', 0.078, 4054),
+    (212, '3105.30.00', 0.0349, 4479),
+    (212, '0302.89.37', 0.0632, 9654),
+    (212, '2811.19.40', 0.055, 2998),
+    (212, '9028.30.1', 0.1023, 400),
+    (212, '2915.90.39', 0.0716, 16537),
+    (212, '3912.20.10', 0.1858, 1873),
+    (212, '4410.11.2', 0.3126, 9459),
+    (212, '3808.91.92', 0.0333, 2583),
+    (212, '5804.29.10', 0.0631, 12462),
+    (212, '3004.20.69', 0.2047, 400),
+    (212, '2103.10.90', 0.2802, 13486),
+    (212, '2922.50.91', 0.6376, 400),
+    (213, '1521.90.11', 0.0722, 400),
+    (213, '3906.90.11', 1.0485, 400),
+    (213, '3824.99.35', 0.2563, 2925),
+    (213, '3002.41.15', 0.472, 400),
+    (213, '8471.60.90', 1.4956, 400),
+    (213, '4802.58.92', 0.3965, 4135),
+    (214, '8203.10.10', 0.6704, 3754),
+    (214, '9026.10.29', 0.1713, 2707),
+    (214, '1509.30.00', 0.2453, 11137),
+    (214, '1502.10.1', 0.3342, 400),
+    (214, '2933.35.00', 0.1791, 3365),
+    (214, '3801.20.10', 0.2512, 2643),
+    (214, '7202.92.00', 0.3093, 400),
+    (214, '8443.99.70', 0.0827, 6125),
+    (214, '8460.40.99', 0.0763, 13005),
+    (214, '0303.83.21', 0.1668, 529),
+    (214, '8462.42.00', 0.0295, 400),
+    (214, '2930.90.91', 0.6729, 600),
+    (214, '8311.90.00', 0.7199, 9479),
+    (214, '1604.20.30', 0.2994, 8810),
+    (214, '3002.49.94', 0.1812, 5030),
+    (214, '3815.19.00', 0.0736, 400),
+    (214, '2933.53.21', 0.2232, 8662),
+    (214, '8443.13.90', 0.2971, 4368),
+    (214, '3908.10.21', 0.2314, 3849),
+    (215, '2904.99.16', 0.146, 9734),
+    (215, '2933.59.92', 0.3461, 6665),
+    (215, '8301.20.00', 1.0235, 10116),
+    (215, '0102.21.10', 0.2494, 10441),
+    (215, '2921.19.29', 0.1504, 400),
+    (215, '2829.90.12', 0.0604, 2373),
+    (215, '8445.40.11', 0.0767, 8366),
+    (215, '0304.47.00', 0.7909, 4146),
+    (215, '8207.19.10', 0.5883, 400),
+    (215, '3003.20.52', 0.3146, 11450),
+    (215, '2009.29.00', 0.3681, 9180),
+    (215, '8543.70.20', 0.503, 8970),
+    (215, '9027.20.2', 0.0763, 9848),
+    (215, '3307.10.00', 0.3048, 7679),
+    (215, '0603.12.00', 0.4555, 7411),
+    (215, '2903.13.00', 0.0343, 4655),
+    (215, '3901.10.20', 0.0723, 9559),
+    (215, '9031.90.10', 0.1187, 775),
+    (215, '4202.12.20', 0.8435, 2231),
+    (216, '9014.10.00', 0.1229, 4384),
+    (216, '0302.14.00', 0.1116, 400),
+    (216, '5702.31.00', 0.0928, 5266),
+    (216, '2922.29.90', 0.0657, 3042),
+    (216, '3004.39.81', 0.1322, 400),
+    (216, '2903.75.00', 0.0983, 4572),
+    (217, '5603.91.30', 0.8029, 4422),
+    (217, '4810.13.8', 0.7362, 400),
+    (217, '0303.43.00', 0.6533, 2235),
+    (217, '2933.99.62', 1.4699, 4896),
+    (217, '5402.61.10', 1.8235, 1212),
+    (217, '2933.39.43', 0.5975, 1702),
+    (217, '8708.29.11', 1.4414, 5637),
+    (217, '8455.22.90', 1.2326, 400),
+    (217, '2712.20.00', 0.6699, 723),
+    (217, '4703.29.00', 0.922, 4337),
+    (217, '1509.30.00', 1.4471, 4280),
+    (217, '1501.10.00', 1.2804, 5678),
+    (217, '8439.30.20', 0.8996, 400),
+    (217, '8482.99.10', 1.2888, 23789),
+    (217, '6203.43.00', 0.5633, 6717),
+    (217, '3905.91.90', 0.4686, 6701),
+    (217, '0807.20.00', 1.5818, 7637),
+    (217, '5402.47.90', 1.4528, 400),
+    (217, '0303.44.00', 0.1113, 18688),
+    (217, '7611.00.00', 3.5822, 8514),
+    (217, '0304.81.00', 0.2372, 400),
+    (217, '0210.92.00', 0.3876, 5553),
+    (217, '2922.14.00', 0.3244, 7345),
+    (217, '8448.20.20', 1.2254, 13258),
+    (217, '3702.56.00', 0.0905, 400),
+    (217, '0302.11.00', 1.5754, 2210),
+    (217, '3502.20.00', 1.6573, 3928),
+    (217, '0810.90.16', 0.3653, 11311),
+    (217, '8414.70.00', 0.8487, 7745),
+    (217, '9405.31.00', 2.3344, 1237),
+    (218, '2921.51.35', 0.1459, 5113),
+    (218, '8504.90.10', 0.2625, 3510),
+    (218, '2941.20.90', 0.1229, 10585),
+    (218, '8544.19.19', 0.2437, 5647),
+    (218, '8428.90.90', 0.0521, 7516),
+    (218, '5208.31.00', 0.1818, 400),
+    (218, '2510.20.90', 0.1095, 12753),
+    (218, '7010.90.2', 0.2129, 8639),
+    (218, '5404.19.1', 0.5225, 5701),
+    (218, '5407.73.00', 0.0207, 400),
+    (218, '2930.90.29', 0.0923, 15430),
+    (218, '3003.90.59', 0.0018, 2520),
+    (218, '0206.22.00', 0.4125, 3947),
+    (218, '8441.90.00', 0.0733, 400),
+    (218, '3005.90.11', 0.2205, 5732),
+    (218, '8545.19.20', 0.0459, 4278),
+    (218, '3004.10.19', 0.1679, 4947),
+    (218, '9022.12.00', 0.0863, 400),
+    (218, '2613.90.90', 0.0837, 9034),
+    (218, '8527.99.90', 0.1664, 4618),
+    (218, '7302.40.00', 0.0295, 400),
+    (218, '2931.51.00', 0.134, 4156),
+    (218, '2009.89.11', 0.415, 4733),
+    (218, '8517.62.49', 0.0187, 2246),
+    (218, '4403.41.00', 0.0713, 4631),
+    (218, '3003.39.2', 0.1681, 10620),
+    (218, '7326.11.00', 0.5229, 558),
+    (218, '0901.22.00', 0.0674, 9364),
+    (218, '7202.41.00', 0.073, 7828),
+    (218, '0302.89.2', 0.0409, 400),
+    (219, '8441.40.00', 0.0477, 10119),
+    (219, '2921.42.3', 0.023, 5048),
+    (219, '2924.19.29', 0.613, 10174),
+    (219, '8502.20.90', 0.0444, 5154),
+    (219, '9018.90.69', 0.0817, 4384),
+    (219, '7114.19.00', 0.2059, 3041),
+    (219, '3005.10.40', 0.2499, 1827),
+    (219, '9010.50.20', 0.6011, 3284),
+    (219, '2922.19.95', 0.1167, 400),
+    (219, '0302.72.10', 0.6615, 400),
+    (220, '2710.19.99', 0.4509, 4158),
+    (220, '8461.20.10', 0.0078, 10858),
+    (220, '3003.90.67', 0.0044, 400),
+    (221, '4004.00.00', 1.0388, 5655),
+    (221, '2807.00.10', 0.0326, 11657),
+    (221, '8706.00.20', 0.1261, 400),
+    (221, '2909.44.19', 0.0092, 2890),
+    (221, '8473.50.50', 0.2069, 2590),
+    (221, '5902.10.10', 0.0372, 400),
+    (221, '2937.23.31', 0.1963, 15666),
+    (221, '1702.60.10', 0.0045, 3619),
+    (221, '2008.30.00', 0.1795, 3492),
+    (221, '8539.22.00', 0.0844, 7362),
+    (221, '9306.21.30', 0.0673, 2670),
+    (221, '2921.41.00', 0.0526, 10429),
+    (221, '7201.10.00', 0.1074, 5595),
+    (221, '8423.20.00', 0.0179, 1033),
+    (221, '7407.29.10', 0.0014, 400),
+    (221, '8510.90.1', 0.0712, 9304),
+    (221, '6104.19.20', 0.0284, 5316),
+    (221, '3002.42.60', 0.0306, 4285),
+    (221, '9618.00.00', 0.0986, 3826),
+    (221, '2915.39.94', 0.0062, 1885),
+    (221, '9603.30.00', 0.0087, 400),
+    (221, '7301.20.00', 0.0623, 15282),
+    (222, '7216.22.00', 0.0293, 400),
+    (222, '8482.99.10', 0.0975, 3741),
+    (225, '4811.90.90', 0.0085, 880),
+    (225, '3004.20.19', 0.0104, 6753),
+    (225, '0902.40.00', 0.0047, 3772),
+    (225, '7306.90.10', 0.0225, 8655),
+    (225, '8443.99.31', 0.0389, 400),
+    (225, '4009.42.90', 0.0062, 7099),
+    (225, '2930.90.52', 0.001, 400),
+    (225, '5303.10.90', 0.0081, 5929),
+    (225, '0306.93.00', 0.029, 7438),
+    (225, '7804.19.00', 0.0033, 10894),
+    (225, '9014.20.90', 0.0613, 2517),
+    (225, '2931.49.1', 0.0484, 3444),
+    (225, '4002.31.00', 0.0744, 400),
+    (225, '4810.29.10', 0.0503, 11688),
+    (226, '2928.00.30', 8.0513, 400),
+    (226, '0804.20.10', 3.6791, 11302),
+    (226, '8542.39.99', 2.8634, 400),
+    (226, '9031.80.50', 2.5043, 18805),
+    (226, '4015.90.00', 6.9303, 1810),
+    (226, '9015.90.10', 8.6571, 5337),
+    (226, '8462.26.00', 8.2541, 400),
+    (226, '3811.11.00', 7.5546, 400),
+    (226, '5210.51.00', 0.4195, 2875),
+    (226, '8440.10.20', 11.2417, 400),
+    (226, '9018.50.90', 2.9799, 400),
+    (226, '6505.00.1', 6.7286, 6225),
+    (226, '8482.10.10', 13.9575, 3340),
+    (226, '4412.10.00', 2.5875, 12606),
+    (226, '7410.21.20', 0.5616, 2921),
+    (226, '8903.22.00', 15.6232, 400),
+    (226, '2916.20.13', 0.2105, 11061),
+    (227, '6403.51.90', 15.5138, 3406),
+    (227, '8503.00.90', 0.0434, 400),
+    (227, '8451.90.10', 0.0083, 3784),
+    (227, '8543.90.90', 0.1227, 3814),
+    (227, '7508.90.90', 0.1836, 3334),
+    (227, '0302.36.00', 0.2613, 10652),
+    (227, '8517.62.1', 1.1472, 5011),
+    (227, '8433.20.90', 0.0736, 9067),
+    (227, '2909.49.3', 0.3776, 400),
+    (227, '8514.39.00', 0.1226, 400),
+    (227, '2933.39.91', 1.1405, 2395),
+    (227, '8529.90.1', 1.789, 9757),
+    (227, '3802.10.00', 0.7106, 400),
+    (227, '4804.59.10', 0.8906, 712),
+    (227, '7212.10.00', 1.5913, 400),
+    (227, '8438.80.10', 0.1333, 2493),
+    (227, '3923.29.10', 0.1939, 400),
+    (227, '9018.39.30', 0.1983, 8282),
+    (227, '9019.20.90', 0.6058, 10110),
+    (227, '6207.99.10', 0.4063, 4127),
+    (227, '0104.10.90', 1.2068, 478),
+    (227, '4805.12.00', 0.2087, 1388),
+    (228, '2852.10.21', 0.8971, 7157),
+    (228, '3824.99.3', 0.3884, 400),
+    (228, '1507.90.19', 0.0432, 1576),
+    (228, '6902.10.18', 0.5283, 2155),
+    (228, '3002.41.2', 0.8485, 3751),
+    (228, '5407.83.00', 1.4442, 12459),
+    (228, '2941.90.49', 0.3457, 5982),
+    (228, '9005.90.90', 0.1588, 6773),
+    (229, '2933.91.19', 0.1656, 400),
+    (229, '8202.99.90', 0.0342, 400),
+    (229, '3404.90.12', 0.1437, 4080),
+    (229, '8453.20.00', 0.0358, 14240),
+    (229, '8530.10.10', 0.4966, 400),
+    (229, '1604.20.20', 0.0417, 1894),
+    (229, '3301.90.30', 0.1932, 2937),
+    (229, '3002.41.22', 0.1513, 765),
+    (229, '2909.19.90', 0.0033, 10434),
+    (229, '9608.91.00', 0.1386, 7097),
+    (229, '0302.14.00', 0.0044, 6632),
+    (229, '8201.60.00', 0.2432, 3391),
+    (229, '0602.30.00', 0.3009, 7224),
+    (229, '6909.19.90', 0.0985, 2933),
+    (229, '2935.90.92', 0.2112, 400),
+    (230, '2933.33.3', 0.0713, 400),
+    (230, '3003.90.42', 0.0574, 1557),
+    (230, '3004.31.00', 0.0183, 16635),
+    (230, '7321.12.00', 0.0059, 6304),
+    (230, '9503.00.50', 0.2506, 6288),
+    (230, '6112.41.00', 0.0465, 5370),
+    (230, '5210.31.00', 0.0632, 6728),
+    (230, '2809.10.00', 0.2519, 5173),
+    (230, '0904.11.00', 0.1625, 3845),
+    (230, '2934.91.32', 0.0162, 14913),
+    (230, '9026.10.29', 0.0328, 7747),
+    (230, '6102.30.00', 0.4483, 12427),
+    (230, '4806.30.00', 0.0423, 4450),
+    (230, '6302.29.00', 0.0641, 9029),
+    (230, '3301.29.19', 0.2962, 400),
+    (231, '8406.10.00', 0.006, 2446),
+    (231, '0714.10.00', 0.0846, 4291),
+    (231, '2933.33.19', 0.125, 2020),
+    (231, '2941.20.90', 0.0241, 400),
+    (231, '0805.22.00', 0.0499, 400),
+    (231, '3907.10.91', 0.0623, 1029),
+    (231, '9025.11.91', 0.0575, 400),
+    (231, '2506.20.00', 0.0084, 22083),
+    (231, '2924.29.41', 0.0416, 9784),
+    (231, '4811.90.20', 0.2038, 6248),
+    (232, '2306.60.00', 0.1892, 400),
+    (232, '8104.90.00', 1.456, 1921),
+    (232, '2841.90.49', 2.6786, 8671),
+    (232, '0903.00.10', 0.1927, 400),
+    (232, '2905.19.12', 0.6344, 400),
+    (232, '8481.20.90', 0.2095, 400),
+    (232, '2811.19.20', 0.1994, 8863),
+    (233, '6004.10.12', 228.7657, 2446),
+    (233, '5404.11.00', 0.183, 400),
+    (233, '3808.92.9', 0.8021, 14241),
+    (233, '7201.20.00', 0.0924, 400),
+    (233, '2915.39.6', 0.4116, 3475),
+    (233, '2905.12.20', 5.6175, 10616),
+    (233, '2921.19.3', 2.7179, 12830),
+    (233, '5210.32.00', 2.6092, 8986),
+    (233, '1212.91.00', 8.707, 4934),
+    (233, '2937.23.59', 2.1892, 400),
+    (233, '2915.39.63', 10.8562, 9096),
+    (233, '2842.90.00', 0.4284, 10435),
+    (233, '2833.29.60', 1.7246, 7009),
+    (233, '2905.59.90', 17.2389, 3113),
+    (233, '4105.10.2', 2.1113, 1367),
+    (233, '3003.20.19', 8.074, 1301),
+    (233, '8714.99.90', 37.4423, 400),
+    (233, '3305.20.00', 6.8868, 2747),
+    (233, '3003.90.38', 14.6155, 400),
+    (233, '9023.00.00', 5.308, 400),
+    (234, '6903.10.40', 0.0178, 13469),
+    (234, '7015.90.90', 0.0583, 3542),
+    (235, '8425.19.10', 0.4363, 9367),
+    (235, '3922.90.00', 0.0158, 4160),
+    (236, '8445.40.3', 1.6467, 5972),
+    (236, '1515.90.10', 2.0025, 8485),
+    (236, '2812.90.00', 0.734, 9084),
+    (236, '2905.19.95', 0.5511, 18871),
+    (236, '2712.10.00', 0.8458, 400),
+    (236, '6207.22.00', 0.5807, 5415),
+    (236, '2909.60.11', 1.6607, 6972),
+    (236, '1502.10.12', 0.9042, 5432),
+    (236, '6114.20.00', 0.2918, 4999),
+    (236, '1514.19.10', 0.9791, 5128),
+    (236, '6403.99.90', 0.2183, 3445),
+    (236, '4804.31.10', 0.4989, 6077),
+    (236, '3002.42.50', 1.5228, 5467),
+    (236, '3002.42.90', 0.7645, 7924),
+    (236, '8905.10.00', 0.665, 400),
+    (236, '0305.31.00', 1.3316, 7785),
+    (236, '2920.90.2', 0.8499, 400),
+    (236, '6001.99.00', 1.8237, 15537),
+    (236, '8504.40.50', 1.4446, 2467),
+    (236, '3920.61.00', 5.9958, 5349),
+    (236, '4704.19.00', 0.6363, 400),
+    (236, '0707.00.00', 1.0805, 3385),
+    (236, '3003.90.24', 1.7132, 400),
+    (236, '6203.33.00', 0.5744, 10884),
+    (236, '1514.11.00', 0.9821, 11870),
+    (236, '5407.73.00', 0.2178, 7662),
+    (236, '9029.90.10', 1.3746, 400),
+    (237, '1513.29.20', 0.6541, 691),
+    (237, '1901.20.10', 0.0099, 6175),
+    (237, '0808.10.00', 0.0049, 9798),
+    (237, '8701.21.00', 0.0199, 424),
+    (237, '2918.19.30', 0.0018, 400),
+    (237, '3006.10.90', 0.0335, 3554),
+    (237, '3503.00.11', 0.0048, 4317),
+    (237, '9010.10.20', 0.0089, 400),
+    (237, '8202.31.00', 0.0006, 400),
+    (237, '8456.11.90', 0.0006, 2236),
+    (237, '8517.62.94', 0.0165, 9824),
+    (237, '4407.25.00', 0.0023, 4764),
+    (237, '3002.42.20', 0.006, 577),
+    (237, '3002.41.26', 0.0192, 4129),
+    (237, '2005.51.00', 0.0945, 7868),
+    (237, '3907.99.99', 0.0005, 3519),
+    (237, '2901.23.00', 0.0003, 6092),
+    (237, '1602.32.10', 0.0087, 2523),
+    (237, '3904.40.10', 0.0351, 7198),
+    (237, '1514.11.00', 0.0632, 8489),
+    (238, '5603.14.30', 0.0204, 9427),
+    (238, '8463.10.10', 0.0204, 16738),
+    (238, '2833.40.20', 0.0201, 6663),
+    (239, '2920.90.2', 0.5681, 7691),
+    (239, '7408.11.00', 0.3697, 516),
+    (240, '8452.29.25', 0.0159, 400),
+    (240, '3002.12.13', 0.0803, 1886),
+    (240, '5402.61.10', 0.1585, 7062),
+    (240, '8539.39.1', 0.0246, 400),
+    (240, '2827.39.20', 0.0289, 8312),
+    (240, '2507.00.10', 0.0031, 3022),
+    (240, '3909.50.2', 0.0578, 6796),
+    (240, '8430.41.90', 0.048, 7969),
+    (240, '2605.00.00', 0.1461, 4864),
+    (240, '8424.30.30', 0.0323, 5790),
+    (240, '2931.52.00', 0.0391, 3489),
+    (240, '8540.91.40', 0.1995, 400),
+    (240, '8110.10.20', 0.1608, 5740),
+    (240, '9503.00.21', 0.2548, 6374),
+    (240, '0511.99.10', 0.2251, 4118),
+    (240, '8480.79.90', 0.0401, 400),
+    (240, '2903.99.3', 0.0166, 2393),
+    (240, '2009.89.12', 0.0081, 5777),
+    (240, '8479.60.00', 0.0845, 8140),
+    (240, '2937.22.90', 0.0307, 4032),
+    (240, '8483.60.11', 0.2784, 2425),
+    (240, '3702.98.00', 0.1315, 5568),
+    (240, '6202.30.00', 0.0377, 8014),
+    (240, '8419.40.20', 0.0104, 400),
+    (240, '2903.49.00', 0.2822, 3042),
+    (240, '3002.41.14', 0.2581, 5978),
+    (241, '2008.99.00', 0.2081, 400),
+    (242, '8517.62.2', 0.0642, 13915),
+    (242, '5211.11.00', 0.1427, 6469),
+    (242, '2204.22.19', 0.0809, 667),
+    (242, '9018.19.20', 0.0705, 2393),
+    (242, '3201.90.11', 0.169, 11436),
+    (242, '3801.10.00', 0.0878, 3571),
+    (242, '2921.46.10', 0.0501, 4568),
+    (242, '2914.19.29', 0.0566, 400),
+    (242, '2934.99.53', 0.2418, 3845),
+    (242, '6505.00.90', 0.0664, 12722),
+    (242, '3917.22.10', 0.1184, 7353),
+    (242, '3506.10.10', 0.2538, 1747),
+    (242, '7505.12.2', 0.1162, 400),
+    (242, '2909.49.10', 0.1178, 677),
+    (242, '0901.11.90', 0.0429, 14722),
+    (242, '8452.10.00', 0.0461, 400),
+    (242, '8211.92.10', 0.0608, 7938),
+    (242, '7310.10.10', 0.032, 2698),
+    (243, '8477.10.2', 0.2996, 4422),
+    (243, '8518.90.90', 0.804, 1219),
+    (243, '2805.19.10', 0.1144, 7320),
+    (243, '2933.33.82', 0.3566, 400),
+    (243, '9701.21.00', 0.014, 6811),
+    (243, '8471.30.11', 0.2618, 4401),
+    (243, '8410.11.00', 0.1015, 7652),
+    (243, '0305.71.00', 0.8924, 6434),
+    (244, '5802.10.00', 0.3101, 400),
+    (244, '1301.90.10', 0.1434, 400),
+    (244, '2915.70.3', 0.1064, 7652),
+    (244, '8448.51.10', 0.3427, 1352),
+    (244, '8517.62.51', 0.0531, 400),
+    (244, '2927.00.30', 0.3366, 7705),
+    (244, '8413.50.10', 0.0227, 2611),
+    (244, '3003.90.6', 0.5208, 400),
+    (244, '2924.29.99', 0.155, 400),
+    (244, '3808.99.19', 0.2573, 1839),
+    (244, '6403.19.00', 0.2948, 2269),
+    (244, '6812.99.10', 0.9965, 841),
+    (244, '8549.13.00', 0.0753, 400),
+    (244, '2914.23.10', 0.2592, 400),
+    (244, '7407.10.2', 0.033, 4103),
+    (244, '3827.90.00', 0.0346, 400),
+    (244, '5702.50.10', 0.1851, 400),
+    (244, '5402.19.10', 0.1488, 4286),
+    (244, '8211.10.00', 0.2714, 7535),
+    (244, '0307.43.10', 0.0721, 7259),
+    (244, '2827.51.00', 0.1301, 2462),
+    (245, '9032.89.25', 0.3252, 400),
+    (245, '4811.51.28', 1.2031, 5113),
+    (245, '5701.10.12', 1.3019, 5158),
+    (245, '2922.49.51', 0.1091, 5124),
+    (245, '0103.92.00', 0.4357, 12515),
+    (245, '8416.10.00', 0.3183, 7880),
+    (245, '8518.10.10', 0.306, 7391),
+    (245, '9110.90.00', 0.3559, 12408),
+    (246, '8483.20.00', 0.2745, 7801),
+    (246, '2841.80.20', 0.1237, 1138),
+    (246, '3905.19.90', 0.2115, 8262),
+    (247, '2906.19.30', 0.4867, 400),
+    (247, '5211.32.00', 0.068, 5027),
+    (247, '3003.90.87', 0.2905, 10635),
+    (247, '3301.29.12', 1.5639, 400),
+    (247, '7217.10.90', 0.2504, 2771),
+    (247, '2612.10.00', 1.188, 3382),
+    (247, '2804.50.00', 0.6275, 400),
+    (247, '3920.10.99', 0.8709, 5738),
+    (247, '6903.10.1', 0.4706, 4631),
+    (247, '9018.14.10', 0.4441, 5608),
+    (247, '8702.40.10', 0.2984, 1880),
+    (247, '8428.39.90', 0.3993, 400),
+    (248, '2939.69.4', 1.4492, 3966),
+    (248, '9108.19.00', 0.0105, 400),
+    (248, '2933.39.29', 0.0922, 6202),
+    (248, '7220.20.10', 0.1621, 6669),
+    (248, '2908.99.13', 0.0417, 400),
+    (248, '2207.20.1', 0.0366, 5256),
+    (248, '7505.11.2', 0.0448, 683),
+    (249, '2917.11.20', 0.0305, 400),
+    (249, '0706.90.00', 0.0611, 3435),
+    (249, '5208.42.00', 0.0449, 5373),
+    (249, '2620.60.00', 0.1116, 400),
+    (249, '9028.90.10', 0.0065, 7956),
+    (249, '0511.91.10', 0.0386, 10933),
+    (249, '0713.90.90', 0.0053, 1418),
+    (249, '3915.90.00', 0.0114, 400),
+    (249, '0401.40.2', 0.0545, 2257),
+    (249, '2401.20.30', 0.0168, 4974),
+    (249, '9002.11.11', 0.041, 10730),
+    (249, '0303.89.65', 0.0241, 400),
+    (249, '4012.13.00', 0.063, 6702),
+    (249, '5408.21.00', 0.031, 1365),
+    (249, '2701.12.00', 0.1187, 2529),
+    (249, '2937.23.99', 0.0145, 10121),
+    (249, '8525.50.11', 0.0528, 1106),
+    (249, '8454.30.10', 0.1061, 8191),
+    (249, '3403.11.10', 0.0074, 2234),
+    (249, '3003.31.00', 0.0929, 8987),
+    (249, '3907.10.41', 0.0822, 12597),
+    (249, '7409.31.90', 0.0443, 400),
+    (249, '0713.20.90', 0.1543, 7590),
+    (249, '8908.00.00', 0.0201, 400),
+    (249, '1512.21.00', 0.0208, 9799),
+    (249, '1512.11.20', 0.0309, 9769),
+    (249, '0306.99.90', 0.08, 8530),
+    (250, '2915.50.20', 0.0939, 400);
 
 INSERT INTO relatorio_serv VALUES
+    (1, '1.0105.21.00', '2023-06-03T13:32:01', 0.4037),
+    (1, '1.1404.49.00', '2023-06-29T15:16:53', 0.2111),
+    (1, '1.01', '2023-06-24T04:27:59', 0.1666),
+    (1, '1.1103.43.00', '2023-06-03T01:10:27', 0.5771),
+    (1, '1.1406.20.00', '2023-06-27T14:30:23', 0.5417),
+    (1, '1.1403.22.21', '2023-06-06T15:15:41', 0.5213),
+    (1, '1.0502.23.10', '2023-06-10T23:00:20', 0.4608),
+    (1, '1.1403.22.90', '2023-06-01T21:14:20', 0.3523),
+    (2, '1.0903.21.00', '2021-09-22T14:11:37', 0.0107),
+    (2, '1.1103.3', '2021-09-27T03:18:13', 0.0739),
+    (2, '1.1408.15.00', '2021-09-10T17:02:48', 0.0176),
+    (2, '1.0901.5', '2021-09-13T06:22:20', 0.0065),
+    (2, '1.2502.10.00', '2021-09-10T21:08:57', 0.0254),
+    (2, '1.0401.11', '2021-09-11T17:09:25', 0.0535),
+    (2, '1.0504.1', '2021-09-13T01:44:09', 0.0064),
+    (2, '1.0601', '2021-09-27T01:11:12', 0.0142),
+    (2, '1.0501.14.5', '2021-09-17T19:59:47', 0.0331),
+    (2, '1.0903.22.00', '2021-09-10T20:10:21', 0.0088),
+    (2, '1.07', '2021-09-05T03:32:28', 0.0182),
+    (2, '1.1805.14.00', '2021-09-11T16:28:51', 0.0088),
+    (2, '1.2001.31.10', '2021-09-29T05:13:20', 0.0198),
+    (2, '1.2403.22.00', '2021-09-27T05:32:24', 0.026),
+    (2, '1.0904.22.00', '2021-09-11T09:08:28', 0.0413),
+    (3, '1.0901.51.22', '2022-08-07T12:02:26', 0.0245),
+    (3, '1.0502.34.51', '2022-08-10T08:02:54', 0.3454),
+    (3, '1.1101.15.00', '2022-08-27T14:50:28', 0.4017),
+    (4, '1.0605.90.00', '2024-02-12T08:18:47', 0.2002),
+    (4, '1.10', '2024-02-24T23:40:53', 0.074),
+    (4, '1.2403.32.00', '2024-02-23T05:24:24', 0.1374),
+    (4, '1.0602.90.00', '2024-02-22T07:38:32', 0.044),
+    (4, '1.0504.45.10', '2024-02-02T01:24:02', 0.0654),
+    (4, '1.1806.53.00', '2024-02-26T00:23:50', 0.2168),
+    (4, '1.2404.1', '2024-02-07T12:44:04', 0.1015),
+    (4, '1.1506.2', '2024-02-02T12:26:50', 0.1707),
+    (5, '1.0501.23.10', '2025-05-14T02:04:22', 0.1855),
+    (5, '1.1502.90.00', '2025-05-24T08:58:32', 0.1799),
+    (5, '1.1102', '2025-05-30T18:16:13', 0.2856),
+    (5, '1.2101.22.00', '2025-05-29T11:49:18', 0.0393),
+    (5, '1.0502.34.10', '2025-05-01T10:46:00', 0.2505),
+    (5, '1.2404.31.00', '2025-05-20T00:56:19', 0.0938),
+    (5, '1.0502.12', '2025-05-18T10:41:07', 0.1792),
+    (5, '1.0403.11.90', '2025-05-25T00:10:40', 0.0615),
+    (5, '1.0402', '2025-05-24T03:41:14', 0.3506),
+    (5, '1.0907.00.00', '2025-05-19T05:46:01', 0.0408),
+    (5, '1.0502.14.5', '2025-05-01T08:09:16', 0.2837),
+    (6, '1.1410.10.00', '2026-03-17T06:50:16', 0.0223),
+    (6, '1.2301', '2026-03-08T21:05:26', 0.1903),
+    (6, '1.0903.33.00', '2026-03-22T18:43:03', 0.1094),
+    (6, '1.1406.12.00', '2026-03-05T18:40:13', 0.116),
+    (6, '1.0503.23.00', '2026-03-14T18:48:08', 0.331),
+    (6, '1.0403.12.00', '2026-03-15T22:17:27', 0.0961),
+    (6, '1.1805.3', '2026-03-14T21:27:52', 0.7935),
+    (6, '1.1806.82.00', '2026-03-23T03:45:00', 0.1413),
+    (6, '1.1901.50.00', '2026-03-03T21:55:29', 0.1031),
+    (6, '1.0403.21.10', '2026-03-10T11:43:23', 0.0714),
+    (6, '1.1105.30.00', '2026-03-02T17:54:43', 0.1446),
+    (6, '1.0901.52.40', '2026-03-04T07:38:09', 0.0707),
+    (9, '1.2404.31.00', '2024-04-26T14:27:42', 2.0763),
+    (9, '1.1108.30.00', '2024-04-15T06:43:07', 0.0212),
+    (9, '1.1101.14.00', '2024-04-06T23:20:40', 0.0041),
+    (9, '1.1401.1', '2024-04-11T00:58:44', 0.0659),
+    (9, '1.1105.59.00', '2024-04-09T11:07:05', 0.151),
+    (9, '1.1703.9', '2024-04-04T11:04:56', 0.0648),
+    (9, '1.2505.20.00', '2024-04-19T11:26:03', 0.0203),
+    (9, '1.2406.90.00', '2024-04-11T05:12:51', 0.0732),
+    (9, '1.1107.32.00', '2024-04-21T14:01:28', 0.0869),
+    (9, '1.2501.39.00', '2024-04-23T15:55:48', 0.0137),
+    (9, '1.1801.21.00', '2024-04-06T13:06:02', 0.1183),
+    (9, '1.1102.40.00', '2024-04-18T09:06:40', 0.0032),
+    (9, '1.2501.1', '2024-04-08T03:57:14', 0.0968),
+    (9, '1.0904.32.00', '2024-04-22T08:02:52', 0.023),
+    (11, '1.0901', '2023-08-02T19:14:12', 6.3561),
+    (11, '1.1201', '2023-08-06T22:13:13', 0.0172),
+    (11, '1.0901.51.29', '2023-08-27T11:37:34', 0.0615),
+    (11, '1.0502.14.40', '2023-08-06T00:39:59', 0.2097),
+    (11, '1.0901.40.00', '2023-08-07T16:56:11', 0.0289),
+    (11, '1.0903.11.00', '2023-08-13T10:34:30', 0.415),
+    (11, '1.2001.40.00', '2023-08-24T19:50:57', 0.6965),
+    (11, '1.1001.12', '2023-08-28T06:45:21', 0.0862),
     (12, '1.0501.13', '2022-10-01T03:26:13', 0.0692),
     (12, '1.1103.22.00', '2022-10-23T20:09:23', 0.0312),
     (12, '1.1703.2', '2022-10-25T16:29:24', 0.1234),
     (12, '1.06', '2022-10-28T00:42:48', 0.0147),
     (12, '1.2001.81.00', '2022-10-23T13:41:56', 0.0601),
     (12, '1.0604.40.00', '2022-10-28T00:21:27', 0.0382),
-    (12, '1.1705', '2022-10-13T20:54:09', 0.0913);
-
-INSERT INTO relatorio VALUES
-    (13, '2024-10-09', '2025-08-13', '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (13, '2008.19.00', 0.0867, 3609);
-
-INSERT INTO relatorio_serv VALUES
+    (12, '1.1705', '2022-10-13T20:54:09', 0.0913),
     (13, '1.2301.92.00', '2024-11-19T10:09:51', 0.0035),
     (13, '1.1404.13.00', '2024-11-29T09:58:43', 0.1561),
     (13, '1.0303', '2024-11-05T18:50:22', 0.0091),
@@ -4443,17 +6580,7 @@ INSERT INTO relatorio_serv VALUES
     (13, '1.0602.31.00', '2024-11-19T17:34:08', 0.155),
     (13, '1.0502.14.59', '2024-11-10T21:04:30', 0.0107),
     (13, '1.2301.21.00', '2024-11-05T20:47:02', 0.1446),
-    (13, '1.2205.19.00', '2024-11-02T06:45:52', 0.0204);
-
-INSERT INTO relatorio VALUES
-    (14, '2025-03-08', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (14, '0705.21.00', 0.2494, 9994),
-    (14, '3004.20.63', 0.1928, 6771),
-    (14, '8472.90.9', 0.0667, 6434);
-
-INSERT INTO relatorio_serv VALUES
+    (13, '1.2205.19.00', '2024-11-02T06:45:52', 0.0204),
     (14, '1.0501.14.20', '2025-04-22T21:19:32', 0.0427),
     (14, '1.0106.12.00', '2025-04-17T22:30:58', 0.0659),
     (14, '1.0502.12', '2025-04-22T17:20:56', 0.0555),
@@ -4477,17 +6604,7 @@ INSERT INTO relatorio_serv VALUES
     (14, '1.1109.20.00', '2025-04-01T06:56:49', 0.0771),
     (14, '1.1805.24.00', '2025-04-20T00:08:26', 0.1951),
     (14, '1.1803.10.00', '2025-04-25T07:32:52', 0.1944),
-    (14, '1.0501.23.10', '2025-04-25T05:51:21', 0.1878);
-
-INSERT INTO relatorio VALUES
-    (15, '2022-10-29', '2025-06-04', '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (15, '0308.22.00', 0.0167, 400),
-    (15, '0801.32.00', 0.0023, 1169),
-    (15, '8431.42.00', 0.0, 4880);
-
-INSERT INTO relatorio_serv VALUES
+    (14, '1.0501.23.10', '2025-04-25T05:51:21', 0.1878),
     (15, '1.2301.12.00', '2022-11-05T13:57:04', 1.3381),
     (15, '1.2404.13.00', '2022-11-06T18:45:21', 0.015),
     (15, '1.0602.32.00', '2022-11-19T22:53:36', 0.0481),
@@ -4509,80 +6626,15 @@ INSERT INTO relatorio_serv VALUES
     (15, '1.2001.3', '2022-11-12T03:37:45', 0.0014),
     (15, '1.1806.6', '2022-11-21T20:59:00', 0.0011),
     (15, '1.0905.12.00', '2022-11-15T06:35:30', 0.0121),
-    (15, '1.1103.36.10', '2022-11-14T08:56:10', 0.0315);
-
-INSERT INTO relatorio VALUES
-    (16, '2025-01-02', '2025-03-19', '12.905.674', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (16, '8467.22.00', 0.9803, 400),
-    (16, '8212.10.10', 0.4984, 400),
-    (16, '8473.50.50', 0.6608, 400),
-    (16, '6108.21.00', 1.2317, 13207),
-    (16, '5704.20.00', 0.467, 12036),
-    (16, '0305.32.10', 0.257, 5630),
-    (16, '2839.90.20', 1.1437, 5699),
-    (16, '7114.11.00', 0.5209, 6946),
-    (16, '8430.69.1', 0.2758, 400),
-    (16, '3004.90.94', 2.4478, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (15, '1.1103.36.10', '2022-11-14T08:56:10', 0.0315),
     (16, '1.1409.22.00', '2025-02-17T00:44:33', 0.0966),
     (16, '1.1409', '2025-02-07T09:20:45', 0.0972),
     (16, '1.0506.00.00', '2025-02-07T23:17:59', 0.3544),
-    (16, '1.0401.17.90', '2025-02-24T07:24:54', 0.3581);
-
-INSERT INTO relatorio VALUES
-    (17, '2026-01-04', NULL, '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (17, '8445.19.23', 0.2667, 10521),
-    (17, '9024.80.29', 0.1542, 400),
-    (17, '5309.21.00', 0.1022, 2740),
-    (17, '2921.51.3', 0.0546, 400),
-    (17, '0703.10.2', 0.2591, 5317),
-    (17, '4418.30.00', 0.0195, 9076),
-    (17, '8433.20.10', 0.0618, 3699),
-    (17, '6909.12.20', 0.1197, 8581),
-    (17, '0812.90.00', 0.3652, 10863),
-    (17, '8539.90.20', 0.1811, 11886),
-    (17, '8474.90.00', 0.0708, 3666),
-    (17, '8545.90.20', 0.0119, 9820),
-    (17, '3004.39.82', 0.0355, 14464),
-    (17, '8521.10.8', 0.1703, 7614),
-    (17, '8207.19.90', 0.15, 4753),
-    (17, '8431.49.21', 0.0326, 1720);
-
-INSERT INTO relatorio_serv VALUES
+    (16, '1.0401.17.90', '2025-02-24T07:24:54', 0.3581),
     (17, '1.1402.11.00', '2026-02-20T09:12:15', 0.0332),
     (17, '1.0504.11.00', '2026-02-08T07:43:23', 0.077),
     (17, '1.1703.2', '2026-02-15T08:31:50', 0.0339),
-    (17, '1.2101.10.00', '2026-02-06T02:19:42', 0.0074);
-
-INSERT INTO relatorio VALUES
-    (18, '2025-10-23', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (18, '0802.11.00', 5.7474, 2567),
-    (18, '9018.31.19', 0.0067, 5515),
-    (18, '7804.20.00', 0.0425, 400),
-    (18, '4817.10.00', 0.0015, 1416),
-    (18, '2841.69.30', 0.2086, 7276),
-    (18, '2924.29.64', 0.2118, 6949),
-    (18, '8502.39.00', 0.0019, 4269),
-    (18, '8430.41.20', 0.1722, 400),
-    (18, '5603.11.40', 0.0179, 6929),
-    (18, '2909.19.90', 0.5482, 400),
-    (18, '8412.10.00', 0.0839, 400);
-
-INSERT INTO relatorio VALUES
-    (19, '2026-01-09', '2026-04-04', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (19, '2926.90.24', 0.2713, 7761),
-    (19, '6902.10.19', 0.6846, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (17, '1.2101.10.00', '2026-02-06T02:19:42', 0.0074),
     (19, '1.1109.30.00', '2026-02-04T23:13:33', 0.0869),
     (19, '1.0403.39.00', '2026-02-14T06:05:56', 0.1731),
     (19, '1.1706.22.00', '2026-02-15T09:07:25', 0.2148),
@@ -4609,24 +6661,7 @@ INSERT INTO relatorio_serv VALUES
     (19, '1.1002.20.00', '2026-02-15T03:38:27', 0.222),
     (19, '1.2405.12.00', '2026-02-26T00:32:24', 0.0667),
     (19, '1.2001.50.00', '2026-02-02T14:04:20', 0.1494),
-    (19, '1.0501.24.21', '2026-02-14T07:56:52', 0.1208);
-
-INSERT INTO relatorio VALUES
-    (20, '2024-07-25', '2026-04-30', '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (20, '3006.92.00', 0.5412, 3848),
-    (20, '4011.20.90', 1.0091, 7721),
-    (20, '2937.29.3', 2.6231, 7039),
-    (20, '8703.60.00', 0.4725, 8026),
-    (20, '0302.82.00', 1.1483, 2617),
-    (20, '2933.91.4', 1.0171, 9683),
-    (20, '2602.00.90', 1.9085, 13181),
-    (20, '2905.19.21', 0.3755, 4395),
-    (20, '2904.10.19', 0.0163, 400),
-    (20, '0511.99.99', 1.4158, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (19, '1.0501.24.21', '2026-02-14T07:56:52', 0.1208),
     (20, '1.2003.29.00', '2024-08-06T16:18:41', 5.8093),
     (20, '1.2001.34.20', '2024-08-26T12:06:30', 1.0563),
     (20, '1.1401.3', '2024-08-05T20:45:10', 0.1779),
@@ -4638,39 +6673,10 @@ INSERT INTO relatorio_serv VALUES
     (20, '1.1502.20.00', '2024-08-02T12:41:58', 0.2556),
     (20, '1.0501.21.20', '2024-08-16T22:59:11', 0.1308),
     (20, '1.0901.31.00', '2024-08-16T22:14:52', 1.7542),
-    (20, '1.0504.44.00', '2024-08-24T09:44:34', 1.9279);
-
-INSERT INTO relatorio VALUES
-    (21, '2024-06-11', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (21, '3824.84.00', 2.0128, 4774),
-    (21, '7320.20.90', 0.6934, 10999),
-    (21, '9021.39.40', 1.9736, 400),
-    (21, '8523.49.20', 1.4465, 11363),
-    (21, '8457.20.90', 0.3181, 1107),
-    (21, '2915.90.41', 2.8877, 400),
-    (21, '9307.00.00', 2.2748, 400),
-    (21, '1008.40.10', 0.7291, 3244),
-    (21, '2930.40.90', 0.2217, 2981),
-    (21, '8542.39.31', 0.4343, 1296),
-    (21, '3004.39.15', 1.7934, 7400),
-    (21, '2930.90.11', 0.9108, 1026);
-
-INSERT INTO relatorio_serv VALUES
+    (20, '1.0504.44.00', '2024-08-24T09:44:34', 1.9279),
     (21, '1.1805.31.00', '2024-07-07T07:32:03', 1.6674),
     (21, '1.0601.90.00', '2024-07-27T19:04:58', 3.5927),
-    (21, '1.1106.4', '2024-07-17T09:53:02', 0.9323);
-
-INSERT INTO relatorio VALUES
-    (22, '2021-11-30', NULL, '75.893.062', '0001-33', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (22, '2915.39.51', 0.1497, 400),
-    (22, '9012.90.10', 0.0754, 3238),
-    (22, '8425.31.10', 0.1489, 7292);
-
-INSERT INTO relatorio_serv VALUES
+    (21, '1.1106.4', '2024-07-17T09:53:02', 0.9323),
     (22, '1.2001.3', '2021-12-08T02:18:07', 0.1601),
     (22, '1.2404.31.00', '2021-12-26T21:15:05', 0.0273),
     (22, '1.0901.52.40', '2021-12-25T02:05:51', 0.1393),
@@ -4684,17 +6690,7 @@ INSERT INTO relatorio_serv VALUES
     (22, '1.2402.20.00', '2021-12-14T09:28:11', 0.2055),
     (22, '1.1101.20.00', '2021-12-02T20:14:31', 0.1723),
     (22, '1.0105.22.00', '2021-12-28T01:28:57', 0.118),
-    (22, '1.0608.20.00', '2021-12-12T15:05:04', 0.2261);
-
-INSERT INTO relatorio VALUES
-    (23, '2026-01-09', '2026-03-03', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (23, '8806.29.00', 0.5219, 1420),
-    (23, '9025.19.10', 0.2209, 6529),
-    (23, '2907.19.90', 0.3571, 2348);
-
-INSERT INTO relatorio_serv VALUES
+    (22, '1.0608.20.00', '2021-12-12T15:05:04', 0.2261),
     (23, '1.1805.2', '2026-02-11T12:47:28', 0.5295),
     (23, '1.0904.34.00', '2026-02-15T07:58:47', 0.2922),
     (23, '1.1806.6', '2026-02-01T02:19:24', 1.2219),
@@ -4707,68 +6703,11 @@ INSERT INTO relatorio_serv VALUES
     (23, '1.1405.60.00', '2026-02-22T18:03:34', 0.7711),
     (23, '1.0504.32.00', '2026-02-27T15:12:21', 0.2644),
     (23, '1.1103.36.20', '2026-02-17T21:16:29', 0.0156),
-    (23, '1.0102.20.00', '2026-02-06T22:13:41', 0.3618);
-
-INSERT INTO relatorio VALUES
-    (24, '2025-12-23', '2026-04-16', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (24, '2931.41.00', 0.3165, 560),
-    (24, '1211.50.00', 0.3017, 1256),
-    (24, '2924.29.43', 0.2422, 12433),
-    (24, '8443.19.90', 0.0383, 3360),
-    (24, '4407.99.90', 0.1008, 715),
-    (24, '2710.12.30', 0.0684, 2899),
-    (24, '7215.90.10', 0.2488, 3705),
-    (24, '2909.49.29', 0.0162, 14984),
-    (24, '8716.40.00', 0.8641, 4909),
-    (24, '3808.93.33', 0.0654, 400),
-    (24, '8511.50.10', 0.1125, 400);
-
-INSERT INTO relatorio VALUES
-    (25, '2024-12-08', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (25, '2937.29.39', 0.689, 5817),
-    (25, '4707.90.00', 0.0034, 7965),
-    (25, '2925.29.23', 0.0059, 1965),
-    (25, '1701.12.00', 0.0027, 6304),
-    (25, '8433.40.00', 0.009, 5029),
-    (25, '2808.00.20', 0.0012, 400),
-    (25, '2301.20.10', 0.0505, 400),
-    (25, '2843.90.11', 0.0142, 3946),
-    (25, '3303.00.10', 0.0052, 3212),
-    (25, '8901.20.00', 0.099, 3357),
-    (25, '8527.12.00', 0.0019, 400),
-    (25, '8517.62.29', 0.0001, 5158),
-    (25, '2931.49.16', 0.045, 9459),
-    (25, '7004.20.00', 0.0522, 11227);
-
-INSERT INTO relatorio_serv VALUES
+    (23, '1.0102.20.00', '2026-02-06T22:13:41', 0.3618),
     (25, '1.1805.39.00', '2025-01-23T02:56:05', 0.0629),
     (25, '1.0901.51.29', '2025-01-05T13:54:48', 0.0),
     (25, '1.1103.39.00', '2025-01-18T08:42:30', 0.0021),
-    (25, '1.1107.39.00', '2025-01-14T19:44:32', 0.0139);
-
-INSERT INTO relatorio VALUES
-    (26, '2024-08-05', '2026-02-22', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (26, '5205.43.00', 1.2962, 2365),
-    (26, '3808.93.27', 0.0458, 400),
-    (26, '9021.31.90', 0.0147, 400),
-    (26, '3906.90.12', 0.0049, 8256),
-    (26, '2903.41.00', 0.0072, 3116),
-    (26, '8422.30.21', 0.1011, 400),
-    (26, '4802.20.90', 0.1443, 400),
-    (26, '1513.19.00', 0.0122, 4942),
-    (26, '8448.32.19', 0.0184, 3573),
-    (26, '2918.99.94', 0.0116, 5173),
-    (26, '9018.39.21', 0.0067, 1214),
-    (26, '4820.30.00', 0.084, 4044),
-    (26, '8445.19.23', 0.0278, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (25, '1.1107.39.00', '2025-01-14T19:44:32', 0.0139),
     (26, '1.1802.40.00', '2024-09-29T04:36:28', 2.3909),
     (26, '1.1701.90.00', '2024-09-02T18:42:31', 0.1485),
     (26, '1.0403.19.00', '2024-09-27T05:43:50', 0.3343),
@@ -4782,47 +6721,10 @@ INSERT INTO relatorio_serv VALUES
     (26, '1.2205.1', '2024-09-18T14:53:12', 0.0202),
     (26, '1.0801', '2024-09-02T11:26:59', 0.051),
     (26, '1.1403.23.00', '2024-09-21T07:01:52', 0.0951),
-    (26, '1.0502.34.59', '2024-09-27T10:32:17', 0.1418);
-
-INSERT INTO relatorio VALUES
-    (27, '2024-04-08', '2026-02-12', '01.274.895', '0001-23', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (27, '7403.11.00', 0.2208, 5380),
-    (27, '2915.39.6', 0.341, 6327),
-    (27, '8205.90.00', 0.1039, 400),
-    (27, '6301.20.00', 0.2016, 9458),
-    (27, '3808.92.91', 0.0333, 4275),
-    (27, '5210.11.00', 0.5149, 931),
-    (27, '1504.10.11', 0.1888, 400),
-    (27, '2921.49.90', 0.0783, 3400),
-    (27, '8479.89.22', 0.2224, 16365),
-    (27, '8906.10.00', 0.1096, 8618),
-    (27, '7209.16.00', 0.1805, 400),
-    (27, '9403.91.00', 0.1413, 5421),
-    (27, '8409.99.51', 0.6086, 400),
-    (27, '7213.10.00', 0.9184, 3467),
-    (27, '7601.20.00', 0.2075, 4077),
-    (27, '6208.19.00', 0.308, 9244),
-    (27, '6802.93.10', 0.2883, 9264);
-
-INSERT INTO relatorio_serv VALUES
+    (26, '1.0502.34.59', '2024-09-27T10:32:17', 0.1418),
     (27, '1.2501.2', '2024-05-07T20:12:41', 0.2123),
     (27, '1.1001.1', '2024-05-26T13:38:30', 0.7033),
-    (27, '1.0502.34.5', '2024-05-27T01:14:50', 0.7852);
-
-INSERT INTO relatorio VALUES
-    (28, '2023-11-06', NULL, '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (28, '3701.30.29', 1.6157, 10292),
-    (28, '8443.39.30', 4.4266, 464),
-    (28, '1517.10.00', 4.1105, 11071),
-    (28, '6901.00.00', 2.7688, 400),
-    (28, '8308.10.00', 2.0092, 8740),
-    (28, '2940.00.29', 3.7825, 1560);
-
-INSERT INTO relatorio_serv VALUES
+    (27, '1.0502.34.5', '2024-05-27T01:14:50', 0.7852),
     (28, '1.1703.3', '2023-12-03T06:22:28', 2.0936),
     (28, '1.0101.22.00', '2023-12-26T22:39:58', 2.2823),
     (28, '1.0102.52', '2023-12-18T12:03:56', 2.0127),
@@ -4835,43 +6737,9 @@ INSERT INTO relatorio_serv VALUES
     (28, '1.0106.31.00', '2023-12-30T03:10:58', 3.2704),
     (28, '1.1401.31.00', '2023-12-02T20:20:18', 3.5316),
     (28, '1.1501.20.00', '2023-12-05T05:37:03', 1.4297),
-    (28, '1.0102.51.00', '2023-12-07T09:11:16', 1.2852);
-
-INSERT INTO relatorio VALUES
-    (29, '2024-11-01', '2026-04-12', '39.605.871', '0001-83', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (29, '2930.90.72', 0.0352, 400),
-    (29, '6108.91.00', 0.0878, 13097),
-    (29, '4802.40.90', 0.0491, 2475),
-    (29, '0810.90.1', 0.0484, 3039),
-    (29, '6804.10.00', 0.0171, 2488),
-    (29, '0804.30.00', 0.0133, 400),
-    (29, '2843.29.90', 0.1027, 400),
-    (29, '0306.12.00', 0.0578, 3128),
-    (29, '9027.90.99', 0.0928, 3469),
-    (29, '8418.69.31', 0.0447, 402),
-    (29, '3004.90.39', 0.1255, 4176),
-    (29, '9021.29.00', 0.0563, 5219),
-    (29, '7217.30.90', 0.1193, 5749),
-    (29, '3920.61.00', 0.0352, 2657),
-    (29, '6115.99.00', 0.142, 6002),
-    (29, '2931.46.00', 0.2786, 4404),
-    (29, '2932.19.20', 0.1542, 425);
-
-INSERT INTO relatorio_serv VALUES
+    (28, '1.0102.51.00', '2023-12-07T09:11:16', 1.2852),
     (29, '1.1806.8', '2024-12-07T18:35:08', 0.0045),
-    (29, '1.2301.12.00', '2024-12-05T22:09:08', 0.0285);
-
-INSERT INTO relatorio VALUES
-    (30, '2023-09-20', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (30, '2934.99.29', 0.0697, 400),
-    (30, '2822.00.90', 0.0014, 400),
-    (30, '7210.69.1', 0.002, 6798);
-
-INSERT INTO relatorio_serv VALUES
+    (29, '1.2301.12.00', '2024-12-05T22:09:08', 0.0285),
     (30, '1.1401.12.00', '2023-10-22T18:18:24', 4.4372),
     (30, '1.1406', '2023-10-05T12:02:25', 0.0621),
     (30, '1.2404.33.00', '2023-10-07T04:14:28', 0.8429),
@@ -4881,41 +6749,10 @@ INSERT INTO relatorio_serv VALUES
     (30, '1.0401.1', '2023-10-06T08:49:40', 0.3226),
     (30, '1.0402.11', '2023-10-14T00:45:21', 0.0896),
     (30, '1.0602.2', '2023-10-23T19:33:07', 0.1998),
-    (30, '1.08', '2023-10-24T13:04:58', 0.003);
-
-INSERT INTO relatorio VALUES
-    (31, '2023-11-18', NULL, '48.912.037', '0001-48', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (31, '2917.39.1', 1.7077, 5422),
-    (31, '8481.80.21', 0.0328, 6607),
-    (31, '1207.29.00', 0.022, 8802),
-    (31, '9307.00.00', 0.005, 400),
-    (31, '2930.90.84', 0.0307, 400),
-    (31, '2925.19.10', 0.2694, 400),
-    (31, '3701.10.21', 0.0562, 2249),
-    (31, '8511.10.00', 0.0659, 2146),
-    (31, '3301.29.11', 0.0739, 400),
-    (31, '7409.19.00', 0.0013, 2526),
-    (31, '9111.20.90', 0.1709, 400),
-    (31, '5509.52.00', 0.0307, 12515),
-    (31, '9403.20.90', 0.1085, 8041),
-    (31, '2922.50.32', 0.0102, 4317),
-    (31, '1213.00.00', 0.0056, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (30, '1.08', '2023-10-24T13:04:58', 0.003),
     (31, '1.1701.21.00', '2023-12-02T00:20:45', 0.7933),
     (31, '1.0906.30.00', '2023-12-30T18:25:29', 0.0017),
-    (31, '1.0904.35.00', '2023-12-16T18:30:56', 0.0242);
-
-INSERT INTO relatorio VALUES
-    (32, '2022-06-18', '2024-09-27', '28.659.130', '0001-07', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (32, '8443.99.21', 0.1798, 400),
-    (32, '8409.91.11', 0.3407, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (31, '1.0904.35.00', '2023-12-16T18:30:56', 0.0242),
     (32, '1.1405.50.00', '2022-07-12T05:40:55', 0.1071),
     (32, '1.0503.25.00', '2022-07-15T03:11:30', 0.0467),
     (32, '1.0402.19.00', '2022-07-12T23:59:17', 0.0329),
@@ -4949,15 +6786,7 @@ INSERT INTO relatorio_serv VALUES
     (32, '1.0403.39.00', '2022-07-15T04:18:47', 0.3907),
     (32, '1.0106.22.00', '2022-07-15T07:08:34', 0.1176),
     (32, '1.0106.13.00', '2022-07-14T02:19:18', 0.3496),
-    (32, '1.0502.23.20', '2022-07-25T23:16:28', 0.0694);
-
-INSERT INTO relatorio VALUES
-    (33, '2023-05-14', '2026-04-15', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (33, '2933.79.10', 0.5215, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (32, '1.0502.23.20', '2022-07-25T23:16:28', 0.0694),
     (33, '1.1405.11.00', '2023-06-11T23:13:50', 3.4327),
     (33, '1.1106.36.90', '2023-06-06T02:02:04', 0.0652),
     (33, '1.03', '2023-06-04T00:31:14', 0.0752),
@@ -4978,112 +6807,17 @@ INSERT INTO relatorio_serv VALUES
     (33, '1.0903.22.00', '2023-06-04T01:59:03', 0.0143),
     (33, '1.2101.21.00', '2023-06-29T16:19:06', 0.3212),
     (33, '1.0502.32', '2023-06-08T15:31:14', 0.0054),
-    (33, '1.0501.23.20', '2023-06-02T15:30:22', 0.1443);
-
-INSERT INTO relatorio VALUES
-    (34, '2021-10-06', NULL, '71.498.635', '0001-06', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (34, '8413.60.19', 0.5472, 9612),
-    (34, '6804.22.11', 0.2852, 3458),
-    (34, '9030.20.29', 0.1132, 7315),
-    (34, '9006.59.40', 0.2814, 1782),
-    (34, '8704.23.40', 0.1756, 6020),
-    (34, '3001.90.3', 0.051, 4783),
-    (34, '8422.30.23', 0.5519, 693),
-    (34, '0406.90.90', 0.1913, 8620),
-    (34, '5007.10.90', 0.1203, 10472),
-    (34, '2941.90.9', 0.6744, 2717),
-    (34, '9101.99.00', 0.0009, 7933),
-    (34, '3201.90.11', 1.3378, 11487);
-
-INSERT INTO relatorio_serv VALUES
+    (33, '1.0501.23.20', '2023-06-02T15:30:22', 0.1443),
     (34, '1.0903.34.00', '2021-11-10T23:19:57', 0.2621),
-    (34, '1.0402.3', '2021-11-04T23:53:42', 1.558);
-
-INSERT INTO relatorio VALUES
-    (35, '2025-11-01', '2026-02-27', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (35, '3209.90.1', 0.0561, 5597),
-    (35, '2710.19.92', 0.0129, 1300),
-    (35, '4811.90.19', 4.409, 400),
-    (35, '2824.90.10', 1.1292, 400),
-    (35, '3102.60.00', 0.9118, 5664),
-    (35, '5904.90.00', 0.9448, 4327),
-    (35, '1515.90.2', 1.8114, 10378),
-    (35, '6206.20.00', 0.9083, 6371),
-    (35, '3401.20.90', 0.9462, 6196),
-    (35, '7612.90.90', 0.5954, 7621),
-    (35, '0813.20.20', 2.3913, 5380),
-    (35, '0502.90.10', 0.8433, 400),
-    (35, '8525.89.22', 1.8651, 575),
-    (35, '7318.15.00', 0.2791, 400),
-    (35, '3907.10.9', 0.8528, 20419),
-    (35, '7208.27.90', 1.5113, 5986),
-    (35, '6403.20.00', 0.4735, 7370);
-
-INSERT INTO relatorio VALUES
-    (36, '2023-06-09', '2025-01-21', '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (36, '9305.20.00', 0.5385, 3554),
-    (36, '2710.19.94', 0.871, 7761),
-    (36, '2840.30.00', 0.5153, 9197),
-    (36, '8421.99.10', 1.8547, 9412),
-    (36, '0507.90.00', 1.9408, 6054),
-    (36, '8443.91.10', 0.1396, 6980),
-    (36, '1102.20.00', 0.7326, 400),
-    (36, '3824.99.21', 1.0226, 400),
-    (36, '2712.20.00', 0.995, 400),
-    (36, '2921.51.3', 2.5285, 3688),
-    (36, '8407.29.10', 0.5502, 12458),
-    (36, '8548.00.10', 1.1255, 400),
-    (36, '7020.00.90', 0.1298, 4537),
-    (36, '9018.31.90', 0.8917, 9791),
-    (36, '2914.29.90', 1.379, 400),
-    (36, '2833.29.60', 0.7336, 8651),
-    (36, '2921.43.1', 0.6802, 9981),
-    (36, '4003.00.00', 2.1534, 9980),
-    (36, '5208.21.00', 0.4433, 400),
-    (36, '2933.72.20', 0.5329, 6921),
-    (36, '4822.10.00', 1.3591, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (34, '1.0402.3', '2021-11-04T23:53:42', 1.558),
     (36, '1.2403.2', '2023-07-14T18:30:34', 0.8277),
     (36, '1.0501.22.20', '2023-07-03T14:08:02', 0.5483),
-    (36, '1.0401.15.20', '2023-07-14T22:09:28', 0.5795);
-
-INSERT INTO relatorio VALUES
-    (37, '2021-06-26', NULL, '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (37, '2916.32.10', 1.5255, 5724),
-    (37, '2005.59.00', 0.1592, 2639),
-    (37, '2924.19.19', 0.028, 2054),
-    (37, '6903.20.10', 0.0005, 6824),
-    (37, '8428.90.30', 0.0681, 400),
-    (37, '3701.10.29', 0.0649, 11477),
-    (37, '8535.30.23', 0.0023, 9300);
-
-INSERT INTO relatorio_serv VALUES
+    (36, '1.0401.15.20', '2023-07-14T22:09:28', 0.5795),
     (37, '1.2505.20.00', '2021-07-04T15:23:42', 2.5),
     (37, '1.1703.22.00', '2021-07-08T14:40:17', 0.5925),
     (37, '1.0503.2', '2021-07-05T02:52:52', 0.0667),
     (37, '1.0401.4', '2021-07-14T04:20:39', 0.036),
-    (37, '1.0903.34.00', '2021-07-12T18:06:56', 0.0403);
-
-INSERT INTO relatorio VALUES
-    (38, '2022-10-07', '2024-05-13', '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (38, '0511.99.9', 1.0384, 8630),
-    (38, '8409.99.30', 0.0014, 400),
-    (38, '2916.19.23', 0.2039, 400),
-    (38, '9025.19.10', 0.0566, 7407),
-    (38, '8541.10.11', 0.0107, 10755);
-
-INSERT INTO relatorio_serv VALUES
+    (37, '1.0903.34.00', '2021-07-12T18:06:56', 0.0403),
     (38, '1.1404.1', '2022-11-29T14:09:22', 1.145),
     (38, '1.2504', '2022-11-27T02:13:35', 0.0423),
     (38, '1.1103.36', '2022-11-28T07:18:36', 0.0147),
@@ -5098,21 +6832,7 @@ INSERT INTO relatorio_serv VALUES
     (38, '1.0401.19.00', '2022-11-15T12:02:04', 0.0039),
     (38, '1.0901.21.00', '2022-11-20T21:33:35', 0.0001),
     (38, '1.1806.31.00', '2022-11-29T11:41:43', 0.0176),
-    (38, '1.0801.10.00', '2022-11-21T08:04:10', 0.0516);
-
-INSERT INTO relatorio VALUES
-    (39, '2024-09-09', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (39, '9018.49.19', 0.2762, 5973),
-    (39, '7305.39.00', 0.3009, 10129),
-    (39, '9010.60.00', 0.3322, 5591),
-    (39, '2931.41.00', 0.7985, 897),
-    (39, '3906.90.62', 0.0815, 400),
-    (39, '3824.99.82', 0.3039, 400),
-    (39, '6101.90.90', 0.7549, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (38, '1.0801.10.00', '2022-11-21T08:04:10', 0.0516),
     (39, '1.1403.22.22', '2024-10-07T05:35:09', 0.1074),
     (39, '1.0401.21.10', '2024-10-25T23:15:25', 0.2949),
     (39, '1.1704.20.00', '2024-10-22T04:38:42', 0.3693),
@@ -5120,19 +6840,7 @@ INSERT INTO relatorio_serv VALUES
     (39, '1.1502.10.00', '2024-10-06T06:50:48', 0.1256),
     (39, '1.0909', '2024-10-10T06:57:24', 0.048),
     (39, '1.0602.33.00', '2024-10-24T03:33:51', 0.1923),
-    (39, '1.2205.13.00', '2024-10-03T18:28:07', 0.1773);
-
-INSERT INTO relatorio VALUES
-    (40, '2024-06-25', '2025-08-06', '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (40, '9025.11.91', 0.4549, 1065),
-    (40, '8418.29.00', 1.1889, 3922),
-    (40, '3004.39.99', 2.5835, 5161),
-    (40, '8467.21.00', 1.3575, 400),
-    (40, '4810.31.10', 1.4665, 1308);
-
-INSERT INTO relatorio_serv VALUES
+    (39, '1.2205.13.00', '2024-10-03T18:28:07', 0.1773),
     (40, '1.0101.2', '2024-07-24T09:58:34', 0.6601),
     (40, '1.1106.31.00', '2024-07-29T02:58:37', 0.1514),
     (40, '1.1804.00.00', '2024-07-26T07:42:28', 0.3496),
@@ -5143,16 +6851,7 @@ INSERT INTO relatorio_serv VALUES
     (40, '1.1403.30.00', '2024-07-30T14:59:54', 0.4423),
     (40, '1.2205.12.00', '2024-07-05T04:44:24', 1.2003),
     (40, '1.0901.5', '2024-07-03T22:23:18', 0.447),
-    (40, '1.0102.12.00', '2024-07-04T19:10:34', 0.5516);
-
-INSERT INTO relatorio VALUES
-    (41, '2022-09-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (41, '0303.55.00', 0.5084, 8784),
-    (41, '3003.90.79', 0.515, 10600);
-
-INSERT INTO relatorio_serv VALUES
+    (40, '1.0102.12.00', '2024-07-04T19:10:34', 0.5516),
     (41, '1.2101.22.00', '2022-10-11T03:27:41', 0.3246),
     (41, '1.1401.11.00', '2022-10-27T18:48:20', 0.096),
     (41, '1.0501.22.10', '2022-10-14T01:29:20', 0.1296),
@@ -5190,151 +6889,16 @@ INSERT INTO relatorio_serv VALUES
     (41, '1.0106.31.00', '2022-10-17T11:42:57', 0.1174),
     (41, '1.0504.43.00', '2022-10-03T17:19:27', 0.0185),
     (41, '1.2301.96.00', '2022-10-04T20:53:53', 0.0126),
-    (41, '1.0904.39.00', '2022-10-16T19:44:12', 0.1297);
-
-INSERT INTO relatorio VALUES
-    (42, '2024-02-03', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (42, '8542.32.21', 0.7491, 5138),
-    (42, '3806.90.11', 0.0111, 994),
-    (42, '3901.90.90', 0.0227, 5449),
-    (42, '3906.90.21', 0.0241, 3095),
-    (42, '2918.22.20', 0.0252, 400),
-    (42, '4810.19.10', 0.0164, 8135),
-    (42, '8517.62.94', 0.0471, 1734),
-    (42, '2932.99.99', 0.0127, 1217),
-    (42, '3503.00.1', 0.0056, 1359);
-
-INSERT INTO relatorio VALUES
-    (43, '2026-02-01', NULL, '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (43, '3909.20.19', 3.9313, 9222),
-    (43, '3304.10.00', 0.8718, 3744),
-    (43, '3907.99.9', 1.2465, 9779),
-    (43, '3822.90.00', 0.7436, 10470),
-    (43, '5206.14.00', 2.6761, 512),
-    (43, '8541.10.99', 1.2512, 6667),
-    (43, '5308.20.00', 4.5696, 4238),
-    (43, '7507.12.00', 0.9767, 3615),
-    (43, '3206.11.30', 1.0633, 2970),
-    (43, '0306.19.10', 0.2682, 2543),
-    (43, '2306.41.00', 0.7681, 1213),
-    (43, '0306.34.00', 0.2485, 400),
-    (43, '1207.40.10', 2.1848, 400),
-    (43, '3824.99.62', 1.0005, 400),
-    (43, '8542.33.90', 0.6493, 7753),
-    (43, '9303.10.00', 3.3495, 7371),
-    (43, '3909.20.1', 0.8979, 11172),
-    (43, '5502.10.00', 1.0981, 684),
-    (43, '6805.30.10', 0.5169, 7041);
-
-INSERT INTO relatorio_serv VALUES
+    (41, '1.0904.39.00', '2022-10-16T19:44:12', 0.1297),
     (43, '1.0901.51.21', '2026-03-30T16:47:58', 0.1711),
     (43, '1.1107.90.00', '2026-03-15T00:07:31', 1.0304),
-    (43, '1.0502.24.5', '2026-03-28T05:48:43', 0.491);
-
-INSERT INTO relatorio VALUES
-    (44, '2024-12-18', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (44, '4010.12.00', 1.69, 7723),
-    (44, '7409.40.19', 0.0353, 6963),
-    (44, '2940.00.94', 0.0018, 4658),
-    (44, '8479.81.90', 0.1518, 3545),
-    (44, '6402.91.10', 0.0002, 7315),
-    (44, '8460.19.00', 0.1193, 11456),
-    (44, '0303.89.65', 0.0592, 400),
-    (44, '5305.00.10', 0.0282, 2426),
-    (44, '0709.70.00', 0.0259, 400),
-    (44, '2931.49.40', 0.0007, 2280),
-    (44, '5209.41.00', 0.0166, 12822),
-    (44, '8215.99.90', 0.0173, 400),
-    (44, '2937.22.2', 0.0112, 400),
-    (44, '8479.50.00', 0.0015, 8534),
-    (44, '5403.39.00', 0.0171, 7472),
-    (44, '9209.92.00', 0.0671, 3200),
-    (44, '6109.10.00', 0.0312, 7289),
-    (44, '8533.40.91', 0.0628, 11780),
-    (44, '3808.93.33', 0.0782, 5372),
-    (44, '7015.10.91', 0.0009, 4283),
-    (44, '5408.23.00', 0.0059, 2116),
-    (44, '6004.10.12', 0.0673, 13101),
-    (44, '0203.29.00', 0.0278, 400),
-    (44, '2934.91.11', 0.1256, 564),
-    (44, '5301.10.00', 0.0916, 2898),
-    (44, '6815.99.1', 0.0711, 6081),
-    (44, '8701.30.00', 0.0713, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (43, '1.0502.24.5', '2026-03-28T05:48:43', 0.491),
     (44, '1.2001.34.10', '2025-01-30T18:09:55', 0.8734),
     (44, '1.0901.52.10', '2025-01-17T00:41:42', 0.002),
     (44, '1.23', '2025-01-26T00:19:35', 0.0337),
-    (44, '1.1301.10.00', '2025-01-21T15:01:47', 0.0463);
-
-INSERT INTO relatorio VALUES
-    (45, '2024-12-27', '2025-04-04', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (45, '8483.40.90', 0.0559, 2475),
-    (45, '1207.99.90', 0.0901, 2752),
-    (45, '4016.91.00', 0.04, 400),
-    (45, '0406.90.20', 0.3265, 2830),
-    (45, '8443.32.39', 0.5815, 1424),
-    (45, '5501.19.00', 0.0418, 8821),
-    (45, '3402.31.00', 0.0025, 400),
-    (45, '9108.11.10', 0.3349, 2900),
-    (45, '8439.30.20', 0.0622, 400),
-    (45, '9303.90.90', 0.0492, 1271),
-    (45, '2933.91.72', 0.2252, 400),
-    (45, '3702.54.1', 0.1232, 2954),
-    (45, '8101.97.00', 0.0896, 400),
-    (45, '3923.30.90', 0.0113, 4942),
-    (45, '2933.91.61', 0.0748, 8194),
-    (45, '8413.70.10', 0.1371, 8363),
-    (45, '0402.29.30', 0.5523, 10444),
-    (45, '8525.81.00', 1.0648, 400),
-    (45, '8471.50.10', 0.1596, 5715);
-
-INSERT INTO relatorio VALUES
-    (46, '2024-10-15', '2026-02-07', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (46, '9018.19.80', 0.1662, 5143),
-    (46, '9019.20.40', 0.0771, 1696),
-    (46, '7901.11.11', 0.4059, 4951),
-    (46, '7011.90.00', 0.0426, 400),
-    (46, '2615.10.90', 0.1465, 3105),
-    (46, '2937.29.60', 0.0572, 10081),
-    (46, '9001.20.00', 0.0523, 9768),
-    (46, '8607.21.00', 0.1909, 7158),
-    (46, '2931.90.41', 0.2174, 400),
-    (46, '3004.20.19', 0.0974, 3721),
-    (46, '3923.21.90', 0.1383, 6800),
-    (46, '4011.30.00', 0.0474, 1580),
-    (46, '3004.90.25', 0.05, 11856),
-    (46, '3908.10.11', 0.1866, 400),
-    (46, '8423.90.21', 0.0707, 3251),
-    (46, '2936.23.10', 0.4541, 400),
-    (46, '8511.10.00', 0.0411, 9988),
-    (46, '6804.22.11', 0.029, 1395),
-    (46, '3920.10.9', 0.0213, 400),
-    (46, '7406.10.10', 0.1557, 7507),
-    (46, '2829.90.1', 0.0183, 5194);
-
-INSERT INTO relatorio_serv VALUES
+    (44, '1.1301.10.00', '2025-01-21T15:01:47', 0.0463),
     (46, '1.1103.3', '2024-11-05T18:44:49', 0.1005),
-    (46, '1.1103.32.00', '2024-11-11T11:02:07', 0.1794);
-
-INSERT INTO relatorio VALUES
-    (47, '2023-10-24', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (47, '6115.30.10', 0.0923, 4508),
-    (47, '6805.30.20', 0.0005, 9635);
-
-INSERT INTO relatorio_serv VALUES
+    (46, '1.1103.32.00', '2024-11-11T11:02:07', 0.1794),
     (47, '1.2403.32.00', '2023-11-28T05:12:02', 0.33),
     (47, '1.2301.96.00', '2023-11-06T15:57:35', 0.0003),
     (47, '1.1802', '2023-11-11T23:01:08', 0.0598),
@@ -5357,17 +6921,7 @@ INSERT INTO relatorio_serv VALUES
     (47, '1.2301.2', '2023-11-15T11:58:46', 0.0196),
     (47, '1.1403.21.20', '2023-11-07T00:28:38', 0.0089),
     (47, '1.2205.11.00', '2023-11-04T20:37:14', 0.004),
-    (47, '1.0901.51.12', '2023-11-07T22:38:07', 0.0118);
-
-INSERT INTO relatorio VALUES
-    (48, '2023-10-13', '2025-01-01', '75.893.062', '0001-33', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (48, '2915.39.63', 0.2653, 400),
-    (48, '4010.32.00', 0.1272, 2658),
-    (48, '7901.12.90', 0.6671, 5736);
-
-INSERT INTO relatorio_serv VALUES
+    (47, '1.0901.51.12', '2023-11-07T22:38:07', 0.0118),
     (48, '1.0504.13.00', '2023-11-25T14:24:36', 0.3583),
     (48, '1.1301.30.00', '2023-11-08T05:02:17', 0.0577),
     (48, '1.1107.50.00', '2023-11-05T00:49:10', 0.4122),
@@ -5381,40 +6935,13 @@ INSERT INTO relatorio_serv VALUES
     (48, '1.0503', '2023-11-28T23:06:42', 0.4714),
     (48, '1.0906.11.00', '2023-11-28T09:35:57', 0.6121),
     (48, '1.1404.41.00', '2023-11-29T15:32:25', 0.3733),
-    (48, '1.2203.20.00', '2023-11-04T02:38:12', 0.1988);
-
-INSERT INTO relatorio VALUES
-    (49, '2024-03-01', '2025-12-27', '79.821.563', '0001-00', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (49, '8531.10.10', 2.9489, 9688),
-    (49, '2922.19.8', 0.0291, 3276),
-    (49, '3917.22.90', 0.0085, 400),
-    (49, '2849.90.90', 0.0082, 4149),
-    (49, '2711.13.00', 0.1352, 400),
-    (49, '3507.90.26', 0.0244, 4331),
-    (49, '0908.21.00', 0.0152, 400),
-    (49, '3002.12.33', 0.0049, 400),
-    (49, '3501.10.00', 0.1172, 13990),
-    (49, '8443.99.11', 0.2744, 6698),
-    (49, '8516.33.00', 0.0088, 5764);
-
-INSERT INTO relatorio_serv VALUES
+    (48, '1.2203.20.00', '2023-11-04T02:38:12', 0.1988),
     (49, '1.1105.59.00', '2024-04-13T11:29:54', 5.4953),
     (49, '1.0401.4', '2024-04-28T10:49:38', 0.0542),
     (49, '1.1405', '2024-04-18T07:36:57', 0.2476),
     (49, '1.1402.31.00', '2024-04-17T22:44:43', 0.043),
     (49, '1.1304.00.00', '2024-04-11T14:50:27', 0.2984),
-    (49, '1.1107.40.00', '2024-04-08T14:07:12', 0.0512);
-
-INSERT INTO relatorio VALUES
-    (50, '2023-02-23', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (50, '8462.69.00', 0.3402, 8356),
-    (50, '3811.29.90', 0.1516, 1731);
-
-INSERT INTO relatorio_serv VALUES
+    (49, '1.1107.40.00', '2024-04-08T14:07:12', 0.0512),
     (50, '1.1303.20.00', '2023-03-16T21:18:03', 0.0643),
     (50, '1.1406.20.00', '2023-03-25T14:35:18', 0.0352),
     (50, '1.0106.90.00', '2023-03-22T02:45:56', 0.1524),
@@ -5440,109 +6967,23 @@ INSERT INTO relatorio_serv VALUES
     (50, '1.0801.10.00', '2023-03-15T08:52:51', 0.1295),
     (50, '1.1105.90.00', '2023-03-27T07:31:40', 0.0396),
     (50, '1.1805.12.00', '2023-03-28T13:36:28', 0.0301),
-    (50, '1.1301.30.00', '2023-03-15T14:23:53', 0.0397);
-
-INSERT INTO relatorio VALUES
-    (51, '2021-07-23', NULL, '79.821.563', '0001-99', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (51, '6103.32.00', 0.0795, 2088),
-    (51, '8802.20.10', 0.0382, 13962),
-    (51, '0303.32.00', 0.0674, 400),
-    (51, '8417.20.00', 0.0352, 5000),
-    (51, '5106.20.00', 0.0557, 400),
-    (51, '2910.90.10', 0.009, 400),
-    (51, '2936.21.12', 0.053, 1241),
-    (51, '4407.19.00', 0.0669, 1497),
-    (51, '3903.11.10', 0.0221, 9155),
-    (51, '4811.59.29', 0.0257, 6701),
-    (51, '7208.37.00', 0.0159, 5512),
-    (51, '4202.22.20', 0.0125, 9677),
-    (51, '2903.99.29', 0.4629, 15008),
-    (51, '7614.10.10', 0.0966, 8554);
-
-INSERT INTO relatorio_serv VALUES
+    (50, '1.1301.30.00', '2023-03-15T14:23:53', 0.0397),
     (51, '1.0908.00.00', '2021-08-28T14:07:08', 0.0433),
     (51, '1.0903.38.00', '2021-08-11T11:10:07', 0.361),
     (51, '1.1108.10.00', '2021-08-11T08:50:42', 0.2992),
     (51, '1.1403.23.00', '2021-08-08T11:59:30', 0.3302),
     (51, '1.0404', '2021-08-11T02:19:07', 0.1538),
     (51, '1.0502.1', '2021-08-04T21:34:28', 0.371),
-    (51, '1.0502.11', '2021-08-27T15:29:34', 0.0797);
-
-INSERT INTO relatorio VALUES
-    (52, '2025-01-16', '2026-01-29', '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (52, '8542.32.2', 0.7535, 6820),
-    (52, '4002.59.00', 0.081, 4358),
-    (52, '8708.29.91', 0.0059, 3026),
-    (52, '3907.10.31', 0.0635, 7218),
-    (52, '2922.31.12', 0.0017, 10095),
-    (52, '0801.22.00', 0.0591, 400),
-    (52, '4801.00.30', 0.0035, 2493),
-    (52, '3004.90.32', 0.0013, 9459),
-    (52, '2921.45.00', 0.0548, 12567),
-    (52, '2936.28.1', 0.0342, 14443),
-    (52, '2933.33.69', 0.0002, 8980),
-    (52, '3006.30.21', 0.0058, 5405),
-    (52, '2934.20.32', 0.0712, 5195),
-    (52, '3002.49.92', 0.0059, 9624),
-    (52, '8425.31.90', 0.0276, 8894),
-    (52, '4107.19.90', 0.0179, 2280),
-    (52, '2925.29.30', 0.0044, 400),
-    (52, '3002.12.12', 0.107, 2903),
-    (52, '3102.50.11', 0.0049, 4579),
-    (52, '8708.94.81', 0.0051, 8722),
-    (52, '5107.10.1', 0.0041, 805),
-    (52, '2924.29.20', 0.0188, 4468),
-    (52, '8415.90.90', 0.0289, 3290),
-    (52, '5801.10.00', 0.014, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (51, '1.0502.11', '2021-08-27T15:29:34', 0.0797),
     (52, '1.1403.23.00', '2025-02-18T10:38:22', 0.2847),
-    (52, '1.1403.21', '2025-02-01T19:54:11', 0.0133);
-
-INSERT INTO relatorio VALUES
-    (53, '2024-10-23', NULL, '79.821.563', '0001-99', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (53, '8711.20.20', 0.0255, 9662),
-    (53, '8461.90.10', 0.0203, 400),
-    (53, '3814.00.90', 0.029, 2861),
-    (53, '3901.20.2', 0.0093, 6051),
-    (53, '8433.59.19', 0.0504, 5235),
-    (53, '6302.31.00', 0.0235, 400),
-    (53, '2930.90.12', 0.0133, 400),
-    (53, '7219.90.90', 0.0176, 10886),
-    (53, '2905.19.9', 0.0679, 5802),
-    (53, '1008.90.90', 0.0254, 400),
-    (53, '4419.11.00', 0.0879, 11862),
-    (53, '7804.11.00', 0.0158, 6598),
-    (53, '0203.11.00', 0.0005, 8812);
-
-INSERT INTO relatorio_serv VALUES
+    (52, '1.1403.21', '2025-02-01T19:54:11', 0.0133),
     (53, '1.1801.1', '2024-11-26T00:04:48', 0.0228),
     (53, '1.1405.1', '2024-11-09T07:36:09', 0.0803),
     (53, '1.1502.50.00', '2024-11-09T00:21:18', 0.0282),
     (53, '1.1001.30.00', '2024-11-17T14:57:19', 0.0609),
     (53, '1.0102.41.90', '2024-11-11T23:46:23', 0.2037),
     (53, '1.1801.21.00', '2024-11-18T16:40:27', 0.302),
-    (53, '1.0902.90.00', '2024-11-25T11:52:04', 0.0636);
-
-INSERT INTO relatorio VALUES
-    (54, '2024-02-08', '2025-10-16', '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (54, '3006.93.00', 0.3502, 5176),
-    (54, '2914.79.29', 0.3041, 7060),
-    (54, '7313.00.00', 0.368, 400),
-    (54, '3907.10.41', 0.0903, 6668),
-    (54, '6203.43.00', 0.234, 2335),
-    (54, '8448.11.10', 0.4355, 400),
-    (54, '4002.19.1', 0.1974, 8442);
-
-INSERT INTO relatorio_serv VALUES
+    (53, '1.0902.90.00', '2024-11-25T11:52:04', 0.0636),
     (54, '1.0102.41.10', '2024-03-25T06:25:41', 0.084),
     (54, '1.2602.20.00', '2024-03-17T01:47:38', 0.0972),
     (54, '1.1109.10.00', '2024-03-30T05:10:57', 0.1618),
@@ -5551,104 +6992,13 @@ INSERT INTO relatorio_serv VALUES
     (54, '1.2301.19.00', '2024-03-26T08:35:44', 0.1703),
     (54, '1.0605.90.00', '2024-03-02T16:01:49', 0.1393),
     (54, '1.1701.33.00', '2024-03-19T10:15:14', 0.3035),
-    (54, '1.2101.2', '2024-03-11T20:52:20', 0.3589);
-
-INSERT INTO relatorio VALUES
-    (55, '2025-03-30', '2026-03-02', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (55, '8418.61.00', 0.0159, 400),
-    (55, '2915.90.41', 0.0768, 7502),
-    (55, '8418.40.00', 0.1453, 2056),
-    (55, '3004.39.82', 0.1509, 8593),
-    (55, '3703.90.10', 0.0738, 400),
-    (55, '7316.00.00', 0.0586, 11508),
-    (55, '2615.90.00', 0.0522, 9705),
-    (55, '9018.90.94', 0.0189, 2967),
-    (55, '8308.20.00', 0.2248, 4852),
-    (55, '8543.70.11', 0.0206, 11092),
-    (55, '6406.20.00', 0.1487, 400),
-    (55, '0304.43.00', 0.0939, 9090),
-    (55, '8532.21.1', 0.0473, 13145),
-    (55, '8477.90.00', 0.1162, 4596),
-    (55, '6204.21.00', 0.0355, 4003),
-    (55, '6104.61.00', 0.0312, 3831),
-    (55, '2933.29.30', 0.0525, 4553),
-    (55, '2933.91.29', 0.0464, 684),
-    (55, '3808.93.52', 0.1438, 7484),
-    (55, '9014.20.10', 0.0334, 902),
-    (55, '2934.91.60', 0.0586, 2972),
-    (55, '3811.21.50', 0.0052, 9655),
-    (55, '7607.19.90', 0.0201, 10236),
-    (55, '2933.69.16', 0.1664, 11053),
-    (55, '3004.20.95', 0.094, 6069),
-    (55, '8442.40.20', 0.0502, 2932),
-    (55, '2524.10.00', 0.0165, 5372),
-    (55, '6212.90.00', 0.1071, 1219);
-
-INSERT INTO relatorio_serv VALUES
+    (54, '1.2101.2', '2024-03-11T20:52:20', 0.3589),
     (55, '1.0503', '2025-04-11T01:03:15', 0.1753),
-    (55, '1.0501.25.00', '2025-04-15T12:42:57', 0.3167);
-
-INSERT INTO relatorio VALUES
-    (56, '2023-02-21', '2024-01-11', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (56, '4820.40.00', 0.0718, 400),
-    (56, '2907.19.20', 0.3732, 7727),
-    (56, '3004.20.92', 0.121, 2520),
-    (56, '6302.99.90', 0.0223, 2394),
-    (56, '3803.00.10', 0.0046, 14210),
-    (56, '7306.69.00', 0.1686, 9727),
-    (56, '5603.93.40', 0.1853, 400),
-    (56, '4802.20.90', 0.3378, 6517),
-    (56, '8476.90.00', 0.634, 400),
-    (56, '2921.19.91', 0.3469, 400),
-    (56, '9022.13.1', 0.2312, 5192),
-    (56, '2941.30.10', 0.0473, 400),
-    (56, '6207.22.00', 0.2876, 400),
-    (56, '3102.90.00', 0.1593, 4909),
-    (56, '6905.90.00', 0.1128, 400),
-    (56, '2934.20.10', 0.0824, 3708),
-    (56, '8414.80.12', 0.035, 5362),
-    (56, '2933.91.81', 0.0438, 3902);
-
-INSERT INTO relatorio VALUES
-    (57, '2025-10-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (57, '2933.69.23', 7.5306, 400),
-    (57, '2915.90.70', 6.6138, 9113),
-    (57, '2915.90.4', 2.1019, 766),
-    (57, '7410.21.90', 3.0118, 400),
-    (57, '2934.99.51', 7.5834, 6684),
-    (57, '2933.91.2', 2.4039, 11524),
-    (57, '8443.99.11', 0.6079, 400),
-    (57, '2517.20.00', 5.5735, 5399),
-    (57, '2924.19.4', 4.6202, 4549),
-    (57, '8532.23.90', 1.8322, 400),
-    (57, '6304.19.90', 3.0822, 400),
-    (57, '7019.11.00', 1.5908, 10854),
-    (57, '2933.39.23', 9.1471, 12829),
-    (57, '0207.14.33', 1.4346, 6252),
-    (57, '8302.42.00', 2.6787, 9338),
-    (57, '3003.90.65', 1.8361, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (55, '1.0501.25.00', '2025-04-15T12:42:57', 0.3167),
     (57, '1.0502.14.90', '2025-11-17T21:42:30', 5.0123),
     (57, '1.2405.11.00', '2025-11-12T05:51:59', 1.0545),
     (57, '1.1001.2', '2025-11-06T13:52:28', 0.0785),
-    (57, '1.1406.33.00', '2025-11-05T17:00:38', 3.8242);
-
-INSERT INTO relatorio VALUES
-    (58, '2024-05-17', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (58, '9018.49.20', 0.0499, 512),
-    (58, '5604.90.2', 0.0163, 7566),
-    (58, '2306.49.00', 0.1745, 1282);
-
-INSERT INTO relatorio_serv VALUES
+    (57, '1.1406.33.00', '2025-11-05T17:00:38', 3.8242),
     (58, '1.0504.49.00', '2024-06-09T14:53:46', 0.0071),
     (58, '1.0501.12.20', '2024-06-08T03:39:46', 0.0161),
     (58, '1.0401.14.00', '2024-06-27T01:38:20', 0.0487),
@@ -5684,16 +7034,7 @@ INSERT INTO relatorio_serv VALUES
     (58, '1.2501.90.00', '2024-06-27T16:33:11', 0.1233),
     (58, '1.1802.30.00', '2024-06-28T11:32:59', 0.0453),
     (58, '1.2405.90.00', '2024-06-14T10:20:32', 0.0414),
-    (58, '1.0901.51.24', '2024-06-21T03:03:45', 0.1051);
-
-INSERT INTO relatorio VALUES
-    (59, '2024-11-17', '2025-04-24', '75.893.062', '0001-33', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (59, '3204.12.20', 0.0092, 10419),
-    (59, '2939.80.90', 0.1863, 4180);
-
-INSERT INTO relatorio_serv VALUES
+    (58, '1.0901.51.24', '2024-06-21T03:03:45', 0.1051),
     (59, '1.0503.27.00', '2024-12-04T21:47:45', 0.2005),
     (59, '1.2301.97.00', '2024-12-20T22:14:39', 0.3627),
     (59, '1.0602.3', '2024-12-03T21:48:39', 0.3791),
@@ -5706,54 +7047,11 @@ INSERT INTO relatorio_serv VALUES
     (59, '1.1406.12.00', '2024-12-27T07:28:02', 0.1515),
     (59, '1.1403.21.20', '2024-12-03T08:55:16', 0.1143),
     (59, '1.1805.21.00', '2024-12-11T08:06:44', 0.1811),
-    (59, '1.1102.10.00', '2024-12-09T19:41:55', 0.2899);
-
-INSERT INTO relatorio VALUES
-    (60, '2023-10-28', '2025-06-22', '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (60, '2009.19.00', 15.7027, 8378),
-    (60, '5601.30.10', 0.0101, 400),
-    (60, '2715.00.00', 0.4788, 4016),
-    (60, '1605.51.00', 0.1864, 455),
-    (60, '8479.60.00', 0.0692, 4072),
-    (60, '3920.99.50', 0.3674, 1243),
-    (60, '8467.99.00', 1.4344, 400),
-    (60, '7508.10.00', 0.2197, 9663),
-    (60, '8529.90.50', 0.9288, 11693),
-    (60, '8534.00.1', 1.0215, 8080),
-    (60, '2920.19.90', 0.2761, 400),
-    (60, '3004.20.39', 0.0308, 8801),
-    (60, '3906.90.62', 0.2228, 4759),
-    (60, '0712.90.20', 0.3471, 400),
-    (60, '6505.00.2', 0.01, 2956),
-    (60, '0713.60.90', 0.2994, 400),
-    (60, '4010.34.00', 0.4601, 1389),
-    (60, '8523.52.90', 0.1806, 400),
-    (60, '6101.20.00', 1.286, 738),
-    (60, '3004.90.59', 2.3891, 10651),
-    (60, '8708.93.00', 0.2521, 5491),
-    (60, '0306.35.00', 0.0552, 400),
-    (60, '0302.72.90', 0.5118, 8733),
-    (60, '1805.00.00', 0.1001, 6205),
-    (60, '7606.12.30', 1.3348, 2250),
-    (60, '5515.29.00', 0.1856, 7162),
-    (60, '5311.00.00', 0.2057, 1548),
-    (60, '6006.34.10', 0.7878, 2257);
-
-INSERT INTO relatorio_serv VALUES
+    (59, '1.1102.10.00', '2024-12-09T19:41:55', 0.2899),
     (60, '1.2302.21.00', '2023-11-06T15:18:11', 6.8297),
     (60, '1.1506.10.00', '2023-11-22T04:54:43', 0.4335),
     (60, '1.0503.29.00', '2023-11-02T21:12:49', 0.0772),
-    (60, '1.2505.20.00', '2023-11-13T21:02:42', 0.1406);
-
-INSERT INTO relatorio VALUES
-    (61, '2025-10-08', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (61, '8471.60.54', 0.0108, 13427);
-
-INSERT INTO relatorio_serv VALUES
+    (60, '1.2505.20.00', '2023-11-13T21:02:42', 0.1406),
     (61, '1.1402', '2025-11-06T02:41:41', 0.1127),
     (61, '1.1404.49.00', '2025-11-07T12:45:56', 0.2806),
     (61, '1.0401.11', '2025-11-05T20:33:01', 0.0403),
@@ -5767,105 +7065,19 @@ INSERT INTO relatorio_serv VALUES
     (61, '1.0502.11', '2025-11-19T01:17:59', 0.016),
     (61, '1.1903.1', '2025-11-16T04:58:17', 0.0792),
     (61, '1.0104.00.00', '2025-11-02T18:02:53', 0.1753),
-    (61, '1.0602.2', '2025-11-02T02:32:28', 0.1283);
-
-INSERT INTO relatorio VALUES
-    (62, '2024-08-03', NULL, '79.821.563', '0001-99', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (62, '8305.10.00', 0.2265, 7340),
-    (62, '2910.10.00', 0.0839, 4380),
-    (62, '1107.10.10', 0.2309, 5295),
-    (62, '8506.50.90', 0.101, 5852),
-    (62, '2933.91.29', 0.1756, 8526),
-    (62, '6204.19.00', 0.0189, 16061),
-    (62, '8539.90.90', 0.0785, 6104),
-    (62, '2935.90.24', 0.0781, 5516),
-    (62, '2835.10.11', 0.0582, 400),
-    (62, '4811.59.22', 0.3108, 1603),
-    (62, '8801.00.00', 0.1323, 2555),
-    (62, '2933.29.1', 0.2085, 4128),
-    (62, '8402.11.00', 0.1274, 6439),
-    (62, '0102.29.11', 0.0955, 11353),
-    (62, '2924.29.61', 0.2426, 6152);
-
-INSERT INTO relatorio_serv VALUES
+    (61, '1.0602.2', '2025-11-02T02:32:28', 0.1283),
     (62, '1.1806.81.00', '2024-09-28T07:11:25', 1.1653),
     (62, '1.1410', '2024-09-25T19:44:34', 0.6223),
     (62, '1.1108.90.00', '2024-09-24T11:39:23', 0.3143),
     (62, '1.04', '2024-09-13T09:47:57', 2.1846),
-    (62, '1.0503.21.00', '2024-09-19T01:34:44', 0.539);
-
-INSERT INTO relatorio VALUES
-    (63, '2021-08-12', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (63, '8453.80.00', 0.0215, 400),
-    (63, '2829.90.39', 0.0204, 3947),
-    (63, '2804.21.00', 0.1552, 1076),
-    (63, '2710.12.10', 0.0547, 3459),
-    (63, '9021.21.90', 0.045, 5635),
-    (63, '0102.39.19', 0.067, 400),
-    (63, '8533.39.90', 0.0085, 400),
-    (63, '3002.49.94', 0.0187, 400),
-    (63, '1508.10.00', 0.0636, 400),
-    (63, '2931.44.00', 0.1064, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (62, '1.0503.21.00', '2024-09-19T01:34:44', 0.539),
     (63, '1.0502.11.30', '2021-09-16T02:14:51', 0.2523),
     (63, '1.0401.14.00', '2021-09-19T05:15:45', 0.0748),
     (63, '1.0401.16.10', '2021-09-13T16:13:20', 0.3408),
     (63, '1.0102.42.10', '2021-09-17T02:49:48', 0.1622),
-    (63, '1.1401.1', '2021-09-28T03:44:55', 0.1487);
-
-INSERT INTO relatorio VALUES
-    (64, '2024-07-26', '2025-12-29', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (64, '2603.00.90', 0.0214, 8515),
-    (64, '5211.51.00', 0.1412, 11277),
-    (64, '8409.99.2', 0.0307, 1136),
-    (64, '8533.31.10', 0.0368, 400),
-    (64, '0303.83.11', 0.0152, 400),
-    (64, '2829.90.29', 0.127, 9262),
-    (64, '7101.22.00', 0.1337, 400),
-    (64, '0304.55.00', 0.0244, 400),
-    (64, '2933.33.94', 0.1202, 6719),
-    (64, '0802.91.00', 0.0853, 4303),
-    (64, '3824.99.1', 0.1646, 3482),
-    (64, '0210.92.00', 0.0484, 6686),
-    (64, '3820.00.00', 0.069, 1934),
-    (64, '7208.10.00', 0.0855, 7916),
-    (64, '7205.10.00', 0.0191, 7530),
-    (64, '8441.40.00', 0.0283, 627),
-    (64, '7304.23.90', 0.0122, 12677),
-    (64, '7210.61.00', 0.0571, 6329),
-    (64, '3003.90.12', 0.009, 400),
-    (64, '0305.49.10', 0.2398, 524),
-    (64, '8903.32.00', 0.224, 9814),
-    (64, '4418.89.00', 0.0068, 4669),
-    (64, '3003.90.66', 0.0308, 3064),
-    (64, '8540.60.10', 0.0526, 3178),
-    (64, '3808.91.9', 0.0126, 400),
-    (64, '8440.10.90', 0.0412, 10908),
-    (64, '6901.00.00', 0.0791, 8532);
-
-INSERT INTO relatorio_serv VALUES
+    (63, '1.1401.1', '2021-09-28T03:44:55', 0.1487),
     (64, '1.0403.19.00', '2024-08-08T22:13:32', 0.0986),
-    (64, '1.0502.34.40', '2024-08-07T06:38:02', 0.108);
-
-INSERT INTO relatorio VALUES
-    (65, '2021-11-21', NULL, '79.821.563', '0001-00', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (65, '3907.99.93', 1.5036, 400),
-    (65, '8708.50.91', 0.0793, 3240),
-    (65, '3808.91.99', 0.0381, 7427),
-    (65, '3701.99.00', 0.0144, 4294),
-    (65, '6903.10.40', 0.026, 7749),
-    (65, '0705.19.00', 0.0539, 3795);
-
-INSERT INTO relatorio_serv VALUES
+    (64, '1.0502.34.40', '2024-08-07T06:38:02', 0.108),
     (65, '1.0502.31', '2021-12-01T01:40:40', 1.1035),
     (65, '1.2501.32.00', '2021-12-29T09:10:16', 0.1386),
     (65, '1.1503.00.00', '2021-12-10T19:03:34', 0.066),
@@ -5874,47 +7086,10 @@ INSERT INTO relatorio_serv VALUES
     (65, '1.0102.11.00', '2021-12-27T19:05:22', 0.0041),
     (65, '1.1903.1', '2021-12-03T22:07:52', 0.0162),
     (65, '1.1902.10.00', '2021-12-17T15:56:26', 0.0065),
-    (65, '1.2405.90.00', '2021-12-11T16:21:47', 0.0065);
-
-INSERT INTO relatorio VALUES
-    (66, '2022-01-14', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (66, '7315.11.90', 0.0233, 15794),
-    (66, '1212.93.00', 0.0144, 9604),
-    (66, '7222.19.90', 0.0551, 6368),
-    (66, '3808.59.26', 0.0278, 905),
-    (66, '8528.69.10', 0.0359, 1846),
-    (66, '2103.20.90', 0.0029, 3030),
-    (66, '8535.30.27', 0.0498, 2838),
-    (66, '2906.19.40', 0.0392, 2977),
-    (66, '6103.10.10', 0.0298, 3806),
-    (66, '8424.30.20', 0.0573, 9150),
-    (66, '0303.89.53', 0.0017, 14041),
-    (66, '6108.21.00', 0.1147, 6731),
-    (66, '7304.29.39', 0.022, 400),
-    (66, '2910.90.90', 0.0895, 9389),
-    (66, '2845.30.00', 0.1299, 400),
-    (66, '8414.70.00', 0.0194, 3386),
-    (66, '6305.20.00', 0.0067, 5952),
-    (66, '2921.19.4', 0.019, 400),
-    (66, '8422.40.90', 0.0963, 524),
-    (66, '3102.50.11', 0.0591, 7568);
-
-INSERT INTO relatorio_serv VALUES
+    (65, '1.2405.90.00', '2021-12-11T16:21:47', 0.0065),
     (66, '1.0404.20.00', '2022-02-22T06:43:09', 0.0579),
     (66, '1.0402.22.00', '2022-02-01T13:57:02', 0.0246),
-    (66, '1.0901.51.22', '2022-02-02T07:14:48', 0.0192);
-
-INSERT INTO relatorio VALUES
-    (67, '2025-04-23', '2025-07-15', '28.659.130', '0001-07', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (67, '4104.49.90', 0.3654, 9122),
-    (67, '3920.62.91', 0.2296, 3188),
-    (67, '8704.22.30', 0.0322, 3445);
-
-INSERT INTO relatorio_serv VALUES
+    (66, '1.0901.51.22', '2022-02-02T07:14:48', 0.0192),
     (67, '1.0402.29.00', '2025-05-12T18:29:04', 0.1135),
     (67, '1.0504.13.00', '2025-05-06T10:49:48', 0.0923),
     (67, '1.0602.33.00', '2025-05-13T14:10:21', 0.0139),
@@ -5945,15 +7120,7 @@ INSERT INTO relatorio_serv VALUES
     (67, '1.2204', '2025-05-09T03:11:32', 0.0647),
     (67, '1.2403.3', '2025-05-09T17:12:53', 0.0611),
     (67, '1.0901.51.13', '2025-05-28T03:17:38', 0.0653),
-    (67, '1.0802.10.00', '2025-05-01T17:16:00', 0.065);
-
-INSERT INTO relatorio VALUES
-    (68, '2025-10-15', '2026-03-02', '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (68, '3003.10.12', 0.3083, 3165);
-
-INSERT INTO relatorio_serv VALUES
+    (67, '1.0802.10.00', '2025-05-01T17:16:00', 0.065),
     (68, '1.2604.00.00', '2025-11-16T04:13:59', 0.0435),
     (68, '1.1202', '2025-11-29T20:25:15', 0.1464),
     (68, '1.0502.14.59', '2025-11-27T05:56:23', 0.2737),
@@ -5969,197 +7136,30 @@ INSERT INTO relatorio_serv VALUES
     (68, '1.0906', '2025-11-05T14:18:21', 0.0197),
     (68, '1.0501.3', '2025-11-15T14:27:58', 0.0448),
     (68, '1.1103.36.20', '2025-11-18T07:19:46', 0.0765),
-    (68, '1.1403', '2025-11-02T21:31:28', 0.293);
-
-INSERT INTO relatorio VALUES
-    (69, '2024-12-28', NULL, '79.821.563', '0001-00', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (69, '3815.90.10', 1.5646, 4469),
-    (69, '0210.99.40', 0.0396, 1044),
-    (69, '5111.11.10', 0.0081, 4412),
-    (69, '2832.20.00', 0.0765, 3455),
-    (69, '0306.39.90', 0.1264, 400),
-    (69, '9401.59.00', 0.2503, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (68, '1.1403', '2025-11-02T21:31:28', 0.293),
     (69, '1.0608', '2025-01-22T07:05:39', 2.4512),
     (69, '1.1403.21.10', '2025-01-09T23:46:01', 0.4656),
     (69, '1.0602.10.00', '2025-01-12T22:46:57', 0.0118),
     (69, '1.0903.1', '2025-01-04T18:46:19', 0.0231),
     (69, '1.01', '2025-01-02T08:42:19', 0.1042),
     (69, '1.1408.12.00', '2025-01-22T08:23:00', 0.4632),
-    (69, '1.0903.13.00', '2025-01-09T21:42:44', 0.1411);
-
-INSERT INTO relatorio VALUES
-    (70, '2025-05-19', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (70, '5206.15.00', 0.1085, 1976),
-    (70, '0908.31.00', 0.0202, 4966),
-    (70, '3003.90.59', 0.0486, 12532),
-    (70, '3811.21.30', 0.0895, 750),
-    (70, '5103.20.00', 0.0472, 4958),
-    (70, '6005.43.00', 0.0097, 6845),
-    (70, '2941.90.51', 0.0347, 2768),
-    (70, '2701.20.00', 0.0489, 3386),
-    (70, '3004.39.21', 0.0007, 7771),
-    (70, '2837.20.21', 0.0084, 4076),
-    (70, '7216.40.10', 0.0231, 18151),
-    (70, '2936.26.90', 0.0032, 9116),
-    (70, '2916.31.31', 0.0258, 6063),
-    (70, '2912.49.10', 0.0452, 4219),
-    (70, '5503.11.00', 0.0383, 2094),
-    (70, '7901.20.10', 0.0096, 400),
-    (70, '2939.69.1', 0.0229, 12426),
-    (70, '2941.90.83', 0.0951, 5686),
-    (70, '2937.23.21', 0.0749, 400),
-    (70, '3002.14.00', 0.1068, 3507),
-    (70, '5603.13.50', 0.002, 1186),
-    (70, '8541.10.19', 0.0222, 5885),
-    (70, '2918.23.00', 0.0332, 4401),
-    (70, '1207.91.10', 0.041, 400),
-    (70, '8428.60.00', 0.0252, 3896),
-    (70, '2924.29.94', 0.0287, 4661),
-    (70, '1008.50.10', 0.0392, 2301);
-
-INSERT INTO relatorio_serv VALUES
-    (70, '1.2501.39.00', '2025-06-15T07:27:35', 0.2853);
-
-INSERT INTO relatorio VALUES
-    (71, '2022-11-05', '2023-02-19', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (71, '9027.20.12', 0.078, 1881),
-    (71, '0510.00.90', 0.1239, 5265),
-    (71, '1302.32.1', 0.1513, 2189),
-    (71, '0713.10.90', 0.1961, 4454),
-    (71, '4407.28.00', 0.4594, 11466),
-    (71, '6208.22.00', 0.6212, 3313),
-    (71, '0407.90.00', 0.0798, 9546),
-    (71, '2103.90.19', 0.1023, 13083),
-    (71, '8539.51.00', 0.0761, 4302),
-    (71, '3206.50.1', 0.124, 6279);
-
-INSERT INTO relatorio_serv VALUES
+    (69, '1.0903.13.00', '2025-01-09T21:42:44', 0.1411),
+    (70, '1.2501.39.00', '2025-06-15T07:27:35', 0.2853),
     (71, '1.0102.52.10', '2022-12-15T04:05:09', 0.4496),
     (71, '1.0502', '2022-12-04T07:20:01', 0.1165),
     (71, '1.0905.60.00', '2022-12-13T20:15:44', 0.8726),
     (71, '1.0503.90.00', '2022-12-29T00:55:21', 0.8087),
     (71, '1.2003.21.90', '2022-12-09T00:00:35', 0.3909),
     (71, '1.0106.2', '2022-12-06T05:55:43', 0.2352),
-    (71, '1.0107.60.00', '2022-12-01T01:00:13', 0.1969);
-
-INSERT INTO relatorio VALUES
-    (72, '2025-10-04', '2026-02-08', '88.635.333', '0001-98', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (72, '7210.41.10', 0.13, 2161),
-    (72, '2941.90.31', 0.0233, 3204),
-    (72, '5209.11.00', 0.0904, 1091),
-    (72, '2926.90.23', 0.2267, 4710),
-    (72, '2853.90.30', 0.258, 2632),
-    (72, '0703.10.21', 0.0919, 6327),
-    (72, '7306.90.20', 0.0439, 4920),
-    (72, '3702.42.10', 0.132, 400),
-    (72, '8539.31.20', 0.0583, 12747),
-    (72, '3917.32.29', 0.2266, 6328),
-    (72, '2523.29.90', 0.0135, 400),
-    (72, '0808.30.00', 0.0266, 1662),
-    (72, '7308.20.00', 0.0859, 13393),
-    (72, '9104.00.00', 0.0255, 1282),
-    (72, '0303.83.21', 0.0756, 1135),
-    (72, '2922.43.00', 0.03, 400),
-    (72, '6204.31.00', 0.0221, 7858),
-    (72, '2903.77.90', 0.0466, 1865),
-    (72, '2922.50.9', 0.0133, 4147),
-    (72, '3002.12.15', 0.0678, 400),
-    (72, '1105.10.00', 0.0802, 6849);
-
-INSERT INTO relatorio_serv VALUES
+    (71, '1.0107.60.00', '2022-12-01T01:00:13', 0.1969),
     (72, '1.0501.25.00', '2025-11-02T21:56:11', 0.2708),
-    (72, '1.0602.2', '2025-11-29T09:55:12', 0.449);
-
-INSERT INTO relatorio VALUES
-    (73, '2022-01-15', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (73, '3919.90.20', 0.3424, 9047),
-    (73, '2917.39.19', 0.0082, 9963),
-    (73, '6204.31.00', 0.0047, 5198),
-    (73, '8539.41.10', 0.0211, 400),
-    (73, '3903.30.10', 0.0162, 466),
-    (73, '2615.10.90', 0.0716, 400),
-    (73, '7211.90.90', 0.0083, 3133),
-    (73, '7307.21.00', 0.0, 400),
-    (73, '9306.90.90', 0.0079, 400),
-    (73, '9701.21.00', 0.0213, 13327),
-    (73, '3306.90.00', 0.0015, 1720),
-    (73, '7508.90.10', 0.059, 400),
-    (73, '8421.99.91', 0.034, 5209),
-    (73, '6104.59.00', 0.0143, 11559),
-    (73, '2831.10.19', 0.0011, 2176),
-    (73, '8422.30.23', 0.0091, 5658),
-    (73, '0304.95.00', 0.009, 12668),
-    (73, '8525.89.21', 0.0097, 4652),
-    (73, '4811.51.10', 0.0408, 4716),
-    (73, '8422.90.10', 0.0036, 2168),
-    (73, '8455.22.90', 0.0004, 400),
-    (73, '8443.99.80', 0.0015, 400),
-    (73, '6306.30.90', 0.0181, 13217),
-    (73, '2926.30.11', 0.0141, 2215);
-
-INSERT INTO relatorio_serv VALUES
+    (72, '1.0602.2', '2025-11-29T09:55:12', 0.449),
     (73, '1.0403.90.00', '2022-02-08T13:33:00', 0.1458),
     (73, '1.2203.10.00', '2022-02-16T00:26:56', 0.0046),
-    (73, '1.1509.00.00', '2022-02-23T21:02:01', 0.0027);
-
-INSERT INTO relatorio VALUES
-    (74, '2021-06-27', '2022-12-11', '39.605.871', '0001-83', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (74, '5210.39.00', 0.028, 2915),
-    (74, '2918.19.43', 0.0074, 843),
-    (74, '0105.13.00', 0.0745, 1021),
-    (74, '8711.10.00', 0.0008, 400),
-    (74, '0712.90.20', 0.0116, 4228),
-    (74, '0307.82.00', 0.1232, 400),
-    (74, '2827.39.91', 0.0215, 400),
-    (74, '2807.00.20', 0.0099, 3598),
-    (74, '8529.10.90', 0.0399, 7183),
-    (74, '8419.89.19', 0.0092, 400),
-    (74, '7209.16.00', 0.0091, 8281),
-    (74, '2832.10.10', 0.0182, 10784),
-    (74, '2530.90.90', 0.0932, 447),
-    (74, '6909.12.30', 0.0185, 4331),
-    (74, '9027.89.11', 0.0391, 400),
-    (74, '6104.51.00', 0.0071, 6523),
-    (74, '8903.12.00', 0.009, 400),
-    (74, '2921.11.32', 0.0473, 17913),
-    (74, '0304.75.00', 0.0438, 815),
-    (74, '8607.29.00', 0.0379, 15171),
-    (74, '8517.62.14', 0.2035, 2015),
-    (74, '5510.30.1', 0.0108, 400),
-    (74, '2939.11.10', 0.0331, 400),
-    (74, '0401.10.10', 0.1175, 3011),
-    (74, '8440.90.00', 0.039, 6931),
-    (74, '8414.80.21', 0.0104, 400),
-    (74, '8716.80.00', 0.0236, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (73, '1.1509.00.00', '2022-02-23T21:02:01', 0.0027),
     (74, '1.0301.2', '2021-07-06T16:40:16', 0.0386),
     (74, '1.0504.23.00', '2021-07-21T23:43:28', 0.1329),
-    (74, '1.0701.00.00', '2021-07-18T05:17:31', 0.2751);
-
-INSERT INTO relatorio VALUES
-    (75, '2024-12-25', '2026-03-07', '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (75, '5207.10.00', 0.0408, 5874),
-    (75, '9028.90.10', 0.0239, 7557),
-    (75, '3915.20.00', 0.1058, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (74, '1.0701.00.00', '2021-07-18T05:17:31', 0.2751),
     (75, '1.0910.90.00', '2025-01-06T00:51:29', 0.095),
     (75, '1.1405.22.00', '2025-01-07T00:56:15', 0.3768),
     (75, '1.1409.23.00', '2025-01-27T16:28:21', 0.4602),
@@ -6172,76 +7172,16 @@ INSERT INTO relatorio_serv VALUES
     (75, '1.0502.14.40', '2025-01-17T15:31:22', 0.3236),
     (75, '1.1106.20.00', '2025-01-03T12:27:01', 0.5234),
     (75, '1.0505', '2025-01-22T11:45:50', 0.3632),
-    (75, '1.2003', '2025-01-27T16:05:21', 0.1839);
-
-INSERT INTO relatorio VALUES
-    (76, '2025-10-12', NULL, '18.024.935', '0001-76', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (76, '5211.20.90', 1.9139, 5988),
-    (76, '3907.99.92', 0.0663, 8335),
-    (76, '8536.90.90', 0.0039, 3241),
-    (76, '0301.99.9', 0.066, 9084),
-    (76, '5407.93.00', 0.0555, 965),
-    (76, '6005.37.00', 0.0104, 11861),
-    (76, '2922.19.3', 0.0167, 8609),
-    (76, '2921.51.39', 0.0873, 11108),
-    (76, '2916.31.21', 0.0957, 1172),
-    (76, '0307.71.00', 0.1677, 6336),
-    (76, '2937.23.21', 0.0877, 1735),
-    (76, '8204.20.00', 0.1207, 400),
-    (76, '0102.29.1', 0.0958, 400),
-    (76, '2934.99.29', 0.0082, 6578),
-    (76, '8210.00.10', 0.0912, 400),
-    (76, '5402.51.10', 0.0066, 656),
-    (76, '2826.12.00', 0.0638, 5861),
-    (76, '1702.20.00', 0.0607, 7397),
-    (76, '2913.00.10', 0.0884, 5886),
-    (76, '9508.23.00', 0.0554, 8140),
-    (76, '6903.90.91', 0.0107, 400),
-    (76, '6115.10.92', 0.0104, 9703);
-
-INSERT INTO relatorio_serv VALUES
+    (75, '1.2003', '2025-01-27T16:05:21', 0.1839),
     (76, '1.2201', '2025-11-27T01:52:15', 0.5602),
     (76, '1.1706.2', '2025-11-29T16:06:20', 0.0002),
-    (76, '1.1102.90.00', '2025-11-20T14:17:42', 0.0038);
-
-INSERT INTO relatorio VALUES
-    (77, '2026-03-27', NULL, '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (77, '7405.00.00', 0.0315, 8447),
-    (77, '0102.31.90', 0.0572, 4855),
-    (77, '8403.10.90', 0.2512, 3514),
-    (77, '6505.00.32', 0.1526, 5964),
-    (77, '8702.20.00', 0.2079, 2576),
-    (77, '2930.20.23', 0.0777, 6170),
-    (77, '2922.19.2', 0.1459, 3201),
-    (77, '4408.10.91', 0.0932, 6627),
-    (77, '2933.39.36', 0.0213, 1454),
-    (77, '2843.29.10', 0.1328, 6143),
-    (77, '7010.10.00', 0.104, 4640),
-    (77, '8517.62.65', 0.1262, 3571),
-    (77, '8708.50.9', 0.0246, 5939),
-    (77, '8704.32.90', 0.0649, 4154);
-
-INSERT INTO relatorio_serv VALUES
+    (76, '1.1102.90.00', '2025-11-20T14:17:42', 0.0038),
     (77, '1.2302.21.00', '2026-04-14T20:00:26', 0.0434),
     (77, '1.0605.10.00', '2026-04-18T22:37:44', 0.3249),
     (77, '1.0502.11.10', '2026-04-14T08:53:06', 0.8772),
     (77, '1.1403.21.20', '2026-04-18T12:28:08', 0.0636),
     (77, '1.2301.13.00', '2026-04-21T16:08:33', 0.1729),
-    (77, '1.1001.11.00', '2026-04-24T13:16:53', 0.1367);
-
-INSERT INTO relatorio VALUES
-    (78, '2022-02-06', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (78, '0304.63.00', 0.0166, 5969),
-    (78, '7407.10.10', 0.0114, 8957),
-    (78, '8413.91.90', 0.0135, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (77, '1.1001.11.00', '2026-04-24T13:16:53', 0.1367),
     (78, '1.0105.50.00', '2022-03-22T05:10:40', 0.1551),
     (78, '1.2404.11.00', '2022-03-16T01:41:18', 0.1301),
     (78, '1.1701.29.00', '2022-03-16T23:46:59', 0.0781),
@@ -6268,15 +7208,7 @@ INSERT INTO relatorio_serv VALUES
     (78, '1.0608.30.00', '2022-03-23T02:49:43', 0.0266),
     (78, '1.0604.30.00', '2022-03-23T11:09:38', 0.179),
     (78, '1.1409.11.00', '2022-03-12T00:35:26', 0.149),
-    (78, '1.0502.21.10', '2022-03-25T22:49:16', 0.0293);
-
-INSERT INTO relatorio VALUES
-    (79, '2021-10-22', NULL, '64.087.915', '0001-27', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (79, '8446.30.20', 0.1687, 1837);
-
-INSERT INTO relatorio_serv VALUES
+    (78, '1.0502.21.10', '2022-03-25T22:49:16', 0.0293),
     (79, '1.2303.00.00', '2021-11-05T01:51:23', 0.6432),
     (79, '1.1806.40.00', '2021-11-19T20:17:38', 0.0035),
     (79, '1.0906.1', '2021-11-24T10:43:57', 0.0146),
@@ -6308,27 +7240,7 @@ INSERT INTO relatorio_serv VALUES
     (79, '1.1501', '2021-11-18T13:47:47', 0.0522),
     (79, '1.2002.40.00', '2021-11-04T22:41:47', 0.0036),
     (79, '1.0502.23.10', '2021-11-22T10:31:40', 0.1366),
-    (79, '1.1803.21.00', '2021-11-21T09:48:44', 0.0009);
-
-INSERT INTO relatorio VALUES
-    (80, '2025-04-11', '2025-06-19', '48.603.715', '0001-45', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (80, '8419.90.31', 0.1166, 400),
-    (80, '2105.00.10', 0.0315, 11396),
-    (80, '4806.20.00', 0.092, 400),
-    (80, '2302.10.00', 0.0091, 400),
-    (80, '3212.90.90', 0.2628, 10868),
-    (80, '8703.70.00', 0.0408, 6555),
-    (80, '7419.80.10', 0.0129, 12703),
-    (80, '6003.30.00', 0.0223, 400),
-    (80, '2921.19.1', 0.0929, 1199),
-    (80, '2924.29.11', 0.0361, 2497),
-    (80, '8438.50.00', 0.0352, 4318),
-    (80, '3811.90.10', 0.1072, 7139),
-    (80, '4704.11.00', 0.0416, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (79, '1.1803.21.00', '2021-11-21T09:48:44', 0.0009),
     (80, '1.0404', '2025-05-15T07:59:20', 0.0093),
     (80, '1.1001.30.00', '2025-05-08T20:48:03', 0.0257),
     (80, '1.0101.12.00', '2025-05-28T21:37:53', 0.0404),
@@ -6340,91 +7252,11 @@ INSERT INTO relatorio_serv VALUES
     (80, '1.0303.90.00', '2025-05-08T00:08:44', 0.0306),
     (80, '1.1409.24.00', '2025-05-15T09:07:55', 0.0545),
     (80, '1.2205', '2025-05-24T05:02:40', 0.041),
-    (80, '1.0905.12.00', '2025-05-26T19:29:56', 0.0238);
-
-INSERT INTO relatorio VALUES
-    (81, '2026-01-08', '2026-06-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (81, '6104.19.10', 0.0177, 8125),
-    (81, '7208.10.00', 0.0583, 400),
-    (81, '3808.92.94', 0.1075, 400),
-    (81, '7011.10.90', 0.044, 400),
-    (81, '3813.00.10', 0.1129, 400),
-    (81, '7901.12.10', 0.0283, 11346),
-    (81, '7605.29.90', 0.0581, 11140),
-    (81, '9018.39.21', 0.1533, 7407),
-    (81, '2926.20.00', 0.0251, 3527),
-    (81, '3004.49.50', 0.0702, 4626),
-    (81, '2827.39.97', 0.04, 1363),
-    (81, '8473.40.10', 0.0082, 11529),
-    (81, '0709.56.00', 0.0634, 10557),
-    (81, '2941.10.39', 0.0256, 11420),
-    (81, '3506.91.10', 0.036, 5803),
-    (81, '8513.90.00', 0.0217, 4442),
-    (81, '7409.40.90', 0.0582, 3010),
-    (81, '2934.99.15', 0.1511, 4899),
-    (81, '8501.10.19', 0.219, 1264),
-    (81, '2926.30.20', 0.0326, 400),
-    (81, '2922.39.21', 0.0123, 1053),
-    (81, '6005.21.00', 0.0449, 2154),
-    (81, '0301.99.11', 0.1293, 5592),
-    (81, '0710.29.00', 0.0578, 2495),
-    (81, '3906.90.22', 0.0461, 5222);
-
-INSERT INTO relatorio_serv VALUES
+    (80, '1.0905.12.00', '2025-05-26T19:29:56', 0.0238),
     (81, '1.0106.13.00', '2026-02-24T22:43:31', 0.0711),
     (81, '1.2201.1', '2026-02-09T03:47:27', 0.0203),
-    (81, '1.0102.42.20', '2026-02-25T02:16:01', 0.2191);
-
-INSERT INTO relatorio VALUES
-    (82, '2025-12-08', '2026-03-10', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (82, '8481.80.2', 0.1379, 11011),
-    (82, '6004.10.14', 0.0806, 10621),
-    (82, '2917.19.2', 0.4317, 6747),
-    (82, '8460.40.11', 0.3976, 2257),
-    (82, '2930.90.19', 0.0935, 6888),
-    (82, '9027.89.13', 0.2646, 8560),
-    (82, '4802.57.91', 0.1209, 400),
-    (82, '8806.22.00', 0.0166, 510),
-    (82, '3827.69.00', 0.0071, 400),
-    (82, '2715.00.00', 0.2182, 2673),
-    (82, '5509.11.00', 0.1024, 11714),
-    (82, '2915.39.55', 0.06, 400),
-    (82, '2530.90.90', 0.1197, 5673),
-    (82, '2939.69.19', 0.2843, 5763),
-    (82, '8304.00.00', 0.0485, 10560),
-    (82, '2930.90.4', 0.1724, 7437),
-    (82, '3917.32.51', 0.042, 6963),
-    (82, '2914.79.1', 0.2442, 400),
-    (82, '2606.00.1', 0.252, 400),
-    (82, '9506.51.00', 0.1158, 4494),
-    (82, '6401.99.10', 0.4065, 6176),
-    (82, '8456.11.90', 0.2124, 400),
-    (82, '8708.70.90', 0.1886, 3587),
-    (82, '1602.32.20', 0.1554, 2162),
-    (82, '8504.40.10', 0.124, 7980),
-    (82, '8433.60.90', 0.0781, 2761),
-    (82, '8544.42.00', 0.0777, 3679);
-
-INSERT INTO relatorio_serv VALUES
-    (82, '1.0901.90.00', '2026-01-07T16:41:01', 0.1531);
-
-INSERT INTO relatorio VALUES
-    (83, '2025-02-18', '2025-09-09', '51.360.297', '0001-43', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (83, '5402.32.19', 0.1976, 400),
-    (83, '2935.90.95', 0.1803, 400),
-    (83, '3003.10.13', 0.1236, 400),
-    (83, '2933.39.2', 0.136, 400),
-    (83, '5206.23.00', 0.1334, 438),
-    (83, '0305.69.90', 0.0571, 5195),
-    (83, '0103.10.00', 0.418, 5638);
-
-INSERT INTO relatorio_serv VALUES
+    (81, '1.0102.42.20', '2026-02-25T02:16:01', 0.2191),
+    (82, '1.0901.90.00', '2026-01-07T16:41:01', 0.1531),
     (83, '1.1304.00.00', '2025-03-12T08:08:57', 0.3609),
     (83, '1.0502.1', '2025-03-20T14:13:54', 0.2686),
     (83, '1.2201.19.00', '2025-03-01T00:15:14', 0.2634),
@@ -6432,78 +7264,12 @@ INSERT INTO relatorio_serv VALUES
     (83, '1.2003.10.00', '2025-03-29T09:22:26', 0.0365),
     (83, '1.0901.51.16', '2025-03-10T21:06:39', 0.2252),
     (83, '1.0903.21.00', '2025-03-06T11:42:06', 0.0386),
-    (83, '1.1108.90.00', '2025-03-17T23:49:13', 0.212);
-
-INSERT INTO relatorio VALUES
-    (84, '2023-06-22', '2026-04-07', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (84, '6813.20.00', 0.2147, 400),
-    (84, '8434.10.00', 0.0676, 2185),
-    (84, '2517.10.00', 0.2531, 5473),
-    (84, '2836.30.00', 0.0756, 1012),
-    (84, '4810.32.90', 0.0305, 4190),
-    (84, '8207.60.00', 0.0161, 7205),
-    (84, '9508.10.00', 0.2224, 400),
-    (84, '8712.00.90', 0.2632, 5052),
-    (84, '8423.10.00', 0.1936, 3591),
-    (84, '9001.10.20', 0.0505, 7140),
-    (84, '8504.40.40', 0.1083, 400),
-    (84, '9201.20.00', 0.1105, 400),
-    (84, '3006.30.18', 0.2721, 400),
-    (84, '0305.32.30', 0.0394, 9516);
-
-INSERT INTO relatorio_serv VALUES
+    (83, '1.1108.90.00', '2025-03-17T23:49:13', 0.212),
     (84, '1.2405', '2023-07-15T05:30:44', 0.0317),
     (84, '1.0501.39.00', '2023-07-14T03:25:13', 0.6177),
     (84, '1.2404.32.00', '2023-07-23T17:46:37', 0.5757),
     (84, '1.1405.30.00', '2023-07-07T10:19:02', 0.3185),
-    (84, '1.0904.2', '2023-07-16T05:53:56', 0.5672);
-
-INSERT INTO relatorio VALUES
-    (85, '2022-04-27', '2023-10-05', '88.635.333', '0001-98', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (85, '3911.90.24', 0.3104, 6687),
-    (85, '8421.99.9', 0.3743, 400),
-    (85, '0303.24.10', 0.4725, 6360),
-    (85, '0304.92.12', 0.1712, 8381),
-    (85, '8112.69.00', 0.5613, 400),
-    (85, '9031.20.90', 0.8394, 11349),
-    (85, '9608.91.00', 0.471, 4776),
-    (85, '1214.90.00', 0.8061, 400);
-
-INSERT INTO relatorio VALUES
-    (86, '2024-03-13', '2026-01-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (86, '8801.00.00', 1.2342, 400),
-    (86, '5514.30.19', 0.0021, 1480),
-    (86, '3808.91.9', 0.0056, 400),
-    (86, '3803.00.90', 0.2247, 2315),
-    (86, '2403.19.00', 0.0064, 3253),
-    (86, '1602.50.00', 0.0945, 400),
-    (86, '2306.50.00', 0.0979, 1627),
-    (86, '3002.42.70', 0.0047, 4132),
-    (86, '9113.10.00', 0.052, 7309),
-    (86, '2903.77.34', 0.0857, 10730),
-    (86, '8502.11.90', 0.0394, 2752),
-    (86, '8504.50.90', 0.0601, 8010),
-    (86, '8521.90.00', 0.0177, 11652),
-    (86, '5401.10.12', 0.0817, 6452),
-    (86, '6204.39.00', 0.0269, 400),
-    (86, '3003.90.64', 0.1731, 400),
-    (86, '8428.39.20', 0.0702, 6854),
-    (86, '3307.90.00', 0.0241, 10468),
-    (86, '3910.00.29', 0.0065, 2243),
-    (86, '3003.90.4', 0.0015, 2019),
-    (86, '2934.91.3', 0.0086, 400),
-    (86, '8443.99.29', 0.0285, 983);
-
-INSERT INTO relatorio VALUES
-    (87, '2022-10-06', '2023-04-05', '27.401.593', '0001-66', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (84, '1.0904.2', '2023-07-16T05:53:56', 0.5672),
     (87, '1.1404.43.00', '2022-11-04T21:32:14', 2.9455),
     (87, '1.0502.33.10', '2022-11-21T00:38:19', 0.2624),
     (87, '1.1401.12.00', '2022-11-02T08:18:43', 0.5851),
@@ -6517,44 +7283,13 @@ INSERT INTO relatorio_serv VALUES
     (87, '1.1402.21.00', '2022-11-16T18:02:52', 0.1743),
     (87, '1.1107.3', '2022-11-06T00:43:55', 0.0297),
     (87, '1.2205.13.00', '2022-11-15T20:38:52', 0.0791),
-    (87, '1.0401.16.20', '2022-11-15T10:43:43', 0.059);
-
-INSERT INTO relatorio VALUES
-    (88, '2024-08-04', NULL, '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (88, '2901.22.00', 0.0846, 400),
-    (88, '8414.80.33', 0.0333, 9845),
-    (88, '8802.30.29', 0.0512, 1584),
-    (88, '6506.99.00', 0.2328, 1682),
-    (88, '0303.32.00', 0.0301, 4726),
-    (88, '8479.89.40', 0.0611, 5926),
-    (88, '3004.49.10', 0.087, 400),
-    (88, '0302.99.00', 0.0406, 2927),
-    (88, '2924.29.41', 0.0574, 1058),
-    (88, '3003.10.11', 0.0583, 2093),
-    (88, '8473.50.10', 0.0861, 1748),
-    (88, '9027.89.12', 0.0086, 9706),
-    (88, '3402.90.29', 0.1216, 10646),
-    (88, '5510.90.1', 0.0814, 8144);
-
-INSERT INTO relatorio_serv VALUES
+    (87, '1.0401.16.20', '2022-11-15T10:43:43', 0.059),
     (88, '1.0606.20.00', '2024-09-08T20:36:33', 0.0381),
     (88, '1.2203.20.00', '2024-09-27T14:47:03', 0.0238),
     (88, '1.2001.81.00', '2024-09-04T07:59:44', 0.2089),
     (88, '1.1402.31.00', '2024-09-21T12:50:40', 0.0836),
     (88, '1.1103.4', '2024-09-26T14:39:11', 0.1548),
-    (88, '1.0602.90.00', '2024-09-02T05:32:21', 0.304);
-
-INSERT INTO relatorio VALUES
-    (89, '2022-05-27', '2023-12-22', '28.659.130', '0001-07', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (89, '1604.17.00', 0.0629, 400),
-    (89, '5501.30.00', 0.1178, 400),
-    (89, '2824.90.10', 0.2577, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (88, '1.0602.90.00', '2024-09-02T05:32:21', 0.304),
     (89, '1.0401.19.00', '2022-06-23T13:01:22', 0.1816),
     (89, '1.0609.00.00', '2022-06-14T04:33:24', 0.0339),
     (89, '1.0903.35.00', '2022-06-07T17:23:04', 0.178),
@@ -6570,15 +7305,7 @@ INSERT INTO relatorio_serv VALUES
     (89, '1.2404.13.00', '2022-06-05T12:47:13', 0.053),
     (89, '1.0901.35.00', '2022-06-25T14:23:56', 0.1082),
     (89, '1.1001.2', '2022-06-29T19:38:58', 0.0785),
-    (89, '1.0102', '2022-06-03T20:36:08', 0.2697);
-
-INSERT INTO relatorio VALUES
-    (90, '2023-08-21', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (90, '2933.91.6', 0.8868, 4273);
-
-INSERT INTO relatorio_serv VALUES
+    (89, '1.0102', '2022-06-03T20:36:08', 0.2697),
     (90, '1.1103.39.00', '2023-09-12T15:58:03', 0.0205),
     (90, '1.1402.32.00', '2023-09-19T07:11:00', 0.1729),
     (90, '1.0502.2', '2023-09-13T20:07:37', 0.3489),
@@ -6594,15 +7321,7 @@ INSERT INTO relatorio_serv VALUES
     (90, '1.0304', '2023-09-18T07:27:38', 0.2432),
     (90, '1.0403.22.00', '2023-09-19T22:29:28', 0.1386),
     (90, '1.2501.11.00', '2023-09-07T01:59:49', 0.2103),
-    (90, '1.0301.39.00', '2023-09-28T04:47:59', 0.1495);
-
-INSERT INTO relatorio VALUES
-    (91, '2023-07-15', '2024-11-24', '01.274.895', '0001-40', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (91, '0302.53.00', 0.0081, 12130);
-
-INSERT INTO relatorio_serv VALUES
+    (90, '1.0301.39.00', '2023-09-28T04:47:59', 0.1495),
     (91, '1.1806.6', '2023-08-17T11:21:55', 0.0648),
     (91, '1.0501.22.30', '2023-08-14T11:51:54', 0.0259),
     (91, '1.0501.14.20', '2023-08-09T06:23:48', 0.0422),
@@ -6641,82 +7360,16 @@ INSERT INTO relatorio_serv VALUES
     (91, '1.2205.1', '2023-08-24T14:34:43', 0.0541),
     (91, '1.1406.12.00', '2023-08-09T03:26:46', 0.0334),
     (91, '1.1403', '2023-08-09T00:52:04', 0.0239),
-    (91, '1.0102.6', '2023-08-08T16:23:53', 0.1038);
-
-INSERT INTO relatorio VALUES
-    (92, '2022-03-15', '2022-09-23', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (92, '1103.19.00', 0.492, 8842),
-    (92, '5501.90.00', 0.0206, 5926),
-    (92, '7406.10.20', 0.1864, 5213),
-    (92, '1207.30.10', 1.3549, 3671),
-    (92, '2934.91.33', 0.4931, 11633),
-    (92, '3002.49.92', 0.3739, 8441),
-    (92, '2939.11.61', 0.2909, 400),
-    (92, '1212.94.00', 0.3461, 10875),
-    (92, '2918.29.29', 0.3147, 4333),
-    (92, '7116.20.90', 1.5511, 7826),
-    (92, '8501.52.20', 0.2779, 9412),
-    (92, '2808.00.20', 0.1982, 1719),
-    (92, '3920.10.99', 0.8416, 400),
-    (92, '7612.90.12', 0.5584, 1649),
-    (92, '2204.29.20', 0.1384, 3962),
-    (92, '5516.13.00', 1.169, 3439);
-
-INSERT INTO relatorio_serv VALUES
+    (91, '1.0102.6', '2023-08-08T16:23:53', 0.1038),
     (92, '1.0901.52.90', '2022-04-20T05:45:11', 0.22),
-    (92, '1.0901.51.1', '2022-04-06T22:20:52', 0.1674);
-
-INSERT INTO relatorio VALUES
-    (93, '2023-09-18', '2026-03-12', '51.360.297', '0001-43', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (93, '7801.10.19', 0.487, 11122),
-    (93, '2924.29.96', 1.2503, 10041),
-    (93, '5208.51.00', 0.5865, 8352),
-    (93, '7017.10.00', 0.6121, 11715),
-    (93, '1201.90.00', 0.4717, 9122),
-    (93, '5407.52.10', 0.0117, 1983),
-    (93, '0101.30.00', 0.654, 4928),
-    (93, '6004.10.91', 0.5607, 12328),
-    (93, '7216.61.10', 0.2669, 2783),
-    (93, '4818.90.90', 0.0636, 400),
-    (93, '0306.16.90', 0.0308, 1179),
-    (93, '0303.45.00', 0.0939, 4749),
-    (93, '2933.33.51', 0.1233, 11103),
-    (93, '8517.62.99', 0.0508, 7845);
-
-INSERT INTO relatorio_serv VALUES
+    (92, '1.0901.51.1', '2022-04-06T22:20:52', 0.1674),
     (93, '1.1503.00.00', '2023-10-22T20:32:35', 0.4858),
     (93, '1.0504.90.00', '2023-10-15T02:50:55', 0.5723),
     (93, '1.2301.22.00', '2023-10-08T19:04:45', 0.3132),
     (93, '1.0401.16.20', '2023-10-23T21:05:05', 0.1393),
     (93, '1.2002.30.00', '2023-10-15T23:46:39', 0.2125),
     (93, '1.1101.90.00', '2023-10-20T18:57:46', 0.8012),
-    (93, '1.0402.21.20', '2023-10-29T19:14:40', 0.5544);
-
-INSERT INTO relatorio VALUES
-    (94, '2024-07-26', '2024-10-05', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (94, '3901.90.30', 0.0883, 11602),
-    (94, '4811.59.22', 0.0213, 400),
-    (94, '3003.20.93', 0.1455, 400),
-    (94, '2852.10.25', 0.0204, 15933),
-    (94, '6005.41.00', 0.0086, 13583),
-    (94, '7212.50.10', 0.0701, 6743),
-    (94, '8704.23.20', 0.0218, 9592),
-    (94, '8711.40.00', 0.018, 14476),
-    (94, '8456.90.00', 0.0123, 918),
-    (94, '2909.49.32', 0.0552, 5158),
-    (94, '1213.00.00', 0.0613, 5601),
-    (94, '5308.20.00', 0.014, 400),
-    (94, '8440.10.11', 0.0696, 400),
-    (94, '8301.30.00', 0.0337, 15137),
-    (94, '8514.40.00', 0.0273, 5079);
-
-INSERT INTO relatorio_serv VALUES
+    (93, '1.0402.21.20', '2023-10-29T19:14:40', 0.5544),
     (94, '1.1401.1', '2024-08-16T02:45:59', 0.0521),
     (94, '1.2301.98.00', '2024-08-04T19:50:43', 0.0865),
     (94, '1.0604.30.00', '2024-08-09T05:00:14', 0.0088),
@@ -6729,27 +7382,7 @@ INSERT INTO relatorio_serv VALUES
     (94, '1.0902.20.00', '2024-08-19T04:59:34', 0.0769),
     (94, '1.0403.21', '2024-08-19T18:43:03', 0.0252),
     (94, '1.1806.8', '2024-08-05T10:57:42', 0.0375),
-    (94, '1.2506.00.00', '2024-08-23T03:06:31', 0.0307);
-
-INSERT INTO relatorio VALUES
-    (95, '2022-03-12', '2025-11-21', '48.603.715', '0001-78', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (95, '8540.20.90', 0.0498, 6205),
-    (95, '2934.20.33', 0.4239, 400),
-    (95, '4104.11.23', 0.2872, 6311),
-    (95, '9021.90.1', 0.2866, 8188),
-    (95, '3813.00.90', 0.4619, 5506),
-    (95, '1514.99.10', 1.1259, 400),
-    (95, '3301.29.21', 0.2615, 5230),
-    (95, '9706.90.00', 0.1809, 7459),
-    (95, '2924.19.29', 1.5629, 15978),
-    (95, '2932.19.10', 0.548, 1649),
-    (95, '9021.39.11', 0.2439, 400),
-    (95, '7204.50.00', 0.1399, 400),
-    (95, '5911.32.00', 0.0808, 7227);
-
-INSERT INTO relatorio_serv VALUES
+    (94, '1.2506.00.00', '2024-08-23T03:06:31', 0.0307),
     (95, '1.2003.24.00', '2022-04-09T04:10:38', 0.4883),
     (95, '1.0502.13', '2022-04-07T16:46:26', 0.1643),
     (95, '1.1404.44.00', '2022-04-15T00:45:10', 1.3357),
@@ -6761,17 +7394,7 @@ INSERT INTO relatorio_serv VALUES
     (95, '1.1303', '2022-04-07T17:29:35', 0.4906),
     (95, '1.1706.21.00', '2022-04-01T07:51:18', 0.1142),
     (95, '1.0105.12.00', '2022-04-24T06:41:36', 0.1868),
-    (95, '1.1403.21', '2022-04-29T16:07:51', 0.2836);
-
-INSERT INTO relatorio VALUES
-    (96, '2021-10-31', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (96, '8302.49.00', 0.1104, 400),
-    (96, '8206.00.00', 0.0073, 2264),
-    (96, '7304.29.31', 0.0529, 9418);
-
-INSERT INTO relatorio_serv VALUES
+    (95, '1.1403.21', '2022-04-29T16:07:51', 0.2836),
     (96, '1.0107.60.00', '2021-11-05T05:23:05', 0.1725),
     (96, '1.2405.1', '2021-11-19T12:16:55', 0.1578),
     (96, '1.1402.14.00', '2021-11-21T01:24:44', 0.0098),
@@ -6782,93 +7405,13 @@ INSERT INTO relatorio_serv VALUES
     (96, '1.0905.13.00', '2021-11-09T12:00:42', 0.0543),
     (96, '1.0401.41.00', '2021-11-05T06:44:36', 0.0036),
     (96, '1.0103.20.00', '2021-11-15T12:13:15', 0.055),
-    (96, '1.2403', '2021-11-18T10:09:03', 0.0524);
-
-INSERT INTO relatorio VALUES
-    (97, '2023-09-07', '2026-02-25', '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (97, '3824.99.85', 0.4575, 7283),
-    (97, '2841.90.1', 3.6037, 7078),
-    (97, '8487.10.00', 0.3137, 400),
-    (97, '3003.90.1', 0.1778, 3741),
-    (97, '6104.51.00', 0.2097, 2078),
-    (97, '1701.91.00', 0.8864, 400),
-    (97, '3817.00.10', 0.1752, 5913),
-    (97, '2933.39.41', 0.8844, 9495);
-
-INSERT INTO relatorio VALUES
-    (98, '2023-05-04', NULL, '71.498.635', '0001-06', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (98, '8711.10.00', 0.0044, 6380),
-    (98, '4811.59.10', 0.0728, 877),
-    (98, '7019.15.00', 0.0599, 8975),
-    (98, '3003.90.11', 0.0644, 666),
-    (98, '4012.90.90', 0.0937, 6885),
-    (98, '2931.51.00', 0.0412, 400),
-    (98, '2905.16.00', 0.0893, 7614),
-    (98, '8480.20.00', 0.0037, 14309),
-    (98, '0106.39.00', 0.0021, 2155),
-    (98, '2909.41.00', 0.0162, 400),
-    (98, '3921.19.00', 0.1781, 1005),
-    (98, '2845.10.00', 0.0746, 7264),
-    (98, '8467.19.00', 0.0858, 443),
-    (98, '1901.10.20', 0.0535, 1403),
-    (98, '7110.29.00', 0.0843, 3503),
-    (98, '1205.90.10', 0.1345, 7801),
-    (98, '7307.19.90', 0.0105, 4369),
-    (98, '3909.10.00', 0.1255, 7974),
-    (98, '8708.40.80', 0.2295, 7383),
-    (98, '5603.12.40', 0.103, 13411),
-    (98, '8443.32.99', 0.1044, 400),
-    (98, '6115.29.90', 0.0574, 7607),
-    (98, '2930.80.10', 0.1253, 6081),
-    (98, '2933.53.72', 0.0849, 1585),
-    (98, '2903.78.00', 0.0727, 400),
-    (98, '7004.90.00', 0.0142, 5187);
-
-INSERT INTO relatorio_serv VALUES
+    (96, '1.2403', '2021-11-18T10:09:03', 0.0524),
     (98, '1.0908.00.00', '2023-06-02T03:30:13', 0.3372),
     (98, '1.0502.11.30', '2023-06-19T14:03:49', 0.0826),
     (98, '1.1409.11.00', '2023-06-28T22:42:27', 0.0399),
-    (98, '1.1501.20.00', '2023-06-27T07:06:59', 0.1065);
-
-INSERT INTO relatorio VALUES
-    (99, '2022-07-11', NULL, '01.274.895', '0001-13', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (99, '8461.40.10', 0.661, 4276),
-    (99, '3806.30.00', 0.2026, 6846),
-    (99, '6806.20.00', 0.3385, 2788),
-    (99, '6001.10.90', 0.1309, 11819),
-    (99, '6403.12.00', 0.4255, 8383),
-    (99, '2921.43.23', 0.3655, 4214),
-    (99, '9007.92.00', 0.0233, 8668),
-    (99, '2930.30.2', 0.2677, 3558),
-    (99, '8468.90.20', 0.0524, 2854),
-    (99, '1903.00.00', 0.2625, 400),
-    (99, '2931.59.95', 0.1963, 400),
-    (99, '8455.90.00', 0.1153, 6576),
-    (99, '4702.00.00', 0.5509, 400),
-    (99, '7415.39.00', 0.0305, 2077),
-    (99, '3004.50.90', 0.1414, 400),
-    (99, '3204.13.00', 0.3082, 5796),
-    (99, '3003.20.4', 1.0296, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (98, '1.1501.20.00', '2023-06-27T07:06:59', 0.1065),
     (99, '1.0501.12', '2022-08-07T20:53:30', 1.7275),
-    (99, '1.1406.39.00', '2022-08-28T21:04:35', 0.2201);
-
-INSERT INTO relatorio VALUES
-    (100, '2025-01-26', '2025-04-03', '53.921.807', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (100, '3824.81.10', 0.0547, 6058),
-    (100, '8501.40.11', 0.0229, 5641),
-    (100, '8546.90.00', 0.0164, 11848);
-
-INSERT INTO relatorio_serv VALUES
+    (99, '1.1406.39.00', '2022-08-28T21:04:35', 0.2201),
     (100, '1.0102.52', '2025-02-12T11:54:28', 0.0938),
     (100, '1.0402.12.00', '2025-02-23T18:53:15', 0.0131),
     (100, '1.0402.13.10', '2025-02-08T16:41:48', 0.0932),
@@ -6903,76 +7446,9 @@ INSERT INTO relatorio_serv VALUES
     (100, '1.2501.33.00', '2025-02-03T16:16:39', 0.0647),
     (100, '1.1401.15.00', '2025-02-26T11:33:39', 0.0529),
     (100, '1.0504.42.00', '2025-02-20T05:41:43', 0.0147),
-    (100, '1.1507.90.00', '2025-02-21T23:16:54', 0.0192);
-
-INSERT INTO relatorio VALUES
-    (101, '2025-03-27', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (101, '8208.20.00', 0.85, 400),
-    (101, '1207.40.90', 1.1184, 5853),
-    (101, '2921.43.21', 0.7893, 400),
-    (101, '1002.90.00', 1.34, 400),
-    (101, '8419.40.90', 0.717, 15225),
-    (101, '8442.50.00', 1.5574, 3669),
-    (101, '0302.42.10', 2.1794, 8758),
-    (101, '4008.21.00', 0.5828, 5710);
-
-INSERT INTO relatorio_serv VALUES
-    (101, '1.1201.1', '2025-04-11T14:01:47', 0.2997);
-
-INSERT INTO relatorio VALUES
-    (102, '2024-06-20', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (102, '8482.91.19', 0.1299, 400),
-    (102, '5210.32.00', 0.0079, 10346),
-    (102, '8459.21.99', 0.0253, 5758),
-    (102, '8419.90.40', 0.0072, 6244),
-    (102, '7217.10.19', 0.0967, 12028),
-    (102, '3004.39.39', 0.0632, 6126),
-    (102, '2941.40.11', 0.0164, 602),
-    (102, '8439.99.90', 0.0033, 400),
-    (102, '5506.40.00', 0.007, 1566),
-    (102, '5211.43.00', 0.034, 10761),
-    (102, '2921.43.22', 0.0647, 7522),
-    (102, '7205.29.90', 0.0405, 8692),
-    (102, '9028.30.3', 0.0321, 400),
-    (102, '2939.72.10', 0.0467, 5659),
-    (102, '2922.19.99', 0.1163, 10670),
-    (102, '7302.40.00', 0.017, 400),
-    (102, '3203.00.11', 0.1193, 9305),
-    (102, '8705.30.00', 0.0476, 4319),
-    (102, '7218.99.00', 0.0182, 3191),
-    (102, '7008.00.00', 0.0025, 15522),
-    (102, '5407.71.00', 0.0366, 5185),
-    (102, '0805.29.00', 0.0773, 5621),
-    (102, '2903.79.19', 0.0419, 5789);
-
-INSERT INTO relatorio_serv VALUES
-    (102, '1.1107.20.00', '2024-07-17T22:02:00', 0.3998);
-
-INSERT INTO relatorio VALUES
-    (103, '2024-01-12', '2025-04-08', '79.821.563', '0001-99', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (103, '5602.90.00', 0.3137, 400),
-    (103, '4707.10.00', 0.0074, 12103),
-    (103, '8479.89.2', 0.4128, 400),
-    (103, '4202.92.00', 0.2086, 400),
-    (103, '0304.31.00', 0.279, 1030),
-    (103, '4811.90.1', 0.3054, 6518),
-    (103, '2933.39.8', 0.1315, 8945),
-    (103, '7409.29.00', 0.0287, 5832),
-    (103, '0303.89.65', 0.1799, 10851),
-    (103, '7302.40.00', 0.0462, 7076),
-    (103, '8440.10.1', 0.1043, 438),
-    (103, '9306.30.00', 0.1031, 3517),
-    (103, '7210.61.00', 0.1241, 4597),
-    (103, '0804.50.20', 0.0444, 6329),
-    (103, '0703.10.29', 0.5433, 8602);
-
-INSERT INTO relatorio_serv VALUES
+    (100, '1.1507.90.00', '2025-02-21T23:16:54', 0.0192),
+    (101, '1.1201.1', '2025-04-11T14:01:47', 0.2997),
+    (102, '1.1107.20.00', '2024-07-17T22:02:00', 0.3998),
     (103, '1.0602.23.00', '2024-02-07T13:07:07', 0.1293),
     (103, '1.1106', '2024-02-25T10:18:38', 0.1296),
     (103, '1.0602.33.00', '2024-02-09T00:24:38', 0.0991),
@@ -6984,17 +7460,7 @@ INSERT INTO relatorio_serv VALUES
     (103, '1.0501.24.22', '2024-02-22T17:01:54', 0.549),
     (103, '1.0904.40.00', '2024-02-08T23:07:45', 0.17),
     (103, '1.2301.13.00', '2024-02-21T21:58:39', 0.2468),
-    (103, '1.0904.33.00', '2024-02-12T00:44:06', 0.0276);
-
-INSERT INTO relatorio VALUES
-    (104, '2024-10-22', '2025-04-23', '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (104, '7304.29.10', 0.0255, 400),
-    (104, '7304.23.90', 0.02, 6244),
-    (104, '1401.10.00', 0.0311, 1928);
-
-INSERT INTO relatorio_serv VALUES
+    (103, '1.0904.33.00', '2024-02-12T00:44:06', 0.0276),
     (104, '1.0504.23.00', '2024-11-06T16:33:35', 0.0113),
     (104, '1.0906', '2024-11-24T04:59:28', 0.0144),
     (104, '1.0903.34.00', '2024-11-08T00:14:16', 0.0016),
@@ -7029,15 +7495,7 @@ INSERT INTO relatorio_serv VALUES
     (104, '1.0501.15.00', '2024-11-29T07:41:14', 0.0007),
     (104, '1.0502.14.10', '2024-11-16T14:15:49', 0.0474),
     (104, '1.2504.2', '2024-11-12T08:13:29', 0.0095),
-    (104, '1.0605.20.00', '2024-11-27T01:16:49', 0.0408);
-
-INSERT INTO relatorio VALUES
-    (105, '2022-09-17', NULL, '53.921.807', '0001-18', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (105, '8102.94.00', 0.8331, 10180);
-
-INSERT INTO relatorio_serv VALUES
+    (104, '1.0605.20.00', '2024-11-27T01:16:49', 0.0408),
     (105, '1.0403.31.00', '2022-10-19T01:59:32', 0.242),
     (105, '1.2001.34.20', '2022-10-07T06:05:23', 0.3233),
     (105, '1.26', '2022-10-10T16:38:45', 0.1786),
@@ -7056,143 +7514,14 @@ INSERT INTO relatorio_serv VALUES
     (105, '1.1403.22.14', '2022-10-07T05:48:07', 0.5458),
     (105, '1.2403.11.00', '2022-10-13T04:51:40', 0.011),
     (105, '1.0502.34.30', '2022-10-06T11:38:38', 0.1285),
-    (105, '1.2505.90.00', '2022-10-15T00:55:21', 0.1677);
-
-INSERT INTO relatorio VALUES
-    (106, '2024-09-03', NULL, '88.635.333', '0001-98', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (106, '2710.19.1', 0.1392, 3952),
-    (106, '1605.61.00', 0.2155, 9180),
-    (106, '8409.91.1', 0.1062, 6334),
-    (106, '9114.30.00', 0.1437, 13449),
-    (106, '2926.20.00', 0.1559, 6197),
-    (106, '8467.29.91', 0.1931, 5251),
-    (106, '3912.20.2', 0.0869, 5505),
-    (106, '5404.11.00', 0.0962, 3473),
-    (106, '9406.90.10', 0.1193, 400),
-    (106, '8420.10.10', 0.1585, 9254),
-    (106, '2710.19.9', 0.0745, 400),
-    (106, '7209.16.00', 0.0954, 7882),
-    (106, '2934.92.00', 0.0759, 3888),
-    (106, '0208.10.00', 0.1803, 4698),
-    (106, '2827.49.19', 0.1683, 400),
-    (106, '8544.30.00', 0.2125, 4806),
-    (106, '7011.10.10', 0.1736, 1389),
-    (106, '8902.00.90', 0.1455, 13687),
-    (106, '3802.90.10', 0.6241, 5785),
-    (106, '2827.39.93', 0.1942, 3097),
-    (106, '3911.10.2', 0.1989, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (105, '1.2505.90.00', '2022-10-15T00:55:21', 0.1677),
     (106, '1.1806.8', '2024-10-16T11:25:13', 0.124),
-    (106, '1.1404.12.00', '2024-10-10T23:34:55', 0.0672);
-
-INSERT INTO relatorio VALUES
-    (107, '2022-07-14', NULL, '48.912.037', '0001-48', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (107, '2807.00.20', 2.3347, 5072),
-    (107, '2804.69.00', 0.1132, 1242),
-    (107, '2925.11.00', 0.2133, 7616),
-    (107, '7207.12.00', 0.0824, 1367),
-    (107, '8471.30.12', 0.1331, 400),
-    (107, '3204.18.90', 0.0329, 7032),
-    (107, '3804.00.11', 0.0441, 10252),
-    (107, '8448.39.1', 0.104, 3097),
-    (107, '0909.21.00', 0.0593, 13125),
-    (107, '5407.52.20', 0.0115, 582),
-    (107, '8714.95.00', 0.0099, 9723),
-    (107, '2939.44.00', 0.0541, 7367),
-    (107, '3002.12.16', 0.0419, 13598),
-    (107, '2927.00.29', 0.0014, 400),
-    (107, '9101.11.00', 0.2166, 11333),
-    (107, '8443.91.99', 0.1533, 16855),
-    (107, '6104.22.00', 0.0638, 11707),
-    (107, '2933.91.51', 0.0542, 4503),
-    (107, '7312.90.00', 0.0107, 400),
-    (107, '0210.12.00', 0.0746, 400),
-    (107, '2918.29.90', 0.0032, 2293),
-    (107, '6902.20.92', 0.0525, 4369),
-    (107, '0710.80.00', 0.0751, 5066),
-    (107, '9006.61.00', 0.0247, 8127),
-    (107, '8517.62.91', 0.001, 6617),
-    (107, '2903.79.39', 0.0157, 400),
-    (107, '9018.50.90', 0.0173, 1296);
-
-INSERT INTO relatorio_serv VALUES
-    (107, '1.0503.2', '2022-08-16T22:41:20', 0.4191);
-
-INSERT INTO relatorio VALUES
-    (108, '2026-04-08', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (108, '6601.91.90', 2.7474, 6076),
-    (108, '2905.19.11', 0.0363, 7532),
-    (108, '0105.11.10', 0.0106, 1558),
-    (108, '8448.32.11', 0.1018, 4521),
-    (108, '8607.11.20', 0.1373, 11979),
-    (108, '6910.10.00', 0.0752, 4720),
-    (108, '8432.39.10', 0.0582, 2440),
-    (108, '2924.29.92', 0.0149, 400),
-    (108, '8703.32.10', 0.371, 400),
-    (108, '2939.79.39', 0.0473, 12476),
-    (108, '3507.90.1', 0.1802, 400),
-    (108, '2933.99.4', 0.1263, 1200),
-    (108, '8207.13.00', 0.0024, 4341),
-    (108, '7210.70.10', 0.1375, 8141),
-    (108, '8456.50.00', 0.0372, 2599),
-    (108, '3209.90.19', 0.1336, 642),
-    (108, '2932.95.00', 0.0908, 4833),
-    (108, '8438.90.00', 0.0003, 400),
-    (108, '8504.31.1', 0.0089, 400),
-    (108, '2839.19.00', 0.0025, 2477);
-
-INSERT INTO relatorio_serv VALUES
+    (106, '1.1404.12.00', '2024-10-10T23:34:55', 0.0672),
+    (107, '1.0503.2', '2022-08-16T22:41:20', 0.4191),
     (108, '1.1402.15.00', '2026-05-13T06:07:35', 1.3887),
     (108, '1.1002.10.00', '2026-05-08T06:26:26', 0.0133),
-    (108, '1.1302.11.00', '2026-05-05T16:37:18', 0.0165);
-
-INSERT INTO relatorio VALUES
-    (109, '2026-01-05', '2026-06-14', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (109, '4601.99.00', 0.06, 6975),
-    (109, '7214.30.00', 0.049, 6929),
-    (109, '6112.11.00', 0.0291, 8460),
-    (109, '8609.00.00', 0.0102, 400),
-    (109, '2912.12.00', 0.0583, 400),
-    (109, '8443.32.51', 0.1542, 7502),
-    (109, '2921.42.29', 0.0053, 11341),
-    (109, '8413.30.90', 0.1114, 950),
-    (109, '7308.20.00', 0.0869, 5330),
-    (109, '6006.31.20', 0.0356, 2607),
-    (109, '6303.12.00', 0.0667, 2828),
-    (109, '2917.39.50', 0.1026, 400),
-    (109, '8709.90.00', 0.0934, 2142),
-    (109, '7310.21.10', 0.0417, 400),
-    (109, '4811.51.30', 0.0398, 7315),
-    (109, '2852.10.19', 0.0217, 1768),
-    (109, '8486.10.00', 0.1305, 3980),
-    (109, '2916.14.90', 0.0291, 3634),
-    (109, '3004.39.39', 0.0317, 3111),
-    (109, '8482.50.10', 0.007, 2364),
-    (109, '8517.71.20', 0.0741, 8104),
-    (109, '0306.93.00', 0.086, 400),
-    (109, '3808.94.22', 0.004, 11759),
-    (109, '8448.39.11', 0.1865, 5385);
-
-INSERT INTO relatorio_serv VALUES
-    (109, '1.2003.25.20', '2026-02-23T05:12:24', 0.5905);
-
-INSERT INTO relatorio VALUES
-    (110, '2023-03-11', NULL, '64.087.915', '0001-27', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (110, '8504.90.40', 0.2875, 400),
-    (110, '2828.90.20', 0.0165, 1182);
-
-INSERT INTO relatorio_serv VALUES
+    (108, '1.1302.11.00', '2026-05-05T16:37:18', 0.0165),
+    (109, '1.2003.25.20', '2026-02-23T05:12:24', 0.5905),
     (110, '1.02', '2023-04-22T17:12:37', 8.5519),
     (110, '1.2201.12.00', '2023-04-08T09:40:09', 0.1357),
     (110, '1.0502.22.10', '2023-04-08T12:40:58', 1.1098),
@@ -7210,136 +7539,16 @@ INSERT INTO relatorio_serv VALUES
     (110, '1.0102.69.00', '2023-04-08T14:09:58', 0.1089),
     (110, '1.1106', '2023-04-18T03:11:33', 0.1974),
     (110, '1.0901.39.00', '2023-04-06T23:56:37', 0.6708),
-    (110, '1.0504.45.20', '2023-04-28T22:07:39', 0.7131);
-
-INSERT INTO relatorio VALUES
-    (111, '2025-07-24', NULL, '48.912.037', '0001-38', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (111, '2833.40.10', 0.8152, 8673),
-    (111, '5802.20.00', 0.0081, 5267),
-    (111, '3002.12.21', 0.006, 5577),
-    (111, '0305.51.00', 0.0161, 3209),
-    (111, '1209.24.00', 0.0063, 4195),
-    (111, '8422.30.2', 0.0129, 2562),
-    (111, '8101.99.90', 0.0394, 12240),
-    (111, '4107.92.10', 0.0101, 2896),
-    (111, '2836.92.00', 0.0043, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (110, '1.0504.45.20', '2023-04-28T22:07:39', 0.7131),
     (111, '1.0501.11.30', '2025-08-21T02:23:18', 0.3215),
     (111, '1.0502.19.00', '2025-08-28T16:18:38', 0.0),
-    (111, '1.1401.16.00', '2025-08-07T12:03:42', 0.003);
-
-INSERT INTO relatorio VALUES
-    (112, '2025-10-31', NULL, '09.723.145', '0001-56', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (112, '9018.39.29', 1.1513, 400),
-    (112, '0603.90.00', 0.0231, 3944),
-    (112, '2933.39.41', 0.0823, 3751),
-    (112, '2306.41.00', 0.0281, 8340),
-    (112, '2933.55.40', 0.0172, 6282),
-    (112, '8473.30.31', 0.0255, 1760),
-    (112, '2833.24.00', 0.0045, 400),
-    (112, '4202.39.00', 0.0569, 400),
-    (112, '8430.41.20', 0.0596, 20243),
-    (112, '5509.22.00', 0.0139, 400),
-    (112, '2933.59.34', 0.1899, 400),
-    (112, '8476.21.00', 0.0054, 6499),
-    (112, '8429.51.2', 0.043, 3928),
-    (112, '8424.82.21', 0.0018, 4268),
-    (112, '8473.50.10', 0.0722, 6842),
-    (112, '8472.90.99', 0.0024, 1941),
-    (112, '5102.20.00', 0.2293, 2713),
-    (112, '6909.12.10', 0.1036, 400),
-    (112, '0901.12.00', 0.0103, 3083),
-    (112, '8517.62.39', 0.0099, 400),
-    (112, '0304.92.12', 0.0307, 400),
-    (112, '3907.10.3', 0.1407, 4455),
-    (112, '2924.19.2', 0.0796, 9500),
-    (112, '2933.99.63', 0.0772, 1258),
-    (112, '8536.90.20', 0.0236, 400),
-    (112, '2922.49.6', 0.1447, 9115),
-    (112, '7117.11.00', 0.0154, 11209);
-
-INSERT INTO relatorio_serv VALUES
+    (111, '1.1401.16.00', '2025-08-07T12:03:42', 0.003),
     (112, '1.0502.23.20', '2025-11-13T09:58:25', 0.4776),
     (112, '1.1706.11.00', '2025-11-24T08:49:31', 0.0048),
     (112, '1.2001.33.00', '2025-11-02T19:09:47', 0.0107),
-    (112, '1.2003.26.90', '2025-11-10T13:33:29', 0.0068);
-
-INSERT INTO relatorio VALUES
-    (113, '2024-05-17', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (113, '8501.53.20', 0.139, 18794),
-    (113, '8406.90.2', 0.2339, 400),
-    (113, '1702.40.20', 0.722, 3351),
-    (113, '2931.59.11', 0.4082, 876),
-    (113, '2904.10.11', 0.1694, 10907),
-    (113, '9404.29.00', 0.4989, 3758),
-    (113, '0306.94.00', 0.0861, 7886),
-    (113, '4010.11.00', 0.1954, 5432),
-    (113, '0104.20.90', 0.2601, 400),
-    (113, '3003.90.64', 0.4844, 3512),
-    (113, '7310.29.20', 0.1717, 400),
-    (113, '8429.40.00', 0.1722, 400),
-    (113, '3507.90.49', 0.1334, 9605),
-    (113, '2907.21.00', 0.1168, 400),
-    (113, '8536.50.10', 0.1606, 10090),
-    (113, '8448.39.9', 0.0833, 400),
-    (113, '5205.26.00', 0.3805, 400),
-    (113, '8528.49.90', 0.1954, 400),
-    (113, '8443.91.10', 0.232, 8175),
-    (113, '2903.13.00', 0.0417, 400),
-    (113, '8205.70.00', 0.0856, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (113, '1.1903.1', '2024-06-01T06:35:37', 1.3541);
-
-INSERT INTO relatorio VALUES
-    (114, '2025-10-11', '2026-03-25', '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (114, '8545.11.00', 0.3797, 5283),
-    (114, '6003.10.00', 1.3481, 8873),
-    (114, '0303.89.64', 0.2762, 5957),
-    (114, '2920.23.00', 0.2646, 400),
-    (114, '8549.31.00', 0.7345, 400),
-    (114, '7222.19.10', 1.0202, 7305),
-    (114, '8521.10.81', 0.1631, 10615),
-    (114, '2922.29.90', 0.8713, 4839),
-    (114, '2833.29.30', 0.1885, 3001),
-    (114, '3926.90.40', 0.0731, 400),
-    (114, '2912.19.12', 0.1078, 5624),
-    (114, '2614.00.90', 0.4487, 4617),
-    (114, '1404.20.10', 0.4479, 657),
-    (114, '2935.90.2', 0.4038, 16089),
-    (114, '3915.90.00', 1.2295, 3695),
-    (114, '3808.93.27', 0.4341, 9648),
-    (114, '5703.21.00', 0.0459, 400),
-    (114, '2913.00.10', 1.0475, 400),
-    (114, '9603.29.00', 0.1332, 400),
-    (114, '8433.51.00', 0.3357, 8279),
-    (114, '8472.90.59', 0.2845, 4190),
-    (114, '2834.10.10', 0.1528, 2508),
-    (114, '3606.10.00', 0.4648, 8501),
-    (114, '2933.99.53', 0.5585, 400),
-    (114, '5301.21.10', 0.3381, 1084),
-    (114, '1301.90.10', 0.8089, 2368),
-    (114, '6303.92.00', 1.2809, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (114, '1.25', '2025-11-14T00:18:58', 1.1348);
-
-INSERT INTO relatorio VALUES
-    (115, '2025-03-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (115, '9608.99.8', 0.507, 7482);
-
-INSERT INTO relatorio_serv VALUES
+    (112, '1.2003.26.90', '2025-11-10T13:33:29', 0.0068),
+    (113, '1.1903.1', '2024-06-01T06:35:37', 1.3541),
+    (114, '1.25', '2025-11-14T00:18:58', 1.1348),
     (115, '1.0201.00.00', '2025-04-10T23:05:48', 0.0175),
     (115, '1.1706.11.00', '2025-04-01T22:29:07', 0.1307),
     (115, '1.0402.14.00', '2025-04-05T22:33:12', 0.303),
@@ -7353,25 +7562,7 @@ INSERT INTO relatorio_serv VALUES
     (115, '1.2003.21', '2025-04-26T07:34:40', 0.0344),
     (115, '1.0301.31.00', '2025-04-08T20:09:00', 0.1111),
     (115, '1.2301.91.00', '2025-04-13T20:00:39', 0.5647),
-    (115, '1.1501.10.00', '2025-04-15T14:33:30', 0.2046);
-
-INSERT INTO relatorio VALUES
-    (116, '2024-03-15', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (116, '7604.29.19', 0.0125, 10758),
-    (116, '2905.17.20', 0.0744, 3945),
-    (116, '2933.33.69', 0.1567, 8706),
-    (116, '8479.82.90', 0.1551, 4292),
-    (116, '3926.10.00', 0.0971, 400),
-    (116, '8517.62.56', 0.1062, 10694),
-    (116, '3707.90.29', 0.343, 400),
-    (116, '8532.30.90', 0.0733, 2344),
-    (116, '7229.20.00', 0.1382, 400),
-    (116, '3705.00.10', 0.0706, 3581),
-    (116, '2520.20.90', 0.0226, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (115, '1.1501.10.00', '2025-04-15T14:33:30', 0.2046),
     (116, '1.1903', '2024-04-11T21:30:11', 0.0615),
     (116, '1.2606.00.00', '2024-04-10T04:23:01', 0.0449),
     (116, '1.1404.22.00', '2024-04-08T08:06:50', 0.0235),
@@ -7384,15 +7575,7 @@ INSERT INTO relatorio_serv VALUES
     (116, '1.0501.14.40', '2024-04-05T16:58:46', 0.0739),
     (116, '1.1103.4', '2024-04-21T01:26:42', 0.0799),
     (116, '1.1408.19.00', '2024-04-16T23:13:21', 0.0784),
-    (116, '1.1703.9', '2024-04-07T23:57:00', 0.0616);
-
-INSERT INTO relatorio VALUES
-    (117, '2023-04-23', '2026-04-18', '28.659.130', '0001-07', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (117, '3915.20.00', 0.3332, 7528);
-
-INSERT INTO relatorio_serv VALUES
+    (116, '1.1703.9', '2024-04-07T23:57:00', 0.0616),
     (117, '1.26', '2023-05-16T07:27:51', 0.2219),
     (117, '1.0604.90.00', '2023-05-25T19:43:41', 0.0537),
     (117, '1.0301.29.00', '2023-05-24T04:06:59', 0.1803),
@@ -7409,35 +7592,12 @@ INSERT INTO relatorio_serv VALUES
     (117, '1.1108.30.00', '2023-05-10T06:44:32', 0.048),
     (117, '1.2402', '2023-05-14T05:41:32', 0.0091),
     (117, '1.0901.51.2', '2023-05-10T18:48:38', 0.0769),
-    (117, '1.0901.31.00', '2023-05-13T02:58:02', 0.0202);
-
-INSERT INTO relatorio VALUES
-    (118, '2023-01-16', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (118, '2840.11.00', 0.4196, 1444),
-    (118, '7304.90.1', 0.2173, 8897),
-    (118, '8456.90.00', 0.3085, 7315),
-    (118, '8502.13.19', 0.5579, 7424),
-    (118, '8465.95.12', 0.1871, 5755),
-    (118, '7225.30.00', 0.559, 6619),
-    (118, '8508.60.00', 0.4177, 14246),
-    (118, '8510.30.00', 0.0585, 3220),
-    (118, '0305.41.00', 0.1818, 9417),
-    (118, '6108.99.00', 0.0634, 400),
-    (118, '4802.58.92', 0.189, 6213);
-
-INSERT INTO relatorio_serv VALUES
+    (117, '1.0901.31.00', '2023-05-13T02:58:02', 0.0202),
     (118, '1.1102.90.00', '2023-02-21T10:30:23', 0.6246),
     (118, '1.1403.22.11', '2023-02-22T12:31:44', 0.0584),
     (118, '1.0501.24.21', '2023-02-07T07:46:14', 0.0911),
     (118, '1.0101.2', '2023-02-25T15:30:18', 0.2641),
-    (118, '1.0502.34.10', '2023-02-22T05:05:17', 0.4963);
-
-INSERT INTO relatorio VALUES
-    (119, '2024-11-23', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (118, '1.0502.34.10', '2023-02-22T05:05:17', 0.4963),
     (119, '1.1103.36', '2024-12-02T19:02:15', 0.1104),
     (119, '1.1802.20.00', '2024-12-22T12:45:15', 0.2962),
     (119, '1.0903.35.00', '2024-12-26T19:42:02', 0.1595),
@@ -7477,26 +7637,7 @@ INSERT INTO relatorio_serv VALUES
     (119, '1.1403.22.90', '2024-12-01T02:09:25', 0.1314),
     (119, '1.1406.1', '2024-12-18T13:44:44', 0.1297),
     (119, '1.1302.11.00', '2024-12-23T22:29:09', 0.1529),
-    (119, '1.2501.37.00', '2024-12-13T18:37:00', 0.6945);
-
-INSERT INTO relatorio VALUES
-    (120, '2025-11-04', '2026-02-01', '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (120, '2910.90.90', 0.7422, 400),
-    (120, '2933.53.7', 0.5064, 5620),
-    (120, '0303.89.3', 0.9923, 400),
-    (120, '6212.20.00', 1.6494, 400),
-    (120, '8708.94.82', 0.5504, 400),
-    (120, '8433.59.1', 0.3225, 400),
-    (120, '2933.53.2', 0.1774, 687),
-    (120, '7110.21.00', 1.4362, 400),
-    (120, '2930.20.21', 0.3276, 5435),
-    (120, '8506.10.20', 1.3873, 8489),
-    (120, '8714.20.00', 0.439, 4995),
-    (120, '8456.11.19', 0.5074, 2198);
-
-INSERT INTO relatorio_serv VALUES
+    (119, '1.2501.37.00', '2024-12-13T18:37:00', 0.6945),
     (120, '1.2304.1', '2025-12-24T07:04:49', 0.1838),
     (120, '1.0102.35.30', '2025-12-20T17:45:14', 0.0623),
     (120, '1.0901.52.90', '2025-12-28T13:19:53', 0.6282),
@@ -7511,75 +7652,13 @@ INSERT INTO relatorio_serv VALUES
     (120, '1.0905.40.00', '2025-12-27T12:27:59', 0.1336),
     (120, '1.1106', '2025-12-28T08:25:35', 0.3231),
     (120, '1.1106.42.00', '2025-12-15T01:09:50', 0.2497),
-    (120, '1.0107.90.00', '2025-12-01T08:36:14', 0.0544);
-
-INSERT INTO relatorio VALUES
-    (121, '2024-07-05', '2025-09-07', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (121, '0302.55.00', 0.8411, 400),
-    (121, '4810.19.82', 2.3295, 2900),
-    (121, '2931.49.1', 0.0927, 8224),
-    (121, '8474.80.90', 0.3418, 3957),
-    (121, '2935.90.24', 0.8874, 3671),
-    (121, '2904.10.12', 0.814, 1667),
-    (121, '8464.20.2', 1.0465, 400),
-    (121, '3906.90.52', 0.2517, 5698),
-    (121, '3301.90.10', 1.4175, 2347),
-    (121, '9021.39.30', 0.1095, 400),
-    (121, '8716.31.00', 2.3428, 3160),
-    (121, '8471.70.90', 1.9027, 8377);
-
-INSERT INTO relatorio_serv VALUES
+    (120, '1.0107.90.00', '2025-12-01T08:36:14', 0.0544),
     (121, '1.0502.32.20', '2024-08-13T09:10:56', 0.9728),
     (121, '1.0105.11.00', '2024-08-14T09:56:08', 0.0118),
-    (121, '1.2001.20.00', '2024-08-22T01:59:50', 0.3905);
-
-INSERT INTO relatorio VALUES
-    (122, '2024-10-08', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (122, '8508.70.00', 0.0396, 7741),
-    (122, '2208.40.00', 0.0568, 400),
-    (122, '4802.57.93', 0.0263, 4342),
-    (122, '9506.59.00', 0.1804, 6330),
-    (122, '8466.93.50', 0.0321, 1697),
-    (122, '5205.21.00', 0.1571, 400),
-    (122, '2903.92.20', 0.0979, 7238),
-    (122, '5407.73.00', 0.1227, 7971),
-    (122, '8419.12.00', 0.0461, 13273),
-    (122, '3811.90.90', 0.0523, 6971),
-    (122, '4401.32.00', 0.2548, 400),
-    (122, '8527.13.00', 0.0898, 400),
-    (122, '2933.69.2', 0.0361, 6101),
-    (122, '2908.19.90', 0.084, 1603),
-    (122, '7304.90.1', 0.0526, 400),
-    (122, '2933.39.12', 0.1466, 400),
-    (122, '3705.00.90', 0.0567, 6019),
-    (122, '0303.89.41', 0.0443, 400),
-    (122, '6909.90.00', 0.1228, 400),
-    (122, '2846.10.10', 0.0272, 4584),
-    (122, '3812.39.11', 0.0339, 5254),
-    (122, '2008.30.00', 0.0754, 1520),
-    (122, '6215.10.00', 0.1205, 2280),
-    (122, '8434.10.00', 0.2379, 400),
-    (122, '6112.31.00', 0.1281, 3694),
-    (122, '5104.00.00', 0.0234, 9505),
-    (122, '7802.00.00', 0.2097, 400),
-    (122, '9603.50.00', 0.0383, 8931);
-
-INSERT INTO relatorio_serv VALUES
+    (121, '1.2001.20.00', '2024-08-22T01:59:50', 0.3905),
     (122, '1.1706.21.00', '2024-11-12T07:49:57', 0.2579),
     (122, '1.2601', '2024-11-07T17:07:10', 0.0313),
-    (122, '1.1506', '2024-11-18T14:46:27', 0.1275);
-
-INSERT INTO relatorio VALUES
-    (123, '2025-10-26', '2026-02-26', '56.738.014', '0001-69', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (123, '6802.29.00', 0.3054, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (122, '1.1506', '2024-11-18T14:46:27', 0.1275),
     (123, '1.2301.1', '2025-11-15T23:48:58', 0.1397),
     (123, '1.0901.51.17', '2025-11-12T01:46:52', 0.1357),
     (123, '1.0502.14.40', '2025-11-03T11:54:37', 0.0472),
@@ -7614,82 +7693,15 @@ INSERT INTO relatorio_serv VALUES
     (123, '1.0102.53.20', '2025-11-06T07:40:12', 0.0543),
     (123, '1.1302.1', '2025-11-07T00:18:05', 0.0069),
     (123, '1.1106.35.00', '2025-11-28T17:52:55', 0.1175),
-    (123, '1.1404.13.00', '2025-11-01T14:49:58', 0.1156);
-
-INSERT INTO relatorio VALUES
-    (124, '2022-08-26', '2026-04-01', '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (124, '2933.39.8', 0.0458, 400),
-    (124, '8708.40.80', 0.2158, 400),
-    (124, '2918.12.00', 0.2329, 6577),
-    (124, '2933.69.19', 0.0512, 400),
-    (124, '0502.90.10', 0.1719, 12786),
-    (124, '2941.50.10', 0.1122, 400),
-    (124, '6302.39.00', 0.2654, 1002),
-    (124, '0304.32.10', 0.0809, 10101),
-    (124, '5407.71.00', 0.0396, 3187),
-    (124, '6117.10.00', 0.1405, 5626),
-    (124, '7616.10.00', 0.479, 1264),
-    (124, '3003.90.7', 0.0248, 400),
-    (124, '2504.10.00', 0.1449, 7286),
-    (124, '9030.33.2', 0.1886, 400),
-    (124, '2811.22.20', 0.2002, 3754),
-    (124, '5303.90.90', 0.2748, 8553),
-    (124, '2914.79.90', 0.3061, 4028),
-    (124, '3403.19.00', 0.05, 400),
-    (124, '7210.90.00', 0.3871, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (123, '1.1404.13.00', '2025-11-01T14:49:58', 0.1156),
     (124, '1.2204.30.00', '2022-09-13T01:35:28', 0.0592),
     (124, '1.0504.2', '2022-09-08T21:22:51', 0.0687),
-    (124, '1.0107.30.00', '2022-09-17T09:53:14', 0.1741);
-
-INSERT INTO relatorio VALUES
-    (125, '2021-11-30', '2023-05-07', '88.635.333', '0001-98', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (125, '3212.90.10', 0.2337, 9844),
-    (125, '7307.92.00', 0.0442, 4559),
-    (125, '4820.90.00', 0.2206, 1852),
-    (125, '6006.22.00', 0.0012, 9842),
-    (125, '2936.27.10', 0.108, 2096),
-    (125, '9018.90.3', 0.1947, 400),
-    (125, '6304.92.00', 0.223, 12212),
-    (125, '9705.21.00', 0.231, 12728),
-    (125, '8459.69.00', 0.077, 10840),
-    (125, '4302.30.00', 0.0191, 2520);
-
-INSERT INTO relatorio VALUES
-    (126, '2025-01-20', NULL, '13.690.872', '0001-54', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (126, '0207.25.00', 1.3746, 3388),
-    (126, '2909.60.1', 0.4596, 400),
-    (126, '2939.59.10', 0.7825, 3813),
-    (126, '2941.40.19', 0.6664, 3234),
-    (126, '2934.99.51', 0.7548, 400),
-    (126, '7217.10.19', 1.1092, 6188),
-    (126, '3307.30.00', 0.4135, 6186),
-    (126, '2933.33.3', 0.3078, 8525),
-    (126, '3808.99.95', 0.517, 400),
-    (126, '2933.69.9', 0.8333, 7893),
-    (126, '1212.99.10', 0.2534, 2229),
-    (126, '4203.10.00', 1.8385, 7494),
-    (126, '8601.20.00', 0.5531, 18359),
-    (126, '8428.33.00', 0.8688, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (124, '1.0107.30.00', '2022-09-17T09:53:14', 0.1741),
     (126, '1.0901.51.14', '2025-02-10T19:41:40', 3.7143),
     (126, '1.0205.00.00', '2025-02-23T22:22:49', 1.1588),
     (126, '1.2504.2', '2025-02-27T04:58:45', 0.6282),
     (126, '1.2301.23.00', '2025-02-11T01:13:05', 0.8009),
-    (126, '1.2204.20.00', '2025-02-16T13:12:09', 0.5095);
-
-INSERT INTO relatorio VALUES
-    (127, '2026-02-27', NULL, '75.893.062', '0001-33', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (126, '1.2204.20.00', '2025-02-16T13:12:09', 0.5095),
     (127, '1.0501.21', '2026-03-19T21:26:51', 1.2868),
     (127, '1.0910', '2026-03-17T14:21:00', 1.8734),
     (127, '1.2301.96.00', '2026-03-03T04:52:18', 0.1011),
@@ -7704,37 +7716,12 @@ INSERT INTO relatorio_serv VALUES
     (127, '1.1402.12.00', '2026-03-23T12:16:31', 0.6445),
     (127, '1.1001.12.90', '2026-03-27T11:01:29', 0.7916),
     (127, '1.0402.14.00', '2026-03-22T08:35:58', 0.065),
-    (127, '1.1404.49.00', '2026-03-17T02:45:26', 0.2258);
-
-INSERT INTO relatorio VALUES
-    (128, '2023-03-18', '2023-11-15', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (128, '8448.33.10', 2.3642, 7563),
-    (128, '2903.79.12', 0.0039, 7078),
-    (128, '2920.29.50', 0.0143, 2875),
-    (128, '3004.39.94', 0.0142, 400),
-    (128, '3903.20.00', 0.0468, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (127, '1.1404.49.00', '2026-03-17T02:45:26', 0.2258),
     (128, '1.0504.11.00', '2023-04-08T16:16:33', 2.0925),
     (128, '1.1507.90.00', '2023-04-13T06:14:54', 0.0083),
     (128, '1.1901.20.00', '2023-04-06T13:36:04', 0.0021),
     (128, '1.2001.34', '2023-04-14T04:18:00', 0.0081),
-    (128, '1.2002', '2023-04-16T22:44:57', 0.0335);
-
-INSERT INTO relatorio VALUES
-    (129, '2023-01-08', '2025-05-13', '79.821.563', '0001-00', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (129, '3302.90.1', 2.013, 4377),
-    (129, '3907.10.49', 0.0757, 6378),
-    (129, '9027.20.29', 0.0496, 1167),
-    (129, '3901.10.20', 0.0015, 11059),
-    (129, '3003.90.79', 0.0289, 1885),
-    (129, '8448.20.90', 0.0259, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (128, '1.2002', '2023-04-16T22:44:57', 0.0335),
     (129, '1.1701.19.00', '2023-02-15T06:37:35', 1.8304),
     (129, '1.0901.51.23', '2023-02-11T04:17:26', 0.0047),
     (129, '1.0502.12.10', '2023-02-19T23:41:17', 0.0914),
@@ -7743,51 +7730,12 @@ INSERT INTO relatorio_serv VALUES
     (129, '1.0903.32.00', '2023-02-05T23:40:16', 0.025),
     (129, '1.1403.90.00', '2023-02-23T10:36:14', 0.0247),
     (129, '1.0901.51.13', '2023-02-25T17:39:26', 0.1874),
-    (129, '1.1903.40.00', '2023-02-22T14:37:18', 0.0342);
-
-INSERT INTO relatorio VALUES
-    (130, '2025-09-04', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (130, '8421.91.10', 3.1595, 400),
-    (130, '4408.39.91', 0.0107, 400),
-    (130, '4805.50.00', 0.0201, 1980),
-    (130, '4008.19.00', 0.0265, 5114),
-    (130, '3003.90.7', 0.0082, 2618),
-    (130, '3003.39.19', 0.0595, 1769),
-    (130, '5404.90.00', 0.1171, 1363),
-    (130, '0702.00.00', 0.049, 6464),
-    (130, '8479.89.40', 0.026, 8632),
-    (130, '6115.10.93', 0.0844, 4983);
-
-INSERT INTO relatorio_serv VALUES
+    (129, '1.1903.40.00', '2023-02-22T14:37:18', 0.0342),
     (130, '1.2201.19.00', '2025-10-16T02:59:28', 0.8467),
     (130, '1.2401.00.00', '2025-10-24T08:51:32', 0.0782),
     (130, '1.1703.91.00', '2025-10-19T18:30:28', 0.0085),
-    (130, '1.0504.12.00', '2025-10-25T00:07:54', 0.0178);
-
-INSERT INTO relatorio VALUES
-    (131, '2023-04-25', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (131, '4410.11.90', 1.638, 1501),
-    (131, '8413.30.10', 0.0215, 7117),
-    (131, '0704.90.00', 0.0001, 470),
-    (131, '3815.90.91', 0.1492, 400),
-    (131, '2835.10.11', 0.0355, 3299),
-    (131, '4410.19.11', 0.027, 3719),
-    (131, '2916.15.1', 0.0169, 6387),
-    (131, '8450.20.20', 0.0737, 400),
-    (131, '4105.10.90', 0.2991, 7432),
-    (131, '0709.30.00', 0.005, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (131, '1.0301.39.00', '2023-05-11T13:50:18', 0.9441);
-
-INSERT INTO relatorio VALUES
-    (132, '2022-12-02', NULL, '28.659.130', '0001-07', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (130, '1.0504.12.00', '2025-10-25T00:07:54', 0.0178),
+    (131, '1.0301.39.00', '2023-05-11T13:50:18', 0.9441),
     (132, '1.0502.11.30', '2023-01-06T20:01:59', 0.1186),
     (132, '1.0401.12.10', '2023-01-08T09:48:22', 0.0288),
     (132, '1.0608', '2023-01-15T08:01:19', 0.0423),
@@ -7827,67 +7775,12 @@ INSERT INTO relatorio_serv VALUES
     (132, '1.1401.19.00', '2023-01-05T09:00:09', 0.0538),
     (132, '1.2404.22.00', '2023-01-07T15:28:43', 0.0387),
     (132, '1.0502.21.10', '2023-01-20T19:02:07', 0.0493),
-    (132, '1.0801', '2023-01-07T13:37:20', 0.1553);
-
-INSERT INTO relatorio VALUES
-    (133, '2023-07-24', '2025-02-25', '79.821.563', '0001-65', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (133, '7505.12.29', 0.0338, 17605),
-    (133, '0105.13.00', 0.1498, 6891),
-    (133, '3909.50.1', 0.0818, 400),
-    (133, '8443.31.13', 0.2113, 964),
-    (133, '2916.12.20', 0.1147, 400),
-    (133, '8450.11.00', 0.022, 6583),
-    (133, '9503.00.9', 0.0812, 6562),
-    (133, '2916.19.2', 0.0323, 400),
-    (133, '8443.32.35', 0.0638, 400),
-    (133, '6205.90.10', 0.1376, 400),
-    (133, '2827.39.94', 0.1171, 8897),
-    (133, '9111.80.00', 0.0562, 839),
-    (133, '0209.10.21', 0.1357, 6478),
-    (133, '1404.90.10', 0.0531, 2389);
-
-INSERT INTO relatorio_serv VALUES
-    (133, '1.0102.42.10', '2023-08-23T05:00:57', 0.1952);
-
-INSERT INTO relatorio VALUES
-    (134, '2025-11-03', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (134, '8502.13.90', 0.8748, 8958),
-    (134, '0904.11.00', 12.0381, 2982),
-    (134, '8481.80.39', 4.6015, 400),
-    (134, '5903.20.00', 1.7251, 400),
-    (134, '3926.90.22', 2.8522, 9514),
-    (134, '0406.20.00', 1.6689, 2939),
-    (134, '6207.22.00', 3.5587, 6188),
-    (134, '3004.90.24', 1.619, 7735),
-    (134, '3003.20.9', 2.8873, 400),
-    (134, '2926.90.21', 4.633, 14080),
-    (134, '3809.10.10', 2.2914, 400),
-    (134, '2936.21.12', 0.784, 1805);
-
-INSERT INTO relatorio_serv VALUES
+    (132, '1.0801', '2023-01-07T13:37:20', 0.1553),
+    (133, '1.0102.42.10', '2023-08-23T05:00:57', 0.1952),
     (134, '1.1108.10.00', '2025-12-22T18:28:56', 1.3017),
     (134, '1.0101.29.00', '2025-12-23T15:51:00', 0.8478),
     (134, '1.2203.10.00', '2025-12-20T07:04:17', 1.5912),
-    (134, '1.1107.31.00', '2025-12-02T05:11:01', 1.8194);
-
-INSERT INTO relatorio VALUES
-    (135, '2023-03-25', '2024-03-22', '48.603.715', '0001-78', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (135, '3003.39.26', 0.2345, 1987),
-    (135, '8481.80.39', 0.0013, 400),
-    (135, '2302.30.10', 0.0766, 6237),
-    (135, '8517.62.39', 0.1341, 9165),
-    (135, '2939.79.40', 0.1568, 4888),
-    (135, '2711.13.00', 0.1216, 6311),
-    (135, '8429.51.2', 0.0173, 4221),
-    (135, '2006.00.00', 0.0624, 4759);
-
-INSERT INTO relatorio_serv VALUES
+    (134, '1.1107.31.00', '2025-12-02T05:11:01', 1.8194),
     (135, '1.0501.11.10', '2023-04-26T18:43:28', 0.2294),
     (135, '1.0102.5', '2023-04-05T03:35:47', 0.1161),
     (135, '1.1509.00.00', '2023-04-21T03:34:04', 0.0152),
@@ -7897,21 +7790,7 @@ INSERT INTO relatorio_serv VALUES
     (135, '1.1404.44.00', '2023-04-17T13:30:47', 0.0075),
     (135, '1.1506.90.00', '2023-04-10T16:05:52', 0.0159),
     (135, '1.1108.30.00', '2023-04-07T02:40:41', 0.1184),
-    (135, '1.2501.1', '2023-04-06T11:02:23', 0.238);
-
-INSERT INTO relatorio VALUES
-    (136, '2023-11-12', '2024-06-07', '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (136, '5514.19.90', 0.1459, 400),
-    (136, '5405.00.00', 0.2811, 4655),
-    (136, '2920.90.90', 0.011, 2986),
-    (136, '8428.60.00', 0.1804, 14172),
-    (136, '2922.49.52', 0.4082, 7330),
-    (136, '7505.12.2', 0.2441, 2729),
-    (136, '2915.39.5', 0.4762, 558);
-
-INSERT INTO relatorio_serv VALUES
+    (135, '1.2501.1', '2023-04-06T11:02:23', 0.238),
     (136, '1.0402.13', '2023-12-16T21:06:57', 0.4107),
     (136, '1.0402.29.00', '2023-12-08T23:06:22', 0.1584),
     (136, '1.0901.5', '2023-12-13T18:35:20', 0.1257),
@@ -7922,22 +7801,7 @@ INSERT INTO relatorio_serv VALUES
     (136, '1.2404.1', '2023-12-21T03:24:39', 0.379),
     (136, '1.0102.11.00', '2023-12-12T13:38:10', 0.0441),
     (136, '1.0605.40.00', '2023-12-22T19:37:47', 0.0116),
-    (136, '1.1401.11.00', '2023-12-18T07:40:10', 0.1511);
-
-INSERT INTO relatorio VALUES
-    (137, '2023-07-01', '2025-12-01', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (137, '8466.93.30', 0.549, 4182),
-    (137, '2933.36.00', 0.0875, 2713),
-    (137, '9006.30.00', 0.662, 4880),
-    (137, '4407.25.00', 0.0677, 6725),
-    (137, '1522.00.00', 0.2143, 6480),
-    (137, '2711.12.10', 0.4222, 11730),
-    (137, '2832.30.20', 0.5396, 14453),
-    (137, '8445.19.27', 0.59, 13094);
-
-INSERT INTO relatorio_serv VALUES
+    (136, '1.1401.11.00', '2023-12-18T07:40:10', 0.1511),
     (137, '1.0906.40.00', '2023-08-15T21:41:54', 0.1388),
     (137, '1.1106.36', '2023-08-23T00:16:07', 0.0125),
     (137, '1.0402.19.00', '2023-08-03T08:32:43', 0.1519),
@@ -7951,191 +7815,21 @@ INSERT INTO relatorio_serv VALUES
     (137, '1.1404.43.00', '2023-08-13T10:56:14', 0.1292),
     (137, '1.10', '2023-08-04T16:42:59', 0.0725),
     (137, '1.1701.2', '2023-08-09T20:59:43', 0.3837),
-    (137, '1.0102.6', '2023-08-04T14:28:18', 0.0298);
-
-INSERT INTO relatorio VALUES
-    (138, '2025-12-07', NULL, '88.635.333', '0001-98', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (138, '0304.49.20', 0.087, 6369),
-    (138, '8420.10.10', 0.0214, 1618),
-    (138, '0305.51.00', 0.0476, 400),
-    (138, '7413.00.00', 0.0056, 3388),
-    (138, '0802.32.00', 0.0087, 5493),
-    (138, '8801.00.00', 0.0712, 3528),
-    (138, '2940.00.12', 0.0136, 6858),
-    (138, '4002.19.20', 0.0393, 5221),
-    (138, '6403.91.10', 0.0078, 10465),
-    (138, '8543.40.00', 0.0868, 400),
-    (138, '2530.90.90', 0.0858, 3562),
-    (138, '2826.90.90', 0.0773, 2736),
-    (138, '2917.39.3', 0.039, 8936),
-    (138, '0602.30.00', 0.0338, 2853),
-    (138, '8501.51.10', 0.0083, 3718),
-    (138, '8501.40.11', 0.0258, 400),
-    (138, '8465.99.00', 0.0675, 506),
-    (138, '3105.90.19', 0.0899, 2789),
-    (138, '3003.39.9', 0.0175, 7034),
-    (138, '9021.39.20', 0.0615, 400),
-    (138, '0304.92.29', 0.027, 400),
-    (138, '3824.99.83', 0.0075, 6160),
-    (138, '2918.29.10', 0.0372, 6196),
-    (138, '0602.10.00', 0.0177, 11138),
-    (138, '3507.90.19', 0.0218, 400),
-    (138, '8542.39.11', 0.0425, 7855),
-    (138, '2009.12.00', 0.0504, 12896),
-    (138, '2710.12.4', 0.0356, 3782);
-
-INSERT INTO relatorio_serv VALUES
+    (137, '1.0102.6', '2023-08-04T14:28:18', 0.0298),
     (138, '1.2001.33.00', '2026-01-02T22:34:45', 0.0133),
     (138, '1.0501.3', '2026-01-14T01:03:40', 0.0782),
-    (138, '1.0501.14.40', '2026-01-13T23:56:54', 0.0142);
-
-INSERT INTO relatorio VALUES
-    (139, '2025-09-09', NULL, '79.821.563', '0001-65', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (139, '2924.21.20', 0.0258, 7280),
-    (139, '3808.69.10', 0.0764, 12135),
-    (139, '8466.93.19', 0.1837, 400),
-    (139, '5105.29.91', 0.1817, 8633),
-    (139, '2504.10.00', 0.5622, 1918),
-    (139, '8533.90.00', 0.1467, 2251),
-    (139, '8806.99.00', 0.0395, 2396),
-    (139, '8536.50.30', 0.0679, 12920),
-    (139, '0302.53.00', 0.2903, 8527),
-    (139, '8443.99.42', 0.0436, 8765),
-    (139, '2849.20.00', 0.1621, 6832),
-    (139, '9021.39.40', 0.1824, 10657),
-    (139, '3003.90.58', 0.0411, 400),
-    (139, '6306.22.00', 0.0222, 6141),
-    (139, '5210.32.00', 0.435, 12595),
-    (139, '2939.19.00', 0.0936, 3651),
-    (139, '8532.30.90', 0.4842, 4387),
-    (139, '7015.10.10', 0.0862, 6256),
-    (139, '9017.20.00', 0.0383, 6494),
-    (139, '2939.69.59', 0.1717, 400),
-    (139, '3004.10.19', 0.1637, 4946);
-
-INSERT INTO relatorio_serv VALUES
+    (138, '1.0501.14.40', '2026-01-13T23:56:54', 0.0142),
     (139, '1.1405', '2025-10-02T04:29:58', 0.0376),
     (139, '1.1805.62.00', '2025-10-29T09:49:55', 0.4853),
-    (139, '1.0101.1', '2025-10-22T20:28:20', 0.158);
-
-INSERT INTO relatorio VALUES
-    (140, '2023-05-14', '2023-12-13', '88.635.333', '0001-98', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (140, '9202.10.00', 0.0454, 7435),
-    (140, '5801.27.00', 0.4922, 400),
-    (140, '8477.59.1', 0.2746, 4886),
-    (140, '8529.90.1', 0.1154, 400),
-    (140, '8506.10.1', 0.2818, 5399),
-    (140, '8602.90.00', 0.2006, 7398),
-    (140, '2934.10.10', 0.4981, 1656),
-    (140, '0301.94.10', 0.3547, 16470),
-    (140, '4301.90.00', 0.1684, 7674),
-    (140, '3809.91.41', 0.169, 890);
-
-INSERT INTO relatorio_serv VALUES
+    (139, '1.0101.1', '2025-10-22T20:28:20', 0.158),
     (140, '1.1106.36.10', '2023-06-28T02:40:33', 0.1433),
     (140, '1.1109.30.00', '2023-06-28T10:24:10', 0.4618),
     (140, '1.0205.00.00', '2023-06-20T00:47:08', 0.1028),
-    (140, '1.0103.20.00', '2023-06-21T12:01:58', 0.126);
-
-INSERT INTO relatorio VALUES
-    (141, '2025-01-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (141, '8714.96.11', 0.4721, 6042),
-    (141, '8422.20.00', 0.0048, 3630),
-    (141, '2914.79.1', 0.0029, 3259),
-    (141, '0304.95.00', 0.003, 7736),
-    (141, '0301.94.10', 0.0025, 1435),
-    (141, '0803.10.00', 0.0036, 14281),
-    (141, '5205.13.90', 0.0013, 5843),
-    (141, '8542.31.90', 0.0116, 7975);
-
-INSERT INTO relatorio VALUES
-    (142, '2023-03-10', '2024-08-10', '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (142, '8482.10.90', 0.1205, 1710),
-    (142, '7010.90.2', 0.2155, 400),
-    (142, '8418.21.00', 0.0957, 12308),
-    (142, '5211.12.00', 0.3426, 7993),
-    (142, '8419.50.2', 0.0847, 2234),
-    (142, '8419.50.10', 0.7162, 1851),
-    (142, '6802.99.10', 0.3686, 1246),
-    (142, '2208.30.10', 0.0856, 10384),
-    (142, '8108.90.00', 0.069, 1004),
-    (142, '8433.40.00', 0.1224, 21920),
-    (142, '7315.90.00', 0.043, 2972),
-    (142, '2523.30.00', 0.1931, 5272),
-    (142, '7415.21.00', 0.0981, 400),
-    (142, '6217.90.00', 0.3254, 1586),
-    (142, '8421.39.10', 0.0086, 4128);
-
-INSERT INTO relatorio_serv VALUES
+    (140, '1.0103.20.00', '2023-06-21T12:01:58', 0.126),
     (142, '1.1805.40.00', '2023-04-01T03:12:26', 0.0864),
     (142, '1.1701.5', '2023-04-03T13:25:06', 0.0414),
-    (142, '1.0101.21.00', '2023-04-04T19:51:52', 0.0325);
-
-INSERT INTO relatorio VALUES
-    (143, '2026-04-04', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (143, '3804.00.12', 0.964, 4641),
-    (143, '2905.19.11', 0.0369, 1926),
-    (143, '3701.30.21', 0.0057, 400),
-    (143, '4706.10.00', 0.0365, 12275),
-    (143, '2933.59.33', 0.1181, 5223),
-    (143, '6903.20.20', 0.0412, 811),
-    (143, '0304.33.00', 0.0113, 4519),
-    (143, '2936.27.10', 0.0018, 400),
-    (143, '8473.30.41', 0.0051, 400),
-    (143, '8536.50.90', 0.0614, 1883),
-    (143, '7004.20.00', 0.0987, 400),
-    (143, '2933.35.00', 0.0001, 2678),
-    (143, '8443.91.99', 0.0286, 4107),
-    (143, '9024.80.90', 0.0213, 400),
-    (143, '8443.39.28', 0.0303, 12283),
-    (143, '2403.99.90', 0.0668, 7502),
-    (143, '3003.39.16', 0.0028, 8396),
-    (143, '5911.20.90', 0.0258, 400),
-    (143, '9030.89.20', 0.0878, 4930),
-    (143, '8703.32.90', 0.0273, 517),
-    (143, '2903.79.90', 0.0396, 400),
-    (143, '2924.29.94', 0.002, 3312),
-    (143, '2939.45.20', 0.1136, 1450),
-    (143, '2839.90.20', 0.0065, 8278),
-    (143, '6203.29.10', 0.005, 400),
-    (143, '7226.91.00', 0.0032, 18293);
-
-INSERT INTO relatorio_serv VALUES
-    (143, '1.1405.11.00', '2026-05-05T01:39:09', 0.1049);
-
-INSERT INTO relatorio VALUES
-    (144, '2024-09-17', NULL, '09.723.145', '0001-93', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (144, '9108.11.10', 0.0484, 10206),
-    (144, '7404.00.00', 0.1287, 4717),
-    (144, '8424.89.90', 0.2819, 3077),
-    (144, '7219.34.00', 0.1877, 13716),
-    (144, '4820.90.00', 0.0278, 1775),
-    (144, '3005.90.90', 0.3217, 7001),
-    (144, '7226.20.90', 0.0435, 3508),
-    (144, '8536.90.10', 0.0808, 400),
-    (144, '1604.19.00', 0.3583, 2345),
-    (144, '3912.11.10', 0.1916, 15613),
-    (144, '2922.19.52', 0.3864, 400),
-    (144, '2939.63.00', 0.044, 2970),
-    (144, '5902.10.90', 0.1718, 4336),
-    (144, '8101.99.10', 0.0807, 400),
-    (144, '9705.21.00', 0.1307, 4856);
-
-INSERT INTO relatorio_serv VALUES
+    (142, '1.0101.21.00', '2023-04-04T19:51:52', 0.0325),
+    (143, '1.1405.11.00', '2026-05-05T01:39:09', 0.1049),
     (144, '1.0606', '2024-10-07T23:54:27', 0.0647),
     (144, '1.0103.42.00', '2024-10-18T20:46:09', 0.0366),
     (144, '1.1803.21.00', '2024-10-02T09:45:03', 0.2574),
@@ -8144,202 +7838,23 @@ INSERT INTO relatorio_serv VALUES
     (144, '1.1405.90.00', '2024-10-21T23:03:36', 0.0807),
     (144, '1.0502.32.30', '2024-10-04T18:19:48', 0.11),
     (144, '1.1406', '2024-10-16T08:10:46', 0.0528),
-    (144, '1.2501.3', '2024-10-13T14:31:48', 0.1403);
-
-INSERT INTO relatorio VALUES
-    (145, '2022-10-20', '2026-02-03', '79.821.563', '0001-65', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (145, '4703.29.00', 1.0854, 4242),
-    (145, '3215.90.00', 3.5198, 400),
-    (145, '9027.20.12', 1.446, 542),
-    (145, '3003.90.4', 0.6822, 4160),
-    (145, '2309.90.50', 0.2798, 2504),
-    (145, '6804.10.00', 3.0877, 2966),
-    (145, '3004.20.41', 0.4912, 400),
-    (145, '2933.91.62', 0.9571, 2020);
-
-INSERT INTO relatorio_serv VALUES
+    (144, '1.2501.3', '2024-10-13T14:31:48', 0.1403),
     (145, '1.1102.50.00', '2022-11-29T01:06:27', 0.1159),
     (145, '1.0903.35.00', '2022-11-21T03:49:59', 0.7301),
-    (145, '1.0502.34', '2022-11-15T00:56:21', 0.428);
-
-INSERT INTO relatorio VALUES
-    (146, '2025-12-24', '2026-02-28', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (146, '3004.43.00', 0.2792, 5303),
-    (146, '4810.14.90', 0.484, 400),
-    (146, '8414.10.00', 0.0097, 5788),
-    (146, '9021.90.12', 0.0596, 6820),
-    (146, '4114.20.10', 0.1896, 6889),
-    (146, '2852.10.14', 0.0643, 8892),
-    (146, '2923.90.30', 0.0381, 10153),
-    (146, '3004.20.41', 0.0199, 400),
-    (146, '2007.99.26', 0.1663, 400),
-    (146, '3606.90.00', 0.0496, 3542),
-    (146, '3905.19.90', 0.3321, 6759),
-    (146, '2103.10.90', 0.169, 404),
-    (146, '0204.42.00', 0.0097, 1565),
-    (146, '8460.90.1', 0.1926, 10902),
-    (146, '5201.00.90', 0.0671, 850),
-    (146, '0106.20.00', 0.2159, 8328),
-    (146, '1204.00.90', 0.0208, 400),
-    (146, '8412.39.00', 0.0964, 7986),
-    (146, '8204.12.00', 0.6005, 400),
-    (146, '7407.29.2', 0.5181, 3955),
-    (146, '8542.39.11', 0.1334, 6105),
-    (146, '8481.20.90', 0.0728, 6283),
-    (146, '6006.32.10', 0.2693, 7109);
-
-INSERT INTO relatorio_serv VALUES
+    (145, '1.0502.34', '2022-11-15T00:56:21', 0.428),
     (146, '1.2205.1', '2026-01-03T05:40:25', 0.0833),
     (146, '1.1103.42.00', '2026-01-25T18:12:11', 0.1914),
-    (146, '1.1303.20.00', '2026-01-26T03:23:51', 0.0515);
-
-INSERT INTO relatorio VALUES
-    (147, '2025-04-27', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (147, '2610.00.10', 72.0573, 7513),
-    (147, '3004.90.19', 4.0893, 11728),
-    (147, '5111.11.20', 0.1695, 18056),
-    (147, '8426.49.10', 0.5556, 3775),
-    (147, '6812.99.90', 0.4652, 5304),
-    (147, '2915.90.4', 1.3178, 400),
-    (147, '9017.20.00', 3.8037, 400),
-    (147, '2915.39.91', 1.0277, 5157),
-    (147, '2933.99.99', 1.262, 2384),
-    (147, '6306.19.10', 0.502, 1741),
-    (147, '4806.10.00', 0.6553, 2506),
-    (147, '8532.29.10', 0.306, 7539),
-    (147, '4001.30.00', 1.4411, 400),
-    (147, '3808.59.2', 0.4155, 400),
-    (147, '7901.12.10', 2.7956, 1046);
-
-INSERT INTO relatorio VALUES
-    (148, '2025-08-17', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (148, '2934.99.32', 9.1618, 7577),
-    (148, '6306.40.90', 0.2493, 14822),
-    (148, '2903.99.21', 0.0318, 13168),
-    (148, '6203.42.00', 0.7871, 1738),
-    (148, '3003.90.65', 1.4289, 2935),
-    (148, '6004.10.91', 0.3414, 2867),
-    (148, '2903.76.00', 0.0193, 7574),
-    (148, '1302.14.00', 0.229, 9470),
-    (148, '8412.21.90', 0.008, 4024),
-    (148, '4805.12.00', 0.4312, 400),
-    (148, '8471.50.10', 0.1017, 400),
-    (148, '4410.90.00', 0.0391, 400),
-    (148, '8539.39.11', 0.8465, 8975),
-    (148, '6909.19.10', 0.5032, 5396),
-    (148, '5207.10.00', 0.1663, 2461),
-    (148, '4106.91.00', 0.8312, 2380),
-    (148, '2922.19.91', 0.7589, 7710),
-    (148, '8542.31.20', 0.1364, 13746),
-    (148, '8433.40.00', 0.2639, 5780),
-    (148, '3002.49.99', 0.1464, 8218),
-    (148, '1513.21.20', 0.4715, 5048),
-    (148, '5509.12.90', 0.4912, 2705),
-    (148, '2103.30.21', 0.0781, 7692),
-    (148, '2918.99.29', 0.5516, 11616),
-    (148, '1302.19.20', 0.0327, 7215),
-    (148, '2904.32.00', 0.0124, 8969),
-    (148, '0801.32.00', 0.1588, 400),
-    (148, '2923.20.00', 2.4259, 9619),
-    (148, '5212.14.00', 1.6389, 2343),
-    (148, '3002.12.35', 0.0016, 3798);
-
-INSERT INTO relatorio_serv VALUES
+    (146, '1.1303.20.00', '2026-01-26T03:23:51', 0.0515),
     (148, '1.1105.90.00', '2025-09-28T09:43:39', 8.0509),
     (148, '1.06', '2025-09-27T16:07:48', 0.1679),
     (148, '1.2003.25.10', '2025-09-03T20:24:10', 0.249),
-    (148, '1.0102.52.20', '2025-09-03T18:46:13', 0.0414);
-
-INSERT INTO relatorio VALUES
-    (149, '2024-07-12', '2024-11-05', '79.821.563', '0001-65', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (149, '2008.70.90', 16.6662, 4631),
-    (149, '9032.89.8', 5.0416, 6905),
-    (149, '3006.60.00', 4.8621, 6697),
-    (149, '2103.10.90', 2.7942, 6197),
-    (149, '6112.11.00', 8.1474, 1914),
-    (149, '2903.99.16', 2.7307, 4020),
-    (149, '5407.94.00', 0.3015, 400),
-    (149, '8504.23.00', 1.3928, 8994),
-    (149, '6216.00.00', 7.2525, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (148, '1.0102.52.20', '2025-09-03T18:46:13', 0.0414),
     (149, '1.1802.50.00', '2024-08-17T00:02:27', 9.7659),
-    (149, '1.0401.16.20', '2024-08-09T21:05:24', 5.8521);
-
-INSERT INTO relatorio VALUES
-    (150, '2024-01-10', '2025-07-23', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (150, '5509.91.00', 1.2742, 400),
-    (150, '3904.10.10', 0.0478, 10975),
-    (150, '2916.39.40', 0.018, 400),
-    (150, '7211.14.00', 0.3652, 7634),
-    (150, '8510.90.11', 0.0146, 4375),
-    (150, '2852.10.11', 0.157, 5275),
-    (150, '9010.10.10', 0.0441, 3697),
-    (150, '9024.10.90', 0.0013, 400),
-    (150, '8415.10.19', 0.043, 11655),
-    (150, '2937.90.30', 0.1167, 7270),
-    (150, '0908.22.00', 0.0063, 400),
-    (150, '3301.12.90', 0.2458, 8416),
-    (150, '8421.39.90', 0.113, 4004),
-    (150, '4818.90.10', 0.0688, 400),
-    (150, '2707.50.90', 0.1707, 400),
-    (150, '9030.33.21', 0.0722, 2392),
-    (150, '9021.10.20', 0.0307, 5624),
-    (150, '8501.32.10', 0.0557, 400),
-    (150, '3827.63.00', 0.1405, 3750),
-    (150, '6207.99.90', 0.0267, 8297),
-    (150, '8459.51.00', 0.0869, 5953),
-    (150, '2903.19.90', 0.3954, 400),
-    (150, '8421.21.00', 0.355, 2316),
-    (150, '6104.23.00', 0.0184, 1679),
-    (150, '4407.11.00', 0.1072, 401),
-    (150, '7314.41.00', 0.1369, 3992),
-    (150, '2933.59.13', 0.2779, 3365);
-
-INSERT INTO relatorio_serv VALUES
-    (150, '1.2601.30.00', '2024-02-20T03:16:38', 0.909);
-
-INSERT INTO relatorio VALUES
-    (151, '2023-10-08', NULL, '18.024.935', '0001-76', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (151, '8207.70.20', 3.5946, 4638),
-    (151, '4011.10.00', 0.1667, 1213),
-    (151, '2835.29.10', 0.0153, 7279),
-    (151, '3507.90.49', 0.0125, 7743),
-    (151, '2917.19.90', 0.0116, 10826),
-    (151, '3909.40.9', 0.2653, 4965),
-    (151, '3505.20.00', 0.171, 15543),
-    (151, '4102.21.00', 0.0401, 1057),
-    (151, '2921.12.00', 0.0128, 7059),
-    (151, '9306.21.30', 0.0046, 5390),
-    (151, '9606.10.00', 0.0215, 5900),
-    (151, '3605.00.00', 0.0231, 3959);
-
-INSERT INTO relatorio_serv VALUES
+    (149, '1.0401.16.20', '2024-08-09T21:05:24', 5.8521),
+    (150, '1.2601.30.00', '2024-02-20T03:16:38', 0.909),
     (151, '1.1001.21.00', '2023-11-10T05:11:53', 0.8604),
     (151, '1.1401.12.00', '2023-11-25T00:49:05', 0.0309),
-    (151, '1.0404', '2023-11-22T03:01:12', 0.0324);
-
-INSERT INTO relatorio VALUES
-    (152, '2022-03-03', '2022-04-22', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (152, '0303.89.90', 0.1248, 10666);
-
-INSERT INTO relatorio_serv VALUES
+    (151, '1.0404', '2023-11-22T03:01:12', 0.0324),
     (152, '1.0502.2', '2022-04-02T19:08:57', 0.3772),
     (152, '1.0504.45.90', '2022-04-06T20:43:48', 0.0305),
     (152, '1.1408.13.00', '2022-04-19T05:41:42', 0.0118),
@@ -8362,71 +7877,8 @@ INSERT INTO relatorio_serv VALUES
     (152, '1.0102.69.00', '2022-04-04T13:50:34', 0.0072),
     (152, '1.2403.3', '2022-04-14T06:39:46', 0.0003),
     (152, '1.0102.52.20', '2022-04-03T16:54:57', 0.0062),
-    (152, '1.0502.12.20', '2022-04-19T17:34:56', 0.0045);
-
-INSERT INTO relatorio VALUES
-    (153, '2024-06-02', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (153, '8307.10.10', 3.9047, 8001),
-    (153, '5404.19.90', 0.1332, 2423),
-    (153, '3004.10.1', 0.5891, 8667),
-    (153, '8517.14.90', 0.2385, 400),
-    (153, '7318.19.00', 0.0317, 10121),
-    (153, '9405.19.90', 0.0354, 5099),
-    (153, '8409.91.11', 0.0008, 3247),
-    (153, '5402.31.1', 0.0155, 4688),
-    (153, '0105.94.00', 0.0369, 5941),
-    (153, '0210.93.00', 0.2307, 530),
-    (153, '3004.90.69', 0.0498, 5695),
-    (153, '2918.19.43', 0.0397, 400),
-    (153, '6209.20.00', 0.0001, 400),
-    (153, '5806.10.00', 0.0056, 400),
-    (153, '6211.11.00', 0.1014, 3939),
-    (153, '0209.10.11', 0.299, 6799),
-    (153, '6304.11.00', 0.0193, 443),
-    (153, '5601.30.10', 0.0445, 400),
-    (153, '2928.00.90', 0.2709, 588),
-    (153, '8448.32.30', 0.3031, 400),
-    (153, '2841.90.8', 0.0095, 400),
-    (153, '0207.14.31', 0.0128, 13714),
-    (153, '4805.12.00', 0.0511, 8075);
-
-INSERT INTO relatorio_serv VALUES
-    (153, '1.0502.14.90', '2024-07-26T16:03:25', 1.1301);
-
-INSERT INTO relatorio VALUES
-    (154, '2022-03-14', '2022-07-21', '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (154, '2922.49.61', 0.1721, 5311),
-    (154, '2834.29.30', 0.22, 4988),
-    (154, '6305.32.00', 0.4273, 400),
-    (154, '8504.31.19', 0.1125, 8201),
-    (154, '8714.95.00', 0.2447, 9891),
-    (154, '2909.44.11', 0.6431, 8733),
-    (154, '3003.39.34', 0.6452, 400),
-    (154, '2941.90.3', 0.0199, 836),
-    (154, '7901.11.11', 0.4474, 400),
-    (154, '7307.21.00', 0.064, 4314),
-    (154, '2903.81.30', 0.1131, 400),
-    (154, '2818.30.00', 0.2009, 400),
-    (154, '9002.11.11', 0.1812, 3720),
-    (154, '2933.33.6', 0.1734, 8577),
-    (154, '2909.50.19', 0.129, 5184),
-    (154, '0106.39.00', 0.1099, 4575),
-    (154, '4802.54.99', 0.1026, 4042),
-    (154, '8442.40.90', 0.0383, 400);
-
-INSERT INTO relatorio VALUES
-    (155, '2021-10-10', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (155, '3907.10.10', 0.0442, 7049),
-    (155, '4816.90.10', 0.0088, 10184),
-    (155, '2921.42.90', 0.0139, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (152, '1.0502.12.20', '2022-04-19T17:34:56', 0.0045),
+    (153, '1.0502.14.90', '2024-07-26T16:03:25', 1.1301),
     (155, '1.1106', '2021-11-13T20:56:45', 0.0558),
     (155, '1.0502.33', '2021-11-15T17:05:21', 0.0286),
     (155, '1.1408.13.00', '2021-11-12T19:19:33', 0.0185),
@@ -8444,73 +7896,7 @@ INSERT INTO relatorio_serv VALUES
     (155, '1.0503.90.00', '2021-11-01T17:32:00', 0.0628),
     (155, '1.1103.36.20', '2021-11-21T06:15:34', 0.0538),
     (155, '1.0504.45', '2021-11-17T02:04:11', 0.1424),
-    (155, '1.1403.21.10', '2021-11-02T13:28:46', 0.0821);
-
-INSERT INTO relatorio VALUES
-    (156, '2021-08-05', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (156, '5603.14.30', 0.1721, 7815),
-    (156, '2930.90.3', 0.0216, 2050),
-    (156, '8501.63.00', 0.0236, 400),
-    (156, '1210.20.10', 0.1023, 2126),
-    (156, '5004.00.00', 0.0271, 400),
-    (156, '9032.89.24', 0.0068, 8536),
-    (156, '5208.59.90', 0.0135, 4965),
-    (156, '3201.20.00', 0.06, 4030),
-    (156, '8443.13.90', 0.0633, 1548),
-    (156, '0206.30.00', 0.0147, 5064),
-    (156, '8443.32.40', 0.1212, 400),
-    (156, '2921.59.19', 0.1073, 6958),
-    (156, '2938.90.20', 0.0313, 2470),
-    (156, '4816.90.10', 0.0148, 7891),
-    (156, '3901.20.19', 0.0097, 9964),
-    (156, '2932.99.13', 0.0307, 6650),
-    (156, '5403.31.90', 0.148, 4431),
-    (156, '3004.90.13', 0.023, 6432),
-    (156, '2920.90.32', 0.0745, 5684),
-    (156, '7011.10.90', 0.0515, 7354),
-    (156, '3404.90.21', 0.0605, 1628),
-    (156, '5510.12.19', 0.0393, 6363),
-    (156, '2103.90.29', 0.0105, 3855);
-
-INSERT INTO relatorio VALUES
-    (157, '2024-02-19', NULL, '88.635.333', '0001-98', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (157, '6004.10.92', 0.1064, 11577),
-    (157, '8536.90.40', 0.0148, 400),
-    (157, '8525.89.13', 0.046, 2329),
-    (157, '4401.21.00', 0.0174, 5556),
-    (157, '2937.29.60', 0.0031, 400),
-    (157, '2704.00.12', 0.0242, 400),
-    (157, '8532.23.10', 0.0122, 2853),
-    (157, '2836.20.10', 0.0426, 9313),
-    (157, '5509.91.00', 0.0042, 698),
-    (157, '2908.19.2', 0.0733, 3190),
-    (157, '2920.19.90', 0.0028, 4998),
-    (157, '2903.29.10', 0.0235, 13080),
-    (157, '2934.99.34', 0.0455, 12678),
-    (157, '9018.90.94', 0.0086, 8769),
-    (157, '1212.99.90', 0.0057, 4053),
-    (157, '8477.20.10', 0.0401, 6140),
-    (157, '2934.99.43', 0.0523, 400),
-    (157, '5401.10.11', 0.015, 400),
-    (157, '3812.31.00', 0.0247, 2274),
-    (157, '6804.22.1', 0.0346, 400),
-    (157, '8481.80.99', 0.0174, 400),
-    (157, '8212.20.20', 0.0859, 2786),
-    (157, '6209.20.00', 0.006, 400),
-    (157, '7225.50.90', 0.0067, 2035),
-    (157, '3207.20.9', 0.0103, 4850),
-    (157, '4102.29.00', 0.0217, 7639),
-    (157, '0713.33.21', 0.0015, 1573),
-    (157, '8461.20.10', 0.015, 400);
-
-INSERT INTO relatorio VALUES
-    (158, '2023-11-13', NULL, '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (155, '1.1403.21.10', '2021-11-02T13:28:46', 0.0821),
     (158, '1.0904.32.00', '2023-12-30T17:23:43', 0.0932),
     (158, '1.1409.1', '2023-12-09T17:08:26', 0.1141),
     (158, '1.0102.53.20', '2023-12-11T06:26:31', 0.1352),
@@ -8526,53 +7912,11 @@ INSERT INTO relatorio_serv VALUES
     (158, '1.1001.12.90', '2023-12-25T09:18:37', 0.0577),
     (158, '1.1706.24.00', '2023-12-25T10:40:49', 0.0152),
     (158, '1.0502.31.10', '2023-12-17T12:04:55', 0.0156),
-    (158, '1.1701.2', '2023-12-27T22:40:17', 0.703);
-
-INSERT INTO relatorio VALUES
-    (159, '2023-06-14', NULL, '65.172.380', '0001-53', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (159, '8455.22.90', 0.716, 6340),
-    (159, '6815.99.14', 0.0546, 400),
-    (159, '3003.90.73', 0.0074, 2202),
-    (159, '2920.11.20', 0.0686, 9907),
-    (159, '3002.12.22', 0.0026, 779),
-    (159, '5513.39.19', 0.0208, 2972),
-    (159, '2504.10.00', 0.0081, 5600),
-    (159, '0207.14.21', 0.098, 1857),
-    (159, '2511.20.00', 0.1473, 400),
-    (159, '6104.41.00', 0.0227, 11049),
-    (159, '5603.94.90', 0.0032, 8797),
-    (159, '8462.59.00', 0.0349, 10485),
-    (159, '8536.69.90', 0.0128, 2548),
-    (159, '1604.19.00', 0.0007, 16182),
-    (159, '2941.50.20', 0.0563, 2698),
-    (159, '8464.20.29', 0.0312, 400),
-    (159, '8450.11.00', 0.1311, 1220),
-    (159, '3921.90.12', 0.04, 400),
-    (159, '4011.40.00', 0.0192, 1745),
-    (159, '9030.40.20', 0.0141, 7122),
-    (159, '8424.10.00', 0.0026, 9105),
-    (159, '5609.00.90', 0.0237, 4990),
-    (159, '2920.90.5', 0.0, 400),
-    (159, '4811.10.90', 0.0041, 400),
-    (159, '3004.20.9', 0.0871, 11243),
-    (159, '5603.94.20', 0.0677, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (158, '1.1701.2', '2023-12-27T22:40:17', 0.703),
     (159, '1.1201.31.00', '2023-07-07T15:21:22', 0.4031),
     (159, '1.0401.15', '2023-07-13T21:20:00', 0.0129),
     (159, '1.0105.40.00', '2023-07-18T16:54:06', 0.079),
-    (159, '1.0202.00.00', '2023-07-01T15:28:32', 0.0152);
-
-INSERT INTO relatorio VALUES
-    (160, '2023-12-12', '2025-06-06', '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (160, '6815.12.00', 0.3829, 6903),
-    (160, '8543.90.10', 0.1248, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (159, '1.0202.00.00', '2023-07-01T15:28:32', 0.0152),
     (160, '1.1001.1', '2024-01-13T14:18:55', 0.106),
     (160, '1.1705', '2024-01-28T10:02:29', 0.1231),
     (160, '1.0902.20.00', '2024-01-28T16:06:02', 0.4673),
@@ -8592,93 +7936,8 @@ INSERT INTO relatorio_serv VALUES
     (160, '1.2003.23.00', '2024-01-01T05:14:57', 0.5202),
     (160, '1.2003.26.10', '2024-01-08T13:34:42', 0.2056),
     (160, '1.2003.2', '2024-01-13T17:25:56', 0.3778),
-    (160, '1.2101.23.00', '2024-01-26T23:57:29', 0.9081);
-
-INSERT INTO relatorio VALUES
-    (161, '2024-03-28', NULL, '13.690.872', '0001-09', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (161, '9031.80.11', 0.1111, 5539),
-    (161, '2909.49.2', 0.0426, 7304),
-    (161, '0801.32.00', 0.0616, 400),
-    (161, '8424.89.20', 0.0436, 400),
-    (161, '2826.19.20', 0.1279, 6317),
-    (161, '2924.29.45', 0.0214, 2448),
-    (161, '4011.70.90', 0.0871, 2305),
-    (161, '3703.10.10', 0.0018, 4619),
-    (161, '8443.32.35', 0.0115, 6669),
-    (161, '7010.90.2', 0.0571, 721),
-    (161, '2930.90.42', 0.0092, 400),
-    (161, '8512.20.21', 0.104, 3806),
-    (161, '2620.29.00', 0.0354, 13810),
-    (161, '8702.40.90', 0.1307, 400),
-    (161, '5602.29.00', 0.047, 3704),
-    (161, '8443.14.00', 0.115, 9925),
-    (161, '8512.20.29', 0.0101, 4554),
-    (161, '2306.90.10', 0.0515, 7186),
-    (161, '3004.20.62', 0.0405, 3514),
-    (161, '4803.00.90', 0.0263, 11397),
-    (161, '0301.99.11', 0.1512, 5231),
-    (161, '9032.89.22', 0.076, 400),
-    (161, '8516.40.00', 0.1028, 4506),
-    (161, '2208.70.00', 0.0099, 3205),
-    (161, '4802.57.92', 0.0311, 1933),
-    (161, '2833.11.90', 0.0141, 4707),
-    (161, '4810.19.99', 0.0067, 12848),
-    (161, '8517.79.00', 0.2733, 400),
-    (161, '8402.90.00', 0.0119, 1140);
-
-INSERT INTO relatorio_serv VALUES
-    (161, '1.2501.12.00', '2024-04-07T14:29:41', 0.052);
-
-INSERT INTO relatorio VALUES
-    (162, '2025-08-23', '2026-05-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (162, '2916.19.11', 0.9291, 1373),
-    (162, '8479.10.90', 0.006, 7942),
-    (162, '0713.35.90', 0.0644, 4856),
-    (162, '5202.10.00', 0.0795, 3379),
-    (162, '3403.91.90', 0.0016, 400),
-    (162, '5601.22.91', 0.0223, 12023),
-    (162, '8539.32.20', 0.0118, 2127),
-    (162, '8532.24.20', 0.0027, 5770),
-    (162, '8467.89.00', 0.0025, 3816),
-    (162, '4705.00.00', 0.0037, 5738),
-    (162, '3202.90.12', 0.0861, 400),
-    (162, '3907.29.4', 0.0244, 833),
-    (162, '2301.20.90', 0.0448, 1629),
-    (162, '2937.23.21', 0.037, 7024),
-    (162, '7110.29.00', 0.007, 4520),
-    (162, '0305.42.00', 0.0122, 400);
-
-INSERT INTO relatorio VALUES
-    (163, '2025-01-04', '2026-05-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (163, '8414.90.20', 0.4003, 7755),
-    (163, '1513.29.11', 0.6847, 400),
-    (163, '9401.41.00', 0.361, 400),
-    (163, '7315.89.00', 0.0349, 400),
-    (163, '4802.20.10', 0.0676, 680),
-    (163, '8212.20.20', 0.3183, 400),
-    (163, '8109.21.00', 0.2269, 2596),
-    (163, '7804.19.00', 0.0416, 5899),
-    (163, '7217.90.00', 0.2499, 14669),
-    (163, '8466.20.10', 0.4492, 4661),
-    (163, '0713.10.10', 0.1493, 11204),
-    (163, '3904.10.20', 0.5202, 4604),
-    (163, '2841.90.2', 0.0907, 5141);
-
-INSERT INTO relatorio VALUES
-    (164, '2022-11-18', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (164, '8512.20.19', 0.0339, 4736),
-    (164, '7304.59.90', 0.0353, 400),
-    (164, '0305.63.00', 0.0775, 1209);
-
-INSERT INTO relatorio_serv VALUES
+    (160, '1.2101.23.00', '2024-01-26T23:57:29', 0.9081),
+    (161, '1.2501.12.00', '2024-04-07T14:29:41', 0.052),
     (164, '1.1903.40.00', '2022-12-04T11:27:39', 0.0377),
     (164, '1.1507.10.00', '2022-12-19T19:10:11', 0.0188),
     (164, '1.1202.90.00', '2022-12-28T08:07:25', 0.03),
@@ -8706,16 +7965,7 @@ INSERT INTO relatorio_serv VALUES
     (164, '1.2601.10.00', '2022-12-10T20:21:45', 0.0584),
     (164, '1.1401.39.00', '2022-12-29T09:41:10', 0.1337),
     (164, '1.1403.22', '2022-12-05T18:57:53', 0.0254),
-    (164, '1.2403.31.00', '2022-12-28T23:52:40', 0.1059);
-
-INSERT INTO relatorio VALUES
-    (165, '2025-03-30', NULL, '56.738.014', '0001-69', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (165, '2933.53.60', 0.0599, 5439),
-    (165, '6211.12.00', 0.1451, 1328);
-
-INSERT INTO relatorio_serv VALUES
+    (164, '1.2403.31.00', '2022-12-28T23:52:40', 0.1059),
     (165, '1.0502.13.10', '2025-04-06T06:53:28', 0.034),
     (165, '1.2002.40.00', '2025-04-14T14:54:12', 0.0749),
     (165, '1.1001.21.00', '2025-04-20T05:37:17', 0.0508),
@@ -8741,113 +7991,9 @@ INSERT INTO relatorio_serv VALUES
     (165, '1.2003.25.10', '2025-04-19T00:42:02', 0.0661),
     (165, '1.1903.1', '2025-04-15T13:21:53', 0.0012),
     (165, '1.0401.16.10', '2025-04-25T21:12:44', 0.0214),
-    (165, '1.1803.2', '2025-04-22T03:37:49', 0.0375);
-
-INSERT INTO relatorio VALUES
-    (166, '2025-06-18', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (166, '2805.19.90', 6.4181, 1625),
-    (166, '8423.81.90', 0.156, 3468),
-    (166, '8504.32.11', 0.2225, 400),
-    (166, '5516.23.00', 0.0002, 4351),
-    (166, '6902.20.10', 0.8196, 400),
-    (166, '0206.21.00', 0.2066, 4176),
-    (166, '4810.14.90', 0.4428, 4943),
-    (166, '2828.10.00', 0.0001, 1996),
-    (166, '9021.90.92', 0.0752, 2956);
-
-INSERT INTO relatorio VALUES
-    (167, '2023-01-09', NULL, '18.024.935', '0001-76', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (167, '2812.19.20', 0.6928, 617),
-    (167, '3801.30.10', 0.0305, 2044),
-    (167, '9004.90.90', 0.0024, 5347),
-    (167, '2827.39.60', 0.0015, 6813),
-    (167, '5402.51.10', 0.0061, 7060),
-    (167, '8105.20.29', 0.0108, 1760),
-    (167, '5104.00.00', 0.0384, 7115),
-    (167, '9010.50.20', 0.0034, 400),
-    (167, '8421.11.90', 0.0194, 1327),
-    (167, '5211.20.20', 0.0148, 7120),
-    (167, '8419.40.20', 0.0127, 400),
-    (167, '0303.23.00', 0.0337, 400),
-    (167, '6005.44.00', 0.0113, 8042),
-    (167, '8414.90.34', 0.0014, 400),
-    (167, '9032.89.89', 0.0031, 2413),
-    (167, '2941.30.10', 0.0317, 16614),
-    (167, '8212.10.20', 0.0526, 2711),
-    (167, '9021.90.19', 0.0004, 9074),
-    (167, '3402.90.90', 0.0004, 12412),
-    (167, '2809.20.20', 0.0014, 585),
-    (167, '0505.10.00', 0.0102, 1989),
-    (167, '8466.92.00', 0.0125, 400),
-    (167, '5516.91.00', 0.0119, 2211);
-
-INSERT INTO relatorio VALUES
-    (168, '2023-02-27', '2024-08-23', '71.498.635', '0001-06', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (168, '3907.50.10', 0.1568, 400),
-    (168, '7013.91.10', 1.048, 2090),
-    (168, '9018.49.11', 0.0375, 400),
-    (168, '4907.00.90', 0.8192, 8195),
-    (168, '4911.91.00', 0.5947, 3389),
-    (168, '0303.24.90', 0.4387, 5303),
-    (168, '8406.90.21', 1.4472, 10399),
-    (168, '8523.21.20', 0.5363, 15549),
-    (168, '2921.51.3', 0.1058, 400),
-    (168, '3003.39.14', 0.4666, 7971);
-
-INSERT INTO relatorio_serv VALUES
+    (165, '1.1803.2', '2025-04-22T03:37:49', 0.0375),
     (168, '1.1101.14.00', '2023-03-16T05:18:18', 0.0043),
-    (168, '1.1507.90.00', '2023-03-24T01:40:07', 0.6194);
-
-INSERT INTO relatorio VALUES
-    (169, '2024-01-15', NULL, '39.605.871', '0001-83', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (169, '7901.20.90', 0.2374, 8301),
-    (169, '8450.20.10', 0.1193, 3121),
-    (169, '2504.90.00', 0.0106, 5088),
-    (169, '2934.99.43', 0.0555, 3112),
-    (169, '9403.40.00', 0.071, 9272),
-    (169, '6203.19.00', 0.0468, 17383),
-    (169, '5210.32.00', 0.0256, 3255),
-    (169, '8416.90.00', 0.087, 6875),
-    (169, '6307.10.00', 0.0302, 820),
-    (169, '0504.00.1', 0.0702, 10391),
-    (169, '6116.99.00', 0.0546, 3791),
-    (169, '9106.10.00', 0.0222, 7534),
-    (169, '5206.21.00', 0.1447, 11053),
-    (169, '0307.51.00', 0.1432, 7386),
-    (169, '2827.39.91', 0.0233, 400),
-    (169, '8441.40.00', 0.027, 5829),
-    (169, '2933.29.13', 0.2439, 6039),
-    (169, '2920.90.59', 0.048, 400),
-    (169, '7202.11.00', 0.0757, 3187),
-    (169, '7216.10.00', 0.0415, 9199),
-    (169, '8538.90.90', 0.2471, 400),
-    (169, '8480.71.00', 0.0351, 400),
-    (169, '0304.73.00', 0.0671, 400),
-    (169, '0206.21.00', 0.1908, 3572),
-    (169, '2930.90.69', 0.0037, 6995);
-
-INSERT INTO relatorio VALUES
-    (170, '2022-11-18', NULL, '48.603.715', '0001-78', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (170, '3806.90.1', 0.1117, 2404),
-    (170, '9018.41.00', 0.0787, 10591),
-    (170, '3301.90.30', 0.0696, 400),
-    (170, '3808.59.29', 0.3404, 2494),
-    (170, '5702.50.10', 0.2718, 3980),
-    (170, '2939.11.52', 0.0548, 7573),
-    (170, '2930.20.23', 0.5442, 3101),
-    (170, '2530.10.90', 0.4248, 3382);
-
-INSERT INTO relatorio_serv VALUES
+    (168, '1.1507.90.00', '2023-03-24T01:40:07', 0.6194),
     (170, '1.2405.14.00', '2022-12-28T10:24:12', 0.6918),
     (170, '1.2301.91.00', '2022-12-23T07:41:17', 0.1556),
     (170, '1.1202', '2022-12-03T08:57:44', 0.2525),
@@ -8857,114 +8003,21 @@ INSERT INTO relatorio_serv VALUES
     (170, '1.1903', '2022-12-08T09:28:18', 0.0131),
     (170, '1.0402.3', '2022-12-27T03:31:16', 0.0405),
     (170, '1.2001.32.00', '2022-12-12T06:21:18', 0.0934),
-    (170, '1.0501.11.10', '2022-12-03T16:22:42', 0.6087);
-
-INSERT INTO relatorio VALUES
-    (171, '2025-10-07', '2026-06-12', '79.821.563', '0001-99', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (171, '3825.90.00', 0.3213, 400),
-    (171, '7408.29.1', 0.3277, 400),
-    (171, '6107.12.00', 0.095, 400),
-    (171, '2917.39.40', 0.0797, 400),
-    (171, '8471.70.40', 0.0903, 7171),
-    (171, '2906.19.90', 0.0536, 485),
-    (171, '9027.90.99', 0.0512, 6285);
-
-INSERT INTO relatorio_serv VALUES
+    (170, '1.0501.11.10', '2022-12-03T16:22:42', 0.6087),
     (171, '1.1403.26.00', '2025-11-14T22:14:08', 0.0262),
     (171, '1.1502.90.00', '2025-11-23T08:24:05', 0.0582),
     (171, '1.1102.60.00', '2025-11-10T18:36:26', 0.0617),
     (171, '1.2204.30.00', '2025-11-09T05:05:01', 0.2373),
     (171, '1.0102.42.10', '2025-11-03T20:29:54', 0.6933),
-    (171, '1.1105.5', '2025-11-10T17:42:07', 0.0494);
-
-INSERT INTO relatorio VALUES
-    (172, '2025-03-03', '2025-10-29', '65.172.380', '0001-53', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (172, '8419.90.40', 0.543, 11208),
-    (172, '6204.12.00', 0.0041, 7990),
-    (172, '3824.99.5', 0.0276, 2850),
-    (172, '2933.33.51', 0.0403, 2579),
-    (172, '1704.90.10', 0.0177, 400),
-    (172, '8708.29.99', 0.005, 1255),
-    (172, '8539.32.30', 0.0144, 3727),
-    (172, '6902.20.10', 0.0042, 1741),
-    (172, '2931.41.00', 0.0134, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (171, '1.1105.5', '2025-11-10T17:42:07', 0.0494),
     (172, '1.1806.52.00', '2025-04-07T00:45:30', 0.0461),
     (172, '1.0503.12.00', '2025-04-02T04:48:27', 0.0002),
-    (172, '1.0102.53.20', '2025-04-23T15:50:45', 0.0083);
-
-INSERT INTO relatorio VALUES
-    (173, '2025-06-20', '2026-04-11', '20.978.635', '0001-10', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (173, '8211.93.10', 2.4571, 4773),
-    (173, '5209.31.00', 0.208, 9842),
-    (173, '3502.90.10', 0.1101, 9759),
-    (173, '8419.90.39', 0.3936, 2195),
-    (173, '2909.49.23', 0.4104, 400),
-    (173, '7602.00.00', 0.0684, 9236),
-    (173, '6405.10.90', 0.1831, 1812),
-    (173, '6108.22.00', 0.0294, 400),
-    (173, '8448.11.20', 0.0894, 5272),
-    (173, '2931.41.00', 0.0054, 400),
-    (173, '2939.69.41', 0.0113, 400),
-    (173, '2907.11.00', 0.0916, 400),
-    (173, '2827.60.1', 0.0004, 400),
-    (173, '3208.10.10', 0.0061, 4699),
-    (173, '9022.90.10', 0.0213, 7646),
-    (173, '3206.50.2', 0.0083, 3624),
-    (173, '2941.90.13', 0.0766, 5890),
-    (173, '3908.10.19', 0.0326, 16026),
-    (173, '3204.14.00', 0.0119, 7743),
-    (173, '2932.95.00', 0.0072, 10500),
-    (173, '3507.90.32', 0.0034, 10549),
-    (173, '4011.20.10', 0.0079, 400),
-    (173, '2804.21.00', 0.0432, 8226);
-
-INSERT INTO relatorio_serv VALUES
+    (172, '1.0102.53.20', '2025-04-23T15:50:45', 0.0083),
     (173, '1.1806.8', '2025-07-05T00:13:51', 1.3548),
-    (173, '1.0403.11.90', '2025-07-13T22:59:09', 0.0382);
-
-INSERT INTO relatorio VALUES
-    (174, '2021-10-13', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (174, '0303.89.53', 0.1558, 11143),
-    (174, '9032.90.91', 0.532, 8394),
-    (174, '2837.20.29', 0.2164, 400),
-    (174, '6815.99.90', 1.0582, 4382),
-    (174, '2922.50.32', 0.3229, 6443),
-    (174, '3004.20.6', 1.5228, 6250),
-    (174, '3827.20.00', 0.479, 6754),
-    (174, '3701.91.00', 0.6945, 5361),
-    (174, '6204.39.00', 0.2265, 400),
-    (174, '5504.90.10', 0.5758, 400),
-    (174, '2106.90.2', 0.4141, 442),
-    (174, '2930.90.29', 0.6184, 400),
-    (174, '2818.20.90', 0.2486, 1236),
-    (174, '7208.27.10', 0.2369, 3491),
-    (174, '8448.39.11', 0.1049, 6854),
-    (174, '9021.40.00', 0.0921, 400),
-    (174, '4804.29.00', 0.1563, 4472),
-    (174, '8448.32.90', 0.4694, 8756);
-
-INSERT INTO relatorio_serv VALUES
+    (173, '1.0403.11.90', '2025-07-13T22:59:09', 0.0382),
     (174, '1.2301.92.00', '2021-11-20T00:07:09', 0.0445),
     (174, '1.0901.35.00', '2021-11-06T09:23:52', 0.7343),
-    (174, '1.0905.11.00', '2021-11-28T11:32:19', 0.1487);
-
-INSERT INTO relatorio VALUES
-    (175, '2025-10-22', '2026-02-21', '56.738.014', '0001-69', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (175, '7210.90.00', 0.5221, 6514);
-
-INSERT INTO relatorio_serv VALUES
+    (174, '1.0905.11.00', '2021-11-28T11:32:19', 0.1487),
     (175, '1.1201.50.00', '2025-11-27T19:49:45', 0.1598),
     (175, '1.0504.45.10', '2025-11-15T13:42:03', 0.4717),
     (175, '1.2403.22.00', '2025-11-26T18:43:01', 0.3316),
@@ -8992,20 +8045,7 @@ INSERT INTO relatorio_serv VALUES
     (175, '1.1403.22.90', '2025-11-17T09:30:42', 0.7506),
     (175, '1.2508.00.00', '2025-11-27T10:36:11', 0.0212),
     (175, '1.2001.34.30', '2025-11-27T02:18:44', 0.1198),
-    (175, '1.0301.39.00', '2025-11-22T03:43:22', 0.3044);
-
-INSERT INTO relatorio VALUES
-    (176, '2023-06-04', '2025-03-01', '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (176, '5205.24.00', 0.5642, 6389),
-    (176, '2921.46.80', 0.327, 4633),
-    (176, '2825.30.90', 0.3921, 9868),
-    (176, '8112.39.00', 0.1974, 5457),
-    (176, '2849.90.10', 0.0657, 2076),
-    (176, '8541.41.12', 0.2067, 2670);
-
-INSERT INTO relatorio_serv VALUES
+    (175, '1.0301.39.00', '2025-11-22T03:43:22', 0.3044),
     (176, '1.2504.11.00', '2023-07-26T22:16:22', 0.0136),
     (176, '1.0905.12.00', '2023-07-07T12:29:16', 0.0881),
     (176, '1.0102.42.20', '2023-07-26T11:40:14', 0.3804),
@@ -9017,17 +8057,7 @@ INSERT INTO relatorio_serv VALUES
     (176, '1.1703.9', '2023-07-13T00:31:11', 0.0649),
     (176, '1.0505.10.00', '2023-07-06T12:02:48', 0.0392),
     (176, '1.2204.30.00', '2023-07-15T20:56:53', 0.1611),
-    (176, '1.0501.14.59', '2023-07-01T13:36:00', 0.0708);
-
-INSERT INTO relatorio VALUES
-    (177, '2023-09-18', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (177, '5607.50.90', 0.0394, 8492),
-    (177, '2933.11.12', 0.0272, 579),
-    (177, '2931.90.29', 0.0046, 976);
-
-INSERT INTO relatorio_serv VALUES
+    (176, '1.0501.14.59', '2023-07-01T13:36:00', 0.0708),
     (177, '1.0502.33', '2023-10-28T16:19:31', 0.1763),
     (177, '1.0609.00.00', '2023-10-30T15:28:29', 0.025),
     (177, '1.0303', '2023-10-20T17:26:37', 0.1776),
@@ -9043,17 +8073,7 @@ INSERT INTO relatorio_serv VALUES
     (177, '1.0703.00.00', '2023-10-26T04:03:39', 0.2672),
     (177, '1.1101.60.00', '2023-10-24T09:54:10', 0.2073),
     (177, '1.0904.33.00', '2023-10-20T05:51:23', 0.2251),
-    (177, '1.0605.20.00', '2023-10-23T11:28:29', 0.0113);
-
-INSERT INTO relatorio VALUES
-    (178, '2021-09-15', NULL, '53.921.807', '0001-18', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (178, '7019.15.00', 0.3905, 4646),
-    (178, '6216.00.00', 0.3926, 1202),
-    (178, '8529.90.1', 0.1368, 1362);
-
-INSERT INTO relatorio_serv VALUES
+    (177, '1.0605.20.00', '2023-10-23T11:28:29', 0.0113),
     (178, '1.0504.23.00', '2021-10-04T05:17:52', 0.1412),
     (178, '1.2001.39.00', '2021-10-03T12:21:41', 0.2149),
     (178, '1.0502.24.5', '2021-10-12T17:09:00', 0.0167),
@@ -9092,74 +8112,15 @@ INSERT INTO relatorio_serv VALUES
     (178, '1.2501.36.00', '2021-10-16T07:34:20', 0.2349),
     (178, '1.1105.59.00', '2021-10-04T22:00:46', 0.2094),
     (178, '1.0901.51.24', '2021-10-10T23:33:34', 0.2068),
-    (178, '1.0502.22.20', '2021-10-28T20:45:05', 0.0291);
-
-INSERT INTO relatorio VALUES
-    (179, '2024-04-04', '2024-10-08', '20.978.635', '0001-10', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (179, '8505.90.80', 2.4774, 1797),
-    (179, '7410.11.12', 0.0109, 4975),
-    (179, '3809.91.4', 0.0264, 4383),
-    (179, '8407.21.10', 0.0911, 9542),
-    (179, '0301.95.90', 0.0003, 1318),
-    (179, '8201.90.00', 0.0218, 400),
-    (179, '2916.19.90', 0.0038, 1551),
-    (179, '8412.21.90', 0.1044, 3700),
-    (179, '1602.31.00', 0.1005, 400),
-    (179, '7314.39.00', 0.276, 11039),
-    (179, '2930.90.41', 0.003, 9225),
-    (179, '3003.90.85', 0.0372, 4627),
-    (179, '8406.90.2', 0.076, 7839),
-    (179, '3824.99.85', 0.0216, 8119),
-    (179, '2849.20.00', 0.3745, 5116),
-    (179, '8708.94.90', 0.0868, 400),
-    (179, '0304.46.00', 0.0126, 2946),
-    (179, '9010.50.90', 0.0954, 7289),
-    (179, '8471.60.53', 0.0016, 11175),
-    (179, '4002.11.20', 0.2593, 400),
-    (179, '2827.60.1', 0.0456, 400),
-    (179, '2712.20.00', 0.0017, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (178, '1.0502.22.20', '2021-10-28T20:45:05', 0.0291),
     (179, '1.1405.90.00', '2024-05-16T02:35:40', 0.4038),
-    (179, '1.1410', '2024-05-28T13:44:54', 0.0216);
-
-INSERT INTO relatorio VALUES
-    (180, '2022-07-18', '2025-07-04', '48.603.715', '0001-45', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (180, '2903.79.11', 0.226, 3341),
-    (180, '5504.90.10', 0.213, 3511),
-    (180, '5309.19.00', 0.4251, 400),
-    (180, '8456.30.90', 0.114, 400),
-    (180, '1902.20.00', 0.2553, 5713),
-    (180, '2924.29.63', 0.0204, 3483);
-
-INSERT INTO relatorio_serv VALUES
+    (179, '1.1410', '2024-05-28T13:44:54', 0.0216),
     (180, '1.0905.90.00', '2022-08-03T05:08:41', 0.3966),
     (180, '1.0502.23.10', '2022-08-10T12:16:44', 0.2466),
     (180, '1.2101.22.00', '2022-08-21T21:39:58', 0.8789),
     (180, '1.0602.29.00', '2022-08-29T16:48:51', 0.1201),
     (180, '1.0504.43.00', '2022-08-20T15:39:02', 0.1524),
-    (180, '1.0504', '2022-08-10T22:41:09', 0.1235);
-
-INSERT INTO relatorio VALUES
-    (181, '2022-08-03', '2024-11-26', '13.690.872', '0001-54', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (181, '4304.00.00', 0.2803, 5024),
-    (181, '2207.10.90', 0.4957, 7623),
-    (181, '6303.99.00', 0.1552, 1957),
-    (181, '8413.50.10', 0.0544, 6740),
-    (181, '5808.90.00', 0.3501, 6051),
-    (181, '8506.10.3', 0.32, 400),
-    (181, '6909.12.10', 0.9736, 3997),
-    (181, '2937.29.10', 0.2145, 416),
-    (181, '2924.29.4', 0.0497, 10881),
-    (181, '5607.90.10', 0.1472, 3471);
-
-INSERT INTO relatorio_serv VALUES
+    (180, '1.0504', '2022-08-10T22:41:09', 0.1235),
     (181, '1.1106.31.00', '2022-09-27T15:06:41', 1.4196),
     (181, '1.1103.29.00', '2022-09-23T03:24:23', 0.6643),
     (181, '1.2003.24.00', '2022-09-02T07:02:33', 0.5145),
@@ -9168,26 +8129,7 @@ INSERT INTO relatorio_serv VALUES
     (181, '1.0502.29.00', '2022-09-04T12:54:30', 0.1695),
     (181, '1.1101.40.00', '2022-09-01T14:54:07', 0.2446),
     (181, '1.1403.22.90', '2022-09-04T00:32:37', 0.252),
-    (181, '1.0503.90.00', '2022-09-10T14:40:17', 0.393);
-
-INSERT INTO relatorio VALUES
-    (182, '2023-12-09', '2025-05-16', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (182, '5601.22.1', 1.0529, 8397),
-    (182, '8542.32.2', 0.464, 4236),
-    (182, '2106.90.21', 0.0197, 11347),
-    (182, '8414.90.3', 0.938, 2803),
-    (182, '6309.00.90', 0.1332, 400),
-    (182, '2834.29.30', 0.3953, 5991),
-    (182, '7006.00.00', 1.0891, 5839),
-    (182, '6208.21.00', 0.7401, 400),
-    (182, '7415.39.00', 0.2129, 400),
-    (182, '0804.10.10', 0.0559, 11329),
-    (182, '8704.23.90', 0.0958, 400),
-    (182, '2933.29.13', 0.3727, 6753);
-
-INSERT INTO relatorio_serv VALUES
+    (181, '1.0503.90.00', '2022-09-10T14:40:17', 0.393),
     (182, '1.2301.95.00', '2024-01-09T06:40:42', 0.1927),
     (182, '1.2501.33.00', '2024-01-21T23:07:01', 0.2667),
     (182, '1.1803.22.00', '2024-01-19T00:28:49', 0.0449),
@@ -9199,15 +8141,7 @@ INSERT INTO relatorio_serv VALUES
     (182, '1.0403.33.00', '2024-01-29T21:59:40', 0.2931),
     (182, '1.1105.4', '2024-01-21T22:58:08', 0.1718),
     (182, '1.0802.30.00', '2024-01-06T22:12:34', 0.2257),
-    (182, '1.0905.2', '2024-01-26T22:10:07', 0.2512);
-
-INSERT INTO relatorio VALUES
-    (183, '2023-01-02', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (183, '0713.33.91', 0.0933, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (182, '1.0905.2', '2024-01-26T22:10:07', 0.2512),
     (183, '1.1001.40.00', '2023-02-02T19:28:05', 0.1748),
     (183, '1.0604.40.00', '2023-02-27T01:46:57', 0.1335),
     (183, '1.2304.19.00', '2023-02-17T06:28:22', 0.0093),
@@ -9247,41 +8181,7 @@ INSERT INTO relatorio_serv VALUES
     (183, '1.0904.37.00', '2023-02-03T19:41:23', 0.1201),
     (183, '1.1304.00.00', '2023-02-27T00:35:20', 0.1097),
     (183, '1.1102.30.00', '2023-02-11T04:30:24', 0.0429),
-    (183, '1.2003.26.10', '2023-02-09T14:44:25', 0.0125);
-
-INSERT INTO relatorio VALUES
-    (184, '2023-06-07', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (184, '6909.12.90', 0.0124, 11966),
-    (184, '1605.40.00', 0.0008, 10963),
-    (184, '2826.19.10', 0.0426, 1282),
-    (184, '9305.99.00', 0.245, 14795),
-    (184, '2401.30.00', 0.1126, 1397),
-    (184, '7019.14.00', 0.0317, 6553),
-    (184, '3004.90.13', 0.1059, 6888),
-    (184, '6904.10.00', 0.0561, 11693),
-    (184, '9307.00.00', 0.0983, 6616),
-    (184, '2933.69.22', 0.0685, 6137),
-    (184, '8540.60.10', 0.0115, 8879),
-    (184, '7605.11.10', 0.0182, 4270),
-    (184, '3003.90.76', 0.0425, 12339),
-    (184, '9507.30.00', 0.1347, 400),
-    (184, '6004.90.10', 0.0382, 3786),
-    (184, '2922.19.11', 0.0806, 6327),
-    (184, '8419.40.10', 0.0251, 6727),
-    (184, '9030.33.90', 0.049, 2257),
-    (184, '7305.12.00', 0.0155, 5198),
-    (184, '6307.10.00', 0.0086, 400),
-    (184, '6103.41.00', 0.0562, 4412),
-    (184, '8458.99.00', 0.0414, 1806),
-    (184, '7320.10.00', 0.0543, 3780),
-    (184, '6214.90.10', 0.0702, 1371);
-
-INSERT INTO relatorio VALUES
-    (185, '2025-07-24', '2025-09-25', '75.893.062', '0001-33', '58.826.745/0001-34', 'Impacto das técnicas de produção em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (183, '1.2003.26.10', '2023-02-09T14:44:25', 0.0125),
     (185, '1.0501.22.20', '2025-08-17T11:46:10', 0.6471),
     (185, '1.2406', '2025-08-16T20:25:06', 0.1759),
     (185, '1.2501.33.00', '2025-08-28T18:23:53', 0.1039),
@@ -9299,12 +8199,7 @@ INSERT INTO relatorio_serv VALUES
     (185, '1.1001.90.00', '2025-08-19T22:18:43', 0.3991),
     (185, '1.0401.21.10', '2025-08-23T06:48:01', 0.5174),
     (185, '1.0502.24', '2025-08-19T19:15:15', 1.3501),
-    (185, '1.1507', '2025-08-18T05:11:49', 0.5135);
-
-INSERT INTO relatorio VALUES
-    (186, '2025-11-27', '2026-06-08', '75.893.062', '0001-33', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (185, '1.1507', '2025-08-18T05:11:49', 0.5135),
     (186, '1.0502.23.10', '2025-12-25T00:29:01', 0.0094),
     (186, '1.1405.22.00', '2025-12-11T20:53:08', 0.062),
     (186, '1.1703.2', '2025-12-09T23:33:34', 0.5037),
@@ -9316,29 +8211,7 @@ INSERT INTO relatorio_serv VALUES
     (186, '1.0401.1', '2025-12-14T15:49:01', 0.0505),
     (186, '1.1404.13.00', '2025-12-02T19:06:16', 0.0845),
     (186, '1.0502.34.52', '2025-12-26T09:14:03', 0.1218),
-    (186, '1.2205.11.00', '2025-12-21T17:12:51', 0.034);
-
-INSERT INTO relatorio VALUES
-    (187, '2026-03-25', NULL, '51.360.297', '0001-43', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (187, '5212.25.00', 0.0066, 3445),
-    (187, '3301.13.00', 0.0727, 4043),
-    (187, '2924.29.6', 0.0655, 9835),
-    (187, '3907.10.41', 0.0246, 400),
-    (187, '5510.30.12', 0.2479, 4664),
-    (187, '3824.99.88', 0.0414, 6978),
-    (187, '0802.99.00', 0.0395, 1817),
-    (187, '1505.00.10', 0.0957, 3661),
-    (187, '8413.81.00', 0.1091, 3342),
-    (187, '8473.21.00', 0.0566, 400),
-    (187, '4107.19.10', 0.1064, 4765),
-    (187, '2811.19.90', 0.036, 2641),
-    (187, '9111.90.90', 0.0169, 400),
-    (187, '9007.20.90', 0.0231, 7639),
-    (187, '8607.11.10', 0.071, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (186, '1.2205.11.00', '2025-12-21T17:12:51', 0.034),
     (187, '1.0901.10.00', '2026-04-25T16:25:17', 0.2474),
     (187, '1.0802.10.00', '2026-04-06T10:44:50', 0.1368),
     (187, '1.0502.1', '2026-04-13T10:36:56', 0.0606),
@@ -9350,161 +8223,19 @@ INSERT INTO relatorio_serv VALUES
     (187, '1.1706.21.00', '2026-04-17T17:06:48', 0.083),
     (187, '1.1805.3', '2026-04-19T11:13:55', 0.2517),
     (187, '1.1806.53.00', '2026-04-25T02:42:21', 0.0404),
-    (187, '1.2403.22.00', '2026-04-13T12:36:35', 0.0977);
-
-INSERT INTO relatorio VALUES
-    (188, '2021-12-21', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (188, '2921.19.99', 1.942, 400),
-    (188, '0302.89.21', 0.0285, 720),
-    (188, '7604.21.00', 0.0125, 1173),
-    (188, '8211.92.10', 0.0053, 3097),
-    (188, '3824.99.8', 0.3009, 8652),
-    (188, '3808.92.91', 0.0702, 6505),
-    (188, '0801.12.00', 0.003, 4434),
-    (188, '8471.50.10', 0.2384, 9342);
-
-INSERT INTO relatorio_serv VALUES
+    (187, '1.2403.22.00', '2026-04-13T12:36:35', 0.0977),
     (188, '1.1105.41.00', '2022-01-11T15:08:35', 0.5202),
     (188, '1.23', '2022-01-28T01:17:40', 0.0505),
     (188, '1.1401.31.00', '2022-01-09T00:05:42', 0.1021),
-    (188, '1.1107.20.00', '2022-01-11T05:59:22', 0.0221);
-
-INSERT INTO relatorio VALUES
-    (189, '2021-07-31', NULL, '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (189, '9031.80.9', 8.8954, 400),
-    (189, '8476.89.10', 0.0256, 4427),
-    (189, '1602.20.00', 0.3873, 400),
-    (189, '4814.90.00', 0.0511, 10249),
-    (189, '8309.90.00', 0.0372, 5874),
-    (189, '2915.90.33', 0.7203, 7125),
-    (189, '8413.30.20', 0.7097, 1150),
-    (189, '2939.80.10', 0.0601, 1745),
-    (189, '2817.00.20', 0.435, 7332),
-    (189, '3812.39.19', 0.166, 400),
-    (189, '7220.12.90', 0.3903, 3398);
-
-INSERT INTO relatorio VALUES
-    (190, '2023-11-19', '2026-05-27', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (190, '5510.90.12', 0.8344, 4274),
-    (190, '6806.90.10', 0.0143, 400),
-    (190, '8514.90.00', 0.0111, 14107),
-    (190, '8413.70.10', 0.0513, 7099),
-    (190, '4805.19.00', 0.0079, 400),
-    (190, '5211.49.00', 0.026, 3554),
-    (190, '5402.45.20', 0.0148, 4537),
-    (190, '2825.50.10', 0.0131, 400),
-    (190, '8445.40.12', 0.0193, 4835),
-    (190, '3101.00.00', 0.0078, 5724),
-    (190, '9208.10.00', 0.0686, 7006),
-    (190, '2933.91.4', 0.0062, 1108),
-    (190, '6004.10.42', 0.0022, 400),
-    (190, '2933.59.14', 0.0021, 2036),
-    (190, '3926.10.00', 0.0608, 400),
-    (190, '2103.90.1', 0.0072, 2119);
-
-INSERT INTO relatorio_serv VALUES
+    (188, '1.1107.20.00', '2022-01-11T05:59:22', 0.0221),
     (190, '1.0604.2', '2023-12-09T18:22:42', 0.3959),
     (190, '1.0102.53.20', '2023-12-26T05:35:49', 0.0151),
     (190, '1.0501.3', '2023-12-01T12:05:13', 0.0202),
-    (190, '1.0301.31.00', '2023-12-30T05:35:07', 0.0099);
-
-INSERT INTO relatorio VALUES
-    (191, '2021-10-11', '2025-03-02', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (191, '4811.90.19', 3.7516, 1451),
-    (191, '3824.88.20', 0.0724, 1885),
-    (191, '2931.59.98', 0.1459, 400),
-    (191, '8504.31.11', 0.0392, 1540),
-    (191, '9402.90.90', 0.3607, 12451),
-    (191, '8517.61.30', 0.1327, 2369),
-    (191, '3808.92.91', 0.4335, 10755),
-    (191, '0703.90.90', 0.2594, 5219),
-    (191, '4410.19.99', 0.0022, 1702),
-    (191, '7301.20.00', 0.0451, 9588),
-    (191, '3702.41.00', 0.0888, 1627),
-    (191, '8465.91.20', 0.0234, 400),
-    (191, '3701.30.10', 0.0077, 7966),
-    (191, '3002.12.33', 0.6161, 8852),
-    (191, '4002.19.12', 0.0227, 400),
-    (191, '8425.11.00', 0.1033, 2512),
-    (191, '2523.10.00', 0.2739, 7617),
-    (191, '6202.40.00', 0.2927, 400),
-    (191, '8507.30.1', 0.044, 400),
-    (191, '8540.40.00', 0.0361, 5891),
-    (191, '4802.61.92', 0.0668, 2317),
-    (191, '2852.10.29', 0.2432, 400),
-    (191, '1105.10.00', 0.0398, 4768),
-    (191, '3919.90.20', 0.7311, 2198),
-    (191, '8433.11.00', 0.7505, 400),
-    (191, '4705.00.00', 0.0096, 4829),
-    (191, '6107.19.00', 0.0018, 5466),
-    (191, '3703.10.2', 0.023, 7865);
-
-INSERT INTO relatorio_serv VALUES
-    (191, '1.0401.15.10', '2021-11-13T18:32:48', 1.1923);
-
-INSERT INTO relatorio VALUES
-    (192, '2022-09-03', '2025-04-16', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (192, '2853.90.30', 3.1846, 400),
-    (192, '2940.00.22', 0.0443, 1738),
-    (192, '3906.90.2', 0.1859, 3120),
-    (192, '3004.39.26', 0.1448, 13374),
-    (192, '2523.90.00', 0.0367, 400),
-    (192, '2915.70.39', 0.003, 4979),
-    (192, '9022.90.9', 0.0901, 400),
-    (192, '5211.52.00', 0.2426, 10656),
-    (192, '6813.89.90', 0.0335, 4908),
-    (192, '6005.24.00', 0.0023, 6535),
-    (192, '6107.91.00', 0.0295, 6493),
-    (192, '2841.30.00', 0.3075, 400),
-    (192, '8421.99.10', 0.1547, 9678),
-    (192, '9105.19.00', 0.0699, 10239),
-    (192, '8605.00.10', 0.2344, 2694),
-    (192, '8434.20.10', 0.176, 1271),
-    (192, '3004.90.76', 0.0315, 8209);
-
-INSERT INTO relatorio_serv VALUES
+    (190, '1.0301.31.00', '2023-12-30T05:35:07', 0.0099),
+    (191, '1.0401.15.10', '2021-11-13T18:32:48', 1.1923),
     (192, '1.0403.32.00', '2022-10-07T01:16:04', 1.1578),
     (192, '1.0602.29.00', '2022-10-19T23:27:44', 0.0042),
-    (192, '1.1202.30.00', '2022-10-04T16:03:03', 0.0674);
-
-INSERT INTO relatorio VALUES
-    (193, '2026-03-12', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (193, '8539.31.19', 4.3227, 400),
-    (193, '2915.90.32', 0.1708, 400),
-    (193, '3603.30.00', 0.0045, 4598),
-    (193, '2702.20.00', 0.1578, 7463),
-    (193, '1505.00.90', 0.1058, 11803),
-    (193, '8511.10.00', 0.2473, 400),
-    (193, '0303.64.00', 0.0012, 12887),
-    (193, '3002.41.22', 0.0457, 8677),
-    (193, '2934.99.93', 0.1723, 400),
-    (193, '5305.00.90', 0.2738, 8277),
-    (193, '2807.00.20', 0.0909, 400),
-    (193, '8474.20.90', 0.2093, 4051),
-    (193, '6811.81.00', 0.0357, 400),
-    (193, '2918.16.10', 0.2492, 400),
-    (193, '8426.49.10', 0.0929, 1267);
-
-INSERT INTO relatorio VALUES
-    (194, '2024-05-08', '2026-05-14', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (194, '2933.91.8', 0.0948, 6933),
-    (194, '2933.99.6', 0.0971, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (192, '1.1202.30.00', '2022-10-04T16:03:03', 0.0674),
     (194, '1.0604.21.00', '2024-06-14T19:00:29', 0.0158),
     (194, '1.1706.12.00', '2024-06-09T18:35:25', 0.3144),
     (194, '1.2604.00.00', '2024-06-12T00:37:04', 0.2409),
@@ -9538,184 +8269,18 @@ INSERT INTO relatorio_serv VALUES
     (194, '1.0903.1', '2024-06-15T21:45:52', 0.6089),
     (194, '1.1106.34.00', '2024-06-05T16:56:54', 0.6333),
     (194, '1.0901.34.00', '2024-06-16T02:02:14', 0.087),
-    (194, '1.1404', '2024-06-08T06:20:26', 0.3139);
-
-INSERT INTO relatorio VALUES
-    (195, '2025-01-14', '2025-11-02', '12.905.674', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (195, '3808.93.49', 0.0609, 7629),
-    (195, '8536.30.90', 0.0381, 4121),
-    (195, '7415.33.00', 0.1313, 2194),
-    (195, '8479.71.00', 0.1773, 2923),
-    (195, '8708.21.00', 0.0096, 9210),
-    (195, '2710.12.60', 0.0706, 400),
-    (195, '6202.90.00', 0.3442, 11573),
-    (195, '6111.90.90', 0.1772, 9111),
-    (195, '3911.90.29', 0.0574, 4595),
-    (195, '8413.60.11', 0.0781, 5825),
-    (195, '8481.80.29', 0.0543, 400),
-    (195, '0104.10.11', 0.3679, 5519),
-    (195, '3825.90.00', 0.1087, 3577),
-    (195, '0101.90.00', 0.1106, 400),
-    (195, '1207.99.10', 0.0692, 4579);
-
-INSERT INTO relatorio_serv VALUES
+    (194, '1.1404', '2024-06-08T06:20:26', 0.3139),
     (195, '1.1404.22.00', '2025-02-02T21:31:29', 0.0555),
     (195, '1.0905.13.00', '2025-02-25T04:24:55', 0.2097),
     (195, '1.1103.33.00', '2025-02-04T14:42:56', 0.1547),
-    (195, '1.1105.10.00', '2025-02-21T21:45:10', 0.2676);
-
-INSERT INTO relatorio VALUES
-    (196, '2024-06-08', '2024-09-15', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (196, '1302.13.00', 2.1802, 400),
-    (196, '8504.31.99', 0.0823, 6956),
-    (196, '3914.00.1', 0.1341, 10536),
-    (196, '2921.19.3', 0.1572, 7538),
-    (196, '2834.10.10', 0.0173, 676),
-    (196, '4407.19.00', 0.0367, 8687),
-    (196, '8415.90.20', 0.0023, 435),
-    (196, '2621.90.10', 0.0081, 13725),
-    (196, '3507.10.00', 0.0459, 400),
-    (196, '7605.11.10', 0.0249, 10415),
-    (196, '2930.90.94', 0.0464, 400),
-    (196, '8525.89.29', 0.2901, 2275),
-    (196, '5607.50.1', 0.0623, 7651),
-    (196, '2308.00.00', 0.0278, 400),
-    (196, '5402.47.90', 0.1373, 12166),
-    (196, '9021.90.91', 0.0044, 400),
-    (196, '5501.11.00', 0.0001, 3733),
-    (196, '3206.50.29', 0.0115, 11419);
-
-INSERT INTO relatorio VALUES
-    (197, '2021-08-04', NULL, '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (197, '5208.11.00', 0.0075, 8315),
-    (197, '7114.20.00', 0.1297, 7353),
-    (197, '5401.10.12', 0.1129, 2154),
-    (197, '3206.50.1', 0.0562, 6387),
-    (197, '8541.10.9', 0.0217, 8387),
-    (197, '4419.20.00', 0.0646, 7278),
-    (197, '8425.31.10', 0.2164, 2483),
-    (197, '6117.90.00', 0.1999, 14959),
-    (197, '3909.10.00', 0.1103, 1225),
-    (197, '2933.55.10', 0.0545, 12665),
-    (197, '0401.20.90', 0.1523, 2668),
-    (197, '5512.29.00', 0.0129, 400),
-    (197, '8201.10.00', 0.0334, 9701),
-    (197, '5911.90.00', 0.0455, 3838),
-    (197, '8513.10.90', 0.0011, 400),
-    (197, '2921.51.34', 0.1029, 400),
-    (197, '2933.39.3', 0.1096, 400),
-    (197, '8209.00.19', 0.035, 5262),
-    (197, '4408.90.10', 0.126, 3183),
-    (197, '8542.90.00', 0.1424, 14312),
-    (197, '7211.90.90', 0.2948, 5265);
-
-INSERT INTO relatorio_serv VALUES
+    (195, '1.1105.10.00', '2025-02-21T21:45:10', 0.2676),
     (197, '1.1409.90.00', '2021-09-04T07:58:11', 0.0629),
-    (197, '1.1801.1', '2021-09-19T03:33:46', 0.0147);
-
-INSERT INTO relatorio VALUES
-    (198, '2025-02-07', NULL, '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (198, '3603.50.00', 2.0339, 11236),
-    (198, '5509.31.00', 0.2439, 7449),
-    (198, '2922.49.6', 0.0444, 4089),
-    (198, '2924.29.47', 0.1337, 4946),
-    (198, '0102.29.19', 0.2814, 4088),
-    (198, '5402.39.00', 0.0196, 4396),
-    (198, '8465.95.92', 0.0491, 7427),
-    (198, '3002.41.21', 0.0685, 650),
-    (198, '8539.32.30', 0.0168, 6193),
-    (198, '3808.61.00', 0.241, 12014),
-    (198, '1605.62.00', 0.0028, 4540),
-    (198, '2916.20.13', 0.0497, 400),
-    (198, '2710.19.91', 0.1077, 8496),
-    (198, '2933.53.21', 0.026, 4654),
-    (198, '7315.12.90', 0.3104, 722),
-    (198, '9106.90.00', 0.1183, 12186),
-    (198, '7203.10.00', 0.0258, 11845),
-    (198, '1605.10.00', 0.0204, 1295);
-
-INSERT INTO relatorio_serv VALUES
-    (198, '1.0103.10.00', '2025-03-10T06:08:30', 0.9442);
-
-INSERT INTO relatorio VALUES
-    (199, '2022-01-16', '2023-10-27', '48.912.037', '0001-48', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (199, '0713.20.10', 0.8478, 6772),
-    (199, '6812.99.90', 0.0188, 15040),
-    (199, '8410.12.00', 0.0124, 11732),
-    (199, '2917.13.29', 0.0323, 400),
-    (199, '8424.30.20', 0.0307, 654),
-    (199, '2009.12.00', 0.001, 400),
-    (199, '8448.20.10', 0.0054, 4578),
-    (199, '2924.29.92', 0.0028, 10866),
-    (199, '2939.79.1', 0.0286, 3241),
-    (199, '0105.15.00', 0.0063, 10330),
-    (199, '2931.90.90', 0.0003, 7717),
-    (199, '3002.12.21', 0.0077, 5755),
-    (199, '2811.12.00', 0.0203, 400),
-    (199, '2931.90.52', 0.0028, 400),
-    (199, '8105.90.10', 0.0934, 3743),
-    (199, '2916.16.00', 0.0013, 3172),
-    (199, '9405.50.00', 0.0024, 2771),
-    (199, '3825.50.00', 0.1232, 11089),
-    (199, '8525.83.00', 0.0062, 1099),
-    (199, '5211.49.00', 0.0033, 3274),
-    (199, '5402.32.11', 0.0094, 2157),
-    (199, '4202.91.00', 0.021, 6668),
-    (199, '2933.59.91', 0.0051, 400),
-    (199, '2520.10.20', 0.0176, 4942),
-    (199, '2914.19.21', 0.0938, 9193),
-    (199, '3809.92.19', 0.0197, 11135),
-    (199, '2530.90.10', 0.0023, 8392);
-
-INSERT INTO relatorio_serv VALUES
+    (197, '1.1801.1', '2021-09-19T03:33:46', 0.0147),
+    (198, '1.0103.10.00', '2025-03-10T06:08:30', 0.9442),
     (199, '1.1405.21.00', '2022-02-17T20:08:39', 0.385),
     (199, '1.1406.34.00', '2022-02-01T16:15:38', 0.0286),
     (199, '1.0401.14.00', '2022-02-15T18:56:10', 0.0404),
-    (199, '1.1401.39.00', '2022-02-15T11:17:36', 0.0003);
-
-INSERT INTO relatorio VALUES
-    (200, '2021-09-03', '2025-12-19', '48.912.037', '0001-48', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (200, '8422.40.30', 4.6942, 6158),
-    (200, '4012.13.00', 0.0389, 5367),
-    (200, '0303.99.90', 0.0665, 3370),
-    (200, '4410.11.29', 0.0056, 4004),
-    (200, '3003.20.63', 0.0084, 400),
-    (200, '0304.89.10', 0.1081, 400),
-    (200, '7304.41.90', 0.6049, 400),
-    (200, '9504.90.10', 0.0027, 400),
-    (200, '8423.30.19', 0.0415, 7455),
-    (200, '5501.20.00', 0.0694, 439),
-    (200, '2843.90.90', 0.2989, 20449),
-    (200, '0811.20.00', 0.117, 400),
-    (200, '3808.94.1', 0.002, 10037),
-    (200, '2933.99.35', 0.0164, 5813),
-    (200, '8704.21.10', 0.5142, 4675),
-    (200, '4823.20.91', 0.4455, 1364),
-    (200, '3003.90.87', 0.0825, 12188),
-    (200, '7208.39.90', 0.0066, 7823),
-    (200, '3923.21.90', 0.0275, 400),
-    (200, '5305.00.10', 0.1328, 11995);
-
-INSERT INTO relatorio VALUES
-    (201, '2021-11-29', NULL, '01.274.895', '0001-40', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (201, '5509.32.00', 0.0716, 9868),
-    (201, '6104.13.00', 0.1869, 634);
-
-INSERT INTO relatorio_serv VALUES
+    (199, '1.1401.39.00', '2022-02-15T11:17:36', 0.0003),
     (201, '1.0501.2', '2021-12-22T08:38:53', 0.0019),
     (201, '1.0502.33.20', '2021-12-12T18:25:00', 0.0051),
     (201, '1.2603.00.00', '2021-12-12T17:58:52', 0.0131),
@@ -9747,83 +8312,11 @@ INSERT INTO relatorio_serv VALUES
     (201, '1.0501.11.20', '2021-12-04T01:44:56', 0.081),
     (201, '1.0402.21', '2021-12-22T06:16:53', 0.0572),
     (201, '1.0102', '2021-12-20T13:17:04', 0.0681),
-    (201, '1.2101', '2021-12-07T05:34:41', 0.051);
-
-INSERT INTO relatorio VALUES
-    (202, '2025-08-23', '2026-06-08', '65.172.380', '0001-61', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (202, '6110.20.00', 0.3912, 1707),
-    (202, '6204.61.00', 0.4119, 9124),
-    (202, '2842.90.00', 0.32, 400),
-    (202, '8806.94.00', 0.0625, 9127),
-    (202, '3906.90.21', 0.1273, 400),
-    (202, '3707.90.29', 0.4872, 3257),
-    (202, '2306.20.00', 0.1615, 5585),
-    (202, '8516.10.00', 0.1902, 1544),
-    (202, '5402.62.00', 0.2171, 16253),
-    (202, '5109.10.00', 0.3558, 2960),
-    (202, '2928.00.30', 0.3568, 2517),
-    (202, '4010.12.00', 0.381, 9443),
-    (202, '2937.22.39', 0.1049, 400);
-
-INSERT INTO relatorio_serv VALUES
-    (202, '1.0907.00.00', '2025-09-03T08:42:25', 0.7104);
-
-INSERT INTO relatorio VALUES
-    (203, '2024-07-13', '2025-10-12', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (203, '2926.90.30', 0.0843, 9320),
-    (203, '4802.40.10', 0.008, 9167),
-    (203, '8426.19.00', 0.0193, 4411),
-    (203, '8543.70.15', 0.1353, 400),
-    (203, '3002.12.14', 0.031, 12963),
-    (203, '3920.59.00', 0.0428, 4329),
-    (203, '2921.42.4', 0.0435, 5273),
-    (203, '2924.19.32', 0.0568, 1501),
-    (203, '9027.30.1', 0.0032, 7492),
-    (203, '0105.13.00', 0.1308, 400),
-    (203, '8446.30.90', 0.0265, 3903),
-    (203, '3825.61.00', 0.0498, 12357),
-    (203, '8448.39.92', 0.0897, 9112),
-    (203, '0602.90.10', 0.0718, 3766),
-    (203, '6815.99.13', 0.044, 400),
-    (203, '8534.00.1', 0.0305, 400),
-    (203, '2941.90.49', 0.0681, 2708),
-    (203, '8517.62.64', 0.0297, 14933),
-    (203, '6115.29.20', 0.0866, 6199),
-    (203, '2903.46.00', 0.0806, 4243),
-    (203, '1302.19.40', 0.1383, 400),
-    (203, '3701.30.31', 0.0263, 5461),
-    (203, '8540.91.20', 0.0613, 3759),
-    (203, '2930.90.79', 0.0076, 3508);
-
-INSERT INTO relatorio_serv VALUES
+    (201, '1.2101', '2021-12-07T05:34:41', 0.051),
+    (202, '1.0907.00.00', '2025-09-03T08:42:25', 0.7104),
     (203, '1.1806.59.00', '2024-08-05T14:39:01', 0.0058),
     (203, '1.0901.51.25', '2024-08-27T15:55:57', 0.0092),
-    (203, '1.1109.90.00', '2024-08-22T04:17:43', 0.1291);
-
-INSERT INTO relatorio VALUES
-    (204, '2023-03-29', '2025-11-24', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (204, '8401.20.00', 0.0691, 10780),
-    (204, '5210.19.10', 0.001, 2618),
-    (204, '2804.70.10', 0.0761, 400),
-    (204, '8406.90.21', 0.0652, 5465),
-    (204, '8409.91.15', 0.0878, 400),
-    (204, '2621.90.90', 0.0224, 6829),
-    (204, '2903.77.33', 0.1151, 7625),
-    (204, '9305.91.00', 0.056, 400),
-    (204, '8479.89.40', 0.1951, 1452),
-    (204, '2922.49.20', 0.0265, 7382),
-    (204, '0303.89.6', 0.0521, 1910),
-    (204, '8421.91.10', 0.0161, 8827),
-    (204, '3301.29.18', 0.205, 400),
-    (204, '8539.31.3', 0.0731, 1385);
-
-INSERT INTO relatorio_serv VALUES
+    (203, '1.1109.90.00', '2024-08-22T04:17:43', 0.1291),
     (204, '1.2304.1', '2023-04-21T23:29:55', 0.0241),
     (204, '1.2204.40.00', '2023-04-09T19:40:02', 0.0263),
     (204, '1.1001.50.00', '2023-04-21T09:52:01', 0.0125),
@@ -9837,50 +8330,7 @@ INSERT INTO relatorio_serv VALUES
     (204, '1.0401.29.00', '2023-04-22T03:00:58', 0.0255),
     (204, '1.1401.2', '2023-04-17T13:35:46', 0.012),
     (204, '1.2606.00.00', '2023-04-17T14:04:56', 0.1576),
-    (204, '1.1802.40.00', '2023-04-24T04:58:54', 0.0116);
-
-INSERT INTO relatorio VALUES
-    (205, '2023-10-12', NULL, '48.912.037', '0001-38', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (205, '2829.19.20', 1.6358, 8415),
-    (205, '1302.14.00', 0.017, 1651),
-    (205, '2917.39.1', 0.0635, 400),
-    (205, '9608.91.00', 0.1941, 6753),
-    (205, '8105.90.10', 0.0158, 10410),
-    (205, '0907.10.00', 0.0069, 793),
-    (205, '0302.73.00', 0.0517, 5197),
-    (205, '8456.12.1', 0.0219, 1595),
-    (205, '2904.99.40', 0.1081, 4230),
-    (205, '2852.10.11', 0.1038, 7117),
-    (205, '7214.10.90', 0.3426, 400),
-    (205, '0304.96.00', 0.0035, 529),
-    (205, '3003.20.95', 0.0001, 400),
-    (205, '4805.93.00', 0.005, 490),
-    (205, '2933.59.19', 0.3133, 11884),
-    (205, '6403.59.10', 0.0001, 11223),
-    (205, '8511.80.30', 0.1417, 400),
-    (205, '5806.32.00', 0.0942, 400),
-    (205, '8903.22.00', 0.0165, 7404),
-    (205, '2933.99.33', 0.0143, 3251),
-    (205, '5806.40.00', 0.0013, 1623),
-    (205, '9001.90.10', 0.0631, 5838),
-    (205, '6203.12.00', 0.148, 400),
-    (205, '8409.91.1', 0.061, 4753),
-    (205, '9110.11.90', 0.3819, 1953),
-    (205, '8419.89.1', 0.0032, 9458),
-    (205, '6201.90.00', 0.0579, 400),
-    (205, '2309.90.30', 0.0039, 400),
-    (205, '3002.12.14', 0.2893, 3759);
-
-INSERT INTO relatorio VALUES
-    (206, '2024-07-16', NULL, '53.921.807', '0001-18', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (206, '3004.20.91', 0.0595, 13645),
-    (206, '5208.23.00', 0.2465, 5181);
-
-INSERT INTO relatorio_serv VALUES
+    (204, '1.1802.40.00', '2023-04-24T04:58:54', 0.0116),
     (206, '1.1806.90.00', '2024-08-21T01:36:07', 0.6196),
     (206, '1.2101.21.00', '2024-08-12T13:57:52', 0.3163),
     (206, '1.0702.00.00', '2024-08-07T09:43:01', 0.762),
@@ -9902,174 +8352,25 @@ INSERT INTO relatorio_serv VALUES
     (206, '1.0501.12.20', '2024-08-30T07:41:08', 0.4769),
     (206, '1.0602.3', '2024-08-04T01:52:41', 0.1036),
     (206, '1.1302.23.00', '2024-08-27T10:30:31', 0.2319),
-    (206, '1.2003.25.10', '2024-08-25T23:19:45', 0.042);
-
-INSERT INTO relatorio VALUES
-    (207, '2025-06-05', NULL, '79.821.563', '0001-00', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (207, '8201.90.00', 1.577, 14476),
-    (207, '2921.49.10', 0.0493, 1984),
-    (207, '8527.21.00', 0.0085, 2356),
-    (207, '6004.10.14', 0.0785, 4531),
-    (207, '0106.33.90', 0.0136, 400),
-    (207, '8479.89.32', 0.1518, 4203),
-    (207, '8433.60.21', 0.0237, 400),
-    (207, '8424.30.90', 0.0212, 400),
-    (207, '2932.19.20', 0.0037, 972),
-    (207, '0804.50.20', 0.0338, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (206, '1.2003.25.10', '2024-08-25T23:19:45', 0.042),
     (207, '1.0102', '2025-07-25T18:42:43', 0.7062),
     (207, '1.1410', '2025-07-07T16:22:11', 0.1254),
     (207, '1.1001.12.90', '2025-07-08T04:37:45', 0.0038),
     (207, '1.1402.12.00', '2025-07-18T03:53:56', 0.0174),
     (207, '1.1805.39.00', '2025-07-11T10:58:08', 0.0014),
-    (207, '1.2505.20.00', '2025-07-26T00:13:04', 0.0012);
-
-INSERT INTO relatorio VALUES
-    (208, '2024-06-22', '2024-08-22', '48.912.037', '0001-48', '11.679.309/0001-01', 'Análise de emissões em São Paulo na última década', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (208, '6506.10.90', 0.6836, 6800),
-    (208, '3808.94.1', 0.0354, 3033),
-    (208, '2915.60.1', 0.0481, 400),
-    (208, '2833.29.70', 0.0138, 400),
-    (208, '3302.90.9', 0.0001, 400),
-    (208, '7225.50.10', 0.0143, 400),
-    (208, '0802.11.00', 0.0328, 3750),
-    (208, '3827.59.00', 0.0265, 12247),
-    (208, '7217.20.10', 0.0557, 712),
-    (208, '2933.99.61', 0.0256, 6994),
-    (208, '3004.39.31', 0.054, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (207, '1.2505.20.00', '2025-07-26T00:13:04', 0.0012),
     (208, '1.0101', '2024-07-12T06:04:16', 0.3328),
     (208, '1.0502.11.30', '2024-07-02T12:54:53', 0.0088),
-    (208, '1.1001.40.00', '2024-07-29T10:03:34', 0.0038);
-
-INSERT INTO relatorio VALUES
-    (209, '2022-11-19', NULL, '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (209, '8523.52.90', 0.303, 3517),
-    (209, '2810.00.10', 0.6232, 400),
-    (209, '1605.56.00', 1.7745, 5460),
-    (209, '6005.90.90', 2.2943, 2382),
-    (209, '2925.29.21', 0.6691, 5179),
-    (209, '9030.20.2', 0.2827, 3908),
-    (209, '5902.10.10', 0.815, 400),
-    (209, '7319.40.00', 1.7721, 3420),
-    (209, '2937.29.50', 0.4601, 7931),
-    (209, '6304.91.00', 1.2241, 2229),
-    (209, '2009.50.00', 1.9114, 400),
-    (209, '8423.89.00', 1.0664, 4320),
-    (209, '3919.90.90', 1.5859, 11202),
-    (209, '3815.90.92', 0.3786, 11829),
-    (209, '5810.92.00', 0.8452, 4437),
-    (209, '7222.19.90', 1.025, 400),
-    (209, '6214.20.00', 0.8112, 3416),
-    (209, '2903.61.00', 4.5127, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (208, '1.1001.40.00', '2024-07-29T10:03:34', 0.0038),
     (209, '1.0102.1', '2022-12-12T11:58:09', 0.6166),
     (209, '1.1506.22.00', '2022-12-22T05:19:26', 1.0564),
     (209, '1.0504.32.00', '2022-12-08T18:36:18', 0.524),
-    (209, '1.2201.20.00', '2022-12-19T18:33:56', 0.3634);
-
-INSERT INTO relatorio VALUES
-    (210, '2023-07-15', NULL, '79.821.563', '0001-43', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (210, '5514.29.00', 0.9862, 400),
-    (210, '3816.00.11', 0.0478, 400),
-    (210, '2941.90.35', 0.0222, 1419),
-    (210, '8408.20.30', 0.0154, 3954),
-    (210, '6204.52.00', 0.11, 400),
-    (210, '2009.50.00', 0.0032, 1099),
-    (210, '5402.48.00', 0.0104, 9161),
-    (210, '2843.90.19', 0.0284, 12973),
-    (210, '7010.90.21', 0.0, 8294),
-    (210, '4811.41.10', 0.1818, 400),
-    (210, '6204.53.00', 0.0118, 6581),
-    (210, '3811.90.90', 0.0519, 5242),
-    (210, '9402.10.00', 0.0643, 7933),
-    (210, '9026.10.2', 0.0404, 7922),
-    (210, '5105.29.99', 0.0148, 6863),
-    (210, '8409.99.15', 0.008, 2930),
-    (210, '3808.92.96', 0.0061, 2377),
-    (210, '3003.90.76', 0.0366, 9006),
-    (210, '0209.10.11', 0.1124, 1454),
-    (210, '8541.21.10', 0.0415, 6566),
-    (210, '3813.00.10', 0.0701, 998),
-    (210, '3901.90.40', 0.0133, 13716),
-    (210, '2933.33.59', 0.1306, 2944),
-    (210, '6902.90.10', 0.0143, 6423),
-    (210, '3901.90.10', 0.23, 8860),
-    (210, '2933.69.14', 0.0058, 555),
-    (210, '6802.91.00', 0.0006, 10932),
-    (210, '7227.20.00', 0.0165, 400);
-
-INSERT INTO relatorio VALUES
-    (211, '2025-08-05', '2025-12-28', '18.024.935', '0001-76', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (211, '8515.19.00', 3.075, 5641),
-    (211, '7801.10.1', 0.5077, 1659),
-    (211, '5510.20.19', 0.0157, 7105),
-    (211, '6505.00.12', 0.0083, 6186),
-    (211, '0305.79.00', 0.1235, 3413),
-    (211, '9028.30.21', 0.0018, 1212),
-    (211, '5510.12.12', 0.1421, 2750),
-    (211, '8007.00.10', 0.0804, 400),
-    (211, '8411.82.00', 0.2423, 9920),
-    (211, '7205.10.00', 0.0263, 400),
-    (211, '5607.41.00', 0.0263, 7426),
-    (211, '8708.94.1', 0.0772, 2027),
-    (211, '5204.11.11', 0.0385, 10785);
-
-INSERT INTO relatorio_serv VALUES
-    (211, '1.0502.13.20', '2025-09-17T02:03:07', 1.8214);
-
-INSERT INTO relatorio VALUES
-    (212, '2022-10-27', '2023-07-29', '71.498.635', '0001-06', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (212, '9030.82.90', 0.2431, 7775),
-    (212, '7208.54.00', 0.2082, 400),
-    (212, '2914.23.20', 0.1999, 400),
-    (212, '2827.35.00', 0.078, 4054),
-    (212, '3105.30.00', 0.0349, 4479),
-    (212, '0302.89.37', 0.0632, 9654),
-    (212, '2811.19.40', 0.055, 2998),
-    (212, '9028.30.1', 0.1023, 400),
-    (212, '2915.90.39', 0.0716, 16537),
-    (212, '3912.20.10', 0.1858, 1873),
-    (212, '4410.11.2', 0.3126, 9459),
-    (212, '3808.91.92', 0.0333, 2583),
-    (212, '5804.29.10', 0.0631, 12462),
-    (212, '3004.20.69', 0.2047, 400),
-    (212, '2103.10.90', 0.2802, 13486),
-    (212, '2922.50.91', 0.6376, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (209, '1.2201.20.00', '2022-12-19T18:33:56', 0.3634),
+    (211, '1.0502.13.20', '2025-09-17T02:03:07', 1.8214),
     (212, '1.1706.23.00', '2022-11-02T12:59:35', 0.3674),
     (212, '1.2304.11.00', '2022-11-02T12:40:20', 0.0732),
     (212, '1.2504.11.00', '2022-11-29T09:57:02', 0.1363),
-    (212, '1.0502.11.10', '2022-11-12T14:58:35', 0.2597);
-
-INSERT INTO relatorio VALUES
-    (213, '2025-08-29', '2026-02-26', '13.690.872', '0001-54', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (213, '1521.90.11', 0.0722, 400),
-    (213, '3906.90.11', 1.0485, 400),
-    (213, '3824.99.35', 0.2563, 2925),
-    (213, '3002.41.15', 0.472, 400),
-    (213, '8471.60.90', 1.4956, 400),
-    (213, '4802.58.92', 0.3965, 4135);
-
-INSERT INTO relatorio_serv VALUES
+    (212, '1.0502.11.10', '2022-11-12T14:58:35', 0.2597),
     (213, '1.2302.10.00', '2025-09-09T12:08:30', 0.3217),
     (213, '1.1703.3', '2025-09-20T21:32:00', 0.1921),
     (213, '1.20', '2025-09-24T09:38:07', 0.3847),
@@ -10079,78 +8380,13 @@ INSERT INTO relatorio_serv VALUES
     (213, '1.1706.11.00', '2025-09-19T14:13:58', 0.381),
     (213, '1.1805', '2025-09-07T04:18:06', 0.0785),
     (213, '1.1805.50.00', '2025-09-22T16:19:14', 0.2431),
-    (213, '1.0301.29.00', '2025-09-19T16:20:40', 0.2095);
-
-INSERT INTO relatorio VALUES
-    (214, '2024-03-02', '2024-07-08', '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (214, '8203.10.10', 0.6704, 3754),
-    (214, '9026.10.29', 0.1713, 2707),
-    (214, '1509.30.00', 0.2453, 11137),
-    (214, '1502.10.1', 0.3342, 400),
-    (214, '2933.35.00', 0.1791, 3365),
-    (214, '3801.20.10', 0.2512, 2643),
-    (214, '7202.92.00', 0.3093, 400),
-    (214, '8443.99.70', 0.0827, 6125),
-    (214, '8460.40.99', 0.0763, 13005),
-    (214, '0303.83.21', 0.1668, 529),
-    (214, '8462.42.00', 0.0295, 400),
-    (214, '2930.90.91', 0.6729, 600),
-    (214, '8311.90.00', 0.7199, 9479),
-    (214, '1604.20.30', 0.2994, 8810),
-    (214, '3002.49.94', 0.1812, 5030),
-    (214, '3815.19.00', 0.0736, 400),
-    (214, '2933.53.21', 0.2232, 8662),
-    (214, '8443.13.90', 0.2971, 4368),
-    (214, '3908.10.21', 0.2314, 3849);
-
-INSERT INTO relatorio_serv VALUES
+    (213, '1.0301.29.00', '2025-09-19T16:20:40', 0.2095),
     (214, '1.1803.22.00', '2024-04-21T06:44:22', 0.3195),
-    (214, '1.0502.3', '2024-04-04T00:02:36', 0.2614);
-
-INSERT INTO relatorio VALUES
-    (215, '2022-05-06', '2023-08-30', '01.274.895', '0001-23', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (215, '2904.99.16', 0.146, 9734),
-    (215, '2933.59.92', 0.3461, 6665),
-    (215, '8301.20.00', 1.0235, 10116),
-    (215, '0102.21.10', 0.2494, 10441),
-    (215, '2921.19.29', 0.1504, 400),
-    (215, '2829.90.12', 0.0604, 2373),
-    (215, '8445.40.11', 0.0767, 8366),
-    (215, '0304.47.00', 0.7909, 4146),
-    (215, '8207.19.10', 0.5883, 400),
-    (215, '3003.20.52', 0.3146, 11450),
-    (215, '2009.29.00', 0.3681, 9180),
-    (215, '8543.70.20', 0.503, 8970),
-    (215, '9027.20.2', 0.0763, 9848),
-    (215, '3307.10.00', 0.3048, 7679),
-    (215, '0603.12.00', 0.4555, 7411),
-    (215, '2903.13.00', 0.0343, 4655),
-    (215, '3901.10.20', 0.0723, 9559),
-    (215, '9031.90.10', 0.1187, 775),
-    (215, '4202.12.20', 0.8435, 2231);
-
-INSERT INTO relatorio_serv VALUES
+    (214, '1.0502.3', '2024-04-04T00:02:36', 0.2614),
     (215, '1.2303.00.00', '2022-06-04T15:00:47', 0.7262),
     (215, '1.0901.51.21', '2022-06-14T00:19:50', 0.1327),
     (215, '1.0504', '2022-06-26T01:08:53', 0.065),
-    (215, '1.0502.12.30', '2022-06-19T02:13:47', 0.0289);
-
-INSERT INTO relatorio VALUES
-    (216, '2024-03-20', '2024-12-15', '09.723.145', '0001-93', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (216, '9014.10.00', 0.1229, 4384),
-    (216, '0302.14.00', 0.1116, 400),
-    (216, '5702.31.00', 0.0928, 5266),
-    (216, '2922.29.90', 0.0657, 3042),
-    (216, '3004.39.81', 0.1322, 400),
-    (216, '2903.75.00', 0.0983, 4572);
-
-INSERT INTO relatorio_serv VALUES
+    (215, '1.0502.12.30', '2022-06-19T02:13:47', 0.0289),
     (216, '1.0102.1', '2024-04-17T20:32:26', 0.1336),
     (216, '1.0607.00.00', '2024-04-14T08:34:05', 0.0399),
     (216, '1.0401.43.00', '2024-04-14T21:12:39', 0.0184),
@@ -10159,115 +8395,14 @@ INSERT INTO relatorio_serv VALUES
     (216, '1.05', '2024-04-24T16:37:43', 0.0242),
     (216, '1.0402.90.00', '2024-04-01T08:35:04', 0.0367),
     (216, '1.0502.24', '2024-04-14T08:30:21', 0.0103),
-    (216, '1.1106.32.00', '2024-04-07T21:47:14', 0.0458);
-
-INSERT INTO relatorio VALUES
-    (217, '2021-08-04', NULL, '33.738.001', '0001-77', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (217, '5603.91.30', 0.8029, 4422),
-    (217, '4810.13.8', 0.7362, 400),
-    (217, '0303.43.00', 0.6533, 2235),
-    (217, '2933.99.62', 1.4699, 4896),
-    (217, '5402.61.10', 1.8235, 1212),
-    (217, '2933.39.43', 0.5975, 1702),
-    (217, '8708.29.11', 1.4414, 5637),
-    (217, '8455.22.90', 1.2326, 400),
-    (217, '2712.20.00', 0.6699, 723),
-    (217, '4703.29.00', 0.922, 4337),
-    (217, '1509.30.00', 1.4471, 4280),
-    (217, '1501.10.00', 1.2804, 5678),
-    (217, '8439.30.20', 0.8996, 400),
-    (217, '8482.99.10', 1.2888, 23789),
-    (217, '6203.43.00', 0.5633, 6717),
-    (217, '3905.91.90', 0.4686, 6701),
-    (217, '0807.20.00', 1.5818, 7637),
-    (217, '5402.47.90', 1.4528, 400),
-    (217, '0303.44.00', 0.1113, 18688),
-    (217, '7611.00.00', 3.5822, 8514),
-    (217, '0304.81.00', 0.2372, 400),
-    (217, '0210.92.00', 0.3876, 5553),
-    (217, '2922.14.00', 0.3244, 7345),
-    (217, '8448.20.20', 1.2254, 13258),
-    (217, '3702.56.00', 0.0905, 400),
-    (217, '0302.11.00', 1.5754, 2210),
-    (217, '3502.20.00', 1.6573, 3928),
-    (217, '0810.90.16', 0.3653, 11311),
-    (217, '8414.70.00', 0.8487, 7745),
-    (217, '9405.31.00', 2.3344, 1237);
-
-INSERT INTO relatorio_serv VALUES
+    (216, '1.1106.32.00', '2024-04-07T21:47:14', 0.0458),
     (217, '1.0402.39.00', '2021-09-11T03:19:59', 4.274),
-    (217, '1.0501.32.00', '2021-09-19T17:01:31', 0.2219);
-
-INSERT INTO relatorio VALUES
-    (218, '2022-08-30', '2023-11-28', '65.172.380', '0001-61', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (218, '2921.51.35', 0.1459, 5113),
-    (218, '8504.90.10', 0.2625, 3510),
-    (218, '2941.20.90', 0.1229, 10585),
-    (218, '8544.19.19', 0.2437, 5647),
-    (218, '8428.90.90', 0.0521, 7516),
-    (218, '5208.31.00', 0.1818, 400),
-    (218, '2510.20.90', 0.1095, 12753),
-    (218, '7010.90.2', 0.2129, 8639),
-    (218, '5404.19.1', 0.5225, 5701),
-    (218, '5407.73.00', 0.0207, 400),
-    (218, '2930.90.29', 0.0923, 15430),
-    (218, '3003.90.59', 0.0018, 2520),
-    (218, '0206.22.00', 0.4125, 3947),
-    (218, '8441.90.00', 0.0733, 400),
-    (218, '3005.90.11', 0.2205, 5732),
-    (218, '8545.19.20', 0.0459, 4278),
-    (218, '3004.10.19', 0.1679, 4947),
-    (218, '9022.12.00', 0.0863, 400),
-    (218, '2613.90.90', 0.0837, 9034),
-    (218, '8527.99.90', 0.1664, 4618),
-    (218, '7302.40.00', 0.0295, 400),
-    (218, '2931.51.00', 0.134, 4156),
-    (218, '2009.89.11', 0.415, 4733),
-    (218, '8517.62.49', 0.0187, 2246),
-    (218, '4403.41.00', 0.0713, 4631),
-    (218, '3003.39.2', 0.1681, 10620),
-    (218, '7326.11.00', 0.5229, 558),
-    (218, '0901.22.00', 0.0674, 9364),
-    (218, '7202.41.00', 0.073, 7828),
-    (218, '0302.89.2', 0.0409, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (217, '1.0501.32.00', '2021-09-19T17:01:31', 0.2219),
     (218, '1.0501.11.30', '2022-09-25T06:19:01', 0.3002),
     (218, '1.2101.21.00', '2022-09-28T14:10:35', 0.4035),
-    (218, '1.2203.10.00', '2022-09-29T05:36:39', 0.5835);
-
-INSERT INTO relatorio VALUES
-    (219, '2022-07-12', '2023-06-14', '39.605.871', '0001-83', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (219, '8441.40.00', 0.0477, 10119),
-    (219, '2921.42.3', 0.023, 5048),
-    (219, '2924.19.29', 0.613, 10174),
-    (219, '8502.20.90', 0.0444, 5154),
-    (219, '9018.90.69', 0.0817, 4384),
-    (219, '7114.19.00', 0.2059, 3041),
-    (219, '3005.10.40', 0.2499, 1827),
-    (219, '9010.50.20', 0.6011, 3284),
-    (219, '2922.19.95', 0.1167, 400),
-    (219, '0302.72.10', 0.6615, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (218, '1.2203.10.00', '2022-09-29T05:36:39', 0.5835),
     (219, '1.2405.14.00', '2022-08-04T13:15:02', 0.201),
-    (219, '1.0901.5', '2022-08-10T22:44:38', 0.1353);
-
-INSERT INTO relatorio VALUES
-    (220, '2024-12-04', '2026-05-16', '64.087.915', '0001-27', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (220, '2710.19.99', 0.4509, 4158),
-    (220, '8461.20.10', 0.0078, 10858),
-    (220, '3003.90.67', 0.0044, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (219, '1.0901.5', '2022-08-10T22:44:38', 0.1353),
     (220, '1.0602.23.00', '2025-01-10T10:18:06', 4.4113),
     (220, '1.1202.20.00', '2025-01-03T04:16:56', 0.1334),
     (220, '1.0402.2', '2025-01-12T01:03:10', 0.0577),
@@ -10284,46 +8419,8 @@ INSERT INTO relatorio_serv VALUES
     (220, '1.0910', '2025-01-24T18:04:34', 0.0423),
     (220, '1.1501', '2025-01-08T08:16:53', 0.0367),
     (220, '1.0501.24.29', '2025-01-20T17:52:29', 0.0141),
-    (220, '1.0502.14.59', '2025-01-29T17:55:49', 0.1409);
-
-INSERT INTO relatorio VALUES
-    (221, '2022-04-22', '2025-08-28', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (221, '4004.00.00', 1.0388, 5655),
-    (221, '2807.00.10', 0.0326, 11657),
-    (221, '8706.00.20', 0.1261, 400),
-    (221, '2909.44.19', 0.0092, 2890),
-    (221, '8473.50.50', 0.2069, 2590),
-    (221, '5902.10.10', 0.0372, 400),
-    (221, '2937.23.31', 0.1963, 15666),
-    (221, '1702.60.10', 0.0045, 3619),
-    (221, '2008.30.00', 0.1795, 3492),
-    (221, '8539.22.00', 0.0844, 7362),
-    (221, '9306.21.30', 0.0673, 2670),
-    (221, '2921.41.00', 0.0526, 10429),
-    (221, '7201.10.00', 0.1074, 5595),
-    (221, '8423.20.00', 0.0179, 1033),
-    (221, '7407.29.10', 0.0014, 400),
-    (221, '8510.90.1', 0.0712, 9304),
-    (221, '6104.19.20', 0.0284, 5316),
-    (221, '3002.42.60', 0.0306, 4285),
-    (221, '9618.00.00', 0.0986, 3826),
-    (221, '2915.39.94', 0.0062, 1885),
-    (221, '9603.30.00', 0.0087, 400),
-    (221, '7301.20.00', 0.0623, 15282);
-
-INSERT INTO relatorio_serv VALUES
-    (221, '1.1106.4', '2022-05-22T02:03:53', 0.9294);
-
-INSERT INTO relatorio VALUES
-    (222, '2025-06-27', NULL, '75.893.062', '0001-33', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (222, '7216.22.00', 0.0293, 400),
-    (222, '8482.99.10', 0.0975, 3741);
-
-INSERT INTO relatorio_serv VALUES
+    (220, '1.0502.14.59', '2025-01-29T17:55:49', 0.1409),
+    (221, '1.1106.4', '2022-05-22T02:03:53', 0.9294),
     (222, '1.1105.90.00', '2025-07-25T23:23:48', 0.0681),
     (222, '1.0503.12.00', '2025-07-23T11:28:54', 0.1841),
     (222, '1.2402.20.00', '2025-07-01T02:59:19', 0.055),
@@ -10339,12 +8436,7 @@ INSERT INTO relatorio_serv VALUES
     (222, '1.0609.00.00', '2025-07-21T21:02:31', 0.1449),
     (222, '1.1106.36', '2025-07-19T23:09:43', 0.2068),
     (222, '1.0608', '2025-07-10T08:34:44', 0.0224),
-    (222, '1.26', '2025-07-17T22:48:44', 0.1736);
-
-INSERT INTO relatorio VALUES
-    (223, '2025-08-16', NULL, '53.921.807', '0001-18', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (222, '1.26', '2025-07-17T22:48:44', 0.1736),
     (223, '1.0501.3', '2025-09-27T15:46:14', 0.0257),
     (223, '1.0501.13.10', '2025-09-20T13:01:58', 0.302),
     (223, '1.0502.33', '2025-09-24T13:36:03', 0.1124),
@@ -10378,12 +8470,7 @@ INSERT INTO relatorio_serv VALUES
     (223, '1.0802.20.00', '2025-09-25T08:58:57', 0.0646),
     (223, '1.1401.17.00', '2025-09-14T19:40:09', 0.1812),
     (223, '1.0401.4', '2025-09-19T22:40:44', 0.0377),
-    (223, '1.0906.30.00', '2025-09-07T13:01:12', 0.0986);
-
-INSERT INTO relatorio VALUES
-    (224, '2023-03-03', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_serv VALUES
+    (223, '1.0906.30.00', '2025-09-07T13:01:12', 0.0986),
     (224, '1.0102.80.00', '2023-04-05T08:26:29', 0.2438),
     (224, '1.0904.2', '2023-04-06T11:09:11', 0.1197),
     (224, '1.1803.21.00', '2023-04-15T06:19:08', 0.0916),
@@ -10400,28 +8487,7 @@ INSERT INTO relatorio_serv VALUES
     (224, '1.0901.40.00', '2023-04-09T10:08:02', 0.1226),
     (224, '1.1406.33.00', '2023-04-26T05:05:07', 0.059),
     (224, '1.1703.2', '2023-04-11T20:05:10', 0.1275),
-    (224, '1.0401.4', '2023-04-10T00:52:37', 0.3749);
-
-INSERT INTO relatorio VALUES
-    (225, '2022-04-29', '2025-01-29', '79.821.563', '0001-99', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (225, '4811.90.90', 0.0085, 880),
-    (225, '3004.20.19', 0.0104, 6753),
-    (225, '0902.40.00', 0.0047, 3772),
-    (225, '7306.90.10', 0.0225, 8655),
-    (225, '8443.99.31', 0.0389, 400),
-    (225, '4009.42.90', 0.0062, 7099),
-    (225, '2930.90.52', 0.001, 400),
-    (225, '5303.10.90', 0.0081, 5929),
-    (225, '0306.93.00', 0.029, 7438),
-    (225, '7804.19.00', 0.0033, 10894),
-    (225, '9014.20.90', 0.0613, 2517),
-    (225, '2931.49.1', 0.0484, 3444),
-    (225, '4002.31.00', 0.0744, 400),
-    (225, '4810.29.10', 0.0503, 11688);
-
-INSERT INTO relatorio_serv VALUES
+    (224, '1.0401.4', '2023-04-10T00:52:37', 0.3749),
     (225, '1.0105.50.00', '2022-05-27T00:39:14', 0.0091),
     (225, '1.1106.10.00', '2022-05-19T16:00:14', 0.0456),
     (225, '1.0105.12.00', '2022-05-24T00:03:27', 0.0374),
@@ -10430,103 +8496,13 @@ INSERT INTO relatorio_serv VALUES
     (225, '1.1101.13.00', '2022-05-19T05:07:55', 0.0572),
     (225, '1.0103.30.00', '2022-05-26T03:06:33', 0.184),
     (225, '1.1502.30.00', '2022-05-27T01:19:23', 0.042),
-    (225, '1.0501.22.20', '2022-05-16T14:29:17', 0.1011);
-
-INSERT INTO relatorio VALUES
-    (226, '2022-12-18', NULL, '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (226, '2928.00.30', 8.0513, 400),
-    (226, '0804.20.10', 3.6791, 11302),
-    (226, '8542.39.99', 2.8634, 400),
-    (226, '9031.80.50', 2.5043, 18805),
-    (226, '4015.90.00', 6.9303, 1810),
-    (226, '9015.90.10', 8.6571, 5337),
-    (226, '8462.26.00', 8.2541, 400),
-    (226, '3811.11.00', 7.5546, 400),
-    (226, '5210.51.00', 0.4195, 2875),
-    (226, '8440.10.20', 11.2417, 400),
-    (226, '9018.50.90', 2.9799, 400),
-    (226, '6505.00.1', 6.7286, 6225),
-    (226, '8482.10.10', 13.9575, 3340),
-    (226, '4412.10.00', 2.5875, 12606),
-    (226, '7410.21.20', 0.5616, 2921),
-    (226, '8903.22.00', 15.6232, 400),
-    (226, '2916.20.13', 0.2105, 11061);
-
-INSERT INTO relatorio_serv VALUES
+    (225, '1.0501.22.20', '2022-05-16T14:29:17', 0.1011),
     (226, '1.1203.00.00', '2023-01-04T18:59:30', 18.3492),
     (226, '1.1702.2', '2023-01-16T16:11:51', 4.3174),
     (226, '1.1401.12.00', '2023-01-18T04:38:40', 2.5431),
-    (226, '1.1106.43.00', '2023-01-03T17:44:44', 10.2034);
-
-INSERT INTO relatorio VALUES
-    (227, '2023-07-25', NULL, '09.723.145', '0001-56', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (227, '6403.51.90', 15.5138, 3406),
-    (227, '8503.00.90', 0.0434, 400),
-    (227, '8451.90.10', 0.0083, 3784),
-    (227, '8543.90.90', 0.1227, 3814),
-    (227, '7508.90.90', 0.1836, 3334),
-    (227, '0302.36.00', 0.2613, 10652),
-    (227, '8517.62.1', 1.1472, 5011),
-    (227, '8433.20.90', 0.0736, 9067),
-    (227, '2909.49.3', 0.3776, 400),
-    (227, '8514.39.00', 0.1226, 400),
-    (227, '2933.39.91', 1.1405, 2395),
-    (227, '8529.90.1', 1.789, 9757),
-    (227, '3802.10.00', 0.7106, 400),
-    (227, '4804.59.10', 0.8906, 712),
-    (227, '7212.10.00', 1.5913, 400),
-    (227, '8438.80.10', 0.1333, 2493),
-    (227, '3923.29.10', 0.1939, 400),
-    (227, '9018.39.30', 0.1983, 8282),
-    (227, '9019.20.90', 0.6058, 10110),
-    (227, '6207.99.10', 0.4063, 4127),
-    (227, '0104.10.90', 1.2068, 478),
-    (227, '4805.12.00', 0.2087, 1388);
-
-INSERT INTO relatorio_serv VALUES
-    (227, '1.0402.14.00', '2023-08-08T16:49:29', 11.0673);
-
-INSERT INTO relatorio VALUES
-    (228, '2022-10-16', '2024-04-10', '12.905.674', '0001-18', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (228, '2852.10.21', 0.8971, 7157),
-    (228, '3824.99.3', 0.3884, 400),
-    (228, '1507.90.19', 0.0432, 1576),
-    (228, '6902.10.18', 0.5283, 2155),
-    (228, '3002.41.2', 0.8485, 3751),
-    (228, '5407.83.00', 1.4442, 12459),
-    (228, '2941.90.49', 0.3457, 5982),
-    (228, '9005.90.90', 0.1588, 6773);
-
-INSERT INTO relatorio_serv VALUES
-    (228, '1.0901.52', '2022-11-14T23:09:31', 0.7389);
-
-INSERT INTO relatorio VALUES
-    (229, '2021-11-17', NULL, '09.723.145', '0001-93', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (229, '2933.91.19', 0.1656, 400),
-    (229, '8202.99.90', 0.0342, 400),
-    (229, '3404.90.12', 0.1437, 4080),
-    (229, '8453.20.00', 0.0358, 14240),
-    (229, '8530.10.10', 0.4966, 400),
-    (229, '1604.20.20', 0.0417, 1894),
-    (229, '3301.90.30', 0.1932, 2937),
-    (229, '3002.41.22', 0.1513, 765),
-    (229, '2909.19.90', 0.0033, 10434),
-    (229, '9608.91.00', 0.1386, 7097),
-    (229, '0302.14.00', 0.0044, 6632),
-    (229, '8201.60.00', 0.2432, 3391),
-    (229, '0602.30.00', 0.3009, 7224),
-    (229, '6909.19.90', 0.0985, 2933),
-    (229, '2935.90.92', 0.2112, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (226, '1.1106.43.00', '2023-01-03T17:44:44', 10.2034),
+    (227, '1.0402.14.00', '2023-08-08T16:49:29', 11.0673),
+    (228, '1.0901.52', '2022-11-14T23:09:31', 0.7389),
     (229, '1.1805.13.00', '2021-12-28T20:15:44', 0.0119),
     (229, '1.0401.42.00', '2021-12-22T21:56:18', 0.0459),
     (229, '1.1903.30.00', '2021-12-25T03:34:57', 0.1119),
@@ -10539,29 +8515,7 @@ INSERT INTO relatorio_serv VALUES
     (229, '1.0501.31.00', '2021-12-20T15:47:59', 0.2831),
     (229, '1.2002.30.00', '2021-12-25T20:19:35', 0.0243),
     (229, '1.1401.18.00', '2021-12-09T18:05:08', 0.0758),
-    (229, '1.0502.12.10', '2021-12-22T01:08:04', 0.0596);
-
-INSERT INTO relatorio VALUES
-    (230, '2021-11-03', '2025-09-25', '48.603.715', '0001-45', '53.396.825/0001-34', 'Formas de reduzir o impacto de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (230, '2933.33.3', 0.0713, 400),
-    (230, '3003.90.42', 0.0574, 1557),
-    (230, '3004.31.00', 0.0183, 16635),
-    (230, '7321.12.00', 0.0059, 6304),
-    (230, '9503.00.50', 0.2506, 6288),
-    (230, '6112.41.00', 0.0465, 5370),
-    (230, '5210.31.00', 0.0632, 6728),
-    (230, '2809.10.00', 0.2519, 5173),
-    (230, '0904.11.00', 0.1625, 3845),
-    (230, '2934.91.32', 0.0162, 14913),
-    (230, '9026.10.29', 0.0328, 7747),
-    (230, '6102.30.00', 0.4483, 12427),
-    (230, '4806.30.00', 0.0423, 4450),
-    (230, '6302.29.00', 0.0641, 9029),
-    (230, '3301.29.19', 0.2962, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (229, '1.0502.12.10', '2021-12-22T01:08:04', 0.0596),
     (230, '1.1103.36.10', '2021-12-07T06:23:20', 0.279),
     (230, '1.1506.2', '2021-12-28T08:38:04', 0.1811),
     (230, '1.1403.22', '2021-12-03T04:20:59', 0.2491),
@@ -10572,40 +8526,9 @@ INSERT INTO relatorio_serv VALUES
     (230, '1.1805.50.00', '2021-12-24T06:58:51', 0.1447),
     (230, '1.0106.2', '2021-12-12T04:23:20', 0.2257),
     (230, '1.0401.16.10', '2021-12-08T15:59:35', 0.3435),
-    (230, '1.0501.29.00', '2021-12-03T10:50:15', 0.1933);
-
-INSERT INTO relatorio VALUES
-    (231, '2025-11-09', '2025-12-24', '65.172.380', '0001-61', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (231, '8406.10.00', 0.006, 2446),
-    (231, '0714.10.00', 0.0846, 4291),
-    (231, '2933.33.19', 0.125, 2020),
-    (231, '2941.20.90', 0.0241, 400),
-    (231, '0805.22.00', 0.0499, 400),
-    (231, '3907.10.91', 0.0623, 1029),
-    (231, '9025.11.91', 0.0575, 400),
-    (231, '2506.20.00', 0.0084, 22083),
-    (231, '2924.29.41', 0.0416, 9784),
-    (231, '4811.90.20', 0.2038, 6248);
-
-INSERT INTO relatorio_serv VALUES
+    (230, '1.0501.29.00', '2021-12-03T10:50:15', 0.1933),
     (231, '1.1102.60.00', '2025-12-10T02:35:58', 0.0652),
-    (231, '1.2001.50.00', '2025-12-05T12:16:33', 0.0619);
-
-INSERT INTO relatorio VALUES
-    (232, '2023-12-26', NULL, '09.723.145', '0001-93', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (232, '2306.60.00', 0.1892, 400),
-    (232, '8104.90.00', 1.456, 1921),
-    (232, '2841.90.49', 2.6786, 8671),
-    (232, '0903.00.10', 0.1927, 400),
-    (232, '2905.19.12', 0.6344, 400),
-    (232, '8481.20.90', 0.2095, 400),
-    (232, '2811.19.20', 0.1994, 8863);
-
-INSERT INTO relatorio_serv VALUES
+    (231, '1.2001.50.00', '2025-12-05T12:16:33', 0.0619),
     (232, '1.1903', '2024-01-20T09:28:34', 0.0511),
     (232, '1.0404', '2024-01-25T13:04:31', 0.91),
     (232, '1.1406.31.00', '2024-01-14T05:56:29', 0.1334),
@@ -10618,45 +8541,9 @@ INSERT INTO relatorio_serv VALUES
     (232, '1.0402.22.00', '2024-01-23T15:40:06', 0.2861),
     (232, '1.0106.40.00', '2024-01-21T04:56:43', 0.0768),
     (232, '1.1805.39.00', '2024-01-01T00:58:49', 0.4648),
-    (232, '1.08', '2024-01-25T06:33:48', 0.2188);
-
-INSERT INTO relatorio VALUES
-    (233, '2021-10-02', '2025-09-12', '09.723.145', '0001-78', '09.850.333/0001-77', 'Emissões: e eu com isso?', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (233, '6004.10.12', 228.7657, 2446),
-    (233, '5404.11.00', 0.183, 400),
-    (233, '3808.92.9', 0.8021, 14241),
-    (233, '7201.20.00', 0.0924, 400),
-    (233, '2915.39.6', 0.4116, 3475),
-    (233, '2905.12.20', 5.6175, 10616),
-    (233, '2921.19.3', 2.7179, 12830),
-    (233, '5210.32.00', 2.6092, 8986),
-    (233, '1212.91.00', 8.707, 4934),
-    (233, '2937.23.59', 2.1892, 400),
-    (233, '2915.39.63', 10.8562, 9096),
-    (233, '2842.90.00', 0.4284, 10435),
-    (233, '2833.29.60', 1.7246, 7009),
-    (233, '2905.59.90', 17.2389, 3113),
-    (233, '4105.10.2', 2.1113, 1367),
-    (233, '3003.20.19', 8.074, 1301),
-    (233, '8714.99.90', 37.4423, 400),
-    (233, '3305.20.00', 6.8868, 2747),
-    (233, '3003.90.38', 14.6155, 400),
-    (233, '9023.00.00', 5.308, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (232, '1.08', '2024-01-25T06:33:48', 0.2188),
     (233, '1.0503', '2021-11-28T22:43:37', 11.8182),
-    (233, '1.1105.30.00', '2021-11-06T11:19:22', 0.2714);
-
-INSERT INTO relatorio VALUES
-    (234, '2023-11-08', NULL, '53.921.807', '0001-18', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (234, '6903.10.40', 0.0178, 13469),
-    (234, '7015.90.90', 0.0583, 3542);
-
-INSERT INTO relatorio_serv VALUES
+    (233, '1.1105.30.00', '2021-11-06T11:19:22', 0.2714),
     (234, '1.2602.10.00', '2023-12-18T09:10:12', 0.0402),
     (234, '1.1102.30.00', '2023-12-18T06:21:23', 0.0682),
     (234, '1.1701.51.00', '2023-12-11T19:38:11', 0.1035),
@@ -10666,16 +8553,7 @@ INSERT INTO relatorio_serv VALUES
     (234, '1.1701.32.00', '2023-12-12T17:46:18', 0.0756),
     (234, '1.1403.25.00', '2023-12-22T19:53:45', 0.0127),
     (234, '1.0502.11.20', '2023-12-16T12:40:44', 0.0101),
-    (234, '1.0501.24.22', '2023-12-12T15:37:29', 0.0154);
-
-INSERT INTO relatorio VALUES
-    (235, '2023-09-24', '2023-12-30', '27.401.593', '0001-66', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (235, '8425.19.10', 0.4363, 9367),
-    (235, '3922.90.00', 0.0158, 4160);
-
-INSERT INTO relatorio_serv VALUES
+    (234, '1.0501.24.22', '2023-12-12T15:37:29', 0.0154),
     (235, '1.1102.60.00', '2023-10-25T15:41:06', 2.5612),
     (235, '1.1103.31.00', '2023-10-14T18:55:27', 0.0583),
     (235, '1.2601.40.00', '2023-10-28T04:04:41', 0.0121),
@@ -10698,84 +8576,13 @@ INSERT INTO relatorio_serv VALUES
     (235, '1.1406', '2023-10-21T08:10:20', 0.0056),
     (235, '1.0502.24.52', '2023-10-17T16:05:52', 0.0323),
     (235, '1.2501.35.00', '2023-10-09T09:07:30', 0.1218),
-    (235, '1.0401.11.11', '2023-10-30T16:35:49', 0.0576);
-
-INSERT INTO relatorio VALUES
-    (236, '2023-03-28', '2024-06-13', '39.605.871', '0001-83', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (236, '8445.40.3', 1.6467, 5972),
-    (236, '1515.90.10', 2.0025, 8485),
-    (236, '2812.90.00', 0.734, 9084),
-    (236, '2905.19.95', 0.5511, 18871),
-    (236, '2712.10.00', 0.8458, 400),
-    (236, '6207.22.00', 0.5807, 5415),
-    (236, '2909.60.11', 1.6607, 6972),
-    (236, '1502.10.12', 0.9042, 5432),
-    (236, '6114.20.00', 0.2918, 4999),
-    (236, '1514.19.10', 0.9791, 5128),
-    (236, '6403.99.90', 0.2183, 3445),
-    (236, '4804.31.10', 0.4989, 6077),
-    (236, '3002.42.50', 1.5228, 5467),
-    (236, '3002.42.90', 0.7645, 7924),
-    (236, '8905.10.00', 0.665, 400),
-    (236, '0305.31.00', 1.3316, 7785),
-    (236, '2920.90.2', 0.8499, 400),
-    (236, '6001.99.00', 1.8237, 15537),
-    (236, '8504.40.50', 1.4446, 2467),
-    (236, '3920.61.00', 5.9958, 5349),
-    (236, '4704.19.00', 0.6363, 400),
-    (236, '0707.00.00', 1.0805, 3385),
-    (236, '3003.90.24', 1.7132, 400),
-    (236, '6203.33.00', 0.5744, 10884),
-    (236, '1514.11.00', 0.9821, 11870),
-    (236, '5407.73.00', 0.2178, 7662),
-    (236, '9029.90.10', 1.3746, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (235, '1.0401.11.11', '2023-10-30T16:35:49', 0.0576),
     (236, '1.2504.2', '2023-04-22T16:04:49', 3.3679),
-    (236, '1.2602', '2023-04-19T21:01:59', 2.0072);
-
-INSERT INTO relatorio VALUES
-    (237, '2021-08-02', '2026-04-06', '65.172.380', '0001-53', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (237, '1513.29.20', 0.6541, 691),
-    (237, '1901.20.10', 0.0099, 6175),
-    (237, '0808.10.00', 0.0049, 9798),
-    (237, '8701.21.00', 0.0199, 424),
-    (237, '2918.19.30', 0.0018, 400),
-    (237, '3006.10.90', 0.0335, 3554),
-    (237, '3503.00.11', 0.0048, 4317),
-    (237, '9010.10.20', 0.0089, 400),
-    (237, '8202.31.00', 0.0006, 400),
-    (237, '8456.11.90', 0.0006, 2236),
-    (237, '8517.62.94', 0.0165, 9824),
-    (237, '4407.25.00', 0.0023, 4764),
-    (237, '3002.42.20', 0.006, 577),
-    (237, '3002.41.26', 0.0192, 4129),
-    (237, '2005.51.00', 0.0945, 7868),
-    (237, '3907.99.99', 0.0005, 3519),
-    (237, '2901.23.00', 0.0003, 6092),
-    (237, '1602.32.10', 0.0087, 2523),
-    (237, '3904.40.10', 0.0351, 7198),
-    (237, '1514.11.00', 0.0632, 8489);
-
-INSERT INTO relatorio_serv VALUES
+    (236, '1.2602', '2023-04-19T21:01:59', 2.0072),
     (237, '1.2501.1', '2021-09-18T05:47:53', 0.0175),
     (237, '1.2403.2', '2021-09-21T22:29:48', 0.0007),
     (237, '1.1504.00.00', '2021-09-08T14:45:23', 0.002),
-    (237, '1.1403.22.14', '2021-09-23T20:14:26', 0.0011);
-
-INSERT INTO relatorio VALUES
-    (238, '2021-07-02', '2023-02-18', '28.659.130', '0001-07', '00.001.333/0001-99', 'Tipos de emissão em empresas de refinaria', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (238, '5603.14.30', 0.0204, 9427),
-    (238, '8463.10.10', 0.0204, 16738),
-    (238, '2833.40.20', 0.0201, 6663);
-
-INSERT INTO relatorio_serv VALUES
+    (237, '1.1403.22.14', '2021-09-23T20:14:26', 0.0011),
     (238, '1.0103.20.00', '2021-08-09T08:23:55', 0.052),
     (238, '1.2001.83.00', '2021-08-01T05:36:16', 0.0474),
     (238, '1.1302.23.00', '2021-08-23T14:21:14', 0.0051),
@@ -10799,16 +8606,7 @@ INSERT INTO relatorio_serv VALUES
     (238, '1.2404.31.00', '2021-08-01T07:47:02', 0.0753),
     (238, '1.1103.42.00', '2021-08-05T11:41:49', 0.1315),
     (238, '1.2301.23.00', '2021-08-02T19:45:41', 0.1067),
-    (238, '1.1103.41.00', '2021-08-07T17:37:18', 0.0535);
-
-INSERT INTO relatorio VALUES
-    (239, '2022-10-28', NULL, '56.738.014', '0001-69', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (239, '2920.90.2', 0.5681, 7691),
-    (239, '7408.11.00', 0.3697, 516);
-
-INSERT INTO relatorio_serv VALUES
+    (238, '1.1103.41.00', '2021-08-07T17:37:18', 0.0535),
     (239, '1.1703.31.00', '2022-11-28T16:12:15', 0.4559),
     (239, '1.0504.11.00', '2022-11-12T19:34:47', 0.0633),
     (239, '1.0107.50.00', '2022-11-06T08:16:15', 0.0391),
@@ -10826,50 +8624,9 @@ INSERT INTO relatorio_serv VALUES
     (239, '1.0103.30.00', '2022-11-24T03:32:39', 0.3733),
     (239, '1.1402.1', '2022-11-24T14:04:47', 0.0959),
     (239, '1.1202.20.00', '2022-11-26T14:29:13', 0.2196),
-    (239, '1.0606.11.00', '2022-11-27T00:33:57', 0.5165);
-
-INSERT INTO relatorio VALUES
-    (240, '2023-02-19', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (240, '8452.29.25', 0.0159, 400),
-    (240, '3002.12.13', 0.0803, 1886),
-    (240, '5402.61.10', 0.1585, 7062),
-    (240, '8539.39.1', 0.0246, 400),
-    (240, '2827.39.20', 0.0289, 8312),
-    (240, '2507.00.10', 0.0031, 3022),
-    (240, '3909.50.2', 0.0578, 6796),
-    (240, '8430.41.90', 0.048, 7969),
-    (240, '2605.00.00', 0.1461, 4864),
-    (240, '8424.30.30', 0.0323, 5790),
-    (240, '2931.52.00', 0.0391, 3489),
-    (240, '8540.91.40', 0.1995, 400),
-    (240, '8110.10.20', 0.1608, 5740),
-    (240, '9503.00.21', 0.2548, 6374),
-    (240, '0511.99.10', 0.2251, 4118),
-    (240, '8480.79.90', 0.0401, 400),
-    (240, '2903.99.3', 0.0166, 2393),
-    (240, '2009.89.12', 0.0081, 5777),
-    (240, '8479.60.00', 0.0845, 8140),
-    (240, '2937.22.90', 0.0307, 4032),
-    (240, '8483.60.11', 0.2784, 2425),
-    (240, '3702.98.00', 0.1315, 5568),
-    (240, '6202.30.00', 0.0377, 8014),
-    (240, '8419.40.20', 0.0104, 400),
-    (240, '2903.49.00', 0.2822, 3042),
-    (240, '3002.41.14', 0.2581, 5978);
-
-INSERT INTO relatorio_serv VALUES
+    (239, '1.0606.11.00', '2022-11-27T00:33:57', 0.5165),
     (240, '1.2504.1', '2023-03-19T11:18:01', 0.2948),
-    (240, '1.0106.60.00', '2023-03-20T23:47:53', 0.6978);
-
-INSERT INTO relatorio VALUES
-    (241, '2025-06-21', NULL, '01.274.895', '0001-40', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (241, '2008.99.00', 0.2081, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (240, '1.0106.60.00', '2023-03-20T23:47:53', 0.6978),
     (241, '1.0502.12.20', '2025-07-29T14:36:38', 0.0951),
     (241, '1.0501.21.30', '2025-07-02T12:55:45', 0.123),
     (241, '1.1901.20.00', '2025-07-14T08:48:04', 0.0171),
@@ -10890,48 +8647,8 @@ INSERT INTO relatorio_serv VALUES
     (241, '1.0401.17.10', '2025-07-11T11:27:15', 0.0451),
     (241, '1.2404.11.00', '2025-07-09T02:49:38', 0.0462),
     (241, '1.0608.30.00', '2025-07-10T05:08:39', 0.0635),
-    (241, '1.1806.5', '2025-07-04T07:55:48', 0.0342);
-
-INSERT INTO relatorio VALUES
-    (242, '2022-11-26', NULL, '79.821.563', '0001-65', '11.679.309/0001-01', 'Impacto de programas de incentivo fiscal na redução de emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (242, '8517.62.2', 0.0642, 13915),
-    (242, '5211.11.00', 0.1427, 6469),
-    (242, '2204.22.19', 0.0809, 667),
-    (242, '9018.19.20', 0.0705, 2393),
-    (242, '3201.90.11', 0.169, 11436),
-    (242, '3801.10.00', 0.0878, 3571),
-    (242, '2921.46.10', 0.0501, 4568),
-    (242, '2914.19.29', 0.0566, 400),
-    (242, '2934.99.53', 0.2418, 3845),
-    (242, '6505.00.90', 0.0664, 12722),
-    (242, '3917.22.10', 0.1184, 7353),
-    (242, '3506.10.10', 0.2538, 1747),
-    (242, '7505.12.2', 0.1162, 400),
-    (242, '2909.49.10', 0.1178, 677),
-    (242, '0901.11.90', 0.0429, 14722),
-    (242, '8452.10.00', 0.0461, 400),
-    (242, '8211.92.10', 0.0608, 7938),
-    (242, '7310.10.10', 0.032, 2698);
-
-INSERT INTO relatorio_serv VALUES
-    (242, '1.1806.8', '2022-12-17T02:35:41', 0.0821);
-
-INSERT INTO relatorio VALUES
-    (243, '2024-05-17', '2025-06-03', '51.360.297', '0001-43', '58.826.745/0001-34', 'Emissões a alto nível', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (243, '8477.10.2', 0.2996, 4422),
-    (243, '8518.90.90', 0.804, 1219),
-    (243, '2805.19.10', 0.1144, 7320),
-    (243, '2933.33.82', 0.3566, 400),
-    (243, '9701.21.00', 0.014, 6811),
-    (243, '8471.30.11', 0.2618, 4401),
-    (243, '8410.11.00', 0.1015, 7652),
-    (243, '0305.71.00', 0.8924, 6434);
-
-INSERT INTO relatorio_serv VALUES
+    (241, '1.1806.5', '2025-07-04T07:55:48', 0.0342),
+    (242, '1.1806.8', '2022-12-17T02:35:41', 0.0821),
     (243, '1.0901.52.20', '2024-06-09T14:52:56', 1.122),
     (243, '1.1405.50.00', '2024-06-20T08:50:01', 0.1244),
     (243, '1.0504.45.10', '2024-06-04T02:34:43', 0.4151),
@@ -10940,64 +8657,11 @@ INSERT INTO relatorio_serv VALUES
     (243, '1.0401.29.00', '2024-06-08T04:09:47', 1.8411),
     (243, '1.0602.90.00', '2024-06-20T22:08:57', 0.1296),
     (243, '1.0906.20.00', '2024-06-25T09:53:48', 0.3742),
-    (243, '1.0403.90.00', '2024-06-07T18:48:46', 0.1875);
-
-INSERT INTO relatorio VALUES
-    (244, '2022-01-23', NULL, '01.274.895', '0001-23', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (244, '5802.10.00', 0.3101, 400),
-    (244, '1301.90.10', 0.1434, 400),
-    (244, '2915.70.3', 0.1064, 7652),
-    (244, '8448.51.10', 0.3427, 1352),
-    (244, '8517.62.51', 0.0531, 400),
-    (244, '2927.00.30', 0.3366, 7705),
-    (244, '8413.50.10', 0.0227, 2611),
-    (244, '3003.90.6', 0.5208, 400),
-    (244, '2924.29.99', 0.155, 400),
-    (244, '3808.99.19', 0.2573, 1839),
-    (244, '6403.19.00', 0.2948, 2269),
-    (244, '6812.99.10', 0.9965, 841),
-    (244, '8549.13.00', 0.0753, 400),
-    (244, '2914.23.10', 0.2592, 400),
-    (244, '7407.10.2', 0.033, 4103),
-    (244, '3827.90.00', 0.0346, 400),
-    (244, '5702.50.10', 0.1851, 400),
-    (244, '5402.19.10', 0.1488, 4286),
-    (244, '8211.10.00', 0.2714, 7535),
-    (244, '0307.43.10', 0.0721, 7259),
-    (244, '2827.51.00', 0.1301, 2462);
-
-INSERT INTO relatorio_serv VALUES
-    (244, '1.0402.33.00', '2022-02-13T09:33:44', 0.2565);
-
-INSERT INTO relatorio VALUES
-    (245, '2021-08-04', '2022-03-16', '79.821.563', '0001-65', '37.669.280/0001-29', 'Pesquisa de campo em emissões', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (245, '9032.89.25', 0.3252, 400),
-    (245, '4811.51.28', 1.2031, 5113),
-    (245, '5701.10.12', 1.3019, 5158),
-    (245, '2922.49.51', 0.1091, 5124),
-    (245, '0103.92.00', 0.4357, 12515),
-    (245, '8416.10.00', 0.3183, 7880),
-    (245, '8518.10.10', 0.306, 7391),
-    (245, '9110.90.00', 0.3559, 12408);
-
-INSERT INTO relatorio_serv VALUES
+    (243, '1.0403.90.00', '2024-06-07T18:48:46', 0.1875),
+    (244, '1.0402.33.00', '2022-02-13T09:33:44', 0.2565),
     (245, '1.1001.50.00', '2021-09-20T11:26:20', 0.1908),
     (245, '1.0502.19.00', '2021-09-21T05:49:53', 0.0672),
-    (245, '1.1405.22.00', '2021-09-25T12:40:54', 0.1187);
-
-INSERT INTO relatorio VALUES
-    (246, '2023-06-10', NULL, '75.893.062', '0001-31', '58.826.745/0001-34', 'Emissões e as metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (246, '8483.20.00', 0.2745, 7801),
-    (246, '2841.80.20', 0.1237, 1138),
-    (246, '3905.19.90', 0.2115, 8262);
-
-INSERT INTO relatorio_serv VALUES
+    (245, '1.1405.22.00', '2021-09-25T12:40:54', 0.1187),
     (246, '1.1501.20.00', '2023-07-09T05:18:40', 0.5941),
     (246, '1.1805.3', '2023-07-11T12:24:56', 0.0899),
     (246, '1.1105.59.00', '2023-07-15T17:20:40', 0.0301),
@@ -11010,43 +8674,10 @@ INSERT INTO relatorio_serv VALUES
     (246, '1.1409.23.00', '2023-07-15T22:19:45', 0.1987),
     (246, '1.2101.10.00', '2023-07-10T21:13:41', 0.0573),
     (246, '1.2304.12.00', '2023-07-27T15:31:08', 0.4743),
-    (246, '1.0906.11.00', '2023-07-18T16:28:32', 0.0982);
-
-INSERT INTO relatorio VALUES
-    (247, '2024-08-05', NULL, '13.690.872', '0001-09', '54.777.163/0001-46', 'Andamento das metas da ONU', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (247, '2906.19.30', 0.4867, 400),
-    (247, '5211.32.00', 0.068, 5027),
-    (247, '3003.90.87', 0.2905, 10635),
-    (247, '3301.29.12', 1.5639, 400),
-    (247, '7217.10.90', 0.2504, 2771),
-    (247, '2612.10.00', 1.188, 3382),
-    (247, '2804.50.00', 0.6275, 400),
-    (247, '3920.10.99', 0.8709, 5738),
-    (247, '6903.10.1', 0.4706, 4631),
-    (247, '9018.14.10', 0.4441, 5608),
-    (247, '8702.40.10', 0.2984, 1880),
-    (247, '8428.39.90', 0.3993, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (246, '1.0906.11.00', '2023-07-18T16:28:32', 0.0982),
     (247, '1.0401.22.00', '2024-09-28T21:14:15', 0.108),
     (247, '1.04', '2024-09-23T18:14:42', 0.057),
-    (247, '1.0502.14.5', '2024-09-13T00:55:12', 0.0562);
-
-INSERT INTO relatorio VALUES
-    (248, '2025-05-27', '2025-12-22', '45.690.123', '0001-36', '87.888.161/0001-65', 'Impacto de atividades agropecuárias na Amazônia', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (248, '2939.69.4', 1.4492, 3966),
-    (248, '9108.19.00', 0.0105, 400),
-    (248, '2933.39.29', 0.0922, 6202),
-    (248, '7220.20.10', 0.1621, 6669),
-    (248, '2908.99.13', 0.0417, 400),
-    (248, '2207.20.1', 0.0366, 5256),
-    (248, '7505.11.2', 0.0448, 683);
-
-INSERT INTO relatorio_serv VALUES
+    (247, '1.0502.14.5', '2024-09-13T00:55:12', 0.0562),
     (248, '1.0404.10.00', '2025-06-27T14:16:27', 2.3428),
     (248, '1.0301.29.00', '2025-06-03T07:06:24', 0.1179),
     (248, '1.1402.13.00', '2025-06-11T17:32:37', 0.0062),
@@ -11056,52 +8687,10 @@ INSERT INTO relatorio_serv VALUES
     (248, '1.1404.43.00', '2025-06-24T12:01:59', 0.2361),
     (248, '1.1409', '2025-06-24T17:16:27', 0.0115),
     (248, '1.1101.11.00', '2025-06-09T01:58:09', 0.051),
-    (248, '1.0502.23', '2025-06-23T05:20:15', 0.0908);
-
-INSERT INTO relatorio VALUES
-    (249, '2022-12-03', NULL, '01.274.895', '0001-23', '54.777.163/0001-46', 'O capitalismo como motor da exploração dos recursos naturais', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (249, '2917.11.20', 0.0305, 400),
-    (249, '0706.90.00', 0.0611, 3435),
-    (249, '5208.42.00', 0.0449, 5373),
-    (249, '2620.60.00', 0.1116, 400),
-    (249, '9028.90.10', 0.0065, 7956),
-    (249, '0511.91.10', 0.0386, 10933),
-    (249, '0713.90.90', 0.0053, 1418),
-    (249, '3915.90.00', 0.0114, 400),
-    (249, '0401.40.2', 0.0545, 2257),
-    (249, '2401.20.30', 0.0168, 4974),
-    (249, '9002.11.11', 0.041, 10730),
-    (249, '0303.89.65', 0.0241, 400),
-    (249, '4012.13.00', 0.063, 6702),
-    (249, '5408.21.00', 0.031, 1365),
-    (249, '2701.12.00', 0.1187, 2529),
-    (249, '2937.23.99', 0.0145, 10121),
-    (249, '8525.50.11', 0.0528, 1106),
-    (249, '8454.30.10', 0.1061, 8191),
-    (249, '3403.11.10', 0.0074, 2234),
-    (249, '3003.31.00', 0.0929, 8987),
-    (249, '3907.10.41', 0.0822, 12597),
-    (249, '7409.31.90', 0.0443, 400),
-    (249, '0713.20.90', 0.1543, 7590),
-    (249, '8908.00.00', 0.0201, 400),
-    (249, '1512.21.00', 0.0208, 9799),
-    (249, '1512.11.20', 0.0309, 9769),
-    (249, '0306.99.90', 0.08, 8530);
-
-INSERT INTO relatorio_serv VALUES
+    (248, '1.0502.23', '2025-06-23T05:20:15', 0.0908),
     (249, '1.1103.4', '2023-01-19T08:54:42', 0.0513),
     (249, '1.0401.30.00', '2023-01-17T21:50:16', 0.0606),
-    (249, '1.0301.10.00', '2023-01-14T08:22:33', 0.0137);
-
-INSERT INTO relatorio VALUES
-    (250, '2022-09-07', '2025-08-27', '01.274.895', '0001-40', '37.669.280/0001-29', 'Emissões em microempresas', NULL, NULL, NULL);
-
-INSERT INTO relatorio_prod VALUES
-    (250, '2915.50.20', 0.0939, 400);
-
-INSERT INTO relatorio_serv VALUES
+    (249, '1.0301.10.00', '2023-01-14T08:22:33', 0.0137),
     (250, '1.0503.26.00', '2022-10-26T05:19:35', 0.1848),
     (250, '1.0501.14.30', '2022-10-15T03:21:27', 0.0592),
     (250, '1.1506.22.00', '2022-10-03T10:44:25', 0.0346),
