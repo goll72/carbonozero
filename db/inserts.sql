@@ -8796,14 +8796,26 @@ INSERT INTO hist_co2 (
 -- tempo não disjuntos.
 CALL remove_contradictory_rules();
 
+-- Impede que regras legislativas contraditórias sejam inseridas.
 CREATE OR REPLACE TRIGGER reg_leg_no_contradictory_rules
     BEFORE INSERT OR UPDATE ON reg_leg
     FOR EACH ROW
-    WHEN (new.tipo = 'if')
-    EXECUTE FUNCTION no_contradictory_rules();
+    EXECUTE FUNCTION reg_leg_no_contradictory_rules();
 
 -- Remove todas as contribuições para ações de
 -- compensação cujo valor limite foi atingido.
 CALL remove_contrib_exceeding_lim();
+
+-- Impede que contribuições que excedam o valor limite sejam inseridas.
+CREATE OR REPLACE TRIGGER contrib_co2_below_lim
+    BEFORE INSERT OR UPDATE ON contrib_co2
+    FOR EACH ROW
+    EXECUTE FUNCTION contrib_co2_below_lim();
+
+-- Impede que vínculos de contribuição sejam criados se o valor limite da ação já foi atingido.
+CREATE OR REPLACE TRIGGER vinc_contrib_co2_below_lim
+    BEFORE INSERT OR UPDATE ON vinc_contrib_co2
+    FOR EACH ROW
+    EXECUTE FUNCTION vinc_contrib_co2_below_lim();
 
 COMMIT;
