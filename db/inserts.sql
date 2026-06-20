@@ -8818,4 +8818,81 @@ CREATE OR REPLACE TRIGGER vinc_contrib_co2_below_lim
     FOR EACH ROW
     EXECUTE FUNCTION vinc_contrib_co2_below_lim();
 
+-- Funções para definir as multas e isenções fiscais dos relatórios
+
+-- Decide se uma lei se aplica ao relatório pela data
+CREATE OR REPLACE FUNCTION is_inside_rl_date(relatorio_data DATE, vigencia DATE, revogacao DATE) RETURNS BOOLEAN AS $$
+BEGIN
+    IF revogacao = NULL THEN
+        RETURN relatorio_data > vigencia;
+    END IF;
+    RETURN relatorio_data BETWEEN vigencia AND revogacao;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Decide se uma lei se aplica ao relatório pela localização
+CREATE OR REPLACE FUNCTION is_inside_rl_location(relatorio_cod_ibge CHAR(7), rl_cod CHAR(7)) RETURNS BOOLEAN AS $$
+BEGIN
+    RETURN relatorio_cod_ibge = rl_cod OR relatorio_cod_ibge = LEFT(rl_cod, 2);
+END;
+$$ LANGUAGE plpgsql;
+
+-- Calcula apenas a multa, por enquanto
+CREATE OR REPLACE FUNCTION calculate_fine_and_tf(relatorio_id INTEGER, relatorio_data DATE,
+    cod_ibge CHAR(7), OUT fine DECIMAL, OUT tf DECIMAL) AS $$
+DECLARE
+    co2_prod DECIMAL;
+    multa_prod DECIMAL;
+    co2_serv DECIMAL;
+    multa_serv DECIMAL;
+
+BEGIN
+    SELECT SUM(prod.tco2_p_un * prod.qtde), SUM((prod.tco2_p_un * prod.qtde - rl.lim_multa) * rl.base_calc_multa)
+        INTO co2_prod, multa_prod
+        FROM relatorio_prod AS prod
+        JOIN reg_leg AS rl
+        ON rl.prod = prod.ncm AND
+            rl.tipo = 'multa' AND
+            is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+            is_inside_rl_location(cod_ibge, rl.ent)
+        WHERE relatorio_id = prod.id_relatorio AND prod.tco2_p_un * prod.qtde > rl.lim_multa;
+
+    SELECT SUM(co2), SUM(multa) INTO co2_serv, multa_serv
+        FROM (
+            SELECT SUM(serv.tco2) AS co2, (SUM(serv.tco2) - rl.lim_multa) * rl.base_calc_multa AS multa
+                FROM relatorio_serv AS serv
+                JOIN reg_leg AS rl
+                ON rl.serv = serv.nbs AND
+                    rl.tipo = 'multa' AND
+                    is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+                    is_inside_rl_location(cod_ibge, rl.ent)
+                WHERE relatorio_id = serv.id_relatorio
+                GROUP BY serv.nbs, rl.lim_multa, rl.base_calc_multa
+                    HAVING SUM(serv.tco2) > rl.lim_multa
+        );
+
+    SELECT (co2_serv + co2_prod - rl.lim_multa) * rl.base_calc_multa INTO fine
+        FROM reg_leg AS rl
+        WHERE rl.prod = NULL AND rl.serv = NULL AND
+            rl.tipo = 'multa' AND
+            is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+            is_inside_rl_location(cod_ibge, rl.ent) AND
+            co2_serv + co2_prod > rl.lim_multa;
+
+    fine := fine + multa_serv + multa_prod;
+    fine := 1;
+
+    IF fine > 0 THEN
+        tf := 0;
+    END IF;
+    tf := 0;
+    --calcular if
+END;
+$$ LANGUAGE plpgsql;
+
+UPDATE relatorio
+    SET multa_aplic = 1
+    -- SET multa_aplic = (calculate_fine_and_tf(relatorio.id, relatorio.dt_pub, relatorio.mun_cod)).fine
+    WHERE dt_pub IS NOT NULL;
+
 COMMIT;
