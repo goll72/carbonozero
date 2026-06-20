@@ -11,12 +11,11 @@ PREPARE reg_leg_mun(TEXT, CHAR(2)) AS
     )
     SELECT * FROM reg_leg, cod WHERE ent = cod.uf OR ent = cod.mun; 
 
-
 -- Todas as filiais que não receberam nenhuma multa em um intervalo
 -- de datas passadas por parâmetro   
 --
 -- Argumentos:
---  - Intervalo de data, na qual queira saber quais filiais levaram multa
+--  - Intervalo de data, na qual queira saber quais filiais não receberam multa
 --
 -- Assumindo:
 --  - Foi adotado que a Instituição de pesquisa começa a analisar determinada
@@ -46,8 +45,8 @@ PREPARE filial_sem_multa_p(DATERANGE) AS
             )
             AND r.multa_aplic > 0;
 
--- Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação,
--- nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma area Z.
+-- Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação
+-- nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma área Z.
 -- O resultado deve ser ordenado, em ordem decrescente, pela porcentagem.
 --
 -- Argumentos:
@@ -69,7 +68,7 @@ PREPARE filial_contrib_min_prop(DECIMAL, INT, DECIMAL, TEXT) AS
                 JOIN contrib_co2 AS c on c.id_contrib = v.id
                 WHERE
                     DATERANGE(
-                        (current_date - make_interval(months => $2))::DATE,
+                        date_trunc('month', current_date - make_interval(months => $2))::DATE,
                         current_date
                     ) @> c.dt
                GROUP BY v.cnpj_filial_raiz, v.cnpj_filial_ordem
