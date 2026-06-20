@@ -46,7 +46,52 @@ PREPARE filial_sem_multa_p(DATERANGE) AS
             )
             AND r.multa_aplic > 0;
 
--- Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação, nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma area Z
+-- Todas as filiais que contribuíram mais do que $"R$X"$ em ações de compensação,
+-- nos últimos K meses, sendo pelo menos Y% de suas contribuições em uma area Z.
+-- O resultado deve ser ordenado, em ordem decrescente, pela porcentagem.
+--
+-- Argumentos:
+--  - valor mínimo contribuído pela filial (X)
+--  - quantidade de meses a serem analisados (K)
+--  - porcentagem de contribuições que devem pertencer a uma determina área, de 0 a 100 (Y)
+--  - área (Z IN ('transporte', 'energia', 'reciclagem'))
+PREPARE filial_contrib_min_prop(DECIMAL, INT, DECIMAL, TEXT) AS
+    WITH
+        contrib_filial(cnpj_raiz, cnpj_ordem, transp, energ, recic) AS (
+            SELECT
+                    v.cnpj_filial_raiz,
+                    v.cnpj_filial_ordem,
+                    SUM(c.valor * a.p_co2_transp / 100),
+                    SUM(c.valor * a.p_co2_energ / 100),
+                    SUM(c.valor * a.p_co2_recic / 100)
+                FROM vinc_contrib_co2 AS v
+                JOIN acao_co2 AS a on (v.cnpj_organiz_socioamb, v.dt_inicio_acao_co2, v.nome_acao_co2) = (a.cnpj, a.dt_inicio, a.nome)
+                JOIN contrib_co2 AS c on c.id_contrib = v.id
+                WHERE
+                    DATERANGE(
+                        (current_date - make_interval(months => $2))::DATE,
+                        current_date
+                    ) @> c.dt
+               GROUP BY v.cnpj_filial_raiz, v.cnpj_filial_ordem
+        ),
+        contrib_filial_p(cnpj_raiz, cnpj_ordem, p) AS (
+            SELECT
+                    cnpj_raiz,
+                    cnpj_ordem,
+                    (
+                        CASE
+                            WHEN $4 = 'transporte' THEN 100 * transp / (transp + energ + recic)
+                            WHEN $4 = 'energia' THEN 100 * energ / (transp + energ + recic)
+                            WHEN $4 = 'reciclagem' THEN 100 * recic / (transp + energ + recic)
+                        END
+                    )
+                FROM contrib_filial
+        )
+    SELECT u.cnpj_raiz, u.cnpj_ordem, transp + energ + recic AS total, transp, energ, recic, p
+        FROM contrib_filial AS u
+        JOIN contrib_filial_p AS v ON (u.cnpj_raiz, u.cnpj_ordem) = (v.cnpj_raiz, v.cnpj_ordem)
+        WHERE transp + energ + recic >= $1 AND v.p >= $3
+        ORDER BY v.p DESC;
 
 -- Todas as filiais cujas emissões nos últimos X meses foram oriundas majoritariamente de um único tipo de produto ou serviço.
 -- PREPARE filiais_emissao_concentrada_k(DECIMAL, INT)
