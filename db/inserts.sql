@@ -8820,6 +8820,19 @@ CREATE OR REPLACE TRIGGER vinc_contrib_co2_below_lim
 
 -- Funções para definir as multas e isenções fiscais dos relatórios
 
+-- Colocar o código do município nos relatórios
+CREATE OR REPLACE FUNCTION set_mun_cod_relatorio(cnpj_filial_raiz CNPJ_RAIZ_TIPO, cnpj_filial_ordem CNPJ_ORDEM_TIPO, OUT cod CHAR(7)) AS $$
+BEGIN
+    SELECT f.mun_cod INTO cod
+        FROM filial as f
+        WHERE f.cnpj_raiz = cnpj_filial_raiz
+            AND f.cnpj_ordem = cnpj_filial_ordem;
+END;
+$$ LANGUAGE plpgsql;
+
+UPDATE relatorio
+    SET mun_cod = set_mun_cod_relatorio(relatorio.cnpj_filial_raiz, cnpj_filial_ordem);
+
 -- Decide se uma lei se aplica ao relatório pela data
 CREATE OR REPLACE FUNCTION is_inside_rl_date(relatorio_data DATE, vigencia DATE, revogacao DATE) RETURNS BOOLEAN AS $$
 BEGIN
@@ -8880,19 +8893,20 @@ BEGIN
             co2_serv + co2_prod > rl.lim_multa;
 
     fine := fine + multa_serv + multa_prod;
-    fine := 1;
 
+    -- Não pode ter multa e if ao mesmo tempo
     IF fine > 0 THEN
         tf := 0;
+        RETURN;
     END IF;
-    tf := 0;
+
     --calcular if
+    tf := 40;
 END;
 $$ LANGUAGE plpgsql;
 
 UPDATE relatorio
-    SET multa_aplic = 1
-    -- SET multa_aplic = (calculate_fine_and_tf(relatorio.id, relatorio.dt_pub, relatorio.mun_cod)).fine
+    SET (multa_aplic, aliq_if) = (SELECT fine, tf FROM calculate_fine_and_tf(relatorio.id, relatorio.dt_pub, relatorio.mun_cod))
     WHERE dt_pub IS NOT NULL;
 
 COMMIT;

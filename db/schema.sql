@@ -136,13 +136,13 @@ CREATE TABLE acao_co2 (
     CONSTRAINT acao_co2_fk
         FOREIGN KEY (cnpj) REFERENCES organiz_socioamb(cnpj)
         ON DELETE RESTRICT
-        ON UPDATE CASCADE
+        ON UPDATE CASCADE,
 
     CONSTRAINT acao_co2_p_co2_valida
-        CHECK (COALESCE(p_co2_transp, p_co2_energ, p_co2_recic) IS NULL OR p_co2_transp + p_co2_energ + p_co2_recic = 100);
+        CHECK (COALESCE(p_co2_transp, p_co2_energ, p_co2_recic) IS NULL OR p_co2_transp + p_co2_energ + p_co2_recic = 100),
 
     CONSTRAINT acao_co2_p_custo_valida
-        CHECK (COALESCE(p_custo_transp, p_custo_energ, p_custo_recic) IS NULL OR p_custo_transp + p_custo_energ + p_custo_recic = 100);
+        CHECK (COALESCE(p_custo_transp, p_custo_energ, p_custo_recic) IS NULL OR p_custo_transp + p_custo_energ + p_custo_recic = 100)
 );
 
 -- MRel: Financia
