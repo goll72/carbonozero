@@ -2,14 +2,12 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.prompt import Prompt
 
-
-import os
 import sys
 
 import asyncio
 import asyncpg
 
-from .common import text_bar
+from .common import text_bar, USER, DATABASE, conn_status
 from .inst_cient import menu_inst_cient
 from .org_adm import menu_org_adm
 
@@ -17,13 +15,10 @@ from .org_adm import menu_org_adm
 async def main():
     console = Console()
 
-    user = os.environ.get("CZUSER", os.environ.get("PGUSER", "carbonozero"))
-    database = os.environ.get("CZDATABASE", os.environ.get("PGDATABASE", "carbonozero"))
-    
-    conn = await asyncpg.connect(user=user, database=database)
+    conn = await asyncpg.connect(user=USER, database=DATABASE)
 
     while True:
-        console.print(text_bar("Sistema de Gestão --- CarbonoZero", console.width, aside=f"conectado: [{user}@{database}]"))
+        console.print(text_bar("Sistema de Gestão --- CarbonoZero", console.width, aside=conn_status(conn)))
 
         menu = Panel(
             "\n".join([
@@ -45,8 +40,6 @@ async def main():
                 await menu_inst_cient(console, conn)
             case "2":
                 await menu_org_adm(console, conn)
-
-        console.print()
 
 
 if __name__ == "__main__":
