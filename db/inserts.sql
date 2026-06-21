@@ -8859,6 +8859,8 @@ DECLARE
     co2_serv DECIMAL;
     multa_serv DECIMAL;
     multa_geral DECIMAL;
+    produtorio DECIMAL;
+    aplic RECORD;
 
 BEGIN
     SELECT SUM(prod.tco2_p_un * prod.qtde), SUM(GREATEST((prod.tco2_p_un * prod.qtde - rl.lim_multa) * rl.base_calc_multa, 0))
@@ -8914,6 +8916,54 @@ BEGIN
 
     --calcular if
     tf := 25;
+
+    produtorio := 1;
+    FOR aplic IN
+        SELECT prod.tco2_p_un * prod.qtde AS co2, rl.meta_if AS meta, rl.aliq_if AS aliq 
+            FROM relatorio_prod AS prod
+            JOIN reg_leg AS rl
+            ON rl.prod = prod.ncm AND
+                rl.tipo = 'if' AND
+                is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+                is_inside_rl_location(cod_ibge, rl.ent)
+            WHERE relatorio_id = prod.id_relatorio
+    LOOP
+        IF aplic.co2 <= aplic.meta THEN
+            produtorio := produtorio * (1 / (1 + aplic.aliq));
+        END IF;
+    END LOOP;
+
+
+    FOR aplic IN
+        SELECT SUM(serv.tco2) AS co2, rl.meta_if AS meta, rl.aliq_if AS aliq
+            FROM relatorio_serv AS serv
+            JOIN reg_leg AS rl
+            ON rl.serv = serv.nbs AND
+                rl.tipo = 'if' AND
+                is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+                is_inside_rl_location(cod_ibge, rl.ent)
+            WHERE relatorio_id = serv.id_relatorio
+            GROUP BY serv.nbs, rl.meta_if, rl.aliq_if
+    LOOP
+        IF aplic.co2 <= aplic.meta THEN
+            produtorio := produtorio * (1 / (1 + aplic.aliq));
+        END IF;
+    END LOOP;
+
+    FOR aplic IN
+        SELECT co2_serv + co2_prod AS co2, rl.meta_if AS meta, rl.aliq_if AS aliq
+            FROM reg_leg AS rl
+            WHERE rl.prod IS NULL AND rl.serv IS NULL AND
+                rl.tipo = 'if' AND
+                is_inside_rl_date(relatorio_data, rl.dt_vigencia, rl.dt_revogacao) AND
+                is_inside_rl_location(cod_ibge, rl.ent)
+    LOOP
+        IF aplic.co2 <= aplic.meta THEN
+            produtorio := produtorio * (1 / (1 + aplic.aliq));
+        END IF;
+    END LOOP;
+
+    tf = ROUND(1 - produtorio, 4);
 END;
 $$ LANGUAGE plpgsql;
 
