@@ -8818,6 +8818,13 @@ CREATE OR REPLACE TRIGGER vinc_contrib_co2_below_lim
     FOR EACH ROW
     EXECUTE FUNCTION vinc_contrib_co2_below_lim();
 
+-- Impede que um ente federativo seja associado ao tipo errado
+CREATE OR REPLACE TRIGGER ent_fed_confirm
+    BEFORE INSERT OR UPDATE ON uf OR org_adm_mun
+    FOR EACH ROW
+    EXECUTE FUNCTION ent_fed_confirm();
+
+
 -- Funções para definir as multas e isenções fiscais dos relatórios
 
 -- Colocar o código do município nos relatórios
@@ -8966,6 +8973,26 @@ BEGIN
     tf = ROUND(1 - produtorio, 4);
 END;
 $$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION ent_fed_confirm()
+RETURNS TRIGGER AS $$
+DECLARE 
+    v_tipo CHAR(7);
+BEGIN
+    SELECT tipo INTO v_tipo 
+    FROM ent_fed AS ent
+    WHERE ent.cod_ibge = NEW.cod_ibge;
+
+    IF TG_TABLE_NAME = 'uf' AND v_tipo != 'uf' THEN
+        RAISE EXCEPTION 'Inconsistencia detectada: o codigo IBGE % esta cadastrado como tipo "municipio" e não "uf".', NEW.cod_ibge;
+    ELSEIF TG_TABLE_NAME = 'org_adm_mun' AND v_tipo != 'mun' THEN
+        RAISE EXCEPTION 'Inconsistencia detectada: o codigo IBGE % esta cadastrado como tipo "uf" e não "municipio".', NEW.cod_ibge;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
 
 UPDATE relatorio
     SET (multa_aplic, aliq_if) = (SELECT fine, tf FROM calculate_fine_and_tf(relatorio.id, relatorio.dt_pub, relatorio.mun_cod))

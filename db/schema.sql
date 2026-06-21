@@ -229,7 +229,7 @@ CREATE TABLE prod_ncm (
 CREATE TYPE REG_LEG_TIPO AS ENUM ('if', 'multa');
 
 CREATE TABLE reg_leg (
-    ent CHAR(9),
+    ent CHAR(7),
     tipo REG_LEG_TIPO,
     nro INT,
     ano INT,
