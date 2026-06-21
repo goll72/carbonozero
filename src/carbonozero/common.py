@@ -1,4 +1,5 @@
 import os
+import re
 
 import rich
 import grapheme
@@ -39,3 +40,7 @@ def conn_status(conn: asyncpg.Connection) -> str:
         return "desconectado: [-]"
 
     return f"conectado: [{USER}@{DATABASE}]"
+
+def cnpj_validation(cnpj: str) -> bool:
+    if not re.match(r"^[0-9A-Z]{2}\.[0-9A-Z]{3}\.[0-9A-Z]{3}/[0-9A-Z]{4}-[0-9]{2}$", cnpj):
+        raise inquirer.errors.ValidationError("", reason="CNPJ inválido")
