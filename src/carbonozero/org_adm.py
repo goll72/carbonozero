@@ -30,11 +30,14 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
             case "1":
                 resp_table = await reg_leg_query(conn)
                 console.print(resp_table)
+            case "2":
+                resp_text = await reg_leg_insertion(conn)
+                console.print(resp_text[0] + ": " + resp_text[1])
 
-async def reg_leg_query(conn: asyncpg.Connection):
+async def reg_leg_query(conn: asyncpg.Connection) -> Table:
     municipio_nome = str(Prompt.ask("Insira o nome do município > "))
 
-    sigla_uf = str(Prompt.ask("Insira o nome do município > ")).upper()
+    sigla_uf = str(Prompt.ask("Insira a sigla do estado > ")).upper()
     if len(sigla_uf) != 2:
         return;
 
@@ -88,3 +91,19 @@ async def reg_leg_query(conn: asyncpg.Connection):
         query_list.add_row(str(row["nro"]), str(row["ano"]), str(row["dt_vigencia"]), str(row["dt_revogacao"]), refer, cod_nacional, tipo_pretty, lim_meta, multa_if)
 
     return query_list;
+
+async def reg_leg_insertion(conn: asyncpg.Connection):
+    municipio_nome = str(Prompt.ask("Insira o nome do município > "))
+
+    sigla_uf = str(Prompt.ask("Insira a sigla do estado > ")).upper()
+    if len(sigla_uf) != 2:
+        return;
+
+    cod_ibge = await conn.fetchrow("SELECT cod_ibge FROM org_adm_mun AS adm WHERE adm.nome_mun = $1 AND adm.sigla_uf = $2;",
+        municipio_nome, sigla_uf
+    )
+
+    ret_text = "Operação não-sucedida"
+    ret_expl = "Donatello vagabundo"
+
+    return [ret_text, ret_expl]
