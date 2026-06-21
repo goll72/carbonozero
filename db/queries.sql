@@ -208,7 +208,8 @@ WHERE
 --
 -- Argumento:
 --  - nome do município 
-PREPARE co2_por_inst_cient_em_municipio(TEXT) AS
+--  - sigla do estado
+PREPARE co2_por_inst_cient_em_municipio(TEXT, TEXT) AS
     SELECT 
         h.cnpj_raiz AS Empresa, 
         avg(h.emissao_tot - h.compens_tot) AS Media
@@ -221,7 +222,7 @@ PREPARE co2_por_inst_cient_em_municipio(TEXT) AS
             JOIN org_adm_mun AS mun 
             ON ic.mun_cod = mun.cod_ibge
         WHERE 
-            mun.nome_mun = $1 
+            mun.nome_mun = $1 AND mun.sigla_uf = $2
             AND h.cnpj_raiz = r.cnpj_filial_raiz
     )
     GROUP BY h.cnpj_raiz
