@@ -8,6 +8,8 @@ dependencies = [
     "asyncpg>=0.31.0",
     "faker>=40.23.0",
     "grapheme>=0.6.0",
+    "inquirer>=3.4.1",
     "python-dateutil>=2.9.0.post0",
     "rich>=15.0.0",
+    "wcwidth<0.7.0",
 ]
