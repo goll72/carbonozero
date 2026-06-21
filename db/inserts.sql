@@ -8819,11 +8819,15 @@ CREATE OR REPLACE TRIGGER vinc_contrib_co2_below_lim
     EXECUTE FUNCTION vinc_contrib_co2_below_lim();
 
 -- Impede que um ente federativo seja associado ao tipo errado
-CREATE OR REPLACE TRIGGER ent_fed_confirm
-    BEFORE INSERT OR UPDATE ON uf OR org_adm_mun
+CREATE OR REPLACE TRIGGER ent_fed_confirm_uf
+    BEFORE INSERT OR UPDATE ON uf
     FOR EACH ROW
     EXECUTE FUNCTION ent_fed_confirm();
 
+CREATE OR REPLACE TRIGGER ent_fed_confirm_mun
+    BEFORE INSERT OR UPDATE ON org_adm_mun
+    FOR EACH ROW
+    EXECUTE FUNCTION ent_fed_confirm();
 
 -- Funções para definir as multas e isenções fiscais dos relatórios
 

@@ -163,45 +163,44 @@ PREPARE filiais_emissao_major(DATERANGE) AS
 --
 -- Argumento:
 --  - tempo, em meses, a ser analisado 
-PREPARE regra_if_nao_atingida(DATARANGE)
-    SELECT
-        -- Nome do ent
-        rl.tipo, rl.ano, rl.nro, rl.dt_vigencia
-    FROM reg_leg AS rl
-        -- Chegar nas empresas que se envolveram os os produtos/serviços que tal lei cobre
-        LEFT OUTER JOIN relatorio_prod AS rp
-            ON rl.prod = rp.ncm AND rl.meta_if IS NOT NULL -- Isso que define um if (Ta aqui para otimizar)    
-        LEFT OUTER JOIN relatorio_serv AS rs
-            ON rl.serv = rs.nbs
-        JOIN relatorio AS r
-            ON r.id = rp.id_relatorio OR r.id = rs.id_relatorio
-        JOIN filial AS f
-            ON (r.cnpj_filial_raiz = f.cnpj_raiz
-            AND r.cnpj_filial_ordem = f.cnpj_ordem)
-        -- Precisa para determinar se a empresa que teve tal produto/serviço avaliado está no lugar onde a lei vale
-        JOIN org_adm_mun AS mun
+PREPARE regra_if_nao_atingida(DATARANGE) AS
+SELECT
+    rl.tipo, rl.ano, rl.nro, rl.dt_vigencia
+FROM reg_leg AS rl
+WHERE 
+    rl.meta_if IS NOT NULL -- Garante que estamos olhando apenas para incentivos fiscais
+    AND NOT EXISTS (
+        SELECT 1
+        FROM relatorio AS r
+        JOIN filial AS f 
+            ON r.cnpj_filial_raiz = f.cnpj_raiz AND r.cnpj_filial_ordem = f.cnpj_ordem
+        JOIN org_adm_mun AS mun 
             ON f.mun_cod = mun.cod_ibge
-        JOIN uf AS uf
+        JOIN uf AS uf 
             ON mun.sigla_uf = uf.sigla
-    WHERE 
-        (mun.cod_ibge = rl.ent OR uf.cod_ibge = rl.ent)
-        AND $1 @> r.data_pub
-
-        AND (
-                (
-                    rl.prod IS NOT NULL
-                    AND rl.prod = rp.ncm
-                    AND rp.tco2_p_un * rp.qtde <= rl.meta_if
-                )
-
+        WHERE 
+            $1 @> r.dt_pub -- Data do relatório dentro
+            AND (mun.cod_ibge = rl.ent OR uf.cod_ibge = rl.ent)
+            AND (
+                -- Checa a meta para produtos
+                (rl.prod IS NOT NULL AND EXISTS (
+                    SELECT 1 
+                    FROM relatorio_prod rp
+                    WHERE rp.id_relatorio = r.id
+                      AND rp.ncm = rl.prod
+                      AND (rp.tco2_p_un * rp.qtde) <= rl.meta_if
+                ))
                 OR
-
-                (
-                    rl.serv IS NOT NULL
-                    AND rl.serv = rs.nbs
-                    AND rs.tco2 <= rl.meta_if
-                )
+                -- Checa a meta para serviços
+                (rl.serv IS NOT NULL AND EXISTS (
+                    SELECT 1 
+                    FROM relatorio_serv rs
+                    WHERE rs.id_relatorio = r.id
+                      AND rs.nbs = rl.serv
+                      AND rs.tco2 <= rl.meta_if
+                ))
             )
+    );
 
 
 -- Para todas as Instituições Cientificas do município X, listar a média do histórico de CO2
