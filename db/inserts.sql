@@ -8926,8 +8926,6 @@ BEGIN
     END IF;
 
     --calcular if
-    tf := 25;
-
     produtorio := 1;
     FOR aplic IN
         SELECT prod.tco2_p_un * prod.qtde AS co2, rl.meta_if AS meta, rl.aliq_if AS aliq 
