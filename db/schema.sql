@@ -226,13 +226,15 @@ CREATE TABLE prod_ncm (
         PRIMARY KEY(ncm)
 );
 
-CREATE TYPE REG_LEG_TIPO AS ENUM ('if', 'multa');
+CREATE TYPE REG_LEG_TIPO AS ENUM ('ordinaria', 'complementar');
+CREATE TYPE REG_LEG_CATEGORIA AS ENUM ('if', 'multa');
 
 CREATE TABLE reg_leg (
     ent CHAR(7),
-    tipo REG_LEG_TIPO,
+    categoria REG_LEG_CATEGORIA,
     nro INT,
     ano INT,
+    tipo REG_LEG_TIPO,
 
     dt_vigencia DATE NOT NULL,
     dt_revogacao DATE,
@@ -247,7 +249,7 @@ CREATE TABLE reg_leg (
     aliq_if DECIMAL,
 
     CONSTRAINT reg_leg_pk
-        PRIMARY KEY (ent, tipo, nro, ano),
+        PRIMARY KEY (ent, categoria, nro, ano, tipo),
     CONSTRAINT reg_leg_fk_ent
         FOREIGN KEY (ent) REFERENCES ent_fed(cod_ibge)
         ON DELETE RESTRICT 
