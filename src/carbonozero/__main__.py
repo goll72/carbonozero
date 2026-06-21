@@ -2,6 +2,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.prompt import Prompt
 
+import os
 import sys
 
 import asyncio
@@ -14,6 +15,9 @@ from .org_adm import menu_org_adm
 
 async def main():
     console = Console()
+
+    # Para obtermos paginação com cores
+    os.environ["MANPAGER"] = "less -r"
 
     conn = await asyncpg.connect(user=USER, database=DATABASE)
 
