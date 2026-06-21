@@ -117,8 +117,8 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     inquirer.List("uf", "Escolha a UF", choices=available_uf, carousel=True)
                 ])
 
-                mun_cod = conn.fetchrow("""
-                    SELECT cod_ibge FROM org_adm_mun WHERE cod_nome_mun = $1 AND sigla_uf = $2
+                mun_cod = await conn.fetchval("""
+                    SELECT cod_ibge FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
                 """, answer["mun"], answer["uf"])
 
                 if mun_cod is not None:
