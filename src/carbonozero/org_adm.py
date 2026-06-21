@@ -5,6 +5,9 @@ from rich.table import Table
 
 from rich.markup import escape
 
+import re
+import time
+
 import inquirer
 
 from .common import text_bar, conn_status
@@ -38,15 +41,57 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
                 console.print(resp_text[0] + ": " + resp_text[1])
 
 
+def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], *, show_ent_fed: bool = False):
+    with console.pager(styles=True):
+        for row in result:
+            [ent, tipo, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
+
+            if ncm_desc:
+                ncm_desc = re.sub(r"^\s*-+\s*([dD]e)?\s*", "", ncm_desc)
+
+            if nbs_desc:
+                nbs_desc = re.sub(r"^\s*-+\s*([dD]e)?\s*", "", nbs_desc)
+
+            match tipo:
+                case "if":
+                    tipo_desc = "[green]Incentivo Fiscal[/green]"
+                    reg_desc = f"alíquota de {aliq_if:.3}% para emissões mensais que não excedam {meta_if:.3} ton. CO₂"
+                case "multa":
+                    tipo_desc = "[red]Multa[/red]"
+                    reg_desc = f"multa de R$ {base_calc_multa:.3} para cada ton. de CO₂ após {lim_multa:.3} ton. CO₂ mensais"
+
+            console.print(f"Lei ṇ. [blue]{nro: 5}/{ano}[/blue], de {tipo_desc}:")
+            console.print(f"    Entrou em vigor em [yellow]{dt_vigencia}[/yellow]{f", foi revogada em [yellow]{dt_revogacao}[/yellow]" if dt_revogacao is not None else ""}")
+            console.print(u"    Dispõe sobre:")
+
+            obj_desc = []
+
+            if ncm is not None:
+                obj_desc.append(f"emissões oriundas da fabricação/processamento de [yellow]{escape(ncm_desc)}[/yellow] ({ncm.strip()})")
+
+            if nbs is not None:
+                obj_desc.append(f"emissões oriundas da prestação de [yellow]{escape(nbs_desc)}[/yellow] ({nbs.strip()})")
+
+            if not obj_desc:
+                obj_desc.append("emissões em geral")
+
+            console.print(" " * 8 + f"\n{" " * 8}".join(obj_desc))
+            console.print()
+            console.print(f"    {reg_desc}")
+            console.print()
+            console.print()
+
+
 async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
     answer = inquirer.prompt([inquirer.List("ent_fed", message="Você quer conferir uma UF ou um município?", choices=["UF", "Município"])])
 
+    result = await conn.fetch("SELECT sigla FROM uf ORDER BY sigla ASC")
+    available_uf = [x[0] for x in result]
+
     match answer["ent_fed"]:
         case "UF":
-            available = await conn.fetch("SELECT sigla FROM uf ORDER BY sigla")
-
             answer = inquirer.prompt([
-                inquirer.List("uf", "Escolha a UF", choices=[x[0] for x in available], carousel=True)
+                inquirer.List("uf", "Escolha a UF", choices=available_uf, carousel=True)
             ])
 
             result = await conn.fetch("""
@@ -56,7 +101,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                         serv, prod,
                         lim_multa, base_calc_multa,
                         meta_if, aliq_if,
-                        serv_nbs.nome AS nbs_desc, prod_ncm.nome AS ncm_desc 
+                        serv_nbs.nome AS nbs_desc, prod_ncm.nome AS ncm_desc
                     FROM reg_leg
                     JOIN prod_ncm ON prod = ncm
                     JOIN serv_nbs ON serv = nbs
@@ -64,84 +109,41 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     ORDER BY tipo, ano, dt_vigencia
             """, answer["uf"])
 
-            with console.pager():
-                for row in result:
-                    [ent, tipo, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
-
-                    match tipo:
-                        case "if":
-                            tipo_desc = "[green]Incentivo Fiscal[/green]"
-                        case "multa":
-                            tipo_desc = "[red]Multa[/red]"
-
-                    console.print(f"Lei ṇ. [blue]{nro: 5}/{ano}[/blue], de {tipo_desc}:")
-                    console.print(f"    Entrou em vigor em [yellow]{dt_vigencia}[/yellow]{f", foi revogada em [yellow]{dt_revogacao}[/yellow]" if dt_revogacao is not None else ""}")
-                    console.print(u"    Dispõe sobre:")
-
-                    match [nbs, ncm]:
-                        case [None, None]:
-                            obj_desc = "todas as emissões em um determinado mês"
-                        case [_, None]:
-                            obj_desc = f"emissões oriundas da industrialização/beneficiamento/processamento de [yellow]{escape(ncm_desc)} ({ncm})[/yellow]"
-                        case [None, _]:
-                            obj_desc = f"emissões oriundas da prestação de [yellow]{escape(nbs_desc)}[/yellow] ({nbs})"
-                        case [_, _]:
-                            console.print("wtf")
-
-                    console.print(f"        {obj_desc}")
+            print_reg_leg_query_results(console, result)
         case "Município":
-            municipio_nome = str(Prompt.ask("Insira o nome do município > "))
+            while True:
+                answer = inquirer.prompt([
+                    inquirer.Text("mun", "Município"),
+                    inquirer.List("uf", "Escolha a UF", choices=available_uf, carousel=True)
+                ])
 
-    reg_leg_list = await conn.fetch('''
-        WITH cod(mun, uf) AS (
-            SELECT cod_ibge, substring(cod_ibge, 1, 2) FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
-        )
-        SELECT * FROM reg_leg, cod WHERE ent = cod.uf
-            OR ent = cod.mun
-        ORDER BY reg_leg.nro ASC;''',
-        municipio_nome, sigla_uf
-    )
+                mun_cod = conn.fetchrow("""
+                    SELECT cod_ibge FROM org_adm_mun WHERE cod_nome_mun = $1 AND sigla_uf = $2
+                """, answer["mun"], answer["uf"])
 
-    if len(reg_leg_list) == 0:
-        return;
+                if mun_cod is not None:
+                    break
 
-    query_list = Table(title = "Regras Legislativas")
-    query_list.add_column("Número")
-    query_list.add_column("Ano")
-    query_list.add_column("Data de vigência")
-    query_list.add_column("Data de revogação")
-    query_list.add_column("Referente")
-    query_list.add_column("NCM/NBS")
-    query_list.add_column("Tipo")
-    query_list.add_column("Limite/Meta")
-    query_list.add_column("Multa por tCO2/Alíquota")
+                console.print("[red]Município não encontrado[/red]")
+                console.print()
 
+            result = await conn.fetch("""
+                SELECT  ent, tipo, nro, ano,
+                        to_char(dt_vigencia, 'DD/MM/YYYY') AS dt_vigencia,
+                        to_char(dt_revogacao, 'DD/MM/YYYY') AS dt_revogacao,
+                        serv, prod,
+                        lim_multa, base_calc_multa,
+                        meta_if, aliq_if,
+                        serv_nbs.nome AS nbs_desc, prod_ncm.nome AS ncm_desc
+                    FROM reg_leg
+                    JOIN prod_ncm ON prod = ncm
+                    JOIN serv_nbs ON serv = nbs
+                    WHERE ent = $1 OR ent = substring($1, 1, 2)
+                    ORDER BY tipo, ano, dt_vigencia
+            """, mun_cod)
 
-    for row in reg_leg_list:
-        refer = "Geral"
-        cod_nacional = "NULL"
-        if row["prod"]:
-            refer = "Produto"
-            cod_nacional = str(row["prod"])
-        elif row["serv"]:
-            refer = "Serviço"
-            cod_nacional = str(row["serv"])
+            print_reg_leg_query_results(console, result, show_ent_fed=True)
 
-        tipo_pretty = ""
-        lim_meta = ""
-        multa_if = ""
-        if str(row["tipo"]) == "multa":
-            tipo_pretty = "Multa"
-            lim_meta = str(row["lim_multa"])
-            multa_if = str(row["base_calc_multa"])
-        elif str(row["tipo"]) == "if":
-            tipo_pretty = "Isenção Fiscal"
-            lim_meta = str(row["meta_if"])
-            multa_if = str(row["aliq_if"])
-
-        query_list.add_row(str(row["nro"]), str(row["ano"]), str(row["dt_vigencia"]), str(row["dt_revogacao"]), refer, cod_nacional, tipo_pretty, lim_meta, multa_if)
-
-    return query_list;
 
 async def reg_leg_insertion(conn: asyncpg.Connection):
     municipio_nome = str(Prompt.ask("Insira o nome do município > "))
