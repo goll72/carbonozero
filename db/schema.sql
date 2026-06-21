@@ -381,3 +381,5 @@ CREATE TABLE relatorio_serv (
 
 \i db/filters/reg_leg.sql;
 \i db/filters/contrib_co2.sql;
+\i db/filters/relatorio.sql;
+\i db/filters/hist_co2.sql;

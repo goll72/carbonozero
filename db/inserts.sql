@@ -8731,43 +8731,48 @@ INSERT INTO relatorio_serv VALUES
 -- o custo dessa query é pago apenas no contexto artificial de inicialização da base de dados.
 WITH
     emissao_mensal(cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, emissao) AS (
-        SELECT
-                r.cnpj_filial_raiz,
-                r.cnpj_filial_ordem,
-                date_part('year', r.dt_pedido + INTERVAL '1 month')::int AS ano,
-                date_part('month', r.dt_pedido + INTERVAL '1 month')::int AS mes,
-                SUM(p.tco2_p_un * p.qtde)
-            FROM relatorio AS r
-            JOIN relatorio_prod AS p ON r.id = p.id_relatorio
-            GROUP BY
-                r.cnpj_filial_raiz,
-                r.cnpj_filial_ordem,
-                ano, mes
+        SELECT cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, SUM(emissao)
+            FROM (
+                SELECT
+                        r.cnpj_filial_raiz,
+                        r.cnpj_filial_ordem,
+                        date_part('year', r.dt_pedido + INTERVAL '1 month')::INT AS ano,
+                        date_part('month', r.dt_pedido + INTERVAL '1 month')::INT AS mes,
+                        SUM(p.tco2_p_un * p.qtde) AS emissao
+                    FROM relatorio AS r
+                    JOIN relatorio_prod AS p ON r.id = p.id_relatorio
+                    GROUP BY
+                        r.cnpj_filial_raiz,
+                        r.cnpj_filial_ordem,
+                        ano, mes
 
-        UNION
+                UNION ALL
 
-        SELECT
-                r.cnpj_filial_raiz,
-                r.cnpj_filial_ordem,
-                date_part('year', s.ocorrencia)::INT AS ano,
-                date_part('month', s.ocorrencia)::INT AS mes,
-                SUM(s.tco2)
-            FROM relatorio AS r
-            JOIN relatorio_serv AS s ON r.id = s.id_relatorio
-            GROUP BY
-                r.cnpj_filial_raiz,
-                r.cnpj_filial_ordem,
-                ano, mes
+                SELECT
+                        r.cnpj_filial_raiz,
+                        r.cnpj_filial_ordem,
+                        date_part('year', s.ocorrencia)::INT AS ano,
+                        date_part('month', s.ocorrencia)::INT AS mes,
+                        SUM(s.tco2) AS emissao
+                    FROM relatorio AS r
+                    JOIN relatorio_serv AS s ON r.id = s.id_relatorio
+                    GROUP BY
+                        r.cnpj_filial_raiz,
+                        r.cnpj_filial_ordem,
+                        ano, mes
+            )
+            GROUP BY cnpj_filial_raiz, cnpj_filial_ordem, ano, mes
     ),
     contrib_mensal(cnpj_filial_raiz, cnpj_filial_ordem, ano, mes, contrib) AS (
         SELECT
                 v.cnpj_filial_raiz,
                 v.cnpj_filial_ordem,
-                date_part('year', dt)::INT AS ano,
-                date_part('month', dt)::INT AS mes,
-                SUM(valor)
+                date_part('year', c.dt)::INT AS ano,
+                date_part('month', c.dt)::INT AS mes,
+                SUM(c.valor * a.razao_comp_custo)
             FROM contrib_co2 AS c
             JOIN vinc_contrib_co2 AS v ON v.id = c.id_contrib
+            JOIN acao_co2 AS a ON (a.cnpj, a.dt_inicio, a.nome) = (v.cnpj_organiz_socioamb, v.dt_inicio_acao_co2, v.nome_acao_co2)
             GROUP BY
                 v.cnpj_filial_raiz,
                 v.cnpj_filial_ordem,
@@ -8775,19 +8780,14 @@ WITH
     )
 INSERT INTO hist_co2 (
     SELECT
-            cnpj_filial_raiz,
-            cnpj_filial_ordem,
-            ano,
-            mes,
-            SUM(emissao),
-            COALESCE(
-                (SELECT contrib
-                    FROM contrib_mensal
-                    WHERE (e.cnpj_filial_raiz, e.cnpj_filial_ordem, e.ano, e.mes) = (cnpj_filial_raiz, cnpj_filial_ordem, ano, mes)),
-                0
-            )
-        FROM emissao_mensal AS e
-        GROUP BY cnpj_filial_raiz, cnpj_filial_ordem, ano, mes
+            COALESCE(e.cnpj_filial_raiz, c.cnpj_filial_raiz),
+            COALESCE(e.cnpj_filial_ordem, c.cnpj_filial_ordem),
+            COALESCE(e.ano, c.ano),
+            COALESCE(e.mes, c.mes),
+            COALESCE(e.emissao, 0),
+            COALESCE(c.contrib, 0)
+        FROM contrib_mensal AS c
+        FULL OUTER JOIN emissao_mensal AS e ON (e.cnpj_filial_raiz, e.cnpj_filial_ordem, e.ano, e.mes) = (c.cnpj_filial_raiz, c.cnpj_filial_ordem, c.ano, c.mes)
 );
 
 -- Remove regras legislativas contraditórias, ou seja, incentivos
@@ -8828,6 +8828,24 @@ CREATE OR REPLACE TRIGGER ent_fed_confirm_mun
     BEFORE INSERT OR UPDATE ON org_adm_mun
     FOR EACH ROW
     EXECUTE FUNCTION ent_fed_confirm();
+
+-- Atualiza o histórico de emissão conforme emissões relacionadas a produtos são registradas
+CREATE OR REPLACE TRIGGER hist_co2_update_from_relatorio_prod
+    BEFORE INSERT OR UPDATE OR DELETE ON relatorio_prod
+    FOR EACH ROW
+    EXECUTE FUNCTION hist_co2_update_from_relatorio_prod();
+
+-- Atualiza o histórico de emissão conforme emissões relacionadas a serviços são registradas
+CREATE OR REPLACE TRIGGER hist_co2_update_from_relatorio_serv
+    BEFORE INSERT OR UPDATE OR DELETE ON relatorio_serv
+    FOR EACH ROW
+    EXECUTE FUNCTION hist_co2_update_from_relatorio_serv();
+
+-- Atualiza o histórico de emissão conforme contribuições a ações de compensação são feitas
+CREATE OR REPLACE TRIGGER hist_co2_update_from_contrib_co2
+    BEFORE INSERT OR UPDATE OR DELETE ON contrib_co2
+    FOR EACH ROW
+    EXECUTE FUNCTION hist_co2_update_from_contrib_co2();
 
 -- Funções para definir as multas e isenções fiscais dos relatórios
 
