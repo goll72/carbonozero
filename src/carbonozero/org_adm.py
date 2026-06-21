@@ -22,23 +22,19 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
         menu = Panel(
             "\n".join([
                 "[bold]\\[1][/bold] Consultar regras legislativas que se aplicam a uma jurisdição",
-                "[bold]\\[2][/bold] Cadastrar regras legislativas",
                 "",
                 "[bold]\\[0][/bold] Voltar"
             ])
         )
 
         console.print(menu)
-        ret = Prompt.ask("> ", choices=["1", "2", "0"])
+        ret = Prompt.ask("> ", choices=["1", "0"])
 
         match ret:
             case "0":
                 return
             case "1":
                 await reg_leg_query(console, conn)
-            case "2":
-                resp_text = await reg_leg_insertion(conn)
-                console.print(resp_text[0] + ": " + resp_text[1])
 
 
 def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], *, show_ent_fed: bool = False):
@@ -82,16 +78,34 @@ def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], 
             console.print()
 
 
+async def prompt_for_mun(console: Console, conn: asyncpg.Connection, *, uf_list: list[str]):
+    while True:
+        answer = inquirer.prompt([
+            inquirer.Text("mun", "Município"),
+            inquirer.List("uf", "Escolha a UF", choices=uf_list, carousel=True)
+        ])
+
+        mun_cod = await conn.fetchval("""
+            SELECT cod_ibge FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
+        """, answer["mun"], answer["uf"])
+
+        if mun_cod is not None:
+            return mun_cod
+
+        console.print("[red]Município não encontrado[/red]")
+        console.print()
+
+
 async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
     answer = inquirer.prompt([inquirer.List("ent_fed", message="Você quer conferir uma UF ou um município?", choices=["UF", "Município"])])
 
     result = await conn.fetch("SELECT sigla FROM uf ORDER BY sigla ASC")
-    available_uf = [x[0] for x in result]
+    uf_list = [x[0] for x in result]
 
     match answer["ent_fed"]:
         case "UF":
             answer = inquirer.prompt([
-                inquirer.List("uf", "Escolha a UF", choices=available_uf, carousel=True)
+                inquirer.List("uf", "Escolha a UF", choices=uf_list, carousel=True)
             ])
 
             result = await conn.fetch("""
@@ -106,26 +120,12 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     JOIN prod_ncm ON prod = ncm
                     JOIN serv_nbs ON serv = nbs
                     WHERE ent = (SELECT cod_ibge FROM uf WHERE sigla = $1)
-                    ORDER BY tipo, ano, dt_vigencia
+                    ORDER BY ent, tipo, ano, dt_vigencia
             """, answer["uf"])
 
             print_reg_leg_query_results(console, result)
         case "Município":
-            while True:
-                answer = inquirer.prompt([
-                    inquirer.Text("mun", "Município"),
-                    inquirer.List("uf", "Escolha a UF", choices=available_uf, carousel=True)
-                ])
-
-                mun_cod = await conn.fetchval("""
-                    SELECT cod_ibge FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
-                """, answer["mun"], answer["uf"])
-
-                if mun_cod is not None:
-                    break
-
-                console.print("[red]Município não encontrado[/red]")
-                console.print()
+            mun_cod = await prompt_for_mun(console, conn, uf_list=uf_list)
 
             result = await conn.fetch("""
                 SELECT  ent, tipo, nro, ano,
@@ -139,24 +139,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     JOIN prod_ncm ON prod = ncm
                     JOIN serv_nbs ON serv = nbs
                     WHERE ent = $1 OR ent = substring($1, 1, 2)
-                    ORDER BY tipo, ano, dt_vigencia
+                    ORDER BY ent, tipo, ano, dt_vigencia
             """, mun_cod)
 
             print_reg_leg_query_results(console, result, show_ent_fed=True)
-
-
-async def reg_leg_insertion(conn: asyncpg.Connection):
-    municipio_nome = str(Prompt.ask("Insira o nome do município > "))
-
-    sigla_uf = str(Prompt.ask("Insira a sigla do estado > ")).upper()
-    if len(sigla_uf) != 2:
-        return;
-
-    cod_ibge = await conn.fetchrow("SELECT cod_ibge FROM org_adm_mun AS adm WHERE adm.nome_mun = $1 AND adm.sigla_uf = $2;",
-        municipio_nome, sigla_uf
-    )
-
-    ret_text = "Operação não-sucedida"
-    ret_expl = "Donatello vagabundo"
-
-    return [ret_text, ret_expl]
