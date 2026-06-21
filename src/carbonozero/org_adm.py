@@ -3,6 +3,10 @@ from rich.prompt import Prompt
 from rich.panel import Panel
 from rich.table import Table
 
+from rich.markup import escape
+
+import inquirer
+
 from .common import text_bar, conn_status
 
 import asyncpg
@@ -11,7 +15,7 @@ import asyncpg
 async def menu_org_adm(console: Console, conn: asyncpg.Connection):
     while True:
         console.print(text_bar("CarbonoZero --- Org. Adm.", console.width, aside=conn_status(conn)))
-        
+
         menu = Panel(
             "\n".join([
                 "[bold]\\[1][/bold] Consultar regras legislativas que se aplicam a uma jurisdição",
@@ -28,18 +32,65 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
             case "0":
                 return
             case "1":
-                resp_table = await reg_leg_query(conn)
-                console.print(resp_table)
+                await reg_leg_query(console, conn)
             case "2":
                 resp_text = await reg_leg_insertion(conn)
                 console.print(resp_text[0] + ": " + resp_text[1])
 
-async def reg_leg_query(conn: asyncpg.Connection) -> Table:
-    municipio_nome = str(Prompt.ask("Insira o nome do município > "))
 
-    sigla_uf = str(Prompt.ask("Insira a sigla do estado > ")).upper()
-    if len(sigla_uf) != 2:
-        return;
+async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
+    answer = inquirer.prompt([inquirer.List("ent_fed", message="Você quer conferir uma UF ou um município?", choices=["UF", "Município"])])
+
+    match answer["ent_fed"]:
+        case "UF":
+            available = await conn.fetch("SELECT sigla FROM uf ORDER BY sigla")
+
+            answer = inquirer.prompt([
+                inquirer.List("uf", "Escolha a UF", choices=[x[0] for x in available], carousel=True)
+            ])
+
+            result = await conn.fetch("""
+                SELECT  ent, tipo, nro, ano,
+                        to_char(dt_vigencia, 'DD/MM/YYYY') AS dt_vigencia,
+                        to_char(dt_revogacao, 'DD/MM/YYYY') AS dt_revogacao,
+                        serv, prod,
+                        lim_multa, base_calc_multa,
+                        meta_if, aliq_if,
+                        serv_nbs.nome AS nbs_desc, prod_ncm.nome AS ncm_desc 
+                    FROM reg_leg
+                    JOIN prod_ncm ON prod = ncm
+                    JOIN serv_nbs ON serv = nbs
+                    WHERE ent = (SELECT cod_ibge FROM uf WHERE sigla = $1)
+                    ORDER BY tipo, ano, dt_vigencia
+            """, answer["uf"])
+
+            with console.pager():
+                for row in result:
+                    [ent, tipo, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
+
+                    match tipo:
+                        case "if":
+                            tipo_desc = "[green]Incentivo Fiscal[/green]"
+                        case "multa":
+                            tipo_desc = "[red]Multa[/red]"
+
+                    console.print(f"Lei ṇ. [blue]{nro: 5}/{ano}[/blue], de {tipo_desc}:")
+                    console.print(f"    Entrou em vigor em [yellow]{dt_vigencia}[/yellow]{f", foi revogada em [yellow]{dt_revogacao}[/yellow]" if dt_revogacao is not None else ""}")
+                    console.print(u"    Dispõe sobre:")
+
+                    match [nbs, ncm]:
+                        case [None, None]:
+                            obj_desc = "todas as emissões em um determinado mês"
+                        case [_, None]:
+                            obj_desc = f"emissões oriundas da industrialização/beneficiamento/processamento de [yellow]{escape(ncm_desc)} ({ncm})[/yellow]"
+                        case [None, _]:
+                            obj_desc = f"emissões oriundas da prestação de [yellow]{escape(nbs_desc)}[/yellow] ({nbs})"
+                        case [_, _]:
+                            console.print("wtf")
+
+                    console.print(f"        {obj_desc}")
+        case "Município":
+            municipio_nome = str(Prompt.ask("Insira o nome do município > "))
 
     reg_leg_list = await conn.fetch('''
         WITH cod(mun, uf) AS (
