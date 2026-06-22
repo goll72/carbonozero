@@ -10,7 +10,7 @@ import time
 
 import inquirer
 
-from .common import text_bar, conn_status,fix_ncm_nbs
+from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun
 
 import asyncpg
 

@@ -78,10 +78,23 @@ def nbs_pref_validate(prev_answers: dict, current: str) -> bool:
 
     return True
 
+
+def float_validate(prev_answers: dict, current: str) -> bool:
+    try:
+        _ = float(current)
+    except ValueError:
+        raise inquirer.errors.ValidationError("", reason="Valor inválido")
+
+    return True
+
  
 def fix_ncm_nbs(x: str) -> str:
     return re.sub(r"^\s*-+\s*([dD]e)?\s*", "", x)
 
+
+def trunc(x: str, n: int) -> str:
+    if len(x) > n:
+        return x[:n - 3] + "..."
 
 async def prompt_for_mun(console: Console, conn: asyncpg.Connection, *, uf_list: list[str]):
     while True:

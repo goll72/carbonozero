@@ -7,8 +7,8 @@ from rich.markup import escape
 
 import inquirer
 
-from .common import text_bar, conn_status, fix_ncm_nbs
-from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate
+from .common import text_bar, conn_status, fix_ncm_nbs, trunc
+from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, float_validate
 
 import asyncpg
 
@@ -143,9 +143,9 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
                             case 1:
                                 ncm = result[0]["ncm"]
                             case _:
-                                ncms = [f"{x["ncm"]} {fix_ncm_nbs(x["nome"])}" for x in result]
+                                ncms = [f"{x["ncm"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
                                 answer = inquirer.prompt([
-                                    inquirer.List("ncm", "Resultados", choices=)
+                                    inquirer.List("ncm", "Resultados", choices=ncms, carousel=True)
                                 ])
 
                                 ncm_index = ncms.index(answer["ncm"]) 
@@ -153,7 +153,7 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
 
                                 break
                 case "Descrição":
-                    while True
+                    while True:
                         answer = inquirer.prompt([
                             inquirer.Text("desc_subs", "Descrição (substring)")
                         ])
@@ -169,9 +169,9 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
                             case 1:
                                 ncm = result[0]["ncm"]
                             case _:
-                                ncms = [f"{x["ncm"]} {fix_ncm_nbs(x["nome"])}" for x in result]
+                                ncms = [f"{x["ncm"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
                                 answer = inquirer.prompt([
-                                    inquirer.List("ncm", "Resultados", choices=)
+                                    inquirer.List("ncm", "Resultados", choices=ncms, carousel=True)
                                 ])
 
                                 ncm_index = ncms.index(answer["ncm"]) 
@@ -179,9 +179,9 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
 
                                 break
 
-            # answer = inquirer.prompt([
-            #     inquirer.Text()
-            # ])
+            answer = inquirer.prompt([
+                inquirer.Text("emissao_assoc", "Emissão associada a esse produto (em ton. CO₂)", validate=float_validate)
+            ])
 
 
     async with conn.transaction(isolation="read_committed") as trans:
