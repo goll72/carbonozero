@@ -7,7 +7,7 @@ import inquirer
 from typing import Union
 
 from .common import text_bar, conn_status, fix_ncm_nbs, trunc, date_br_to_datetime
-from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, float_validate
+from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, dt_after_validate, dt_between_validate, float_validate
 
 import asyncpg
 
@@ -217,7 +217,7 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
 
     if answer_p["published"]:
         answer = inquirer.prompt([
-            inquirer.Text("dt_pub", "Data de publicação", validate=lambda p, x: dt_validate(p, x) and dt_pedido < date_br_to_datetime(x))
+            inquirer.Text("dt_pub", "Data de publicação", validate=dt_after_validate(dt_pedido))
         ])
 
         dt_pub = date_br_to_datetime(answer["dt_pub"])
@@ -233,6 +233,13 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
         servs = await ask_prods_or_servs(console, conn, item_type="serv")
     else:
         servs = None
+
+    answer = inquirer.prompt([
+        inquirer.Confirm("confirm", False, message="Você quer realmente inserir esse relatório?")
+    ])
+
+    if not answer["confirm"]:
+        return
 
     async with conn.transaction(isolation="read_committed") as trans:
         id_relatorio = await conn.fetchval("""
