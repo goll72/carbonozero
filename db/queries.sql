@@ -163,7 +163,7 @@ PREPARE filiais_emissao_major(DATERANGE) AS
 --
 -- Argumento:
 --  - tempo, em meses, a ser analisado 
-PREPARE regra_if_nao_atingida(DATARANGE) AS
+PREPARE regra_if_nao_atingida(DATERANGE) AS
 SELECT
     rl.tipo, rl.ano, rl.nro, rl.dt_vigencia
 FROM reg_leg AS rl
@@ -201,7 +201,6 @@ WHERE
                 ))
             )
     );
-
 
 -- Para todas as Instituições Cientificas do município X, listar a média do histórico de CO2
 -- de cada empresa avaliadas por suas equipes, ordenadas pela média do histórico.
