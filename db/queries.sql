@@ -215,14 +215,14 @@ PREPARE co2_por_inst_cient_em_municipio(TEXT, TEXT) AS
     FROM hist_co2 h
     WHERE EXISTS (
         SELECT 1
-        FROM inst_cient AS ic 
-            JOIN relatorio AS r 
-            ON ic.cnpj = r.cnpj_inst_cient
-            JOIN org_adm_mun AS mun 
+        FROM org_adm_mun AS mun 
+            JOIN inst_cient AS ic 
             ON ic.mun_cod = mun.cod_ibge
-        WHERE 
+            JOIN relatorio AS r
+            ON ic.cnpj = r.cnpj_inst_cient
+        WHERE
             mun.nome_mun = $1 AND mun.sigla_uf = $2
             AND h.cnpj_raiz = r.cnpj_filial_raiz
     )
     GROUP BY h.cnpj_raiz
-    ORDER BY Media;
+    ORDER BY Media DESC;
