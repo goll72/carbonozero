@@ -7,7 +7,7 @@ import inquirer
 from typing import Union
 
 from .common import text_bar, conn_status, fix_ncm_nbs, trunc, date_br_to_datetime
-from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, dt_after_validate, dt_between_validate, float_validate
+from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, dt_after_validate, dt_between_validate, float_validate, pos_float_validate
 
 import asyncpg
 
