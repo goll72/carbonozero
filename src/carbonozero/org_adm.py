@@ -10,7 +10,7 @@ import time
 
 import inquirer
 
-from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun
+from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun, cnpj_validate, integer_validate
 
 import asyncpg
 
@@ -22,19 +22,22 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
         menu = Panel(
             "\n".join([
                 "[bold]\\[1][/bold] Consultar regras legislativas que se aplicam a uma jurisdição",
+                "[bold]\\[2][/bold] Atualizar dados de um orgão administrativo",
                 "",
                 "[bold]\\[0][/bold] Voltar"
             ])
         )
 
         console.print(menu)
-        ret = Prompt.ask("> ", choices=["1", "0"])
+        ret = Prompt.ask("> ", choices=["1", "2", "0"])
 
         match ret:
             case "0":
                 return
             case "1":
                 await reg_leg_query(console, conn)
+            case "2":
+                await org_adm_update(console, conn)
 
 
 def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], *, show_ent_fed: bool = False):
@@ -125,3 +128,55 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
             """, mun_cod)
 
             print_reg_leg_query_results(console, result, show_ent_fed=True)
+
+async def org_adm_update(console: Console, conn: asyncpg.Connection):
+    result = await conn.fetch("SELECT sigla FROM uf ORDER BY sigla ASC")
+    uf_list = [x[0] for x in result]
+    mun_cod = await prompt_for_mun(console, conn, uf_list=uf_list)
+
+    row = await conn.fetchrow("SELECT cnpj, raz_soc, end_rua, end_nro, end_cep FROM org_adm_mun WHERE cod_ibge = $1", mun_cod)
+    cnpj = row["cnpj"]
+    raz_soc = row["raz_soc"]
+    end_rua = row["end_rua"]
+    end_nro = row["end_nro"]
+    end_cep = row["end_cep"]
+
+    answer = inquirer.prompt([inquirer.Checkbox(
+        "fields",
+        message="Quais campos você quer atualizar? (Use as setas esquerda e direita para selecionar)",
+        choices=[
+            ("CNPJ", "cnpj"),
+            ("Razão Social", "raz_soc"),
+            # ("Endereço", "end"),
+        ])])
+
+    if "cnpj" in answer["fields"]:
+        while True:
+            cnpj = inquirer.prompt([inquirer.Text("a", message="Digite o novo CNPJ", validate=cnpj_validate)])["a"]
+            console.print(cnpj)
+
+            if await conn.fetchrow("SELECT cnpj FROM org_adm_mun WHERE cnpj = $1", cnpj) == None:
+                break
+            console.print("Este CNPJ já está cadastrado.")
+
+    if "raz_soc" in answer["fields"]:
+        raz_soc = inquirer.prompt([inquirer.Text("a", message="Digite a nova razão social")])["a"]
+        
+    # if "end" in answer["fields"]:
+    #     questions = [
+    #         inquirer.Text("end_rua", message="Digite a rua"),
+    #         inquirer.Text("end_nro", message="Digite o número", validate=str.isdigit),
+    #         inquirer.Text("end_cep", message="Digite o CEP")
+    #     ]
+    #     end = inquirer.prompt(questions)
+    #     end_rua = end["end_rua"]
+    #     end_nro = int(end["end_nro"])
+    #     end_cep = end["end_cep"]
+
+    sql_status = await conn.execute('''
+        UPDATE org_adm_mun SET (cnpj, raz_soc, end_rua, end_nro, end_cep) = ($1, $2, $3, $4, $5) WHERE cod_ibge = $6
+        ''',
+        cnpj, raz_soc, end_rua, end_nro, end_cep, mun_cod
+    )
+    console.print(sql_status)
+    return

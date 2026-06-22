@@ -87,6 +87,14 @@ def float_validate(prev_answers: dict, current: str) -> bool:
 
     return True
 
+def integer_validate(prev_answers: dict, current: str) -> bool:
+    try:
+        _ = float(current)
+    except ValueError:
+        raise inquirer.errors.ValidationError("", reason="Valor inválido")
+
+    return True
+
  
 def fix_ncm_nbs(x: str) -> str:
     return re.sub(r"^\s*-+\s*([dD]e)?\s*", "", x)
