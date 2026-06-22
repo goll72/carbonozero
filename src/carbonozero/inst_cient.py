@@ -1,13 +1,12 @@
 from rich.console import Console
 from rich.prompt import Prompt
 from rich.panel import Panel
-from rich.table import Table
-
-from rich.markup import escape
 
 import inquirer
 
-from .common import text_bar, conn_status, fix_ncm_nbs, trunc
+from typing import Union
+
+from .common import text_bar, conn_status, fix_ncm_nbs, trunc, date_br_to_datetime
 from .common import ncm_pref_validate, nbs_pref_validate, cnpj_validate, dt_validate, float_validate
 
 import asyncpg
@@ -20,7 +19,6 @@ async def menu_inst_cient(console: Console, conn: asyncpg.Connection):
         menu = Panel(
             "\n".join([
                 "[bold]\\[1][/bold] Cadastrar relatório",
-                "[bold]\\[2][/bold] Consultar relatório(s)",
                 "",
                 "[bold]\\[0][/bold] Voltar"
             ])
@@ -34,7 +32,105 @@ async def menu_inst_cient(console: Console, conn: asyncpg.Connection):
                 return
             case "1":
                 await relatorio_insert(console, conn)
-        
+
+
+async def ask_prods_or_servs(console: Console, conn: asyncpg.Connection, *, item_type: Union["prod", "serv"]) -> list:
+    match item_type:
+        case "prod":
+            initial_prompt = inquirer.List("search_type", "Busca por NCM ou descrição", choices=["NCM", "Descrição"])
+            prompt = inquirer.Text("cod_pref", "NCM ou prefixo do NCM", validate=ncm_pref_validate)
+            cod_query = "SELECT ncm AS cod, nome FROM prod_ncm WHERE ncm LIKE $1 || '%'"
+            desc_query = "SELECT ncm AS cod, nome FROM prod_ncm WHERE UPPER(nome) LIKE '%' || UPPER($1) || '%'"
+
+            no_cod_found_err_msg = "[red]Nenhum produto encontrado com esse NCM[/red]"
+            no_desc_found_err_msg = "[red]Nenhum produto encontrado com essa descrição[/red]"
+        case "serv":
+            initial_prompt = inquirer.List("search_type", "Busca por NBS ou descrição", choices=["NBS", "Descrição"])
+            prompt = inquirer.Text("cod_pref", "NBS ou prefixo do NBS", validate=nbs_pref_validate)
+            cod_query = "SELECT nbs AS cod, nome FROM serv_nbs WHERE nbs LIKE $1 || '%'"
+            desc_query = "SELECT nbs AS cod, nome FROM serv_nbs WHERE UPPER(nome) LIKE '%' || UPPER($1) || '%'"
+
+            no_cod_found_err_msg = "[red]Nenhum serviço encontrado com esse NBS[/red]"
+            no_desc_found_err_msg = "[red]Nenhum serviço encontrado com essa descrição[/red]"
+        case _:
+            raise ValueError("Invalid value for type")
+
+    items = []
+
+    while True:
+        answer = inquirer.prompt([initial_prompt])
+
+        match answer["search_type"]:
+            case "NCM" | "NBS":
+                while True:
+                    answer = inquirer.prompt([prompt])
+                    result = await conn.fetch(cod_query, answer["cod_pref"].replace("%", "%%"))
+
+                    match len(result):
+                        case 0:
+                            console.print(no_cod_found_err_msg)
+                            continue
+                        case 1:
+                            cod = result[0]["cod"]
+                        case _:
+                            cods_pp = [f"{x["cod"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
+                            answer = inquirer.prompt([
+                                inquirer.List("cod", "Resultados", choices=cods_pp, carousel=True)
+                            ])
+
+                            cod_index = cods_pp.index(answer["cod"]) 
+                            cod = result[cod_index]["cod"]
+
+                            break
+            case "Descrição":
+                while True:
+                    answer = inquirer.prompt([
+                        inquirer.Text("desc_subs", "Descrição (substring)")
+                    ])
+
+                    result = await conn.fetch(desc_query, answer["desc_subs"].replace("%", "%%"))
+
+                    match len(result):
+                        case 0:
+                            console.print(no_desc_found_err_msg)
+                            continue
+                        case 1:
+                            cod = result[0]["cod"]
+                        case _:
+                            cods = [f"{x["cod"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
+                            answer = inquirer.prompt([
+                                inquirer.List("cod", "Resultados", choices=cods, carousel=True)
+                            ])
+
+                            cod_index = cods.index(answer["cod"])
+                            cod = result[cod_index]["cod"]
+
+                            break
+
+        match item_type:
+            case "prod":
+                answer = inquirer.prompt([
+                    inquirer.Text("emissao_assoc", "Emissão associada a uma unidade desse produto (em ton. CO₂)", validate=lambda p, x: float_validate(p, x) and float(x) > 0),
+                    inquirer.Text("qtde", "Quantidade produzida", validate=lambda p, x: float_validate(p, x) and float(x) > 0),
+                    inquirer.Confirm("more", False, message="Deseja inserir mais um produto?")
+                ])
+
+                items.append((cod, float(answer["emissao_assoc"]), float(answer["qtde"])))
+            case "serv":
+                answer = inquirer.prompt([
+                    inquirer.Text("emissao_assoc", "Emissão associada à prestação do serviço (em ton. CO₂)", validate=float_validate),
+                    inquirer.Text("dt_ocorrencia", "Data de ocorrência", validate=dt_validate),
+                    inquirer.Confirm("more", False, message="Deseja inserir mais um serviço?")
+                ])
+
+                dt = date_br_to_datetime(answer["dt_ocorrencia"])
+
+                items.append((cod, dt, float(answer["emissao_assoc"])))
+
+        if not answer["more"]:
+            break
+
+    return items
 
 
 async def relatorio_insert(console: Console, conn: asyncpg.Connection):
@@ -43,11 +139,11 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
     inst_cient_names = [x["nome"] for x in result]
 
     answer = inquirer.prompt([
-        inquirer.List("inst", message="Qual inst. cient. está realizando o relatório?", choices=inst_cient_names)
+        inquirer.List("inst", message="Escolha a inst. cient. desenvolvendo o relatório", choices=inst_cient_names)
     ])
 
     chosen_inst_index = inst_cient_names.index(answer["inst"])
-    
+
     cnpj_inst_cient = result[chosen_inst_index]["cnpj"]
     mun_cod_inst_cient = result[chosen_inst_index]["mun_cod"]
 
@@ -56,7 +152,7 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
     team_names = [x["nome"] for x in result]
 
     answer = inquirer.prompt([
-        inquirer.List("equipe", message="Qual a equipe responsável?", choices=team_names)
+        inquirer.List("equipe", message="Escolha a equipe responsável", choices=team_names)
     ])
 
     equipe = answer["equipe"]
@@ -83,7 +179,7 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
     filiais_prox.append("Outra")
 
     answer = inquirer.prompt([
-        inquirer.List("filial", message="Qual filial será analisada?", choices=filiais_prox)
+        inquirer.List("filial", message="Escolha a filial a ser analisada", choices=filiais_prox)
     ])
 
     filial_index = filiais_prox.index(answer["filial"])
@@ -92,7 +188,7 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
         filial_cnpj = None
 
         while True:
-            answer = inquirer.prompt([inquirer.Text("filial", message="Qual o CNPJ da filial sendo analisada?", validate=cnpj_validate)])
+            answer = inquirer.prompt([inquirer.Text("filial", message="Digite o CNPJ da filial sendo analisada", validate=cnpj_validate)])
             filial_cnpj = answer["filial"]
 
             result = await conn.fetchval("""
@@ -110,82 +206,46 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
 
     cnpj_raiz, cnpj_ordem = filial_cnpj.split("/")
 
-    answer = inquirer.prompt([
-        inquirer.Text("dt_pedido", "Qual a data do pedido?", validate=dt_validate),
+    answer_p = inquirer.prompt([
+        inquirer.Text("dt_pedido", "Data do pedido", validate=dt_validate),
         inquirer.Confirm("prod", False, message="Você deseja inserir produtos no relatório?"),
         inquirer.Confirm("serv", False, message="Você deseja inserir serviços no relatório?"),
         inquirer.Confirm("published", False, message="Já foi publicado?")
     ])
 
-    if answer["prod"]:
-        prods = []
+    dt_pedido = date_br_to_datetime(answer_p["dt_pedido"])
 
-        while True:
-            answer = inquirer.prompt([
-                inquirer.List("search_type", "Busca por NCM ou descrição", choices=["NCM", "Descrição"])
-            ])
+    if answer_p["published"]:
+        answer = inquirer.prompt([
+            inquirer.Text("dt_pub", "Data de publicação", validate=lambda p, x: dt_validate(p, x) and dt_pedido < date_br_to_datetime(x))
+        ])
 
-            match answer["search_type"]:
-                case "NCM":
-                    while True:
-                        answer = inquirer.prompt([
-                            inquirer.Text("ncm_pref", "NCM ou prefixo do NCM", validate=ncm_pref_validate)
-                        ])
+        dt_pub = date_br_to_datetime(answer["dt_pub"])
+    else:
+        dt_pub = None
 
-                        result = await conn.fetch("""
-                            SELECT ncm, nome FROM prod_ncm WHERE ncm LIKE $1 || '%'
-                        """, answer["ncm_pref"].replace("%", "%%"))
+    if answer_p["prod"]:
+        prods = await ask_prods_or_servs(console, conn, item_type="prod")
+    else:
+        prods = None
 
-                        match len(result):
-                            case 0:
-                                console.print("[red]Nenhum produto encontrado com esse NCM[/red]")
-                                continue
-                            case 1:
-                                ncm = result[0]["ncm"]
-                            case _:
-                                ncms = [f"{x["ncm"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
-                                answer = inquirer.prompt([
-                                    inquirer.List("ncm", "Resultados", choices=ncms, carousel=True)
-                                ])
-
-                                ncm_index = ncms.index(answer["ncm"]) 
-                                ncm = result[ncm_index]["ncm"]
-
-                                break
-                case "Descrição":
-                    while True:
-                        answer = inquirer.prompt([
-                            inquirer.Text("desc_subs", "Descrição (substring)")
-                        ])
-
-                        result = await conn.fetch("""
-                            SELECT ncm, nome FROM prod_ncm WHERE UPPER(nome) LIKE '%' || UPPER($1) || '%'
-                        """, answer["desc_subs"].replace("%", "%%"))
-
-                        match len(result):
-                            case 0:
-                                console.print("[red]Nenhum produto encontrado com essa descrição[/red]")
-                                continue
-                            case 1:
-                                ncm = result[0]["ncm"]
-                            case _:
-                                ncms = [f"{x["ncm"]} {trunc(fix_ncm_nbs(x["nome"]), 40)}" for x in result]
-                                answer = inquirer.prompt([
-                                    inquirer.List("ncm", "Resultados", choices=ncms, carousel=True)
-                                ])
-
-                                ncm_index = ncms.index(answer["ncm"]) 
-                                ncm = result[ncm_index]["ncm"]
-
-                                break
-
-            answer = inquirer.prompt([
-                inquirer.Text("emissao_assoc", "Emissão associada a esse produto (em ton. CO₂)", validate=float_validate)
-            ])
-
+    if answer_p["serv"]:
+        servs = await ask_prods_or_servs(console, conn, item_type="serv")
+    else:
+        servs = None
 
     async with conn.transaction(isolation="read_committed") as trans:
-        ...
+        id_relatorio = await conn.fetchval("""
+            INSERT INTO relatorio VALUES (DEFAULT, $1, $2, $3, $4, $5, $6, NULL, NULL, NULL) RETURNING id
+        """, dt_pedido, dt_pub, cnpj_raiz, cnpj_ordem, cnpj_inst_cient, equipe)
 
-    return await conn.execute("INSERT INTO relatorio VALUES(DEFAULT, current_date, NULL, $1, $2, $3, $4, NULL, NULL, NULL)",
-                                cnpj_empresa, cnpj_filial, inst_cient, equipe)
+        if prods is not None:
+            await conn.executemany(
+                "INSERT INTO relatorio_prod(id_relatorio, ncm, tco2_p_un, qtde) VALUES ($1, $2, $3, $4)",
+                ((id_relatorio, *x) for x in prods)
+            )
+
+        if servs is not None:
+            await conn.executemany(
+                "INSERT INTO relatorio_serv(id_relatorio, nbs, ocorrencia, tco2) VALUES ($1, $2, $3, $4)"
+            )

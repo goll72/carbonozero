@@ -87,7 +87,8 @@ def float_validate(prev_answers: dict, current: str) -> bool:
 
     return True
 
-def integer_validate(prev_answers: dict, current: str) -> bool:
+
+def int_validate(prev_answers: dict, current: str) -> bool:
     try:
         _ = float(current)
     except ValueError:
@@ -95,7 +96,7 @@ def integer_validate(prev_answers: dict, current: str) -> bool:
 
     return True
 
- 
+
 def fix_ncm_nbs(x: str) -> str:
     return re.sub(r"^\s*-+\s*([dD]e)?\s*", "", x)
 
@@ -105,6 +106,11 @@ def trunc(x: str, n: int) -> str:
         return x[:n - 3] + "..."
     else:
         return x
+
+
+def date_br_to_datetime(x: str) -> datetime:
+    return datetime.strptime(x, "%d/%m/%Y")
+
 
 async def prompt_for_mun(console: Console, conn: asyncpg.Connection, *, uf_list: list[str]):
     while True:

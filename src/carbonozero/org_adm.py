@@ -10,7 +10,7 @@ import time
 
 import inquirer
 
-from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun, cnpj_validate, integer_validate
+from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun, cnpj_validate, int_validate
 
 import asyncpg
 
@@ -43,7 +43,7 @@ async def menu_org_adm(console: Console, conn: asyncpg.Connection):
 def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], *, show_ent_fed: bool = False):
     with console.pager(styles=True):
         for row in result:
-            [ent, tipo, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
+            [ent, cat, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
 
             if ncm_desc:
                 ncm_desc = fix_ncm_nbs(ncm_desc)
@@ -51,7 +51,7 @@ def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], 
             if nbs_desc:
                 nbs_desc = fix_ncm_nbs(nbs_desc)
 
-            match tipo:
+            match cat:
                 case "if":
                     tipo_desc = "[green]Incentivo Fiscal[/green]"
                     reg_desc = f"alíquota de {aliq_if:.3}% para emissões mensais que não excedam {meta_if:.3} ton. CO₂"
@@ -94,7 +94,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
             ])
 
             result = await conn.fetch("""
-                SELECT  ent, tipo, nro, ano,
+                SELECT  ent, categoria, nro, ano,
                         to_char(dt_vigencia, 'DD/MM/YYYY') AS dt_vigencia,
                         to_char(dt_revogacao, 'DD/MM/YYYY') AS dt_revogacao,
                         serv, prod,
@@ -105,7 +105,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     JOIN prod_ncm ON prod = ncm
                     JOIN serv_nbs ON serv = nbs
                     WHERE ent = (SELECT cod_ibge FROM uf WHERE sigla = $1)
-                    ORDER BY ent, tipo, ano, dt_vigencia
+                    ORDER BY ent, categoria, ano, dt_vigencia
             """, answer["uf"])
 
             print_reg_leg_query_results(console, result)
@@ -113,7 +113,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
             mun_cod = await prompt_for_mun(console, conn, uf_list=uf_list)
 
             result = await conn.fetch("""
-                SELECT  ent, tipo, nro, ano,
+                SELECT  ent, categoria, nro, ano,
                         to_char(dt_vigencia, 'DD/MM/YYYY') AS dt_vigencia,
                         to_char(dt_revogacao, 'DD/MM/YYYY') AS dt_revogacao,
                         serv, prod,
@@ -124,7 +124,7 @@ async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
                     JOIN prod_ncm ON prod = ncm
                     JOIN serv_nbs ON serv = nbs
                     WHERE ent = $1 OR ent = substring($1, 1, 2)
-                    ORDER BY ent, tipo, ano, dt_vigencia
+                    ORDER BY ent, categoria, ano, dt_vigencia
             """, mun_cod)
 
             print_reg_leg_query_results(console, result, show_ent_fed=True)

@@ -135,10 +135,10 @@ def monetary_value():
 # ============================================================
 
 def generate_reg_leg(n, ncm_codes, nbs_codes):
-    tipos = ["if", "multa"]
+    cats = ["if", "multa"]
 
     for _ in range(n):
-        tipo = random.choice(tipos)
+        cat = random.choice(cats)
 
         ent = random.choice(ENTES_FEDERATIVOS_V)
 
@@ -163,7 +163,7 @@ def generate_reg_leg(n, ncm_codes, nbs_codes):
         if random.random() < 0.5:
             prod = random.choice(ncm_codes)
 
-        if tipo == "multa":
+        if cat == "multa":
             lim_multa = monetary_value()
             base_calc_multa = round(random.uniform(0.01, 0.25), 4)
 
@@ -179,7 +179,7 @@ def generate_reg_leg(n, ncm_codes, nbs_codes):
 
         values = [
             ent,
-            tipo,
+            cat,
             nro,
             ano,
             dt_vigencia.isoformat(),
