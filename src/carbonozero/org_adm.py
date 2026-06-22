@@ -10,7 +10,7 @@ import time
 
 import inquirer
 
-from .common import text_bar, conn_status
+from .common import text_bar, conn_status,fix_ncm_nbs
 
 import asyncpg
 
@@ -43,10 +43,10 @@ def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], 
             [ent, tipo, nro, ano, dt_vigencia, dt_revogacao, nbs, ncm, lim_multa, base_calc_multa, meta_if, aliq_if, nbs_desc, ncm_desc] = row
 
             if ncm_desc:
-                ncm_desc = re.sub(r"^\s*-+\s*([dD]e)?\s*", "", ncm_desc)
+                ncm_desc = fix_ncm_nbs(ncm_desc)
 
             if nbs_desc:
-                nbs_desc = re.sub(r"^\s*-+\s*([dD]e)?\s*", "", nbs_desc)
+                nbs_desc = fix_ncm_nbs(nbs_desc)
 
             match tipo:
                 case "if":
@@ -76,24 +76,6 @@ def print_reg_leg_query_results(console: Console, result: list[asyncpg.Record], 
             console.print(f"    {reg_desc}")
             console.print()
             console.print()
-
-
-async def prompt_for_mun(console: Console, conn: asyncpg.Connection, *, uf_list: list[str]):
-    while True:
-        answer = inquirer.prompt([
-            inquirer.Text("mun", "Município"),
-            inquirer.List("uf", "Escolha a UF", choices=uf_list, carousel=True)
-        ])
-
-        mun_cod = await conn.fetchval("""
-            SELECT cod_ibge FROM org_adm_mun WHERE nome_mun = $1 AND sigla_uf = $2
-        """, answer["mun"], answer["uf"])
-
-        if mun_cod is not None:
-            return mun_cod
-
-        console.print("[red]Município não encontrado[/red]")
-        console.print()
 
 
 async def reg_leg_query(console: Console, conn: asyncpg.Connection) -> Table:
