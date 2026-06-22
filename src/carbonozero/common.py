@@ -95,6 +95,8 @@ def fix_ncm_nbs(x: str) -> str:
 def trunc(x: str, n: int) -> str:
     if len(x) > n:
         return x[:n - 3] + "..."
+    else:
+        return x
 
 async def prompt_for_mun(console: Console, conn: asyncpg.Connection, *, uf_list: list[str]):
     while True:
