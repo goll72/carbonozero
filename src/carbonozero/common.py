@@ -63,6 +63,28 @@ def dt_validate(prev_answers: dict, current: str) -> bool:
     return True
 
 
+def dt_between_validate(a: datetime, b: datetime):
+    def validate(prev_answers: dict, current: str) -> bool:
+        dt_validate(prev_answers, current)
+        x = datetime.strptime(current, "%d/%m/%Y")
+
+        if x < a or x > b:
+            raise inquirer.errors.ValidationError("", reason=f"Data inválida, deve estar entre {a.strftime("%d/%m/%Y")} e {b.strftime("%d/%m/%Y")}")
+
+    return validate
+
+
+def dt_after_validate(a: datetime):
+    def validate(prev_answers: dict, current: str) -> bool:
+        dt_validate(prev_answers, current)
+        x = datetime.strptime(current, "%d/%m/%Y")
+
+        if x < a:
+            raise inquirer.errors.ValidationError("", reason=f"Data inválida, deve ocorrer depois de {a.strftime("%d/%m/%Y")}")
+
+    return validate
+
+
 def ncm_pref_validate(prev_answers: dict, current: str) -> bool:
     # 0101.21.00
      if not re.match(r"^(\d{1,4}|\d{4}(\.\d{0,2})?|\d{4}\.\d{2}(\.\d{0,2})?|\d{4}\.\d{2}\.\d{0,2})", current):
@@ -82,6 +104,18 @@ def nbs_pref_validate(prev_answers: dict, current: str) -> bool:
 def float_validate(prev_answers: dict, current: str) -> bool:
     try:
         _ = float(current)
+    except ValueError:
+        raise inquirer.errors.ValidationError("", reason="Valor inválido")
+
+    return True
+
+
+def pos_float_validate(prev_answers: dict, current: str) -> bool:
+    try:
+        x = float(current)
+
+        if x < 0:
+            raise ValueError()
     except ValueError:
         raise inquirer.errors.ValidationError("", reason="Valor inválido")
 

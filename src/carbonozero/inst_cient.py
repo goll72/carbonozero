@@ -110,15 +110,15 @@ async def ask_prods_or_servs(console: Console, conn: asyncpg.Connection, *, item
         match item_type:
             case "prod":
                 answer = inquirer.prompt([
-                    inquirer.Text("emissao_assoc", "Emissão associada a uma unidade desse produto (em ton. CO₂)", validate=lambda p, x: float_validate(p, x) and float(x) > 0),
-                    inquirer.Text("qtde", "Quantidade produzida", validate=lambda p, x: float_validate(p, x) and float(x) > 0),
+                    inquirer.Text("emissao_assoc", "Emissão associada a uma unidade desse produto (em ton. CO₂)", validate=pos_float_validate),
+                    inquirer.Text("qtde", "Quantidade produzida", validate=pos_float_validate),
                     inquirer.Confirm("more", False, message="Deseja inserir mais um produto?")
                 ])
 
                 items.append((cod, float(answer["emissao_assoc"]), float(answer["qtde"])))
             case "serv":
                 answer = inquirer.prompt([
-                    inquirer.Text("emissao_assoc", "Emissão associada à prestação do serviço (em ton. CO₂)", validate=float_validate),
+                    inquirer.Text("emissao_assoc", "Emissão associada à prestação do serviço (em ton. CO₂)", validate=pos_float_validate),
                     inquirer.Text("dt_ocorrencia", "Data de ocorrência", validate=dt_validate),
                     inquirer.Confirm("more", False, message="Deseja inserir mais um serviço?")
                 ])
@@ -247,5 +247,6 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
 
         if servs is not None:
             await conn.executemany(
-                "INSERT INTO relatorio_serv(id_relatorio, nbs, ocorrencia, tco2) VALUES ($1, $2, $3, $4)"
+                "INSERT INTO relatorio_serv(id_relatorio, nbs, ocorrencia, tco2) VALUES ($1, $2, $3, $4)",
+                ((id_relatorio, *x) for x in servs)
             )
