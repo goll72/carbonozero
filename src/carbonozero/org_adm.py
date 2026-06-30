@@ -10,7 +10,7 @@ import time
 
 import inquirer
 
-from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun, cnpj_validate, int_validate
+from .common import text_bar, conn_status, fix_ncm_nbs, prompt_for_mun, cnpj_validate, int_validate, cep_validate
 
 import asyncpg
 
@@ -143,11 +143,11 @@ async def org_adm_update(console: Console, conn: asyncpg.Connection):
 
     answer = inquirer.prompt([inquirer.Checkbox(
         "fields",
-        message="Quais campos você quer atualizar? (Use as setas esquerda e direita para selecionar)",
+        message="Quais campos atualizar? (Use as setas esquerda e direita para selecionar)",
         choices=[
             ("CNPJ", "cnpj"),
             ("Razão Social", "raz_soc"),
-            # ("Endereço", "end"),
+            ("Endereço", "end"),
         ])])
 
     if "cnpj" in answer["fields"]:
@@ -162,16 +162,16 @@ async def org_adm_update(console: Console, conn: asyncpg.Connection):
     if "raz_soc" in answer["fields"]:
         raz_soc = inquirer.prompt([inquirer.Text("a", message="Digite a nova razão social")])["a"]
         
-    # if "end" in answer["fields"]:
-    #     questions = [
-    #         inquirer.Text("end_rua", message="Digite a rua"),
-    #         inquirer.Text("end_nro", message="Digite o número", validate=str.isdigit),
-    #         inquirer.Text("end_cep", message="Digite o CEP")
-    #     ]
-    #     end = inquirer.prompt(questions)
-    #     end_rua = end["end_rua"]
-    #     end_nro = int(end["end_nro"])
-    #     end_cep = end["end_cep"]
+    if "end" in answer["fields"]:
+        questions = [
+            inquirer.Text("end_rua", message="Digite a rua", validate=lambda _,c: 0 < len(c) <= 50),
+            inquirer.Text("end_nro", message="Digite o número", validate=int_validate),
+            inquirer.Text("end_cep", message="Digite o CEP", validate=cep_validate)
+        ]
+        end = inquirer.prompt(questions)
+        end_rua = end["end_rua"]
+        end_nro = int(end["end_nro"])
+        end_cep = end["end_cep"]
 
     sql_status = await conn.execute('''
         UPDATE org_adm_mun SET (cnpj, raz_soc, end_rua, end_nro, end_cep) = ($1, $2, $3, $4, $5) WHERE cod_ibge = $6

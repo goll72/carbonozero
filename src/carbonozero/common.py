@@ -53,6 +53,12 @@ def cnpj_validate(answers: dict, current: str) -> bool:
 
     return True
 
+def cep_validate(answers: dict, current: str) -> bool:
+    if not re.match(r"^\d{5}\-\d{3}$", current):
+        raise inquirer.errors.ValidationError("", reason="CEP inválido")
+
+    return True
+
 
 def dt_validate(prev_answers: dict, current: str) -> bool:
     try:
@@ -128,9 +134,9 @@ def pos_float_validate(prev_answers: dict, current: str) -> bool:
 
 def int_validate(prev_answers: dict, current: str) -> bool:
     try:
-        _ = float(current)
+        _ = int(current)
     except ValueError:
-        raise inquirer.errors.ValidationError("", reason="Valor inválido")
+        raise inquirer.errors.ValidationError("", reason="A entrada deve ser um número inteiro")
 
     return True
 
