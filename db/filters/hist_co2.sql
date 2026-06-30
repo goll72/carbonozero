@@ -2,11 +2,12 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_prod() RETURNS TRIGGER
     DECLARE
         r relatorio;
         h hist_co2;
+        k hist_co2;
     BEGIN
         IF tg_op = 'delete' THEN
-            r := (SELECT * FROM relatorio WHERE id = old.id_relatorio);
+            SELECT * INTO r FROM relatorio WHERE id = old.id_relatorio;
         ELSE
-            r := (SELECT * FROM relatorio WHERE id = new.id_relatorio);
+            SELECT * INTO r FROM relatorio WHERE id = new.id_relatorio;
         END IF;
         
         h := (
@@ -18,8 +19,11 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_prod() RETURNS TRIGGER
             0
         );
         
-        -- Sem SELECT, não sobrescreve se resultados não forem encontrados
-        h := FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+        SELECT * INTO k FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+
+        IF FOUND THEN
+            h := k;
+        END IF;
 
         IF tg_op = 'insert' THEN
             h.emissao_tot := h.emissao_tot + new.qtde * new.tco2_p_un;
@@ -29,7 +33,7 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_prod() RETURNS TRIGGER
             h.emissao_tot := h.emissao_tot - old.qtde * old.tco2_p_un;            
         END IF;
 
-        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT DO UPDATE SET emissao_tot = h.emissao_tot;
+        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT (cnpj_raiz, cnpj_ordem, ano, mes) DO UPDATE SET emissao_tot = h.emissao_tot;
         RETURN new;
     END;
 $$ LANGUAGE plpgsql;
@@ -38,11 +42,12 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_serv() RETURNS TRIGGER
     DECLARE
         r relatorio;
         h hist_co2;
+        k hist_co2;
     BEGIN
         IF tg_op = 'delete' THEN
-            r := (SELECT * FROM relatorio WHERE id = old.id_relatorio);
+            SELECT * INTO r FROM relatorio WHERE id = old.id_relatorio;
         ELSE
-            r := (SELECT * FROM relatorio WHERE id = new.id_relatorio);
+            SELECT * INTO r FROM relatorio WHERE id = new.id_relatorio;
         END IF;
 
         h := (
@@ -54,8 +59,11 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_serv() RETURNS TRIGGER
             0
         );
         
-        -- Sem SELECT, não sobrescreve se resultados não forem encontrados
-        h := FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+        SELECT * INTO k FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+
+        IF FOUND THEN
+            h := k;
+        END IF;
 
         IF tg_op = 'insert' THEN
             h.emissao_tot := h.emissao_tot + new.tco2;
@@ -65,7 +73,7 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_relatorio_serv() RETURNS TRIGGER
             h.emissao_tot := h.emissao_tot - old.tco2;
         END IF;
 
-        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT DO UPDATE SET emissao_tot = h.emissao_tot;
+        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT (cnpj_raiz, cnpj_ordem, ano, mes) DO UPDATE SET emissao_tot = h.emissao_tot;
         RETURN new;
     END;
 $$ LANGUAGE plpgsql;
@@ -74,6 +82,7 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_contrib_co2() RETURNS TRIGGER AS
     DECLARE
         a acao_co2;
         h hist_co2;
+        k hist_co2;
 
         dt DATE;
     BEGIN
@@ -103,8 +112,11 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_contrib_co2() RETURNS TRIGGER AS
             0
         );
 
-        -- Sem SELECT, não sobrescreve se resultados não forem encontrados
-        h := FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+        SELECT * INTO k FROM hist_co2 WHERE (r.cnpj_filial_raiz, r.cnpj_filial_ordem) = (h.cnpj_raiz, h.cnpj_ordem) AND ano = h.ano AND mes = h.mes;
+
+        IF FOUND THEN
+            h := k;
+        END IF;
 
         IF tg_op = 'insert' THEN
             h.compens_tot := h.compens_tot + new.valor * a.razao_comp_custo;
@@ -114,7 +126,7 @@ CREATE OR REPLACE FUNCTION hist_co2_update_from_contrib_co2() RETURNS TRIGGER AS
             h.compens_tot := h.compens_tot - contrib_co2_calculate_compens(old, a);
         END IF;
 
-        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT DO UPDATE SET compens_tot = h.compens_tot;
+        INSERT INTO hist_co2 (SELECT h.*) ON CONFLICT (cnpj_raiz, cnpj_ordem, ano, mes) DO UPDATE SET compens_tot = h.compens_tot;
         RETURN new;
     END;
 $$ LANGUAGE plpgsql;
