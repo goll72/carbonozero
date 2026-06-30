@@ -54,3 +54,18 @@ python3 -m venv .venv
 . .venv/bin/activate
 pip install -e .
 ```
+
+## Como rodar
+
+Para inicializar a base de dados, rode o seguinte comando:
+
+```sh
+psql -f <(cat db/drop.sql db/schema.sql db/inserts.sql)
+```
+
+Tendo configurado o ambiente com a base de dados, a
+aplicação pode ser executada com o seguinte comando:
+
+```sh
+python -m src.carbonozero
+```
