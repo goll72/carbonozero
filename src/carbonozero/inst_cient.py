@@ -34,7 +34,7 @@ async def menu_inst_cient(console: Console, conn: asyncpg.Connection):
                 await relatorio_insert(console, conn)
 
 
-async def ask_prods_or_servs(console: Console, conn: asyncpg.Connection, *, item_type: Union["prod", "serv"]) -> list:
+async def ask_prods_or_servs(console: Console, conn: asyncpg.Connection, *, item_type: Union["prod", "serv"], dt_val=dt_validate) -> list:
     match item_type:
         case "prod":
             initial_prompt = inquirer.List("search_type", "Busca por NCM ou descrição", choices=["NCM", "Descrição"])
@@ -119,7 +119,7 @@ async def ask_prods_or_servs(console: Console, conn: asyncpg.Connection, *, item
             case "serv":
                 answer = inquirer.prompt([
                     inquirer.Text("emissao_assoc", "Emissão associada à prestação do serviço (em ton. CO₂)", validate=pos_float_validate),
-                    inquirer.Text("dt_ocorrencia", "Data de ocorrência", validate=dt_validate),
+                    inquirer.Text("dt_ocorrencia", "Data de ocorrência", validate=dt_val),
                     inquirer.Confirm("more", False, message="Deseja inserir mais um serviço?")
                 ])
 
@@ -229,8 +229,10 @@ async def relatorio_insert(console: Console, conn: asyncpg.Connection):
     else:
         prods = None
 
+    dt_val = dt_between_validate(dt_pedido, dt_pub) if dt_pub is not None else dt_after_validate(dt_pub)
+
     if answer_p["serv"]:
-        servs = await ask_prods_or_servs(console, conn, item_type="serv")
+        servs = await ask_prods_or_servs(console, conn, item_type="serv", dt_val=dt_val)
     else:
         servs = None
 
