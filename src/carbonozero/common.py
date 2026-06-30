@@ -71,6 +71,8 @@ def dt_between_validate(a: datetime, b: datetime):
         if x < a or x > b:
             raise inquirer.errors.ValidationError("", reason=f"Data inválida, deve estar entre {a.strftime("%d/%m/%Y")} e {b.strftime("%d/%m/%Y")}")
 
+        return True
+
     return validate
 
 
@@ -81,6 +83,8 @@ def dt_after_validate(a: datetime):
 
         if x < a:
             raise inquirer.errors.ValidationError("", reason=f"Data inválida, deve ocorrer depois de {a.strftime("%d/%m/%Y")}")
+
+        return True
 
     return validate
 
